@@ -8,6 +8,7 @@ Before we begin, please take a moment to familiarize yoursel with these terms. T
 
 * **SERP - Search Engine Results Page**  
     The entire DuckDuckGo results page. Including the header, ZCI Box, all result links and the side areas.
+
 ---
 
 ##Key Concepts
@@ -29,25 +30,32 @@ The width of plugins is automatically calculated based on the users screen size 
 The minimize/maximize button should not be altered or moved.
 
 ### Borders
-The borders of the Zero Click Box should not be alterted. They should remain `1px solid #c9c9c9`.
+The Zero Click Box should maintain a `1px solid #c9c9c9` border.
 
 ### Background colors
-The background color of all plugins should match the SERP background color (#FDFDFD). 
+The background color of all plugins should match the SERP background color, `#FDFDFD`. 
 
-### Font colors
+### Text
 
-### Font-family (except fixed-width for code)
+**Font-Family** - Plugin headers and abstracts should use the DuckDuckGo font stack: `'Helvetica Neue', 'Segoe UI', 'Nimbus Sans L', 'Liberation Sans', 'Open Sans', FreeSans, Arial, sans-serif`.
 
-### Links (#1168CE)
+**Font-Size** - A `14px` font-size should be used for text inside the **Zero-Click Abstract**. Smaller font sizes may also be used, we recommend the use of `<small>` tags. Fonts should be no smaller than `11px`.
 
-However, some aspects
+**Font Color** - All text should be colored black, `#000000`, unless otherwise necessary. Coloring text grey, `#808080` is also a good way to emphasize/differentiate text, however **no bolded text is allowed**. We reserve bolding to highlight exact matches in our results. Furthermore, **all links** should be colored the blue, `#1168CE`.
 
 ## Simplicity
+
+
 ## Usability
+
+
 ## Flexibility
+Plugins should be able to work across **all platforms, operating systems and browsers** seamlessly. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degredation (eg. border-radius). This also means that all plugins should look and function perfectly on both mobile devices (small screens) and desktop environments (larger screens)
+
 ## Space-ibility
 
 ---
+
 # Plugin-Type Specific Design Style Guide
 ##Goodies
 
