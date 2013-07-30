@@ -9,7 +9,7 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 If submitting a **bug/suggestion**:
 * Check if a GitHub issue already exists for the given bug/suggestion
     * If one doesn't exist, create a GitHub issue in the DuckDuckGo-Documentation repository
-        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug.
+        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
     * If one already exists, please add any aditional comments you have regarding the matter
 
 If submitting a **pull request** (bugfix/addition):
@@ -27,6 +27,6 @@ If submitting a **pull request** (bugfix/addition):
 
 ## Submitting Changes
 
-* Push your changes to your fork of the repository.
-* Submit a pull request to the DuckDuckGo-Documentation repository.
+* Push your changes to your fork of the repository
+* Submit a pull request to the DuckDuckGo-Documentation repository
     * Make sure to use the DuckDuckGo-Documentation repository's Pull Request template
