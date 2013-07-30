@@ -10,10 +10,10 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 
 * Make sure you have a [GitHub account](https://github.com/signup/free)
 
-If submitting a **bug/suggestion**:
-* Check if a GitHub issue already exists for the given bug/suggestion
+If submitting a **bug** or **suggestion**:
+* Check the *\<repo\_name\>* [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
     * If one doesn't exist, create a GitHub issue in the *\<repo\_name\>* repository
-        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug.
+        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
     * If one already exists, please add any aditional comments you have regarding the matter
 
 If submitting a **pull request** (bugfix/addition):
@@ -21,16 +21,22 @@ If submitting a **pull request** (bugfix/addition):
 
 ## Making Changes
 
-* Before making and changes, refer to the *\<repo\_name\>* repository's StyleGuide to assure your changes are made in the correct fashion
+* Before making and changes, refer to the DuckDuckGo contributing [Guidelines](#link-to-guidelines) to ensure your changes are made in the correct fashion
 * Make sure your commits are of a reasonable size. They shouldn't be too big (or too small)
-* Make sure your commit messages effectively explain what changes have been made:
+* Make sure your commit messages effectively explain what changes have been made, and please identify which plugin or file has been modified:
 
     ```
     CONTRIBUTING.md - Added the example commit message because it was missing
     ```
 
+     is much better than:
+
+    ```
+    <bad\_commit\_example>
+    ```
+
 * Make sure you have added the necessary tests for your changes.
-* Run `dzil test` to assure nothing else was accidentally broken (when needed).
+* Run `dzil test` (executes all tests in t/) to assure nothing else was accidentally broken
 
 ## Submitting Changes
 
