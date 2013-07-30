@@ -1,4 +1,4 @@
-Please use this template as a starting point for any CONTRIBTUTING.md's. Make sure to replace "**\<repo\_name\>**" with the correct repository name.
+Please use this template as a starting point for any CONTRIBTUTING.md's. Make sure to replace **"\<repo\_name\>"** with the correct repository name.
 
 ------
 
@@ -32,7 +32,7 @@ If submitting a **pull request** (bugfix/addition):
      is much better than:
 
     ```
-    <bad\_commit\_example>
+    <bad_commit_example>
     ```
 
 * Make sure you have added the necessary tests for your changes
