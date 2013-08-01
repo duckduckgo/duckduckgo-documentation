@@ -35,7 +35,7 @@ We ask that you please use this template when submitting a plugin pull request s
 ##Checklist
 
 1. Test
-2. This plugin has been tested and verified to work properly on the follow browsers (place a ✔ where appropriate) :
+2. This plugin has been tested and verified to work properly on the following browsers (place a ✔ where appropriate) :
     ```
     - Windows 8
         - Google Chrome   []
