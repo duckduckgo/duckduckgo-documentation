@@ -4,10 +4,10 @@
 Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
 
 * **ZCI Box - Zero-Click Info Box**  
-    The box above the results, which plugins fill to display their instant answer
+    The box above the results that displays instant answer
 
 * **SERP - Search Engine Results Page**  
-    The entire DuckDuckGo results page. Including the header, ZCI Box, all result links and the side areas.
+    The entire DuckDuckGo results page. Including the header, ZCI Box, all result links and the sidebar areas.
 
 ---
 
