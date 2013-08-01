@@ -10,13 +10,13 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 
 Before you can do anything, you first need a [GitHub account](https://github.com/signup/free). This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a  GitHub account.
 
-If submitting a **bug** or **suggestion**:
+If you're submitting a **bug** or **suggestion**:
 * Check the **\<repo\_name\>** [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
     * If one doesn't exist, create a GitHub issue in the **\<repo\_name\>** repository
         * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
     * If one already exists, please add any aditional comments you have regarding the matter
 
-If submitting a **pull request** (bugfix/addition):
+If you're submitting a **pull request** (bugfix/addition):
 * Fork the **\<repo\_name\>** repository on GitHub
 
 ## Making Changes

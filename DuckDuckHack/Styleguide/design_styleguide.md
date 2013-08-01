@@ -16,7 +16,6 @@ When designing a plugin there are a few key concepts to keep in mind:
 
 * Continuity
 * Simplicity
-* Usability
 * Flexibility
 * Space
 
@@ -49,7 +48,6 @@ All text should be colored black, `#000000`, unless otherwise necessary. Colorin
 ### Rollover / Hover
 Upon hovering, all links should have `text-decoration: underline` and `cursor: pointer`.
 
-
 ## Simplicity
 Aside from continutity all plugins should also be designed with simplicity in mind. The purpose of a Zero-Click Info plugin is to give the user an instant answer without them clicking even once. The information a plugin provides is therefore the most important part, which also means that a plugin's answer should be:
 * easy to find
@@ -65,22 +63,21 @@ Although most plugins provide textual answers in sentence form, this isn't alway
 ### Easy to Understand
 Plugin answers should also be easy to understand and should provide enough context for the user to understand what question is being answered. If the user can't tell what they are looking at, the answer might be disregarded or worse, misunderstood.
 
-
-## Usability
-(tbd)
-
-
 ## Flexibility
-Plugins should be able to work across **all platforms, operating systems and browsers** seamlessly. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degredation (eg. border-radius). This also means that all plugins should look and function perfectly on both mobile devices (small screens) and desktop environments (larger screens)
+Plugins must be compatible across **all platforms, operating systems and browsers**. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degredation (eg. border-radius). This also means that all plugins should look and function correctly on both mobile devices (small screens) and desktop environments (larger screens). For some plugin types (ie. Fatheads, Longtail) this is easily achieved because they simply return text. However, for other plugins (ie. Spice) which use JavaScript and CSS, this will require a little more effort on the developer's part to ensure everything works properly.
 
-## Space-ibility
+## Space
+Vertical space is of utmost importance with regards to instant answers. The space a plugin occupies is very valuable (it would otherwise be used for links!) and so it's important that developers keep this in mind when designing their plugins. Only the most important information should be displayed in an instant answer. If a user wants to see more information, most plugins includes at "More at ..." link, which they can follow for more detailed information.
 
 ---
 
 # Plugin-Type Specific Design Style Guide
+
 ## Goodies
+(tbd)
 
 ## Spice
+(tbd)
 - Templates should not be modified.
 
 Carousel
@@ -90,5 +87,7 @@ Carousel
 
 
 ## Fathead
+(tbd)
 
 ## Longtail
+(tbd)
