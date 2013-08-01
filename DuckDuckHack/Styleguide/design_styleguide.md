@@ -1,7 +1,7 @@
 # DuckDuckHack - Plugin Design Style Guide
 
 ### Important Terms
-Before we begin, please take a moment to familiarize yoursel with these terms. They will be used throughout the documentation:
+Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
 
 * **ZCI Box - Zero-Click Info Box**  
     The box above the results, which plugins fill to display their instant answer
