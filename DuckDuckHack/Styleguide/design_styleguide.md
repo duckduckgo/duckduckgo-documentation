@@ -3,10 +3,10 @@
 ### Important Terms
 Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
 
-* **Instant Answer Box**  
+- #### Instant Answer Box
     The box above the results that contains instant answers
 
-* **SERP - Search Engine Results Page**  
+- #### SERP - Search Engine Results Page
     The entire DuckDuckGo results page. Including the header, Instant Answer Box, all result links and the sidebar areas.
 
 ---
