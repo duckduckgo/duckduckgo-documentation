@@ -22,16 +22,16 @@ When designing an instant answer there are a few key concepts to keep in mind:
 ## Continuity
 All instant answers, regardless of their plugin type (Spice, Goodie, Fathead or Longtail) should maintain visual design continuty. This means that the styling and placement of the Instant Answer Box elements should be the same for all instant answer plugins. The following design elements should remain consistant across all instant answer plugins:
 
-- ### Instant Answer Width
+- #### Instant Answer Width
 The width of instant answers is automatically calculated based on the users screen size and should not be modified. Individual users are able to change the width of the SERP by modifying their settings.
 
-- ### Minimze Button
+- #### Minimze Button
 The minimize/maximize button should not be altered or moved.
 
-- ### Borders
+- #### Borders
 The Instant Answer Box should maintain a `1px solid #c9c9c9` border.
 
-- ### Background Colors
+- #### Background Colors
 The background color of every instant answer should match the SERP background color, `#FDFDFD`.
 
 - #### Font-Family
@@ -43,7 +43,7 @@ A `14px` font-size should be used for the instant answer's body text. Smaller fo
 - #### Font Color
 All text should be colored black, `#000000`, unless otherwise necessary. Coloring text grey, `#808080` is also a good way to emphasize/differentiate text, however **no bolded text is allowed**. We reserve bolding to highlight exact matches in our results. Furthermore, **all links** should be colored blue, `#1168CE`.
 
-- ### Rollover / Hover
+- #### Rollover / Hover
 Upon hovering, all links should have `text-decoration: underline` and `cursor: pointer`.
 
 ## Simplicity
