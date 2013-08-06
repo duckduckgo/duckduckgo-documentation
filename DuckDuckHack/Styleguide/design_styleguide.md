@@ -49,13 +49,13 @@ Upon hovering, all links should have `text-decoration: underline` and `cursor: p
 ## Simplicity
 Aside from continutity, all instant answers should also be designed with simplicity in mind. The information an instant answer provides is the most important part, which means that it should be:
 
-- ### Easy to Find
+- #### Easy to Find
 Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether its text, an image, a table, etc., should be easy to find within the Instant Answer Box. An instant answer's content should be succint and to-the-point. Sentence form is preffered when feasable, however large paragraphs of text should be avoided.
 
-- ### Easy to Read
+- #### Easy to Read
 Although most instant answers are textual and in sentence form, this isn't always the case. Sometime tables are needed or other visual elements such as pictures or digrams. Regardless of the answer's format, it should be easy to read. Fonts should be legible and both colored and sized appropriately. We ask that you use our standard fonts and colours to ensure this is always the case. As well proper use of language and grammer is essential. Use of jargon or abbreviations should be avoided or explained.
 
-- ### Easy to Understand
+- #### Easy to Understand
 Instant answers should also be easy to understand and should provide enough context for the user to understand what question is being answered. If the user can't tell what they are looking at, the answer might be disregarded or worse, misunderstood.
 
 ## Flexibility
