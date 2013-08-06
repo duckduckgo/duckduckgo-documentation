@@ -14,54 +14,48 @@ Before we begin, please take a moment to familiarize yourself with these terms. 
 ## Key Concepts
 When designing an instant answer there are a few key concepts to keep in mind:
 
-* Continuity
-* Simplicity
-* Flexibility
-* Space
+* [Continuity](#continuity)
+* [Simplicity](#simplicity)
+* [Flexibility](#flexibility)
+* [Space](#space)
 
 ## Continuity
 All instant answers, regardless of their plugin type (Spice, Goodie, Fathead or Longtail) should maintain visual design continuty. This means that the styling and placement of the Instant Answer Box elements should be the same for all instant answer plugins. The following design elements should remain consistant across all instant answer plugins:
 
-### Instant Answer Width
+- ### Instant Answer Width
 The width of instant answers is automatically calculated based on the users screen size and should not be modified. Individual users are able to change the width of the SERP by modifying their settings.
 
-### Minimze Button
+- ### Minimze Button
 The minimize/maximize button should not be altered or moved.
 
-### Borders
+- ### Borders
 The Instant Answer Box should maintain a `1px solid #c9c9c9` border.
 
-### Background Colors
+- ### Background Colors
 The background color of every instant answer should match the SERP background color, `#FDFDFD`.
 
-### Typography
-
-#### Font-Family
+- #### Font-Family
 Instant answer headers and abstracts should use the DuckDuckGo font stack: `'Helvetica Neue', 'Segoe UI', 'Nimbus Sans L', 'Liberation Sans', 'Open Sans', FreeSans, Arial, sans-serif`.
 
-#### Font-Size
+- #### Font-Size
 A `14px` font-size should be used for the instant answer's body text. Smaller font sizes may also be used, we recommend the use of `<small>` tags. Fonts should be no smaller than `11px`.
 
-#### Font Color
+- #### Font Color
 All text should be colored black, `#000000`, unless otherwise necessary. Coloring text grey, `#808080` is also a good way to emphasize/differentiate text, however **no bolded text is allowed**. We reserve bolding to highlight exact matches in our results. Furthermore, **all links** should be colored blue, `#1168CE`.
 
-### Rollover / Hover
+- ### Rollover / Hover
 Upon hovering, all links should have `text-decoration: underline` and `cursor: pointer`.
 
 ## Simplicity
 Aside from continutity, all instant answers should also be designed with simplicity in mind. The information an instant answer provides is the most important part, which means that it should be:
 
-* easy to find
-* easy to read
-* and easy to understand
-
-### Easy to Find
+- ### Easy to Find
 Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether its text, an image, a table, etc., should be easy to find within the Instant Answer Box. An instant answer's content should be succint and to-the-point. Sentence form is preffered when feasable, however large paragraphs of text should be avoided.
 
-### Easy to Read
+- ### Easy to Read
 Although most instant answers are textual and in sentence form, this isn't always the case. Sometime tables are needed or other visual elements such as pictures or digrams. Regardless of the answer's format, it should be easy to read. Fonts should be legible and both colored and sized appropriately. We ask that you use our standard fonts and colours to ensure this is always the case. As well proper use of language and grammer is essential. Use of jargon or abbreviations should be avoided or explained.
 
-### Easy to Understand
+- ### Easy to Understand
 Instant answers should also be easy to understand and should provide enough context for the user to understand what question is being answered. If the user can't tell what they are looking at, the answer might be disregarded or worse, misunderstood.
 
 ## Flexibility
