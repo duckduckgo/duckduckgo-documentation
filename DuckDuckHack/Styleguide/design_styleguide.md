@@ -1,4 +1,4 @@
-# DuckDuckHack - Instant Answer Design Style Guide
+# Instant Answer Design Style Guide
 
 ### Important Terms
 Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
@@ -66,7 +66,7 @@ Vertical space is of utmost importance with regards to instant answers. The spac
 
 ---
 
-# Plugin-Type Specific Design Style Guide
+# Plugin Specific Design Style Guide
 
 ## Goodie Plugins
 (tbd)
