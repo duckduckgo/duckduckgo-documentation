@@ -1,5 +1,6 @@
-## Spice Plugins
+# Spice Plugin Desing Style Guide
 (tbd)
+
 - Templates should not be modified.
 
 Carousel
