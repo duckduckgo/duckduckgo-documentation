@@ -62,7 +62,7 @@ Instant answers should also be easy to understand and should provide enough cont
 Instant answers must be compatible with **all platforms, operating systems and browsers**. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degredation (eg. border-radius). This also means that all instant answers should look and function correctly on both mobile devices (small screens) and desktop environments (larger screens). For some instant answer plugin types (ie. Fatheads, Longtail) this is easily achieved because they most often return text. However, for other instant answer plugins (ie. Spice) which use JavaScript and CSS, this will require a little more effort on the developer's part to ensure everything works properly.
 
 ## Space
-Vertical space is of utmost importance with regards to instant answers. The space an instant answer occupies is very valuable (it would otherwise be used for links!) and so it's important that developers keep this in mind when designing their instant answers. Only the most important information should be displayed in an instant answer but if a user wants to see more information, most instant answers include a "More at ..." link, which users can follow for more detailed information.
+Vertical space is of utmost importance with regards to instant answers. The space an instant answer occupies is very valuable (it would otherwise be used for links!) and so it's important that developers keep this in mind when designing their instant answers. Only the most important information should be displayed in an instant answer but if a user wants to see more information, most instant answers include a **"More at ..."** link, which users can follow for more detailed information.
 
 ---
 
