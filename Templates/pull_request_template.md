@@ -31,51 +31,51 @@ We ask that you please use this template when submitting an instant answer pull 
 
 **Are you having any problems? Do you need our help with anything?**
 
-
 ##Checklist
 Please place a ✔ where appropriate.
 
-1. Test file written, and added to t/ directory in plugin (Goodie, Spice, Fathead, Longtail) repository
-2. Added Metadata and attribution information (see (Metadata docs)[https://github.com/duckduckgo/duckduckgo/blob/master/documentation/metadata.md] for more info)
-3. This instant answer has been tested and verified to work properly on the following browsers (just let us know which you've tested):
-    ```
-    - Windows 8
-        - Google Chrome   []
-        - Firefox         []
-        - Opera           []
-        - IE 10           []
-    
-    - Windows 7
-        - Google Chrome   []
-        - Firefox         []
-        - Opera           []
-        - IE 8            []
-        - IE 9            []
-        - IE 10           []
+```
+[] Test file written, and added to t/ director
+[] Added Metadata and attribution information
 
-    - Windows XP
-        - IE 7            []
-        - IE 8            []
-    
-    - Mac OSX
-        - Google Chrome   []
-        - Firefox         []
-        - Opera           []
-        - Safari          []
+Tested on the following browsers (just let us know which you've tested):
+- Windows 8
+    [] Google Chrome   
+    [] Firefox         
+    [] Opera           
+    [] IE 10           
 
-    - iOS (iPhone)
-        - Safari Mobile   []
-        - Google Chrome   []
-        - Opera           []
-    
-    - iOS (iPad)
-        - Safari Mobile   []
-        - Google Chrome   []
-        - Opera           [] 
-    
-    - Android
-        - Native Browser  []
-        - Firefox         []
-        - Google Chrome   []
-        - Opera           []
-    ```
+- Windows 7
+    [] Google Chrome   
+    [] Firefox         
+    [] Opera           
+    [] IE 8            
+    [] IE 9            
+    [] IE 10           
+
+- Windows XP
+    [] IE 7            
+    [] IE 8            
+
+- Mac OSX
+    [] Google Chrome   
+    [] Firefox         
+    [] Opera           
+    [] Safari          
+
+- iOS (iPhone)
+    [] Safari Mobile   
+    [] Google Chrome   
+    [] Opera           
+
+- iOS (iPad)
+    [] Safari Mobile   
+    [] Google Chrome   
+    [] Opera            
+
+- Android
+    [] Firefox         
+    [] Native Browser  
+    [] Google Chrome   
+    [] Opera           
+```
