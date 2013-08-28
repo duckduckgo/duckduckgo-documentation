@@ -34,11 +34,13 @@ We ask that you please use this template when submitting an instant answer pull 
 ##Checklist
 Please place a ✔ where appropriate.
 
-```
-[] Test file written, and added to t/ director
-[] Added Metadata and attribution information
+- [] Added metadata and attribution information
+- [] Wrote test file and added to t/ directory
+- [] Verified that instant answer adheres to [design guidelines](https://github.com/duckduckgo/DuckDuckGo-Documentation/blob/master/DuckDuckHack/Styleguide/design_styleguide.md)
+- [] Tested cross-browser compatability
 
-Tested on the following browsers (just let us know which you've tested):
+```
+Please let us know which browsers/devices you've tested on:
 - Windows 8
     [] Google Chrome   
     [] Firefox         
