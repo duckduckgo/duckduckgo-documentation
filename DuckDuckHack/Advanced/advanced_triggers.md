@@ -1,7 +1,4 @@
-Advanced
-===
-----
-## Advanced Triggers
+# Advanced Triggers
 In the [Basic tutorial](general.md#basic-tutorial) we walked through a one word trigger and in the [Spice handle functions](spice.md#spice-handle-functions) section we walked through a simple regexp trigger.
 
 Here are some more advanced trigger techniques you may need to use:

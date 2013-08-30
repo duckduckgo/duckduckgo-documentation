@@ -1,7 +1,4 @@
 # Getting Started
-[Index](https://github.com/duckduckgo/duckduckgo#index) / **Getting Started**
-
----
 
 ## 1. Choose a Topic
 Before you begin building anything, you'll need to know what instant answer it is that you want to provide. If you don't have any ideas, feel free to borrow one from our [ideas forum](http://ideas.duckduckhack.com/).
@@ -11,7 +8,7 @@ Now that you know what question you're answering, you'll need to find a source f
 
 Using this flowchart should help you to determine which kind of plugin you'll be creating:
 
-![plugin type flow chart](/plugin_flowchart.png)
+![plugin type flow chart](../assets/plugin_flowchart.png)
 
 If the right plugin type is still not obvious, please <a href="https://github.com/duckduckgo/duckduckgo#can-you-help-me">ask us</a>. Sometimes multiple plugin types could work (depending on the datasource), and we can help you figure out which one would work best.
 
@@ -25,8 +22,6 @@ Now that you know which plugin type you'll be using for your instant answer, you
 * Click [here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork) to fork the **Longtail** Plugin Repository (https://github.com/duckduckgo/zeroclickinfo-longtail)
 
 ## 4. Start Coding!
-
-<!-- ***Important:*** The documentation contained herein is additive. In order to make a Spice plugin, for example, you must first understand how to make a Goodie plugin. This is because the back-end of a Spice plugin is essentially just a goodie that injects an HTTP call into the client JS instead of returning an answer.  -->
 
 At this point, you're ready to start learning about the plugin type you'll be using for your instant answer:
 

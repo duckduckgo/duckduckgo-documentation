@@ -1,9 +1,6 @@
 # Type Overview
-[Index](https://github.com/duckduckgo/duckduckgo#index) / **Type Overview**
 
----
-
-There are currently four types of DuckDuckGo plugins:
+There are currently four types of DuckDuckGo instant answers:
 
 ### Goodies &mdash; calculations and cheat sheets.
 

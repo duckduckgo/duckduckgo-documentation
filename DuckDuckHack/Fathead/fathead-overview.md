@@ -1,34 +1,8 @@
-DuckDuckGo Fathead Plugins
-=================================
+# Fathead Instant Answers
 
-See [DuckDuckHack](http://duckduckhack.com/) for an overview of the DuckDuckGo plugin system.
+(intro - tbd)
 
-This repository is for contributing fathead plugins. Each fathead plugin produces a data file that gets used in a fuzzy keyword mapping, e.g. for getting a perl function reference when you search for [perl split](https://duckduckgo.com/?q=perl+split).
-
-Fathead plugins are in beta and both the interface and testing procedure will improve over time. However, you can work away without worrying about what any changes might do to your plugins -- we'll take care of all that.
-
-### Example
-![hello world example](https://s3.amazonaws.com/ddg-assets/docs/fathead_example.png)
-
-Contributing
-------------
-
-First off, thank you!
-
-
-### Process
-
-1) Pick [a fathead project](https://duckduckhack.uservoice.com/forums/5168-instant-answer-plugin-ideas-for-duckduckgo/category/41839-fathead) (or add one) and comment that you're working on it.
-
-2) Develop your plugin using the Structure below [in a fork](http://help.github.com/fork-a-repo/).
-
-3) Submit a [pull request](http://help.github.com/send-pull-requests/).
-
-Feel free to [ask questions](http://duckduckhack.com/#faq)!
-
-
-
-### Structure
+## Structure
 
 Each fathead plugin has its own directory. Some of the directories are in use on the live system, and some are still in development.
 
@@ -67,7 +41,7 @@ share/plugin/data.url
 ```
 
 
-### Meta file
+## Meta File
 
 We use Perl packages to enumerate and work with plugins, so part of the plugin process is including a simple Perl file. You don't actually need to know any Perl for this! Here's an annotated example from the Hello World plugin.
 
@@ -125,7 +99,7 @@ attribution
 1;
 ```
 
-### General data file format
+## Data File Format
 
 Please name the output file output.txt (tab delimited) but do not store the data file(s) in the repository (as noted above) unless it is under 1MB.
 
@@ -213,7 +187,7 @@ There is a pre-process script that is run on this output, which:
 * makes sure the $abstract ends in a sentence.
 
 
-#### Code blocks
+## Code Blocks
 
 If you want to include a code snippet or another pre-formatted example in the
 abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap
@@ -223,6 +197,6 @@ the code block like this:
 <pre><code>code block goes here</code></pre>
 ```
 
-### Notes
+## Notes
 
 1) There should be no duplicates in the $page (first) variable. If you have multiple things named the same things you have a number of options, e.g. a) make disambiguation pages; b) put everything in one snippet; c) pick the most general one.

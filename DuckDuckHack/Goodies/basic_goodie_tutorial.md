@@ -1,17 +1,6 @@
-# General
-[Index](https://github.com/duckduckgo/duckduckgo#index) / **General**
-
----
-This section contains information that is largely agnostic of plugin type and is therefore relevant regardless of the type of plugin that you're working on.
-
-## Basic Tutorial
-
-[Index](https://github.com/duckduckgo/duckduckgo#index) / [General](#general) / **Basic Tutorial**
-
----
+# Basic Goodie Tutorial
 
 In this tutorial, we'll be making a Goodie plugin that checks the number of characters in a given search query. The end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). The same framework is used to trigger Spice plugins.
-
 
 Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
@@ -132,38 +121,3 @@ The plugin system works like this at the highest level:
 * If a Goodie plugin is triggered, we run its **handle** function.
 
 * If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
-
-**Back to [Index](https://github.com/duckduckgo/duckduckgo#index) | [Goodies Overview](goodies_overview.md) | [Spice Overview](spice_overview.md) | [Basic tutorial](#basic-tutorial)**
-
-***
-
-## Triggers
-[Index](https://github.com/duckduckgo/duckduckgo#index) / [General](#general) / **Triggers**
-
----
-There are two types of triggers, **words** and **regex**. The [basic tutorial](#basic-tutorial) walks through a simple example of a words trigger. While you technically *can* use a regular expression as a trigger, we encourage you to use words triggers first, and then use a regexp to further qualify the query once the plugin has been called, like in the [Xkcd example](https://github.com/duckduckgo/zeroclickinfo-spice#spice-handle-functions) in the Spice Handle Functions section. Words triggers are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match).
-
-### Words Triggers
-```
-start......word exists at the start of the query
-end........word exists at the end of the query
-startend...word is at the beginning or end of the query
-any........word is anywhere in the query
-```
-
-You can combine several trigger statements if, for example, you want certain words to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) is a good example of multiple words trigger statements.
-
-
-### Regex Triggers
-
-Regular expression triggers can be applied to the following query objects:
-
-```
-query_raw............the query in its most basic form, with no clean-up string operations.
-query................uniformly whitespaced version of query_raw.
-query_lc.............lowercase version of *query*.
-query_nowhitespace...*query* with no whitespace.
-query_clean..........*query_lc*, but with whitespace and non-alphanumeric ascii removed.
-
-```
-**Back to [Index](https://github.com/duckduckgo/duckduckgo#index) | [Goodies Overview](goodies_overview.md) | [Spice Overview](spice_overview.md) | [Basic tutorial](#basic-tutorial)**

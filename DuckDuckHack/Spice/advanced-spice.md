@@ -1,5 +1,5 @@
-Advanced Spice Development
-===
+# Advanced Spice
+
 ##Advanced Spice Handlers
 These advanced handle function techniques are specific to Spice plugins:
 
