@@ -1,8 +1,8 @@
-## Triggers
+# Triggers
 
-There are two types of triggers, **words** and **regex**. The [basic tutorial](#basic-tutorial) walks through a simple example of a words trigger. While you technically *can* use a regular expression as a trigger, we encourage you to use words triggers first, and then use a regexp to further qualify the query once the plugin has been called, like in the [Xkcd example](https://github.com/duckduckgo/zeroclickinfo-spice#spice-handle-functions) in the Spice Handle Functions section. Words triggers are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match).
+There are two types of triggers, **words** and **regex**. While you technically *can* use a regular expression as a trigger, we encourage you to use words triggers first, and then use a regexp to further qualify the query once the plugin has been called, like in the [Xkcd example](https://github.com/duckduckgo/zeroclickinfo-spice#spice-handle-functions) in the Spice Handle Functions section. Words triggers are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match).
 
-### Words Triggers
+## Words Triggers
 ```
 start......word exists at the start of the query
 end........word exists at the end of the query
@@ -13,7 +13,7 @@ any........word is anywhere in the query
 You can combine several trigger statements if, for example, you want certain words to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) is a good example of multiple words trigger statements.
 
 
-### Regex Triggers
+## Regex Triggers
 
 Regular expression triggers can be applied to the following query objects:
 

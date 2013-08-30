@@ -1,6 +1,4 @@
-# Advanced Spice
-
-##Advanced Spice Handlers
+# Advanced Spice Handlers
 These advanced handle function techniques are specific to Spice plugins:
 
 **Multiple parameters in spice_to call**. If you need to substitute multiple parameters into the API call like how the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) uses two numbers to specify the min and max length of the random word, you can use **from** keyword.
