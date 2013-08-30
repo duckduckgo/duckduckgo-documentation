@@ -1,4 +1,4 @@
-# Getting Started
+# Determing Your Instant Answer Type
 
 ## 1. Choose a Topic
 Before you begin building anything, you'll need to know what instant answer it is that you want to provide. If you don't have any ideas, feel free to borrow one from our [ideas forum](http://ideas.duckduckhack.com/).
