@@ -1,2 +1,2 @@
-# Longtail Goodie Tutorial
+# Longtail Basic Tutorial
 (tbd)

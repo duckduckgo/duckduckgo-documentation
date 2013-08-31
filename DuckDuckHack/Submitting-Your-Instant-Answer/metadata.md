@@ -1,7 +1,6 @@
 # Plugin Metadata
 
-Metadata allows us to categorize and describe plugins. This information is put in the main perl module for each plugin that you write.
-See [Information.pm][1] for more details. Existing plugins can be found on the [current goodies page][3] for reference.
+Metadata allows us to categorize and describe plugins. This information is put in the main perl module for each plugin that you write. See [Information.pm][1] for more details. Existing plugins can be found on the [current goodies page][3] for reference.
 
 Broken down below are the different types of metadata that you can add to your plugin.
 
@@ -9,7 +8,6 @@ Broken down below are the different types of metadata that you can add to your p
 
 Each plugin needs example queries. Primary examples are listed in the middle
 column, and secondary examples are alternatives linked from the third column.
-
 
     primary_example_queries   "square root of nine";
     secondary_example_queries "cube root of 8", "fifth root of one hundred twenty nine";
@@ -77,14 +75,9 @@ Supported categories are listed at [Information.pm][5]
 
 Supported attribution methods are listed at [Information.pm][4]
 
-
 [1]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm
 [2]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/ZeroClickInfo.pm
 [3]:http://duckduckgo.com/goodies/
 [4]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L10
 [5]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L19
 [6]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L48
-
-### Where to go now
----
-Back to [Submitting Plugins](https://github.com/duckduckgo/duckduckgo#submitting-plugins) | [Goodies Overview](https://github.com/duckduckgo/duckduckgo#goodies-overview) | [Spice Overview](https://github.com/duckduckgo/duckduckgo#spice-overview)
