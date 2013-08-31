@@ -15,4 +15,3 @@ The Spice frontend uses [Handlebars](http://handlebarsjs.com) for templates and 
 If you're not already familiar with Handlebars, *please* read the [Handlebars documentation](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars; the examples will explain it to you. But you should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. (Don't worry, it should only take a few minutes to read!)
 
 Below, we will walk you through several examples ranging from simple to complicated, which will explain how to use the template system and make your instant answers look awesome.
-

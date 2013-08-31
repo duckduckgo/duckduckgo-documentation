@@ -6,14 +6,12 @@ The NPM plugin [[link](https://duckduckgo.com/?q=npm+uglify-js)] [[code](https:/
 
 ##### npm.pm
 ```perl 
-
 package DDG::Spice::Npm;
 
 use DDG::Spice;
 
 spice to => 'http://registry.npmjs.org/$1/latest';
 spice wrap_jsonp_callback => 1;
-
 spice is_cached => 0;
 
 triggers startend => 'npm';
@@ -52,7 +50,7 @@ When the package name is returned we then plug it into the **spice to** definiti
 spice to => 'http://registry.npmjs.org/$1/latest';
 ```
 
-The **$_** value from the return statement will get inserted into the **$1** placeholder in the **spice to** line such that you can plug in parameters to the API call as needed. For passing multiple parameters, check out the [Advanced spice handlers](https://github.com/duckduckgo/zeroclickinfo-spice#advanced-spice-handlers) section.
+The **$_** value from the return statement will get inserted into the **$1** placeholder in the **spice to** line such that you can plug in parameters to the API call as needed. Passing multiple parameters into the API call is also possible and will be discussed later in the advnaced section.
 
 In this particular case, the API we're using to search for packages does not support callback functions. That is, it will not wrap its response in a function call, which in this case would be **ddg_spice_npm**. If it did support a callback, we could use the **{{callback}}** template in the **spice to** line to automatically fill in the default callback value. See the [IMdB spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Imdb.pm) for a simple implementation of the **{{callback}}** template. Since this API doesn't support the callback parameter, we tell the backend to automatically wrap the API's response in a function call for us with:
 
@@ -61,7 +59,7 @@ In this particular case, the API we're using to search for packages does not sup
 spice wrap_jsonp_callback => 1;
 ```
 
-At this point the response moves from the backend to the frontend. The external API sends a JSON object to the callback function that you will also define, as explained in the following sections. However, before starting work on the front end, we first have to test the plugin triggers to ensure that they work.
+At this point the response moves from the backend to the frontend. The external API sends a JSON object to the callback function that you will also define, as explained in the following sections.
 
 ## NPM Frontend
 
@@ -142,4 +140,4 @@ We've created two files in the Spice share directory (`share/spice/npm/`) :
 1. `npm.js` - which delegates the API's response and calls `Spice.render()`
 2. `npm.handlebars` - which specifies the plugin's HTML structure and determines which attributes of the API response are placed in the HTML result
 
-You may notice other plugins also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other plugins. If however CSS is needed it can be added. Please refer to the [Spice FAQ](#faq) for more inforamtion about custom css.
+You may notice other plugins also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other plugins. If however CSS is needed it can be added. Examples with CSS usage will be covered shortly.

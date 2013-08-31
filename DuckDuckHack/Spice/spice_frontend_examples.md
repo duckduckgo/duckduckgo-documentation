@@ -1,7 +1,5 @@
 # Spice Frontend ( More Examples )
 
---------
-
 # Index
 - [Overview](#overview)
     - [Tech](#tech)
