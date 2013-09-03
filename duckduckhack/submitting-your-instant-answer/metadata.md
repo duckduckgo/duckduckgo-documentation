@@ -1,8 +1,8 @@
-# Plugin Metadata
+# Instant Answer Metadata
 
-Metadata allows us to categorize and describe plugins. This information is put in the main perl module for each plugin that you write. See [Information.pm][1] for more details. Existing plugins can be found on the [current goodies page][3] for reference.
+Metadata allows us to categorize and describe instant answers. This information is put in the main perl module for each plugin that you write. See [Information.pm][1] for more details. Existing instant answers can be found on the [current goodies page][3] for reference.
 
-Broken down below are the different types of metadata that you can add to your plugin.
+Broken down below are the different types of metadata that you can add to your plugin. The metadata must be added to the appropriate .pm file(s) for your instant answer.
 
 ## Example Queries
 
@@ -61,7 +61,7 @@ Supported topics are listed in [Information.pm][6]
 
 ## Category
 
-Specific activities or descriptive nouns for plugins, i.e., what the plugin does (conversion, calculation, etc). For now, limit yourself to one category. Just put it in the most obvious category and don't overthink it -- we'll let you know if there's a better one.
+Specific activities or descriptive nouns for instant answers, i.e., what the plugin does (conversion, calculation, etc). For now, limit yourself to one category. Just put it in the most obvious category and don't overthink it -- we'll let you know if there's a better one.
 
 	category "calculations";
 

@@ -1,4 +1,5 @@
-#Developer Checklist
+# Developer Checklist
+Before your instant answer is ready to be submitted, please go over this checklist to make sure everything is ready and has been done correctly.
 
 ## General Questions
 (tbd)

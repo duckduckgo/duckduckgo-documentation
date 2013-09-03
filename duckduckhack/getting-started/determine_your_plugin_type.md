@@ -14,7 +14,9 @@ If the right plugin type is still not obvious, please <a href="https://github.co
 
 ## 3. Fork the Plugin Repository
 
-Now that you know which plugin type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack Plugin repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding:
+Now that you know which plugin type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack Plugin repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
+
+Once you have an account, please fork the appropriate repository:
 
 * Click [here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork) to fork the **Goodie** Plugin Repository (https://github.com/duckduckgo/zeroclickinfo-goodies)
 * Click [here](https://github.com/duckduckgo/zeroclickinfo-spice/fork) to fork the **Spice** Plugin Repository (https://github.com/duckduckgo/zeroclickinfo-spice)
