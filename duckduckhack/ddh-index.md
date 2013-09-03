@@ -1,66 +1,66 @@
-## DuckDuckHack Documentation Index
+# DuckDuckHack Documentation Index
 
-- **Getting Started**
-  - DDH Vision
-  - Determine Your Instant Answer Type
++ **Getting Started**
+  + [DuckDuckHack Vision](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/duckduckhack_vision.md)
+  + [Determine Your Instant Answer Type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md)
 
-- **Goodie**
-  - Overview
-  - Basic Tutorial
-  - Testing Triggers
-  - Goodie Test Files
-  - Advanced
-  - FAQ
++ **Goodie**
+  + [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
+  + [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
+  + [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  + [Goodie Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_tests.md)
+  + [Advanced Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_triggers.md)
+  + [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
+  + [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 
-- **Spice**
-  - Overview
-  - Basic Tutorial
-  - Testing Triggers
-  - Spice Test Files
-  - Advanced
-    - Backend
-    - Frontend
-  - DDG Methods
-  - Handlebars Helpers
-  - Spice Attributes
-  - FAQ
++ **Spice**
+  + [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
+  + [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md)
+  + [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  + [Spice Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/spice_tests.md)
+  + [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/advanced_backend.md)
+  + [Advanced Frontend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/advanced_frontend.md)
+  + [DDG Methods](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_ddg_methods.md)
+  + [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_handlebars_helpers.md)
+  + [Spice Attributes](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_attributes.md)
+  + [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#spice)
 
-- **Fathead**
-  - Overview
-  - Basic Tutorial
-  - FAQ
++ **Fathead**
+  + [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
+  + [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_basic_tutorial.md)
+  + [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#fathead)
 
-- **Longtail**
-  - Overview
-  - Basic Tutorial
-  - FAQ
++ **Longtail**
+  + [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
+  + [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_basic_tutorial.md)
+  + [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/gaq.md#longtail)
 
-- **Testing**
-  - Installing DuckPAN
-  - Triggers
-  - Display (HTML)
-  - Test Files
-  - Advanced
++ **Testing**
+  + [Installing DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/installing_duckpan.md)
+  + [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  + [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
+  + [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
+  + [Advanced](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/advanced_testing.md)
 
-- **Submitting Your Instant Answer**
-  - Making A Pull Request
-  - Developer Checklist
-  - Metadata
++ **Submitting Your Instant Answer**
+  + [Making A Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/making_a_pull_request.md)
+  + [Developer Checklist](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/developer_checklist.md)
+  + [Metadata](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/metadata.md)
 
-- **Advanced**
-  - GEOLocation API
++ **Advanced**
+  + [GEOLocation API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
 
-- **Resources**
-  - Styleguides
-    - Visual
-      - General
-      - Plugin Specific
-        - Goodie
-        - Spice
-        - Fathead
-        - Longtail
-    - Code
-      - Perl
-      - Javascript
-  - Common Pitfalls
-  - FAQ
++ **Resources**
+  + [Styleguides](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+    + [Visual](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+      + [General](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+      + [Plugin Specific](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+        + [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+        + [Spice](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+        + [Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+        + [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+    + [Code](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+      + [Perl](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+      + [Javascript](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+  + [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+  + [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
