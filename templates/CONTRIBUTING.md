@@ -11,19 +11,19 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 Before you can do anything, you first need a [GitHub account](https://github.com/signup/free). This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a  GitHub account.
 
 If you're submitting a **bug** or **suggestion**:
-* Check the **\<repo\_name\>** [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
-    * If one doesn't exist, create a GitHub issue in the **\<repo\_name\>** repository
-        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
-    * If one already exists, please add any aditional comments you have regarding the matter
+- Check the **\<repo\_name\>** [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
+    - If one doesn't exist, create a GitHub issue in the **\<repo\_name\>** repository
+        - Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
+    - If one already exists, please add any aditional comments you have regarding the matter
 
 If you're submitting a **pull request** (bugfix/addition):
-* Fork the **\<repo\_name\>** repository on GitHub
+- Fork the **\<repo\_name\>** repository on GitHub
 
 ## Making Changes
 
-* Before making and changes, refer to the DuckDuckGo contributing [Guidelines](#link-to-guidelines) to ensure your changes are made in the correct fashion
-* Make sure your commits are of a reasonable size. They shouldn't be too big (or too small)
-* Make sure your commit messages effectively explain what changes have been made, and please identify which plugin or file has been modified:
+- Before making and changes, refer to the DuckDuckGo contributing [Guidelines](#link-to-guidelines) to ensure your changes are made in the correct fashion
+- Make sure your commits are of a reasonable size. They shouldn't be too big (or too small)
+- Make sure your commit messages effectively explain what changes have been made, and please identify which plugin or file has been modified:
 
     ```
     CONTRIBUTING.md - Added the example commit message because it was missing
@@ -35,8 +35,8 @@ If you're submitting a **pull request** (bugfix/addition):
     <bad_commit_example>
     ```
 
-* Make sure you have added the necessary tests for your changes
-* Run `dzil test` (executes all tests in t/) to ensure nothing else was accidentally broken
+- Make sure you have added the necessary tests for your changes
+- Run `dzil test` (executes all tests in t/) to ensure nothing else was accidentally broken
 
 ## Submitting Changes
 
