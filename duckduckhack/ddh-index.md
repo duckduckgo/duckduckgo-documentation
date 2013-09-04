@@ -52,16 +52,13 @@
   - [GEOLocation API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/location_api.md)
 
 - **Resources**
-  - [Styleguides](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-    - [Visual](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-      - [General](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-      - [Plugin Specific](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-        - [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-        - [Spice](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-        - [Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-        - [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-    - [Code](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-      - [Perl](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-      - [Javascript](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-  - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
-  - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack)
+  - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
+  - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md)
+
+- **Styleguides**
+  - [General Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/general_styleguide.md)
+  - [Goodie Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/goodie_styleguide.md)
+  - [Spice Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/spice_styleguide.md)
+  - [Fathead Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/fathead_styleguide.md)
+  - [Longtail Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/longtail_styleguide.md)
+  - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/code_styleguide.md)

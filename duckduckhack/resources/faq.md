@@ -1,6 +1,6 @@
-#FAQ
+# DuckDuckHack FAQ
 
-##General
+## General
 ### Why should I make plugins?
 
 We hope you will consider making DuckDuckGo plugins to:
@@ -73,16 +73,16 @@ Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/po
 
 ## Spice
 
-###I want to use 'X' API, but it doesn't have an endpoint for 'Y'. What should I do?
+### I want to use 'X' API, but it doesn't have an endpoint for 'Y'. What should I do?
 Email them! - If you explain what it's for, they might be willing to create and endpoint for you! If not, it's probably best to find an another API.
 
-###Can I use an API that returns XML?
+### Can I use an API that returns XML?
 Sorry, but **no**. We currently don't support XML. We're considering it though...
 
-###Can I use an API that returns HTML or a String? 
+### Can I use an API that returns HTML or a String? 
 If the response is a single string, then yes - you can use `zci wrap_jsonp_callback`. You can read more about that [here](#). Or take a look at the [Automeme](https://github.com/duckduckgo/zeroclickinfo-spice/blob/spice2/lib/DDG/Spice/Automeme.pm#L8) plugin. If the response is more complicated, then sorry but **no**.
 
-###Can I move the carousel detail area above the carousel?
+### Can I move the carousel detail area above the carousel?
 Yup - Checkout the [**Khan Academy Spice**](https://github.com/duckduckgo/zeroclickinfo-spice/blob/spice2/share/spice/khan_academy/khan_academy.js) for an example.
 
 All you need to do is set the `carousel_css_id` property in the `Spice.render()` call, and then use jQuery's `prependTo()` method, to move the detail area:
@@ -101,13 +101,13 @@ This snippet uses jQuery to grab the **#ddgc\_detail** `<div>` from the DOM, and
 
 **\*\*Note**: In order to move the carouse detail area, the `prependTo()` method must be used ***after*** the `Spice.render()` call because before that call, none of the `<div>`'s related to your Spice plugin exist in the DOM!
 
-###Can I use the 'X', 'Y' or 'Z' JavaScript library?
+### Can I use the 'X', 'Y' or 'Z' JavaScript library?
 Probably not. Maybe, if it is very small. But we prefer that no third party, extra libraries are used. ***Please*** ask us first before writing a plugin that is **dependent** on an extra library - we don't want you to waste your time and energy on something we can't accept!
 
-###Can I use Coffeescript?
+### Can I use Coffeescript?
 No.
 
-###What about...
+### What about...
 Nope. Just use JavaScript, please and thanks.
 
 
