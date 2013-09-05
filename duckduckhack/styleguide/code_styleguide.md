@@ -1,9 +1,9 @@
-#DuckDuckHack - Code Style Guide
+# DuckDuckHack - Code Style Guide
 
-#Javascript
+## Javascript
 
-#Handlebars
+## Handlebars
 
-#Css
+## Css
 
-#Perl
+## Perl

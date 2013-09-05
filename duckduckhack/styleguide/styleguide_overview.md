@@ -5,6 +5,6 @@ We also strive to ensure all our plugins are designed and built with a focus on 
 
 Furthermore, as a largely open-source project, we like to keep our code as consistant as our plugins. This means all code should be formatted the same way and should look and feel as though it has all been written by the same person.
 
-For more information on the look and feel of plugins, please refer to our [Design Style Guide](design_styleguide.md).
+For more information on the look and feel of plugins, please refer to our [Design Style Guide](#).
 
-For more information on code formatting, please refer to our [Code Style Guide](code_styleguide.md).
+For more information on code formatting, please refer to our [Code Style Guide](#).

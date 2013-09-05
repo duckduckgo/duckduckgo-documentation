@@ -1,8 +1,8 @@
-# Spice Plugin Desing Style Guide
+# Spice Plugin Design Style Guide
 
 (overview - tbd)
 
-### Formatting
+## Formatting
 (overview - tbd)
 
 #### Consistant Variable Names
@@ -22,19 +22,23 @@ ex. "api_return"
 
 - Templates should not be modified.
 
-### Naming Conventions
+## Naming Conventions
 (tbd)
 
-### Do's & Dont's
+## Do's & Dont's
+
+### **Do**
 
 #### Proxying Images & Audio
 /iu/
 - Requires a standard image format extension!
 
+### **Don't**
+
 #### Add extra attribution
 "More at" link should be enough
 
-### Carousel
+## Carousel
     -  do not modify any aspects of the pagination
     -  do not modify item rollover styling
     -  do not modify selected item styling
