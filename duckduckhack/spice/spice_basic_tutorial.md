@@ -22,7 +22,6 @@ handle remainder => sub {
 };
 
 1;
-
 ```
 
 To refresh your memory, the **triggers** keyword tells the plugin system when to call a plugin. In the [Basic Tutorial](#basic-tutorial) we discussed using the **start** keyword to specify trigger words that need to be present at the beginning of the query. Check out the section on [Triggers](general.md#triggers) for more information.

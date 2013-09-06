@@ -1,17 +1,15 @@
 # Spice Frontend ( More Examples )
 
 # Index
-- [Overview](#overview)
-    - [Tech](#tech)
-- [Example #1: Alternative.To (Basic Carousel Plugin)](#example-2---alternativeto-basic-carousel-plugin)
-- [Example #2: Movie (Advanced Plugin)](#example-3---movie-advance-plugin)
-- [Example #3: Quixey (Advanced Carousel Plugin)](#example-4---quixey-advanced-carousel-plugin)
-- [Example #4: Dictionary (More Advanced Plugin)](#example-5---dictionary-more-advanced-plugin)
+- [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-2---alternativeto-basic-carousel-instant-answer)
+- [Example #2: Movie (Advanced Instant Answer)](#example-3---movie-advance-instant-answer)
+- [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-4---quixey-advanced-carousel-instant-answer)
+- [Example #4: Dictionary (More Advanced Instant Answer)](#example-5---dictionary-more-advanced-instant-answer)
 
 -------
 
-## Example #1 - Alternative.To (Basic Carousel Plugin)
-The Alternative.To plugin is very similar to NPM in that it is also relatively basic, however, it uses the new **Carousel** Spice Template. Let's take a look at the code and see how this is done:
+## Example #1 - Alternative.To (Basic Carousel Instant Answer)
+The Alternative.To instant answer is very similar to NPM in that it is also relatively basic, however, it uses the new **Carousel** Spice Template. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
 ```javascript
@@ -28,14 +26,14 @@ function ddg_spice_alternative_to(api_result) {
     });
 }
 ```
-Just like the NPM plugin, Alternative.To uses `Spice.render()` with most of the same parameters, however, unlike NPM it uses a few new parameters as well:
+Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most of the same parameters, however, unlike NPM it uses a few new parameters as well:
 
-- `template_frame` is used to tell the Render function that the base template for this plugin will be the **Carousel** template.  
+- `template_frame` is used to tell the Render function that the base template for this instant answer will be the **Carousel** template.  
 ***Note**: This is a template which we have already created and you don't have to worry about creating or modifying.*
 
-- `carousel_template_detail` is an **optional** parameter which specifies the Handlebars template to be used for the Carousel ***detail*** area - the space below the template which appears after clicking a carousel item. For Alternative.To, when a user clicks a carousel item (icon), the detail area appears and provides more information about that particular item. This is similarly used for the [Quixey plugin](https://duckduckgo.com/?q=ios+flight+tracking+app).
+- `carousel_template_detail` is an **optional** parameter which specifies the Handlebars template to be used for the Carousel ***detail*** area - the space below the template which appears after clicking a carousel item. For Alternative.To, when a user clicks a carousel item (icon), the detail area appears and provides more information about that particular item. This is similarly used for the [Quixey instant answer](https://duckduckgo.com/?q=ios+flight+tracking+app).
 
-- `carousel_css_id` is used to give an `id` to the inner wrapper `div` created by the carousel template. This must be used when any special CSS is written for a plugin using the carousel. It allows any plugin specific CSS to be namespaced eg. `#alternative_to li {…}`, which prevents plugins with custom CSS from interfering with other css that's already loaded.
+- `carousel_css_id` is used to give an `id` to the inner wrapper `div` created by the carousel template. This must be used when any special CSS is written for a instant answer using the carousel. It allows any instant answer specific CSS to be namespaced eg. `#alternative_to li {…}`, which prevents instant answers with custom CSS from interfering with other css that's already loaded.
 
 - `carousel_items` is **required** when using the carousel template. It passes along an array or object to be iterated over by the carousel template. Each of these items becomes the context for the `alternative_to.handlebars` template which defines the content of each `<li>` in the carousel.
 
@@ -59,7 +57,7 @@ It's also important to note that the `<li>` has a `class` of `ddgc_item` which i
 
 Another important point is that we use `{{{condense Name maxlen="25"}}}` which demonstrates the usage of a Handlebars helper function. In this case, we are using the `condense` function (defined elsewhere, internally) which takes two parameters: `Name` (from `api_result`), which is the string to be shortened and `maxlen="25"` which specifies the length the string will be shortened to. 
 
-Seeing as this is a carousel plugin, which uses the optional carousel details area, it has another Handlebars template which defines the content for that.  Let's have a look at the Alternative.To details template:
+Seeing as this is a carousel instant answer, which uses the optional carousel details area, it has another Handlebars template which defines the content for that.  Let's have a look at the Alternative.To details template:
 ###### alternative_to_details.handlebars
 ```html
 <div>
@@ -91,8 +89,8 @@ Let's take a look at the Alternative.To CSS:
 This CSS is fairly straightforward, but the most important thing to notice here is that we've namespaced the css using `#alternative_to` and that we have used `!important` to over-ride the default carousel css.
 
 
-## Example #2 - Movie (Advanced Plugin)
-The movie plugin is a more advanced than **NPM** and **Alternative.To**, but most of the logic is in a single function which is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, its relatively easy to understand, so lets start by looking at the Movie plugin's javascript:
+## Example #2 - Movie (Advanced Instant Answer)
+The movie instant answer is a more advanced than **NPM** and **Alternative.To**, but most of the logic is in a single function which is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, its relatively easy to understand, so lets start by looking at the Movie instant answer's javascript:
 
 ###### movie.js
 ```javascript
@@ -111,7 +109,7 @@ function ddg_spice_movie (api_result) {
 };    
 ```
     
-This plugin has a very simple call to `Spice.render()`, but it slightly differs from other plugin because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this plugin is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
+This instant answer has a very simple call to `Spice.render()`, but it slightly differs from other instant answer because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this instant answer is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
 
 Before looking at the implementation of the Handlebars helper functions lets first take a look at the Movie Spice's Handlebars template to see how the helper functions are used:
 
@@ -162,7 +160,7 @@ Before looking at the implementation of the Handlebars helper functions lets fir
 
 The first line of the template demonstrates the use of a [Handlebars block helper](http://handlebarsjs.com/block_helpers.html), `{{#relevantMovie}}` which is defined in **movie.js**. This block helper is important because it sets the context for the rest of the template. In this case we use `{{#relevantMovie}}` to find the most relevant movie from the list of movies in our `api_result`, and then using that single movie object as the context, we use the rest of the template to reference the various properties of the movie and build a result.
 
-If we had implemented this plugin as a Carousel, we would not need to use our relevancy function in this manner becaues the aim wouldn't be to get the single most relevant result. However we chose to implement the movie function in this manner in order to do just that, show the *most* relevant result and so this required the use of a block helper.
+If we had implemented this instant answer as a Carousel, we would not need to use our relevancy function in this manner becaues the aim wouldn't be to get the single most relevant result. However we chose to implement the movie function in this manner in order to do just that, show the *most* relevant result and so this required the use of a block helper.
 
 It's important you understand the concept of the block helper: outside of the block helper, the context of the template is equal to `api_result`, however, inside the `{{#relevantMovie}}` helper, the context of the template is explicitly set to be the return value of the `{{#relevantMovie}}`. Before looking at the rest of the Handlebars template, let's look at the implementation of `{{#relevantMovie}}`:
 
@@ -216,7 +214,7 @@ A fairly simple function which calculates a score for a given movie based on the
                 next : currentbest;
     };
 ```
-As the comment explains, this function simply compares the score of two movies and returns the higher scoring movie. However, it is important to mention the use of the function `DDG.isRelevant()`. This is a special internal function which compares the input string to the current search query (i.e., the one that triggered this plugin), to see how relevant the string is with respect to the words in the query. `DDG.isRelevant()` also takes an **optional** second parameter which is an object containing sets of keys with a value of 1. The keys of this object, defined by the developer, will explicitly be ignored when comparing the query string against the candidate string. In our case we are comparing the title of the movie we are currently considering, `next.title`, against the search query and we explicitly ignore a set of words - mostly trigger words for the plugin - as defined above: `var ignore = ["movie", "film", "rotten", "rating", "rt", "tomatoes"];`.
+As the comment explains, this function simply compares the score of two movies and returns the higher scoring movie. However, it is important to mention the use of the function `DDG.isRelevant()`. This is a special internal function which compares the input string to the current search query (i.e., the one that triggered this instant answer), to see how relevant the string is with respect to the words in the query. `DDG.isRelevant()` also takes an **optional** second parameter which is an object containing sets of keys with a value of 1. The keys of this object, defined by the developer, will explicitly be ignored when comparing the query string against the candidate string. In our case we are comparing the title of the movie we are currently considering, `next.title`, against the search query and we explicitly ignore a set of words - mostly trigger words for the instant answer - as defined above: `var ignore = ["movie", "film", "rotten", "rating", "rt", "tomatoes"];`.
 
 ```javascript
     result = DDG_bestResult(this.movies, better);
@@ -355,10 +353,10 @@ Handlebars.registerHelper("rating_adjective", function() {
 
 Again, this is a fairly simply function which simply returns either "a" or "an" based on the rating of the movie.
 
-Now that you've seen a more advanced plugin and understand how to use Handlebars helpers, lets look at another advanced plugin example.
+Now that you've seen a more advanced instant answer and understand how to use Handlebars helpers, lets look at another advanced instant answer example.
 
-## Example #3 - Quixey (Advanced Carousel Plugin)
-The Quixey plugin is one of our more advanced carousel plugins which uses a considerable amount of Handlebars helpers and similarly to the **Movie** plugin has a relevancy checking component. Let's begin by taking a look at the Quixey plugin's JavaScript:
+## Example #3 - Quixey (Advanced Carousel Instant Answer)
+The Quixey instant answer is one of our more advanced carousel instant answers which uses a considerable amount of Handlebars helpers and similarly to the **Movie** instant answer has a relevancy checking component. Let's begin by taking a look at the Quixey instant answer's JavaScript:
 
 ###### quixey.js
 ```javascript
@@ -387,9 +385,9 @@ function ddg_spice_quixey (api_result) {
         carousel_template_detail: "quixey_detail",
 ```
 
-Similarly to **Alternative.To**, the Quixey plugin uses the carousel, and sets values for all the required carousel-specific properties. However, this plugin also uses the `force_big_header` property to create a ZeroClick header and subsquently sets the value of the header text, `header1`. Also, the `more_logo` property is set, which allows a custom image to be used instead of the `source_name` text.  
+Similarly to **Alternative.To**, the Quixey instant answer uses the carousel, and sets values for all the required carousel-specific properties. However, this instant answer also uses the `force_big_header` property to create a ZeroClick header and subsquently sets the value of the header text, `header1`. Also, the `more_logo` property is set, which allows a custom image to be used instead of the `source_name` text.  
 
-One important difference about Quixey is the use of our own `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.render()`. Unlike the **Movie** plugin, we are required to get relevant results in this manner (i.e., outside the template) so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
+One important difference about Quixey is the use of our own `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.render()`. Unlike the **Movie** instant answer, we are required to get relevant results in this manner (i.e., outside the template) so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
 
 Moving on, let's take a look at the implementation of the `getRelevants()` helper:
 
@@ -457,7 +455,7 @@ Before looking at the implementation of the remaining Quixey Handlebars helpers,
 </li>
 ```
 
-This template is very simple, it creates an `<li>` with an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlilke **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be missalligned. So, if the images for your plugin aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
+This template is very simple, it creates an `<li>` with an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlilke **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be missalligned. So, if the images for your instant answer aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
 
 Now let's take a look at the Quixey `carousel_template_detail` template. This template is more advanced, but most of the content is basic HTML which is populated by various `api_result` properties and Handlebars helpers:
 
@@ -630,10 +628,10 @@ Handlebars.registerHelper("quixey_star", function() {
 });
 ```
 
-This helper is also very simple, but it is important because it uses the `DDG.get_asset_path()` function which returns the URI for an asset stored in a plugin's share folder. This is necessary because Spice plugins and their content are versioned internally. So the URI returned by this function will contain the proper version number, which is required to access any assets.
+This helper is also very simple, but it is important because it uses the `DDG.get_asset_path()` function which returns the URI for an asset stored in a instant answer's share folder. This is necessary because Spice instant answers and their content are versioned internally. So the URI returned by this function will contain the proper version number, which is required to access any assets.
 
-## Example #4 - Dictionary (More Advanced Plugin)
-The dictionary plugin is a more advanced plugin than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** plugin, its Perl modules work together as one plugin, however if the other endpoints worked seperately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** plugin, they too would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
+## Example #4 - Dictionary (More Advanced Instant Answer)
+The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked seperately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they too would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
 To begin, lets look at the first callback function definition in the Dictionary javascript:
 
@@ -657,7 +655,7 @@ To begin, lets look at the first callback function definition in the Dictionary 
 
 The comments at the beginning of the file explain what the various callbacks are for. Each of these callback functions is connected to a different endpoint, meaning they each belong to a different Perl module. As you can see, the name of each callback corellates to the name of the perlmodule. So `dictionary_definition()` is the callback for `DDG::Spice::Dictionary::Definition`, likewise `dictionary_audio` is for `DDG::Spice::Dictionary::Audio`, etc.
 
-Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given plugin by using the jQuery `getScript()` function which makes an ajax call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary plugin defines all **four** callback functions in **dictionary_definition.js**
+Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an ajax call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary_definition.js**
 
 Moving on, let's take a look at the implementation of the `Spice.render()` call and the `dictionary_definition()`  callback:
 
@@ -692,7 +690,7 @@ function ddg_spice_dictionary_definition (api_result) {
     };
 ```
 
-We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronounciation text, the second gets the audio file for the pronounciation of the word. As mentioned these endpoints are used to work together as one plugin so using the returns from the seperate API calls we construct one dictionary plugin result which contains the word definition, the pronounciation text and the audio recording of the pronounciation.
+We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronounciation text, the second gets the audio file for the pronounciation of the word. As mentioned these endpoints are used to work together as one instant answer so using the returns from the seperate API calls we construct one dictionary instant answer result which contains the word definition, the pronounciation text and the audio recording of the pronounciation.
 
 The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_defintion()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
@@ -711,7 +709,7 @@ The reason for wrapping the `Spice.render()` call in a function is because we ne
     // Check if we have results we need.
     if (api_result && api_result.length > 0) {
 
-        // Wait, before we display the plugin, let's check if it's a plural
+        // Wait, before we display the instant answer, let's check if it's a plural
         // such as the word "cacti."
         var singular = api_result[0].text.match(/^(?:A )?plural (?:form )?of <xref>([^<]+)<\/xref>/i);
 
@@ -721,7 +719,7 @@ The reason for wrapping the `Spice.render()` call in a function is because we ne
             ddg_spice_dictionary_definition.pluralOf = api_result[0].word;
             $.getScript(path + "/reference/" + singular[1]);
         } else {
-            // Render the plugin if everything is fine.
+            // Render the instant answer if everything is fine.
             render(api_result, api_result[0].word, api_result[0].word);
         }
     }
@@ -750,7 +748,7 @@ function ddg_spice_dictionary_reference (api_result) {
         api_result[0].pluralOf = word;
         api_result[0].word = ddg_spice_dictionary_definition.pluralOf;
 
-        // Render the plugin.
+        // Render the instant answer.
         render(api_result, api_result[0].word, word);
     }
 };
@@ -874,9 +872,9 @@ The callback then verifies the API returned a pronunciation of the queried word 
     };
 ```
 
-Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavasScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a plugin, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
+Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavasScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
 
-**\*\*Note:** The use of the SoundManager library for this plugin shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatabilty but the use of 3rd party libraries is not something we advocate, however since this was an internally written plugin, we decided to use the SoundManager library for this plugin as well as all others which utilize audio (eg. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
+**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatabilty but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (eg. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
 
 ```javascript
     // Initialize the soundManager object.
@@ -1000,9 +998,9 @@ Handlebars.registerHelper("format", function(text) {
 });
 ```
 
-This helper is used to create hyperlinks within the word definition text. The Wordnik API we are using for this plugin provides definitions which often contain words or phrases that are wrapped in `<xref>` tags indicating that Wordnik also has a definition for that word or phrase. This helper is used to replace the `<xref>` tags with `<a>` tags that link to a search for that particular word on **Wordnik.com**.
+This helper is used to create hyperlinks within the word definition text. The Wordnik API we are using for this instant answer provides definitions which often contain words or phrases that are wrapped in `<xref>` tags indicating that Wordnik also has a definition for that word or phrase. This helper is used to replace the `<xref>` tags with `<a>` tags that link to a search for that particular word on **Wordnik.com**.
 
-Now that we have seen the Handlebars template and all looked over all the JavaScript related to the dictionary plugin, lets take a look at the CSS used to style the display of the result:
+Now that we have seen the Handlebars template and all looked over all the JavaScript related to the dictionary instant answer, lets take a look at the CSS used to style the display of the result:
 
 ###### dictionary_definition.css
 ```css
@@ -1069,4 +1067,4 @@ Now that we have seen the Handlebars template and all looked over all the JavaSc
 
 Understanding this CSS isn't terribly important in this case because most of it has been borrowed from the [Skeleton](http://getskeleton.com) framework's button styling. Most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
 
-As you can see, the Dictionary plugin is one of the most involved Spice plugins we have due to its use of multiple endpoints and their respective callback functions. Most plugins however shouldn't need to be so complex in order to function, so we greatly prefer that plugins are built as simple and straightforward as possible.
+As you can see, the Dictionary instant answer is one of the most involved Spice instant answers we have due to its use of multiple endpoints and their respective callback functions. Most instant answers however shouldn't need to be so complex in order to function, so we greatly prefer that instant answers are built as simple and straightforward as possible.
