@@ -73,15 +73,15 @@ Let's take a look at the Alternative.To CSS:
 
 ###### alternative_to.css
 ```css
-# alternative_to #ddgc_slides li {
+#alternative_to #ddgc_slides li {
     height: 60px !important;
 }
 
-# alternative_to #ddgc_slides p{
+#alternative_to #ddgc_slides p{
     height: 0px !important;
 }
 
-# alternative_to #ddgc_slides span {
+#alternative_to #ddgc_slides span {
     margin-top: 0px !important;
 }   
 ```
