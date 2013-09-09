@@ -1,7 +1,6 @@
 # Spice Templates Overview
 There are several templates to choose from, each of which are best for displaying certain kinds of results and information
 
-------
 ## List
 
 ### Use Case:
@@ -11,7 +10,6 @@ A list of results (eg. links) to display. Works best for bulleted/numbered lists
 ![List Template Example](../assets/list_template_example.png)
 
 
-------
 ## Carousel
 
 ### Use Case:
@@ -21,7 +19,6 @@ A list of results to display, each of which has a unique image and title. Each i
 ![Carousel Template Example](../assets/carousel_template_example.png)
 
 
-------
 ## Record
 
 ### Use Case:
@@ -31,7 +28,6 @@ Single result with various pieces of information, each of which has a unique nam
 ![Record Template Example](../assets/record_template_example.png)
 
 
-------
 ## Split Pane
 
 ### Use Case:
