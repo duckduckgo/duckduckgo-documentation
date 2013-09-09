@@ -10,7 +10,7 @@ A list of results (eg. links) to display. Works best for bulleted/numbered lists
 ![List Template Example](../assets/list_template_example.png)
 
 ### How it works:
-#### reddit_search.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
+##### reddit_search.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
 ```javascript
 Spice.render({
     data              : api_result.data.children,
@@ -41,7 +41,7 @@ A list of results to display, each of which has a unique image and title. Each i
 ![Carousel Template Example](../assets/carousel_template_example.png)
 
 ### How it works:
-#### quixey.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js)
+##### quixey.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js)
 ```javascript
 Spice.render({
     data: api_result,
@@ -69,7 +69,7 @@ Single result with various pieces of information, each of which has a unique nam
 ![Record Template Example](../assets/record_template_example.png)
 
 ### How it works:
-#### meta_cpan.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
+##### meta_cpan.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
 ```javascript
 Spice.render({
     data             : api_response,
@@ -92,7 +92,7 @@ Single result that needs a vertically split layout (left & right panes) for your
 ![Split Pane Template Example](../assets/split_pane_template_example.png)
 
 ### How it works:
-#### airlines.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/airlines.js)
+##### airlines.js [link](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/airlines.js)
 ```javascript
 
 ```
