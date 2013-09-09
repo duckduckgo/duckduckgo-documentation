@@ -24,7 +24,7 @@ Single result with various pieces of information, each of which has a unique nam
 
 ## Split Pane
 ### Example:
-![Split Pane Template Example](../assets/split_pane_template_example.jpeg)
+![Split Pane Template Example](../assets/split_pane_template_example.png)
 
 ### Use Case:
 Single result that needs a vertically split layout (left & right panes) for your information.
