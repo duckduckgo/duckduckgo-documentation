@@ -165,7 +165,7 @@ Seeing as this is a special kind of sub-template, no template options need to be
 - `{{#rd}}` &mdash; *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
 - `{{rv}}` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
 
-## Advanced List & Carousel
+## Advanced Template Options (List & Carousel)
 The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
 
 ### Modifying Carousel Item Dimensions
