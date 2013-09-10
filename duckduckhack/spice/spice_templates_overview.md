@@ -54,7 +54,7 @@ A list of results to display, each of which has a unique image and title. Each i
 ![Carousel Template Example](../assets/carousel_template_example.png)
 
 ### How it works:
-###### quixey.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js)
+###### alternative_to.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 ```javascript
 Spice.render({
     data                     : api_result,
@@ -165,10 +165,10 @@ Seeing as this is a special kinda of sub-template, no template options need to b
 
 ### Handlebars Block Helpers:
 - `rt` &mdash; used to specify a Title
-- `rd` &mdash; used to specify a Descriptor (identical to `rt`, but with different CSS class)
+- `rd` &mdash; used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
 
 ### Handlebars Helpers:
-- `rv` &mdash; shorter form of `rd` , produces a key-value pair if the named element exists in the `data` object
+- `rv` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced List & Carousel
 The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
