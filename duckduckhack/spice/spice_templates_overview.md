@@ -164,11 +164,11 @@ Seeing as this is a special kinda of sub-template, no template options need to b
 - none
 
 ### Handlebars Block Helpers:
-- `rt` $mdash; used to specify a Title
-- `rd` $mdash; used to specify a Descriptor (identical to `rt`, but with different CSS class)
+- `rt` &mdash; used to specify a Title
+- `rd` &mdash; used to specify a Descriptor (identical to `rt`, but with different CSS class)
 
 ### Handlebars Helpers:
-- `rv` $mdash; shorter form of `rd` , produces a key-value pair if the named element exists in the `data` object
+- `rv` &mdash; shorter form of `rd` , produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced List & Carousel
 The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
