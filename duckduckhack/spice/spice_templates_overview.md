@@ -158,17 +158,12 @@ Spice.render({
 ```
 
 ## Explanation:
-Seeing as this is a special kinda of sub-template, no template options need to be specified. Instead special Handlebars helpers must be used inside the `template_normal` template.
+Seeing as this is a special kind of sub-template, no template options need to be specified. Instead special Handlebars helpers must be used inside the `template_normal` template.
 
-### Template Options:
-- none!
-
-#### Handlebars Block Helpers:
-- `rt` &mdash; used to specify a Title
-- `rd` &mdash; used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
-
-#### Handlebars Helpers:
-- `rv` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
+### Handlebars Helpers:
+- `{{#rt}}` &mdash; *block helper* used to specify a Title
+- `{{#rd}}` &mdash; *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
+- `{{rv}}` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced List & Carousel
 The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
