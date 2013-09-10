@@ -1,7 +1,7 @@
 # Spice Templates Overview
 There are several templates to choose from, each of which are best for displaying certain kinds of results and information.
 
-In order to indicate which template you are using, you must set the `template_frame` property in the object given to the `Spice.render()` call. The below examples and explanation will clarify further implementation details. As well, for each template various properties need to be set in the object given to the `template_options` property.These properties specify various settings for the template being used.
+In order to indicate which template you are using, you must set the `template_frame` property in the object given to the `Spice.render()` call. The below examples and explanations will clarify further implementation details. As well, for each template, various properties need to be set within the `template_options` property. These properties specify various settings for the template being used.
 
 ## List
 
