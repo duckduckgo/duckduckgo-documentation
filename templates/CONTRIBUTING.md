@@ -8,9 +8,12 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 
 ## Getting Started
 
-Before you can do anything, you first need a [GitHub account](https://github.com/signup/free). This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a  GitHub account.
+Before you can do anything, you first need a [GitHub account](https://github.com/signup/free). This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
 
-If you're submitting a **bug** or **suggestion**:
+## Submitting a **bug** or **suggestion**
+
+- Firstly, please make sure the bug is related to the **\<repo\_name\>** repository. If this bug is about the DuckDuckGo API, or the relevancy of our search results, please visit our feedback page at <https://duckduckgo.com/feedback>. If you're unsure, its best to use the feedback page (your message will be passed along to the correct people).
+
 - Check the **\<repo\_name\>** [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
     - If one doesn't exist, create a GitHub issue in the **\<repo\_name\>** repository
         - Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug

@@ -1,10 +1,10 @@
 # Spice Frontend ( More Examples )
 
 # Index
-- [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-2---alternativeto-basic-carousel-instant-answer)
-- [Example #2: Movie (Advanced Instant Answer)](#example-3---movie-advance-instant-answer)
-- [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-4---quixey-advanced-carousel-instant-answer)
-- [Example #4: Dictionary (More Advanced Instant Answer)](#example-5---dictionary-more-advanced-instant-answer)
+- [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-1---alternativeto-basic-carousel-instant-answer)
+- [Example #2: Movie (Advanced Instant Answer)](#example-2---movie-advance-instant-answer)
+- [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-3---quixey-advanced-carousel-instant-answer)
+- [Example #4: Dictionary (More Advanced Instant Answer)](#example-4---dictionary-more-advanced-instant-answer)
 
 -------
 
