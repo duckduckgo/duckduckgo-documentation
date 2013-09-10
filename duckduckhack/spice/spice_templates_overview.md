@@ -2,7 +2,7 @@
 There are several templates to choose from, each of which are best for displaying certain kinds of results and information.
 
 In order to indicate which template you are using, you must set the `template_frame` property in the object given to the `Spice.render()` call. The below examples and explanations will clarify further implementation details. As well, for each template, various properties need to be set within the `template_options` property. These properties specify various settings for the template being used.
-
+ Template
 ## List
 
 ### Use Case:
@@ -43,9 +43,9 @@ Spice.render({
 - `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
 
 #### Advanced
-See [below](#advanced-list-&-carousel).
+See [below](#advanced-list--carousel).
 
-## Carousel
+## Carousel Template
 
 ### Use Case:
 A list of results to display, each of which has a unique image and title. Each item also has more information to be displayed once the carousel item is clicked.
@@ -84,9 +84,9 @@ Spice.render({
 - `template_detail` &mdash; handlebars sub-template to be applied to each element in `items` array (used to populate the "detail area" below carousel results)
 
 #### Advanced
-See [below](#advanced-list-&-carousel).
+See [below](#advanced-list--carousel).
 
-## Split Pane
+## Split Pane Template
 
 ### Use Case:
 Single result that needs a vertically split layout (left & right panes) for your information.
@@ -124,7 +124,7 @@ Spice.render({
     - `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
 
 
-## Record
+## Record Template
 This template is somewhat different from the others, as it is more of a sub-template. Instead of having its own base template (like the above templates), developers can use the record template by using the Handlebars helper functions we've written. This means the record template can be used in any Handlebars files and so it can be used within other tempaltes as well.
 
 ### Use Case:
@@ -169,9 +169,6 @@ Seeing as this is a special kinda of sub-template, no template options need to b
 
 ### Handlebars Helpers:
 - `rv` $mdash; shorter form of `rd` , produces a key-value pair if the named element exists in the `data` object
-
-## Tips
-As seen, some properties of the `template_options`, as well as those given to `Spice.render()` are optional. This is because they have been designed to allow fallbacks. In most cases if a template
 
 ## Advanced List & Carousel
 The carousel and list also allow for more advanced `template_options`:
