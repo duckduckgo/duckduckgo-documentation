@@ -171,13 +171,13 @@ Seeing as this is a special kinda of sub-template, no template options need to b
 - `rv` $mdash; shorter form of `rd` , produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced List & Carousel
-The carousel and list also allow for more advanced `template_options`:
+The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
 
 ### Modifying Carousel Item Dimensions
-- `li_height` &mdash; lets you specify the minimum height for each carousel item
-- `li_width` &mdash; lets you specify the minimum width for each carousel item
+- `li_height` &mdash; lets you specify the *absolute* height for each carousel item
+- `li_width` &mdash; lets you specify the *minimum* width for each carousel item
 
 ### Handling a Single Carousel/List Item
-- `single_item_handler` &mdash; lets you specify a function, that takes an object as input and uses it to modify/set the properties of `Spice.render()` (eg. header1, image_url) in the event that only one item is returned from the upstream API.
+- `single_item_handler` &mdash; lets you specify a function which takes an object (the single API result) as input and uses it to modify/set the properties of `Spice.render()` (eg. `header1`, `image_url`) when only one item is returned from the upstream API.
 
 **\*\*Note**: If a single result is returned and a `template_normal` has been specified, then that template will be used and the single item from the API will be passed along as the input. If no `template_normal` is defined, the system will check for a defined `template_detail` and use that. Failing that, it will check if `template_item` is defined and use that.
