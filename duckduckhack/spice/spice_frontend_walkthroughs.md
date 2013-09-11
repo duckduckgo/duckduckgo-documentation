@@ -1,4 +1,4 @@
-# Spice Frontend ( More Examples )
+# Spice Frontend Walkthroughs
 
 # Index
 - [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-1---alternativeto-basic-carousel-instant-answer)

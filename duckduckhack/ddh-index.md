@@ -16,6 +16,8 @@
 - **Spice**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md)
+  - [Spice Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_tempaltes_overview.md)
+  - [Spice Frontend Walkthroughs](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_frontend_walkthrough.md)
   - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
   - [Spice Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/spice_tests.md)
   - [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/advanced_backend.md)
