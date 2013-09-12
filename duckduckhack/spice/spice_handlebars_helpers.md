@@ -26,6 +26,7 @@ Array of Objects or Strings
 {{/concat}}
 ```
 
+------
 ### {{#condense}}
 Shortens input string to given `maxlen` and appends `truncation` to shortened string. If input string is already shorter than `maxlen`, simply returns input string
 
@@ -45,6 +46,7 @@ String
 ```
 
 
+------
 ### {{#stripHTML}}
 Removes all HTML tags and elements from input string
 
@@ -60,6 +62,7 @@ None
 ```
 
 
+------
 ### {{#loop}}
 Counts from zero to the value of obj, assuming obj is an object
 
@@ -69,6 +72,7 @@ Counts from zero to the value of obj, assuming obj is an object
 #### Usage
 
 
+------
 ### {{# }}
 
 
