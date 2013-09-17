@@ -7,7 +7,7 @@ DuckDuckHack is our way of letting users improve the search experience by creati
 Anyone in the world can suggest or develop an, "instant answer." They're shown at the top of our results page and often provide the answer you're looking for, without even having to click!
 
 This is what an instant answer looks like:
-![instant answer example](https://raw.github.com/duckduckgo/DuckDuckGo-Documentation/master/DuckDuckHack/Assets/app_search_example.png)
+![instant answer example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png)
 
 ## Getting Involved
 Whether you can code or not, there are many ways you can contribute to DuckDuckGo:
@@ -25,4 +25,4 @@ Whether you can code or not, there are many ways you can contribute to DuckDuckG
 **To get involved with the DuckDuckGo community, head over to our [community platform](https://dukgo.com/)!**
 
 ### **Develop (or improve) instant answers**  
-  If you're a developer and you want to create your own instant answer, or if you'd like to help fix current issues please start by reading the **[DuckDuckHack Vision.](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/DuckDuckHack/Getting-Started/duckduckhack_vision.md)**
+  If you're a developer and you want to create your own instant answer, or if you'd like to help fix current issues please start by reading the **[DuckDuckHack Vision.](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/duckduckhack_vision.md)**
