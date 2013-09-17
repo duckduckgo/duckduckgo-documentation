@@ -921,7 +921,7 @@ Now that we have seen the Handlebars template and all looked over all the JavaSc
 
 ###### dictionary_definition.css
 ```css
-.widget-button {
+#spice_dictionary_definition .widget-button {
     background: #eee; /* Old browsers */
     background: #eee -moz-linear-gradient(top, rgba(255,255,255,.1) 0%, rgba(0,0,0,.1) 100%); /* FF3.6+ */
     background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.1)), color-stop(100%,rgba(0,0,0,.1))); /* Chrome,Safari4+ */
@@ -951,7 +951,7 @@ Now that we have seen the Handlebars template and all looked over all the JavaSc
     vertical-align: text-bottom;
 }
 
-.widget-button-press {
+#spice_dictionary_definition .widget-button-press {
     border-color: #666;
     background: #ccc; /* Old browsers */
     background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.25) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
@@ -969,19 +969,21 @@ Now that we have seen the Handlebars template and all looked over all the JavaSc
     padding: 0;
 }
 
-.widget-disappear {
+#spice_dictionary_definition .widget-disappear {
   display: none;
 }
 
-# play-icon {
+#spice_dictionary_definition #play-icon {
   line-height: normal;
 }
 
-.definition em {
+#spice_dictionary_definition .definition em {
     font-style: italic;
 }
 ```
 
-Understanding this CSS isn't terribly important in this case because most of it has been borrowed from the [Skeleton](http://getskeleton.com) framework's button styling. Most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
+Understanding this CSS isn't terribly important in this case because most of it has been borrowed from the [Skeleton](http://getskeleton.com) framework's button styling. The most important part about this CSS file is noticing that we have targetted every CSS rule to only apply to elements found within the element with an ID of **#spice\_dictionary\_definition**. Every spice plugin is automatically wrapped in a div with an ID of "#spice_spiceCallbackName". This allows you to force any/all CSS to only apply to the elements on the page related to the Spice instant answer.
+
+As you can see, most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
 
 As you can see, the Dictionary instant answer is one of the most involved Spice instant answers we have due to its use of multiple endpoints and their respective callback functions. Most instant answers however shouldn't need to be so complex in order to function, so we greatly prefer that instant answers are built as simple and straightforward as possible.
