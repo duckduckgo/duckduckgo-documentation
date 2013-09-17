@@ -14,7 +14,7 @@ Whether you can code or not, there are many ways you can contribute to DuckDuckG
 
 ### Join our Community (of awesome people)
 - **Suggest ideas for instant answers**  
-  Rather than clicking on Rotten Tomatoes links for movie searches, DuckDuckGo users created the Rotten Tomatoes instant answer so now [movie searches](https://duckduckgo.com/?q=the+dark+knight+movie) automatically display information from Rotten Tomatoes.
+  For example, rather than clicking on Rotten Tomatoes links for movie searches, DuckDuckGo users created the Rotten Tomatoes instant answer so now [movie searches](https://duckduckgo.com/?q=the+dark+knight+movie) automatically display information from Rotten Tomatoes.
 
 - **Discuss instant answers with others**  
   Our community thrives on discussion (and debate). We'd love for you to lend your voice to our community so that we can improve DuckDuckGo according to everyone's interests.
@@ -25,4 +25,4 @@ Whether you can code or not, there are many ways you can contribute to DuckDuckG
 **To get involved with the DuckDuckGo community, head over to our [community platform](https://dukgo.com/)!**
 
 ### **Develop (or improve) instant answers**  
-  If you're a developer and you want to create your own instant answer, or if you'd like to help fix current issues please read the **[DuckDuckHack Vision](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/DuckDuckHack/Getting-Started/duckduckhack_vision.md)** to get started!
+  If you're a developer and you want to create your own instant answer, or if you'd like to help fix current issues please start by reading the **[DuckDuckHack Vision.](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/DuckDuckHack/Getting-Started/duckduckhack_vision.md)**
