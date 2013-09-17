@@ -1,6 +1,6 @@
 # Give back with DuckDuckHack and help create a better search experience for everyone!
 
-At DuckDuckGo, our users believe in more answers with fewer clicks. Why show a page full of links, when you can show an instant answer!
+At DuckDuckGo, our users believe in more answers with fewer clicks. Why show a page full of links, when you can show an instant answer?!
 
 DuckDuckHack is our way of letting users improve the search experience by creating useful "instant answers" so searches like, ["what is the height of the eiffel tower"](https://duckduckgo.com/?q=what+is+the+height+of+the+eiffel+tower) will show you that it's exactly 1063 feet tall, or searches like, ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.
 
