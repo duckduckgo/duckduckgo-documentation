@@ -12,7 +12,7 @@ This is what an instant answer looks like:
 ## Getting Involved
 Whether you can code or not, there are many ways you can contribute to DuckDuckGo:
 
-### Join our Community (of awesome people)
+### **Suggest (or discuss) instant answers**
 - **Suggest ideas for instant answers**  
   For example, rather than clicking on Rotten Tomatoes links for movie searches, DuckDuckGo users created the Rotten Tomatoes instant answer so now [movie searches](https://duckduckgo.com/?q=the+dark+knight+movie) automatically display information from Rotten Tomatoes. What do you think should be an instant answer? For some inspiration, check out the [current ideas](http://ideas.duckduckhack.com/) and the [live instant answers](https://duckduckgo.com/goodies). 
 
