@@ -74,7 +74,6 @@ function ddg_spice_npm (api_result) {
          source_name       : "npmjs.org", // More at ...
          source_url        : 'http://npmjs.org/package/' + api_result.name,
          template_normal   : 'npm',
-         template_small    : 'npm'
     });
 }
 ```
@@ -96,7 +95,6 @@ Spice.render({
      source_name       : "npmjs.org",
      source_url        : 'http://npmjs.org/package/' + api_result.name,
      template_normal   : 'npm',
-     template_small    : 'npm'
 });
 ```
 
@@ -116,8 +114,6 @@ Alright, so here is the bulk of the plugin, but it's very simple:
 - `source_url` is the target of the "More at" link. It's the page that the user will click through to. 
 
 - `template_normal` is the name of the Handlebars template that contains the structure information for your plugin.
-
-- `template_small` is the name of the Handlebars template to be used when you plugin is displayed in a stacked state. This isn't required, but if your plugin can provide a succint, one or two line answer this template should be used in the event that the plugin appears in the stacked state. If no template is given the stacked result will simply show the header of the spice result 
 
 ----
 
