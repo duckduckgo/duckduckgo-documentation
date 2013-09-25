@@ -15,3 +15,6 @@
 
 ### `DDG.get_asset_path()`
 (tbd)
+
+### `DDG.get_is_safe_search()`
+(tbd)
