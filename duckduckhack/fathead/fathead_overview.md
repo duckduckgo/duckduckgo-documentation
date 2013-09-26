@@ -8,8 +8,7 @@ Each fathead plugin has its own directory. Some of the directories are in use on
 
 Each directory has a structure like this:
 
-```txt
-
+```shell
 # This is a Perl file that lists some meta information about the plugin.
 # See the Meta file section for more information
 lib/DDG/Fathead/PlugIn.pm
