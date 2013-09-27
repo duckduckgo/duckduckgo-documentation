@@ -58,7 +58,7 @@ handle remainder => sub {
 
 This function (the part within the **{}** after **sub**) is the meat of the Goodie. It generates the instant answer that is displayed at the top of the [search results page](https://duckduckgo.com/?q=chars+this+is+a+test).
 
-Whatever you are handling is passed to the function in the **$_** variable ( **$_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for _"chars this is a test"_, the value of **$_** will be _"this is a test"_, i.e. the remainder.
+Whatever you are handling is passed to the function in the **$\_** variable ( **$\_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for *"chars this is a test"*, the value of **$\_** will be *"this is a test"*, i.e. the remainder.
 
 Let's take a closer look at the first line of the function.
 
@@ -66,7 +66,7 @@ Let's take a closer look at the first line of the function.
 return 'Chars: ' . length $_ if $_;
 ```
 
-The heart of the function is just this one line. The **remainder** is in the **$_** variable as discussed. If it is not blank ( **if $_** ), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
+The heart of the function is just this one line. The **remainder** is in the **$\_** variable as discussed. If it is not blank ( **if $\_** ), we return the number of chars using Perl's built-in [length function](https://duckduckgo.com/?q=perl+length).
 
 Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, similar to how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
 
@@ -76,7 +76,7 @@ If we are unable to provide a good instant answer, we simply **return** nothing.
 return;
 ```
 
-This line is only run if **$_** contained nothing, because otherwise the line before it would return something and end the function.
+This line is only run if **$\_** contained nothing, because otherwise the line before it would return something and end the function.
 
 Now, below your function type the following line:
 
@@ -84,7 +84,7 @@ Now, below your function type the following line:
 zci is_cached => 1;
 ```
 
-This line is optional. We set **is_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them (saving previous answers).
+This line is optional. We set **is\_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them (saving previous answers).
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line.
 
@@ -111,6 +111,7 @@ zci is_cached => 1;
 
 1;
 ```
+
 ### Review
 The plugin system works like this at the highest level:
 
