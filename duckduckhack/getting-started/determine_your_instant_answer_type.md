@@ -8,7 +8,7 @@ Now that you know what question you're answering, you'll need to find a source f
 
 Using this flowchart should help you to determine which kind of plugin you'll be creating:
 
-![plugin type flow chart](../assets/plugin_flowchart.png)
+![plugin type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/plugin_flowchart.png)
 
 If the right plugin type is still not obvious, please <a href="https://github.com/duckduckgo/duckduckgo#can-you-help-me">ask us</a>. Sometimes multiple plugin types could work (depending on the datasource), and we can help you figure out which one would work best.
 
