@@ -89,6 +89,7 @@ Spice.render({
 ### Template Options:
 
 #### Required
+
 - `items` &mdash; the array of results (should be objects) to be displayed
 - `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (used to indicate the image and title for each carousel item)
 
@@ -132,10 +133,11 @@ Spice.render({
 ### Template Options:
 
 #### Required
+
 - `left` &mdash; lets you specify the `template_options` for the left pane
-    - `data` &mdash; the object to be used as input for the left pane
+  - `data` &mdash; the object to be used as input for the left pane
 - `right` &mdash; lets you specify the `template_options` for the right pane
-    - `data` &mdash; the object to be used as input for the right pane
+  - `data` &mdash; the object to be used as input for the right pane
 
 #### Optional
 - within the above `left` or `right` property:
