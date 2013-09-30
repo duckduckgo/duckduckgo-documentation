@@ -5,6 +5,7 @@ The NPM plugin [[link](https://duckduckgo.com/?q=npm+uglify-js)] [[code](https:/
 ## NPM Backend
 
 ##### npm.pm
+
 ```perl 
 package DDG::Spice::Npm;
 
@@ -29,6 +30,7 @@ To refresh your memory, the **triggers** keyword tells the plugin system when to
 Previously we saw the use of the **remainder** keyword as in **handle remainder**, which works well for trigger words. We use it again here.
 
 ##### npm.pm (continued)
+
 ```perl
     return $_ if $_;
 ```
@@ -38,6 +40,7 @@ Previously we saw the use of the **remainder** keyword as in **handle remainder*
 Otherwise, we return nothing, which short-circuits the eventual external call.
 
 ##### npm.pm (continued)
+
 ```perl
    return;
 ```
@@ -45,6 +48,7 @@ Otherwise, we return nothing, which short-circuits the eventual external call.
 When the package name is returned we then plug it into the **spice to** definition.
 
 ##### npm.pm (continued)
+
 ```perl
 spice to => 'http://registry.npmjs.org/$1/latest';
 ```
@@ -54,6 +58,7 @@ The **$_** value from the return statement will get inserted into the **$1** pla
 In this particular case, the API we're using to search for packages does not support callback functions. That is, it will not wrap its response in a function call, which in this case would be **ddg_spice_npm**. If it did support a callback, we could use the **{{callback}}** template in the **spice to** line to automatically fill in the default callback value. See the [IMdB spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Imdb.pm) for a simple implementation of the **{{callback}}** template. Since this API doesn't support the callback parameter, we tell the backend to automatically wrap the API's response in a function call for us with:
 
 ##### npm.pm (continued)
+
 ```perl
 spice wrap_jsonp_callback => 1;
 ```
@@ -63,6 +68,7 @@ At this point the response moves from the backend to the frontend. The external 
 ## NPM Frontend
 
 ##### npm.js
+
 ```javascript
 function ddg_spice_npm (api_result) {
     if (api_result.error) return
@@ -81,12 +87,14 @@ function ddg_spice_npm (api_result) {
 As mentioned, every plugin requires a Spice callback function, for the *NPM* plugin, the callback is the `ddg_spice_npm()` function that we defined here in *npm.js*. The *NPM* Perl module we wrote specifies this as the callback by using the name of the package `DDG::Spice::NPM` and gives this *ddg_spice_npm* name to the API call so that this funtion will be executed when the API responds using the data returned from the upstream (API) provider as the function's input.
 
 ##### npm.js (continued)
+
 ```javascript 
 if (api_result.error) return
 ```
 Pretty self-explanatory - If the error object in the API result is defined, then break out of the function and don't show any results. In the case of this API, when the error object is defined, it means no results are given, so we have no data to use for a Spice result. 
 
 ##### npm.js (continued)
+
 ```javascript
 Spice.render({
      data              : api_result,
@@ -120,6 +128,7 @@ Alright, so here is the bulk of the plugin, but it's very simple:
 Now, let's look at the NPM plugin's Handlebars template:
 
 ###### npm.handlebars
+
 ```html
 <div>
     <div>{{{description}}}</div>
