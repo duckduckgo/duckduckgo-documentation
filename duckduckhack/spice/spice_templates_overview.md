@@ -137,7 +137,6 @@ Spice.render({
 
 - `left` &mdash; lets you specify the `template_options` for the left pane
     - `data` &mdash; the object to be used as input for the left pane
-
 - `right` &mdash; lets you specify the `template_options` for the right pane
     - `data` &mdash; the object to be used as input for the right pane
 
@@ -145,7 +144,6 @@ Spice.render({
 
 - within the above `left` or `right` property:
     - `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
-
 
 ## Record Template
 
