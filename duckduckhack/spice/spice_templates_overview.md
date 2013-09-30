@@ -12,7 +12,7 @@ A list of results (eg. links) to display. Works best for bulleted/numbered lists
 
 ### How it looks:
 
-![List Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/tree/master/duckduckhack/assets/list_template_example.png)
+![List Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/list_template_example.png)
 
 ### How it works:
 
@@ -60,7 +60,7 @@ See [below](#advanced-list--carousel).
 A list of results to display, each of which has a unique image and title. Each item also has more information to be displayed once the carousel item is clicked.
 
 ### How it looks:
-![Carousel Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/tree/master/duckduckhack/assets/carousel_template_example.png)
+![Carousel Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/carousel_template_example.png)
 
 ### How it works:
 
@@ -107,7 +107,7 @@ Single result that needs a vertically split layout (left & right panes) for your
 
 ### How it looks:
 
-![Split Pane Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/tree/master/duckduckhack/assets/split_pane_template_example.png)
+![Split Pane Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/split_pane_template_example.png)
 
 ### How it works:
 
@@ -152,7 +152,7 @@ Single result with various pieces of information, each of which has a unique nam
 
 ### How it looks:
 
-![Record Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/tree/master/duckduckhack/assets/record_template_example.png)
+![Record Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/record_template_example.png)
 
 ### How it works:
 
