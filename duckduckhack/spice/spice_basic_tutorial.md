@@ -86,7 +86,7 @@ As mentioned, every plugin requires a Spice callback function, for the *NPM* plu
 
 ##### npm.js (continued)
 
-```javascript 
+```javascript
 if (api_result.error) return
 ```
 Pretty self-explanatory - If the error object in the API result is defined, then break out of the function and don't show any results. In the case of this API, when the error object is defined, it means no results are given, so we have no data to use for a Spice result. 
@@ -137,6 +137,7 @@ Now, let's look at the NPM plugin's Handlebars template:
 As you can see, this is a special type of HTML template. Within the template, you can refer directly to objects that are returned by the API. `description` and `name` are both from the `api_result` object that we discussed earlier -- the data that's returned by the API. All of `api_result`'s sub-objects (e.g. `name`, `description`) are in the template's scope. You can access them by name using double or triple curly braces (triple braces will not escape the contents). Here, we just create a basic HTML skeleton and fill it in with the proper information.
 
 ### Conclusion
+
 We've created two files in the Spice share directory (`share/spice/npm/`) :
 
 1. `npm.js` - which delegates the API's response and calls `Spice.render()`
