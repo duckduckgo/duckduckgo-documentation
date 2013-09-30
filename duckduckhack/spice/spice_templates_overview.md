@@ -138,8 +138,8 @@ Spice.render({
     - `data` &mdash; the object to be used as input for the right pane
 
 #### Optional
-- within in the above `left` or `right` property:
-    - `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
+- within the above `left` or `right` property:
+  - `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
 
 
 ## Record Template
