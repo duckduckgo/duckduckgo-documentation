@@ -1,18 +1,23 @@
 # Spice Templates Overview
+
 There are several templates to choose from, each of which are best for displaying certain kinds of results and information.
 
 In order to indicate which template you are using, you must set the `template_frame` property in the object given to the `Spice.render()` call. The below examples and explanations will clarify further implementation details. As well, for each template, various properties need to be set within the `template_options` property. These properties specify various settings for the template being used.
- Template
+
 ## List
 
 ### Use Case:
+
 A list of results (eg. links) to display. Works best for bulleted/numbered lists.
 
 ### How it looks:
+
 ![List Template Example](../assets/list_template_example.png)
 
 ### How it works:
+
 ###### reddit_search.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
+
 ```javascript
 Spice.render({
     data              : api_result.data.children,
@@ -34,15 +39,19 @@ Spice.render({
 ```
 
 ### Template Options:
+
 #### Required
+
 - `items` &mdash; the array of results to be displayed
 
 #### Optional
+
 - `show` &mdash; default number of list items to display
 - `max` maximum number of list items to display
 - `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
 
 #### Advanced
+
 See [below](#advanced-list--carousel).
 
 ## Carousel Template
@@ -54,7 +63,9 @@ A list of results to display, each of which has a unique image and title. Each i
 ![Carousel Template Example](../assets/carousel_template_example.png)
 
 ### How it works:
+
 ###### alternative_to.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
+
 ```javascript
 Spice.render({
     data                     : api_result,
@@ -76,6 +87,7 @@ Spice.render({
 ```
 
 ### Template Options:
+
 #### Required
 - `items` &mdash; the array of results (should be objects) to be displayed
 - `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (used to indicate the image and title for each carousel item)
@@ -84,18 +96,23 @@ Spice.render({
 - `template_detail` &mdash; handlebars sub-template to be applied to each element in `items` array (used to populate the "detail area" below carousel results)
 
 #### Advanced
+
 See [below](#advanced-list--carousel).
 
 ## Split Pane Template
 
 ### Use Case:
+
 Single result that needs a vertically split layout (left & right panes) for your information.
 
 ### How it looks:
+
 ![Split Pane Template Example](../assets/split_pane_template_example.png)
 
 ### How it works:
+
 ###### airlines.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
+
 ```javascript
 Spice.render({
     header1          : onTime() + ": Flight Status for " + flight.Airline.Name + " " + flight.FlightNumber,
@@ -113,6 +130,7 @@ Spice.render({
 ```
 
 ### Template Options:
+
 #### Required
 - `left` &mdash; lets you specify the `template_options` for the left pane
     - `data` &mdash; the object to be used as input for the left pane
@@ -125,16 +143,21 @@ Spice.render({
 
 
 ## Record Template
+
 This template is somewhat different from the others, as it is more of a sub-template. Instead of having its own base template (like the above templates), developers can use the record template by using the Handlebars helper functions we've written. This means the record template can be used in any Handlebars files and so it can be used within other tempaltes as well.
 
 ### Use Case:
+
 Single result with various pieces of information, each of which has a unique name/title/descriptor.
 
 ### How it looks:
+
 ![Record Template Example](../assets/record_template_example.png)
 
 ### How it works:
+
 ###### meta_cpan.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
+
 ```javascript
 Spice.render({
     data             : api_response,
@@ -148,6 +171,7 @@ Spice.render({
 ```
 
 ###### meta_cpan.handlebars [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.handlebars)
+
 ```handlebars
 {{rv "abstract"}}
 {{rv "author"}}
@@ -158,21 +182,26 @@ Spice.render({
 ```
 
 ## Explanation:
+
 Seeing as this is a special kind of sub-template, no template options need to be specified. Instead special Handlebars helpers must be used inside the `template_normal` template.
 
 ### Handlebars Helpers:
+
 - `{{#rt}}` &mdash; *block helper* used to specify a Title
 - `{{#rd}}` &mdash; *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
 - `{{rv}}` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced Template Options (List & Carousel)
+
 The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
 
 ### Modifying Carousel Item Dimensions
+
 - `li_height` &mdash; lets you specify the *absolute* height for each carousel item
 - `li_width` &mdash; lets you specify the *minimum* width for each carousel item
 
 ### Handling a Single Carousel/List Item
+
 - `single_item_handler` &mdash; lets you specify a function which takes an object (the single API result) as input and uses it to modify/set the properties of `Spice.render()` (eg. `header1`, `image_url`) when only one item is returned from the upstream API.
 
 **\*\*Note**: If a single result is returned and a `template_normal` has been specified, then that template will be used and the single item from the API will be passed along as the input. If no `template_normal` is defined, the system will check for a defined `template_detail` and use that. Failing that, it will check if `template_item` is defined and use that.
