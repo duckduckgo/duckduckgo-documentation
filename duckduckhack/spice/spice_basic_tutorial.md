@@ -6,9 +6,8 @@ The NPM plugin [[link](https://duckduckgo.com/?q=npm+uglify-js)] [[code](https:/
 
 ##### npm.pm
 
-```perl 
+```perl
 package DDG::Spice::Npm;
-
 use DDG::Spice;
 
 spice to => 'http://registry.npmjs.org/$1/latest';
@@ -21,7 +20,6 @@ handle remainder => sub {
     return $_ if $_;
     return;
 };
-
 1;
 ```
 
