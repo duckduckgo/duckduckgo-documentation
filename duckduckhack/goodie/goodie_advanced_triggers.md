@@ -1,29 +1,38 @@
 # Advanced Triggers
+
 In the [Basic tutorial](general.md#basic-tutorial) we walked through a one word trigger and in the [Spice handle functions](spice.md#spice-handle-functions) section we walked through a simple regexp trigger.
 
 Here are some more advanced trigger techniques you may need to use:
 
-**Multiple trigger words**. &nbsp;Suppose you thought that in addition to _chars_, _numchars_ should also trigger the [Chars Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm). You can simply add extra trigger words to the triggers definition.
+## Multiple Trigger Words
+
+Suppose you thought that in addition to _chars_, _numchars_ should also trigger the [Chars Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm). You can simply add extra trigger words to the triggers definition.
 
 ```perl
 triggers start => 'chars', 'numchars';
 ```
 
-**Trigger locations.** &nbsp;The keyword after triggers, **start** in the Chars example, specifies where the triggers need to appear. Here are the choices:
+## Trigger Locations
 
- * start - just at the start of the query
- * end - just at the end of the query
- * startend - at either end of the query
- * any - anywhere in the query
+The keyword after triggers, **start** in the Chars example, specifies where the triggers need to appear. Here are the choices:
 
-**Combining locations.** &nbsp;You can use multiple locations like in the [Drinks Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Drinks.pm).
+ * `start` - just at the start of the query
+ * `end` - just at the end of the query
+ * `startend` - at either end of the query
+ * `any` - anywhere in the query
+
+## Combining Locations
+
+You can use multiple locations like in the [Drinks Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Drinks.pm).
 
 ```perl
 triggers any => "drink", "make", "mix", "recipe", "ingredients";
 triggers start => "mixing", "making";
 ```
 
-**Regular Expressions.** &nbsp;As we walked through in the [Spice handle functions](spice.md#spice-handle-functions) section you can also trigger on a regular expression.
+## Regular Expressions
+
+As we walked through in the [Spice handle functions](spice.md#spice-handle-functions) section you can also trigger on a regular expression.
 
 ```perl
 triggers query_lc => qr/^@([^\s]+)$/;
@@ -40,19 +49,22 @@ handle remainder => sub {
 
 This way, we get the speed of the word trigger and still ensure that the search query is an exact match for our plugin. You can also return similarly (without a value) at any point in the handle function if the answer cannot be calculated.
 
+## Regexp Types
 
-**Regexp types.** &nbsp;Like trigger words, regular expression triggers have several keywords as well. In the above example **query_lc** was used, which operates on the lower case version of the full query. Here are the choices:
+Like trigger words, regular expression triggers have several keywords as well. In the above example **query_lc** was used, which operates on the lower case version of the full query. Here are the choices:
 
- * **query_raw** - the actual (full) query
- * **query** - with extra whitespace removed
- * **query_lc** - lower case version of the query and extra whitespace removed
- * **query_clean** - lower case with non alphanumeric ASCII and extra whitespace removed
- * **query_nowhitespace** - with whitespace totally removed
- * **query_nowhitespace_nodash** - with whitespace and dashes totally removed
+ * `query_raw` - the actual (full) query
+ * `query` - with extra whitespace removed
+ * `query_lc` - lower case version of the query and extra whitespace removed
+ * `query_clean` - lower case with non alphanumeric ASCII and extra whitespace removed
+ * `query_nowhitespace` - with whitespace totally removed
+ * `query_nowhitespace_nodash` - with whitespace and dashes totally removed
 
 If you want to see some test cases where these types are enumerated check out our [internal test file](https://github.com/duckduckgo/duckduckgo/blob/master/t/15-request.t) that tests they are generated properly.
 
-**Multi-word triggers**. &nbsp;Triggering also supports the use of trigger "phrases". An example of this usage can be seen in the [Hacker News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/HackerNews.pm) plugin.
+## Multi-Word Triggers
+
+Triggering also supports the use of trigger "phrases". An example of this usage can be seen in the [Hacker News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/HackerNews.pm) plugin.
 
 ```perl
 triggers startend => "hn", "hackernews", "hacker news", "hn search", "hnsearch", "hacker news search", "news.yc", "news.ycombinator.com", "hackernews search";
@@ -68,7 +80,9 @@ In the [Basic tutorial](general.md#basic-tutorial) we walked through a simple qu
 
 Here are some more advanced handle techniques you may need to use:
 
-**Further qualifying the query.** &nbsp;Trigger words are blunt instruments; they may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your goodie).
+## Further Qualifying the Query
+
+Trigger words are blunt instruments; they may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your goodie).
 
 There are number of techniques for doing so. For example, the first line of [Base Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) has a return statement paired with unless.
 
@@ -96,7 +110,9 @@ my %guid = (
 return unless exists $guid{$_};
 ```
 
-**Handling the whole query.** &nbsp;In the Chars example, we handled the **remainder**. You can also handle:
+## Handling the Whole Query
+
+In the Chars example, we handled the **remainder**. You can also handle:
 
 * **query_raw** - the actual (full) query
 * **query** - with extra whitespace removed
@@ -106,7 +122,9 @@ return unless exists $guid{$_};
 
 For example, the [Xor Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Xor.pm) handles query_raw and the [ABC Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/ABC.pm) handles query_parts.
 
-**Using files**. &nbsp;You can use simple text/html input files for display or processing.
+## Using Files
+
+You can use simple text/html input files for display or processing.
 
 ```perl
 # IO should always be done outside of the handle function
@@ -126,138 +144,137 @@ There are a couple more sections on advanced handle techniques depending on [Plu
 * For **Spice**, check out the [Advanced Spice handlers](https://github.com/duckduckgo/zeroclickinfo-spice#advanced-spice-handlers) section.
 
 ## Advanced Testing
+
 The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each plugin.
 
-**Step 1.** &nbsp;Add your plugin test file.
+1. Add your plugin test file.
 
-Make a new file in the test directory **t/**. The name of the file is the name of your plugin, but this time followed by the extension **.t** for test because it is a Perl testing file. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.t_.
+    Make a new file in the test directory **t/**. The name of the file is the name of your plugin, but this time followed by the extension **.t** for test because it is a Perl testing file. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.t_.
 
-The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
+    The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
 
-```perl
-#!/usr/bin/env perl
+    ```perl
+    #!/usr/bin/env perl
 
-use strict;
-use warnings;
-use Test::More;
-use DDG::Test::Goodie;
-```
+    use strict;
+    use warnings;
+    use Test::More;
+    use DDG::Test::Goodie;
+    ```
 
-Then you define any default **zci** values that you set in your plugin.
+    Then you define any default **zci** values that you set in your plugin.
 
-```perl
-zci answer_type => 'chars';
-zci is_cached => 1;
-```
+    ```perl
+    zci answer_type => 'chars';
+    zci is_cached => 1;
+    ```
 
-These should match exactly what you set in your **.pm** file.
+    These should match exactly what you set in your **.pm** file.
 
-Next comes the actual testing function.
+    Next comes the actual testing function.
 
-```
-ddg_goodie_test(
-        [qw(
-                DDG::Goodie::Chars
-        )],
-        'chars test' => test_zci('Chars: 4'),
-        'chars this is a test' => test_zci('Chars: 14'),
-);
-```
+    ```
+    ddg_goodie_test(
+            [qw(
+                    DDG::Goodie::Chars
+            )],
+            'chars test' => test_zci('Chars: 4'),
+            'chars this is a test' => test_zci('Chars: 14'),
+    );
+    ```
 
-For each test, you include a line like this:
+    For each test, you include a line like this:
 
-```perl
-        'chars test' => test_zci('Chars: 4'),
-```
+    ```perl
+            'chars test' => test_zci('Chars: 4'),
+    ```
 
-The first part, **'chars test'** in this example, is the test query. The second part, **test_zci('Chars: 4')** calls the test function and checks if **Chars: 4** is the answer.
+    The first part, **'chars test'** in this example, is the test query. The second part, **test_zci('Chars: 4')** calls the test function and checks if **Chars: 4** is the answer.
 
-Finally you end a testing file with this line.
+    Finally you end a testing file with this line.
 
-```perl
-done_testing;
-```
+    ```perl
+    done_testing;
+    ```
 
-The full file should look like this:
+    The full file should look like this:
 
-```perl
-#!/usr/bin/env perl
+    ```perl
+    #!/usr/bin/env perl
 
-use strict;
-use warnings;
-use Test::More;
-use DDG::Test::Goodie;
+    use strict;
+    use warnings;
+    use Test::More;
+    use DDG::Test::Goodie;
 
-zci answer_type => 'chars';
-zci is_cached => 1;
+    zci answer_type => 'chars';
+    zci is_cached => 1;
 
-ddg_goodie_test(
-        [qw(
-                DDG::Goodie::Chars
-        )],
-        'chars test' => test_zci('Chars: 4'),
-        'chars this is a test' => test_zci('Chars: 14'),
-);
+    ddg_goodie_test(
+            [qw(
+                    DDG::Goodie::Chars
+            )],
+            'chars test' => test_zci('Chars: 4'),
+            'chars this is a test' => test_zci('Chars: 14'),
+    );
 
-done_testing;
-```
+    done_testing;
+    ```
 
-If you have a long list of queries that need to be tested, you can map over an array or hash inside `ddg_goodie_test`. Remember, this is a Perl program, so we have all the normal tools at our disposal to construct a list to pass to the function.
-
-
-```perl
-#!/usr/bin/env perl
-
-use strict;
-use warnings;
-use Test::More;
-use DDG::Test::Goodie;
-
-zci answer_type => 'time_conversion';
-zci is_cached => 1;
-
-ddg_goodie_test(
-	[qw(
-		DDG::Goodie::UnixTime
-	)],
-	map {
-		"$_ 0" => test_zci('Unix Time Conversion: Thu Jan 01 00:00:00 1970 +0000'),
-	}, [ 'unixtime', 'time', 'timestamp', 'datetime', 'epoch', 'unix time', 'unix epoch' ]
-);
-
-done_testing;
-```
+    If you have a long list of queries that need to be tested, you can map over an array or hash inside `ddg_goodie_test`. Remember, this is a Perl program, so we have all the normal tools at our disposal to construct a list to pass to the function.
 
 
+    ```perl
+    #!/usr/bin/env perl
 
-**Step 2.** &nbsp;Test your plugin programmatically.
+    use strict;
+    use warnings;
+    use Test::More;
+    use DDG::Test::Goodie;
 
-Run your plugin test file like this:
+    zci answer_type => 'time_conversion';
+    zci is_cached => 1;
 
-```txt
-perl -Ilib t/Chars.t
-```
+    ddg_goodie_test(
+    	[qw(
+    		DDG::Goodie::UnixTime
+    	)],
+    	map {
+    		"$_ 0" => test_zci('Unix Time Conversion: Thu Jan 01 00:00:00 1970 +0000'),
+    	}, [ 'unixtime', 'time', 'timestamp', 'datetime', 'epoch', 'unix time', 'unix epoch' ]
+    );
 
-If successful, you should see a lot of **ok** lines.
+    done_testing;
+    ```
 
-```txt
-ubuntu@yegg:~/zeroclickinfo-goodies$ perl -Ilib t/Chars.t
-ok 1 - Testing query chars test
-ok 2 - Testing query chars this is a test
-1..2
-```
+2. Test your plugin programmatically.
 
-If unsuccessful, you will see one or more **not ok** lines followed with some debugging output to help you chase down the error(s).
+    Run your plugin test file like this:
 
-```txt
-ok 1 - Testing query chars test
-not ok 2 - Testing query chars this is a test
-#   Failed test 'Testing query chars this is a test'
-#   at /usr/local/ddg.cpan/perl5/lib/perl5/DDG/Test/Goodie.pm line 69.
-#     Structures begin differing at:
-#          $got->{answer} = '14'
-#     $expected->{answer} = '15'
-1..2
-# Looks like you failed 1 test of 2.
-```
+    ```shell
+    perl -Ilib t/Chars.t
+    ```
+
+    If successful, you should see a lot of **ok** lines.
+
+    ```shell
+    ubuntu@yegg:~/zeroclickinfo-goodies$ perl -Ilib t/Chars.t
+    ok 1 - Testing query chars test
+    ok 2 - Testing query chars this is a test
+    1..2
+    ```
+
+    If unsuccessful, you will see one or more **not ok** lines followed with some debugging output to help you chase down the error(s).
+
+    ```shell
+    ok 1 - Testing query chars test
+    not ok 2 - Testing query chars this is a test
+    #   Failed test 'Testing query chars this is a test'
+    #   at /usr/local/ddg.cpan/perl5/lib/perl5/DDG/Test/Goodie.pm line 69.
+    #     Structures begin differing at:
+    #          $got->{answer} = '14'
+    #     $expected->{answer} = '15'
+    1..2
+    # Looks like you failed 1 test of 2.
+    ```
 

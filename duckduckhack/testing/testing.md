@@ -3,7 +3,6 @@
 This section of the documentation walks you through the process of testing everything that you've written so far, and is crucial to ensuring a smooth integration process. Don't forget to write your test files!
 
 ## Interactive Testing
-
 Before reading this section, make sure you've at least worked through the [basic tutorial](general.md#basic-tutorial).
 
 1. Install our DuckDuckHack utility called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan). You can find instructions [here](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md). It is also hosted [here](https://metacpan.org/module/App::DuckPAN) on MetaCPAN.

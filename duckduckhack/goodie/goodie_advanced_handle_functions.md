@@ -4,7 +4,9 @@ In the [Basic tutorial](general.md#basic-tutorial) we walked through a simple qu
 
 Here are some more advanced handle techniques you may need to use:
 
-**Further qualifying the query.** &nbsp;Trigger words are blunt instruments; they may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your goodie).
+## Further Qualifying the Query
+
+Trigger words are blunt instruments; they may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your goodie).
 
 There are number of techniques for doing so. For example, the first line of [Base Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) has a return statement paired with unless.
 
@@ -32,7 +34,9 @@ my %guid = (
 return unless exists $guid{$_};
 ```
 
-**Handling the whole query.** &nbsp;In the Chars example, we handled the **remainder**. You can also handle:
+## Handling the Whole Query
+
+In the Chars example, we handled the **remainder**. You can also handle:
 
 * **query_raw** - the actual (full) query
 * **query** - with extra whitespace removed
@@ -42,7 +46,7 @@ return unless exists $guid{$_};
 
 For example, the [Xor Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Xor.pm) handles query_raw and the [ABC Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/ABC.pm) handles query_parts.
 
-**Using files**. &nbsp;You can use simple text/html input files for display or processing.
+Using files**. You can use simple text/html input files for display or processing.
 
 ```perl
 # IO should always be done outside of the handle function
@@ -53,7 +57,9 @@ The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob
 
 The files themselves go in the **/share/goodie/** directory.
 
-**Generating data files.** You may also need to generate data files. If you do so, please also include the generation scripts. These do not have to be done in Perl, and you can also put them within the **/share/goodie/** directory. For example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a Python script to generate the input data.
+## Generating Data Files
+
+You may also need to generate data files. If you do so, please also include the generation scripts. These do not have to be done in Perl, and you can also put them within the **/share/goodie/** directory. For example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a Python script to generate the input data.
 
 
 There are a couple more sections on advanced handle techniques depending on [Plugin type](#overview):

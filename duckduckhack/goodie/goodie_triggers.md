@@ -24,5 +24,4 @@ query................uniformly whitespaced version of query_raw.
 query_lc.............lowercase version of *query*.
 query_nowhitespace...*query* with no whitespace.
 query_clean..........*query_lc*, but with whitespace and non-alphanumeric ascii removed.
-
 ```

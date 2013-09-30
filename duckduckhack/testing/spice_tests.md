@@ -1,6 +1,6 @@
-### Spice Tests
+# Spice Tests
 
-For this example, we will look at the test file of the **Xkcd** Spice, which is `t/Xkcd.t`.
+For this example, we will look at the test file of the **Xkcd** Spice, which is `t/Xkcd.t` [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/t/Xkcd.t).
 
 ```perl
 #!/usr/bin/env perl
