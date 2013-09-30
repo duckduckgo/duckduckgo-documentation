@@ -12,13 +12,16 @@ This is what an instant answer looks like:
 ## Getting Involved
 Whether you can code or not, there are many ways you can contribute to DuckDuckGo:
 
-- Suggest Instant Answer Ideas
+- **Suggest Instant Answer Ideas**
+  
   For example, rather than clicking on Rotten Tomatoes links for movie searches, DuckDuckGo users created the Rotten Tomatoes instant answer so now [movie searches](https://duckduckgo.com/?q=the+dark+knight+movie) automatically display information from Rotten Tomatoes. What do you think should be an instant answer? For some inspiration, check out the [current ideas](http://ideas.duckduckhack.com/) and the [live instant answers](https://duckduckgo.com/goodies). 
 
-- Discuss Instant Answers With Others
+- **Discuss Instant Answers With Others**
+  
   Our community thrives on discussion (and debate). We'd love for you to lend your voice to our community so that we can improve DuckDuckGo according to everyone's interests. Join the community and jump in the conversations at [our forum](https://dukgo.com/ideas)
 
-- Propose Source Suggestions
+- **Propose Source Suggestions**
+  
   Everyone has a favorite source for information. Our users decided that Last.fm was a great source for music so they suggested it be used for [album searches](https://duckduckgo.com/?q=Dookie+album+by+greenday)! Not every idea is submitted with a source in mind. This is where you come in! Help find the best sources for each instant answer idea (like IMDB for ideas around movie information or Yelp for ideas about local restaurants) 
 
 **To get involved with the DuckDuckGo community, head over to our [community platform](https://dukgo.com/)!**
