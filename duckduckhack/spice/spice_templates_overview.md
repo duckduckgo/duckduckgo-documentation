@@ -42,13 +42,13 @@ Spice.render({
 
 #### Required
 
-- `items` &mdash; the array of results to be displayed
+- `items`: the array of results to be displayed
 
 #### Optional
 
-- `show` &mdash; default number of list items to display
+- `show`: default number of list items to display
 - `max` maximum number of list items to display
-- `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
+- `template_item`: handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
 
 #### Advanced
 
@@ -90,12 +90,12 @@ Spice.render({
 
 #### Required
 
-- `items` &mdash; the array of results (should be objects) to be displayed
-- `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (used to indicate the image and title for each carousel item)
+- `items`: the array of results (should be objects) to be displayed
+- `template_item`: handlebars sub-template to be applied to each element in `items` array (used to indicate the image and title for each carousel item)
 
 #### Optional
 
-- `template_detail` &mdash; handlebars sub-template to be applied to each element in `items` array (used to populate the "detail area" below carousel results)
+- `template_detail`: handlebars sub-template to be applied to each element in `items` array (used to populate the "detail area" below carousel results)
 
 #### Advanced
 
@@ -135,15 +135,16 @@ Spice.render({
 
 #### Required
 
-- `left` &mdash; lets you specify the `template_options` for the left pane
-    + `data` &mdash; the object to be used as input for the left pane
-- `right` &mdash; lets you specify the `template_options` for the right pane
-    + `data` &mdash; the object to be used as input for the right pane
+- `left`: lets you specify the `template_options` for the left pane   
+    + `data`: the object to be used as input for the left pane
+
+- `right`: lets you specify the `template_options` for the right pane
+    + `data`: the object to be used as input for the right pane
 
 #### Optional
 
 - within the above `left` or `right` property:
-    + `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
+    + `template`: handlebars sub-template to be applied to the pane's `data` object
 
 ## Record Template
 
@@ -190,9 +191,9 @@ Seeing as this is a special kind of sub-template, no template options need to be
 
 ### Handlebars Helpers:
 
-- `{{#rt}}` &mdash; *block helper* used to specify a Title
-- `{{#rd}}` &mdash; *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
-- `{{rv}}` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
+- `{{#rt}}`: *block helper* used to specify a Title
+- `{{#rd}}`: *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
+- `{{rv}}`: shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
 
 ## Advanced Template Options (List & Carousel)
 
@@ -200,11 +201,11 @@ The **Carousel** and **List** templates also allow for more advanced (optional) 
 
 ### Modifying Carousel Item Dimensions
 
-- `li_height` &mdash; lets you specify the *absolute* height for each carousel item
-- `li_width` &mdash; lets you specify the *minimum* width for each carousel item
+- `li_height`: lets you specify the *absolute* height for each carousel item
+- `li_width`: lets you specify the *minimum* width for each carousel item
 
 ### Handling a Single Carousel/List Item
 
-- `single_item_handler` &mdash; lets you specify a function which takes an object (the single API result) as input and uses it to modify/set the properties of `Spice.render()` (eg. `header1`, `image_url`) when only one item is returned from the upstream API.
+- `single_item_handler`: lets you specify a function which takes an object (the single API result) as input and uses it to modify/set the properties of `Spice.render()` (eg. `header1`, `image_url`) when only one item is returned from the upstream API.
 
 **\*\*Note**: If a single result is returned and a `template_normal` has been specified, then that template will be used and the single item from the API will be passed along as the input. If no `template_normal` is defined, the system will check for a defined `template_detail` and use that. Failing that, it will check if `template_item` is defined and use that.
