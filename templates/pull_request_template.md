@@ -31,6 +31,8 @@ We ask that you please use this template when submitting an instant answer pull 
 
 **Are you having any problems? Do you need our help with anything?**
 
+**\*\*Note:** Please attach a screenshot for new instant answer pull requests, and for pull requests which modify the look/design of existing instant answers.
+
 ##Checklist
 Please place a ✔ where appropriate.
 
