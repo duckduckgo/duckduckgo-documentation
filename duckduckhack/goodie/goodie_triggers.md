@@ -37,7 +37,7 @@ triggers end => "ending phrase of query";
 - `startend` &mdash; Word is at the beginning or end of the query
 - `any` &mdash; Word is anywhere in the query
 
-***\*\Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrate the usage of multiple Word trigger statements.
+**\*\*Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrate the usage of multiple Word trigger statements.
 
 ## Regex Triggers
 
