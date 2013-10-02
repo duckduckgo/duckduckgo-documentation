@@ -9,12 +9,14 @@ Before your instant answer is ready to be submitted, please go over this checkli
 ## Goodie
 
 (tbd)
+
 - Can this instant answer return unsafe content (bad words, etc)
   - Did you set `is_unsafe` to true?
 
 ## Spice
 
 (tbd)
+
 - Did you write any custom css?
   - If so, did you namespace the css? (every instant answer has a div with id="spice_<template_name>", use that to target your styles so you don't overwrite any global styles)
 
