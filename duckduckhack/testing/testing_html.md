@@ -2,19 +2,19 @@
 
 You should have already tested your Spice triggers by following the [Testing triggers](https://github.com/duckduckgo/duckduckgo#testing-triggers) section. Once you're confident your triggers are functioning properly, follow these steps to see your Spice plugin on a live server!
 
-1. Go to the roof of your forked repository.
+1. Go to the root of your forked repository.
 
-  ```bash
+  ```shell
   cd zeroclickinfo-spice/
   ```
 
 2. Start the server.
 
-  ```bash
+  ```shell
   duckpan server
   ```
 
-This command will start up a small Web server running on port 5000 on your machine.
+  This command will start up a small Web server running on port 5000 on your machine.
 
 3. Visit the server in your browser.
 
@@ -22,7 +22,7 @@ This command will start up a small Web server running on port 5000 on your machi
 
   If you're running the duckpan server on the same computer as your Web browser you can navigate to:
 
-  ```bash
+  ```shell
   http://127.0.0.1:5000/
   ```
 
