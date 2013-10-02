@@ -2,7 +2,7 @@
 
 There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match). Although you *can* use a regular expression as a trigger, unless it is completely necessary, we encourage you to rather use a word trigger followed by the use of regular expressions (in the `handle` function) to further qualify the query once the instant answer has been triggered. This way the triggering of the instant answer is simplified and quick, but the use of a regex inside the `handle` allows you to make sure the instant answer works for the given query.
 
-## Words Triggers
+## Word Triggers
 
 ### Usage
  
@@ -37,7 +37,7 @@ triggers end => "ending phrase of query";
 - `startend` &mdash; Word is at the beginning or end of the query
 - `any` &mdash; Word is anywhere in the query
 
-**\*\*Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrate the usage of multiple Word trigger statements.
+**\*\*Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrates the usage of multiple Word trigger statements.
 
 ## Regex Triggers
 
