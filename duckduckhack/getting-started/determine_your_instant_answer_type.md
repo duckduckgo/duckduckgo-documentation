@@ -20,34 +20,22 @@ Now that you know which instant answer type you'll be using for your instant ans
 
 Once you have an account, please fork the appropriate repository:
 
-#### Goodie Repository
-  
-- Click [here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork) to fork the repository
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-goodies
+- For **Goodies**, [click here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork)
 
-#### Spice Repository
-  
-- Click [here](https://github.com/duckduckgo/zeroclickinfo-spice/fork) to fork the repository
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-spice
+- For **Spice**, [click here](https://github.com/duckduckgo/zeroclickinfo-spice/fork)
 
-#### Fathead Repository
-  
-- Click [here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork) to fork the repository
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-fathead
+- For **Fathead**, [click here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork)
 
-#### Longtail Repository
-
-- Click [here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork) to fork the repository
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-longtail
+- For **Longtail**, [click here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork)
 
 ## Start Coding!
 
-  At this point, you're ready to start learning about the instant answer type you'll be using:
+At this point, you're ready to start learning about the instant answer type you'll be using:
 
-  - For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
-  
-  - For **Spice**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
-  
-  - For **Fathead**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
-  
-  - For **Longtail**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
+- For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
+
+- For **Spice**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
+
+- For **Fathead**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
+
+- For **Longtail**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
