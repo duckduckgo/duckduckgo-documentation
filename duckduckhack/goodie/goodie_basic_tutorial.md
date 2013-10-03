@@ -1,6 +1,6 @@
 # Basic Goodie Tutorial
 
-In this tutorial, we'll be making a Goodie plugin that checks the number of characters in a given search query. The end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). The same framework is used to trigger Spice plugins.
+In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F). The same framework is used to trigger Spice instant answers.
 
 Let's begin. Open a text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
@@ -9,11 +9,11 @@ package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 ```
 
-Each plugin is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. In a new plugin, you would change **Chars** to the name of the new plugin (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
+Each instant answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Goodie (or any new instant answer), you would change **Chars** to the name of the new instant answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
 
 The second line is a special comment line that gets parsed automatically to make nice documentation (by [Dist::Zilla](https://metacpan.org/module/Dist::Zilla)).
 
-Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our plugin system.
+Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our instant answer system.
 
 ```perl
 use DDG::Goodie;
@@ -33,7 +33,7 @@ Now here's where it gets interesting. Type:
 triggers start => 'chars';
 ```
 
-**triggers** are keywords that tell us when to make the plugin run. They are _trigger words_. When a particular trigger word is part of a search query, it tells DuckDuckGo to _trigger_ the appropriate plugins.
+**triggers** are keywords that tell us when to make the instant answer run. They are _trigger words_. When a particular trigger word is part of a search query, it tells DuckDuckGo to _trigger_ the appropriate instant answer.
 
 In this case there is one trigger word: **chars**. Let's say someone searched "chars this is a test." **chars** is the first word so it would trigger our Goodie. The **start** keyword says, "Make sure the trigger word is at the start of the query." The system has several other keywords like **start** that are enumerated in the [Triggers](#triggers) section. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
@@ -70,7 +70,7 @@ The heart of the function is just this one line. The **remainder** is in the **$
 
 Perl has a lot of built-in functions, as well as thousands and thousands of modules available [via CPAN](https://metacpan.org/). You can leverage these modules when making Goodies, similar to how the [Roman Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Roman.pm) uses the [Roman module](https://metacpan.org/module/Roman).
 
-If we are unable to provide a good instant answer, we simply **return** nothing. And that's exactly what the second line in the function does.
+If we are unable to provide a good instant answer, we simply **return nothing**. That's exactly what the second line in the function does.
 
 ```perl
 return;
@@ -84,7 +84,7 @@ Now, below your function type the following line:
 zci is_cached => 1;
 ```
 
-This line is optional. We set **is\_cached** to true (0 is false, 1 is true) because this plugin will always return the same answer for the same query. This speeds up future answers by caching them (saving previous answers).
+This line is optional. We set **is\_cached** to true (0 is false, 1 is true) because this instant answer will always return the same answer for the same query. This speeds up future answers by caching them (saving previous answers).
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line.
 
@@ -113,12 +113,12 @@ zci is_cached => 1;
 ```
 
 ### Review
-The plugin system works like this at the highest level:
+The instant answer system works like this at the highest level:
 
 * We break the query (search terms) into words. This process happens in the background.
 
-* We see if any of those words are **triggers** (trigger words). These are provided by each of the plugins. In the example, the trigger word is **chars**.
+* We see if any of those words are **triggers** (trigger words). These are defined by the developer when creating an instant answer. In the example we used above, the trigger word is **chars**.
 
-* If a Goodie plugin is triggered, we run its **handle** function.
+* If a Goodie is triggered, we run its **handle** function.
 
-* If the Goodie's handle function outputs an instant answer via a **return** statement, we pass it back to the user.
+* If the Goodie's handle function outputs an instant answer via a **return** statement, we show it to the user as the insant answer. 
