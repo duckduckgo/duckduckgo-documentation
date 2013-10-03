@@ -20,23 +20,22 @@ Now that you know which instant answer type you'll be using for your instant ans
 
 Once you have an account, please fork the appropriate repository:
 
-### Goodie Repository
+#### Goodie Repository
   
 - GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-goodies
-
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork) to fork the repository
 
-### Spice Repository
+#### Spice Repository
   
 - GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-spice
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-spice/fork) to fork the repository
 
-### Fathead Repository
+#### Fathead Repository
   
 - GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-fathead
--Click [here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork) to fork the repository
+- Click [here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork) to fork the repository
 
-### Longtail Repository
+#### Longtail Repository
 
 - GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-longtail
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork) to fork the repository
