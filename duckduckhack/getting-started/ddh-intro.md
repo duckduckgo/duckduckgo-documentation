@@ -26,5 +26,5 @@ Whether you can code or not, there are many ways you can contribute to DuckDuckG
 
 **To get involved with the DuckDuckGo community, head over to our [community platform](https://dukgo.com/)!**
 
-### **Develop (or improve) instant answers**  
+### Develop (or improve) instant answers
   If you're a developer and you want to create your own instant answer, or if you'd like to help fix current issues please start by reading the **[DuckDuckHack Vision.](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/duckduckhack_vision.md)**

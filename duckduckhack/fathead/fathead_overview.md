@@ -4,99 +4,40 @@
 
 ## Structure
 
-Each fathead plugin has its own directory. Some of the directories are in use on the live system, and some are still in development.
+Each Fathead instant answer has its own directory. Some of the directories are in use on the live system, and some are still in development.
 
 Each directory has a structure like this:
 
 ```shell
-# This is a Perl file that lists some meta information about the plugin.
-# See the Meta file section for more information
-lib/DDG/Fathead/PlugIn.pm
+# This is a Perl file that lists some meta information about the instant answer
+lib/DDG/Fathead/FatheadName.pm
 
 # This shell script is called to fetch the data. 
 # Tmp files should go in a directory called download.
-share/plugin/fetch.sh
+share/fathead_name/fetch.sh
 
 # This is the script used to parse the data once it has been fetched. 
-# .xx can be .pl, .py, .rb or .js depending on what language you use.
-share/plugin/parse.xx
+# .xx can be .pl, .py, .rb, .js, etc. depending on what language you use.
+share/fathead_name/parse.xx
 
 # This shell script is called to run the parser. 
-share/plugin/parse.sh
+share/fathead_name/parse.sh
 
 # Please include any dependencies here,
 # or other special instructions for people
 # trying to run it.
-share/plugin/README.txt
+share/fathead_name/README.txt
 
 # This is the output file.
 # Generally it should NOT be committed,
 # but if it is small (<1MB) it is useful to do so.
-share/plugin/output.txt
+share/fathead_name/output.txt
 
 # This is an optional pointer to a URL in the cloud somewhere,
 # which contains a zip of the data files to process.
-share/plugin/data.url
+share/fathead_name/data.url
 ```
 
-
-## Meta File
-
-We use Perl packages to enumerate and work with plugins, so part of the plugin process is including a simple Perl file. You don't actually need to know any Perl for this! Here's an annotated example from the Hello World plugin.
-
-In the interest of keeping the code clean, please remove the annotations in your own file.
-
-```perl
-# Replace "HelloWorld" with the name of your plugin using CamelCase
-package DDG::Fathead::HelloWorld;
-
-# All plugins should have this line
-use DDG::Fathead;
-
-# This is an example search for the main use case.
-primary_example_queries "hello world perl";
-
-# This is a list of secondary use cases for the plugin.
-secondary_example_queries
-    "javascript hello world",
-    "hello world in c";
-
-# A brief description of the plugin
-description "Hello World programs in many program languages";
-
-# A unique name for the plugin
-name "HelloWorld";
-
-# Just leave this blank at first. We'll add it once we've got the plugin working.
-# So it should be: icon_url "";
-icon_url "/i/www.github.com.ico";
-
-# The name of the source. Appears as "More at {source}" in the ZCI box.
-source "GitHub";
-
-# This is kind of meta. It's the link to the main files of this plugin
-# i.e. the ones in the share/fathead/plugin/ folder.
-code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/hello_world";
-
-# A list of topics that are relevant to this plugin. Choose around 1-3.
-# See supported topics:
-# https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm
-topics "geek", "programming";
-
-# The most relevant category for this plugin. Choose only 1.
-# See supported categories:
-# https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm
-category "programming";
-
-# Your information so we can give you credit!
-# See supported types:
-# https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm
-attribution
-    twitter => ['https://twitter.com/jperla', 'jperla'],
-    web => ['http://www.jperla.com/blog', 'Joseph Perla'];
-
-1;
-```
 
 ## Data File Format
 
@@ -188,9 +129,7 @@ There is a pre-process script that is run on this output, which:
 
 ## Code Blocks
 
-If you want to include a code snippet or another pre-formatted example in the
-abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap
-the code block like this:
+If you want to include a code snippet or another pre-formatted example in the abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap the code block like this:
 
 ```html
 <pre><code>code block goes here</code></pre>
@@ -198,4 +137,7 @@ the code block like this:
 
 ## Notes
 
-1) There should be no duplicates in the $page (first) variable. If you have multiple things named the same things you have a number of options, e.g. a) make disambiguation pages; b) put everything in one snippet; c) pick the most general one.
+There should be no duplicates in the $page (first) variable. If you have multiple things named the same thing you have a number of options:
+  - make disambiguation pages
+  - put everything in one snippet
+  - pick the most general one
