@@ -22,23 +22,23 @@ Once you have an account, please fork the appropriate repository:
 
 #### Goodie Repository
   
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-goodies
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork) to fork the repository
+- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-goodies
 
 #### Spice Repository
   
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-spice
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-spice/fork) to fork the repository
+- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-spice
 
 #### Fathead Repository
   
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-fathead
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork) to fork the repository
+- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-fathead
 
 #### Longtail Repository
 
-- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-longtail
 - Click [here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork) to fork the repository
+- GitHub Link &mdash; https://github.com/duckduckgo/zeroclickinfo-longtail
 
 ## Start Coding!
 
