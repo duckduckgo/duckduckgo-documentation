@@ -1,22 +1,30 @@
 # Determine Your Instant Answer Type
 
-## Choose a Topic
+## Choose an Instant Answer
 
-Before you begin building anything, you'll need to know what instant answer it is that you want to provide. If you don't have any ideas, feel free to borrow one from our [ideas forum](http://ideas.duckduckhack.com/).
+Before you begin building anything, you'll need to know what instant answer it is that you want to provide. If you don't have any ideas, feel free to borrow one from our [ideas forum](https://dukgo.com/ideas).
 
-## Determine Data Source
+## Determine Instant Answer Source
 
-Now that you know which queries you'd like to show an instant answer for, you'll need to find a source for your data. It could be anything such as functions you write, a large dataset or even an API.
+Now that you know which queries you'd like to show an instant answer for, you'll need to determine what the source for your instant answer will be.
 
-Using this flowchart should help you to determine which kind of instant answer you'll be creating:
+Most instant answers rely on some type of data source to provide their answer, however many of them are able to provide their instant answer through the use of pure code. An example would be a string manipulation instant answer, which would only require the use of a function (code) to return an answer. Most instant answers however, rely on various kinds of data sources.
+
+Using the following flowchart should help you to determine which kind of instant answer you'll be creating, based on the date source your instant answer will need to use:
 
 ![instant answer type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png)
 
-If the right instant answer type is still not obvious, please <a href="https://github.com/duckduckgo/duckduckgo#can-you-help-me">ask us</a>. Sometimes, multiple instant answer types can work (depending on the datasource), and we can help you figure out which one would work best.
+If you were able to determine which instant answer type you will be using, please continue below to fork the repository so you can begin coding!
+
+If the right instant answer type is still not obvious, don't worry, the DuckDuckGo community is here for you! Please visit our [instant answer idea forum](https://dukgo.com/forum) and post a new thread for your instant answer. Be sure to describe the instant answer you have in mind, and don't forget to indicate where you think the date should come from. Someone from the community or the DuckDuckGo team will be able to help you determine the best course of action for you.
+
+**\*\*Note:** Sometimes more than one instant answer types can work (depending on the data source), and we can help you figure out which one would work best.
+
+Before moving forward, you **must** to know which instant answer type you will be using. From this point onwards, the documentation will be specific to each instant answer type.
 
 ## Fork the Instant Answer Repository
 
-Now that you know which instant answer type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack  the repositoryinstant answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
+Now that you know which instant answer type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack  the repository instant answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
 
 Once you have an account, please fork the appropriate repository:
 
