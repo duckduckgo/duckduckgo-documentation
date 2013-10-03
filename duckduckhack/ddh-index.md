@@ -63,9 +63,9 @@
 
 - **Styleguides**
   - [Styleguide Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/styleguide_overview.md)
+  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
   - [Goodie Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/goodie_styleguide.md)
   - [Spice Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/spice_styleguide.md)
   - [Fathead Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/fathead_styleguide.md)
   - [Longtail Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/longtail_styleguide.md)
   - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/code_styleguide.md)
-  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
