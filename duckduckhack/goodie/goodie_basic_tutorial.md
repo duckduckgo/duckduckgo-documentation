@@ -92,7 +92,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 1;
 ```
 
-And that's it! At this point you have a working DuckDuckHack Goodie plugin. It should look like this:
+And that's it! At this point you have a working Goodie instant answer. It should look like this:
 
 ```perl
 package DDG::Goodie::Chars;
