@@ -1,6 +1,6 @@
 # Triggers
 
-There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match). Although you *can* use a regular expression as a trigger, unless it is completely necessary, we encourage you to rather use a word trigger followed by the use of regular expressions (in the `handle` function) to further qualify the query once the instant answer has been triggered. This way the triggering of the instant answer is simplified and quick, but the use of a regex inside the `handle` allows you to make sure the instant answer works for the given query.
+There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match). You *can* use a regular expression as a trigger but unless it's completely necessary, we encourage you to instead use a word trigger followed by the use of regular expressions (in the `handle` function) to further qualify the query once the instant answer has been triggered. This way, the triggering of the instant answer is simplified and quick, but the use of a regex inside the `handle` allows you to make sure the instant answer works for the given query.
 
 ## Word Triggers
 

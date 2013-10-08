@@ -1,6 +1,6 @@
 # Testing HTML
 
-You should have already tested your Spice triggers by following the [Testing triggers](https://github.com/duckduckgo/duckduckgo#testing-triggers) section. Once you're confident your triggers are functioning properly, follow these steps to see your Spice plugin on a live server!
+You should have already tested your Spice triggers by following the [Testing triggers](https://github.com/duckduckgo/duckduckgo#testing-triggers) section. Once you're confident your triggers are functioning properly, follow these steps to see your Spice instant answer on a live server!
 
 1. Go to the root of your forked repository.
 
@@ -30,11 +30,11 @@ You should have already tested your Spice triggers by following the [Testing tri
 
 4. Search.
 
-  Given you've already tested your plugin triggers, you should be able to search and see your spice output come through the server. As requests go through the internal Web server they are printed to STDOUT (on the screen). External API calls are highlighted (if you have color turned on in your terminal).
+  Given you've already tested your instant answer's triggers, you should be able to search and see your spice output come through the server. As requests go through the internal Web server they are printed to STDOUT (on the screen). External API calls are highlighted (if you have color turned on in your terminal).
 
 5. Debug.
 
-  If for some reason a search doesn't hit a plugin, there is an error message displayed on the homepage saying "Sorry, no hit for your plugins." 
+  If for some reason a search doesn't hit an instant answer, there is an error message displayed on the homepage saying "Sorry, no hit for your instant answer." 
 
   If it does hit and you do not see something displayed on the screen, a number of things could be going wrong.
 
