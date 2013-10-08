@@ -6,7 +6,7 @@ Here are some more advanced trigger techniques you may need to use:
 
 ## Multiple Trigger Words
 
-Suppose you thought that in addition to _chars_, _numchars_ should also trigger the [Chars Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm). You can simply add extra trigger words to the triggers definition.
+Suppose you thought that in addition to *chars*, *numchars* should also trigger the [Chars Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm). You can simply add extra trigger words to the triggers definition.
 
 ```perl
 triggers start => 'chars', 'numchars';
@@ -47,7 +47,7 @@ handle remainder => sub {
     return unless $_ =~ /^(encode|decode|)\s*(.*)$/i;
 ```
 
-This way, we get the speed of the word trigger and still ensure that the search query is an exact match for our plugin. You can also return similarly (without a value) at any point in the handle function if the answer cannot be calculated.
+This way, we get the speed of the word trigger and still ensure that the search query is an exact match for our instant answer. You can also return similarly (without a value) at any point in the handle function if the answer cannot be calculated.
 
 ## Regexp Types
 
@@ -64,7 +64,7 @@ If you want to see some test cases where these types are enumerated check out ou
 
 ## Multi-Word Triggers
 
-Triggering also supports the use of trigger "phrases". An example of this usage can be seen in the [Hacker News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/HackerNews.pm) plugin.
+Triggering also supports the use of trigger "phrases". An example of this usage can be seen in the [Hacker News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/HackerNews.pm) instant answer.
 
 ```perl
 triggers startend => "hn", "hackernews", "hacker news", "hn search", "hnsearch", "hacker news search", "news.yc", "news.ycombinator.com", "hackernews search";
@@ -138,18 +138,18 @@ The files themselves go in the **/share/goodie/** directory.
 **Generating data files.** You may also need to generate data files. If you do so, please also include the generation scripts. These do not have to be done in Perl, and you can also put them within the **/share/goodie/** directory. For example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a Python script to generate the input data.
 
 
-There are a couple more sections on advanced handle techniques depending on [Plugin type](#overview):
+There are a couple more sections on advanced handle techniques depending on [instant answer type](#overview):
 
 * For **Goodies**, check out the [Advanced Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies#advanced-goodies) section.
 * For **Spice**, check out the [Advanced Spice handlers](https://github.com/duckduckgo/zeroclickinfo-spice#advanced-spice-handlers) section.
 
 ## Advanced Testing
 
-The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each plugin.
+The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
 
-1. Add your plugin test file.
+1. Add your instant answer test file.
 
-    Make a new file in the test directory **t/**. The name of the file is the name of your plugin, but this time followed by the extension **.t** for test because it is a Perl testing file. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.t_.
+    Make a new file in the test directory **t/**. The name of the file is the name of your instant answer, but this time followed by the extension **.t** to indicate that that this is a Perl Test file. For example, if the name of your instant answer was **MyTestGoodie**, the file would be `MyTestGoodie.t`.
 
     The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
 
@@ -162,7 +162,7 @@ The [testing triggers](testing.md#testing-triggers) section explained interactiv
     use DDG::Test::Goodie;
     ```
 
-    Then you define any default **zci** values that you set in your plugin.
+    Then you define any default **zci** values that you set in your instant answer.
 
     ```perl
     zci answer_type => 'chars';
@@ -247,9 +247,9 @@ The [testing triggers](testing.md#testing-triggers) section explained interactiv
     done_testing;
     ```
 
-2. Test your plugin programmatically.
+2. Test your instant answer programmatically.
 
-    Run your plugin test file like this:
+    Run your instant answer test file like this:
 
     ```shell
     perl -Ilib t/Chars.t
