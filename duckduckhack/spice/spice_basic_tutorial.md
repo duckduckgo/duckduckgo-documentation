@@ -1,6 +1,6 @@
 # Spice Basic Tutorial
 
-The NPM plugin [[link](https://duckduckgo.com/?q=npm+uglify-js)] [[code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/npm)] is a great example of a basic Spice implementation which utilizes the [the Node.js package search API](http://registry.npmjs.org/uglify-js/latest). Let's walk through it line-by-line:
+The NPM instant answer [[link](https://duckduckgo.com/?q=npm+uglify-js)] [[code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/npm)] is a great example of a basic Spice implementation which utilizes the [the Node.js package search API](http://registry.npmjs.org/uglify-js/latest). Let's walk through it line-by-line:
 
 ## NPM Backend
 
@@ -23,7 +23,7 @@ handle remainder => sub {
 1;
 ```
 
-To refresh your memory, the **triggers** keyword tells the plugin system when to call a plugin. In the [Basic Tutorial](#basic-tutorial) we discussed using the **start** keyword to specify trigger words that need to be present at the beginning of the query. Check out the section on [Triggers](general.md#triggers) for more information.
+To refresh your memory, the **triggers** keyword tells the instant answer system when to call an instant answer. In the [Basic Tutorial](#basic-tutorial) we discussed using the **start** keyword to specify trigger words that need to be present at the beginning of the query. Check out the section on [Triggers](general.md#triggers) for more information.
 
 Previously we saw the use of the **remainder** keyword as in **handle remainder**, which works well for trigger words. We use it again here.
 
@@ -82,7 +82,7 @@ function ddg_spice_npm (api_result) {
 }
 ```
 
-As mentioned, every plugin requires a Spice callback function, for the *NPM* plugin, the callback is the `ddg_spice_npm()` function that we defined here in *npm.js*. The *NPM* Perl module we wrote specifies this as the callback by using the name of the package `DDG::Spice::NPM` and gives this *ddg_spice_npm* name to the API call so that this funtion will be executed when the API responds using the data returned from the upstream (API) provider as the function's input.
+As mentioned, every instant answer requires a Spice callback function, for the *NPM* instant answer, the callback is the `ddg_spice_npm()` function that we defined here in *npm.js*. The *NPM* Perl module we wrote specifies this as the callback by using the name of the package `DDG::Spice::NPM` and gives this *ddg_spice_npm* name to the API call so that this funtion will be executed when the API responds using the data returned from the upstream (API) provider as the function's input.
 
 ##### npm.js (continued)
 
@@ -104,9 +104,9 @@ Spice.render({
 });
 ```
 
-Alright, so here is the bulk of the plugin, but it's very simple:
+Alright, so here is the bulk of the code, but it's quite simple:
 
-- `Spice.render()` is a function that the plugin system has already defined. You pass an object to it that specifies a bunch of important parameters. 
+- `Spice.render()` is a function that the instant answer system has already defined. You pass an object to it that specifies a bunch of important parameters. 
 
 - `data` is perhaps the most important parameter. The object given here will be the object that is passed along to the Handlebars template. In this case, the context of the NPM template will be the **api_result** object. This is very important to understand because **only the data passed along to the template is accessible to the template**. In most cases the `data` parameter should be set to 
 `api_result` so all the data returned from the API is accessible to the template. 
@@ -115,15 +115,15 @@ Alright, so here is the bulk of the plugin, but it's very simple:
 
 - `header1` is the text of this header, i.e. the text displayed inside the large grey bar. 
 
-- `source_name` is the name of the source for the "More at <source>" link that's displayed below the text of the plugin for attribution purposes. 
+- `source_name` is the name of the source for the "More at <source>" link that's displayed below the text of the instant answer for attribution purposes. 
 
 - `source_url` is the target of the "More at" link. It's the page that the user will click through to. 
 
-- `template_normal` is the name of the Handlebars template that contains the structure information for your plugin.
+- `template_normal` is the name of the Handlebars template for your instant answer.
 
 ----
 
-Now, let's look at the NPM plugin's Handlebars template:
+Now, let's look at the NPM instant answer's Handlebars template:
 
 ###### npm.handlebars
 
@@ -141,6 +141,6 @@ As you can see, this is a special type of HTML template. Within the template, yo
 We've created two files in the Spice share directory (`share/spice/npm/`) :
 
 1. `npm.js` - which delegates the API's response and calls `Spice.render()`
-2. `npm.handlebars` - which specifies the plugin's HTML structure and determines which attributes of the API response are placed in the HTML result
+2. `npm.handlebars` - which specifies the instant answer's HTML structure and determines which attributes of the API response are placed in the HTML result
 
-You may notice other plugins also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other plugins. If however CSS is needed it can be added. Examples with CSS usage will be covered shortly.
+You may notice other instant answers also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other instant answers. If however CSS is needed it can be added. Examples with CSS usage will be covered shortly.

@@ -1,9 +1,12 @@
-# Spice Plugin Design Style Guide
+# Spice Design Style Guide
 
-(overview - tbd)
+## Overview
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Formatting
-(overview - tbd)
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 #### Consistant Variable Names
 ex. "api_return"
@@ -12,18 +15,22 @@ ex. "api_return"
 `<search term>` (<Source>)
 
 #### No bolded text in Spice body
-(tbd)
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 #### No "undefined" values in Spice body (Spice result shouldn't say something is "not defined")
-(tbd)
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 #### Indent with spaces (not tabs)
-(tbd)
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 - Templates should not be modified.
 
 ## Naming Conventions
-(tbd)
+
+(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Do's & Dont's
 

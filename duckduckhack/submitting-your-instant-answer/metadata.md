@@ -1,83 +1,184 @@
 # Instant Answer Metadata
 
-Metadata allows us to categorize and describe instant answers. This information is put in the main perl module for each plugin that you write. See [Information.pm][1] for more details. Existing instant answers can be found on the [current goodies page][3] for reference.
+Metadata allows us to categorize and describe instant answers on our [Goodies page](http://duckduckgo.com/goodies).
 
-Broken down below are the different types of metadata that you can add to your plugin. The metadata must be added to the appropriate .pm file(s) for your instant answer.
+The different types of metadata that you can add to your instant answer are explained below. The metadata must be added to the appropriate `.pm` file(s) for your instant answer.
 
-## Example Queries
-
-Each plugin needs example queries. Primary examples are listed in the middle
-column, and secondary examples are alternatives linked from the third column.
-
-    primary_example_queries   "square root of nine";
-    secondary_example_queries "cube root of 8", "fifth root of one hundred twenty nine";
-
-## Description
-
-The description, as the name suggests, is a succinct description of what the plugin does. Try to *exclude* the
-source if possible, so write "graph equations" instead of "graph equations at
-wolfram alpha"
-
-    description "graph equations";
+------
 
 ## Name
 
-An arbitrary unique name for the goodie -- you should stick to what you've decided to call you *PluginName*.pm file to avoid confusion.
+An arbitrary, unique name for the instant answer (generally this should match the name that you've given Perl module and the `.pm` file. E.g DDG::Spice::RedditSubSearch, RedditSubSearch.pm).
 
-    name "RedditSearch";
+```perl
+name "Subreddit Search";
+```
 
-## icon_url
+## Description
 
-URL to an icon that is representative of your plugin -- the favicon for the
-data source or DuckDuckHack are recommended. You can leave this parameter blank for a DDG/DDH icon. The favicon is
-not always at http://url/favicon.ico, but is often given an explicit URL in the
-HTML header as x-icon or apple-touch-icon or something similar.
+A succinct explanation of what the instant answer does. Try to *exclude* the source name if possible.
 
-    icon_url "/i/math.stackexchange.com.ico";             # using DDG icon cache
+```perl
+description "Search for Subreddits";
+```
 
-    icon_url "http://www.canistream.it/img/Icon-72.png";  # link to specific favicon location
+## Primary Example Queries
+
+Used to highlight the most common types of queries which will trigger your instant answer.
+
+```perl
+primary_example_queries "/r/pizza", "subreddit nature";
+```
+
+## Secondary Example Queries (optional)
+
+Used to highlight any other, less common trigger words or phrases for your instant answer, should they exist.
+
+```perl
+secondary_example_queries "r/accounting";
+```
 
 ## Source
 
-Name of the data source (which you shouldn't have in your description).
+Name of the data source used for your instant answer.
 
-    source "Wolfram|Alpha";
-
-## code_url
-
-URL to the plugin code on github.
-
-    code_url "https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/TitleCase.pm";
-
-## Topics
-
-Broad classes that your plugin provides insight into. Feel free to assign multiple topics as necessary, as it often makes sense to put
-goodies in several topics.
-
-	topics "science", "geography", "trivia";
-
-Supported topics are listed in [Information.pm][6]
-
+```perl
+source "Reddit";
+```
 
 ## Category
 
-Specific activities or descriptive nouns for instant answers, i.e., what the plugin does (conversion, calculation, etc). For now, limit yourself to one category. Just put it in the most obvious category and don't overthink it -- we'll let you know if there's a better one.
+The category which best fits your instant answer.
 
-	category "calculations";
+**\*\*Note:** Only ***one*** category can be specified.
 
-Supported categories are listed at [Information.pm][5]
+```perl
+category "forums";
+```
 
+Supported categories include:
+
+- bang
+- calculations
+- cheat_sheets
+- computing_info
+- computing_tools
+- conversions
+- dates
+- entertainment
+- facts
+- finance
+- food
+- formulas
+- forums
+- geography
+- ids
+- language
+- location_aware
+- physical_properties
+- programming
+- q/a
+- random
+- reference
+- special
+- software
+- time_sensitive
+- transformations
+
+## Topics
+
+The topic(s) which best fit your instant answer.
+
+**\*\*Note:** ***Multiple*** topics can be specified.
+
+```perl
+topics "social", "entertainment", "special_interest";
+```
+
+Supported topics include:
+
+- everyday
+- economy\_and\_finance
+- computing
+- cryptography
+- entertainment
+- food_and_drink
+- gaming
+- geek
+- geography
+- math
+- music
+- programming
+- science
+- social
+- special_interest
+- sysadmin
+- travel
+- trivia
+- web_design
+- words\_and\_games
+
+## icon_url (optional)
+
+If a favicon exists for the data source used, provide the URL. 
+
+**\*\*Note:** The favicon is not always at `http://url/favicon.ico`, but is often given as an explicit URL in the HTML header as `x-icon` or `apple-touch-icon` or possibly, something similar.
+
+```perl
+icon_url "http://www.reddit.com/favicon.ico";
+```
+
+or
+
+Favicons can sometyimes be found by searching for the data source on DuckDuckGo, if a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
+
+```perl
+icon_url "/i/reddit.com.ico";
+```
+
+## code_url
+
+URL for the instant answer code on github.
+
+```perl
+code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RedditSubSearch.pm";
+```
 
 ## Attribution
 
-    attribution github => ['https://github.com/adman','Adman'],
-                twitter => ['http://twitter.com/adman_X','adman_X'];
+```perl
+attribution twitter => ["mithrandiragain", "Mithrandir"],
+            github => ["MithrandirAgain", "Gary Herreman"],
+            web => ['http://atomitware.tk/mith','MithrandirAgain'];
+```
 
-Supported attribution methods are listed at [Information.pm][4]
+Supported attribution sources include:
 
-[1]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm
-[2]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/ZeroClickInfo.pm
-[3]:http://duckduckgo.com/goodies/
-[4]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L10
-[5]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L19
-[6]:https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Meta/Information.pm#L48
+- Email
+- Twitter
+- Web (website)
+- Github
+- Facebook
+- Cpan
+
+**\*\*Note:** There is a specific syntax for giving attribution. For each attribution type you can provide a single string, or an array with two values.
+
+If one value is given, it will be used to create a link to whichever profile you are defining and it will serve as the **text** for the link.
+
+Likewise, if two values are given, the first will be used for the `href`, while the second will be used as the **text** for the link.
+
+E.g.
+
+```perl
+github => ["duckduckgo", "DuckDuckGo"];
+```
+
+Will render `<a href=https://github.com/duckduckgo>DuckDuckGo</a>`
+
+Similarly,
+
+```perl
+twitter => "duckduckgo";
+```
+
+Will render `<a href=https://twitter.com/duckduckgo>@duckduckgo</a>`

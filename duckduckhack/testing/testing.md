@@ -53,14 +53,14 @@ Before reading this section, make sure you've at least worked through the the [B
 
     You should see your instant answer in there as well. When the output is finished it gives you an interactive prompt.
 
-    ```
+    ```shell
     (Empty query for ending test)
     Query:
     ```
 
     Now you can type in any query and see what the response will be.
 
-    ```
+    ```shell
     Query: chars this is a test
 
     DDG::ZeroClickInfo  {

@@ -1,9 +1,11 @@
 # Advanced Testing
-The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each plugin.
 
-**Step 1.** &nbsp;Add your plugin test file.
+The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
 
-Make a new file in the test directory **t/**. The name of the file is the name of your plugin, but this time followed by the extension **.t** for test because it is a Perl testing file. For example, if the name of your plugin was _TestPlugin_, the file would be _TestPlugin.t_.
+## Create Test File
+
+Make a new file in the test directory **t/**. The name of the file should match the name of your instant answer, but this time followed by the extension **.t** for test because it is a Perl testing file. 
+For example, if the name of your instant answer was **Chars**, the file would be `Chars.t`.
 
 The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
 
@@ -16,14 +18,12 @@ use Test::More;
 use DDG::Test::Goodie;
 ```
 
-Then you define any default **zci** values that you set in your plugin.
+Then you define any default **zci** values that you set for your instant answer. These should match exactly what you set in your **.pm** file.
 
 ```perl
 zci answer_type => 'chars';
 zci is_cached => 1;
 ```
-
-These should match exactly what you set in your **.pm** file.
 
 Next comes the actual testing function.
 
@@ -77,7 +77,6 @@ done_testing;
 
 If you have a long list of queries that need to be tested, you can map over an array or hash inside `ddg_goodie_test`. Remember, this is a Perl program, so we have all the normal tools at our disposal to construct a list to pass to the function.
 
-
 ```perl
 #!/usr/bin/env perl
 
@@ -101,11 +100,9 @@ ddg_goodie_test(
 done_testing;
 ```
 
+## Test your Instant Answer
 
-
-**Step 2.** &nbsp;Test your plugin programmatically.
-
-Run your plugin test file like this:
+Run your instant answer test file like this:
 
 ```txt
 perl -Ilib t/Chars.t
