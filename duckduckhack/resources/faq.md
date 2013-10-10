@@ -8,13 +8,13 @@ We hope you will consider making DuckDuckGo instant answers to:
 
 - Improve results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 - Increase usage of your own projects, e.g. data and [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
-- Learn something new.
 - Attribution [on our site](https://duckduckgo.com/goodies.html) and [Twitter](https://twitter.com/duckduckhack) (working on more).
 - See your code live on a [growing](https://duckduckgo.com/traffic.html) search engine!
+- Learn something new.
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [ideas companion site](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas such as identifying the best sites and data sources to draw from. Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all and you've ended up here, please go over to our [instand answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
@@ -109,12 +109,12 @@ No.
 
 ### What about...
 
-Nope. Just use JavaScript, please and thanks.
+Nope. Just use JavaScript, please and thanks :)
 
 ## Fathead
 
-(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+(This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Longtail
 
-(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+(This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
