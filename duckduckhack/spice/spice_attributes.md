@@ -2,11 +2,11 @@
 
 ### Spice `to`
 
-(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+(Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ### Spice `from`
 
-(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+(Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ### Spice `wrap_jsonp_callback`
 
@@ -14,7 +14,7 @@ If the API used for your instant answer does not support JSONP (ie. it doesn't p
 
 ### Spice `proxy_cache_valid `
 
-(This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+(Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ### Spice `is_unsafe`
 

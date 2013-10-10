@@ -20,34 +20,42 @@ If you're a business and want your data to be utilized, adding your service to [
 
 ### Can you help me?
 
-  Of course! Here are the easiest ways to contact someone who can help answer your questions:
+Of course! Here are the easiest ways to contact someone who can help answer your questions:
 
- - Write us publicly on the [discussion list](https://www.listbox.com/subscribe/?list_id=197814).
- - Write us privately at open@duckduckgo.com.
+- Write us publicly on the [discussion list](https://www.listbox.com/subscribe/?list_id=197814).
+- Write us privately at open@duckduckgo.com.
 
 ### What if I don't know Perl?
+
 If you don't know Perl, that's OK! Several <a href="README.md#overview">instant answer types</a> are not in Perl. Also, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
 
 ### Do you have any instant answer ideas?
+
 Yup! We maintain [a growing list](http://ideas.duckduckhack.com/). There are also improvement ideas for [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies/issues), [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/issues), [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead/issues) and [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail/issues).
 
 ### How do I note that I've started on something?
+
 In your initial pull request, please note the link on the [idea list](http://ideas.duckduckhack.com/). We'll move it to the "in process" bucket for you.
 
 ### Where I can report instant answer bugs?
+
 Submit GitHub issues in the [appropriate repo](http://github.com/duckduckgo).
 
 ### What if there are instant answer conflicts?
+
 The ultimate arbiter is the user, and that's the perspective we take. In other words, we ask "what is best for the user experience?" That said, it often makes sense to combine ideas into one, better instant answer.
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
+
 If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons (e.g. the WolframAlpha instant answer), but our
 over-arching goal is to make all of our instant answers available on their own.
 
 ### Can I do something more complicated?
+
 Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we'd love to hear your ideas to influence that roadmap.
 
 ### What's the roadmap?
+
 Here's what we're working on (in roughly in this order):
 
 - better testing/file structure for spice instant answers.
@@ -59,43 +67,54 @@ Here's what we're working on (in roughly in this order):
 - better testing for longtail instant answers.
 
 ### Are there other open source projects? 
+
 Yes! Check out the other repositories in [our GitHub account](https://github.com/duckduckgo). You can email open@duckduckgo.com if you have any questions on those.
 
 ### Can I get the instant answers through an API?
+
 Yes! Check out the [DuckDuckGo API](https://api.duckduckgo.com). Our goal is to make as many instant answers as possible
 available through this interface. Fathead and goodie instant answers are automatically syndicated through the API, and Spice and Longtail are selectively (due to licensing complications) mixed in.
 
 ### Can I talk to you about a partnership idea?###
+
 Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/portal/articles/775109-partnerships).
 
 ## Goodie
 
 ### Can Goodie instant answers make HTTP requests?
+
 Sorry, but unfortunately not. You might want to consider creating a Spice instant answer if you are trying to use an API.
 
 ## Spice
 
 ### I want to use 'X' API, but it doesn't have an endpoint for 'Y'. What should I do?
+
 Email them! - If you explain what it's for, they might be willing to create and endpoint for you! If not, it's probably best to find an another API.
 
 ### Can I use an API that returns XML?
+
 Sorry, but **no**. We currently don't support XML. We're considering it though...
 
 ### Can I use an API that returns HTML or a String? 
+
 If the response is a single string, then yes - you can use `zci wrap_jsonp_callback`. You can read more about that [here](#). Or take a look at the [Automeme](https://github.com/duckduckgo/zeroclickinfo-spice/blob/spice2/lib/DDG/Spice/Automeme.pm#L8) instant answer. If the response is more complicated, then sorry but **no**.
 
 ### Can I use the 'X', 'Y' or 'Z' JavaScript library?
+
 Probably not. Maybe, if it is very small, but we prefer that no third party, extra libraries are used. ***Please*** ask us first before writing an instant answer that is **dependent** on an extra library - we don't want you to waste your time and energy on something we can't accept!
 
 ### Can I use Coffeescript?
+
 No.
 
 ### What about...
+
 Nope. Just use JavaScript, please and thanks.
 
-
 ## Fathead
+
 (This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Longtail
+
 (This section is coming soon! Know what should go here? Then. **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
