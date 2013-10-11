@@ -34,7 +34,7 @@ share/fathead_name/README.txt
 share/fathead_name/output.txt
 
 # This is an optional pointer to a URL in the cloud somewhere,
-# which contains a zip of the data files to process.
+# which contains the data to process.
 share/fathead_name/data.url
 ```
 
@@ -47,7 +47,7 @@ The output file needs to use UTF-8 encoding so we can process it. Please make su
 
 The output format from parse.xx depends on the type of content. In any case, it should be a tab delimited file, with one line per entry. Usually there is no need for newline characters, but if there is a need for some reason, escape them with a backslash like \\\n. If you wanta newline displayed, use &lt;br&gt;
 
-The general output fields are as follows. Check out [https://duckduckgo.com/Perl](https://duckduckgo.com/Perl) for reference, which we will refer to in explaining the fields.
+The output fields are as follows, not all are required to have values, but all must be accounted for in the delimitations. This example is written in simple [Perl](https://duckduckgo.com/Perl).
 
 
 ```perl
@@ -116,7 +116,7 @@ my $source_url = $line[12] || '';
 
 In all this may look like:
 
-print OUT "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
+print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
 ```
 
 There is a pre-process script that is run on this output, which:
