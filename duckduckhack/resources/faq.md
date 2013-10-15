@@ -113,7 +113,16 @@ Nope. Just use JavaScript, please and thanks :)
 
 ## Fathead
 
-(This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+### How can I test my output file?
+
+Unfortunately, there is no way for contributors to do so. But if you've gotten that far, we want to hear about it! Please open a pull request and we'll help you through the testing process.
+
+### What can go in a result abstract?
+
+A result abstract can be either plain text (generally one readable sentence, ending in a period), or HTML. Special care needs to be taken when abstracts contain HTML. Please let us know ahead of time if you are planning use HTML.
+
+###
+(This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Longtail
 
