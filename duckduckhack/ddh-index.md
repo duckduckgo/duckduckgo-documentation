@@ -9,7 +9,7 @@
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
-  - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Goodie Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_tests.md)
   - [Advanced Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_triggers.md)
   - [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
@@ -21,7 +21,7 @@
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
   - [Spice Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md)
   - [Spice Frontend Walkthroughs](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_frontend_walkthroughs.md)
-  - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Spice Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/spice_tests.md)
   - [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_backend.md)
   - [Advanced Frontend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_frontend.md)
@@ -43,7 +43,7 @@
 
 - **Testing**
   - [Installing DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/installing_duckpan.md)
-  - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing.md)
+  - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
   - [Advanced](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/advanced_testing.md)
