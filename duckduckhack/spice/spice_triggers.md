@@ -1,1 +1,0 @@
-../goodie/goodie_triggers.md
