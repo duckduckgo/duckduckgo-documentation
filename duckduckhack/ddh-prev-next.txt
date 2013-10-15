@@ -17,6 +17,7 @@
 [Spice]
 - Overview
 - Basic Tutorial
+- Triggers Overview
 - Spice Templates Overview
 - Spice Frontend Walkthroughs
 - Testing Triggers
