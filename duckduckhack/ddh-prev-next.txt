@@ -1,68 +1,68 @@
-- Getting Started
-  - Welcome!
-  - DuckDuckHack Vision
-  - Determine Your Instant Answer Type
-  - [Goodie] | [Spice] | [Fathead] | [Longtail]
+[Getting Started]
+- Welcome!
+- DuckDuckHack Vision
+- Determine Your Instant Answer Type
+- [Goodie] | [Spice] | [Fathead] | [Longtail]
+
+[Goodie]
+- Overview
+- Basic Tutorial
+- Trigger Overview
+- Testing Triggers
+- Goodie Test Files
+- Advanced Triggers
+- Advanced Handle Functions
+- [Submitting Your Instant Answer]
+
+[Spice]
+- Overview
+- Basic Tutorial
+- Spice Templates Overview
+- Spice Frontend Walkthroughs
+- Testing Triggers
+- Spice Test Files
+- Advanced Backend
+- Advanced Frontend
+- DDG Methods
+- Handlebars Helpers
+- Spice Helper Functions (Perl)
+- Spice Attributes
+- [Submitting Your Instant Answer]
   
-- Goodie
-  - Overview
-  - Basic Tutorial
-  - Trigger Overview
-  - Testing Triggers
-  - Goodie Test Files
-  - Advanced Triggers
-  - Advanced Handle Functions
-  - [Submitting Your Instant Answer]
-
-- Spice
-  - Overview
-  - Basic Tutorial
-  - Spice Templates Overview
-  - Spice Frontend Walkthroughs
-  - Testing Triggers
-  - Spice Test Files
-  - Advanced Backend
-  - Advanced Frontend
-  - DDG Methods
-  - Handlebars Helpers
-  - Spice Helper Functions (Perl)
-  - Spice Attributes
-  - [Submitting Your Instant Answer]
+  [Fathead]
+- Overview
+- Basic Tutorial
+- [Submitting Your Instant Answer]
   
-- Fathead
-  - Overview
-  - Basic Tutorial
-  - [Submitting Your Instant Answer]
-  
-- Longtail
-  - Overview
-  - Basic Tutorial
-  - [Submitting Your Instant Answer]
+  [Longtail]
+- Overview
+- Basic Tutorial
+- [Submitting Your Instant Answer]
 
-- Submitting Your Instant Answer
-  - Preparing for a Pull Request
-  - Developer Checklist
-  - Metadata
-  - Making a Pull Request
-  - [Styleguides]
+[Submitting Your Instant Answer]
+- Preparing for a Pull Request
+- Developer Checklist
+- Metadata
+- Making a Pull Request
+- [Styleguides]
 
-- Testing
-  - Installing DuckPAN
-  - Triggers
-  - Display (HTML/testing/.md)
-  - Test Files
-  - Advanced
-  - Testing with Location API
-
+[Testing]
+- Installing DuckPAN
+- Triggers
+- Display (HTML/testing/.md)
+- Test Files
 - Advanced
-  - GEOLocation API
+- Testing with Location API
 
-- Resources
-  - Common Pitfalls
-  - FAQ
+[Advanced]
+- GEOLocation API
 
-- Styleguides
-  - Styleguide Overview
-  - Design Styleguide
-  - Goodie Styleguide | Spice Styleguide | Fathead Styleguide | Longtail Styleguide 
-  - Code Styleguide
+[Resources]
+- Common Pitfalls
+- FAQ
+
+[Styleguides]
+- Styleguide Overview
+- Design Styleguide
+- Goodie Styleguide | Spice Styleguide | Fathead Styleguide | Longtail Styleguide 
+- Code Styleguide
