@@ -33,9 +33,9 @@ Now here's where it gets interesting. Type:
 triggers start => 'chars';
 ```
 
-**triggers** are keywords that tell us when to make the instant answer run. They are _trigger words_. When a particular trigger word is part of a search query, it tells DuckDuckGo to _trigger_ the appropriate instant answer.
+**triggers** are keywords that tell us when to make the instant answer run. They are *trigger words*. When a particular trigger word is part of a search query, it tells DuckDuckGo to *trigger* the appropriate instant answer.
 
-In this case there is one trigger word: **chars**. Let's say someone searched "chars this is a test." **chars** is the first word so it would trigger our Goodie. The **start** keyword says, "Make sure the trigger word is at the start of the query." The system has several other keywords like **start** that are enumerated in the [Triggers](#triggers) section. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
+In this case there is one trigger word: **chars**. Let's say someone searched "chars this is a test." **chars** is the first word so it would trigger our Goodie. The **start** keyword says, "Make sure the trigger word is at the start of the query." There are several other keywords like **start** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
 Now type in this line:
 
@@ -43,9 +43,9 @@ Now type in this line:
 handle remainder => sub {
 ```
 
-Once triggers are specified, we define how to _handle_ the query. **handle** is another keyword, similar to triggers.
+Once triggers are specified, we define how to *handle* the query. `handle` is another keyword, similar to triggers.
 
-You can _handle_ different aspects of the search query, but the most common is the **remainder**, which refers to the rest of the query (everything but the triggers). For example, if the query was _"chars this is a test"_, the trigger would be _chars_ and the remainder would be _this is a test_.
+You can *handle* different aspects of the search query, but the most common is the **remainder**, which refers to the rest of the query (everything but the triggers). For example, if the query was _"chars this is a test"_, the trigger would be _chars_ and the remainder would be _this is a test_.
 
 Now let's add a few more lines to complete the handle function.
 
@@ -115,10 +115,10 @@ zci is_cached => 1;
 ### Review
 The instant answer system works like this at the highest level:
 
-* We break the query (search terms) into words. This process happens in the background.
+- We break the query (search terms) into words. This process happens in the background.
 
-* We see if any of those words are **triggers** (trigger words). These are defined by the developer when creating an instant answer. In the example we used above, the trigger word is **chars**.
+- We see if any of those words are **triggers** (trigger words). These are defined by the developer when creating an instant answer. In the example we used above, the trigger word is **chars**.
 
-* If a Goodie is triggered, we run its **handle** function.
+- If a Goodie is triggered, we run its `handle` function.
 
-* If the Goodie's handle function outputs an instant answer via a **return** statement, we show it to the user as the insant answer. 
+- If the Goodie's handle function outputs an instant answer via a **return** statement, we show it to the user as the insant answer. 
