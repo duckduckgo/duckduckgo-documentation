@@ -1,6 +1,6 @@
 # Triggers
 
-There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are several orders of magnitude faster than regexp triggers (a hash check vs. a regexp match). You *can* use a regular expression as a trigger but unless it's completely necessary, we encourage you to instead use a word trigger followed by the use of regular expressions (in the `handle` function) to further qualify the query once the instant answer has been triggered. This way, the triggering of the instant answer is simplified and quick, but the use of a regex inside the `handle` allows you to make sure the instant answer works for the given query.
+There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 
 ## Word Triggers
 
@@ -68,3 +68,17 @@ triggers query_raw => $regex;
 - `query_nowhitespace` &mdash; `query` with all whitespace removed
 - `query_clean` &mdash; `query_lc`, but with whitespace and non-alphanumeric ascii removed
 
+**\*\*Note:** You **cannot** combine the use of **Regex Triggers** with **Word Triggers**.
+
+## Regex Guards
+
+We much prefer you use **trigger words** when possible because they are faster on the backend. In some cases however, **regular expressions** are necessary, e.g. you need to trigger on sub-words. In this case we suggest you consider using a **word trigger** and supplement it with a **regex guard**. A regex guard is a return clause immediately inside the `handle` function.
+
+A good example of this is the Base64 goodie. In this case we want to trigger on queries with the form "base64 encode/decode \<string\>". Here's an excerpt from [Base64.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base64.pm) which shows how this case is handled using a word trigger, with a regex guard:
+
+```perl
+triggers startend => "base64";
+
+handle remainder => sub {
+    return unless $_ =~ /^(encode|decode|)\s*(.*)$/i;
+```
