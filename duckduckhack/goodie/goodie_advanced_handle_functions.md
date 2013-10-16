@@ -7,13 +7,22 @@ Trigger words are blunt instruments; they may send you queries you cannot handle
 There are number of techniques for doing so. For example, the first line of the [Base Goodie's](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) `handle` function has a `return` statement paired with an `unless`:
 
 ```perl
-return unless  /^([0-9]+)\s*(?:(?:in|as)\s+)?(hex|hexadecimal|octal|oct|binary|base\s*([0-9]+))$/;
+handle remainder => sub {
+  return unless  /^([0-9]+)\s*(?:(?:in|as)\s+)?(hex|hexadecimal|octal|oct|binary|base\s*([0-9]+))$/;
+  ...
+}
 ```
 
-You could also do it the other way, like the [GoldenRatio Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm):
+You could also do it another way, like the [GoldenRatio Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) which uses an `if` block and a regex to make sure the query qualifies:
 
 ```perl
-if ($input =~ /^(?:(?:(\?)\s*:\s*(\d+(?:\.\d+)?))|(?:(\d+(?:\.\d+)?)\s*:\s*(\?)))$/) {
+handle remainder => sub {
+  my $input = $_;
+  if ($input =~ /^(?:(?:(\?)\s*:\s*(\d+(?:\.\d+)?))|(?:(\d+(?:\.\d+)?)\s*:\s*(\?)))$/) {
+    ...
+  }
+  return;
+}
 ```
 
 ## Using Files in the Share Directory
