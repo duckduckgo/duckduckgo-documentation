@@ -12,7 +12,7 @@ In order to make sure these instant answers are worthy of being displayed, there
     A false positive is an irrelevant instant answer. Only return an instant answer when you know it is good, and otherwise return nothing. For example, the [Quixey instant answer](http://ddg.gg/?q=flight+search+app) shouldn't show an answer for a query like ["how to build a simple ipad app"](https://duckduckgo.com/?q=how+to+build+a+simple+ipad+app).
 
 3. **Minimal Vertical Space**.  
-     Only include the most important information and then offer the user to click through for more if needed.  
+    Only include the most important information and then offer the user to click through for more if needed.  
     ![minimize space](https://s3.amazonaws.com/ddg-assets/docs/minimize_space.png)
 
 4. **Consistent Design**.  
