@@ -7,7 +7,11 @@ Before reading this section, make sure you've at least worked through the the [B
 
 1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
   
-    - Option A. &mdash; Install via this script `curl http://duckpan.org/install.pl | perl`
+    - Option A. &mdash; Install via this script:
+      
+        ```perl
+        curl http://duckpan.org/install.pl | perl
+        ```
 
     - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which already comes with DuckPAN installed
 
