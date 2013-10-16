@@ -7,10 +7,11 @@ Before reading this section, make sure you've at least worked through the the [B
 
 1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
   
-  - Option A. &mdash; Install via this script `curl http://duckpan.org/install.pl | perl`
-  - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which already comes with DuckPAN installed
+    - Option A. &mdash; Install via this script `curl http://duckpan.org/install.pl | perl`
 
-  More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
+    - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which already comes with DuckPAN installed
+
+    More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
 
 2. Go to your fork of the repository (a directory or folder on your computer).
 
