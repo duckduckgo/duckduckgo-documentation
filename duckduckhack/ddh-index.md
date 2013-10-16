@@ -11,7 +11,6 @@
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
   - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Goodie Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_tests.md)
-  - [Advanced Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_triggers.md)
   - [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 
