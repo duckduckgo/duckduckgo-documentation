@@ -51,7 +51,7 @@
 
 	"spice_basic_tutorial.md" : {
 		"prev" : "spice_overview.md",
-		"next" : "goodie_triggers.md"
+		"next" : "spice_triggers.md"
 	},
 
 	"goodie_triggers.md" : {
