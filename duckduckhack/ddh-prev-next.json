@@ -1,157 +1,157 @@
 {
 	"ddh-intro.md" : {
-		"next" : "duckduckhack_vision.md",
-		"prev" : "undef"
+		"prev" : ["undef"],
+		"next" : ["duckduckhack_vision.md"]
 	},
 
 	"duckduckhack_vision.md" : {
-		"prev" : "ddh-intro.md",
-		"next" : "determine_your_instant_answer_type.md"
+		"prev" : ["ddh-intro.md"],
+		"next" : ["determine_your_instant_answer_type.md"]
 	},
 
 	"determine_your_instant_answer_type.md" : {
-		"prev" : "duckduckhack_vision.md",
-		"next" : ["goodie_overview.md"]
+		"prev" : ["duckduckhack_vision.md"],
+		"next" : ["goodie_overview.md", "spice_overview.md", "fathead_overview.md", "longtail_overview.md"]
 	},
 
 	"goodie_overview.md" : {
-		"prev" : "determine_your_instant_answer_type.md",
-		"next" : "goodie_basic_tutorial.md"
+		"prev" : ["determine_your_instant_answer_type.md"],
+		"next" : ["goodie_basic_tutorial.md"]
 	},
 
 	"goodie_basic_tutorial.md" : {
-		"prev" : "goodie_overview.md",
-		"next" : "goodie_triggers.md"
+		"prev" : ["goodie_overview.md"],
+		"next" : ["goodie_triggers.md"]
 	},
 
 	"goodie_triggers.md" : {
-		"prev" : "goodie_basic_tutorial.md",
-		"next" : "testing_triggers.md"
+		"prev" : ["goodie_basic_tutorial.md"],
+		"next" : ["testing_triggers.md"]
 	},
 
 	"testing_triggers.md" : {
-		"prev" : "goodie_triggers.md",
-		"next" : "goodie_tests.md"
+		"prev" : ["goodie_triggers.md"],
+		"next" : ["goodie_tests.md"]
 	},
 
 	"goodie_tests.md" : {
-		"prev" : "testing_triggers.md",
-		"next" : "goodie_advanced_handle_functions.md"
+		"prev" : ["testing_triggers.md"],
+		"next" : ["goodie_advanced_handle_functions.md"]
 	},
 
 	"goodie_advanced_handle_functions.md" : {
-		"prev" : "goodie_tests.md",
-		"next" : "faq.md#goodie"
+		"prev" : ["goodie_tests.md"],
+		"next" : ["faq.md#goodie"]
 	},
 
 	"spice_overview.md" : {
-		"prev" : "determine_your_instant_answer_type.md",
-		"next" : "spice_basic_tutorial.md"
+		"prev" : ["determine_your_instant_answer_type.md"],
+		"next" : ["spice_basic_tutorial.md"]
 	},
 
 	"spice_basic_tutorial.md" : {
-		"prev" : "spice_overview.md",
-		"next" : "spice_triggers.md"
+		"prev" : ["spice_overview.md"],
+		"next" : ["spic_triggers.md"]
 	},
 
 	"goodie_triggers.md" : {
-		"prev" : "spice_basic_tutorial.md",
-		"next" : "spice_templates_overview.md"
+		"prev" : ["spice_basic_tutorial.md"],
+		"next" : ["spice_templates_overview.md"]
 	},
 
 	"spice_templates_overview.md" : {
-		"prev" : "goodie_triggers.md",
-		"next" : "spice_frontend_walkthroughs.md"
+		"prev" : ["goodie_triggers.md"],
+		"next" : ["spice_frontend_walkthroughs.md"]
 	},
 
 	"spice_frontend_walkthroughs.md" : {
-		"prev" : "spice_templates_overview.md",
-		"next" : "testing_triggers.md"
+		"prev" : ["spice_templates_overview.md"],
+		"next" : ["testing_triggers.md"]
 	},
 
 	"testing_triggers.md" : {
-		"prev" : "spice_frontend_walkthroughs.md",
-		"next" : "spice_tests.md"
+		"prev" : ["spice_frontend_walkthroughs.md"],
+		"next" : ["spice_tests.md"]
 	},
 
 	"spice_tests.md" : {
-		"prev" : "testing_triggers.md",
-		"next" : "spice_advanced_backend.md"
+		"prev" : ["testing_triggers.md"],
+		"next" : ["spice_advanced_backend.md"]
 	},
 
 	"spice_advanced_backend.md" : {
-		"prev" : "spice_tests.md",
-		"next" : "spice_advanced_frontend.md"
+		"prev" : ["spice_tests.md"],
+		"next" : ["spice_advanced_frontend.md"]
 	},
 
 	"spice_advanced_frontend.md" : {
-		"prev" : "spice_advanced_backend.md",
-		"next" : "spice_ddg_methods.md"
+		"prev" : ["spice_advanced_backend.md"],
+		"next" : ["spice_ddg_methods.md"]
 	},
 
 	"spice_ddg_methods.md" : {
-		"prev" : "spice_advanced_frontend.md",
-		"next" : "spice_handlebars_helpers.md"
+		"prev" : ["spice_advanced_frontend.md"],
+		"next" : ["spice_handlebars_helpers.md"]
 	},
 
 	"spice_handlebars_helpers.md" : {
-		"prev" : "spice_ddg_methods.md",
-		"next" : "spice_helper_functions.md"
+		"prev" : ["spice_ddg_methods.md"],
+		"next" : ["spice_helper_functions.md"]
 	},
 
 	"spice_helper_functions.md" : {
-		"prev" : "spice_handlebars_helpers.md",
-		"next" : "spice_attributes.md"
+		"prev" : ["spice_handlebars_helpers.md"],
+		"next" : ["spice_attributes.md"]
 	},
 
 	"spice_attributes.md" : {
-		"prev" : "spice_helper_functions.md",
-		"next" : "faq.md#spice"
+		"prev" : ["spice_helper_functions.md"],
+		"next" : ["faq.md#spice"]
 	},
 
 	"fathead_overview.md" : {
-		"prev" : "determine_your_instant_answer_type.md",
-		"next" : "fathead_basic_tutorial.md"
+		"prev" : ["determine_your_instant_answer_type.md"],
+		"next" : ["fathead_basic_tutorial.md"]
 	},
 
 	"fathead_basic_tutorial.md" : {
-		"prev" : "fathead_overview.md",
-		"next" : "faq.md#fathead"
+		"prev" : ["fathead_overview.md"],
+		"next" : ["faq.md#fathead"]
 	},
 
 	"longtail_overview.md" : {
-		"prev" : "determine_your_instant_answer_type.md",
-		"next" : "longtail_basic_tutorial.md"
+		"prev" : ["determine_your_instant_answer_type.md"],
+		"next" : ["longtail_basic_tutorial.md"]
 	},
 
 	"longtail_basic_tutorial.md" : {
-		"prev" : "longtail_overview.md",
-		"next" : "faq.md#longtail"
+		"prev" : ["longtail_overview.md"],
+		"next" : ["faq.md#longtail"]
 	},
 
 	"installing_duckpan.md" : {
-		"prev" : "",
-		"next" : "testing_triggers.md"
+		"prev" : ["undef"],
+		"next" : ["testing_triggers.md"]
 	},
 
 	"testing_triggers.md" : {
-		"prev" : "installing_duckpan.md",
-		"next" : "testing_html.md"
+		"prev" : ["installing_duckpan.md"],
+		"next" : ["testing_html.md"]
 	},
 
 	"testing_html.md" : {
-		"prev" : "testing_triggers.md",
-		"next" : "test_files.md"
+		"prev" : ["testing_triggers.md"],
+		"next" : ["test_files.md"]
 	},
 
 	"test_files.md" : {
-		"prev" : "testing_html.md",
-		"next" : "advanced_testing.md"
+		"prev" : ["testing_html.md"],
+		"next" : ["advanced_testing.md"]
 	},
 
 	"advanced_testing.md" : {
-		"prev" : "test_files.md",
-		"next" : "testing_location_api.md"
+		"prev" : ["test_files.md"],
+		"next" : ["testing_location_api.md"]
 	},
 
 	"testing_location_api.md" : {
@@ -159,72 +159,72 @@
 	},
 
 	"preparing_for_a_pull_request.md" : {
-		"prev" : "testing_location_api.md",
-		"next" : "developer_checklist.md"
+		"prev" : ["testing_location_api.md"],
+		"next" : ["developer_checklist.md"]
 	},
 
 	"developer_checklist.md" : {
-		"prev" : "preparing_for_a_pull_request.md",
-		"next" : "metadata.md"
+		"prev" : ["preparing_for_a_pull_request.md"],
+		"next" : ["metadata.md"]
 	},
 
 	"metadata.md" : {
-		"prev" : "developer_checklist.md",
-		"next" : "making_a_pull_request.md"
+		"prev" : ["developer_checklist.md"],
+		"next" : ["making_a_pull_request.md"]
 	},
 
 	"making_a_pull_request.md" : {
-		"prev" : "metadata.md",
-		"next" : "location_api.md"
+		"prev" : ["metadata.md"],
+		"next" : ["location_api.md"]
 	},
 
 	"location_api.md" : {
-		"prev" : "undef",
-		"next" : "undef"
+		"prev" : ["undef"],
+		"next" : ["undef"]
 	},
 
 	"common_pitfalls.md" : {
-		"prev" : "undef",
-		"next" : "faq.md"
+		"prev" : ["undef"],
+		"next" : ["faq.md"]
 	},
 
 	"faq.md" : {
-		"prev" : "common_pitfalls.md",
-		"next" : "styleguide_overview.md"
+		"prev" : ["common_pitfalls.md"],
+		"next" : ["styleguide_overview.md"]
 	},
 
 	"styleguide_overview.md" : {
-		"prev" : "faq.md",
-		"next" : "design_styleguide.md"
+		"prev" : ["faq.md"],
+		"next" : ["design_styleguide.md"]
 	},
 
 	"design_styleguide.md" : {
-		"prev" : "styleguide_overview.md",
-		"next" : "goodie_styleguide.md"
+		"prev" : ["styleguide_overview.md"],
+		"next" : ["goodie_styleguide.md","spice_styleguide.md", "fathead_styleguide.md", "longtail_styleguide.md"]
 	},
 
 	"goodie_styleguide.md" : {
-		"prev" : "design_styleguide.md",
-		"next" : "spice_styleguide.md"
+		"prev" : ["design_styleguide.md"],
+		"next" : ["spice_styleguide.md"]
 	},
 
 	"spice_styleguide.md" : {
-		"prev" : "goodie_styleguide.md",
-		"next" : "fathead_styleguide.md"
+		"prev" : ["goodie_styleguide.md"],
+		"next" : ["fathead_styleguide.md"]
 	},
 
 	"fathead_styleguide.md" : {
-		"prev" : "spice_styleguide.md",
-		"next" : "longtail_styleguide.md"
+		"prev" : ["spice_styleguide.md"],
+		"next" : ["longtail_styleguide.md"]
 	},
 
 	"longtail_styleguide.md" : {
-		"prev" : "fathead_styleguide.md",
-		"next" : "code_styleguide.md"
+		"prev" : ["fathead_styleguide.md"],
+		"next" : ["code_styleguide.md"]
 	},
 
 	"code_styleguide.md" : {
-		"prev" : "longtail_styleguide.md",
-		"next" : "undef"
+		"prev" : ["longtail_styleguide.md"],
+		"next" : ["undef"]
 	}
 }
