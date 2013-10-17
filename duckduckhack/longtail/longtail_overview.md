@@ -41,3 +41,5 @@ Longtails consist of two primary files. The first is a metadata file that descri
 
 </doc>
 ```
+
+(This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)

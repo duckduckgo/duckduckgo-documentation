@@ -85,6 +85,8 @@ Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/po
 
 Sorry, but unfortunately not. You might want to consider creating a Spice instant answer if you are trying to use an API.
 
+(This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+
 ## Spice
 
 ### I want to use 'X' API, but it doesn't have an endpoint for 'Y'. What should I do?
@@ -121,7 +123,6 @@ Unfortunately, there is no way for contributors to do so. But if you've gotten t
 
 A result abstract can be either plain text (generally one readable sentence, ending in a period), or HTML. Special care needs to be taken when abstracts contain HTML. Please let us know ahead of time if you are planning use HTML.
 
-###
 (This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
 ## Longtail
