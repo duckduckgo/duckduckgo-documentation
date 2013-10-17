@@ -1,8 +1,26 @@
 # Basic Goodie Tutorial
 
-In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result will look [like this](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) and works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F).
+In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
 
-## Naming the File
+###### chars.pm
+
+```perl
+package DDG::Goodie::Chars;
+# ABSTRACT: Give the number of characters (length) of the query.
+
+use DDG::Goodie;
+
+triggers start => 'chars';
+
+handle remainder => sub {
+    return 'Chars: ' . length $_ if $_;
+    return;
+};
+1;
+
+```
+
+## Naming our Goodie Package
 
 To begin, open your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
@@ -96,25 +114,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 ```
 
-## You're Finished!
-
-And that's it! At this point you have a working Goodie instant answer. It should look like this:
-
-```perl
-package DDG::Goodie::Chars;
-# ABSTRACT: Give the number of characters (length) of the query.
-
-use DDG::Goodie;
-
-triggers start => 'chars';
-
-handle remainder => sub {
-    return 'Chars: ' . length $_ if $_;
-    return;
-};
-1;
-
-```
+And that's it! At this point you have a working Goodie instant answer. 
 
 ## Recap
 The instant answer system works like this at the highest level:
