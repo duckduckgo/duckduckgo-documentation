@@ -1,4 +1,4 @@
-# DuckDuckHack: You can create a better search experience for everyone!
+# DuckDuckHack: Create Instant Answers for a Better Search Experience
 
 At DuckDuckGo, our users believe in more answers with fewer clicks. Why show a page full of links, when you can show an instant answer?!
 
