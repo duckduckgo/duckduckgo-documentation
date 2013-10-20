@@ -6,7 +6,7 @@ Spice instant answers are triggered by a backend Perl component that then calls 
 The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to render a Spice result at the top of the DuckDuckGo search results page.
 
 ### Spice Templates
-In order to render the the Spice result, the Spice callback needs to specify a template which determines how the result will look. There are several templates to choose from and it is up to the developer's discretion to choose the best template for the given data and desired output.
+In order to render the Spice result, the Spice callback needs to specify a template which determines how the result will look. There are several templates to choose from and it is up to the developer's discretion to choose the best template for the given data and desired output.
 
 ### Tech
 The Spice frontend uses [Handlebars](http://handlebarsjs.com) for templates and includes [jQuery](https://jquery.org) (although its use is not required). It also allows the use of custom CSS when necessary.
