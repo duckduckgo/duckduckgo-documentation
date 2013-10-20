@@ -1,6 +1,10 @@
 DuckDuckGo-Documentation
 ========================
 
-Central repository for all DuckDuckGo Documentation
+This will eventually be the central repository for all DuckDuckGo Documentation.
 
-**Currently a Work-In-Progress. Nothing important to read here just yet...**
+Currently, this houses the [DuckDuckHack](http://duckduckhack.com) documentation. If you've come here from our DuckDuckHack [documentation site](https://dukgo.com/duckduckhack/ddh-intro), feel free to look around in the `/duckduckhack` folder. If you've noticed any typos please make a GitHub issue, or go ahead and make the changes and submit a Pull Request.
+
+Thanks!
+
+-- The DuckDuckGo Staff
