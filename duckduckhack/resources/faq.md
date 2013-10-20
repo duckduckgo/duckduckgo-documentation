@@ -91,7 +91,7 @@ Sorry, but unfortunately not. You might want to consider creating a Spice instan
 
 ### I want to use 'X' API, but it doesn't have an endpoint for 'Y'. What should I do?
 
-Email them! - If you explain what it's for, they might be willing to create and endpoint for you! If not, it's probably best to find an another API.
+Email them! - If you explain what it's for, they might be willing to create and endpoint for you! If not, it's probably best to find another API.
 
 ### Can I use an API that returns XML?
 
@@ -121,7 +121,7 @@ Unfortunately, there is no way for contributors to do so. But if you've gotten t
 
 ### What can go in a result abstract?
 
-A result abstract can be either plain text (generally one readable sentence, ending in a period), or HTML. Special care needs to be taken when abstracts contain HTML. Please let us know ahead of time if you are planning use HTML.
+A result abstract can be either plain text (generally one readable sentence, ending in a period), or HTML. Special care needs to be taken when abstracts contain HTML. Please let us know ahead of time if you are planning to use HTML.
 
 (This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
