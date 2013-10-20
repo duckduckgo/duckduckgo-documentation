@@ -223,7 +223,7 @@ if (api_result.error) return;
 
 Here, we specify that if the `error` object in the API result is defined, we `return` nothing, stopping the execution of the function and as a result, we won't display an instant answer. In the case of this API, when the error object is defined, it means no results are given, so we have no data to use for a Spice result.
 
-In other cases, because most API's return an array of results, a similar check should be made to see if the the results array has a length greater than `1`. This way, if no results were returend from the API we can stop, and display nothing.
+In other cases, because most API's return an array of results, a similar check should be made to see if the results array has a length greater than `1`. This way, if no results were returned from the API we can stop, and display nothing.
 
 Moving on, the next part is very important, it defines how the Spice result should look and specifies which parts of the API result are important. This piece of code tells DuckDuckGo to render the instant answer:
 
@@ -267,10 +267,10 @@ At this point, the rendering of the instant answer changes context from JavaScri
 </div>
 ```
 
-As you can see, this is a special type of HTML template. Within the template, you can refer directly to objects that are returned by the API (which were passed along through our `data` parameter). `description` and `name` are both from the `api_result` object that we discussed earlier which containts the data returned by the API. 
+As you can see, this is a special type of HTML template. Within the template, you can refer directly to objects that are returned by the API (which were passed along through our `data` parameter). `description` and `name` are both from the `api_result` object that we discussed earlier which contains the data returned by the API. 
 
 All of `api_result`'s sub-objects (e.g. `name`, `description`) are 
-in the template's scope. You can access them by name using double or triple curly braces (triple braces **will not** escape the contents -- and so should be avoided unless absolutely necessarry). Here, we just create a basic HTML skeleton and fill it in with the proper information, my indicating which variables should go where. `{{description}}` and `{{name}}` call also be though of as placeholders which will be replaced by their respective values as defined in the `api_result` object.
+in the template's scope. You can access them by name using double or triple curly braces (triple braces **will not** escape the contents -- and so should be avoided unless absolutely necessary). Here, we just create a basic HTML skeleton and fill it in with the proper information, by indicating which variables should go where. `{{description}}` and `{{name}}` call also be though of as placeholders which will be replaced by their respective values as defined in the `api_result` object.
 
 And that's it, you're done! You should now have a working Spice instant answer.
 
@@ -289,7 +289,7 @@ Again, the Spice instant answer system works like so:
 
 - We see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**npm**".
 - If a Spice is triggered, we run its `handle` function.
-- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to to that url. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our javascript callback function
+- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that url. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our javascript callback function
 - Our JavaScript callback function takes the API result (JSON Object), and passes it along to our `Spice.render()` call which specifies, using the elements of the JSON object, which parts are to be used in creating the instant answer "header", "More at" link and most importantly, passes along our JSON object to our Spice's Handlebars template.
-- The template then defines using HTML and variables, what the actual content for the Spice result will be
+- The template then defines, using HTML and variables, what the actual content for the Spice result will be
 - This content is then created and rendered onto the page by the Spice system's backend.
