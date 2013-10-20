@@ -1,6 +1,6 @@
 # Contributing to DuckDuckGo-Documentation
 
-At DuckDuckGo, we truly appreciate our community members taking the time to contribute to our open-source repositores. In an effort to ensure contributions are easy for you to make and for us to manage, we have written some guidelines that we ask our contributors to follow so that we can handle pull requests in a timely manner with as little friction as possible.
+At DuckDuckGo, we truly appreciate our community members taking the time to contribute to our open-source repositories. In an effort to ensure contributions are easy for you to make and for us to manage, we have written some guidelines that we ask our contributors to follow so that we can handle pull requests in a timely manner with as little friction as possible.
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ At DuckDuckGo, we truly appreciate our community members taking the time to cont
 If submitting a **bug/suggestion**:
 * Check if a GitHub issue already exists for the given bug/suggestion
     * If one doesn't exist, create a GitHub issue in the DuckDuckGo-Documentation repository
-        * Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
+        * Clearly describe the bug/improvement, including steps to reproduce when it is a bug
     * If one already exists, please add any aditional comments you have regarding the matter
 
 If submitting a **pull request** (bugfix/addition):
