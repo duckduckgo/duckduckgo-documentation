@@ -33,6 +33,6 @@ Whether you can code or not, there are many ways you can contribute to DuckDuckG
 
 1. **Create and Improve Instant Answers!:**
 
-  Instant Answers depend on awesome open source developers for creation and improvements. If you're a developer and you'd like to create a new instant answer (or improve [current ones](https://duckduckgo.com/goodies)), we'd love your involvement!
+  Instant Answers depend on awesome open source developers for creation and improvements. If you're a developer and you'd like to create a new instant answer (or improve [current ones](https://duckduckgo.com/goodies)), we'd love your involvement! _(Join the [DuckDuckHack email list](https://www.listbox.com/subscribe/?list_id=197814) to reach out to us and other developers with feedback/questions)_
   
       **[Start Making Instant Answers](https://dukgo.com/duckduckhack/duckduckhack_vision)**
