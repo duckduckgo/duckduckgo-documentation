@@ -1,6 +1,6 @@
 # Basic Spice Tutorial
 
-In this tutorial, we'll be making a Spice instant answer that let's you search for Node.js packages with [the Node.js package search API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://duckduckgo.com/?q=Npm+How+many+characters+are+in+this+sentence%3F) and the first part, the "backend" component, will look like this:
+In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages with [the Node.js package search API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://duckduckgo.com/?q=Npm+How+many+characters+are+in+this+sentence%3F) and the first part, the "backend" component, will look like this:
 
 # NPM Spice - Backend (Perl)
 
@@ -78,7 +78,7 @@ Using the previous example, if we wanted to search for "**uglify.js**" with the 
 
 ## Indicate our Callback Function
 
-In most cases, API's allow for a "callback" parameter, which usually look like this:
+In most cases, APIs allow for a "callback" parameter, which usually look like this:
 
 ```perl
 http://www.api.awesome.com/?q=<search_term>&callback=<function_name>
@@ -94,7 +94,7 @@ Now, when the JSON is returned by the API, it will be wrapped in a call to our S
 
 ------
 
-**If the API *did* support the callback parameter**, our spice to would look like this:
+**If the API *did* support the callback parameter**, our spice would look like this:
 
 ```perl
 spice to => 'http://registry.npmjs.org/$1/latest?callback={{callback}}';
@@ -160,13 +160,13 @@ And that's it! At this point you have a working Spice instant answer.
 ## Recap (So Far)
 The instant answer system works like this at the highest level:
 
-- We break the query (search terms) down into seperate words, which is a process that happens in the background.
+- We break the query (search terms) down into separate words, which is a process that happens in the background.
 
 - We see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**npm**".
 
 - If a Spice is triggered, we run its `handle` function.
 
-- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to to that url. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our javascript callback function (which will now define!)
+- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that url. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our javascript callback function (which will now define!)
 
 ------
 
@@ -174,7 +174,7 @@ The instant answer system works like this at the highest level:
 
 As mentioned, every instant answer requires a Spice callback function. For the *NPM* instant answer, the callback function will be named `ddg_spice_npm()` and will be defined in the **npm.js** file. 
 
-The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::NPM`. The portion after `DDG::Spice::` is lowercased and converted from camel case to underscore seperated (ie. `DDG::Spice::CamelCase` -> `ddg\_spice\_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the api with a function call to this generated callback name.
+The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::NPM`. The portion after `DDG::Spice::` is lowercased and converted from camel case to underscore separated (ie. `DDG::Spice::CamelCase` -> `ddg\_spice\_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the api with a function call to this generated callback name.
 
 To clarify:
 
@@ -223,7 +223,7 @@ if (api_result.error) return;
 
 Here, we specify that if the `error` object in the API result is defined, we `return` nothing, stopping the execution of the function and as a result, we won't display an instant answer. In the case of this API, when the error object is defined, it means no results are given, so we have no data to use for a Spice result.
 
-In other cases, because most API's return an array of results, a similar check should be made to see if the results array has a length greater than `1`. This way, if no results were returned from the API we can stop, and display nothing.
+In other cases, because most APIs return an array of results, a similar check should be made to see if the results array has a length greater than `1`. This way, if no results were returned from the API we can stop, and display nothing.
 
 Moving on, the next part is very important, it defines how the Spice result should look and specifies which parts of the API result are important. This piece of code tells DuckDuckGo to render the instant answer:
 
@@ -285,7 +285,7 @@ You may notice other instant answers also include a css file. For **NPM** the us
 
 Again, the Spice instant answer system works like so:
 
-- We break the query (search terms) down into seperate words, which is a process that happens in the background.
+- We break the query (search terms) down into separate words, which is a process that happens in the background.
 
 - We see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**npm**".
 - If a Spice is triggered, we run its `handle` function.
