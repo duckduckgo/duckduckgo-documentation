@@ -11,7 +11,7 @@ This is what an instant answer looks like:
 In the above example, Quixey was a source recommended by our community for searching mobile apps. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey results as an instant answer! 
 
 ## Getting Involved
-Whether you can code or not, there are many ways you can contribute to DuckDuckGo:
+Whether you can code or not, there are many ways you can contribute to DuckDuckGo. Check below to see how. If you have any questions, you can [ask the community](https://dukgo.com/forum) or email us at: open@duckduckgo.com
 
 ###For Everyone:
 
