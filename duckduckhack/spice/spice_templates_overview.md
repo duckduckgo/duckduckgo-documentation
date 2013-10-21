@@ -47,7 +47,7 @@ Spice.render({
 #### Optional
 
 - `show` &mdash; default number of list items to display
-- `max` maximum number of list items to display
+- `max` &mdash; maximum number of list items to display
 - `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
 
 #### Advanced
@@ -147,7 +147,7 @@ Spice.render({
 
 ## Record Template
 
-This template is somewhat different from the others, as it is more of a sub-template. Instead of having its own base template (like the above templates), developers can use the record template by using the Handlebars helper functions we've written. This means the record template can be used in any Handlebars files and so it can be used within other tempaltes as well.
+This template is somewhat different from the others, as it is more of a sub-template. Instead of having its own base template (like the above templates), developers can use the record template by using the Handlebars helper functions we've written. This means the record template can be used in any Handlebars files and so it can be used within other templates as well.
 
 ### Use Case:
 
