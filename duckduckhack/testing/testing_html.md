@@ -26,11 +26,11 @@ You should have already tested your Spice triggers by following the [Testing tri
   http://127.0.0.1:5000/
   ```
 
-  If you're running the duckpan server on a remote machine, then substitute 127.0.0.1 wither either its IP address or its Fully Qualified Domain Name.
+  If you're running the duckpan server on a remote machine, then substitute 127.0.0.1 with either its IP address or its Fully Qualified Domain Name.
 
 4. Search.
 
-  Given you've already tested your instant answer's triggers, you should be able to search and see your spice output come through the server. As requests go through the internal Web server they are printed to STDOUT (on the screen). External API calls are highlighted (if you have color turned on in your terminal).
+  Given you've already tested your instant answer's triggers, you should be able to search and see your spice output come through the server. As requests go through the internal Web server, they are printed to STDOUT (on the screen). External API calls are highlighted (if you have color turned on in your terminal).
 
 5. Debug.
 
