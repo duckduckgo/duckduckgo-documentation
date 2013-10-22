@@ -155,7 +155,8 @@
 	},
 
 	"testing_location_api.md" : {
-		"prev" : "advanced_testing.md"
+		"prev" : "advanced_testing.md",
+		"next" : "undef"
 	},
 
 	"preparing_for_a_pull_request.md" : {
