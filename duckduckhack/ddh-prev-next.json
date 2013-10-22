@@ -1,6 +1,6 @@
 {
 	"ddh-intro.md" : {
-		"prev" : [""],
+		"prev" : [],
 		"next" : ["duckduckhack_vision.md"]
 	},
 
@@ -130,7 +130,7 @@
 	},
 
 	"installing_duckpan.md" : {
-		"prev" : [""],
+		"prev" : [],
 		"next" : ["testing_triggers.md"]
 	},
 
@@ -156,7 +156,7 @@
 
 	"testing_location_api.md" : {
 		"prev" : "advanced_testing.md",
-		"next" : [""]
+		"next" : []
 	},
 
 	"preparing_for_a_pull_request.md" : {
@@ -180,12 +180,12 @@
 	},
 
 	"location_api.md" : {
-		"prev" : [""],
-		"next" : [""]
+		"prev" : [],
+		"next" : []
 	},
 
 	"common_pitfalls.md" : {
-		"prev" : [""],
+		"prev" : [],
 		"next" : ["faq.md"]
 	},
 
@@ -226,6 +226,6 @@
 
 	"code_styleguide.md" : {
 		"prev" : ["longtail_styleguide.md"],
-		"next" : [""]
+		"next" : []
 	}
 }
