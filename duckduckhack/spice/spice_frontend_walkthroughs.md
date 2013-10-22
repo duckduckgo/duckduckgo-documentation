@@ -12,6 +12,7 @@
 The Alternative.To instant answer is very similar to NPM in that it is also relatively basic, however, it uses the **Carousel** Spice Template. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
+
 ```javascript
 function ddg_spice_alternative_to(api_result) {
     if(!api_result || !api_result.Items || api_result.Items.length === 0) {
@@ -63,6 +64,7 @@ Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most
 Now, let's take a look at the Alternative.To Handlebars templates:
 
 ###### alternative_to.handlebars
+
 ```html
 <img src="/iu/?u={{IconUrl}}">
 <span>{{{condense Name maxlen="25"}}}</span>
@@ -78,6 +80,7 @@ Another important point is that we use `{{{condense Name maxlen="25"}}}` which d
 Seeing as this is a carousel instant answer, which uses the optional carousel details area, it has another Handlebars template which defines the content for that.  Let's have a look at the Alternative.To details template:
 
 ###### alternative_to_details.handlebars
+
 ```html
 {{#rt}} <a href="{{Url}}">{{Name}}</a> <span class="likes">({{Votes}} likes)</span>{{/rt}}
 {{#rd "Description"}} {{{ShortDescription}}}{{/rd}}
@@ -96,6 +99,7 @@ In the second `{{#rd}}` you'll notice the use of another Handlebars helper funct
 The movie instant answer is a more advanced than **NPM** and **Alternative.To**, but most of the logic is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, its relatively easy to understand, so lets start by looking at the Movie instant answer's javascript:
 
 ###### movie.js
+
 ```javascript
 function ddg_spice_movie (api_result) {
     if (api_result.total === 0) {
@@ -157,6 +161,7 @@ You'll also notice the use of `DDG_bestResult()`. This function takes as input a
 By this point we have either determined that there is a relevant movie to display, or we have found nothing to be relevant and have exited out. If we have a relevant movie, we then call `Spice.render()` as we would in any other Spice instant answer:
 
 ###### movie.js (continued)
+
 ```javascript
     Spice.render({
         data: result,
@@ -176,6 +181,7 @@ This is a fairly simple call to `Spice.render()`, but it slightly differs from o
 Before looking at the implementation of the Handlebars helper functions lets first take a look at the Movie Spice's Handlebars template to see how the helper functions are used:
 
 ###### movie.handlebars
+
 ```html
 <div id="movie_data_box" {{#if hasContent}}class="half-width"{{/if}}>
     <div>
@@ -251,6 +257,7 @@ As you can see this is a pretty simple function, it takes a number as input, and
 Now let's take a look at the implementation of `{{#rating_adjective}}`:
 
 ###### movie.js (continued) - rating_adjective helper
+
 ```javascript
 /*
  * rating_adjective
@@ -275,6 +282,7 @@ Now that you've seen a more advanced instant answer and understand how to use Ha
 The Quixey instant answer is one of our more advanced carousel instant answers which uses a considerable amount of Handlebars helpers and similarly to the **Movie** instant answer has a relevancy checking component. Let's begin by taking a look at the Quixey instant answer's JavaScript:
 
 ###### quixey.js
+
 ```javascript
 // spice callback function
 function ddg_spice_quixey (api_result) {
@@ -311,6 +319,7 @@ Similarly to the **Movie** instant answer, in the **Quixey** instant answer, we 
 Moving on, let's take a look at the implementation of the `getRelevants()` helper:
 
 ###### quixey.js (continued) - getRelevants function
+
 ```javascript
 // Check for relevant app results
 function getRelevants (results) {
