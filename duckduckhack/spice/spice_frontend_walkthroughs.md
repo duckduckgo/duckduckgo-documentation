@@ -607,7 +607,7 @@ function ddg_spice_dictionary_definition (api_result) {
     };
 ```
 
-We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronounciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the seperate API calls, we construct one dictionary instant answer result which contains the word definition, the pronounciation text and the audio recording of the pronounciation.
+We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the seperate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
 
 The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_defintion()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
