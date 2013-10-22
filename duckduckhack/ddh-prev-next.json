@@ -26,7 +26,7 @@
 
 	"goodie_triggers.md" : {
 		"prev" : ["goodie_basic_tutorial.md"],
-		"next" : ["testing_triggers.md"]
+		"next" : ["goodie_testing_triggers.md"]
 	},
 
 	"goodie_testing_triggers.md" : {
@@ -51,7 +51,7 @@
 
 	"spice_basic_tutorial.md" : {
 		"prev" : ["spice_overview.md"],
-		"next" : ["spic_triggers.md"]
+		"next" : ["spice_triggers.md"]
 	},
 
 	"spice_triggers.md" : {
@@ -60,13 +60,13 @@
 	},
 
 	"spice_templates_overview.md" : {
-		"prev" : ["goodie_triggers.md"],
+		"prev" : ["spice_triggers.md"],
 		"next" : ["spice_frontend_walkthroughs.md"]
 	},
 
 	"spice_frontend_walkthroughs.md" : {
 		"prev" : ["spice_templates_overview.md"],
-		"next" : ["testing_triggers.md"]
+		"next" : ["spice_testing_triggers.md"]
 	},
 
 	"spice_testing_triggers.md" : {
@@ -75,7 +75,7 @@
 	},
 
 	"spice_tests.md" : {
-		"prev" : ["testing_triggers.md"],
+		"prev" : ["spice_testing_triggers.md"],
 		"next" : ["spice_advanced_backend.md"]
 	},
 
