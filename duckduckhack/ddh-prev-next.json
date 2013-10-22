@@ -29,7 +29,7 @@
 		"next" : ["testing_triggers.md"]
 	},
 
-	"testing_triggers.md" : {
+	"goodie_testing_triggers.md" : {
 		"prev" : ["goodie_triggers.md"],
 		"next" : ["goodie_tests.md"]
 	},
@@ -54,7 +54,7 @@
 		"next" : ["spic_triggers.md"]
 	},
 
-	"goodie_triggers.md" : {
+	"spice_triggers.md" : {
 		"prev" : ["spice_basic_tutorial.md"],
 		"next" : ["spice_templates_overview.md"]
 	},
@@ -69,7 +69,7 @@
 		"next" : ["testing_triggers.md"]
 	},
 
-	"testing_triggers.md" : {
+	"spice_testing_triggers.md" : {
 		"prev" : ["spice_frontend_walkthroughs.md"],
 		"next" : ["spice_tests.md"]
 	},
