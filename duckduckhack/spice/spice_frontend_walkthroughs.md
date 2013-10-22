@@ -981,8 +981,7 @@ Now that we have seen the Handlebars template and all looked over all the JavaSc
     font-style: italic;
 }
 ```
-
-Understanding this CSS isn't terribly important in this case because most of it has been borrowed from the [Skeleton](http://getskeleton.com) framework's button styling. The most important part about this CSS file is noticing that we have targetted every CSS rule to only apply to elements found within the element with an ID of **#spice\_dictionary\_definition**. Every spice instant answer is automatically wrapped in a div with an ID of "#spice_spiceCallbackName". This allows you to force any/all CSS to only apply to the elements on the page related to the Spice instant answer.
+Most of the above CSS has actually been borrowed from the [Skeleton](http://getskeleton.com) framework, to recreate their button styling. Understanding that particular CSS isn't very important here, however what is important to understand is that we have targeted every CSS rule to only apply to elements found within the element with an ID of **#spice\_dictionary\_definition**. Every spice instant answer is automatically wrapped in a div with an ID of "#spice_spiceCallbackName". This allows you to force any/all CSS to only apply to the elements on the page related to the Spice instant answer.
 
 As you can see, most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
 
