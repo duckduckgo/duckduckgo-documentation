@@ -94,7 +94,7 @@ Now, when the JSON is returned by the API, it will be wrapped in a call to our S
 
 ------
 
-**If the API *did* support the callback parameter**, our spice would look like this:
+**If the API *did* support the callback parameter**, our `spice to`would look like this:
 
 ```perl
 spice to => 'http://registry.npmjs.org/$1/latest?callback={{callback}}';
