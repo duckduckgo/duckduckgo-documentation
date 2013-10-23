@@ -39,7 +39,7 @@ Please place a ✔ where appropriate.
 ```
 [] Added metadata and attribution information
 [] Wrote test file and added to t/ directory
-[] Verified that instant answer adheres to design guidelines(https://github.com/duckduckgo/DuckDuckGo-Documentation/blob/master/DuckDuckHack/Styleguide/design_styleguide.md)
+[] Verified that instant answer adheres to design guidelines(https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
 [] Tested cross-browser compatability
 
     Please let us know which browsers/devices you've tested on:
