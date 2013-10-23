@@ -170,7 +170,7 @@ The instant answer system works like this at the highest level:
 
 ------
 
-# NPM Spice - Backend (JavaScript)
+# NPM Spice - Frontend (JavaScript)
 
 As mentioned, every instant answer requires a Spice callback function. For the *NPM* instant answer, the callback function will be named `ddg_spice_npm()` and will be defined in the **npm.js** file. 
 
