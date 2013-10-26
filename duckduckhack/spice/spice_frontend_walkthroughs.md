@@ -1,14 +1,16 @@
 # Spice Frontend Walkthroughs
 
 # Index
+
 - [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-1---alternativeto-basic-carousel-instant-answer)
 - [Example #2: Movie (Advanced Instant Answer)](#example-2---movie-advance-instant-answer)
 - [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-3---quixey-advanced-carousel-instant-answer)
 - [Example #4: Dictionary (More Advanced Instant Answer)](#example-4---dictionary-more-advanced-instant-answer)
 
--------
+------
 
 ## Example #1 - Alternative.To (Basic Carousel Instant Answer)
+
 The Alternative.To instant answer is very similar to NPM in that it is also relatively basic, however, it uses the **Carousel** Spice Template. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
@@ -59,7 +61,7 @@ Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most
 
 - `carousel_template_detail` is an **optional** parameter which specifies the Handlebars template to be used for the Carousel ***detail*** area - the space below the template which appears after clicking a carousel item. For Alternative.To, when a user clicks a carousel item (icon), the detail area appears and provides more information about that particular item. This is similarly used for the [Quixey instant answer](https://duckduckgo.com/?q=ios+flight+tracking+app).
 
-----------------------------
+------
 
 Now, let's take a look at the Alternative.To Handlebars templates:
 
@@ -69,6 +71,7 @@ Now, let's take a look at the Alternative.To Handlebars templates:
 <img src="/iu/?u={{IconUrl}}">
 <span>{{{condense Name maxlen="25"}}}</span>
 ```
+
 This simple template is used to define each of the carousel items. More specifically, it defines what the contents of each `<li>` in the carousel will be. In this case we specify an image - the result's icon - and a span tag, which contains the name of the result.
 
 You might notice that we prepend the `<img>`'s `src` url with the string `"/iu/?u="`. This is **required** for any images in your handlebars template. What this line does is proxy the image through our own servers, which ensure the user's privacy (because it forces the request to come from DuckDuckGo instead of the user).
@@ -96,6 +99,7 @@ Likewise, the `{{#rd}}` helper creates a `<div>` that has a css class of `rd_nor
 In the second `{{#rd}}` you'll notice the use of another Handlebars helper function, `{{#concat}}`. This function takes an array as its first parameter and iterates over each element in the array. For each iteration, `{{#concat}}` sets the context of the block equal to the current array element and then concatenates the content of its block, joining each by the separator string (`sep=`) with the final element separated by the `conj=` string. In this case, if `Platforms` is a list of operating systems: `["windows", "linux", "mac"]`, then `concat` would return: **"widows, linux and mac"**.
 
 ## Example #2 - Movie (Advanced Instant Answer)
+
 The movie instant answer is a more advanced than **NPM** and **Alternative.To**, but most of the logic is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, it's relatively easy to understand, so let's start by looking at the Movie instant answer's javascript:
 
 ###### movie.js
@@ -279,6 +283,7 @@ Again, this is a fairly simple function which simply returns either "a" or "an" 
 Now that you've seen a more advanced instant answer and understand how to use Handlebars helpers, let's look at another advanced instant answer example.
 
 ## Example #3 - Quixey (Advanced Carousel Instant Answer)
+
 The Quixey instant answer is one of our more advanced carousel instant answers which uses a considerable amount of Handlebars helpers and similarly to the **Movie** instant answer has a relevancy checking component. Let's begin by taking a look at the Quixey instant answer's JavaScript:
 
 ###### quixey.js
@@ -376,6 +381,7 @@ After we've checked every app, we check to see if there were any relevant apps a
 Before looking at the implementation of the remaining Quixey Handlebars helpers, let's look at the template to see how the helpers are used:
 
 ###### quixey.handlebars
+
 ```html
 <p><img src="{{{icon_url}}}" /></p>
 <span>{{{condense name maxlen="40"}}}</span>
@@ -386,6 +392,7 @@ This template is very simple, it creates an `<img>` tag, for the resulting app i
 Now let's take a look at the Quixey `carousel_template_detail` template. This template is more advanced, but most of the content is basic HTML which is populated by various `api_result` properties and Handlebars helpers:
 
 ###### quixey\_detail.handlebars (continued)
+
 ```html
 <div id="quixey_preview" style="width: 100%; height: 100%;" app="{{id}}">
     <div class="app_info">
@@ -399,6 +406,7 @@ Now let's take a look at the Quixey `carousel_template_detail` template. This te
 Here we create the outer div that wraps the content in the detail area. Note the use of HTML ids and classes - this is to make the css more straightforward, modular and understandable.
 
 ###### quixey\_detail.handlebars (continued)
+
 ```html
             {{#if rating}}
                 <div title="{{rating}}" class="rating">
@@ -412,6 +420,7 @@ Here we create the outer div that wraps the content in the detail area. Note the
 Here we use the `{{#if}}` block helper and nested inside that, we use our own `{{#loop}}` block helper (defined internally), which simply counts from 0 to the value of its input, each time applying the content of its own block. In this example, we use it to create a one or more star images to represent the app's rating.
  
 ###### quixey\_detail.handlebars (continued) 
+
 ```html
             <div class="price">{{pricerange}}</div>
             <div class="app_description">{{{short_desc}}}</div>
@@ -443,6 +452,7 @@ Here, we create a few more `<div>`'s and then we use another block helper, `{{#e
 Now that we've seen the template and the helpers we're using, let's take a look at how they're all implemented:
 
 ###### quixey.js (continued) -  qprice function
+
 ```javascript
 // format a price
 // p is expected to be a number
@@ -458,6 +468,7 @@ function qprice(p) {
 This is a simple function that formats a price. We don't register it as a helper because we don't need to use this function directly in our templates, however our helper functions do use this function `qprice()` function.
 
 ###### quixey.js (continued) -  price helper
+
 ```javascript
 // template helper for price formatting
 // {{price x}}
@@ -469,6 +480,7 @@ Handlebars.registerHelper("price", function(obj) {
 This helper function is relatively simple, it takes a number as input, calls the `qprice()` function we just saw, and returns its output to the template. It essentially abstracts our `qprice()` function into a Handlebars helper. We do this because the next function we'll see also uses `qprice()` and it's simply easier to call it as a locally defined function, rather than register it as a helper and then use the `Handlebars.helpers` object to call the `qprice()` function.
 
 ###### quixey.js (continued) -  pricerange helper
+
 ```javascript
 // template helper to format a price range
 Handlebars.registerHelper("pricerange", function(obj) {
@@ -503,6 +515,7 @@ Handlebars.registerHelper("pricerange", function(obj) {
 This function is a little more complex, it takes an object as input, iterates over the objects keys, and records the highest and lowest prices for the app. Then, it verifies that the range has different high and low values. If not, it simply returns the low price, formatted using our `qprice()` function. Otherwise, it creates a string indicating the range and formats the values with `qprice()`.
 
 ###### quixey.js (continued) -  platform\_icons helper
+
 ```javascript
 // template helper to replace iphone and ipod icons with
 // smaller 'Apple' icons
@@ -518,6 +531,7 @@ Handlebars.registerHelper("platform_icon", function(icon_url) {
 Another very simple helper function, the `platform_icon()` function simply checks if its input is equal to `2005` or `2015` and if so returns a special url for the platform icon. If not, it returns the originial icon url but adds our proxy redirect, `/iu/?u=` as previously discussed.
 
 ###### quixey.js (continued) -  platform\_name helper
+
 ```javascript
 // template helper that returns and unifies platform names
 Handlebars.registerHelper("platform_name", function() {
@@ -547,6 +561,7 @@ Handlebars.registerHelper("platform_name", function() {
 This helper is also quite simple, it is used to return a platform name and someties also unifies the platform name when multiple platforms exist for an app. If the app is available for both 'iPhone' and 'iPad', the `switch()` will catch this and indicate the app is availabe for "iOS".
 
 ###### quixey.js (continued) -  quixey\_star helper
+
 ```javascript
 // template helper to give url for star icon
 Handlebars.registerHelper("quixey_star", function() {
@@ -557,11 +572,13 @@ Handlebars.registerHelper("quixey_star", function() {
 This helper is also very simple, but it is important because it uses the `DDG.get_asset_path()` function which returns the URI for an asset stored in an instant answer's share folder. This is necessary because Spice instant answers and their content are versioned internally. So the URI returned by this function will contain the proper version number, which is required to access any assets.
 
 ## Example #4 - Dictionary (More Advanced Instant Answer)
+
 The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked seperately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
 To begin, let's look at the first callback function definition in the Dictionary javascript:
 
 ###### dictionary\_definition.js
+
 ```javascript
 // Description:
 // Shows the definition of a word.
@@ -586,6 +603,7 @@ Each of these endpoints are used to make different API calls (either to a differ
 Moving on, let's take a look at the implementation of the `Spice.render()` call and the `dictionary_definition()`  callback:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
+
 ```javascript
 // Dictionary::Definition will call this function.
 // This function gets the definition of a word.
@@ -621,6 +639,7 @@ We begin by wrapping the `Spice.render()` call in a function which also does a l
 The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_defintion()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
+
 ```javascript
     // Expose the render function.
     ddg_spice_dictionary_definition.render = render;
@@ -657,6 +676,7 @@ After defining the `render()` function we give the function a `render` property,
 **\*\*Note:** More info on the jQuery `$.getScript()` method is available [here](http://api.jquery.com/jQuery.getScript/).
 
 ###### dictionary\_definition.js (continued) - dictionary_reference callback
+
 ```javascript
 // Dictionary::Reference will call this function.
 // This is the part where we load the definition of the
@@ -683,6 +703,7 @@ function ddg_spice_dictionary_reference (api_result) {
 In this relatively simple callback, we begin by using the previously defined render property of the `dictionary_definiton()` function to give this callback access to the `render()` function we defined at the beginning of `quixey.js`. Then we confirm that this callback's `api_result` actually received the singular form of the originially searched query. If so, we add the singular and plural form of the word to our `api_result` object so we can check for and use them later in our Handlebars template.
 
 ###### dictionary\_definition.js (continued) - dictionary_hyphenation callback
+
 ```javascript
 // Dictionary::Hyphenation will call this function.
 // We want to add hyphenation to the word, e.g., hello -> hel•lo.
@@ -703,6 +724,7 @@ function ddg_spice_dictionary_hyphenation (api_result) {
 This callback is also fairly simple. If the API returns a result for the hyphenated version of the word, we loop over the response to get the various parts of the word, then join them with the dot character "•", and inject the text into the HTML of the **#hyphenation** `<div>` using jQuery.
 
 ###### dictionary\_definition.js (continued) - dictionary_pronunciation callback
+
 ```javascript
 // Dictionary::Pronunciation will call this function.
 // It displays the text that tells you how to pronounce a word.
@@ -718,6 +740,7 @@ function ddg_spice_dictionary_pronunciation (api_result) {
 Similarly to the `dictionary_hyphenation()` callback, this callback receives a phonetic spelling of the queried word and injects it into the Spice result by using jQuery as well to modify the HTML of the **#pronounciation** `<div>`.
  
 ###### dictionary\_definition.js (continued) - dictionary_audio callback
+
 ```javascript
 // Dictionary::Audio will call this function.
 // It gets the link to an audio file.
@@ -880,6 +903,7 @@ Then the template creates two empty elements, a `<span>` tag to contain the phon
 The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (eg. noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
 
 ###### dictionary\_definition.js (continued) - part helper
+
 ```javascript
 // We should shorten the part of speech before displaying the definition.
 Handlebars.registerHelper("part", function(text) {
@@ -910,6 +934,7 @@ Handlebars.registerHelper("part", function(text) {
 As the comment explains, this simple helper function is used to shorten the "part of speech" word returned by the API.
 
 ###### dictionary\_definition.js (continued) - format helper
+
 ```javascript
 // Make sure we replace xref to an anchor tag.
 // <xref> comes from the Wordnik API.
@@ -929,6 +954,7 @@ This helper is used to create hyperlinks within the word definition text. The Wo
 Now that we have seen the Handlebars template and all looked over all the JavaScript related to the dictionary instant answer, let's take a look at the CSS used to style the display of the result:
 
 ###### dictionary_definition.css
+
 ```css
 #spice_dictionary_definition .widget-button {
     background: #eee; /* Old browsers */
