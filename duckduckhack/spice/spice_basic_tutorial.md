@@ -213,7 +213,7 @@ Let's go through it line-by-line:
 function ddg_spice_npm (api_result) {
 ```
 
-We begin by defining our callback function, `ddg_spice_npm`. The name we specify here ***must*** match the name that would be determined from the package name (as we discussed above). We also specify that the callback function takes one input paramter, which we have named `api_result`. All spice callback functions should look like this. The name for the input should **always** be called `api_result`. This is part of our naming convention and helps to standardize the JavaScript code.
+We begin by defining our callback function, `ddg_spice_npm`. The name we specify here ***must*** match the name that would be determined from the package name (as we discussed above). We also specify that the callback function takes one input parameter, which we have named `api_result`. All spice callback functions should look like this. The name for the input should **always** be called `api_result`. This is part of our naming convention and helps to standardize the JavaScript code.
 
 ###### npm.js (continued)
 
