@@ -130,7 +130,7 @@ icon_url "http://www.reddit.com/favicon.ico";
 
 or
 
-Favicons can sometyimes be found by searching for the data source on DuckDuckGo, if a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
+Favicons can sometimes be found by searching for the data source on DuckDuckGo, if a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
 
 ```perl
 icon_url "/i/reddit.com.ico";
