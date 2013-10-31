@@ -2,7 +2,7 @@ Please use this template as a starting point for any CONTRIBTUTING.md's. Make su
 
 ------
 
-# Contributing to **\<repo\_name\>**
+# Contributing to the **\<repo\_name\>** repository
 
 At DuckDuckGo, we truly appreciate our community members taking the time to contribute to our open-source repositories. In an effort to ensure contributions are easy for you to make and for us to manage, we have written some guidelines that we ask our contributors to follow so that we can handle pull requests in a timely manner with as little friction as possible.
 
