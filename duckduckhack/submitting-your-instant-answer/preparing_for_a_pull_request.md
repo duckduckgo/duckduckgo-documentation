@@ -10,3 +10,6 @@ By now you should have:
 - Confirmed the instant answer adheres to the design guidelines
 
 At this point you are ready to add metadata to your instant answer, so we can showcase your instant answer on the [Goodies page](https://duckduckgo.com/goodies).
+
+
+**\*\*Note**: If your pull request is an update to an ***existing*** Instant Answer, don't forget to add yourself to the attribution too!
