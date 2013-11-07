@@ -20,7 +20,7 @@ If the right instant answer type is still not obvious, don't worry, the DuckDuck
 
 **\*\*Note:** Sometimes more than one instant answer types can work (depending on the data source), and we can help you figure out which one would work best.
 
-Before moving forward, you **must** to know which instant answer type you will be using. From this point onwards, the documentation will be specific to each instant answer type.
+Before moving forward, you **must** know which instant answer type you will be using. From this point onwards, the documentation will be specific to each instant answer type.
 
 ## Fork the Instant Answer Repository
 
