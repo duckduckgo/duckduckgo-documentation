@@ -45,7 +45,7 @@ Please name the output file output.txt (tab delimited) but do not store the data
 
 The output file needs to use UTF-8 encoding so we can process it. Please make sure you write your parse scripts accordingly or we'll probably run into some problems getting it integrated.
 
-The output format from parse.xx depends on the type of content. In any case, it should be a tab delimited file, with one line per entry. Usually there is no need for newline characters, but if there is a need for some reason, escape them with a backslash like \\\n. If you wanta newline displayed, use &lt;br&gt;
+The output format from parse.xx depends on the type of content. In any case, it should be a tab delimited file, with one line per entry. Usually there is no need for newline characters, but if there is a need for some reason, escape them with a backslash like \\\n. If you want a newline displayed, use &lt;br&gt;
 
 The output fields are as follows, not all are required to have values, but all must be accounted for in the delimitations. This example is written in simple [Perl](https://duckduckgo.com/Perl).
 
@@ -129,7 +129,7 @@ There is a pre-process script that is run on this output, which:
 
 ## Code Blocks
 
-If you want to include a code snippet or another pre-formatted example in the abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap the code block like this:
+If you want to include a code snippet or another pre-formatted example in the abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap the code bwlock like this:
 
 ```html
 <pre><code>code block goes here</code></pre>
