@@ -3,6 +3,7 @@ This is a basic tutorial about how to add instant answer for query "***Hello wor
 # Fathead Tutorial
 
 ## Step 1
+
 Clone the fathead repo from github with following command
 
     git clone git@github.com:/duckduckgo/zeroclickinfo-fathead.git
@@ -29,7 +30,6 @@ details about the instant answer. For our "***Hello world in C***" example, basi
     category "programming";
     1;
 
-
 ## Step 3
 
 Now create directory named **HellowWorldInC** under **share** directory.
@@ -53,6 +53,7 @@ Please ensure all tmp files created under **download** directory. Go ahead and e
 It should create a **c.c** file under **download** directory.
 
 ## Step 5 
+
 Our objective is to parse the fetched data and create an output file (**output.txt**).
 In order to parse, we write wrapper called **parse.sh** which will invoke the actual script
 which can be written in your favorite language (.pl, .py, .rb, .js, etc)
@@ -61,8 +62,8 @@ which can be written in your favorite language (.pl, .py, .rb, .js, etc)
     #!/bin/bash
     python parse.py
 
-
 ## Step 6 
+
 As we can see above, we have the wrapper script which simply invokes following python script, which will
 read **download/c.c** and format it then write into **output.txt** file.
 
@@ -122,6 +123,7 @@ Now we will execute the python script via wrapper like
 It has created the final **output.txt** file.
 
 ## Step 8
+
 The content of output file is
 
     $ cat output.txt 
@@ -134,10 +136,12 @@ As we need to complete the tutorial in 10 steps here comes
 :) You can commit this **output.txt** along with perl,bash or python (.pm/.sh/.py) files since **output.txt** is less than **1MB**. 
 
 ## Step 9
+
 You can create optional **data.url** file which will point to URL that contains the data to process.
 Thus you don't need to perform fetch operation (step 4).
 
 ## Step 10
+
 You can add specific instruction or any dependencies on a file named **README.txt**.
 The final structure of your **share/HelloWorldInC** shoud look like 
 
