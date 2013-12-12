@@ -155,7 +155,7 @@
 	},
 
 	"testing_location_api.md" : {
-		"prev" : "advanced_testing.md",
+		"prev" : ["advanced_testing.md"],
 		"next" : []
 	},
 
