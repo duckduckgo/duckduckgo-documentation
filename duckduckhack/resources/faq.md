@@ -27,7 +27,7 @@ Of course! Here are the easiest ways to contact someone who can help answer your
 
 ### What if I don't know Perl?
 
-If you don't know Perl, that's OK! Several <a href="README.md#overview">instant answer types</a> are not in Perl. Also, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
+If you don't know Perl, that's OK! Some instant answer types ([Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md), [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)) don't require the use of Perl. Also, if you know PHP, Ruby, or Python you should be able to write a [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md) in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
 
 ### Do you have any instant answer ideas?
 
