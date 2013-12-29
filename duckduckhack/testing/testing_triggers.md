@@ -7,10 +7,13 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 
 1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
+    
     - Option A. &mdash; Install via this script:
+        
         ```shell
         curl http://duckpan.org/install.pl | perl
         ```
+    
     - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which comes with DuckPAN installed
 
     More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
