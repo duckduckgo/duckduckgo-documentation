@@ -14,7 +14,7 @@ We hope you will consider making DuckDuckGo instant answers to:
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [instand answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all and you've ended up here, please go over to our [instant answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
@@ -27,7 +27,7 @@ Of course! Here are the easiest ways to contact someone who can help answer your
 
 ### What if I don't know Perl?
 
-If you don't know Perl, that's OK! Several <a href="README.md#overview">instant answer types</a> are not in Perl. Also, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
+If you don't know Perl, that's OK! Some instant answer types ([Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md), [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)) don't require the use of Perl. Also, if you know PHP, Ruby, or Python you should be able to write a [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md) in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
 
 ### Do you have any instant answer ideas?
 
