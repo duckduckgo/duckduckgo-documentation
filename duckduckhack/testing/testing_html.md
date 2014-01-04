@@ -6,15 +6,15 @@ You should have already tested your triggers by following the [Testing triggers]
 
   For example:
 
-  ```
-  cd zeroclickinfo-spice/
-  ```
+    ```shell
+    cd zeroclickinfo-spice/
+    ```
 
 2. Start the server.
 
-  ```
-  duckpan server
-  ```
+    ```shell
+    duckpan server
+    ```
 
   This command will start up a small Web server running on port 5000.
 
@@ -34,7 +34,7 @@ You should have already tested your triggers by following the [Testing triggers]
 
 5. Debug.
 
-  If you search doesn't hit an instant answer, there will be an error message displayed on the page: "Sorry, no hit for your instant answer."
+  If your search doesn't hit an instant answer, there will be an error message displayed on the page: "Sorry, no hit for your instant answer."
 
   If the trigger is hit but you do not see something displayed on the screen, a number of things could be wrong:
 
