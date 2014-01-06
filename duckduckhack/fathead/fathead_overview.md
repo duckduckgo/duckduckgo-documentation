@@ -1,6 +1,6 @@
 # Fathead Instant Answers
 
-(intro - tbd)
+A Fathead, at the very basic level, is just a CSV file that contains titles and descriptions of just about anything. Our very first Fathead is actually Wikipedia:
 
 ## Structure
 
