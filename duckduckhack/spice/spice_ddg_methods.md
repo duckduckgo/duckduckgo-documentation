@@ -29,6 +29,19 @@ Provides the return of `DDG.get_query` as a URIEncoded string, i.e. (`encodeURIC
 
 - Comparator function is required to assign a property of the candidate called comparable which is the string undergoing relevancy check in isRelevant)
 
+
+### `DDG.getOrdinal(n)`
+
+#### Input:
+- `n` : number
+
+#### Return:
+
+-`String`
+
+Provides the ordinal suffix for a number `n` appended to the number e.g. `DDG.getOrdinal(1)` evaluates to `"1st"`
+
+
 ### `DDG.get_asset_path( spice_name, asset_name  )`
 
 #### Input:
