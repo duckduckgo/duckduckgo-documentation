@@ -30,16 +30,32 @@ Provides the return of `DDG.get_query` as a URIEncoded string, i.e. (`encodeURIC
 - Comparator function is required to assign a property of the candidate called comparable which is the string undergoing relevancy check in isRelevant)
 
 
+### `DDG.getDateFromString(date_as_string)`
+
+#### Input:
+
+- `date_as_string` : string formatted as yyyy-mm-dd
+
+#### Return:
+
+- `Date`
+
+Creates a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) instance from the input string.
+
+
 ### `DDG.getOrdinal(n)`
 
 #### Input:
+
 - `n` : number
 
 #### Return:
 
 -`String`
 
-Provides the ordinal suffix for a number `n` appended to the number e.g. `DDG.getOrdinal(1)` evaluates to `"1st"`
+Provides the ordinal suffix for a number `n` appended to the number 
+
+E.g. `DDG.getOrdinal(1)` evaluates to `"1st"`
 
 
 ### `DDG.get_asset_path( spice_name, asset_name  )`
