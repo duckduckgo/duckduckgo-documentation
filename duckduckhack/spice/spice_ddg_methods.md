@@ -18,9 +18,23 @@ Provides the original query as it appears in the search box (ie, leading, traili
 Provides the return of `DDG.get_query` as a URIEncoded string, i.e. (`encodeURIComponent(DDG.get_query())`).
 
 
-### `DDG.isRelevant()`
+### `DDG.isRelevant(candidate, skipArray, minWordLength, strict)`
 
-(Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+#### Input:
+
+- `candidate` : string
+
+- `skipArray` : array of strings; *optional parameter*
+
+-  `minWordLength` : number; *optional parameter* defaults to `4` if not provided
+
+- `strict` : boolean; *optional parameter*
+
+#### Return:
+
+- `Boolean`
+
+Determines if `candidate` is relevant to the search query. `skipArray` is an array of terms that might be in the query but should not be considered in determining the candidate string's relevancy.
 
 
 ### `DDG.getRelevants()`
@@ -51,7 +65,7 @@ Creates a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referen
 
 #### Return:
 
--`String`
+- `String`
 
 Provides the ordinal suffix for a number `n` appended to the number 
 
