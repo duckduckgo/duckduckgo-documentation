@@ -6,6 +6,8 @@ Before your instant answer is ready to be submitted, please go over this checkli
 
 (Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
+- Is it well documented? Make sure you comment your code well so that it's easier for other people to maintain.
+
 ## Goodie
 
 (Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
