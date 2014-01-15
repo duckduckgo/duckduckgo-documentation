@@ -22,19 +22,22 @@ Provides the return of `DDG.get_query` as a URIEncoded string, i.e. (`encodeURIC
 
 #### Input:
 
-- `candidate` : string
+- `candidate` &mdash; string
 
-- `skipArray` : array of strings; *optional parameter*
+- `skipArray` (optional) &mdash; array of strings 
 
--  `minWordLength` : number; *optional parameter* defaults to `4` if not provided
+-  `minWordLength` (optional) &mdash; number
+       -   default value: `4`
 
-- `strict` : boolean; *optional parameter*
+- `strict` (optional) &mdash; boolean
 
 #### Return:
 
 - `Boolean`
 
-Determines if `candidate` is relevant to the search query. `skipArray` is an array of terms that might be in the query but should not be considered in determining the candidate string's relevancy.
+Determines if `candidate` is relevant to the search query. 
+
+`skipArray` is an array of words (usually the trigger words) that should not be considered in determining the candidate string's relevancy.
 
 
 ### `DDG.getRelevants()`
@@ -48,20 +51,21 @@ Determines if `candidate` is relevant to the search query. `skipArray` is an arr
 
 #### Input:
 
-- `date_as_string` : string formatted as yyyy-mm-dd
+- `date_as_string` &mdash; string in [ISO 8601](http://www.w3.org/TR/NOTE-datetime) format
+  - valid formats: `yyyy-mm-dd` or `yyyy-mm-ddThh:mm:ss`
 
 #### Return:
 
 - `Date`
 
-Creates a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) instance from the input string.
+Creates a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) instance from the input string. 
 
 
 ### `DDG.getOrdinal(n)`
 
 #### Input:
 
-- `n` : number
+- `n` &mdash; number
 
 #### Return:
 
@@ -76,14 +80,14 @@ E.g. `DDG.getOrdinal(1)` evaluates to `"1st"`
 
 #### Input:
   
-- `spice_name` : string
-- `asset_name` : string
+- `spice_name` &mdash; string
+- `asset_name` &mdash; string
   
 Provides a path to the named asset (image) in the share directory for the specified spice instant answer
 
 E.g.
 
-`/share/spice/<spice_name>/<spice_version/<asset_name>`
+`/share/spice/<spice_name>/<spice_version>/<asset_name>`
 
 
 ### `DDG.get_is_safe_search()`
