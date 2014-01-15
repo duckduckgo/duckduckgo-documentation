@@ -47,11 +47,11 @@ Determines if `candidate` is relevant to the search query.
 - Comparator function is required to assign a property of the candidate called comparable which is the string undergoing relevancy check in isRelevant)
 
 
-### `DDG.getDateFromString(date_as_string)`
+### `DDG.getDateFromString(date)`
 
 #### Input:
 
-- `date_as_string` &mdash; string in [ISO 8601](http://www.w3.org/TR/NOTE-datetime) format
+- `date` &mdash; string in [ISO 8601](http://www.w3.org/TR/NOTE-datetime) format
   - valid formats: `yyyy-mm-dd` or `yyyy-mm-ddThh:mm:ss`
 
 #### Return:
