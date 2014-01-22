@@ -6,7 +6,7 @@ At DuckDuckGo, our instant answers are always placed at the top of the results p
 
 ![instant answer example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png)
 
-In this example, we show instant answers from Quixey any time someone searches for mobile apps. This happens based on our community recommendation of Quixey as the best available source.
+In the above example, Quixey was a source recommended by our community for searching mobile apps. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey results as an instant answer!
 
 ## Getting Involved
 
