@@ -1,5 +1,7 @@
 # DuckDuckHack Vision
 
+Join the [DuckDuckHack email list](https://www.listbox.com/subscribe/?list_id=197814) to reach out to us and other developers with feedback/questions!
+
 ###The goal of DuckDuckHack is to provide users with relevant and useful instant answers.
 
 In order to make sure these instant answers are worthy of being displayed, there are a few conditions that each and every instant answer must meet:
