@@ -4,7 +4,8 @@
   - [Welcome!](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/ddh-intro.md)
   - [DuckDuckHack Vision](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/duckduckhack_vision.md)
   - [Determine Your Instant Answer Type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md)
-
+  - [Installing DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/installing_duckpan.md)
+  
 - **Goodie**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
@@ -41,7 +42,6 @@
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#longtail)
 
 - **Testing**
-  - [Installing DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/installing_duckpan.md)
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
