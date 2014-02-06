@@ -17,7 +17,7 @@
 	"installing_duckpan.md" : {
 		"prev" : ["determine_your_instant_answer_type.md"],
 		"next" : ["goodie_overview.md", "spice_overview.md", "fathead_overview.md", "longtail_overview.md"]
-	}
+	},
 
 	"goodie_overview.md" : {
 		"prev" : ["determine_your_instant_answer_type.md"],
