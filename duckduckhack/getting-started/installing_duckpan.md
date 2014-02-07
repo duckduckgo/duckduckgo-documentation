@@ -1,34 +1,32 @@
-# DuckPAN
+# Installing DuckPAN
 
 **The DuckDuckHack Testing Tool**
 
-DuckPAN is an application built to provide developers a testing environment for DuckDuckHack Instant Answers. It allows you to test instant answer triggers and preview their visual design and output.
+DuckPAN is an application built to provide developers an environment for DuckDuckHack Instant Answers. It allows you to try out your creations and preview their visual design and output. This is only required when developing Spice or Goodies.
 
 ## Disclaimer
 
-Currently, DuckPAN has been developed on, and works well with **Ubuntu**. More specifically, we regularly build, test and run DuckPAN on **Ubuntu 12.04**. We have also successfully installed and run DuckPAN on older and newer Ubuntu releases, e.g. Ubuntu 10.04, 12.10, and 13.04.
+Currently, DuckPAN has been developed on, and works well with **Ubuntu**. More specifically, we regularly build, test, and run DuckPAN on **Ubuntu 12.04**. We have also successfully installed and run DuckPAN on older and newer Ubuntu releases, e.g. Ubuntu 10.04, 12.10, and 13.04.
 
 Developers have also been successful running DuckPAN on other Linux distros (e.g. Arch, Debian), but **we make no promises that it will work outside of Ubuntu**.
 
-As well, **there have been reported issues with installing DuckPAN on Mac OSX and Windows**, so we don't recommend you go down that path.
+Also, **there have been reported issues with installing DuckPAN on Mac OS X and Windows**, so we don't recommend you go down that path.
 
-That being said, we are more than willing to help you debug any installation problems, so please come to us with your problems and we'll try to get your issues sorted out. If you'd like some help from our community, feel free to engage with them on the [DuckDuckGo forum](http://duck.co/)
+That being said, we are more than willing to help you debug any installation problems, so please come to us with your problems, and we'll try to get your issues sorted out. If you'd like some help from our community, feel free to engage with them on the [DuckDuckGo forum](http://duck.co/), the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814), or on our [IRC channel](http://webchat.freenode.net/?channels=duckduckgo).
 
 ## Getting Started
 
-The easiest way to get started with DuckPAN is to either:
+The easiest way to get started with DuckPAN is to use our DuckDuckHack development virtual machine image ([see below](#duckduckhack-development-virtual-machine)), but there are also other ways of doing it:
 
-- Use our DuckDuckHack development virtual machine image ([see below](#duckduckhack-development-virtual-machine)); or
-- Use the Vagrant virtual environment to run DuckDuckHack ([see below](#vagrant-virtual-environment)); or
-- Download and install [Ubuntu](http://www.ubuntu.com/download) yourself; or
-- Download and install a different Linux distro (but as mentioned above, you may run into issues).
+- Use the Vagrant virtual environment to run DuckDuckHack ([see below](#vagrant-virtual-environment))
+- Download and install [Ubuntu](http://www.ubuntu.com/download) yourself.
 
 **If you're going to use our virtual machine** please continue reading. 
 If not, go setup your OS and continue with the DuckPAN [installation instructions](#installing-duckpan) below.
 
 ## DuckDuckHack Development Virtual Machine
 
-The purpose of our DuckDuckHack VM is to provide a sandbox for DuckDuckGo Instant Answer development that is quick to set up and start working with.
+Our virtual machines have everything you need to start developing your instant answers right away.
 
 #### DDH VM Breakdown
 
@@ -38,21 +36,27 @@ The purpose of our DuckDuckHack VM is to provide a sandbox for DuckDuckGo Instan
 - cpanminus (managed by Perlbrew)
 - App::DuckPAN
 - XFCE Window Manager
-- SublimeText, vim, emacs
-- Firefox (Configured via fixtracking.com)
+- Sublime Text, Vim, and Emacs
+- Firefox (configured via fixtracking.com)
 - Platform specific virtualization guest tools (optimizes hardware emulation)
 
-#### For VirtualBox hosts
+#### For [VirtualBox](https://www.virtualbox.org/)
 
-ddh-vbox.rar  
 MD5: 1734373cbecc5820bb7d18406eb42854  
-https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
+[https://ddg-community.s3.amazonaws.com/ddh-vbox.rar](https://ddg-community.s3.amazonaws.com/ddh-vbox.rar)
 
-#### For VMWare hosts
+#### For [VMWare](http://www.vmware.com/)
 
-ddh-vmw.rar:  
 MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e  
-https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
+[https://ddg-community.s3.amazonaws.com/ddh-vmw.rar](https://ddg-community.s3.amazonaws.com/ddh-vmw.rar)
+
+#### A Note on Extracting RAR Archives
+
+We're working on making Zip archives, but for the meantime, here's some third-party software for extracting RAR archives:
+
+**Windows:** You can use [PeaZip](http://peazip.org/) or [7Zip](http://www.7-zip.org/).  
+**Mac OS X:** You can use [The Unarchiver](http://unarchiver.c3.cx/unarchiver), or you can install `unrar` by typing in `brew install unrar` (which requires [Homebrew](http://brew.sh/)).  
+**Linux:** You can use [PeaZip](http://peazip.org/peazip-linux.html), or you can install `unrar` which is `sudo apt-get install unrar` on Ubuntu. 
 
 #### Roadmap
 
@@ -63,38 +67,39 @@ https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
 
 To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
 
-#### VirtualBox (free)
+#### VirtualBox
 
 Website: https://www.virtualbox.org/  
-Supports: Windows, OSX, Linux
+Supports: Windows, OS X, and Linux
 
 ##### Setup Instructions
 
-1. Download the rar and verify the checksum--decompress: This archive contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files. 
+1. Download the RAR archive and decompress. This archive contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files. 
 
 2. Open VirtualBox, click "File" and then click "Import Appliance"
 
-3. Click "Open appliance..." and select the DuckDuckHack virtual appliance -- click "Next"
+3. Click "Open appliance..." and select the DuckDuckHack virtual appliance and click "Next"
 
 4. Click "Import"
 
-#### VMWare Player (free)
+#### VMWare Player
 
 Website: https://www.vmware.com/products/player/  
-Supports: Windows, Linux
+Supports: Windows and Linux
 
 ##### Setup Instructions
 
-1.Download the rar and verify the checksum--decompress: This contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files.
+1. Download the RAR archive and decompress. This contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files.
 
-2.Open VMWare Player, and click "Open a Virtual Machine"
+2. Open VMWare Player, and click on "Open a Virtual Machine"
 
-3.Choose a storage path for the Virtual Machine -- click "Import"
+3. Choose a storage path for the Virtual Machine and click "Import"
 
 #### Happy Hacking!
 
-Once you have installed the virtual machine you should be able to startup the VM and login with the following credentials: 
-- **username** : `dax`
+Once you have installed the virtual machine you should be able to startup the VM and login with the following credentials:  
+
+- **username** : `dax`  
 - **password** : `duckduckhack`
 
 **The DuckPAN client has already been installed for you.** You can now clone the instant answer repos and start developing/testing.

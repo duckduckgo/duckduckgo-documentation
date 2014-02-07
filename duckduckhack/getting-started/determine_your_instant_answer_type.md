@@ -28,13 +28,13 @@ Now that you know which instant answer type you'll be using for your instant ans
 
 Once you have an account, please fork the appropriate repository:
 
-- For **Goodies**, [click here](https://github.com/duckduckgo/zeroclickinfo-goodies/fork)
+- For **Goodies**, [click here](https://github.com/duckduckgo/zeroclickinfo-goodies/)
 
-- For **Spice**, [click here](https://github.com/duckduckgo/zeroclickinfo-spice/fork)
+- For **Spice**, [click here](https://github.com/duckduckgo/zeroclickinfo-spice/)
 
-- For **Fathead**, [click here](https://github.com/duckduckgo/zeroclickinfo-fathead/fork)
+- For **Fathead**, [click here](https://github.com/duckduckgo/zeroclickinfo-fathead/)
 
-- For **Longtail**, [click here](https://github.com/duckduckgo/zeroclickinfo-longtail/fork)
+- For **Longtail**, [click here](https://github.com/duckduckgo/zeroclickinfo-longtail/)
 
 ## Start Coding!
 
