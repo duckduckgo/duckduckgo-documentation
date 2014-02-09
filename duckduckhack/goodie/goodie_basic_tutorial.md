@@ -26,7 +26,7 @@ Assuming you've already [forked](https://help.github.com/articles/fork-a-repo) t
 
 Run `duckpan installdeps` (make sure you're inside the `zeroclickinfo-goodies` directory) if you haven't yet. This will install all the dependencies of the Perl modules inside that repository.
 
-Finally, type in `duckpan server` and then go to [http://localhost:5000](http://localhost:5000/?q=chars+how+many+characters+are+there+in+this+sentence%3F).
+Finally, type in `duckpan server` and then head on over to [http://localhost:5000](http://localhost:5000/?q=chars+how+many+characters+are+there+in+this+sentence%3F).
 
 ## Naming our Goodie Package
 
@@ -49,7 +49,7 @@ Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to 
 use DDG::Goodie;
 ```
 
-**\*\*Note:** Right after the above line, you should include any Perl modules that you'll be leveraging to help generate the answer. **Make sure** you add those modules to the `dist.ini` file in this repository. If you're not using any additional modules, carry on!
+**Note:** Right after the above line, you should include any Perl modules that you'll be leveraging to help generate the answer. **Make sure** you add those modules to the `dist.ini` file in this repository. If you're not using any additional modules, carry on!
 
 ## Define the Trigger Word(s)
 
@@ -122,7 +122,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 ```
 
-And that's it! At this point you have a working Goodie instant answer. 
+And that's it! At this point you have a working Goodie instant answer. You can save your file at `zeroclickinfo-goodies/lib/DDG/Goodie/`.
 
 ## Recap
 The instant answer system works like this at the highest level:
