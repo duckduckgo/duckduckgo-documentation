@@ -1,8 +1,8 @@
 # Basic Goodie Tutorial
 
-In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
+In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and the code looks like this:
 
-###### chars.pm
+###### Chars.pm
 
 ```perl
 package DDG::Goodie::Chars;
@@ -20,16 +20,24 @@ handle remainder => sub {
 
 ```
 
+## Try it
+
+Assuming you've already [forked](https://help.github.com/articles/fork-a-repo) the [Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies), run `git clone https://github.com/username/zeroclickinfo-goodies` (don't forget to replace `username` with your GitHub username) and then `cd zeroclickinfo-goodies`.
+
+Run `duckpan installdeps` (make sure you're inside the `zeroclickinfo-goodies` directory) if you haven't yet. This will install all the dependencies of the Perl modules inside that repository.
+
+Finally, type in `duckpan server` and then go to [http://localhost:5000](http://localhost:5000/?q=chars+how+many+characters+are+there+in+this+sentence%3F).
+
 ## Naming our Goodie Package
 
-To begin, open your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
+To begin, open your favourite text editor like [Sublime Text](http://www.sublimetext.com/), Notepad, or [Emacs](http://www.gnu.org/software/emacs/) and type the following:
 
 ```perl
 package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 ```
 
-Each instant answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Goodie (or any new instant answer), you would change **Chars** to the name of the instant answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
+Each instant answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Goodie (or any new instant answer), you would change `Chars` in `DDG::Goodie::Chars` to the name of the instant answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
 
 The second line is a special comment line that is used for documentation purposes.
 

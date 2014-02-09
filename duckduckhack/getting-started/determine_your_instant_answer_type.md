@@ -2,13 +2,11 @@
 
 ## Choose an Instant Answer
 
-Before you begin building anything, you'll need to know what kind of instant answer it is that you want to work on. You can get some instant answer ideas on our [ideas forum](https://dukgo.com/ideas).
+Before you can start working on an instant answer, you'll need to know what kind of instant answer it is that you want to work on. You can get some instant answer ideas on our [ideas forum](https://dukgo.com/ideas).
 
-## Determine Instant Answer Source
+## What kind of data source?
 
-Now that you know which queries you'd like to show an instant answer for, you'll need to determine what the source for your instant answer will be.
-
-Most instant answers rely on some type of data source. However, some are able to provide their instant answer without using any external sources. An example would be a string manipulation instant answer which would only require the use of a function to return an answer.
+Most instant answers rely on some type of data source. The [weather](https://duckduckgo.com/?q=weather) instant answer, for example, needs to fetch data from [Forecast.io](http://forecast.io) to work. However not all of them need a data source to work. Some can be self-contained instant answers such as our [resistor color calculator](https://duckduckgo.com/?q=60+ohms).
 
 Please use the following flowchart to help you to determine which kind of instant answer you'll be creating. Your instant answer type will be based on the date source your instant answer will be using:
 
@@ -24,23 +22,23 @@ Before moving forward, you **must** know which instant answer type you will be u
 
 ## Fork the Instant Answer Repository
 
-**Hang on:** We're going to be using a piece of software called Git here. If you're not familiar with it, you can learn more about it on [Try Git](http://try.github.com/). When you're done with that, you can start [setting up Git](https://help.github.com/articles/set-up-git) on your computer. Feel free to click on one of those links. Don't worry--we won't be going anywhere.
+**Hang on:** We're going to be using a piece of software called Git here. If you're not familiar with it, you can learn more about it on [Try Git](http://try.github.com/). When you're done with that, you can start [setting up Git](https://help.github.com/articles/set-up-git) on your computer.
 
 Now that you know the instant answer type that you'll be using, you'll have to fork the right repository that you're going to work on ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. You'll need a GitHub account for this one. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
 
 Once you have an account, please fork the appropriate repository:
 
-- For **Goodies**, [click here](https://github.com/duckduckgo/zeroclickinfo-goodies/)
+- [**Goodies**](https://github.com/duckduckgo/zeroclickinfo-goodies/)
 
-- For **Spice**, [click here](https://github.com/duckduckgo/zeroclickinfo-spice/)
+- [**Spice**](https://github.com/duckduckgo/zeroclickinfo-spice/)
 
-- For **Fathead**, [click here](https://github.com/duckduckgo/zeroclickinfo-fathead/)
+- [**Fathead**](https://github.com/duckduckgo/zeroclickinfo-fathead/)
 
-- For **Longtail**, [click here](https://github.com/duckduckgo/zeroclickinfo-longtail/)
+- [**Longtail**](https://github.com/duckduckgo/zeroclickinfo-longtail/)
 
 ## Start Coding!
 
-At this point, you're ready to start learning about the instant answer type you'll be using:
+At this point, you should be ready to start learning about the instant answer type you'll be using:
 
 - For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
 
