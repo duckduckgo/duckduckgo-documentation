@@ -52,10 +52,10 @@ MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e
 
 #### A Note on Extracting RAR Archives
 
-We're working on making Zip archives, but for the meantime, here's some third-party software for extracting RAR archives:
+We're working on making Zip archives, but for the meantime, here are some third-party applications for extracting RAR archives:
 
 **Windows:** You can use [PeaZip](http://peazip.org/) or [7Zip](http://www.7-zip.org/).  
-**Mac OS X:** You can use [The Unarchiver](http://unarchiver.c3.cx/unarchiver), or you can install `unrar` by typing in `brew install unrar` (which requires [Homebrew](http://brew.sh/)).  
+**Mac OS X:** You can use [The Unarchiver](http://unarchiver.c3.cx/unarchiver).  
 **Linux:** You can use [PeaZip](http://peazip.org/peazip-linux.html), or you can install `unrar` which is `sudo apt-get install unrar` on Ubuntu. 
 
 #### Roadmap
@@ -63,9 +63,9 @@ We're working on making Zip archives, but for the meantime, here's some third-pa
 - Docker support
 - Public AMI for use on EC2
 
-## Using the Virtual Machine
+### Using the Virtual Machine
 
-To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
+To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation**, or **VMWare Player** depending on your current OS.
 
 #### VirtualBox
 
@@ -102,36 +102,36 @@ Once you have installed the virtual machine you should be able to startup the VM
 - **username** : `dax`  
 - **password** : `duckduckhack`
 
-**The DuckPAN client has already been installed for you.** You can now clone the instant answer repos and start developing/testing.
+**The DuckPAN client has already been installed for you.** You can now clone either the [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/) or the [Goodies](https://github.com/duckduckgo/zeroclickinfo-spice/) repo (or both!) to start developing/testing.
 
 
-## Vagrant Virtual Environment
+## Advanced: Vagrant Virtual Environment
 
-The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM, but rather than downloading a prebuilt VM, Vagrant creates an environment for you based on the defined configuration.  Vagrant is an awesome tool for building development environments.  One command - `vagrant up` - gets you a complete working environment in minutes.  Something go wrong with the environment?  No messing around with snapshots.  Tear the VM down and build a fresh environment.  The DuckDuckHack Vagrant environment uses Chef cookbooks and the DuckPAN installer script, so configuration is transparent and easily shared.
+The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM. But rather than downloading a pre-built VM, Vagrant creates an environment for you based on the defined configuration. Vagrant is an awesome tool for building development environments. One command--`vagrant up`--gets you a complete working environment in minutes. Something went wrong with the environment? No messing around with snapshots. Tear the VM down and build a fresh environment. The DuckDuckHack Vagrant environment uses Chef cookbooks and the DuckPAN installer script, so configuration is transparent and easily shared.
 
-Through the Vagrant configuration, you can easily switch back and forth between a headless-mode and the traditional VirtualBox interface.  The configuration defaults to headless.
+Through the Vagrant configuration, you can easily switch back and forth between a headless-mode and the traditional VirtualBox interface. The configuration defaults to headless.
+
+**Note:** This installation method was contributed by our amazing community. Just remember that the scripts used were not made by DuckDuckGo so any issues regarding this should be posted on [duckpan-vagrant](https://github.com/shedd/duckpan-vagrant).
 
 ##### Setup Instructions
 
-1. Install: [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and [Bundler](http://bundler.io/#getting-started)
+1. Install [VirtualBox](https://www.virtualbox.org/), [Vagrant](http://docs.vagrantup.com/v2/installation/index.html), and [Bundler](http://bundler.io/#getting-started).
 
-2. Clone the [duckpan-vagrant](https://github.com/shedd/duckpan-vagrant) repo, which contains the `Vagrantfile` and Chef cookbooks you'll need
+2. Run `git clone https://github.com/shedd/duckpan-vagrant` and then `cd duckpan-vagrant`. The repository contains the `Vagrantfile` and the Chef cookbooks that you'll need.
 
-3. Run `bundle install` to install Berkshelf, a Chef cookbook manager.
+3. Run `sudo bundle install` to install Berkshelf, a Chef cookbook manager.
 
 4. Run `vagrant plugin install vagrant-berkshelf` to hook Berkshelf into Vagrant.
 
-5. Review the CUSTOM_CONFIG settings at the top of `Vagrantfile`.  You will want to customize the value of the synced directory to point to your local directory containing the DuckDuckGo code you wish to test.  By default, Vagrant will load a [VirtualBox Precise64](http://files.vagrantup.com/precise64.box) machine image.  If you change this, [Ubuntu is recommended](https://github.com/duckduckgo/p5-app-duckpan#disclaimer).
+5. Review the CUSTOM_CONFIG settings at the top of `Vagrantfile`.  You will want to customize the value of the synced directory to point to your local directory containing the DuckDuckGo code you wish to test. By default, Vagrant will load a [VirtualBox Precise64](http://files.vagrantup.com/precise64.box) machine image.  If you change this, just remember that [Ubuntu is recommended](https://github.com/duckduckgo/p5-app-duckpan#disclaimer).
 
 6. Run `vagrant up`
 
-The box takes some time to stand up as the duckpan-install script runs.  Refer to [the duckpan-vagrant readme](https://github.com/shedd/duckpan-vagrant#installation) for more info.
+The box takes some time to stand up as the duckpan-install script runs. Refer to [the duckpan-vagrant readme](https://github.com/shedd/duckpan-vagrant#installation) for more info.
 
 Once the environment has been built, **the DuckPAN client is installed and ready to go.** You can now clone the instant answer repos and start developing/testing.
 
-If you run into any issues, please file an issue in the [duckpan-vagrant issue page](https://github.com/shedd/duckpan-vagrant/issues).
-
-##### Quick Overview of key Vagrant CLI commands
+##### Quick Overview of key Vagrant commands
 
 There are a couple of key Vagrant commands that you'll use to manage your environment.
 
@@ -152,9 +152,9 @@ Run these commands from the directory containing your `Vagrantfile`.
 For more information, please see the (excellent) [Vagrant docs](http://docs.vagrantup.com/).
 
 
-## Installing DuckPAN
+## Advanced: Installing DuckPAN Yourself
 
-**\*\*Note**: You don't need to install DuckPAN if you're using our DuckDuckHack virtual machine or the Vagrant virtual environment. It's already installed for you!
+**Note**: You don't need to install DuckPAN if you're using our DuckDuckHack virtual machine or Vagrant. It should be already installed for you!
 
 To install DuckPan, open your terminal and run:
 
@@ -162,7 +162,7 @@ To install DuckPan, open your terminal and run:
 curl http://duckpan.org/install.pl | perl
 ```
 
-[This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have.
+[This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry. This script will intelligently use what you already have.
 
 If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:
 
@@ -185,7 +185,7 @@ App::DuckPAN is up to date.
 
 ### Dealing With Installation Issues
 
-If during the course of your DuckPAN install you run into errors, don't panic, there are a few things you can try.
+If during the course of your DuckPAN install you run into errors, don't panic. There are a few things you can try.
 
 First, try running the install command again (`curl http://duckpan.org/install.pl | perl`), this often solves issues related to any dependencies.
 
@@ -207,4 +207,4 @@ If this ***still*** doesn't work, please create a GitHub Issue in the DuckPAN Re
 
 ## Using DuckPAN
 
-Running `$ duckpan` with no commands will output some help information. More details on the DuckPAN commands can be found in the [DuckPAN Readme](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
+Running `$ duckpan` with no commands will output some help information. More details on the DuckPAN commands can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).

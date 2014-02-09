@@ -30,4 +30,4 @@ Whether you can code or not, there are many ways for you to make an impact. You 
 
     **[Have an Itch to Code?](https://dukgo.com/duckduckhack/duckduckhack_vision)**
 
-Do you have ideas which don't seem to fit into any of these categories? You can always talk to the community on our [forum](https://dukgo.com/forum), the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814), or on our [IRC channel](http://webchat.freenode.net/?channels=duckduckgo).
+Do you have ideas which don't seem to fit into any of these categories? You can always talk to the community on our [forum](https://dukgo.com/forum), the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814), or you can chat with us on our [IRC channel](http://webchat.freenode.net/?channels=duckduckgo).
