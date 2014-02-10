@@ -24,7 +24,7 @@ handle remainder => sub {
 
 Assuming you've already [forked](https://help.github.com/articles/fork-a-repo) the [Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies), run `git clone https://github.com/username/zeroclickinfo-goodies` (don't forget to replace `username` with your GitHub username) and then `cd zeroclickinfo-goodies`.
 
-Run `duckpan installdeps` (make sure you're inside the `zeroclickinfo-goodies` directory) if you haven't yet. This will install all the dependencies of the Perl modules inside that repository.
+Run `duckpan installdeps` (make sure you're inside the `zeroclickinfo-goodies` directory). This will install all the dependencies of the Perl modules inside that repository.
 
 Finally, type in `duckpan server` and then head on over to [http://localhost:5000](http://localhost:5000/?q=chars+how+many+characters+are+there+in+this+sentence%3F).
 
@@ -122,7 +122,7 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 ```
 
-And that's it! At this point you have a working Goodie instant answer. You can save your file at `zeroclickinfo-goodies/lib/DDG/Goodie/`.
+And that's it! At this point you have a working Goodie instant answer. You can save your work at `zeroclickinfo-goodies/lib/DDG/Goodie/`.
 
 ## Recap
 The instant answer system works like this at the highest level:

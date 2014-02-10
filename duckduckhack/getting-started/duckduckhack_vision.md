@@ -3,7 +3,7 @@
 **The goal of DuckDuckHack is to provide users with relevant and useful instant answers.** To make sure these instant answers are worthy of being displayed, there are a few conditions that every instant answer must meet:
 
 1. **Better Than Links**.  
-    Instant answers have to be better because they are always placed at the top of the search results. An example of a good instant answer is [Yummly](https://duckduckgo.com/?q=garlic+steak+recipe). It shows recipes and pictures of the food, which is often what the user is looking for.
+    Instant answers have to be better because they are always placed at the top of the search results. An example of a good instant answer is [Yummly](https://duckduckgo.com/?q=garlic+steak+recipe). It shows recipes and pictures of the food, which is often what the user is looking for with that type of query.
     ![better than links](https://s3.amazonaws.com/ddg-assets/docs/better_than_links.png)
 
 2. **No False Positives**.  

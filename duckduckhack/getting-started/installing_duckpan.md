@@ -18,11 +18,11 @@ That being said, we are more than willing to help you debug any installation pro
 
 The easiest way to get started with DuckPAN is to use our DuckDuckHack development virtual machine image ([see below](#duckduckhack-development-virtual-machine)), but there are also other ways of doing it:
 
-- Use the Vagrant virtual environment to run DuckDuckHack ([see below](#vagrant-virtual-environment))
+- Use the Vagrant virtual environment to run DuckDuckHack ([see below](#advanced-vagrant-virtual-environment))
 - Download and install [Ubuntu](http://www.ubuntu.com/download) yourself.
 
 **If you're going to use our virtual machine** please continue reading. 
-If not, go setup your OS and continue with the DuckPAN [installation instructions](#installing-duckpan) below.
+If not, go setup your OS and continue with the DuckPAN [installation instructions](#advanced-installing-duckpan-yourself) below.
 
 ## DuckDuckHack Development Virtual Machine
 
@@ -102,7 +102,7 @@ Once you have installed the virtual machine you should be able to startup the VM
 - **username** : `dax`  
 - **password** : `duckduckhack`
 
-**The DuckPAN client has already been installed for you.** You can now clone either the [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/) or the [Goodies](https://github.com/duckduckgo/zeroclickinfo-spice/) repo (or both!) to start developing/testing.
+**The DuckPAN client has already been installed for you.** Skip to the next section to continue on your journey.
 
 
 ## Advanced: Vagrant Virtual Environment
