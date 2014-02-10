@@ -1,22 +1,12 @@
 # Testing
 
-Testing is crucial to ensuring a smooth integration process. This section of the documentation walks you through the process of testing everything that you've written so far. Don't forget to write your test files!
+Testing is crucial to ensuring a smooth integration process. This section of the documentation walks you through the process of testing everything that you've written so far.
 
 ## Interactive Testing
 
 Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 
-1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
-    
-    - Option A. &mdash; Install via this script:
-        
-        ```shell
-        curl http://duckpan.org/install.pl | perl
-        ```
-    
-    - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which comes with DuckPAN installed
-
-    More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
+1. [Install DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/installing_duckpan.md).
 
 2. Go to your fork of the repository (a directory or folder on your computer).
 
@@ -34,7 +24,7 @@ Before reading this section, make sure you've worked through the the [Basic Good
 
 4. Add your instant answer.
 
-    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the instant answer followed by the extension **.pm** because it is a Perl package. For example, if the name of your instant answer was **"test instant answer"**, the file would be `TestInstantAnswer.pm`.
+    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the instant answer followed by the extension **.pm** because it is a Perl module. For example, if the name of your instant answer was **"test instant answer"**, the file would be `TestInstantAnswer.pm`.
 
 5. Test your triggers interactively.
 
@@ -102,3 +92,5 @@ Before reading this section, make sure you've worked through the the [Basic Good
 
     \_o< Thanks for testing!
     ```
+    
+	You can also run `duckpan server`--this is especially helpful for Goodies that output HTML.
