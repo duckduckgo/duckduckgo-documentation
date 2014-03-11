@@ -4,7 +4,7 @@
 
 Trigger words are coarse filters; they may send you queries you cannot handle. Your instant answer should return nothing in these cases.  As such, you generally need to further qualify the query in your code.
 
-There are any number of techniques for doing this qualification.  One of the most popular is to return as soon as a query can be disqualified.
+There are many techniques for doing this qualification.  One of the most popular is to `return` as soon as a query can be disqualified.
 
 As an example, the [Base Goodie's](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) has a `return` statement paired with an `unless` right on the first line of its `handle` function:
 
@@ -52,6 +52,6 @@ As with the Passphrase Goodie example above, each line becomes an entry in the r
 
 ## Generating Data Files
 
-In some cases, you may need to generate the data files you will `slurp` from the share directory. If so, please put the required generation scripts the Goodie's `share` directory. While **shell scripts are preferred**, your scripts can be written in the language of your choice.
+In some cases, you may need to generate the data files you will `slurp` from the share directory. If so, please put the required generation scripts in the Goodie's `share` directory. While **shell scripts are preferred**, your scripts can be written in the language of your choice.
 
 As an example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a [combination of Shell and Python scripts](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) to generate its input data, `currency.txt`.
