@@ -2,9 +2,11 @@
 
 ## Further Qualifying the Query
 
-Trigger words are blunt instruments; they may send you queries you cannot handle. As such, you generally need to further qualify the query (and return nothing in cases where the query doesn't really qualify for your instant answer)
+Trigger words are coarse filters; they may send you queries you cannot handle. Your instant answer should return nothing in these cases.  As such, you generally need to further qualify the query in your code.
 
-There are number of techniques for doing so. For example, the first line of the [Base Goodie's](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) `handle` function has a `return` statement paired with an `unless`:
+There are many techniques for doing this qualification.  One of the most popular is to `return` as soon as a query can be disqualified.
+
+As an example, the [Base Goodie's](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base.pm) has a `return` statement paired with an `unless` right on the first line of its `handle` function:
 
 ```perl
 handle remainder => sub {
@@ -13,31 +15,21 @@ handle remainder => sub {
 }
 ```
 
-You could also do it another way, like the [GoldenRatio Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GoldenRatio.pm) which uses an `if` block and a regex to make sure the query qualifies:
-
-```perl
-handle remainder => sub {
-  my $input = $_;
-  if ($input =~ /^(?:(?:(\?)\s*:\s*(\d+(?:\.\d+)?))|(?:(\d+(?:\.\d+)?)\s*:\s*(\?)))$/) {
-    ...
-  }
-  return;
-}
-```
-
 ## Using Files in the Share Directory
 
-You can use simple text/html input files for display or processing. The Perl `share` function allows each instant answer access to its own directory in the `share` directory of the repository.
+Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
 
-The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) does this for processing purposes: 
+The `share` function gives each instant answer access to a subdirectory of the repository's `share` directory. The subdirectory for your instant answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words.  For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/regex_cheat_sheet) to store its custom CSS.
+
+Meanwhile, the [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) uses the `share` directory to hold data for processing purposes:
 
 ```perl
 my @words = share('words.txt')->slurp;
 ```
 
-Here, we use the `share` function to grab the `words.txt` file, found in `zeroclickinfo-goodies/share/goodie/passphrase/`. This returns to us an object which we then use the `slurp` method on, which pushes each line of the file into our `@words` array.
+Here the `share` function grabs the `words.txt` file, found in `zeroclickinfo-goodies/share/goodie/passphrase/`. The returned object's `slurp` method is called which pushes each line of the file into the `@words` array.
 
-Similarly, the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) does it for display purposes:
+In another case, the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) uses its `share` directory to hold files for display purposes:
 
 ```perl
 my $text = scalar share('private_network.txt')->slurp,
@@ -48,8 +40,18 @@ handle sub {
 };
 ```
 
-Here, we are grabbing each of these files from `zeroclickinfo-goodies/share/goodie/private_network/` and `slurp`ing them in a `scalar` context, which returns the entire file as a **string** into our `$text` and `$html` variables. Then, in the `handle` function we are returning `$text` and `$html` which will be used to display with a plaintext or HTML instant answer.
+Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a **string** and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display a plaintext or HTML instant answer.
+
+One further consideration is whether your data file contains non-ASCII characters. If so, you will want to prepare the file with UTF-8 encoding.  The [Shortcut Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Shortcut.pm) uses a UTF-8 data file:
+
+```perl
+my @shortcuts = share('shortcuts.csv')->slurp(iomode => '<:encoding(UTF-8)');
+```
+
+As with the Passphrase Goodie example above, each line becomes an entry in the resulting array. With this `iomode` set, the UTF-8 characters used to denote system-specific keys will be handled properly throughout the rest of the processing.
 
 ## Generating Data Files
 
-In some cases, you may need to generate the data files you will `slurp` from the share directory. If this is the case, please put the required generation scripts (**shell scripts** are preffered) into the appropriate **/share/goodie/<ia_name>** directory. These generation/parsing scripts do not have to be written in Perl, they can be any language you prefer. For example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a combination of Shell and Python scripts to generate its input data, `currency.txt`. These scripts can be found inside CurrencyIn Goodie's [share directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in).
+In some cases, you may need to generate the data files you will `slurp` from the share directory. If so, please put the required generation scripts in the Goodie's `share` directory. While **shell scripts are preferred**, your scripts can be written in the language of your choice.
+
+As an example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a [combination of Shell and Python scripts](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) to generate its input data, `currency.txt`.
