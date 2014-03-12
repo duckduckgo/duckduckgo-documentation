@@ -1,35 +1,33 @@
-# DuckDuckHack: Toward Better Instant Answers!
+# DuckDuckHack: An Instant Answer for Every Search
 
-DuckDuckGo users believe in better answers with fewer clicks. After all, why sift through a page full of links, when an answer is readily available?
-
-At DuckDuckGo, our instant answers are always placed at the top of the results page; often providing exactly what you want without any extra clicks.
+DuckDuckHack is a place where anyone can start sharing and creating instant answers for DuckDuckGo. We want people to get a great search experience, and we believe that a big part of that is getting the right answers to any of their searches.
 
 ![instant answer example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png)
 
-In the above example, Quixey was a source recommended by our community for searching mobile apps. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey results as an instant answer!
+Quixey is one of the instant answers that was recommended to us by the community. It allows people to search for mobile apps without having to rummage through the links.
 
 ## Getting Involved
 
-Anyone in the world can help improve the search experience on DuckDuckGo. Whether you can code or not, there are many ways for you to contribute. You can get started by suggesting new instant answers to the community, recommending better data sources, or actually hacking away on your own instant answer.
+Whether you can code or not, there are many ways for you to make an impact. You can get started by suggesting new instant answers to the community, recommending better data sources for existing ones, or actually hacking away and making your own instant answer.
 
 1. **Suggesting Instant Answer Ideas**
 
-  On DuckDuckGo, searches like ["what is the height of the eiffel tower"](https://duckduckgo.com/?q=what+is+the+height+of+the+eiffel+tower) will show you that it's exactly 1063 feet tall, while ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.  We depend on suggestions from users like yourself to know what sort of useful instant answers you want from your search engine.
+  On DuckDuckGo, searches such as ["what is the height of the eiffel tower"](https://duckduckgo.com/?q=what+is+the+height+of+the+eiffel+tower) will show you that it's exactly 1063 feet tall, while ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.  We depend on suggestions from users like yourself to know what sort of useful instant answers you want from your search engine.
 
-     **[Have an Instant Answer Suggestion?](https://dukgo.com/ideas)**
+    **[Have an Instant Answer Suggestion?](https://dukgo.com/ideas)**
 
 2. **Recommending Sources**
 
-  Everyone has a favorite source for useful information (maybe it's IMDB for movies or Yelp for local restaurant information). Our users concluded that Last.fm was a great source for answers about music. Now it is used for [album searches](https://duckduckgo.com/?q=Dookie+album+by+greenday) on DuckDuckGo!
+  Everyone has a favorite source for useful information (maybe it's IMDB for movies or Yelp for local restaurant information). One of the recommended sources for music information was Last.FM. Now it is used for [album searches](https://duckduckgo.com/?q=Dookie+album+by+greenday) on DuckDuckGo!
 
-  Since not every idea comes with the best possible data source in mind, you can help us determine the right place to find relevant answers. Simply leave a comment with your own source recommendation.
+  Since not every idea comes with the best possible data source in mind, you can help us by leaving a comment with your favorite source recommendation.
 
     **[Have a Better Source?](https://dukgo.com/ideas)**
 
 3. **Hacking on Instant Answers**
 
-  Instant Answers depend on awesome open source developers to both create and improve them. If you're a developer and you'd like to create a new instant answer (or improve [current ones](https://duckduckgo.com/goodies)), we welcome your contributions!
+  Instant Answers depend on awesome open source developers to both create and improve them. If you're a developer and you'd like to create a new instant answer (or improve [current ones](https://duckduckgo.com/goodies)), we will welcome your contributions!
 
-     **[Have an Itch to Code?](https://dukgo.com/duckduckhack/duckduckhack_vision)**
+    **[Have an Itch to Code?](https://dukgo.com/duckduckhack/duckduckhack_vision)**
 
-Do you have ideas which don't seem to fit into any of these categories? You can always engage with the community through [our web forum](https://dukgo.com/forum) or the [DuckDuckHack email list](https://www.listbox.com/subscribe/?list_id=197814).
+Do you have ideas which don't seem to fit into any of these categories? You can always talk to the community on our [forum](https://dukgo.com/forum), the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814), or you can chat with us on our [IRC channel](http://webchat.freenode.net/?channels=duckduckgo).

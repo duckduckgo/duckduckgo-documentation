@@ -11,6 +11,11 @@
 
 	"determine_your_instant_answer_type.md" : {
 		"prev" : ["duckduckhack_vision.md"],
+		"next" : ["installing_duckpan.md"]
+	},
+
+	"installing_duckpan.md" : {
+		"prev" : ["determine_your_instant_answer_type.md"],
 		"next" : ["goodie_overview.md", "spice_overview.md", "fathead_overview.md", "longtail_overview.md"]
 	},
 
@@ -129,13 +134,8 @@
 		"next" : ["faq.md#longtail"]
 	},
 
-	"installing_duckpan.md" : {
-		"prev" : [],
-		"next" : ["testing_triggers.md"]
-	},
-
 	"testing_triggers.md" : {
-		"prev" : ["installing_duckpan.md"],
+		"prev" : [],
 		"next" : ["testing_html.md"]
 	},
 
