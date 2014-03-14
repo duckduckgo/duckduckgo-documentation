@@ -116,7 +116,7 @@ When a Spice triggers, its Perl code is used to construct the URL for the API ca
 "random word" => http://api.wordnik.com/v4/words.json/randomWord
 ```
 
-Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice instant answer uses the GEOLocation API and uses it to append the user's location to the API call: 
+Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice instant answer uses the Location API and uses it to append the user's location to the API call:
 
 ```
 # This query will NEVER make the same API call, because the location is dynamic

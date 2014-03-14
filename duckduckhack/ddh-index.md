@@ -46,7 +46,7 @@
   - [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
   - [Advanced](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/advanced_testing.md)
-  - [Testing with Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md)
+  - [Testing with the Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md)
 
 - **Submitting Your Instant Answer**
   - [Preparing for a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/preparing_for_a_pull_request.md)
@@ -55,7 +55,7 @@
   - [Making a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/making_a_pull_request.md)
 
 - **Advanced**
-  - [GEOLocation API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/location_api.md)
+  - [Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/location_api.md)
 
 - **Resources**
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
