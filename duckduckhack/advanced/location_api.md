@@ -1,6 +1,6 @@
 # Location API
 
-Sometimes, an instant answer needs the user's location. This is where the Location API comes in. An example is the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer. Before reading this, you should be familiar with the genereal workings of your instant answer type (ie. Goodie, Spice, Fathead or Longtail).
+Sometimes, an instant answer needs the user's location. This is where the Location API comes in. An example is the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer. Before reading this, you should be familiar with the general workings of your instant answer type (ie. Goodie, Spice, Fathead or Longtail).
 
 The Location API is implemented by [DuckDuckGo](https://github.com/duckduckgo/duckduckgo), which is a package used by instant answers. When testing instant answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States," but don't worry - it will show the real location once it's live.
 
