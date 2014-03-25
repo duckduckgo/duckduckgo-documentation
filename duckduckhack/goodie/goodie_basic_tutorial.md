@@ -119,7 +119,7 @@ And that's it! At this point you have a working Goodie instant answer.
 ## Recap
 The instant answer system works like this at the highest level:
 
-- We break the query (search terms) down into seperate words, which is a process that happens in the background.
+- We break the query (search terms) down into separate words, which is a process that happens in the background.
 
 - We see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**chars**".
 
