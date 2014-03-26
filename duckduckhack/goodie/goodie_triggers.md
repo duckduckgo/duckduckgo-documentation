@@ -19,7 +19,7 @@ triggers start => "trigger my instant answer", "trigger myIA", "myIA";
 or
 
 ```perl
-@triggers = qw(these are seperate triggers for my instant answer);
+@triggers = qw(these are separate triggers for my instant answer);
 triggers any => @triggers;
 ```
 

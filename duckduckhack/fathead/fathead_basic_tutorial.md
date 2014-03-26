@@ -36,7 +36,7 @@ category "programming";
 
 ## Step 3
 
-Now create directory named **HellowWorldInC** under **share** directory.
+Now create directory named **HelloWorldInC** under **share** directory.
 
 ```shell
 $ mkdir -p zeroclickinfo-fathead/share/HelloWorldInC
@@ -100,7 +100,7 @@ class HelloWorldItem:
                "", # namespace
                "https://raw.github.com/leachim6/hello-world/master/c/c.c",
                "Hello World in %s (%s)" % (self.language, self.filename),
-               self.source, # synposis (code)
+               self.source, # synopsis (code)
              ]
 
     output = "%s\n" % ("\t".join(fields))
@@ -161,7 +161,7 @@ Thus you don't need to perform fetch operation (step 4).
 ## Step 10
 
 You can add specific instruction or any dependencies on a file named **README.txt**.
-The final structure of your **share/HelloWorldInC** shoud look like 
+The final structure of your **share/HelloWorldInC** should look like 
 
 ```shell
 $ ls

@@ -47,7 +47,7 @@ Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most
 - `template_frame` is used to tell the Render function that the base template for this instant answer will be the **Carousel** template.  
 **\*\*Note**: This is a template which we have already created and you don't have to worry about creating or modifying.*
 
-- `template_options` is a property which is used to specify more properties that are specific to the current `template_frame`. In this case, we use `template_options` to define more properties for the `carosuel` template.
+- `template_options` is a property which is used to specify more properties that are specific to the current `template_frame`. In this case, we use `template_options` to define more properties for the `carousel` template.
 
 - `items` is **required** when using the carousel template. It passes along an array or object to be iterated over by the carousel template. Each of these items becomes the context for the `alternative_to.handlebars` template which defines the content of each `<li>` in the carousel.
 
@@ -114,7 +114,7 @@ function ddg_spice_movie (api_result) {
     var result, max_score = 0;
 
     // Assign a ranking value for the movie. This isn't a complete sorting value though
-    // also we are blindling assuming these values exist
+    // also we are blindingly assuming these values exist
     var score = function(m) {
         var s = m.ratings.critics_score * m.ratings.audience_score;
         if (s > max_score) max_score = s;
@@ -266,7 +266,7 @@ Now let's take a look at the implementation of `{{#rating_adjective}}`:
 /*
  * rating_adjective
  *
- * help make the description of the movie gramatically correct
+ * help make the description of the movie grammatically correct
  * used in reference to the rating of the movie, as in
  *   'an' R rated movie, or
  *   'a'  PG rated movie
@@ -387,7 +387,7 @@ Before looking at the implementation of the remaining Quixey Handlebars helpers,
 <span>{{{condense name maxlen="40"}}}</span>
 ```
 
-This template is very simple, it creates an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlilke **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be misaligned. So, if the images for your instant answer aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
+This template is very simple, it creates an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlike **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be misaligned. So, if the images for your instant answer aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
 
 Now let's take a look at the Quixey `carousel_template_detail` template. This template is more advanced, but most of the content is basic HTML which is populated by various `api_result` properties and Handlebars helpers:
 
@@ -528,7 +528,7 @@ Handlebars.registerHelper("platform_icon", function(icon_url) {
 });
 ```
 
-Another very simple helper function, the `platform_icon()` function simply checks if its input is equal to `2005` or `2015` and if so returns a special url for the platform icon. If not, it returns the originial icon url but adds our proxy redirect, `/iu/?u=` as previously discussed.
+Another very simple helper function, the `platform_icon()` function simply checks if its input is equal to `2005` or `2015` and if so returns a special url for the platform icon. If not, it returns the original icon url but adds our proxy redirect, `/iu/?u=` as previously discussed.
 
 ###### quixey.js (continued) -  platform\_name helper
 
@@ -558,7 +558,7 @@ Handlebars.registerHelper("platform_name", function() {
 });
 ```
 
-This helper is also quite simple, it is used to return a platform name and someties also unifies the platform name when multiple platforms exist for an app. If the app is available for both 'iPhone' and 'iPad', the `switch()` will catch this and indicate the app is availabe for "iOS".
+This helper is also quite simple, it is used to return a platform name and sometimes also unifies the platform name when multiple platforms exist for an app. If the app is available for both 'iPhone' and 'iPad', the `switch()` will catch this and indicate the app is available for "iOS".
 
 ###### quixey.js (continued) -  quixey\_star helper
 
@@ -573,7 +573,7 @@ This helper is also very simple, but it is important because it uses the `DDG.ge
 
 ## Example #4 - Dictionary (More Advanced Instant Answer)
 
-The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked seperately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
+The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked separately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
 To begin, let's look at the first callback function definition in the Dictionary javascript:
 
@@ -634,9 +634,9 @@ function ddg_spice_dictionary_definition (api_result) {
     };
 ```
 
-We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the seperate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
+We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the separate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
 
-The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_defintion()` callback as well as the `dictionary_reference()` callback, as you will see below:
+The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_definition()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
 
@@ -700,7 +700,7 @@ function ddg_spice_dictionary_reference (api_result) {
 };
 ```
 
-In this relatively simple callback, we begin by using the previously defined render property of the `dictionary_definiton()` function to give this callback access to the `render()` function we defined at the beginning of `quixey.js`. Then we confirm that this callback's `api_result` actually received the singular form of the originially searched query. If so, we add the singular and plural form of the word to our `api_result` object so we can check for and use them later in our Handlebars template.
+In this relatively simple callback, we begin by using the previously defined render property of the `dictionary_definition()` function to give this callback access to the `render()` function we defined at the beginning of `quixey.js`. Then we confirm that this callback's `api_result` actually received the singular form of the originally searched query. If so, we add the singular and plural form of the word to our `api_result` object so we can check for and use them later in our Handlebars template.
 
 ###### dictionary\_definition.js (continued) - dictionary_hyphenation callback
 
@@ -737,7 +737,7 @@ function ddg_spice_dictionary_pronunciation (api_result) {
 };
 ```
 
-Similarly to the `dictionary_hyphenation()` callback, this callback receives a phonetic spelling of the queried word and injects it into the Spice result by using jQuery as well to modify the HTML of the **#pronounciation** `<div>`.
+Similarly to the `dictionary_hyphenation()` callback, this callback receives a phonetic spelling of the queried word and injects it into the Spice result by using jQuery as well to modify the HTML of the **#pronunciation** `<div>`.
  
 ###### dictionary\_definition.js (continued) - dictionary_audio callback
 
@@ -821,7 +821,7 @@ The callback then verifies the API returned a pronunciation of the queried word 
     };
 ```
 
-Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavasScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
+Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavaScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
 
 **\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (eg. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
 

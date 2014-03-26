@@ -40,7 +40,7 @@ handle sub {
 };
 ```
 
-Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a **string** and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display a plaintext or HTML instant answer.
+Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a **string** and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display as plain text or HTML instant answer.
 
 One further consideration is whether your data file contains non-ASCII characters. If so, you will want to prepare the file with UTF-8 encoding.  The [Shortcut Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Shortcut.pm) uses a UTF-8 data file:
 
