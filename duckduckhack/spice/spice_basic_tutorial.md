@@ -281,7 +281,7 @@ We've created two files in the Spice share directory `share/spice/npm/`:
 1. `npm.js` - which delegates the API's response and calls `Spice.render()`
 2. `npm.handlebars` - which specifies the instant answer's HTML structure and determines which attributes of the API response are placed in the HTML result
 
-You may notice other instant answers also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other instant answers. This is primarly the reason why we've created a template system. It helps to alleviate the need for styling through css and also helps normalize the look and feel of all instant answers. In some cases however, the light use of CSS for styling is needed and can be added. Example Spice instant answers with CSS usage will be covered shortly.
+You may notice other instant answers also include a css file. For **NPM** the use of CSS wasn't necessary and this is also true for many other instant answers. This is primarily the reason why we've created a template system. It helps to alleviate the need for styling through css and also helps normalize the look and feel of all instant answers. In some cases however, the light use of CSS for styling is needed and can be added. Example Spice instant answers with CSS usage will be covered shortly.
 
 Again, the Spice instant answer system works like so:
 

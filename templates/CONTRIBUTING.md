@@ -1,4 +1,4 @@
-Please use this template as a starting point for any CONTRIBTUTING.md's. Make sure to replace **"\<repo\_name\>"** with the correct repository name.
+Please use this template as a starting point for any CONTRIBUTING.md's. Make sure to replace **"\<repo\_name\>"** with the correct repository name.
 
 ------
 
@@ -16,7 +16,7 @@ Before you can do anything, you first need a [GitHub account](https://github.com
 
 - Check the **\<repo\_name\>** [issues](#link-to-issues) to see if an issue already exists for the given bug or suggestion
   - If one doesn't exist, create a GitHub issue in the **\<repo\_name\>** repository
-    - Clearly describe the bug/improvemnt, including steps to reproduce when it is a bug
+    - Clearly describe the bug/improvement, including steps to reproduce when it is a bug
   - If one already exists, please add any additional comments you have regarding the matter
 
 If you're submitting a **pull request** (bugfix/addition):

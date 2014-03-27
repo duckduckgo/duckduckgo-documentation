@@ -129,7 +129,7 @@ There is a pre-process script that is run on this output, which:
 
 ## Code Blocks
 
-If you want to include a code snippet or another pre-formatted example in the abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap the code bwlock like this:
+If you want to include a code snippet or another pre-formatted example in the abstract, like the [perl](https://duckduckgo.com/?q=perl+open) Fathead, wrap the code block like this:
 
 ```html
 <pre><code>code block goes here</code></pre>

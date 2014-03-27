@@ -11,9 +11,9 @@ Array of Objects or Strings
 
 #### Parameters
 
-- `sep` (optional) &mdash; item seperator
+- `sep` (optional) &mdash; item separator
     -   default value: `''`
-- `conj` (optional) &mdash; confunction for last item
+- `conj` (optional) &mdash; conjunction for last item
     -   default value: `''`
 
 #### Usage
@@ -44,7 +44,7 @@ String
 - `maxlen` &mdash; maximum string length
 - `fuzz` (optional) &mdash; allowable deviation from the maxlen, allows a sentence/word to complete if it is less than `fuzz` character
     -   default value: `0`
-- `truncation` (optional) &mdash; truncation string, appended to shortend string
+- `truncation` (optional) &mdash; truncation string, appended to shortened string
     -   default value: `...`
 
 #### Usage
