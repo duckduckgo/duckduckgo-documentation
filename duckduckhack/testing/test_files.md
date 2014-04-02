@@ -1,27 +1,36 @@
 # Test Files
-Good test files not only help you quickly test your code iterations; they also serve as sort of functional specification. This helps others quickly understand and verify the expected behavior of your code. This, in turn, improves the quality of the feedback you receive and accelerates the review process.
+Good test files can help you quickly test code iterations. They also serve as a functional specification for your code. This specification helps everyone quickly understand and verify the expected behavior of the tested code, improving the quality of the feedback you receive and accelerating the review process.
 
-Every instant answer must include a test file in the `t` directory. These test files are run automatically before each release to ensure that all instant answers are triggering properly.
+Every instant answer must include a test file in the `t` directory. The test files are run automatically before each release to ensure that all instant answers are functioning properly.  Properly functioning instant answers:
 
-At a minimum, your tests should cover all of your primary and secondary example queries. If possible, you should also include examples of similar queries on which your code does **not** trigger.  If your answer depends on the user's location, please use the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md) to help in developing your tests. If your answer depends on the time of day or year, please be sure that your tests will continue to pass no matter when they are run.
+- ignore any unsuitable queries,
+- trigger on the expected queries, and
+- provide appropriate answers for the queries handled.
+
+At a minimum, your tests should cover all of your primary and secondary example queries. If possible, you should also include examples of similar queries on which your code does **not** trigger.  If your answer depends on the user's location, please review the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md) for help in developing your tests. If your answer depends on the time of day or year, please be sure that your tests will continue to pass no matter when they are run.
 
 ## Creating Test Files
 
 Your test file should be named like the package which it tests.  For example, `DDG::Goodie::Fortune` has its tests in `t/Fortune.t`.
 
-The Goodie and Spice repositories have libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively) which make it easy to quickly develop tests.  Probably the most common way to get started on your test file is to copy the test file for a similar instant answer and edit it to suit your code.
+The Goodie and Spice repositories have libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively) which make it easy to quickly develop tests.  Probably the most common way to get started on your test file is to copy one from a similar instant answer.  With a few well-placed edits, you should have a suitable test file for your instant answer.
 
 ## Running Test Files
 
-Tests are run from the root of the repository using the `prove` command included in your Perl distribution. During development, you can quickly run a test file to verify your changes:
+Tests are run from the root of the repository using the `prove` command included in your Perl distribution. During development, you can quickly run a single test file to verify your changes:
 
-```perl
+```shell
 prove -Ilib t/TestName.t
 ```
 
-To ensure that you have not inadvertently changed the behavior of other code, you should run all of the files in the repository's `t` directory before submitting your instant answer:
+Or all of the tests in the repository's `t` directory:
 
-```perl
+```shell
 prove -Ilib t/
 ```
 
+To ensure that you have not inadvertently changed the behavior of other code, you should run the full test suite before submitting your instant answer. This is easily accomplished via `duckpan`:
+
+```shell
+duckpan test
+```
