@@ -170,7 +170,7 @@
 	},
 
 	"developer_checklist.md" : {
-		"prev" : ["preparing_for_a_pull_request.md"],
+		"prev" : ["review_process.md"],
 		"next" : ["metadata.md"]
 	},
 
