@@ -165,8 +165,8 @@
 	},
 
     	"review_process.md": {
-	    	"prev": "preparing_for_a_pull_request.md",
-	    	"next": "developer_checklist.md"
+	    	"prev": ["preparing_for_a_pull_request.md"],
+	    	"next": ["developer_checklist.md"]
 	},
 
 	"developer_checklist.md" : {
