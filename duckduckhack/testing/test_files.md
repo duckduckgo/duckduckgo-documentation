@@ -11,9 +11,9 @@ At a minimum, your tests should cover all of your primary and secondary example 
 
 ## Creating Test Files
 
-Your test file should be named like the package which it tests.  For example, `DDG::Goodie::Fortune` has its tests in `t/Fortune.t`.
+If you used `duckpan new` to start your project, a simple test file was automatically created for you. Otherwise, copying the test file from a similar instant answer is an easy way to get started. Either way, you are a few well-placed edits from a test file suitable for your instant answer.
 
-The Goodie and Spice repositories have libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively) which make it easy to quickly develop tests.  Probably the most common way to get started on your test file is to copy one from a similar instant answer.  With a few well-placed edits, you should have a suitable test file for your instant answer.
+Your test file should be named like the package which it tests.  For example, `DDG::Goodie::Fortune` has its tests in `t/Fortune.t`.  The Goodie and Spice repositories have libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively) which make it easy to quickly develop tests.
 
 ## Running Test Files
 
