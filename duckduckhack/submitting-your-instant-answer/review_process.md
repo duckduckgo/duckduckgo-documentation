@@ -7,9 +7,6 @@ Comments and suggestions for pull requests are now being done publicly. When you
 - [@mintsoft](https://github.com/mintsoft)
 - [@kablamo](https://github.com/kablamo)
 - [@mwmiller](https://github.com/mwmiller)
-- [@moollaza](https://github.com/moollaza)
-- [@jagtalon](https://github.com/jagtalon)
-
 
 Here's how the whole process looks, from the moment you submit your pull request:
 
