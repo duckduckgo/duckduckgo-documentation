@@ -1,6 +1,6 @@
 # Review Process
 
-Comments and suggestions for pull requests are now being done publicly. When you submit a pull request, a community leader will assign themselves to your pull request and work with you to completion (i.e. your instant answer goes live on DuckDuckGo). Of course, you can always contact anyone from the community or team if you have questions. Here are the current community leaders available for questions:
+When you submit a pull request, a community leader will assign themselves to your pull request and work with you to completion (i.e. your instant answer goes live on DuckDuckGo). Of course, you can always contact anyone from the community or team if you have questions. All comments and suggestions for your pull request will be discussed publicly.
 
 - [@loganom](https://github.com/loganom)
 - [@bradcater](https://github.com/bradcater)
