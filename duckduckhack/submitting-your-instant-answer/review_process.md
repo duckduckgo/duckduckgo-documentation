@@ -1,5 +1,18 @@
 # Review Process
 
+Comments and suggestions for pull requests are now being done publicly. When you submit a pull request, a community leader will assign themselves to your pull request and work with you to completion (i.e. your instant answer goes live on http://DuckDuckGo.com). Of course, you can always contact anyone from the community or team if you have questions. Here are the current community leaders available for questions:
+
+- [@loganom](https://github.com/loganom)
+- [@bradcater](https://github.com/bradcater)
+- [@mintsoft](https://github.com/mintsoft)
+- [@kablamo](https://github.com/kablamo)
+- [@mwmiller](https://github.com/mwmiller)
+- [@moollaza](https://github.com/moollaza)
+- [@jagtalon](https://github.com/jagtalon)
+
+
+Here's how the whole process looks, from the moment you submit your pull request:
+
 1. A community leader will work with you on your pull request.
    - The community leader will ping [@chrismorast](https://github.com/chrismorast) for any design/interaction feedback.
    - The community leader will test and give feedback to your code.
