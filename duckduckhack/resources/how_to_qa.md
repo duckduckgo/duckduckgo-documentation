@@ -7,8 +7,8 @@ Please use the following guide when QA-ing instant answers:
 
 ### What's an instant answer made of?
 
-- 1. Some code
-- 2. A data source (like a website)
+1. Some code
+2. A data source (like a website)
 
 ### How do they work?
 
