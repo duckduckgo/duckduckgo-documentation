@@ -2,10 +2,10 @@
 
 When you submit a pull request, a community leader will assign themselves to your pull request and work with you to completion (i.e. your instant answer goes live on DuckDuckGo). Of course, you can always contact anyone from the community or team if you have questions. All comments and suggestions for your pull request will be discussed publicly.
 
-- [@loganom](https://github.com/loganom)
 - [@bradcater](https://github.com/bradcater)
-- [@mintsoft](https://github.com/mintsoft)
 - [@kablamo](https://github.com/kablamo)
+- [@loganom](https://github.com/loganom)
+- [@mintsoft](https://github.com/mintsoft)
 - [@mwmiller](https://github.com/mwmiller)
 
 Here's how the whole process looks, from the moment you submit your pull request:
