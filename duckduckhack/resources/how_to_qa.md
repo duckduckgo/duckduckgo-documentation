@@ -29,40 +29,40 @@ Check out some examples of what we mean:
 
 ### What we're looking for in QA
 
-**Function:** Is the information shown in the instant answer better than using a regular organic link?
-Instant Answers should always be more useful than just clicking on an organic link. If the instant answer doesn't add value to the page, then it shouldn't be approved.
-	
-- **Example test:** Search for something that will generate the instant answer and compare the information provided to what's in the organic links. Is the user more informed if they use the instant answer instead of clicking on a link? Does the instant answer make it easier to find relevant information (e.g. less or no clicks necessary)?
+**Function:** Is the instant answer actully useful?
+Instant answers should *always* be unambiguously **better** than organic links. If it doesn't add value to the page, then it should not be approved.
+
+- **Example test:** Search for something that will trigger the instant answer and compare it to the organic links. The user should benefit from having the instant answer available. In the best case scenario, the instant answer should give the user all the information they need, so they don't even have to click a link. At the very least, the instant answer should offer some different and more valuable information than the links.
 
 
-**Relevancy:** Does the instant answer return relevant data from the source?
-Instant answers should never show information that's incorrect or not relevant to the user's search. Sometimes, an instant answer will return bad information, like showing the wrong value for a calculation or the wrong Wikipedia article for an actor's name.
+**Relevancy:** Does the instant answer always provide relevant information?
+Instant answers should never show information that is incorrect or irrelevant to the user's search. If an instant answer is capable of returning bad information, it should be fixed before it is accepted. For Spice instant answers, try incorporating or tweaking the `isRelevant()` function.
 
-- **Example test:** Search for something that will generate the instant answer and compare the information provided to the original source or another source. More often than not, you can check the relevancy of an instant answer by comparing it to the original source's website (or another credible source). If the instant answer did math additions, you could verify that [5 x 8 = 40] using your calculator at home. If it showed movie information, you could verify what it showed on Wikipedia or IMDB.com
-
-
-**Triggering:** Can you think of other ways of triggering the instant answer?
-Every instant answer is triggered in some way. Most instant answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer. Sometimes, the triggers are too generic or too specific, resulting in an instant answer being shown too much or too little.
-
-- **Example test:** Can you think of any queries that should trigger this instant answer? Let's say we have an instant answer that shows movies, and it triggers with "movie". So typing in "movie thor" would trigger this instant answer, but maybe we want it to trigger on "watch thor" or "thor movies" or "film thor" or "thor film."
+- **Example test:** Search for something that will trigger the instant answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the instant answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it is correct using Wikipedia or IMdB.
 
 
-**Adult Content:** 
-Is the instant answer effectively not showing adult words or content by default (safe-search on)? There shouldn't be any adult imagery or profanity in instant answers by default.
+**Triggering:** Does the instant answer trigger when it shouldn't? Are there any queries that *should* trigger the instant answer, but don't?
+Goodie and Spice instant answers use a list of "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer when those triggers appear in a query. If they are too generic (or too specific), it will cause the instant answer to be shown in cases which are inapropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer.
 
-- **Example test:** Try looking for profanity or generating adult imagery (if the instant answer shows images). The instant answer should block all instances of adult language and adult imagery. If not, you've found a bug! 
+- **Example test:** Can you think of any queries that should or shouldn't be triggering this instant answer? Let's say we have an instant answer that shows movies, and it triggers with "movie". The query "movie thor" would trigger this instant answer, but other queries, such as "watch thor", "thor movies", "film thor" or "thor film" should also trigger this instant answer.
 
 
-**Design:** 
-Can we minimize the space used? How does it look on smaller screens? Can you break the design? (using non-UTF8 characters, long queries, etc.). Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different. 
+**Adult Content:**
+Is the instant answer effectively preventing adult words or inapropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers by default. If an instant answer is capable of displaying profanity (adult humour) make sure to set the `is_unsafe` flag. This will ensure that the instant answer only displays when the user turns off safe search. If ever in doubt, please ask community leaders or DDG Staff for help.
 
-- **Example test:** Does the instant answer do math equations? Try a really long math equation to see if the text runs past the page . Is the instant answer really crowded? Think about changing the text color or layout to clean things up, like this before  and after . Try previewing the instant answer on a mobile device and look for ways to reduce either the space occupied or the information shown. That's a great way to determine what information is absolutely necessary on both desktop and mobile.
+- **Example test:** Check if the instant answer is capable of producing profanity or adult imagery. If so, the instant answer sho
+
+
+**Design:**
+Can we minimize the space used? How does it look on smaller screens? Can you break the design? (using non-UTF8 characters, long queries, etc.). Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different.
+
+- **Example test:** Does the instant answer perform calculations? Try a really long math equation to see if the text runs past the page. Is the instant answer really crowded? Think about changing the text color or layout to clean things up, like this before  and after . Try previewing the instant answer on a mobile device and look for ways to reduce either the space occupied or the information shown. That's a great way to determine what information is absolutely necessary on both desktop and mobile.
 
 
 **Conflicts:**
 Does it conflict with other instant answers? We wouldn't want to step on the query space of other instant answers.
 
-- **Example test:** Check to see if an instant answer already exists for the new instant answer's triggers. For example, a search for "Bill Murray" currently shows Wikipedia  so if the new instant answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one instant answer is better than the other. 
+- **Example test:** Check to see if an instant answer already exists for the new instant answer's triggers. For example, a search for "Bill Murray" currently shows Wikipedia  so if the new instant answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one instant answer is better than the other.
 
 
 ## Developers (Reviewing Code):
@@ -71,13 +71,13 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 - Is this the right instant answer type? Would it be better to implement this as another IA type?
 
-- If this should really be another IA type (e.g. JavaScript heavy Goodie should probably be a Spice) it's best to note this asap so the IA can be re-implemented and a new PR should be made
+- If this should really be another IA type (e.g. JavaScript heavy Goodie should probably be a Spice) it's best to note this as early in the process as possible, since the instant answer will need to be re-implemented and a new pull-request submitted.
 
 - What other data is available from this source? (check the API response for anything really useful that's not being displayed).
 
 - Is this the best layout/design to display all the data? (For Spice, consider the various templates)
 
-- Does the API often return irrelevant results? If so, use/improve client-side relevancy handling (`DDG.isRelevant`).
+- Does the API often return irrelevant results? If so, consider using the `isRelevant()` function or if that is already in use, improve the client-side relevancy checking by making it more strict.
 
 **Regarding the code...**
 
