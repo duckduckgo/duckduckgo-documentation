@@ -62,7 +62,7 @@ Can we minimize the space used? How does it look on smaller screens? Can you bre
 **Conflicts:**
 Does it conflict with other instant answers? We wouldn't want to step on the query space of other instant answers.
 
-- **Example test:** Check to see if an instant answer already exists for the new instant answer's triggers. For example, a search for "Bill Murray" currently shows Wikipedia  so if the new instant answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one instant answer is better than the other.
+- **Example test:** Check to see if an instant answer already exists for the new instant answer's triggers. For example, [a search for "Bill Murray"](https://duckduckgo.com/?q=bill+murray) currently shows Wikipedia  so if the new instant answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one instant answer is better than the other.
 
 
 ## Developers (Reviewing Code):
@@ -107,7 +107,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 	- DDG staff should also be notified so we can get our own API Key.
 
-- Check if existing CPAN libraries can replace some functions. We can use libraries for a variety of things and you can find them all on MetaCPAN.
+- Check if existing CPAN libraries can replace some functions. We can use libraries for a variety of things and you can find them all on [MetaCPAN](https://metacpan.org/).
 
 **Low Level (JavaScript)**
 
@@ -127,8 +127,8 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 - Templates and sub-templates should be used when dealing with HTML, not jQuery.
 
-- Don't declare any global variables. JavaScript has function scope, so anything outside of a function is global (or part of the `window` object). Also, variables that were not declared with `var` are globals, too. Check out the JavaScript Garden for more information about this.
+- Don't declare any global variables. JavaScript has function scope, so anything outside of a function is global (or part of the `window` object). Also, variables that were not declared with `var` are globals, too. Check out the [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/#function.general) for more information about this.
 
-	- On this note, make sure strict mode is enabled. This helps catch the usual pitfalls in JS.
+	- On this note, make sure [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode) is enabled. This helps catch the usual pitfalls in JS.
 
 - `if` statements should always use curly braces, `{}`
