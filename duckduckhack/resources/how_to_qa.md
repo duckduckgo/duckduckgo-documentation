@@ -36,13 +36,13 @@ Instant answers should *always* be unambiguously **better** than organic links. 
 
 
 **Relevancy:** Does the instant answer always provide relevant information?
-Instant answers should never show information that is incorrect or irrelevant to the user's search. If an instant answer is capable of returning bad information, it should be fixed before it is accepted. For Spice instant answers, try incorporating or tweaking the `isRelevant()` function.
+Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrellevant information (e.g. "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words "dark" and "knight" are in the result movie's title) then relevancy must me improved before the instant answer is accepted. For Spice instant answers, try incorporating or tweaking the `isRelevant()` function.
 
 - **Example test:** Search for something that will trigger the instant answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the instant answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it is correct using Wikipedia or IMdB.
 
 
 **Triggering:** Does the instant answer trigger when it shouldn't? Are there any queries that *should* trigger the instant answer, but don't?
-Goodie and Spice instant answers use a list of "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer when those triggers appear in a query. If they are too generic (or too specific), it will cause the instant answer to be shown in cases which are inapropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer.
+Goodie and Spice instant answers use a list of "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer when those triggers appear in a query. If they are too generic, it will cause the instant answer to be shown in cases which are inapropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an instant answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
 
 - **Example test:** Can you think of any queries that should or shouldn't be triggering this instant answer? Let's say we have an instant answer that shows movies, and it triggers with "movie". The query "movie thor" would trigger this instant answer, but other queries, such as "watch thor", "thor movies", "film thor" or "thor film" should also trigger this instant answer.
 
@@ -54,9 +54,9 @@ Is the instant answer effectively preventing adult words or inapropriate content
 
 
 **Design:**
-Can we minimize the space used? How does it look on smaller screens? Can you break the design? (using non-UTF8 characters, long queries, etc.). Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different.
+Can we minimize the space used? How does it look on smaller screens? Can you break the design? (e.g. using non-UTF8 characters, long queries). Does the design and layout make sense given they type of information? Does it look and feel like other instant answers? (it should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different.
 
-- **Example test:** Does the instant answer perform calculations? Try a really long math equation to see if the text runs past the page. Is the instant answer really crowded? Think about changing the text color or layout to clean things up, like this before  and after . Try previewing the instant answer on a mobile device and look for ways to reduce either the space occupied or the information shown. That's a great way to determine what information is absolutely necessary on both desktop and mobile.
+- **Example test:** Test the instant answer with a few different queries. Make sure the most important information is easy to identify and understand. The information shouldn't be too crowded or too sparse. Try previewing the instant answer on a mobile device (phone, tablet) and check if the design breaks or if too much vertical space is used. Ideally an instant answer on mobile screens should ***not*** push organic links off the page. If this is the case, look for ways to either increase the information density or reduce the information shown &mdash; this is a great way to determine what information is absolutely necessary and deserves to be shown.
 
 
 **Conflicts:**
