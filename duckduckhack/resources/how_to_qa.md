@@ -93,7 +93,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 	- Consider `is_cached` and `proxy_cache_valid`.
 
-- If an instant answer is capable of displaying profanity or questionable adult humour, make sure the `is_unsafe` flag is.
+- If an instant answer is capable of displaying profanity or questionable adult humour, make sure the `is_unsafe` flag is set.
 
 **Low Level (Perl)**
 
