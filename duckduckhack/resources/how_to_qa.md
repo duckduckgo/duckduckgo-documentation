@@ -32,7 +32,7 @@ Instant answers should *always* be unambiguously **better** than organic links. 
 
 
 **Relevancy:** Does the instant answer always provide relevant information?
-Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrelevant information (e.g. "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the instant answer is accepted and goes live. For Spice instant answers, try incorporating or tweaking the `isRelevant()` function.
+Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrelevant information (e.g. "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the instant answer is accepted and goes live.
 
 - **Example test:** Search for something that will trigger the instant answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the instant answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMdB.
 
@@ -44,7 +44,7 @@ Goodie and Spice instant answers use a list of, "trigger words" (or phrases) tha
 
 
 **Adult Content:**
-Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers, by default. If an instant answer is capable of displaying profanity or questionable adult humour, make sure to set the `is_unsafe` flag. This will ensure that the instant answer only displays when the user turns off safe search. If ever in doubt, please ask community leaders or DDG staff for help.
+Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers, by default. If an instant answer is capable of displaying profanity or questionable adult humour, it should not be approved (if it's vulgar or distateful), or it can be set to only show when safe search is off.If ever in doubt, please ask community leaders or DDG staff for help.
 
 - **Example test:** Check if the instant answer is capable of producing profanity or adult imagery by searching for relevant (profane) keywords or risqué content. If so, the instant answer should block all instances of adult language and adult imagery. If not, you've found a bug! 
 
@@ -92,6 +92,8 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 - Are the caching parameters correct? Should we *not* cache the API responses? (they are cached by default)
 
 	- Consider `is_cached` and `proxy_cache_valid`.
+
+- If an instant answer is capable of displaying profanity or questionable adult humour, make sure the `is_unsafe` flag is.
 
 **Low Level (Perl)**
 
