@@ -50,7 +50,7 @@ Is the instant answer effectively preventing adult words or inappropriate conten
 
 
 **Design:**
-Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters, or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other instant answers (it should). Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live instant answers as an example.
+Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters, or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other instant answers? (It should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live instant answers as an example.
 
 - **Example test:** Test the instant answer with a few different queries. Make sure the most important information is easy to identify and understand. The information shouldn't be too crowded or too sparse. Try previewing the instant answer on a mobile device (phone, tablet) and check if the design breaks or if too much vertical space is used. Ideally, an instant answer on mobile screens should ***not*** push organic links off the page. If this is the case, look for ways to either increase the information density or reduce the information shown &mdash; this is a great way to determine what information is absolutely necessary and deserves to be shown.
 
