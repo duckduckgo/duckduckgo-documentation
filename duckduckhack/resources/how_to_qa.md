@@ -48,7 +48,7 @@ Goodie and Spice instant answers use a list of "trigger words" (or phrases) that
 
 
 **Adult Content:**
-Is the instant answer effectively preventing adult words or inapropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers by default. If an instant answer is capable of displaying profanity (adult humour) make sure to set the `is_unsafe` flag. This will ensure that the instant answer only displays when the user turns off safe search. If ever in doubt, please ask community leaders or DDG Staff for help.
+Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers by default. If an instant answer is capable of displaying profanity (adult humour) make sure to set the `is_unsafe` flag. This will ensure that the instant answer only displays when the user turns off safe search. If ever in doubt, please ask community leaders or DDG Staff for help.
 
 - **Example test:** Check if the instant answer is capable of producing profanity or adult imagery. If so, the instant answer sho
 
