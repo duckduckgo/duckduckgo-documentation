@@ -40,17 +40,17 @@ Instant answers should only show information that is correct and relevant to the
 **Triggering:** Does the instant answer trigger when it shouldn't? Are there any queries that *should* trigger the instant answer, but don't?
 Goodie and Spice instant answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer when those triggers appear in a search query. If they are too generic, it will cause the instant answer to be shown in cases which are inappropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an instant answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
 
-- **Example test:** Can you think of any queries that should or shouldn't be triggering this instant answer? Let's say we have an instant answer that shows movies, and it triggers with the term, "movie". The query, "movie thor" would trigger this instant answer, but other queries, such as, "watch thor", "thor movies", "film thor" or "thor film" should also trigger this instant answer.
+- **Example test:** Can you think of any queries that should or shouldn't be triggering this instant answer? Let's say we have an instant answer that shows movies, and it triggers with the term, "movie". The query, "movie Thor" would trigger this instant answer, but other queries, such as, "watch Thor", "Thor movies", "film Thor" or "Thor film" should also trigger this instant answer.
 
 
 **Adult Content:**
-Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers, by default. If an instant answer is capable of displaying profanity or questionable adult humour, it should not be approved (if it's vulgar or distateful), or it can be set to only show when safe search is off.If ever in doubt, please ask community leaders or DDG staff for help.
+Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers, by default. If an instant answer is capable of displaying profanity or questionable adult humor, it should not be approved (if it's vulgar or distasteful), or it can be set to only show when safe search is off. If ever in doubt, please ask community leaders or DDG staff for help.
 
 - **Example test:** Check if the instant answer is capable of producing profanity or adult imagery by searching for relevant (profane) keywords or risqué content. If so, the instant answer should block all instances of adult language and adult imagery. If not, you've found a bug! 
 
 
 **Design:**
-Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters, or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other instant answers? (It should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live instant answers as an example.
+Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other instant answers? (It should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live instant answers as an example.
 
 - **Example test:** Test the instant answer with a few different queries. Make sure the most important information is easy to identify and understand. The information shouldn't be too crowded or too sparse. Try previewing the instant answer on a mobile device (phone, tablet) and check if the design breaks or if too much vertical space is used. Ideally, an instant answer on mobile screens should ***not*** push organic links off the page. If this is the case, look for ways to either increase the information density or reduce the information shown &mdash; this is a great way to determine what information is absolutely necessary and deserves to be shown.
 
@@ -93,7 +93,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 	- Consider `is_cached` and `proxy_cache_valid`.
 
-- If an instant answer is capable of displaying profanity or questionable adult humour, make sure the `is_unsafe` flag is set.
+- If an instant answer is capable of displaying profanity or questionable adult humor, make sure the `is_unsafe` flag is set.
 
 **Low Level (Perl)**
 
@@ -101,7 +101,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 - Long lists of trigger words/phrases should be moved to a `triggers.txt` file (in the share directory) and `slurp()` should be used to convert them into a list.
 
-- API Keys should not be merged in, the proper place-holder syntax should be used `{{ENV{DDG_SPICE_<SPICE_NAME>_APIKEY}}}`
+- API Keys should not be merged in, the proper placeholder syntax should be used `{{ENV{DDG_SPICE_<SPICE_NAME>_APIKEY}}}`
 
 	- DDG staff should also be notified so we can get our own API Key.
 
