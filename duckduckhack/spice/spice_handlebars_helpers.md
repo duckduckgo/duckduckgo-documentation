@@ -1,7 +1,7 @@
 # Spice Helpers (Handlebars)
 
 
-###concat
+###{{#concat}}
 
 **Block Helper**
 
@@ -31,7 +31,7 @@ when `context` is:
 **conj**:  *string*,  **[optional]** Final separator, preceeds last item. Default: `''`
 
 
-###condense
+###{{#condense}}
 
 **Block Helper**
 
@@ -56,7 +56,7 @@ the truncation string to the output
 **{string**,  truncation **[optional]** The truncation string. Default: `'...'`
 
 
-###stripHTML
+###{{stripHTML}}
 
 Strips HTML tags/elements from text
 
@@ -65,7 +65,7 @@ Example:
 `{{stripHTML stringWithHTML}}`
 
 
-###loop
+###{{#loop}}
 
 **Block Helper**
 
@@ -83,7 +83,7 @@ Example:
 ```
 
 
-###each
+###{{#each}}
 
 **Block Helper**
 
@@ -116,7 +116,7 @@ will only do the first five items
 **to**:  *number*,  **[optional]** Index to end on. Default: array/object length
 
 
-###keys
+###{{#keys}}
 
 **Block Helper**
 
@@ -132,7 +132,7 @@ Example:
 ```
 
 
-###include
+###{{include}}
 
 Loads the specified Handlebars template and applies it with
 the current context
@@ -157,7 +157,7 @@ Identical to:
 **with**:  *string*,  **[optional]** Context to use when including the template. Supports simple dot paths.
 
 
-###plural
+###{{plural}}
 
 Returns the value of `context` (assuming `context` is a **number**)
 and appends the singular or plural form of the specified word,
@@ -180,7 +180,7 @@ Will produce:
 **delimiter**:  *string*,  **[optional]** Format the number with the `numFormat` helper
 
 
-###numFormat
+###{{numFormat}}
 
 Delimits a number or string with multiple numbers,
 using commas or given delimiter
@@ -201,7 +201,7 @@ Example:
 
 **delimiter**:  *string*,  **[optional]** The delimiter string. Default: `','`
 
-###imageProxy
+###{{imageProxy}}
 
 Rewrite a URL as a DuckDuckGo image redirect
 
@@ -212,7 +212,7 @@ Example:
 produces: `/iu/?u={{imageURL}}`
 
 
-###rt
+###{{#rt}}
 
 **Block Helper**
 
@@ -247,7 +247,7 @@ produces:
 ```
 
 
-###rd
+###{{#rd}}
 
 **Block Helper**
 
@@ -286,7 +286,7 @@ produces:
 ```
 
 
-###rv
+###{{#rv}}
 
 **Block Helper**
 
@@ -312,7 +312,7 @@ is equivalent to:
 `{{#if abstract}} {{#rd "the abstract is"}} {{abstract}} {{/rd}} {{/if}}`
 
 
-###trim
+###{{trim}}
 
 Removes leading and trailing spaces from text
 
@@ -321,7 +321,7 @@ Example:
 `{{trim stringWithSpaces}}`
 
 
-###ellipsis
+###{{ellipsis}}
 
 Shortens a string by removing words until string length is <= `limit` and
 appends an ellipsis ('...') to the output
