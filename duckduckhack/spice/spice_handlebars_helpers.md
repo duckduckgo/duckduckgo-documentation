@@ -1,101 +1,339 @@
 # Spice Helpers (Handlebars)
 
-### {{#concat}}
 
-A block iterator that separates elements with an item separator and a
-conjunction for the last item
+###concat
 
-#### Input
+**Block Helper**
 
-Array of Objects or Strings
+Concatenates all the elements in a collection
 
-#### Parameters
+An optional item separator can be appended to
+each item and an optional conjunction can be
+used for the last item.
 
-- `sep` (optional) &mdash; item separator
-    -   default value: `''`
-- `conj` (optional) &mdash; conjunction for last item
-    -   default value: `''`
+Example:
 
-#### Usage
-
-```handlebars
-{{#concat arrayOfObjects sep="," conj="and"}}
-    <a href="{{url}}">{{name}}</a>
+```html
+{{#concat context sep="," conj="and"}}
+{{this}}
 {{/concat}}
 ```
 
-```handlebars
-{{#concat arrayOfStrings sep="," conj="and"}}
-    {{this}}
-{{/concat}}
+when `context` is:
+- `['a']`           returns:  `a`
+- `['a', 'b']`      returns:  `a and b`
+- `['a', 'b', 'c']` returns:  `a, b and c`
+
+**Parameters**
+
+**sep**:  *string*,  **[optional]** Item separator. Default: `''`
+
+**conj**:  *string*,  **[optional]** Final separator, preceeds last item. Default: `''`
+
+
+###condense
+
+**Block Helper**
+
+Shortens a string
+
+An optional maximum string length can be provided if preferred.
+
+Example:
+
+`{{condense myString maxlen="135" truncation="..."}}`
+
+This will output the value of `myString` up to a maximum of 135 characters
+(not including the length of the truncation string) and then append
+the truncation string to the output
+
+**Parameters**
+
+**maxlen**:  *number*,  **[optional]** Maximum allowed string length. Default: `10`
+
+**fuzz**:  *number*,  The allowable deviation from the maxlen, used to allow a sentence/word to complete if it is less than fuzz characters longer than the maxlen
+
+**{string**,  truncation **[optional]** The truncation string. Default: `'...'`
+
+
+###stripHTML
+
+Strips HTML tags/elements from text
+
+Example:
+
+`{{stripHTML stringWithHTML}}`
+
+
+###loop
+
+**Block Helper**
+
+Counts from zero to the value of `context` (assuming `context` is a **number**)
+applying the content of the block each time
+
+Note: A maximum of 100 loops is allowed.
+
+Example:
+
+```html
+{{#loop star_rating}}
+<img src="{{star}}" class="star"></span>
+{{/loop}}
 ```
 
-------
-### {{#condense}}
 
-Shortens input string to given `maxlen` and appends `truncation` to shortened string. If input string is already shorter than `maxlen`, simply returns input string
+###each
 
-#### Input
+**Block Helper**
 
-String
+Extends Handlebars' built-in `{{each}}`
+lets you specify optional inclusive first and last indices
+to iterate between
 
-#### Parameters
+Example:
 
-- `maxlen` &mdash; maximum string length
-- `fuzz` (optional) &mdash; allowable deviation from the maxlen, allows a sentence/word to complete if it is less than `fuzz` character
-    -   default value: `0`
-- `truncation` (optional) &mdash; truncation string, appended to shortened string
-    -   default value: `...`
+`{{#each myArray from="2" to="5"}} ... {{/each}}`
 
-#### Usage
+This will limit the iteration to array indices 2, 3 and 4.
 
-```handlebars
-{{condense myString maxlen="135" truncation="..."}}
+If `to` is not given, defaults to array (or object) length:
+
+`{{#each myArray from="2"}} ... {{/each}}`
+
+will skip the first two items
+
+If `from` is not given, defaults to 0:
+
+`{{#each myArray to="5"}} ... {{/each}}`
+
+will only do the first five items
+
+**Parameters**
+
+**from**:  *number*,  **[optional]** Index to start from. Default: `0`
+
+**to**:  *number*,  **[optional]** Index to end on. Default: array/object length
+
+
+###keys
+
+**Block Helper**
+
+Iterates over the properties of an object and provides
+a new object containing the "key" and "value" for each
+
+Example:
+
+```html
+{{#keys myObject}}
+{{key}} : {{value}}
+{{/keys}}
 ```
 
 
-------
-### {{#stripHTML}}
+###include
 
-Removes all HTML tags and elements from input string
+Loads the specified Handlebars template and applies it with
+the current context
 
-#### Input
+Note: There is no recursive cycle detection! **Be careful**.
 
-String
+Example:
 
-#### Parameters
+`{{include ../myTemplate}}`
 
-None
+Applies the template `myTemplate` using `this` as the data context
 
-#### Usage
+`{{include ../myTemplate with="x"}}`
 
-```handlebars
-{{stripHTML text}}
+Applies the template `myTemplate` using `this.x` as the data context.
+Identical to:
+
+`{{#with x}} {{include ../template}} {{/with}}`
+
+**Parameters**
+
+**with**:  *string*,  **[optional]** Context to use when including the template. Supports simple dot paths.
+
+
+###plural
+
+Returns the value of `context` (assuming `context` is a **number**)
+and appends the singular or plural form of the specified word,
+depending on the value of `context`
+
+Example:
+
+`{plural star_rating singular="star" plural="stars"}}`
+
+Will produce:
+- `{{star_rating}} star`  if the value of `star_rating` is `1`, or
+- `{{star_rating}} stars` if `star_rating` > `1`
+
+**Parameters**
+
+**singular**:  *string*,  Indicates the singular form to use
+
+**plural**:  *string*,  Indicates the plural form to use
+
+**delimiter**:  *string*,  **[optional]** Format the number with the `numFormat` helper
+
+
+###numFormat
+
+Delimits a number or string with multiple numbers,
+using commas or given delimiter
+
+Note: This supports integers and decimal numbers.
+
+Credit: This function was borrowed from
+http://cwestblog.com/2011/06/23/javascript-add-commas-to-numbers/
+
+Example:
+
+```html
+{{numFormat num}}
+{{numFormat num delimiter="." }}
+```
+
+**Parameters**
+
+**delimiter**:  *string*,  **[optional]** The delimiter string. Default: `','`
+
+###imageProxy
+
+Rewrite a URL as a DuckDuckGo image redirect
+
+Example:
+
+`{{imageProxy imageURL}}`
+
+produces: `/iu/?u={{imageURL}}`
+
+
+###rt
+
+**Block Helper**
+
+Produces a standardized key-value pair. Usually used with `{{#rd}}` (see below)
+
+Returns a `<div>` containing either 1 or 2 `<span>` tags (if `context` is given),
+which have special CSS classes. The value of `context` will be used for the key.
+
+Example:
+
+`{{#rt}} {{itemTitle}} {{/rt}}`
+
+produces:
+
+```html
+<div class="rd_title">
+<span class="rd_value">{{itemTitle}}</span>
+</div>
+```
+
+and
+
+`{{#rt "Title"}} {{itemTitle}} {{/rt}}`
+
+produces:
+
+```html
+<div class="rd_title">
+<span class="rd_key">Title:</span>
+<span class="rd_value">{{itemTitle}}</span>
+</div>
 ```
 
 
-------
-### {{#loop}}
+###rd
 
-Counts from zero to the value of obj, assuming obj is an object
+**Block Helper**
 
-#### Input
+Produces a standardized key-value pair
 
-#### Parameters
+Returns a `<div>` containing 2 `<span>` tags, which have special CSS classes.
+When a `context` is *not* given, then name of the variable in the block is used as the key.
+When a `context` is given, that will be used as the key.
+
+Note: This is intended to be used for a collection of "key-value" data.
+
+Example:
+
+`{{#rd}} {{score}} {{/rd}}`
+
+produces:
+
+```html
+<div class="rd_normal">
+<span class="rd_value">Score:</span>
+<span class="rd_value">{{score}}</span>
+</div>
+```
+
+and
+
+`{{#rd "Description"}} {{item_description}} {{/rd}}`
+
+produces:
+
+```html
+<div class="rd_normal">
+<span class="rd_key">Description:</span>
+<span class="rd_key">{{item_description}}</span>
+</div>
+```
 
 
-#### Usage
+###rv
+
+**Block Helper**
+
+Shortcut for `{{#rd}}`, produces a standardized key-value pair,
+**if the named element exists**, otherwise returns nothing
+
+Example:
+
+Form 1:
+
+`{{rv "abstract"}`
+
+is equivalent to:
+
+`{{#if abstract}} {{#rd "Abstract"}} {{abstract}} {{/rd}} {{/if}}`
+
+Form 2 (Title variant):
+
+`{{rv "the abstract is" val="abstract"}}`
+
+is equivalent to:
+
+`{{#if abstract}} {{#rd "the abstract is"}} {{abstract}} {{/rd}} {{/if}}`
 
 
+###trim
 
-------
-### {{# }}
+Removes leading and trailing spaces from text
 
+Example:
 
-
-#### Input
-
-#### Parameters
+`{{trim stringWithSpaces}}`
 
 
-#### Usage
+###ellipsis
+
+Shortens a string by removing words until string length is <= `limit` and
+appends an ellipsis ('...') to the output
+
+Note: It automatically appends any closing tag if one is missing.
+
+Example:
+
+`{{ellipsis title 50}}`
+
+**Parameters**
+
+**text**:  *string*,  text to shorten
+
+**limit**:  *number*,  maximum length of shortened string

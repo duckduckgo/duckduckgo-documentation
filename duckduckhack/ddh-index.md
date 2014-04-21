@@ -24,9 +24,9 @@
   - [Spice Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/spice_tests.md)
   - [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_backend.md)
   - [Advanced Frontend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_frontend.md)
-  - [DDG Methods](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_ddg_methods.md)
+  - [JavaScript API Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_js_api.md)
   - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_handlebars_helpers.md)
-  - [Spice Helper Functions (Perl)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_helper_functions.md)
+  - [Perl API Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_perl_api.md)
   - [Spice Attributes](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_attributes.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#spice)
 
