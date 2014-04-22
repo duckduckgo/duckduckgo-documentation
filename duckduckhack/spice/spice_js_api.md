@@ -3,7 +3,7 @@
 ## DDG Namespace
 
 
-###get_query_encoded()
+### get_query_encoded()
 
 Provides the value of `DDG.get_query` as a URIEncoded string
 
@@ -11,7 +11,7 @@ Note: The query is trimmed (i.e. no leading or trailing spaces) and
 has any extra spaces within the query removed
 
 
-###get_query()
+### get_query()
 
 Provides the search query, as displayed in the search box
 
@@ -19,7 +19,7 @@ Note: The query is trimmed (i.e. no leading or trailing spaces) and
 has any extra spaces within the query removed
 
 
-###get_is_safe_search()
+### get_is_safe_search()
 
 Indicates if "safe search" is on, for the current query
 
@@ -28,7 +28,7 @@ Indicates if "safe search" is on, for the current query
 *boolean*,  Either `1` or `0` (on/off)
 
 
-###get_asset_path(spice_name, asset)
+### get_asset_path(spice_name, asset)
 
 Provides the path to the given asset, for the specified Spice Instant Answer
 
@@ -43,7 +43,7 @@ Example:
 **asset**:  *string*,  The filename of the asset, including extension
 
 
-###getRelevants(p)
+### getRelevants(p)
 
 Provides an array of relevant strings, given an input array of comparator strings
 
@@ -66,7 +66,7 @@ Only the `candiates` array is required, the other parameters are optional. `num`
 **p**:  *object*,  An object containing an array of candidate strings and other optional parameters to be passed along to `DDG.isRelevant`, including: `num` - the maximum amount of results to return, `skipArray`, `minWordLength`, and `strict`
 
 
-###isRelevant(candidate, skipArray, minWordLength, strict)
+### isRelevant(candidate, skipArray, minWordLength, strict)
 
 Determines if the candidate string is relevant to **the search query**
 
@@ -81,7 +81,7 @@ Determines if the candidate string is relevant to **the search query**
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
 
-###stringsRelevant(s1, s2, skipArray, minWordLength, strict)
+### stringsRelevant(s1, s2, skipArray, minWordLength, strict)
 
 Determines if the candidate string is relevant to the given comparator string
 
@@ -98,7 +98,7 @@ Determines if the candidate string is relevant to the given comparator string
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
 
-###parse_link(string, wanted)
+### parse_link(string, wanted)
 
 Parses a string containing an anchor tag, ('<a href="URL">text</a>'), and returns the URL or text
 as indicated
@@ -120,7 +120,7 @@ Example:
 **wanted**:  *string*,  **[optional]** The piece of the link to return Default: `'url'`
 
 
-###getDateFromString(date)
+### getDateFromString(date)
 
 Provides a JavaScript `Date()` object for the given Date string
 
@@ -129,7 +129,7 @@ Provides a JavaScript `Date()` object for the given Date string
 **date**:  *string*,  Date string in UTC format with time (yyyy-mm-ddThh:mm:ss) or without (yyyy-mm-dd)
 
 
-###strip_html(html)
+### strip_html(html)
 
 Removes HTML tags/characters from a string
 
@@ -137,7 +137,7 @@ Removes HTML tags/characters from a string
 
 **html**:  *string*,  String containing HTML
 
-###getOrdinal(number)
+### getOrdinal(number)
 
 Provides the proper ordinal noun for a given number
 
@@ -150,7 +150,7 @@ Example:
 **number**:  *number*,  The number you need an ordinal for
 
 
-###strip_non_alpha(str)
+### strip_non_alpha(str)
 
 Removes Non-Alpha characters (`\W`) from a string
 
@@ -158,7 +158,7 @@ Removes Non-Alpha characters (`\W`) from a string
 
 **str**:  *sting*,  The input string to strip
 
-###capitalize(str)
+### capitalize(str)
 
 Capitalizes the first letter of the given string
 
@@ -167,7 +167,7 @@ Capitalizes the first letter of the given string
 **str**:  *string*,  String to capitalize
 
 
-###capitalizeWords(str)
+### capitalizeWords(str)
 
 Capitalizes the first letter of each word in the given string
 
@@ -176,7 +176,7 @@ Capitalizes the first letter of each word in the given string
 **str**:  *string*,  String to capitalize
 
 
-###getProperty(obj, pathname)
+### getProperty(obj, pathname)
 
 Provides the member of an object using dot separated path
 
@@ -205,7 +205,28 @@ Example:
 ## Spice Namespace
 
 
-###getDOM(id)
+### add(ops)
+
+Add a Spice instant answer to the Duckbar and render it
+
+Usually an anonymous object is declared inside the call to `Spice.add()`. The only required properties of this object are `id` and `name` however there are several optional properties which are often included as well.
+
+Ops Properties:
+- id [required]: The tab ID to render into
+- name [optional]: The name to display on the duckbar tab
+- data [required]: The actual data to render, either a single object, or an array of objects
+- meta [optional]: Meta information about the data/Spice to be rendered
+- normalize [optional]: A function which takes an object as input (i.e. API result item), and returns a "normalized" object containing all the necessary attributes for the template being used
+- view [optional]: The view to be use for the tab (Default: `'Base'` for single items and `'Tiles'` for multiple items)
+- templates [optional]: An object specifying which templates to use (Choices include: `'item'`, `'detail'`, `'item_detail'`)
+- relevancy [optional]: An object specifying an optional skip array (for `DDG.isRelevant()`) and primary sorting keys
+
+**Parameters**
+
+**ops**:  *object*,  The object containing all necessary information for creating a Spice instant answer
+
+
+### getDOM(id)
 
 Provides a scoped DOM for a given Spice id
 
@@ -224,7 +245,7 @@ Example:
 *object*, A jQuery object, matching the selector that targets the given Spice id
 
 
-###registerHelper(id, fn)
+### registerHelper(id, fn)
 
 Provides access to `Handlebars.registerHelper()` so you can register helpers for your Spice
 
