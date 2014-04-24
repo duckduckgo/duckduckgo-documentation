@@ -166,7 +166,7 @@ The instant answer system works like this at the highest level:
 
 - If a Spice is triggered, we run its `handle` function.
 
-- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that URL. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our JavaScript callback function (which will now define!)
+- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that URL. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our JavaScript callback function (which we'll now define!)
 
 ------
 
@@ -225,7 +225,7 @@ Let's go through it line-by-line:
     "use strict";
 ```
 
-We begin by invoking an anonymous, immediate function, which takes an object as input, i.e. the environment, and then we turn on [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode). You don't really need to understand the purpose of these first two lines to create a Spice instant answer, however they're both necessary and must be included.
+We begin by invoking an anonymous, immediate function, which takes an object as input (i.e. the environment) and then we turn on JavaScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode). You don't really need to understand the purpose of these first two lines to create a Spice instant answer, however they're both necessary and must be included.
 
 ```javascript
     env.ddg_spice_npm = function (api_result) {
@@ -284,6 +284,13 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
     + `detail` is used to specify the template for the detail pane, which is the area that will contain all the text and content created by your instant answer. The input can either be a string, representing the name of a predefined template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
 
     In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is trigger. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
+
+```javascript
+    }
+}(this));
+```
+
+Lastly, we close our callback function expression as well as our anonymous, immediate function and we also pass along the current scope, via `this`, as the input to our function. Hence, `env` becomes the object represent by `this`.
 
 ------
 
