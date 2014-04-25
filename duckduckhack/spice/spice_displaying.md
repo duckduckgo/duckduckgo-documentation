@@ -20,9 +20,9 @@ The name that will be used for your Spice's AnswerBar tab. Generally it can be a
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
 
 
-# Instant Answer Meta Data (For the MetaBar)
+# Instant Answer Meta Data
 
-The following options are used to define elements of the MetaBar including the "More at" link. The are all attributes of the `meta: {}` object.
+The following options are used to define elements of the **MetaBar** including the "More at" link. They are all attributes of the `meta: {}` object.
 
 ## searchTerm {string}
 
@@ -163,30 +163,78 @@ An alternatve `detail` template to be used when a tile view contains a **single*
 
 # Relevancy
 
-If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items) the relevancy block can be used which utilizes the `DDG.isRelevant()` function to ensure the relevancy of each item. It can also be used to de-duplicate the returned items if required.
+If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the relevancy attribute can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
+
+In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. However, if your Spice is capable of dealing with differnt types of queries, where different relevany checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy, however the app's category does and so two separate relevancy blocks, `primary` and `category` are used to define the different relevancy constraints.
+
+## Relevancy Blocks
+
+A relevancy block is comprised of an array of simple objects. For each object, the attributes are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
+
+```javascript
+// First we provide the name for the relevancy block, "primary"
+primary: [
+
+    { required: 'icon_url' },
+    // "required" means the item must have a defined attribute matching the
+    // given name, in this case and "icon_url" must be defined for each Quixey
+    // item
+    //
+    // Note: "required" only ensures the presence of an attribute. It does NOT
+    // perform a relevancy check
+
+    { key: 'name', strict: true },
+    // "key" indicates an attribute which will be checked for relevancy. If
+    // the given key is determined to be relevant, the item as a whole is
+    // considered relevant and no other keys in the relevancy block are
+    // checked for the current item
+    //
+    // The "strict" key allows you to turn on the "strict mode"
+    // for DDG.isRelevant
+
+    { key: 'short_desc' }
+    // this is an extra "key" which servers as a fallback. This means if
+    // either the 'name' or 'short_desc' or relevant the item is consdiered
+    // relevant
+],
+
+// here we provide a secondary relevancy block with a chosen name of "category"
+category: [
+    { required: 'icon_url' },
+    { key: 'name' },
+    { key: 'short_desc' },
+    { key: 'custom.features.category', match: category_regexp }
+    // the "match" key allows you to specify a regular expression which the
+    // given "key" must match
+    //
+    // Note: "match" only ensures the attribute matches the given regex. It
+    // does NOT perform a relevancy check
+],
+```
+
+**\*\*Note:** The relevancy checking is done using the `DDG.isRelevant()` function.
 
 ## type {string}
 
-Specify which relevancy block to use. If no value is provided, the default 'primary' block will be used.
+The name of the relevancy block to use. If no value is provided, the default `primary` block will be used.
 
-<!-- NEEDS MORE DESCRIPTION -->
+For example, the Quixey spice determines the `type` based on the query. If the query matches against our category regex (i.e. the query contains a category word), we set `type` to "category", otherwise we use "primary".
 
 ## skip_words {array}
 
-A list of words to ***skip*** when comparing the specified text against the current query. Generally these words should include any trigger words for your Spice.
+A list of words to ***skip*** when comparing the specified text against the current query. Generally these words should include any trigger words for your Spice. The skip words list is **not** dependent on the chosen relevancy block.
 
-## primary {array}
+## primary {array} [required when using relevancy]
 
-List of relevancy terms
+The list of relevancy terms for this particular relevancy block
 
-<!-- NEEDS MORE DESCRIPTION -->
+## <additional_relelvancy_block> {array}
+
+An additional list of relevancy terms, using the same format as `primary`. This object (and other relevancy blocks) can be named arbitrarily.
 
 ## dup {string}
 
-Field to detect duplicate items, can be a dot path
-
-<!-- NEEDS MORE DESCRIPTION -->
-<!-- WHAT IF YOU WANT TO DE-DUPE MULTIPLE ITEMS?-->
+This indicates which attribute should be used to check for de-duplication. The given string supports dot path formatting, e.g. "item.foo.bar"
 
 
 # Sorting
