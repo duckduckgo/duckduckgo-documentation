@@ -8,9 +8,9 @@
 - **Goodie**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
-  - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
   - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_testing_triggers.md)
   - [Goodie Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_tests.md)
+  - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
   - [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 

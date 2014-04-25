@@ -21,26 +21,26 @@
 
 	"goodie_basic_tutorial.md": {
 		"prev": ["goodie_overview.md"],
-		"next": ["goodie_triggers.md"]
-	},
-
-	"goodie_triggers.md": {
-		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_testing_triggers.md"]
 	},
 
 	"goodie_testing_triggers.md": {
-		"prev": ["goodie_triggers.md"],
+		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_tests.md"]
 	},
 
 	"goodie_tests.md": {
-		"prev": ["testing_triggers.md"],
+		"prev": ["goodie_testing_triggers.md"],
+		"next": ["goodie_triggers.md"]
+	},
+
+	"goodie_triggers.md": {
+		"prev": ["goodie_tests.md"],
 		"next": ["goodie_advanced_handle_functions.md"]
 	},
 
 	"goodie_advanced_handle_functions.md": {
-		"prev": ["goodie_tests.md"],
+		"prev": ["goodie_triggers.md"],
 		"next": ["faq.md#goodie"]
 	},
 
