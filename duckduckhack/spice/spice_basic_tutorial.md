@@ -156,17 +156,19 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 ```
 
-And that's it! At this point you have a working Spice instant answer. 
+And that's it! At this point you have written a functional backend for a Spice instant answer. Now, the frontend components need to written so that we can display our instant answer result on the page.
+
 ## Recap (So Far)
+
 The instant answer system works like this at the highest level:
 
-- We break the query (search terms) down into separate words, which is a process that happens in the background.
+- First, DuckDuckGo breaks down the query (search terms) into separate words.
 
-- We see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**npm**".
+- Then we see if any of those words or groups of words are **triggers** for any instant answers. These **triggers** are defined by the developer when creating an instant answer. In the example we used above, the trigger word is "**npm**".
 
 - If a Spice is triggered, we run its `handle` function.
 
-- If the Spice's handle function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that URL. When the API responds with a JSON object, it is wrapped, making the JSON object the input to our JavaScript callback function (which we'll now define!)
+- If the Spice's `handle` function returns a value, it is used to replace our **$1** placeholder in the **spice to** URL, and then a request is made to that URL. When the API responds with a JSON object, it is wrapped in a function call, making the JSON object the input to our JavaScript callback function.
 
 ------
 
@@ -204,7 +206,6 @@ The final **npm.js** will look like this:
             name: "NPM",
             data: api_result,
             meta: {
-                itemType: api_result.name + ' (' + api_result.version + ')',
                 sourceName: "npmjs.org",
                 sourceUrl: 'http://npmjs.org/package/' + api_result.name
             },
@@ -218,6 +219,8 @@ The final **npm.js** will look like this:
 
 Let's go through it line-by-line:
 
+## Invoke an Immediate Function
+
 ###### npm.js (continued)
 
 ```javascript
@@ -225,13 +228,17 @@ Let's go through it line-by-line:
     "use strict";
 ```
 
-We begin by invoking an anonymous, immediate function, which takes an object as input (i.e. the environment) and then we turn on JavaScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode). You don't really need to understand the purpose of these first two lines to create a Spice instant answer, however they're both necessary and must be included.
+We begin by invoking an anonymous, immediate function, which takes an object as input (i.e. the environment) and then we turn on JavaScript's [Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode). You don't really need to understand the purpose of these first two lines to create a Spice instant answer, however they're both necessary and must be included.
+
+## Define our Callback Function
 
 ```javascript
     env.ddg_spice_npm = function (api_result) {
 ```
 
 We now define our callback function, `ddg_spice_npm`, using a function expression and set it as an attribute of the `env` object that was passed into our anonymous function. The name we specify here ***must*** match the name of our Spice package, which we discussed above. We also specify that the callback function takes one input parameter, which we have named `api_result`. All Spice callback functions should look like this. The name for the input should **always** be called `api_result`. This is part of our naming convention and helps to standardize the JavaScript code.
+
+## Validate our API Response
 
 ###### npm.js (continued)
 
@@ -246,6 +253,8 @@ Here, we specify that if the `error` attribute in the API result is defined, we 
 In other cases, because most APIs return an array of results, a similar check should be made to see if the results array has a length greater than `1`. This way, if no results were returned from the API we can stop, and display nothing.
 
 Moving on, the next part is very important, it defines how the Spice result should look and specifies which parts of the API result are important. This piece of code tells DuckDuckGo to show the instant answer:
+
+## Display our Spice Result (and Specify some Details)
 
 ###### npm.js (continued)
 
@@ -283,16 +292,18 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
     
     + `detail` is used to specify the template for the detail pane, which is the area that will contain all the text and content created by your instant answer. The input can either be a string, representing the name of a predefined template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
 
-    In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is trigger. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
+    In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
+
+## Close our Functions
 
 ```javascript
     }
 }(this));
 ```
 
-Lastly, we close our callback function expression as well as our anonymous, immediate function and we also pass along the current scope, via `this`, as the input to our function. Hence, `env` becomes the object represent by `this`.
+Lastly, we close our callback function expression as well as our anonymous, immediate function and we also pass along the current scope, via `this`, as the input to our function. Hence, `env` becomes the object represented by `this`.
 
-------
+## Define our Handlebars Template
 
 At this point, the rendering of the instant answer changes context from JavaScript to Handlebars.js. As mentioned, our `Spice.add()` call specifies our template, and the **context** for the template, so now `Spice.add()` executes the template function using `data` as the input. Let's look at the NPM instant answer's Handlebars template, to see how it displays the instant answer result:
 
@@ -306,17 +317,19 @@ At this point, the rendering of the instant answer changes context from JavaScri
 <pre>$ npm install {{name}}</pre>
 ```
 
-As you can see, this is a special type of HTML template. Within the template, you can refer directly to the JSON objects and arrays that are returned by the API (which were passed along through our `data` parameter). `name`, `version` and `description` are all from the `api_result` object that we discussed earlier, which contains the data returned by the API. All of `api_result`'s sub-objects (i.e. `name`, `description`) are in the template's scope and can be accessed by name using double or triple curly braces (triple braces **will not** escape the contents -- and should be avoided unless absolutely necessary). 
+As you can see, this is a special type of HTML template where all of `api_result`'s attributes (e.g. `version`, `description`) can be accessed by wrapping their respective names in double curly braces. This is possible, because we passed along the `api_result` object (containing all the JSON) to the `data` parameter, which becomes the **context** for our template.
 
-For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in the `api_result` object.
+For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
 
 **\*\*Note:** When dealing with the detail pane, an `<h5` tag is the biggest heading tag you should use.
 
-And that's it, you're done! You should now have a working Spice instant answer! We'll now do a quick recap, and then move on to testing our instant answer to ensure that it works as expected.
+## All Done!
 
-## Recap
+And that's it, you're done! You now have a working Spice instant answer! The backend (Perl) tells DuckDuckGo when to trigger our Spice and the frontend (JavaScript & Handlebars) tells DuckDuckGo what to put on the page. Before moving on, lets do a quick recap...
 
-We've created two files in the Spice share directory, `share/spice/npm/`:
+## What We've Accomplished
+
+We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`, named `npm.pm`, which defines the API to use and the triggers for our Spice and we've created **two** files in the Spice share directory, `share/spice/npm/`:
 
 1. `npm.js` - which delegates the API's response and calls `Spice.add()`
 2. `detail.handlebars` - which specifies the instant answer's HTML structure and determines which attributes of the API response are placed into the HTML result
@@ -336,3 +349,7 @@ Again, the Spice instant answer system works like so:
 - The template then defines, using HTML and variables, what the actual content for the Spice result will be
 
 - This content is then created and rendered onto the page by the Spice system's backend.
+
+## Next Steps
+
+Congratulations! You have now written your first Spice instant answer. Now, let's move on to testing, so we can make sure our instant answer functions as expected!
