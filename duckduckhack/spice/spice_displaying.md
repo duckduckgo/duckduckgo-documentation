@@ -239,7 +239,7 @@ This indicates which attribute should be used to check for de-duplication. The g
 
 # Sorting
 
-Enumerate fields we can sort on and how they can be sorted
+In some cases, the order of the tiles is important (e.g. price, rating, popularity) and so the sorting attributes allow you to specify which item attributes should be sorted and you can also specify how their order should be determined.
 
 ## sort_fields {object}
 

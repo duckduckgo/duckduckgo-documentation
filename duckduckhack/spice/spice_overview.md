@@ -10,13 +10,16 @@ The Spice frontend is the code that is triggered by the Perl backend for your sp
 
 In order to render the Spice result, the Spice callback needs to specify a template which determines how the result will look. There are several templates to choose from and it is up to the developer's discretion to choose the best template for the given data and desired output.
 
-### Tech
+### Tech & Third-Party Libraries
 
-The Spice frontend uses [Handlebars](http://handlebarsjs.com) for templates and includes [jQuery](https://jquery.org) (although its use is not required). It also allows the use of custom CSS when necessary.
+Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
-If you're not already familiar with Handlebars, *please* read the [Handlebars documentation](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars; the examples will explain it to you. But you should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. (Don't worry, it should only take a few minutes to read!)
+-[jQuery](https://jquery.org) v1.10.2
+- and [Handlebars](http://handlebarsjs.com) v1.3.0
 
-Later, we will walk you through several examples ranging from simple to complicated, which will explain how to use the template system and make your instant answers look awesome.
+If you're not already familiar with Handlebars, *please* read the [Handlebars documentation](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
+
+Later, we will walk you through several examples ranging from simple to complex, which will explain how to use templates and make your instant answers look awesome.
 
 ## Spice Files
 
