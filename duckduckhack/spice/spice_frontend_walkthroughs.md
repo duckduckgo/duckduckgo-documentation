@@ -1,65 +1,52 @@
-# Spice Frontend Walkthroughs
-
 # Index
 
-- [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-1---alternativeto-basic-carousel-instant-answer)
-- [Example #2: Movie (Advanced Instant Answer)](#example-2---movie-advance-instant-answer)
-- [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-3---quixey-advanced-carousel-instant-answer)
-- [Example #4: Dictionary (More Advanced Instant Answer)](#example-4---dictionary-more-advanced-instant-answer)
+- [Example #1: Alternative.To (Simple)](#alternativeto)
+- [Example #2: Movies (Medium)](#movies)
+- [Example #3: Airlines (Medium)](#airlines)
+- [Example #4: Quixey (Advanced)](#quixey)
 
 ------
 
-## Example #1 - Alternative.To (Basic Carousel Instant Answer)
+## Example #1 - Alternative.To (Simple)
 
-The Alternative.To instant answer is very similar to NPM in that it is also relatively basic, however, it uses the **Carousel** Spice Template. Let's take a look at the code and see how this is done:
+The Alternative.To instant answer is very similar to NPM in that it's also relatively simple, however, it returns multiple items, and so it produces a tile view, where each tile represents a result item. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
 
 ```javascript
-function ddg_spice_alternative_to(api_result) {
-    if(!api_result || !api_result.Items || api_result.Items.length === 0) {
-        return;
-    }
+(function(env) {
+    "use strict";
 
-    Spice.render({
-        data                     : api_result,
-        source_name              : 'AlternativeTo',
-        source_url               : api_result.Url,
-        spice_name               : 'alternative_to',
-        more_icon_offset         : '-2px',
-        template_frame           : "carousel",
-        template_options         : {
-            items                : api_result.Items,
-            template_item        : "alternative_to",
-            template_detail      : "alternative_to_details",
-            li_height            : 65,
-            single_item_handler  : function(obj) {            // gets called in the event of a single result
-                obj.header1 = obj.data.Items[0].Name;         // set the header
-                obj.image_url = obj.data.Items[0].IconUrl;    // set the image
+    env.ddg_spice_alternative_to = function(api_result) {
+        Spice.add({
+            id: 'alternative_to',
+            name: 'Alternative Software',
+            data: api_result.Items,
+            meta: {
+                searchTerm: api_result.Name,
+                itemType: 'Alternatives',
+                sourceUrl: 'http://alternativeto.net/',
+                sourceName: 'AlternativeTo',
+            },
+            templates: {
+                item: Spice.alternative_to.item,
             }
-        },
+        });
+    };
+
+    Handlebars.registerHelper("getPlatform", function (platforms) {
+
+        return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
-}
+
+}(this));
 ```
 
-Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most of the same properties, however, it also uses a few new properties as well:
+Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties, however, it also uses a few new properties as well:
 
-- `template_frame` is used to tell the Render function that the base template for this instant answer will be the **Carousel** template.  
-**\*\*Note**: This is a template which we have already created and you don't have to worry about creating or modifying.*
+- `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g. "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
 
-- `template_options` is a property which is used to specify more properties that are specific to the current `template_frame`. In this case, we use `template_options` to define more properties for the `carousel` template.
-
-- `items` is **required** when using the carousel template. It passes along an array or object to be iterated over by the carousel template. Each of these items becomes the context for the `alternative_to.handlebars` template which defines the content of each `<li>` in the carousel.
-
-- `template_item` tell the carousel template which sub-template should be applied to each of the objects in the `items` array. This template defines what the contents of each `<li>` in the carousel will contain. Generally for a `carousel` Instant Answer, each `<li>` should contain an image and title for the current item.
-
-- `template_detail` similarly to `template_frame` this is again another sub-template applied to each of the objects in the `items` array, however this template defines the look/layout of the **detail area**, which opens up below the carousel with more information about the selected item.
-
-- `li_height` is an optional property which defines the height of each of the carousel's `<li>`'s
-
-- `single_item_handler` is a property which defines a function that let's you modify the other properties of `Spice.render()` if and only if a single item is returned from the upstream API. In this case, we use it to  set values for the `header1` and the `image_url`related to the single item returned. If these had not been set, the carousel will still automatically (by default) apply the `template_detail` to the single item returned and display that, rather than a carousel with a single item in it. This can be overridden by setting the `use_alternate_template` property to false, inside the `template_options` property.
-
-- `carousel_template_detail` is an **optional** parameter which specifies the Handlebars template to be used for the Carousel ***detail*** area - the space below the template which appears after clicking a carousel item. For Alternative.To, when a user clicks a carousel item (icon), the detail area appears and provides more information about that particular item. This is similarly used for the [Quixey instant answer](https://duckduckgo.com/?q=ios+flight+tracking+app).
+- `itemType` is the type of item being shown (e.g. Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
 
 ------
 
@@ -68,11 +55,24 @@ Now, let's take a look at the Alternative.To Handlebars templates:
 ###### alternative_to.handlebars
 
 ```html
-<img src="/iu/?u={{IconUrl}}">
-<span>{{{condense Name maxlen="25"}}}</span>
+<img src="{{imageProxy IconUrl}}" alt="{{Name}}" class="tile__icon" />
+
+<h5 class="tile__title">
+    <a href="{{Url}}">{{ellipsis Name 26}}</a>
+</h5>
+
+{{#if ShortDescription}}
+    <div class="tile__description tile__title">{{{ellipsis ShortDescription 100}}}</div>
+{{/if}}
+
+<div>
+    {{Votes}} likes &bull; {{getPlatform Platforms}}
+</div>
 ```
 
-This simple template is used to define each of the carousel items. More specifically, it defines what the contents of each `<li>` in the carousel will be. In this case we specify an image - the result's icon - and a span tag, which contains the name of the result.
+More to come soon...
+
+<!-- This simple template is used to define each of the carousel items. More specifically, it defines what the contents of each `<li>` in the carousel will be. In this case we specify an image - the result's icon - and a span tag, which contains the name of the result.
 
 You might notice that we prepend the `<img>`'s `src` url with the string `"/iu/?u="`. This is **required** for any images in your handlebars template. What this line does is proxy the image through our own servers, which ensure the user's privacy (because it forces the request to come from DuckDuckGo instead of the user).
 
@@ -156,13 +156,13 @@ function ddg_spice_movie (api_result) {
 
 ```
     
-We start by making sure that the `api_result` actually returned 1 or more results, if not we exit out, which will display nothing because no call has been made to `spice.render()`.
+We start by making sure that the `api_result` actually returned 1 or more results, if not we exit out, which will display nothing because no call has been made to `spice.add()`.
 
 We then go on to define some functions used to determine which movie is the most relevant by taking into consideration the rating, release date and relevancy of the title, compared to the search terms. We won't go into the details of how the `score()` and `better()` functions are defined, but you'll notice that inside `better()` we use the function `DDG.isRelevant()`. This function takes as input a string and has an optional second input containing an array of strings. `DDG.isRelevant` can be used to compare the given string to the search terms and returns a `boolean` which lets us know if the input is considered "relevant" to the search terms. The optional 2nd input, the array of strings is called the **skip array** and it contains words which should be ignored when considering the relevancy of the search term and the input to `DDG.isRelevant`. In this case, we are using `DDG.isRelevant` to compare the title of the movies returned from the Rotten Tomatoes API to the user's search term. The skip array contains arbitrary words which are likely to be found in the query, that we assume aren't relevant to the title of the movie.
 
 You'll also notice the use of `DDG_bestResult()`. This function takes as input a list of objects, and a comparator function. It then applies the comparator function, which takes two parameters, `currentbest` and `next` to each consecutive item in the input list. It assumes that the first item is the `currentbest`.
 
-By this point we have either determined that there is a relevant movie to display, or we have found nothing to be relevant and have exited out. If we have a relevant movie, we then call `Spice.render()` as we would in any other Spice instant answer:
+By this point we have either determined that there is a relevant movie to display, or we have found nothing to be relevant and have exited out. If we have a relevant movie, we then call `Spice.add()` as we would in any other Spice instant answer:
 
 ###### movie.js (continued)
 
@@ -180,7 +180,7 @@ By this point we have either determined that there is a relevant movie to displa
 }
 ```
 
-This is a fairly simple call to `Spice.render()`, but it slightly differs from other instant answers because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this instant answer is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
+This is a fairly simple call to `Spice.add()`, but it slightly differs from other instant answers because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this instant answer is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
 
 Before looking at the implementation of the Handlebars helper functions, let's first take a look at the Movie Spice's Handlebars template to see how the helper functions are used:
 
@@ -319,7 +319,7 @@ function ddg_spice_quixey (api_result) {
 
 Similarly to **Alternative.To**, the Quixey instant answer uses the carousel, and sets values for all the required carousel-specific properties. However, this instant answer also uses the `force_big_header` property to create a ZeroClick header and subsequently sets the value of the header text, `header1`. Also, the `more_logo` property is set, which allows a custom image to be used instead of the `source_name` text for the "More at" link.  
 
-Similarly to the **Movie** instant answer, in the **Quixey** instant answer, we use the `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.render()`. We are required to get relevant results in this manner so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
+Similarly to the **Movie** instant answer, in the **Quixey** instant answer, we use the `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.add()`. We are required to get relevant results in this manner so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
 
 Moving on, let's take a look at the implementation of the `getRelevants()` helper:
 
@@ -600,7 +600,7 @@ The comments at the beginning of the file explain what the various callbacks are
 
 Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an ajax call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary\_definition.js**
 
-Moving on, let's take a look at the implementation of the `Spice.render()` call and the `dictionary_definition()`  callback:
+Moving on, let's take a look at the implementation of the `Spice.add()` call and the `dictionary_definition()`  callback:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
 
@@ -634,9 +634,9 @@ function ddg_spice_dictionary_definition (api_result) {
     };
 ```
 
-We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the separate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
+We begin by wrapping the `Spice.add()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the separate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
 
-The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_definition()` callback as well as the `dictionary_reference()` callback, as you will see below:
+The reason for wrapping the `Spice.add()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_definition()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
 
@@ -1021,3 +1021,4 @@ Most of the above CSS has actually been borrowed from the [Skeleton](http://gets
 As you can see, most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
 
 As you can see, the Dictionary instant answer is one of the most involved Spice instant answers we have due to its use of multiple endpoints and their respective callback functions. Most instant answers however shouldn't need to be so complex in order to function, so we greatly prefer that instant answers are built as simple and straightforward as possible.
+ -->

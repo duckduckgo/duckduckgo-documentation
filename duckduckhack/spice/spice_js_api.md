@@ -207,19 +207,9 @@ Example:
 
 ### add(ops)
 
-Add a Spice instant answer to the Duckbar and render it
+Add a Spice instant answer to the AnswerBar and display it
 
-Usually an anonymous object is declared inside the call to `Spice.add()`. The only required properties of this object are `id` and `name` however there are several optional properties which are often included as well.
-
-Ops Properties:
-- id [required]: The tab ID to render into
-- name [optional]: The name to display on the duckbar tab
-- data [required]: The actual data to render, either a single object, or an array of objects
-- meta [optional]: Meta information about the data/Spice to be rendered
-- normalize [optional]: A function which takes an object as input (i.e. API result item), and returns a "normalized" object containing all the necessary attributes for the template being used
-- view [optional]: The view to be use for the tab (Default: `'Base'` for single items and `'Tiles'` for multiple items)
-- templates [optional]: An object specifying which templates to use (Choices include: `'item'`, `'detail'`, `'item_detail'`)
-- relevancy [optional]: An object specifying an optional skip array (for `DDG.isRelevant()`) and primary sorting keys
+Note: A detailed explanation of `Spice.add()` can be found in [Displaying your Spice](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md)
 
 **Parameters**
 
