@@ -121,44 +121,67 @@ Used to specify the base template (layout) to be used. Each `template_group` is 
 
 ## templates *object* [required]
 
-An object with multiple properties, used to specify which sub-templates or custom templates are to be used. As well for each template, any **template options** may be provided or disabled depending on the chosen `template_group`.
+An object with multiple properties, used to specify which template group, sub-templates and/or custom templates (not recommended!) are to be used. As well for each template, any **template options** may be provided or disabled depending on the chosen `template_group`.
 
-## item *string*function} [required for *multiple* item result]
+## group *string* [required unless `item` or `detail` is specified]
+
+Specifies which template group is to be used.
+
+This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
+
+For example, `group: 'info'` will implicitly set:
+
+```javascript
+item: 'basic_item',
+item_detail: 'basic_info_item_detail',
+detail: 'basic_info_detail',
+wrap_detail: 'base_detail'
+```
+
+## item *string|function* [required for **multiple item** results when no `group` is specified]
 
 The template to be used for the body of each tile in a tile view.
 
-**\*\*Note:** This will only display when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps)
+**\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps)
 
 - Generally, a **string** is provided to indicate the name of the pre-defined Spice template to be used, e.g. "products_item"
 - Alternatively, a **function** can be provided when a custom template is necessary, e.g. `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
 
-## item_custom *function*
+## item_custom *string|function*
 
 Ssh. This doesn't exist...
 
-## item_mobile *string*function}
+## item_mobile *string|function*
 
 An alternatve `item` template to be used when displaying on smaller screens, such as mobile and handheld devices.
 
-## detail *string*function} [required for *single* item result]
+## detail *string|function* [required for **single item** results when no `group` is specified]
 
-The template to be used for the larger "detail" area, located below the tiles, in a tile view (i.e. a Spice that returns multiple items).
+The template to be used for the detail area.
 
-**\*\*Note:** The `detail` templates is **optional** and should only be used to provide additional information for each tile. If no additional information is needed, the tiles will become links and when clicked will redirect the used. For example, the Hacker News Spice does not use a `detail` template.
+*For multiple items*, the detail area will be located below the tiles, and will display when a tile is clicked. If your Spice returns multiple items, the `detail` template is **optional**.
 
-*Alternatively*, when dealing with a Spice that returns a **single** item (e.g. NPM, Is It Up), the `detail` will be displayed by default instead of a tile view. **If your Spice always returns a single item, only a `detail` template is required**.
+*For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
 
-## detail_custom *string*
+**\*\*Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
+
+## detail_custom *string|function*
 
 Ssh. This doesn't exist either...
 
-## detail_mobile *string*function}
+## detail_mobile *string|function*
 
 An alternatve `detail` template to be used when displaying on smaller screens, such as mobile and handheld devices.
 
-## item_detail *string*function}
+## item_detail *string|function*
 
 An alternatve `detail` template to be used when a tile view contains a **single** tile.
+
+## options *object*
+
+Allows you to explicitly disable or enable components of a template, as well as specify any sub-templates when applicable (e.g. the `content` component of the `'info'` template). Depending on the templates being used, the components will vary. For example, the `'info'` template doesn't have a `brand` component, so attempting to enable or disable that component will have no effect.
+
+Note: If you intend to use a component that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the component is disabled.
 
 
 # Relevancy
