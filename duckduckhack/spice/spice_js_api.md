@@ -53,10 +53,10 @@ Example:
 
 ```javascript
 var relevants = DDG.getRelevants({
-num:        10, // the first 10 relevant candidates will be returned
-candidates: ['is this relevant', 'is this one relevant', 'how about this one', ... ], //candidate strings
-skipArray:  ['a', 'list', 'of', 'words'], //words to ignore in comparison
-strict:     false
+    num:        10, // the first 10 relevant candidates will be returned
+    candidates: ['is this relevant', 'is this one relevant', 'how about this one', ... ], //candidate strings
+    skipArray:  ['a', 'list', 'of', 'words'], //words to ignore in comparison
+    strict:     false
 });
 ```
 Only the `candiates` array is required, the other parameters are optional. `num` defaults to `candidates.length`
@@ -244,3 +244,21 @@ Provides access to `Handlebars.registerHelper()` so you can register helpers for
 **id**:  *string*,  The name of the helper to register
 
 **fn**:  *function*,  The function we are registering
+
+
+### failed(id)
+
+Alerts the frontend that a Spice has stopped executing, preventing it from being displayed.
+
+Note: This is generally used when a Spice API returns no useful results.
+
+Example:
+
+```javascript
+if (/* check for no results */) {
+    
+```
+
+**Parameters**
+
+**id**:  *string*,  The id of the Spice Instant Answer, should match the `id` property of the object given to `Spice.add()`
