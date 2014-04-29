@@ -198,7 +198,7 @@ The final **npm.js** will look like this:
     env.ddg_spice_npm = function(api_result){
 
         if (api_result.error) {
-            return;
+            return Spice.error('npm');
         }
 
         Spice.add({
@@ -244,13 +244,13 @@ We now define our callback function, `ddg_spice_npm`, using a function expressio
 
 ```javascript
         if (api_result.error) {
-            return;
+            return Spice.failed('npm');
         }
 ```
 
-Here, we specify that if the `error` property in the API result is defined, we `return` nothing, stopping the execution of the function and as a result, we won't display an instant answer. In the case of this API, when the error object is defined, it means no results are given, so we have no data to use for a Spice result.
+Here we specify that if the `error` property in the API result is defined (meaning there are no results to use) we `return` a call to `Spice.failed('npm')`, which stops the execution of the function and as a result, won't display an instant answer. It's important to use `Spice.failed();` because this lets the rest of the Spice system know our Spice isn't going to display so that other relevant answers can be given an opportunity to display.
 
-In other cases, because most APIs return an array of results, a similar check should be made to see if the results array has a length greater than `1`. This way, if no results were returned from the API we can stop, and display nothing.
+In other cases, because most APIs return an array of results, a similar check should be made to see if the results array has a `length`. This way, if no results were returned from the API we can stop and display nothing.
 
 Moving on, the next part is very important, it defines how the Spice result should look and specifies which parts of the API result are important. This piece of code tells DuckDuckGo to show the instant answer:
 
@@ -281,7 +281,7 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 - `data` is the object that is passed along to the Handlebars template. In this case, the *context* of the NPM template will be the `api_result` object. This is very important to understand because **only the data passed along to the template is accessible to the template**. In most cases the `data` parameter should be set to `api_result` so all the data returned from the API is accessible to the template. 
 
-- `meta` is an object with properties that define meta-data about the instant answer. This is used for the MetaBar (which appears above the tiles when multiple results are returned) and also for the "More at" link which appears in the detail pane of a single result instant answer:
+- `meta` is an object with properties that define meta-data about the instant answer. This is used for the MetaBar (which appears above the tiles when multiple results are returned) and also for the "More at" link which appears in the detail area of a single result instant answer:
     
     + `sourceName` is the name of the source for the "**More at <source>**" link that's displayed for attribution purposes.
 
@@ -290,7 +290,7 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 - `templates` is an object with properties that define which templates are to be used for displaying your Spice instant answer:
     
-    + `detail` is used to specify the template for the detail pane, which is the area that will contain all the text and content created by your instant answer. The input can either be a string, representing the name of a predefined template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
+    + `detail` is used to specify the template for the detail area, which is the space that will contain all the text and content created by your instant answer. The input to `detail` can be either a string, representing the name of a predefined template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
 
     + In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
 
@@ -321,7 +321,7 @@ As you can see, this is a special type of HTML template where all of `api_result
 
 For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
 
-**\*\*Note:** When dealing with the detail pane, an `<h5` tag is the biggest heading tag you should use.
+**\*\*Note:** When dealing with the detail area, an `<h5` tag is the biggest heading tag you should use.
 
 ## All Done!
 
