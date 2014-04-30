@@ -71,9 +71,9 @@ This is additional text label that will be displayed to the left of the "More at
 
 ## normalize *function* [required depending on template and data]
 
-This allows you to provide a function which takes an object as input (the object given to `data`) and returns an anonymous object with normalized property names, which are required by any predefined templates.
+This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates.
 
-This function uses jQuery's `$.extend()` method, so only the missing properties need to be returned in the normalized object, which will then extend the original object that the function is operating on.
+This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
 
 If you are using a pre-defined template (e.g. **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
@@ -121,7 +121,7 @@ Used to specify the base template (layout) to be used. Each `template_group` is 
 
 ## templates *object* [required]
 
-An object with multiple properties, used to specify which template group, sub-templates and/or custom templates (not recommended!) are to be used. As well for each template, any **template options** may be provided or disabled depending on the chosen `template_group`.
+An object used to specify the template group and all other templates that are being used. As well for each template, any **template options** may be provided or disabled depending on the chosen `template_group`.
 
 ## group *string* [required unless `item` or `detail` is specified]
 
