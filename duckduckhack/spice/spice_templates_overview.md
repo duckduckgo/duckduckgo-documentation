@@ -9,6 +9,12 @@ For example the `products_simple` **template group** works well when your Spice 
 
 There are several template groups to choose from:
 
+- [base](#base)
+- [info](#info)
+- [products](#products)
+- [products_simple](#products_simple)
+
+------
 
 ## base
 
@@ -106,6 +112,19 @@ There are several template groups to choose from:
 
 # Spice Templates
 
+The list of built-in Spice templates includes:
+- [base_item]()
+- [base_detail]()
+- [basic_item]()
+- [basic_image_item]()
+- [basic_image_detail]()
+- [products_item](#products_item)
+- [products_detail](#products_detail)
+- [products_item_detail](#products_item_detail)
+- [basic_info_detail](#basic_info_detail)
+- [record](#record)
+
+------
 
 ## base_item
 
