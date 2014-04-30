@@ -10,19 +10,22 @@ For example the `products_simple` **template group** works well when your Spice 
 There are several template groups to choose from:
 
 - [base](#base)
+- [text](#text)
 - [info](#info)
 - [products](#products)
 - [products_simple](#products_simple)
+- [Default Template Options (No Template Group Selected)](#default-template-options-no-template-group-selected)
 
 ------
 
 ## base
 
-<!-- Description -->
+This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
 
 ### Default Templates:
 
 - item: *'base_item'*
+- detail: *'base_detail'*
 
 ### Default Options
 
@@ -39,16 +42,33 @@ There are several template groups to choose from:
 
 ------
 
+## text
+
+A basic template for simple, text-only results. This template offers a title, description and footer.
+
+### Default Templates
+
+- item: *'text_item'*
+
+### Default Options
+
+*none*
+
+### Example
+
+<!-- Image -->
+
+-------
+
 ## info
 
-<!-- Description -->
+A template best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an infobox and a "More At" link.
 
 ### Default Templates
 
 - item: *'basic_item'*
 - item_detail: *'basic_info_item_detail'*
 - detail: *'basic_info_detail'*
-- wrap_detail: *'base_detail'*
 
 ### Default Options: {
 
@@ -63,7 +83,7 @@ There are several template groups to choose from:
 
 ## products
 
-<!-- Description -->
+A template best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
 ### Default Templates
 
@@ -87,7 +107,7 @@ There are several template groups to choose from:
 
 ## products_simple
 
-<!-- Description -->
+A simplified version of the **products** group. This provides a basic `item` template, which includes an image, title and description, but uses the same `detail` template as the **products** group.
 
 ### Default Templates
 
@@ -110,11 +130,26 @@ There are several template groups to choose from:
 
 ------
 
+## Default Template Options (No Template Group Selected)
+
+When no `templates.options` are specified **and** no template `group` has been selected, the default options are as follows:
+
+- price: *true*
+- brand: *true*
+- priceAndBrand: *true*
+- rating: *true*
+- ratingText: *true*
+- moreAt: *true*
+- content: *false*
+
+------
+
 # Built-In Spice Templates
 
 The list of built-in Spice templates includes:
 - [base_item](#base_item)
 - [base_detail](#base_detail)
+- [text_item](#text_item)
 - [basic_item](#basic_item)
 - [basic_image_item](#basic_image_item)
 - [basic_image_detail](#basic_image_detail)
@@ -144,6 +179,22 @@ The list of built-in Spice templates includes:
 ### Components
 
 - content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_item
+
+### Components
+
+- url [optional]
+- title
+- subtitle
+- description
+- footer [optional] *sub-template*
 
 ### Example
 
