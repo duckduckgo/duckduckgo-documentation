@@ -290,7 +290,7 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 - `templates` is an object with properties that define which templates are to be used for displaying your Spice instant answer:
     
-    + `detail` is used to specify the template for the detail area, which is the space that will contain all the text and content created by your instant answer. The input to `detail` can be either a string, representing the name of a predefined template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
+    + `detail` is used to specify the template for the detail area, which is the space that will contain all the text and content created by your instant answer. The input to `detail` can be either a string, representing the name of a built-in template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
 
     + In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
 

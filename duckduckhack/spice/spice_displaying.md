@@ -75,7 +75,7 @@ This allows you to normalize the `data` object (or array of items) before it is 
 
 This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
 
-If you are using a pre-defined template (e.g. **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+If you are using a built-in template (e.g. **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
 For example, if you have a `data` object that looks like this:
 
@@ -144,7 +144,7 @@ The template to be used for the body of each tile in a tile view.
 
 **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps)
 
-- Generally, a **string** is provided to indicate the name of the pre-defined Spice template to be used, e.g. "products_item"
+- Generally, a **string** is provided to indicate the name of the built-in Spice template to be used, e.g. "products_item"
 - Alternatively, a **function** can be provided when a custom template is necessary, e.g. `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
 
 ## item_custom *string|function*
