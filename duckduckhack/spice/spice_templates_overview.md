@@ -2,7 +2,7 @@
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates) As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various components enabled by default.
 
-For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may verywell work for some other type of result and we're here to help you determine which template group and components work best for your Spice instant answer.
+For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and components work best for your Spice instant answer.
 
 
 # Templates Groups
@@ -310,7 +310,7 @@ The list of built-in Spice templates includes:
 - image [optional]
 - title [optional]
 - content [optional, replaces `description`] *sub-template*
-- descripion
+- description
 
 ### Example
 

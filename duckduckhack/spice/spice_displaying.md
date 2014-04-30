@@ -58,7 +58,7 @@ A boolean flag that determines if a favicon should be shown for the "More at" li
 
 ## sourceIconUrl *string*- url}
 
-If the `sourceUrl` domain has no favicon (or if a different favicon is preferrd), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
+If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
 
 ------
 
@@ -153,7 +153,7 @@ Ssh. This doesn't exist...
 
 ## item_mobile *string|function*
 
-An alternatve `item` template to be used when displaying on smaller screens, such as mobile and handheld devices.
+An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
 ## detail *string|function* [required for **single item** results when no `group` is specified]
 
@@ -171,11 +171,11 @@ Ssh. This doesn't exist either...
 
 ## detail_mobile *string|function*
 
-An alternatve `detail` template to be used when displaying on smaller screens, such as mobile and handheld devices.
+An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
 ## item_detail *string|function*
 
-An alternatve `detail` template to be used when a tile view contains a **single** tile.
+An alternative `detail` template to be used when a tile view contains a **single** tile.
 
 ## options *object*
 
@@ -188,7 +188,7 @@ Note: If you intend to use a component that is disabled by default, it **must** 
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the relevancy property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
-In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. However, if your Spice is capable of dealing with differnt types of queries, where different relevany checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy, however the app's category does and so two separate relevancy blocks, `primary` and `category` are used to define the different relevancy constraints.
+In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. However, if your Spice is capable of dealing with different types of queries, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy, however the app's category does and so two separate relevancy blocks, `primary` and `category` are used to define the different relevancy constraints.
 
 ## Relevancy*Blocks*
 A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
@@ -216,7 +216,7 @@ primary: [
 
     { key: 'short_desc' }
     // this is an extra "key" which servers as a fallback. This means if
-    // either the 'name' or 'short_desc' or relevant the item is consdiered
+    // either the 'name' or 'short_desc' or relevant the item is considered
     // relevant
 ],
 
@@ -250,7 +250,7 @@ A list of words to ***skip*** when comparing the specified text against the curr
 
 The list of relevancy terms for this particular relevancy block
 
-## <additional_relelvancy_block> *array*
+## <additional_relevancy_block> *array*
 
 An additional list of relevancy terms, using the same format as `primary`. This object (and other relevancy blocks) can be named arbitrarily.
 

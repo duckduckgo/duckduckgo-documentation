@@ -354,7 +354,7 @@ function getRelevants (results) {
     else {
         // No relevant results,
         // check if it was a categorical search
-        // Eg."social apps for android"
+        // E.g."social apps for android"
         var q = DDG.get_query();
         res = q.match(categories) ? results : null;
     }
@@ -561,7 +561,7 @@ This helper is also very simple, but it is important because it uses the `DDG.ge
 
 ## Walkthrough #4 - Dictionary (More Advanced Instant Answer)
 
-The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked separately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
+The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a sub-directory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked separately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own sub-directories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
 To begin, let's look at the first callback function definition in the Dictionary JavaScript:
 
@@ -584,9 +584,9 @@ To begin, let's look at the first callback function definition in the Dictionary
 // ddg_spice_dictionary_reference - handles plural words. (Improve on this in the future.)
 ```
 
-The comments at the beginning of the file explain what the various callbacks are for. Each of these callback functions is connected to a different endpoint, meaning they each belong to a different Perl module. As you can see, the name of each callback correlates to the name of the perlmodule. So `dictionary_definition()` is the callback for `DDG::Spice::Dictionary::Definition`, likewise `dictionary_audio` is for `DDG::Spice::Dictionary::Audio`, etc.
+The comments at the beginning of the file explain what the various callbacks are for. Each of these callback functions is connected to a different endpoint, meaning they each belong to a different Perl module. As you can see, the name of each callback correlates to the name of the perl module. So `dictionary_definition()` is the callback for `DDG::Spice::Dictionary::Definition`, likewise `dictionary_audio` is for `DDG::Spice::Dictionary::Audio`, etc.
 
-Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an ajax call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary\_definition.js**
+Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an AJAX call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary\_definition.js**
 
 Moving on, let's take a look at the implementation of the `Spice.add()` call and the `dictionary_definition()`  callback:
 
@@ -811,7 +811,7 @@ The callback then verifies the API returned a pronunciation of the queried word 
 
 Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavaScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
 
-**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (eg. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
+**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (e.g. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
 
 ```javascript
     // Initialize the soundManager object.
@@ -888,7 +888,7 @@ We then check if the `this.[0].pluralOf` variable has been set. As you may recal
 
 Then the template creates two empty elements, a `<span>` tag to contain the phonetic spelling, which may or may not be populated by our `dictionary_pronunciation()` callback, depending on whether or not the API has a phonetic spelling for the queried word. Similarly we create an empty `<button>` tag to play an audio recording of the word pronunciation which is potentially populated by the `dictionary_audio()` callback, again if the API has an audio file for the queried word's pronunciation.
 
-The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (eg. noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
+The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (e.g. noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
 
 ###### dictionary\_definition.js (continued) - part helper
 

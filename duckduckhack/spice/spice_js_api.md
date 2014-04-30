@@ -38,7 +38,7 @@ Example:
 
 **Parameters**
 
-**spice_name**:  *string*,  The name of the Spice (this gives us the correct `/spice/share` subdirectory)
+**spice_name**:  *string*,  The name of the Spice (this gives us the correct `/spice/share` sub-directory)
 
 **asset**:  *string*,  The filename of the asset, including extension
 
@@ -59,7 +59,7 @@ var relevants = DDG.getRelevants({
     strict:     false
 });
 ```
-Only the `candiates` array is required, the other parameters are optional. `num` defaults to `candidates.length`
+Only the `candidates` array is required, the other parameters are optional. `num` defaults to `candidates.length`
 
 **Parameters**
 
@@ -76,7 +76,7 @@ Determines if the candidate string is relevant to **the search query**
 
 **skipArray**:  *array*,  **[optional]** An array of words (usually the trigger words) that should not be considered in determining the candidate string's relevancy
 
-**minWordLength**:  *number*,  **[optional]** The minimun length for any words to be considered in the comparison (used to ignore small words like "to", "and", "is", "a", etc.), Default: `4`
+**minWordLength**:  *number*,  **[optional]** The minimum length for any words to be considered in the comparison (used to ignore small words like "to", "and", "is", "a", etc.), Default: `4`
 
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
@@ -93,7 +93,7 @@ Determines if the candidate string is relevant to the given comparator string
 
 **skipArray**:  *array*,  **[optional]** An array of words (usually the trigger words) that should not be considered in determining the candidate string's relevancy
 
-**minWordLength**:  *number*,  **[optional]** The minimun length for any words to be considered in the comparison (used to ignore small words like "to", "and", "is", "a", etc.), Default: `4`
+**minWordLength**:  *number*,  **[optional]** The minimum length for any words to be considered in the comparison (used to ignore small words like "to", "and", "is", "a", etc.), Default: `4`
 
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
