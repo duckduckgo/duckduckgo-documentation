@@ -1,15 +1,15 @@
 # Index
 
-- [Example #1: Alternative.To (Simple)](#alternativeto)
-- [Example #2: Movies (Medium)](#movies)
-- [Example #3: Airlines (Medium)](#airlines)
-- [Example #4: Quixey (Advanced)](#quixey)
+- [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
+- [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
+- [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)
+- [Walkthrough #4: Quixey (Advanced)](#walkthrough-4-quixey-advanced)
 
 ------
 
-## Example #1 - Alternative.To (Simple)
+## Walkthrough #1 - Alternative.To (Simple)
 
-The Alternative.To instant answer is very similar to NPM in that it's also relatively simple, however, it returns multiple items, and so it produces a tile view, where each tile represents a result item. Let's take a look at the code and see how this is done:
+The Alternative.To instant answer is very similar to NPM in that it's also relatively simple, however, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
 
@@ -26,135 +26,123 @@ The Alternative.To instant answer is very similar to NPM in that it's also relat
                 searchTerm: api_result.Name,
                 itemType: 'Alternatives',
                 sourceUrl: 'http://alternativeto.net/',
-                sourceName: 'AlternativeTo',
+                sourceName: 'AlternativeTo'
+            },
+            normalize: function(item) {
+                return {
+                    ShortDescription: DDG.strip_html(DDG.strip_href(item.ShortDescription)),
+                    url: item.Url
+                };
             },
             templates: {
-                item: Spice.alternative_to.item,
+                group: 'base',
+                options: {
+                    content: Spice.alternative_to.content
+                }
             }
         });
     };
 
     Handlebars.registerHelper("getPlatform", function (platforms) {
-
         return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
 
-}(this));
+}(this)); 
 ```
 
-Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties, however, it also uses a few new properties as well:
+Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties, however, it also uses a few new properties. The biggest difference between the two Spices though, is that the AlternativeTo API returns an array of items, which is given to `data`, rather than a single item like the NPM API. This means first and foremost, that we'll be dealing with a tile view so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
 
 - `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g. "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
 
 - `itemType` is the type of item being shown (e.g. Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
 
+- `normalize` allows you to normalize an item before it is passed on to the template. You can add or modify properties of the item that are used by your templates. In our case, we're using `normalize` to modify the `ShortDescription` property of each item, by removing HTML content from it and we use it to add a `url` property to each item in the `data` array.
+
+    This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
+
+- `templates` is used to specify the template `group` and any other templates that are being used. Template `options` may also be provided to enable or disable template components used by the chosen `group`. In our case we've specified that we're using the `base` template group (the most basic group) and in the `options` block, we've specified the sub-template to be used for the `content` component.
+
+    The `base_item` template is essentially a wrapper around a `content` component, which will contain the `content` specified in the options block. This allows us to use a sub-template, which we've created and named **content.handlebars**. It is placed in the AlternativeTo Spice's share directory, **/share/spice/alternative_to**.
+
 ------
 
-Now, let's take a look at the Alternative.To Handlebars templates:
+Now, let's take a look at the Content Handlebars templates:
 
-###### alternative_to.handlebars
+###### content.handlebars (in /share/spice/alternative_to/)
 
 ```html
 <img src="{{imageProxy IconUrl}}" alt="{{Name}}" class="tile__icon" />
 
 <h5 class="tile__title">
-    <a href="{{Url}}">{{ellipsis Name 26}}</a>
+    <a href="{{url}}">{{ellipsis Name 26}}</a>
 </h5>
 
 {{#if ShortDescription}}
-    <div class="tile__description tile__title">{{{ellipsis ShortDescription 100}}}</div>
+    <div class="tile__description">{{ellipsis ShortDescription 90}}</div>
 {{/if}}
 
 <div>
-    {{Votes}} likes &bull; {{getPlatform Platforms}}
+    {{Votes}} likes{{#if Platforms}} &bull; {{getPlatform Platforms}}{{/if}}
 </div>
 ```
 
-More to come soon...
+As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `imageProxy`, `ellipsis`, `if` and `getPlatforms`).
 
-<!-- This simple template is used to define each of the carousel items. More specifically, it defines what the contents of each `<li>` in the carousel will be. In this case we specify an image - the result's icon - and a span tag, which contains the name of the result.
+These helpers are really JavaScript functions, which operate on input and return their content to the template.
 
-You might notice that we prepend the `<img>`'s `src` url with the string `"/iu/?u="`. This is **required** for any images in your handlebars template. What this line does is proxy the image through our own servers, which ensure the user's privacy (because it forces the request to come from DuckDuckGo instead of the user).
+The `imageProxy` helper function takes a URL string as input, and prepends `'/iu?u=` to the URL making it a relative link so that the image is proxied through DuckDuckGo's servers. This ensures the user's privacy by allowing DuckDuckGo to make the request on the user's behalf. Using the `imageProxy` helper is **required** for any `<img>`'s in your handlebars template.
 
-The carousel uses this template by iterating over each item in the object given to `carousel_items` and uses that item as the context of the template.
+The `ellipsis` helper is used to shorten a string to a given length. In our case we use it to shorten the `Name` to a maximum of `26` characters and the `ShortDescription` to `90` characters. After shortening the string, an ellipsis ("&hellip;") is appended to it, showing that the string has been truncated.
 
-Another important point is that we use `{{{condense Name maxlen="25"}}}` which demonstrates the usage of a Handlebars helper function. In this case, we are using the `condense` function (defined elsewhere, internally) which takes two parameters: `Name` (from `api_result`), which is the string to be shortened and `maxlen="25"` which specifies the length the string will be shortened to. 
+The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{getPlatform Platforms}}` to the page.
 
-Seeing as this is a carousel instant answer, which uses the optional carousel details area, it has another Handlebars template which defines the content for that.  Let's have a look at the Alternative.To details template:
+You may have noticed that `getPlatforms` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
 
-###### alternative_to_details.handlebars
-
-```html
-{{#rt}} <a href="{{Url}}">{{Name}}</a> <span class="likes">({{Votes}} likes)</span>{{/rt}}
-{{#rd "Description"}} {{{ShortDescription}}}{{/rd}}
-{{#rd "Platforms"}} {{#concat Platforms sep=", " conj=" and "}}{{this}}{{/concat}}{{/rd}}
-```
-    
-This template is also relatively simple and it utilizes more of our Handlebars helpers to create a few elements and populates them with relevant information related to the carousel item that was clicked.
-
-In this case we're using the `{{#rt}}` and `{{#rd}}` Handlebars block helpers, which are perfect for this kind of data, which represent a "record" where each piece of data has a name/title. The `{{#rt}}` helper is used to define the record title. It creates a `div` tag with special css class of `rd_title`. Inside the div, a `<span>` is created with a class of `rt_val`. This `<span>` contains the content defined in the `{{#rt}}` block, which in this case is an `<a>` tag and another `<span>`.
-
-Likewise, the `{{#rd}}` helper creates a `<div>` that has a css class of `rd_normal`. Inside the `<div>` two `<span>` tags are created: the first one has a css of `rd_key` and it contains the string that was given to the `{{#rd}}` helper as input. The other `<span>` has a class of `rd_val` and it contains the content defined in the `{{#rd}}` block.
-
-In the second `{{#rd}}` you'll notice the use of another Handlebars helper function, `{{#concat}}`. This function takes an array as its first parameter and iterates over each element in the array. For each iteration, `{{#concat}}` sets the context of the block equal to the current array element and then concatenates the content of its block, joining each by the separator string (`sep=`) with the final element separated by the `conj=` string. In this case, if `Platforms` is a list of operating systems: `["windows", "linux", "mac"]`, then `concat` would return: **"widows, linux and mac"**.
-
-## Example #2 - Movie (Advanced Instant Answer)
-
-The movie instant answer is a more advanced than **NPM** and **Alternative.To**, but most of the logic is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, it's relatively easy to understand, so let's start by looking at the Movie instant answer's javascript:
-
-###### movie.js
+###### alternative_to.js
 
 ```javascript
-function ddg_spice_movie (api_result) {
-    if (api_result.total === 0) {
-        return;
-    }
+    Handlebars.registerHelper("getPlatform", function (platforms) {
+        return (platforms.length > 1) ? "Multiplatform" : platforms[0];
+    });
+```
 
-    var ignore = ["movie", "film", "rotten", "rating", "rt", "tomatoes", "release date"];
-    var result, max_score = 0;
+This code demonstrates how are Handlebars register is created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `getPlatforms` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
 
-    // Assign a ranking value for the movie. This isn't a complete sorting value though
-    // also we are blindingly assuming these values exist
-    var score = function(m) {
-        var s = m.ratings.critics_score * m.ratings.audience_score;
-        if (s > max_score) max_score = s;
-        // If any above are undefined, s is undefined.
-        return s;
-    };
+<!-- TODO: Remove this section, no CSS should be specified -->
+Our template also gives a few elements a CSS class - this is so we can write clear CSS to modify the layout of the items. Let's take a look at the CSS:
 
-    // returns the more relevant of the two movies
-    var better = function(currentbest, next) {
-        // If score() returns undefined, this is false, so we're still OK.
-        return (score(next) > score(currentbest) &&
-                (next.year > currentbest.year) &&
-                DDG.isRelevant(next.title, ignore)) ? next : currentbest;
-    };
+###### alternative_to.css
 
-    result = DDG_bestResult(api_result.movies, better);
+```css
+.zci--alternative_to .tile__icon {
+    float: right;
+    margin-top: 0;
+    margin-right: 0;
+}
 
-    // Favor the first result if the max score is within 1% of the score for the first result.
-    if (result !== api_result.movies[0] && Math.abs(score(api_result.movies[0]) - max_score) / max_score < 0.1) {
-        result = api_result.movies[0];
-    }
+.zci--alternative_to .tile__description {
+    margin-bottom: 0.5em;
+    font-weight: inherit;
+}
+```
 
-    // Check if the movie that we have is relevant enough.
-    if (!DDG.isRelevant(result.title, ignore)) {
-        return;
-    }
 
-    var checkYear = function(year) {
-        if (year) {
-            return " (" + year + ")";
-        }
-        return "";
-    };
+As you can see, this Spice requires very little CSS. This layout is a bit unique and so we opted to modify they layout of the content slightly. In most case the use of templates will alleviate the need to write custom CSS, however sometimes it is necessary and can be used sparingly.
 
-    if ((result.synopsis && result.synopsis.length) ||
-        (result.critics_consensus && result.critics_consensus.length)) {
-        result.hasContent = true;
-    }
+The most important thing to note is that we have prefaced each of our CSS rules with the class `.zci--alternative_to`. Each Spice instant answer is wrapped in a `<div>` with a class called `.zci--<spice_name>` where `<spice_name>` matches the Spice's package name. This allows us to **namespace** all the CSS rules for each individual Spice. The is very important because DuckDuckGo simultaneously loads and triggers multiple Spice instant answers (depending on the query) and so namespaceing the CSS is extremely important to ensure that our Spice's CSS rules don't affect other elements on the page. If your Spice requires any CSS, it **must** only target  child elements of `.zci--<spice_name>`.
+
+
+## Walkthrough #2: InTheaters (Medium)
+
+The **InTheaters** instant answer is a little more advanced than **NPM** and **Alternative.To**, but it's still fairly easy to understand. Let's start by looking at the JavaScript:
+
+###### in_theaters.js
+
+```javascript
 
 ```
+
+<!--
     
 We start by making sure that the `api_result` actually returned 1 or more results, if not we exit out, which will display nothing because no call has been made to `spice.add()`.
 
@@ -282,7 +270,7 @@ Again, this is a fairly simple function which simply returns either "a" or "an" 
 
 Now that you've seen a more advanced instant answer and understand how to use Handlebars helpers, let's look at another advanced instant answer example.
 
-## Example #3 - Quixey (Advanced Carousel Instant Answer)
+## Walkthrough #3 - Quixey (Advanced Carousel Instant Answer)
 
 The Quixey instant answer is one of our more advanced carousel instant answers which uses a considerable amount of Handlebars helpers and similarly to the **Movie** instant answer has a relevancy checking component. Let's begin by taking a look at the Quixey instant answer's JavaScript:
 
@@ -571,11 +559,11 @@ Handlebars.registerHelper("quixey_star", function() {
 
 This helper is also very simple, but it is important because it uses the `DDG.get_asset_path()` function which returns the URI for an asset stored in an instant answer's share folder. This is necessary because Spice instant answers and their content are versioned internally. So the URI returned by this function will contain the proper version number, which is required to access any assets.
 
-## Example #4 - Dictionary (More Advanced Instant Answer)
+## Walkthrough #4 - Dictionary (More Advanced Instant Answer)
 
 The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked separately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
-To begin, let's look at the first callback function definition in the Dictionary javascript:
+To begin, let's look at the first callback function definition in the Dictionary JavaScript:
 
 ###### dictionary\_definition.js
 
