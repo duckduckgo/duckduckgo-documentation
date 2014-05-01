@@ -1,6 +1,6 @@
 # Basic Spice Tutorial
 
-In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages with [the Node.js package search API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://duckduckgo.com/?q=Npm+How+many+characters+are+in+this+sentence%3F) and the first part, the "backend" component, will look like this:
+In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](#coming-soong) and the first part, the "backend" component, will look like this:
 
 # NPM Spice - Backend (Perl)
 
@@ -8,21 +8,21 @@ In this tutorial, we'll be making a Spice instant answer that lets you search fo
 
 ```perl
 package DDG::Spice::Npm;
-# ABSTRACT: Give the number of characters (length) of the query.
+# ABSTRACT: Returns package information from npm package manager's registry.
 
 use DDG::Spice;
 
-triggers start => 'Npm';
+triggers startend => 'npm';
 
 spice to => 'http://registry.npmjs.org/$1/latest';
 spice wrap_jsonp_callback => 1;
 
 handle remainder => sub {
-    return 'Npm: ' . length $_ if $_;
+    return $_ if $_;
     return;
 };
-1;
 
+1;
 ```
 
 ## Naming our Spice Package
@@ -53,16 +53,16 @@ use DDG::Spice;
 On the next line, type:
 
 ```perl
-triggers start => 'npm';
+triggers startend => 'npm';
 ```
 
 **triggers** are keywords/phrases that tell us when to make the instant answer run. When a particular *trigger word* (or phrase) is part of a search query, it tells DuckDuckGo to *trigger* the instant answer(s) that have indicated they should trigger for the given word (or phrase).
 
 In this case there is one trigger word: "**npm**". 
 
-Let's say someone searched "**npm uglify-js**". **npm** is the *first* word, so it would trigger our Spice because the **start** keyword says, "Make sure the *trigger word* is at the *start* of the query." 
+Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, so it would trigger our Spice because the **startend** keyword says, "Make sure the *trigger word* is at the *start*, or the *end*, of the query." 
 
-There are several other keywords like **start** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
+There are several other keywords like **startend** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
 ## Define the API Call
 
@@ -74,17 +74,17 @@ spice to => 'http://registry.npmjs.org/$1/latest';
 
 The Spice **to** is used to define the URL that the Spice will use to make an API request. The URL has a **$1** placeholder, which will eventually be populated with whatever value our `handle` function (which we'll define shortly) returns. In most cases, Spice instant answers tend to use some sort of search endpoint for a given API. We need to indicate in our API request what it is we're searching for and so the `handle` function and the `spice to` URL work together to send our search term(s) to the API by replacing the **$1** placeholder, with the term(s) we're searching for.
 
-Using the previous example, if we wanted to search for "**uglify.js**" with the Node.js API, we'd need to replace `$1` with `uglify_js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "Uglify-JS" NPM Package.
+Using the previous example, if we wanted to search for "**uglify-js**" with the NPM API, we'd need to replace `$1` with `uglify-js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "uglify-js" NPM Package.
 
 ## Indicate our Callback Function
 
-In most cases, APIs allow for a "callback" parameter, which usually look like this:
+In most cases, APIs allow for a "callback" parameter, which usually looks like this:
 
 ```perl
 http://www.api.awesome.com/?q=<search_term>&callback=<function_name>
 ```
 
-This parameter is used to wrap the JSON object being returned in a JavaScript function call, to the function named in the callback parameter. Unfortunately, the Node.js API doesn't allow for this parameter to be specified, so we force this manually by using the **spice wrap\_jsonp\_callback** function. Enter this text on the next line to do this:
+This parameter is used to wrap the JSON object being returned, in a JavaScript function call to the function named in the `callback` parameter. Unfortunately, the NPM API doesn't allow for this parameter to be specified, so we force this manually by using the **spice wrap\_jsonp\_callback** function. Enter this text on the next line to do this:
 
 ```perl
 spice wrap_jsonp_callback => 1;
@@ -101,6 +101,8 @@ spice to => 'http://registry.npmjs.org/$1/latest?callback={{callback}}';
 ```
 
 Where `{{callback}}` is another special placeholder which will be **automatically** replaced with the correct Spice callback function name.
+
+**\*\*Note:** Not every API uses the word "callback" for their callback parameter. Some use "jsonp" (i.e.`&jsonp=myCallbackFn`), but these names are simply convention. Therfore it's best to read the documentation for the API you're using to ensure the correct callback parameter name is used.
 
 ## Define the Handle Function
 
@@ -149,11 +151,10 @@ If for example you searched DuckDuckGo for "npm", this would trigger our NPM Spi
 
 ## Return True at EOF
 
-Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line, and make sure to also add a newline at the end of the file.
+Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a `1;` on the very last line.
 
 ```perl
 1;
-
 ```
 
 And that's it! At this point you have written a functional backend for a Spice instant answer. Now, the frontend components need to written so that we can display our instant answer result on the page.
@@ -176,7 +177,7 @@ The instant answer system works like this at the highest level:
 
 As mentioned, every instant answer requires a Spice callback function. For the *NPM* instant answer, the callback function will be named `ddg_spice_npm()` and will be defined in the **npm.js** file. 
 
-The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::NPM`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg\_spice\_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
+The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::Npm`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg\_spice\_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
 
 To clarify:
 
@@ -198,7 +199,7 @@ The final **npm.js** will look like this:
     env.ddg_spice_npm = function(api_result){
 
         if (api_result.error) {
-            return Spice.error('npm');
+            return Spice.failed('npm');
         }
 
         Spice.add({
@@ -210,7 +211,11 @@ The final **npm.js** will look like this:
                 sourceUrl: 'http://npmjs.org/package/' + api_result.name
             },
             templates: {
-                detail: Spice.npm.detail
+                group: 'base',
+                options:{
+                    content: Spice.npm.content,
+                    moreAt: true
+                }
             }
         });
     };
@@ -268,7 +273,11 @@ Moving on, the next part is very important, it defines how the Spice result shou
                 sourceUrl: 'http://npmjs.org/package/' + api_result.name
             },
             templates: {
-                detail: Spice.npm.detail
+                group: 'base',
+                options:{
+                    content: Spice.npm.content,
+                    moreAt: true
+                }
             }
         });
 ```
@@ -279,20 +288,23 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 - `name` is the text to be used for the Spice's AnswerBar tab.
 
-- `data` is the object that is passed along to the Handlebars template. In this case, the *context* of the NPM template will be the `api_result` object. This is very important to understand because **only the data passed along to the template is accessible to the template**. In most cases the `data` parameter should be set to `api_result` so all the data returned from the API is accessible to the template. 
+- `data` is the object (meaning it can be an array, because they're technically objects too) that is passed along to the Handlebars template. In this case, the *context* of the NPM template will be the `api_result` object. This is very important to understand because **only the data passed along to the template is accessible to the template**. In most cases the `data` parameter should be set to `api_result` so all the data returned from the API is accessible to the template. 
 
-- `meta` is an object with properties that define meta-data about the instant answer. This is used for the MetaBar (which appears above the tiles when multiple results are returned) and also for the "More at" link which appears in the detail area of a single result instant answer:
+- `meta:{...}` is used to provide meta-data about the instant answer. This is used for the MetaBar (which appears above the tiles when multiple results are returned) and also for the "More at" link which appears in the detail area of a single result instant answer:
     
     + `sourceName` is the name of the source for the "**More at <source>**" link that's displayed for attribution purposes.
 
-
     + `sourceUrl` is the target of the "**More at**" link. It's the page that the user will click through to and is intended to provide the user with further information related to the instant answer.
 
-- `templates` is an object with properties that define which templates are to be used for displaying your Spice instant answer:
+- `templates:{...}` is used to specify which template group, templates and sub-templates are to be used for displaying your Spice instant answer:
     
-    + `detail` is used to specify the template for the detail area, which is the space that will contain all the text and content created by your instant answer. The input to `detail` can be either a string, representing the name of a built-in template (which we'll talk about later), or it can be a reference to a compiled handlebars template.
-
-    + In this case, we pass along a reference to our handlebars template, `Spice.npm.detail`. The templates contained in each Spice's share directory are pre-compiled and added to the global Spice object whenever a Spice instant answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.detail` references the **detail.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
+    + `group` is used to specify the template group that we are using. Here', we're using the built-in, **'base'** template group. Doing this lets the templating system know which default, built-in templates should be used for the tile view and detail area, when they are present.
+    
+    + `options:{...}` is used to specify certain things about our templates. Some templates have components which can be turned on and off and some have the ability to include a sub-template, called `content`. In our case, we're indicating the template to be used for `content` and that the `moreAt` component should be turned on.
+        
+        * For `content` we pass along a reference to our handlebars template, `Spice.npm.content`. The templates contained in each Spice's share directory are pre-compiled and added to the global `Spice` object whenever a Spice instant answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.content` references the **content.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
+        
+        * Seeing as we've provided a `sourceName` and `sourceURL`, we have the necessary information to create a "**More at**" link and so we tell the template system to enable the creation of it by setting the `moreAt` flag to `true`.
 
 ## Global Import
 
@@ -321,7 +333,7 @@ As you can see, this is a special type of HTML template where all of `api_result
 
 For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
 
-**\*\*Note:** When dealing with the detail area, an `<h5` tag is the biggest heading tag you should use.
+**\*\*Note:** When dealing with the detail area, an `<h5>` tag is the biggest heading tag you should use.
 
 ## All Done!
 
@@ -329,7 +341,7 @@ And that's it, you're done! You now have a working Spice instant answer! The bac
 
 ## What We've Accomplished
 
-We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`, named `npm.pm`, which defines the API to use and the triggers for our Spice and we've created **two** files in the Spice share directory, `share/spice/npm/`:
+We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`, named `Npm.pm`, which defines the API to use and the triggers for our Spice and we've created **two** files in the Spice share directory, `share/spice/npm/`:
 
 1. `npm.js` - which delegates the API's response and calls `Spice.add()`
 2. `detail.handlebars` - which specifies the instant answer's HTML structure and determines which properties of the API response are placed into the HTML result

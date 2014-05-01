@@ -56,13 +56,15 @@ the truncation string to the output
 **{string**,  truncation **[optional]** The truncation string. Default: `'...'`
 
 
-###{{stripHTML}}
+###{{#stripHTML}}
+
+**Block Helper**
 
 Strips HTML tags/elements from text
 
 Example:
 
-`{{stripHTML stringWithHTML}}`
+`{{#stripHTML stringWithHTML}}Here is my string: {{this}}{{/stripHTML}}`
 
 
 ###{{#loop}}
