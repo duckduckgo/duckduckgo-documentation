@@ -1,6 +1,6 @@
 # Basic Spice Tutorial
 
-In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](#coming-soong) and the first part, the "backend" component, will look like this:
+In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](#coming-soon) and the first part, the "backend" component, will look like this:
 
 # NPM Spice - Backend (Perl)
 
@@ -102,7 +102,7 @@ spice to => 'http://registry.npmjs.org/$1/latest?callback={{callback}}';
 
 Where `{{callback}}` is another special placeholder which will be **automatically** replaced with the correct Spice callback function name.
 
-**\*\*Note:** Not every API uses the word "callback" for their callback parameter. Some use "jsonp" (i.e.`&jsonp=myCallbackFn`), but these names are simply convention. Therfore it's best to read the documentation for the API you're using to ensure the correct callback parameter name is used.
+**\*\*Note:** Not every API uses the word "callback" for their callback parameter. Some use "jsonp" (i.e.`&jsonp=myCallbackFn`), but these names are simply convention. Therefore it's best to read the documentation for the API you're using to ensure the correct callback parameter name is used.
 
 ## Define the Handle Function
 

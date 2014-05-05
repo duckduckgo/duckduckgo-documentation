@@ -28,7 +28,7 @@ when `context` is:
 
 **sep**:  *string*,  **[optional]** Item separator. Default: `''`
 
-**conj**:  *string*,  **[optional]** Final separator, preceeds last item. Default: `''`
+**conj**:  *string*,  **[optional]** Final separator, precedes last item. Default: `''`
 
 
 ###{{#condense}}

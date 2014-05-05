@@ -331,7 +331,7 @@ data: {
     name: 'Bob',
     phone: '123-456-7890',
     email: 'bob@bobstheman.com',
-    addres: '123 First Street'
+    address: '123 First Street'
 },
 normalize: function(item){
     return {
