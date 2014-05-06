@@ -1,3 +1,11 @@
+
+### note
+
+This documentation is for the DuckDuckGo [public beta](https://next.duckduckgo.com/). The API has changed in some significant ways.
+See [getting started](https://github.com/duckduckgo/zeroclickinfo-spice/blob/bttf/BETA.md) for more information and how to help out during the transition.
+
+<hr>
+
 # Spice Overview
 
 Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
