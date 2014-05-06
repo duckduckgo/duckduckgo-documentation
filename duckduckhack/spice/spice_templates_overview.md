@@ -111,10 +111,10 @@ A simplified version of the **products** group. This provides a basic `item` tem
 
 ### Default Templates
 
--item: *'basic_image_item'*
--detail: *'products_detail'*
--item_detail: *'products_item_detail'*
--wrap_detail: *'base_detail'*
+- item: *'basic_image_item'*
+- detail: *'products_detail'*
+- item_detail: *'products_item_detail'*
+- wrap_detail: *'base_detail'*
   
 ### Default Options
 
