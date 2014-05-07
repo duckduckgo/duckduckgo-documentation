@@ -1,5 +1,12 @@
-DuckDuckGo-Documentation
-========================
+# DuckDuckGo-Documentation
+
+## Note: This is the **BETA** branch of the documentation
+
+This branch provides updated documentation for the new Spice API. The other instant answer types (Goodie, Fathead & Longtail) have **not** changed. To see the newest Spice documentation please go to the [Spice directory](https://github.com/duckduckgo/duckduckgo-documentation/tree/beta/duckduckhack/spice).
+
+Happy Coding!
+
+------
 
 This will eventually be the central repository for all DuckDuckGo Documentation.
 

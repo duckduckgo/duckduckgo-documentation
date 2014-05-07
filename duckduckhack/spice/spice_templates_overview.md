@@ -1,210 +1,355 @@
-# Spice Templates Overview
+# Spice Templates
 
-There are several templates to choose from, each of which are best for displaying certain kinds of results and information.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various components enabled by default.
 
-In order to indicate which template you are using, you must set the `template_frame` property in the object given to the `Spice.render()` call. The below examples and explanations will clarify further implementation details. As well, for each template, various properties need to be set within the `template_options` property. These properties specify various settings for the template being used.
+For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and components work best for your Spice instant answer.
 
-## List
 
-### Use Case:
+# Templates Groups
 
-A list of results (eg. links) to display. Works best for bulleted/numbered lists.
+There are several template groups to choose from:
 
-### How it looks:
+- [base](#base)
+- [text](#text)
+- [info](#info)
+- [products](#products)
+- [products_simple](#products_simple)
+- [Default Template Options (No Template Group Selected)](#default-template-options-no-template-group-selected)
 
-![List Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/list_template_example.png)
+------
 
-### How it works:
+## base
 
-###### reddit_search.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
+This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
+
+### Default Templates:
+
+- item: *'base_item'*
+- detail: *'base_detail'*
+
+### Default Options
+
+- price: *false*
+- brand: *false*
+- priceAndBrand: *false*
+- rating: *false*
+- ratingText: *false*
+- moreAt: *false*
+
+### Example
+
+<!-- Image -->
+
+------
+
+## text
+
+A basic template for simple, text-only results. This template offers a title, description and footer.
+
+### Default Templates
+
+- item: *'text_item'*
+
+### Default Options
+
+*none*
+
+### Example
+
+<!-- Image -->
+
+-------
+
+## info
+
+A template best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an infobox and a "More At" link.
+
+### Default Templates
+
+- item: *'basic_item'*
+- item_detail: *'basic_info_item_detail'*
+- detail: *'basic_info_detail'*
+
+### Default Options: {
+
+- moreAt: *true*
+- infoBox: *false*
+
+### Example
+
+<!-- Image -->
+
+------
+
+## products
+
+A template best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
+
+### Default Templates
+
+- item: *'products_item'*
+- detail: *'products_detail'*
+- item_detail: *'products_item_detail'*
+- wrap_detail: *'base_detail'*
+
+### Default Options
+
+- rating: *true*
+- price: *true*
+- brand: *true*
+- priceAndBrand: *true*
+
+### Example
+
+<!-- Image -->
+
+------
+
+## products_simple
+
+A simplified version of the **products** group. This provides a basic `item` template, which includes an image, title and description, but uses the same `detail` template as the **products** group.
+
+### Default Templates
+
+- item: *'basic_image_item'*
+- detail: *'products_detail'*
+- item_detail: *'products_item_detail'*
+- wrap_detail: *'base_detail'*
+  
+### Default Options
+
+- price: *false*
+- brand: *false*
+- priceAndBrand: *false*
+- rating: *false*
+- ratingText: *true*
+
+### Example
+
+<!-- Image -->
+
+------
+
+## Default Template Options (No Template Group Selected)
+
+When no `templates.options` are specified **and** no template `group` has been selected, the default options are as follows:
+
+- price: *true*
+- brand: *true*
+- priceAndBrand: *true*
+- rating: *true*
+- ratingText: *true*
+- moreAt: *true*
+- content: *false*
+
+------
+
+# Built-In Spice Templates
+
+The list of built-in Spice templates includes:
+- [base_item](#base_item)
+- [base_detail](#base_detail)
+- [text_item](#text_item)
+- [basic_item](#basic_item)
+- [basic_image_item](#basic_image_item)
+- [basic_image_detail](#basic_image_detail)
+- [products_item](#products_item)
+- [products_detail](#products_detail)
+- [products_item_detail](#products_item_detail)
+- [basic_info_detail](#basic_info_detail)
+- [record](#record)
+
+------
+
+## base_item
+
+### Components
+
+- url [optional]
+- content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## base_detail
+
+### Components
+
+- content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_item
+
+### Components
+
+- url [optional]
+- title
+- subtitle
+- description
+- footer [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_item
+
+### Components
+
+- content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_image_item
+
+### Components
+
+- link [optional]
+- image
+- title
+- description [optional]
+- rating [optional]
+- ratingText [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_image_detail
+
+### Components
+
+- image [optional]
+- title
+- content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item
+
+### Components
+
+- url [optional]
+- img
+- title
+- price
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_detail
+
+### Components
+
+- img [optional]
+- url
+- heading
+- price [optional]
+- priceAndBrand [optional]
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item_detail
+
+### Components
+
+- img_m [optional, replaces `img`]
+- img
+- url
+- price [optional] 
+- brand [optional]
+- rating [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_info_detail
+
+### Components
+
+- image [optional]
+- title [optional]
+- content [optional, replaces `description`] *sub-template*
+- description
+
+### Example
+
+<!-- todo -->
+
+------
+
+## record
+
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains the key and value.
+
+**\*\*Note:** This template **requires** a `record_keys` property (in your `data` object) which should be created in `normalize: {}`. The `record_keys` array should provide a list of *strings* indicating the names of the keys to be included in the `<table>`.
+
+For example this is how your `normalize` and `templates` should look when using the **record** template:
 
 ```javascript
-Spice.render({
-    data              : api_result.data.children,
-    header1           : header,
-    source_url        : source,
-    source_name       : 'Reddit',
-    spice_name        : 'reddit_search',
-    template_frame    : 'list',
-    template_options  : {
-        items: api_result.data.children,
-        show: 2,
-        max: 14,
-        template_item: 'reddit_search'
-    },
-    force_big_header  : true,
-    force_space_after : true,
-    force_no_fold : true
-});
+data: {
+    name: 'Bob',
+    phone: '123-456-7890',
+    email: 'bob@bobstheman.com',
+    address: '123 First Street'
+},
+normalize: function(item){
+    return {
+        record_keys: ["name", "phone", "email"]
+    }
+},
+templates: {
+    group: 'base',
+    options: {
+        content: 'record'
+    }
+}
 ```
 
-### Template Options:
+### Components
 
-#### Required
+*none*
 
-- `items` &mdash; the array of results to be displayed
+### Example
 
-#### Optional
-
-- `show` &mdash; default number of list items to display
-- `max` &mdash; maximum number of list items to display
-- `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (should be used when `items` is an array of objects)
-
-#### Advanced
-
-See [below](#advanced-list--carousel).
-
-## Carousel Template
-
-### Use Case:
-A list of results to display, each of which has a unique image and title. Each item also has more information to be displayed once the carousel item is clicked.
-
-### How it looks:
-![Carousel Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/carousel_template_example.png)
-
-### How it works:
-
-###### alternative_to.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
-
-```javascript
-Spice.render({
-    data                     : api_result,
-    source_name              : 'AlternativeTo',
-    source_url               : api_result.Url,
-    spice_name               : 'alternative_to',
-    template_frame           : "carousel",
-    template_options         : {
-        items                : api_result.Items,
-        template_item        : "alternative_to",
-        template_detail      : "alternative_to_details",
-        li_height            : 60,
-        single_item_handler  : function(obj) {
-            obj.header1 = obj.data.Items[0].Name;
-            obj.image_url = obj.data.Items[0].IconUrl;
-        }
-    },
-});
-```
-
-### Template Options:
-
-#### Required
-
-- `items` &mdash; the array of results (should be objects) to be displayed
-- `template_item` &mdash; handlebars sub-template to be applied to each element in `items` array (used to indicate the image and title for each carousel item)
-
-#### Optional
-
-- `template_detail` &mdash; handlebars sub-template to be applied to each element in `items` array (used to populate the "detail area" below carousel results)
-
-#### Advanced
-
-See [below](#advanced-list--carousel).
-
-## Split Pane Template
-
-### Use Case:
-
-Single result that needs a vertically split layout (left & right panes) for your information.
-
-### How it looks:
-
-![Split Pane Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/split_pane_template_example.png)
-
-### How it works:
-
-###### airlines.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
-
-```javascript
-Spice.render({
-    header1          : onTime() + ": Flight Status for " + flight.Airline.Name + " " + flight.FlightNumber,
-    source_url       : "http://www.flightstats.com/go/FlightStatus/flightStatusByFlight.do?&airlineCode=" + flight.Airline.AirlineCode + "&flightNumber=" + flight.FlightNumber,
-    source_name      : "FlightStats",
-    spice_name       : "airlines",
-    template_frame   : "twopane",
-    template_options : {
-        left : { template: "airlines", data: departing },
-        right : { template: "airlines", data: arriving },
-    },
-    force_no_fold    : true,
-    force_big_header : true
-});
-```
-
-### Template Options:
-
-#### Required
-
-- `left` &mdash; lets you specify the `template_options` for the left pane
-    + `data` &mdash; the object to be used as input for the left pane
-- `right` &mdash; lets you specify the `template_options` for the right pane
-    + `data` &mdash; the object to be used as input for the right pane
-
-#### Optional
-
-- within the above `left` or `right` property:
-    + `template` &mdash; handlebars sub-template to be applied to the pane's `data` object
-
-## Record Template
-
-This template is somewhat different from the others, as it is more of a sub-template. Instead of having its own base template (like the above templates), developers can use the record template by using the Handlebars helper functions we've written. This means the record template can be used in any Handlebars files and so it can be used within other templates as well.
-
-### Use Case:
-
-Single result with various pieces of information, each of which has a unique name/title/descriptor.
-
-### How it looks:
-
-![Record Template Example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/record_template_example.png)
-
-### How it works:
-
-###### meta_cpan.js [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
-
-```javascript
-Spice.render({
-    data             : api_response,
-    header1          : query + " (MetaCPAN)",
-    source_url       : 'https://metacpan.org/' + link,
-    source_name      : 'MetaCPAN',
-    template_normal  : 'meta_cpan',
-    force_big_header : true,
-    force_no_fold    : true
-});
-```
-
-###### meta_cpan.handlebars [(link)](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.handlebars)
-
-```handlebars
-{{rv "abstract"}}
-{{rv "author"}}
-{{rv "version"}}
-{{#rd "Description"}}
-    {{condense description maxlen="340" truncation="..."}}
-{{/rd}}
-```
-
-## Explanation:
-
-Seeing as this is a special kind of sub-template, no template options need to be specified. Instead special Handlebars helpers must be used inside the `template_normal` template.
-
-### Handlebars Helpers:
-
-- `{{#rt}}` &mdash; *block helper* used to specify a Title
-- `{{#rd}}` &mdash; *block helper* used to specify a Descriptor (identical to `rt`, but created with a different CSS class)
-- `{{rv}}` &mdash; shorter form of `rd`, produces a key-value pair if the named element exists in the `data` object
-
-## Advanced Template Options (List & Carousel)
-
-The **Carousel** and **List** templates also allow for more advanced (optional) `template_options` to be set:
-
-### Modifying Carousel Item Dimensions
-
-- `li_height` &mdash; lets you specify the *absolute* height for each carousel item
-- `li_width` &mdash; lets you specify the *minimum* width for each carousel item
-
-### Handling a Single Carousel/List Item
-
-- `single_item_handler` &mdash; lets you specify a function which takes an object (the single API result) as input and uses it to modify/set the properties of `Spice.render()` (eg. `header1`, `image_url`) when only one item is returned from the upstream API.
-
-**\*\*Note**: If a single result is returned and a `template_normal` has been specified, then that template will be used and the single item from the API will be passed along as the input. If no `template_normal` is defined, the system will check for a defined `template_detail` and use that. Failing that, it will check if `template_item` is defined and use that.
+<!-- todo -->

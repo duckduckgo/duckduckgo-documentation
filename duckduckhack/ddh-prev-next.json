@@ -21,26 +21,26 @@
 
 	"goodie_basic_tutorial.md": {
 		"prev": ["goodie_overview.md"],
-		"next": ["goodie_triggers.md"]
-	},
-
-	"goodie_triggers.md": {
-		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_testing_triggers.md"]
 	},
 
 	"goodie_testing_triggers.md": {
-		"prev": ["goodie_triggers.md"],
+		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_tests.md"]
 	},
 
 	"goodie_tests.md": {
-		"prev": ["testing_triggers.md"],
+		"prev": ["goodie_testing_triggers.md"],
+		"next": ["goodie_triggers.md"]
+	},
+
+	"goodie_triggers.md": {
+		"prev": ["goodie_tests.md"],
 		"next": ["goodie_advanced_handle_functions.md"]
 	},
 
 	"goodie_advanced_handle_functions.md": {
-		"prev": ["goodie_tests.md"],
+		"prev": ["goodie_triggers.md"],
 		"next": ["faq.md#goodie"]
 	},
 
@@ -51,11 +51,21 @@
 
 	"spice_basic_tutorial.md": {
 		"prev": ["spice_overview.md"],
-		"next": ["spice_triggers.md"]
+		"next": ["spice_testing_triggers.md"]
 	},
 
-	"spice_triggers.md": {
+	"spice_testing_triggers.md": {
 		"prev": ["spice_basic_tutorial.md"],
+		"next": ["spice_tests.md"]
+	},
+
+	"spice_tests.md": {
+		"prev": ["spice_testing_triggers.md"],
+		"next": ["spice_triggers.md"]
+	},
+	
+	"spice_triggers.md": {
+		"prev": ["spice_tests.md"],
 		"next": ["spice_templates_overview.md"]
 	},
 
@@ -66,46 +76,36 @@
 
 	"spice_frontend_walkthroughs.md": {
 		"prev": ["spice_templates_overview.md"],
-		"next": ["spice_testing_triggers.md"]
-	},
-
-	"spice_testing_triggers.md": {
-		"prev": ["spice_frontend_walkthroughs.md"],
-		"next": ["spice_tests.md"]
-	},
-
-	"spice_tests.md": {
-		"prev": ["spice_testing_triggers.md"],
 		"next": ["spice_advanced_backend.md"]
 	},
 
 	"spice_advanced_backend.md": {
-		"prev": ["spice_tests.md"],
+		"prev": ["spice_frontend_walkthroughs.md"],
 		"next": ["spice_advanced_frontend.md"]
 	},
 
 	"spice_advanced_frontend.md": {
 		"prev": ["spice_advanced_backend.md"],
-		"next": ["spice_ddg_methods.md"]
+		"next": ["spice_js_api.md"]
 	},
 
-	"spice_ddg_methods.md": {
+	"spice_js_api.md": {
 		"prev": ["spice_advanced_frontend.md"],
 		"next": ["spice_handlebars_helpers.md"]
 	},
 
 	"spice_handlebars_helpers.md": {
-		"prev": ["spice_ddg_methods.md"],
-		"next": ["spice_helper_functions.md"]
+		"prev": ["spice_js_api.md"],
+		"next": ["spice_perl_api.md"]
 	},
 
-	"spice_helper_functions.md": {
+	"spice_perl_api.md": {
 		"prev": ["spice_handlebars_helpers.md"],
 		"next": ["spice_attributes.md"]
 	},
 
 	"spice_attributes.md": {
-		"prev": ["spice_helper_functions.md"],
+		"prev": ["spice_perl_api.md"],
 		"next": ["faq.md#spice"]
 	},
 

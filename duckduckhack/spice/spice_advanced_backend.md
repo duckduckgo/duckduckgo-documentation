@@ -53,7 +53,7 @@ Some APIs require API keys to function properly like in the [RandWord Spice](htt
 spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
 ```
 
-You can set the variable when you start duckpan server like this:
+You can set the variable when you start DuckPAN server like this:
 
 ```bash
 DDG_SPICE_RANDWORD_APIKEY=xyz duckpan server
