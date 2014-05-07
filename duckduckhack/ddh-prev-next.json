@@ -69,8 +69,13 @@
 		"next": ["spice_templates_overview.md"]
 	},
 
-	"spice_templates_overview.md": {
+	"spice_displaying.md": {
 		"prev": ["spice_triggers.md"],
+		"next": ["spice_templates_overview.md"]
+	},
+
+	"spice_templates_overview.md": {
+		"prev": ["spice_displaying.md"],
 		"next": ["spice_frontend_walkthroughs.md"]
 	},
 
