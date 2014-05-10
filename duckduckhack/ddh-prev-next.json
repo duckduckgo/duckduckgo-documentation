@@ -6,11 +6,16 @@
 
 	"duckduckhack_vision.md": {
 		"prev": ["ddh-intro.md"],
+		"next": ["whatsnew.md"]
+	},
+
+	"whatsnew.md": {
+		"prev": ["duckduckhack_vision.md"],
 		"next": ["determine_your_instant_answer_type.md"]
 	},
 
 	"determine_your_instant_answer_type.md": {
-		"prev": ["duckduckhack_vision.md"],
+		"prev": ["whatsnew.md"],
 		"next": ["goodie_overview.md", "spice_overview.md", "fathead_overview.md", "longtail_overview.md"]
 	},
 
