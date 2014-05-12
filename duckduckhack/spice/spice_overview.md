@@ -1,5 +1,4 @@
-
-### note
+### Note
 
 This documentation is for the DuckDuckGo [public beta](https://next.duckduckgo.com/). The API has changed in some significant ways.
 See [getting started](https://github.com/duckduckgo/zeroclickinfo-spice/blob/bttf/BETA.md) for more information and how to help out during the transition.
