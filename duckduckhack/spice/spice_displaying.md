@@ -1,19 +1,25 @@
-# Displaying Your Spice with Spice.add()
+# Adding Your Spice to the AnswerBar
 
-As previously mentioned, `Spice.add()` is the crucial Spice function, which is used to display your Spice. However, this function is capable of much more than simply showing your Spice result. For example, it also helps you ensure the relevancy and order of results and allows you to provide various templates for different scenarios (e.g. mobile templates).
-
-Here, we will outline in more detail all the possible parameters that can be set for `Spice.add()`:
+As previously mentioned, `Spice.add()` is the crucial Spice function, which is used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
 
 
 # Essential Properties
 
 ### id `string` [required]
 
-A unique identifier for your Spice. Generally the `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
+A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
 
 ### name `string` [required]
 
-The name that will be used for your Spice's AnswerBar tab. Generally it can be a more formal version of your `id` or the API source name. For example, if your `id` is `lastfm_artist`, your `name` could be `Last.fm`.
+The name that will be used for your Spice's AnswerBar tab. The Spice system will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Spice provides. Here are some examples:
+
+| Spice      | `name`    |
+| -----------|---------- |
+| GitHub     | Software  |
+| Last.fm    | Music     |
+| HackerNews | News      |
+| Twitter    | Social    |
+| Amazon     | Products  |
 
 ### data `object` [required]
 
@@ -26,17 +32,21 @@ The following options are used to define elements of the **MetaBar** including t
 
 - ### searchTerm `string`
 
-    The term(s) that was searched, stripped of skip words (e.g. "cat videos" would be "cat"). This will be used for the MetaBar wording where it reads, for example, "Showing 15 **Electronics** Coupons". In this case "Electronics" is the `searchTerm`.
+    The key term or subject in the search query. The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query. For example, searching "coupons for electronics", will display the phrase "Showing 15 **electronics** Coupons" in the MetaBar. In this case, the word "electronics" is the `searchTerm`.
 
 - ### itemType `string`
 
-    The type of item being shown (e.g. Videos, Images, Recipes) and this is also used in the MetaBar. In the previous example, "Showing 15 **Electronics** Coupons", "Coupons" is the `itemType`.
+    The type of item being shown (e.g. Videos, Images, Recipes). `itemType` is also used by the MetaBar, to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
 
 ------
 
 - ### primaryText `string`
 
     If defined, this text will replace the MetaBar's "Showing **n** Items" text. For example, the Forecast Spice uses this to display "Weather for New York, NY" in the MetaBar.
+
+- ### secondaryText `string`
+
+    This is additional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
 
 ------
 
@@ -60,12 +70,6 @@ The following options are used to define elements of the **MetaBar** including t
 
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
 
-------
-
-- ### secondaryText `string`
-
-    This is additional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
-
 
 # Data Normalization
 
@@ -80,7 +84,7 @@ The following options are used to define elements of the **MetaBar** including t
     For example, if you have a `data` object that looks like this:
 
     ```javascript
-    // original data object
+    // original data object from API
     {
         heading: "My awesome title",
         image:   "http://website.com/image.png"
