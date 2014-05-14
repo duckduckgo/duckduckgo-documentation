@@ -20,7 +20,7 @@ The AnswerBar display instant answers in tabs. Because many IAs can load togethe
 
 
 <!--
-![AnswerBar](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee.png)
+![AnswerBar](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/coffee.png)
 -->
 ![AnswerBar](../assets/coffee.png)
 
@@ -42,10 +42,7 @@ The others, Spice Instant Answers, individually define a query space with their 
 Instant answers are of two fundamental types: single- and multi-item. Below is a single item, the dictionary definition Spice instant answer:
 
 
-<!--
-![Single item](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png)
--->
-![Single item, detail view](../assets/coffee_definition.png)
+![Single item, detail view](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/coffee_definition.png)
 
 This is a single item displayed using the detail template defined by the instant answer.
 
@@ -53,41 +50,94 @@ This is a single item displayed using the detail template defined by the instant
 
 When an Instant Answer has multiple items, they are generally shown in the Tile View. It's very flexible, supports different tile size variations, grid mode, and interspersed detail view.
 
-<!--
-![multiple items in a Tile View](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_recipes.png)
--->
-![multiple items in a Tile View](../assets/coffee_recipes.png)
+![Multiple items in a Tile View](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/coffee_recipes.png)
 
 Each *tile* is a container that displays an item rendered with a template defined by the instant answer.  The term *item* refers to the single unit of data as defined by the IA - in these examples, a definition or single recipe is an item.
 
 The item can also be shown with its detail template:
 
-<!--
-![Tile View with Detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_recipes_detail.png)
--->
-![Tile View with Detail](../assets/coffee_recipes_detail.png)
+![Tile View with Detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/coffee_recipes_detail.png)
 
 
 ## Templates and Layouts
 
-Templates and template groups define how items are displayed in different contexts - as single items, as tiles, as tile view detail, as mobile items.
+Instant Answers (Spice only, for now) provide templates to allow the AnswerBar to display their data in different contexts - as tiles, or as detail, or both. DuckDuckHack provides several built-in types to cover common general cases, with the ability to make substitutions and turn features on and off as desired.
 
-Recipes, above, uses the products template group - a set of templates for displaying products and product-like information.
+Templates can be named individually, and they have been organized into named groups for convenience, with default feature options set appropriately. For instance, products_simple is just products with the brand and price turned off; an individual IA could further turn off the rating, or other items to reuse the basic structure. See the In Theaters example below.
+
+Template groups:
+
+- base: empty container
+- text: titles and 
+- icon: text with small inset image
+- info: structured expandable text with auxiliary box
+- products: product information with icons, rating, price
+- products_simple: less structured variation of products
+
+### Text template group
+
+Tiles support title, subtitle, and content and footer sub templates which the IA can provide.
 
 <!--
-![Tile View with Detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_recipes_detail.png)
-![Tile View with Detail](../assets/recipes_item.png)
+](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/github_duckduckgo.png)
 -->
+![github using text group, showing tiles](../assets/github_duckduckgo.png)
 
-![Tile comparsion: variations of 'products'](../assets/tile_comparison.png)
+[github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/github) using the text template group with a custom footer
 
-These two tiles are both using variations of the DuckDuckGo built-in *products* template group, which is meant for displaying products and product-like items. Recipes, on the left, uses the 'simple' variation. Recipes are like products, except that they don't have a brand or a price.
+
+![dictionary definition using text group, showing detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/coffee_definition.png)
+
+[dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/dictionary/definition) uses a custom template for the title in detail view.
+
+### Products
+
+The products template group consists of templates for tiles and detail that are structured for items to buy. Rating, brand, price, etc. There is a second group called products_simple which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
+
+<!--
+![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/products_detail.png)
+-->
+![amazon using the products group](../assets/products_detail.png)
+
+![Tile comparsion: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/tile_comparison.png)
+
+Recipies, on the left, is using the products_simple tile, and amazon on the right is using the products tile.
+
+In Theaters uses the products_simple template group, but simplifies the tile even more by turning off all the tile's features except the image. Additionally it sets the tile to use the 'poster' variant, shaped like a movie poster.
+
+<!--
+![Movies using products_simple group](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/movies.png)
+-->
+![in_theaters using the products_simple template group](../assets/movies.png)
+
+[In Theaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating and ratingText so the image occupies the entirety of the tile.
+
+
+### Info
+
+Info is a sophisticated template for showing summary information with an optional image and embedded auxiliary box. Both the text and auxiliary box are expandable, by default showing four lines of text in height. Both the text and the auxiliary box can contain arbitrary content by using an IA-defined template.
+
+<!--
+![Last.fm using the info template](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/artist.png)
+-->
+![Last.fm using the info template](../assets/artist.png)
+
+The info template also supports an embedded auxiliary box on the right.
+There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-spice/issues/684) to display the artist's top tracks in the auxiliary box.
+
+<!--
+![Info template with embedded auxiliary box, no image](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/drinks-infobox.png)
+-->
+![Info template with embedded auxiliary box, no image](../assets/drinks-infobox.png)
+
+Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/drinks) uses the auxilliary box for its ingredients list. By default the info template only shows the part of the box that fitw within the default template height. Here it's shown in the open state.
+
+Because Drinks doesn't have an image, it's not shown and the text is aligned left to fill the space. Since the text already fits within four lines, no "Show More" expander button is displayed.
+
 
 ## Data Mapping with normalize()
 
-Because APIs define their data in their own ways, instant answers define a `normalize()` function that maps data to the field names required by a buit-in template. For example, the Yummly API used by Recipes returns an array of images called `imageUrlsBySize`, so Recipes sets `image` required by the products template group with one of these.
-
-## Anatomy of an IA
+Because APIs define their data in their own ways, instant answers that use built-in templates must provide a `normalize()` function to maps data to the field names required by a buit-in template. For example, the Yummly API used by Recipes returns an array of images called `imageUrlsBySize`, so Recipes sets `image` required by the products template group with one of these.
 
 
 
