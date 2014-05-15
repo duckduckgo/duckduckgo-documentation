@@ -82,10 +82,9 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 
 [github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/github) using the text template group with a custom footer
 
+------
 
 ![dictionary definition using text group, showing detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png)
-
-------
 
 [dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/dictionary/definition) uses a custom template for the title in detail view.
 
