@@ -137,11 +137,11 @@ The following options are used to define elements of the **MetaBar** including t
 
 # Templates
 
-A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable components depending on the chosen template group.
+A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
 - ### group `string` [required unless `item` or `detail` is specified]
 
-    Used to specify the base template (layout) to be used. Each template `group` is composed of several components. The various options for this will be explained later in the [template overview](#).
+    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The various options for this will be explained later in the [template overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md).
 
     This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
 
@@ -201,9 +201,9 @@ A `templates: {}` property should be used to specify the template group and all 
 
 - ### options `object`
 
-    Allows you to explicitly disable or enable components of a template, as well as specify any sub-templates when applicable (e.g. the `content` component of the `'info'` template). Depending on the templates being used, the components will vary. For example, the `'info'` template doesn't have a `brand` component, so attempting to enable or disable that component will have no effect.
+    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g. the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
 
-    **\*\*Note:** If you intend to use a component that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the component is disabled. For example:
+    **\*\*Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
 
     ```javascript
     normalize: function(item){
