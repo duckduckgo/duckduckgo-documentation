@@ -2,7 +2,7 @@
 
 **May 2014**
 
-The new verison of DuckDuckGo has launched into public beta!  This document highlights changes to the Instant Answer platform.
+The new version of DuckDuckGo has launched into public beta!  This document highlights changes to the Instant Answer platform.
 
 
 ## Highlights
@@ -33,7 +33,7 @@ In this example:
 
 DuckDuckGo's internal processes determined the About, Images, Video, and Meanings results.
 
-The others, Spice Instant Answers, individually define a query space with their [triggers][triggers]. In the above example, Recipes, Dictionary and Products have already recieved data from their respective external APIs and have determined that the data is actually relevant to the user's query.
+The others, Spice Instant Answers, individually define a query space with their [triggers][triggers]. In the above example, Recipes, Dictionary and Products have already received data from their respective external APIs and have determined that the data is actually relevant to the user's query.
 
 
 ## Answers
@@ -97,9 +97,9 @@ The products template group consists of templates for tiles and detail that are 
 
 ------
 
-![Tile comparsion: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/tile_comparison.png)
+![Tile comparison: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/tile_comparison.png)
 
-Recipies, on the left, is using the products_simple tile, and amazon on the right is using the products tile.
+Recipes, on the left, is using the products_simple tile, and amazon on the right is using the products tile.
 
 InTheaters uses the products_simple template group, but simplifies the tile even more by turning off all the tile's features except the image. Additionally it sets the tile to use the 'poster' variant, shaped like a movie poster.
 
@@ -119,14 +119,14 @@ There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-
 
 ![Info template with embedded auxiliary box, no image](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/drinks-infobox.png)
 
-Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/drinks) uses the auxilliary box for its ingredients list. By default the info template only shows the part of the box that fitw within the default template height. Here it's shown in the open state.
+Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/drinks) uses the auxiliary box for its ingredients list. By default the info template only shows the part of the box that fits within the default template height. Here it's shown in the open state.
 
 Because Drinks doesn't have an image, it's not shown and the text is aligned left to fill the space. Since the text already fits within four lines, no "Show More" expander button is displayed.
 
 
 ## Data Mapping with normalize()
 
-Because APIs define their data in their own ways, instant answers that use built-in templates must provide a `normalize()` function that maps data to the field names required by a buit-in template. For example, the Yummly API used by Recipes returns an array of images called `imageUrlsBySize`, so Recipes sets `image` required by the products template group with one of these.
+Because APIs define their data in their own ways, instant answers that use built-in templates must provide a `normalize()` function that maps data to the field names required by a built-in template. For example, the Yummly API used by Recipes returns an array of images called `imageUrlsBySize`, so Recipes sets `image` required by the products template group with one of these.
 
 
 [Spice]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md
