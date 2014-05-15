@@ -157,7 +157,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
     The template to be used for the body of each tile in a tile view.
 
-    **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps), meaning the object given to `data` is an *`array`* with more than 1 elemensts.
+    **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps), meaning the object given to `data` is an *`array`* with more than 1 elements.
 
     - Generally, a *`string`* is provided to indicate the name of the built-in Spice template to be used, e.g. "products_item"
 
@@ -377,7 +377,7 @@ This event occurs each time a tile is unselected.
 
 ### onShow `function`
 
-This event occurs when a Spice tab initally opens.
+This event occurs when a Spice tab initially opens.
 
 ### onHide `function`
 
