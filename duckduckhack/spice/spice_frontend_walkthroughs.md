@@ -81,17 +81,17 @@ Now, let's take a look at the Footer Handlebars template:
 
 ```html
 <div>
-    {{Votes}} likes{{#if Platforms}} &bull; {{AlternativeTo_getPlatforms Platforms}}{{/if}}
+    {{Votes}} likes{{#if Platforms}} &bull; {{AlternativeTo_getPlatform Platforms}}{{/if}}
 </div>
 ```
 
-As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `if` and `AlternativeTo_getPlatforms`).
+As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `if` and `AlternativeTo_getPlatform`).
 
 These helpers are really JavaScript functions, which operate on input and return their content to the template.
 
-The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{AlternativeTo_getPlatforms Platforms}}` to the page.
+The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{AlternativeTo_getPlatform Platforms}}` to the page.
 
-You may have noticed that `AlternativeTo_getPlatforms` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
+You may have noticed that `AlternativeTo_getPlatform` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
 
 ###### alternative_to.js
 
@@ -101,7 +101,7 @@ You may have noticed that `AlternativeTo_getPlatforms` is actually defined along
     });
 ```
 
-This code demonstrates how Handlebars helpers are created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `AlternativeTo_getPlatforms` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
+This code demonstrates how Handlebars helpers are created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `AlternativeTo_getPlatform` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
 
 The AlternativeTo Spice also uses a little bit of CSS to further customize and perfect the layout of the tiles. Let's take a look at the CSS:
 
