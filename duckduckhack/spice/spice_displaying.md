@@ -1,6 +1,6 @@
 # Adding Your Spice to the AnswerBar
 
-As previously mentioned, `Spice.add()` is the crucial Spice function, which is used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
+`Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
 
 
 # Essential Properties
@@ -26,7 +26,7 @@ The name that will be used for your Spice's AnswerBar tab. The Spice system will
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
 
 
-# Instant Answer Meta Data
+# Instant Answer Metadata
 
 The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
 
@@ -36,7 +36,7 @@ The following options are used to define elements of the **MetaBar** including t
 
 - ### itemType `string`
 
-    The type of item being shown (e.g. Videos, Images, Recipes). `itemType` is also used by the MetaBar, to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
+    The type of item being shown (e.g. Videos, Images, Recipes). `itemType` is used by the MetaBar to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
 
 ------
 
@@ -46,7 +46,7 @@ The following options are used to define elements of the **MetaBar** including t
 
 - ### secondaryText `string`
 
-    This is additional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
+    This is an optional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
 
 ------
 
