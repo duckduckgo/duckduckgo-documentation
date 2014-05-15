@@ -116,7 +116,7 @@ Once triggers are specified, we define how to *handle* the query. `handle` is an
 
 You can *handle* different parts of the search query, but the most common is the **remainder**, which refers to the remainder of the query, after the first matched trigger word/phrase has been removed. 
 
-For example, if the query was "**npm uglify-js**", the trigger would be *npm* and the remainder would be *uglify-js*.
+For example, if the query was "**npm uglify-js**", the trigger would be *npm* and the **remainder** would be *uglify-js*.
 
 Now let's add a few more lines to complete the handle function:
 
@@ -330,6 +330,24 @@ At this point, the rendering of the Spice instant answer changes context from Ja
 ```
 
 As you can see, this is a special type of HTML template where all of `api_result`'s properties (e.g. `version`, `description`) can be accessed by wrapping their respective names in double curly braces. This is possible, because we passed along the `api_result` object (containing all the JSON) to the `data` parameter, which becomes the **context** for our template.
+
+This is what our JSON response looks like, and our template refers by name to the properties of our JSON object:
+
+###### Sample API response from NPM
+
+```json
+{
+
+    "name": "http-server",
+    "version": "0.6.1",
+    "author": {
+        "name": "Nodejitsu",
+        "email": "support@nodejitsu.com"
+    },
+    "description": "a simple zero-configuration command-line http server",
+    ...
+}
+```
 
 For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
 

@@ -18,10 +18,16 @@ The Alternative.To instant answer is very similar to NPM in that it's also relat
     "use strict";
 
     env.ddg_spice_alternative_to = function(api_result) {
+
+        if (!api_result || !api_result.Items) {
+            return Spice.failed('alternative_to');
+        }
+
         Spice.add({
             id: 'alternative_to',
-            name: 'Alternative Software',
+            name: 'Software',
             data: api_result.Items,
+            signal: 'high',
             meta: {
                 searchTerm: api_result.Name,
                 itemType: 'Alternatives',
@@ -31,19 +37,22 @@ The Alternative.To instant answer is very similar to NPM in that it's also relat
             normalize: function(item) {
                 return {
                     ShortDescription: DDG.strip_html(DDG.strip_href(item.ShortDescription)),
-                    url: item.Url
+                    url: item.Url,
+                    icon: item.IconUrl,
+                    title: item.Name,
+                    description: item.ShortDescription
                 };
             },
             templates: {
-                group: 'base',
-                options: {
-                    content: Spice.alternative_to.content
-                }
+                group: 'icon',
+        options: {
+            footer: Spice.alternative_to.footer
+        }
             }
         });
     };
 
-    Handlebars.registerHelper("getPlatform", function (platforms) {
+    Handlebars.registerHelper("AlternativeTo_getPlatform", function (platforms) {
         return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
 
@@ -56,91 +65,77 @@ Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same
 
 - `itemType` is the type of item being shown (e.g. Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
 
-- `normalize` allows you to normalize an item before it is passed on to the template. You can add or modify properties of the item that are used by your templates. In our case, we're using `normalize` to modify the `ShortDescription` property of each item, by removing HTML content from it and we use it to add a `url` property to each item in the `data` array.
+- `normalize` allows you to normalize an item before it is passed on to the template. You can add or modify properties of the item that are used by your templates. In our case, we're using `normalize` to modify the `ShortDescription` property of each item, by removing HTML content from it and we also use it to add a few properties to our `item`, which our template will use.
 
-    This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
+    **\*\*Note:** This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
 
-- `templates` is used to specify the template `group` and any other templates that are being used. Template `options` may also be provided to enable or disable template components used by the chosen `group`. In our case we've specified that we're using the `base` template group (the most basic group) and in the `options` block, we've specified the sub-template to be used for the `content` component.
+- `templates` is used to specify the template `group` and any other templates that are being used. Template `options` may also be provided to enable or disable template components used by the chosen `group`. In our case we've specified that we're using the `icon` template group and in the `options` block, we've specified the sub-template to be used for the `footer` component.
 
-    The `base_item` template is essentially a wrapper around a `content` component, which will contain the `content` specified in the options block. This allows us to use a sub-template, which we've created and named **content.handlebars**. It is placed in the AlternativeTo Spice's share directory, **/share/spice/alternative_to**.
+    The `icon` template has a few features including a `title`, `icon` and `description`. It also has an optional `footer` feature, which is actually a sub-template. We've created a **footer.handlebars** template and placed in the AlternativeTo Spice's share directory, **/share/spice/alternative_to**. We specify in the `options` block that the template to be used for the `footer` feature is the template we've created by referencing its name: `Spice.alternative_to.footer`.
 
 ------
 
-Now, let's take a look at the Content Handlebars templates:
+Now, let's take a look at the Footer Handlebars template:
 
-###### content.handlebars (in /share/spice/alternative_to/)
+###### footer.handlebars (in /share/spice/alternative_to/)
 
 ```html
-<img src="{{imageProxy IconUrl}}" alt="{{Name}}" class="tile__icon" />
-
-<h5 class="tile__title">
-    <a href="{{url}}">{{ellipsis Name 26}}</a>
-</h5>
-
-{{#if ShortDescription}}
-    <div class="tile__description">{{ellipsis ShortDescription 90}}</div>
-{{/if}}
-
 <div>
-    {{Votes}} likes{{#if Platforms}} &bull; {{getPlatform Platforms}}{{/if}}
+    {{Votes}} likes{{#if Platforms}} &bull; {{AlternativeTo_getPlatforms Platforms}}{{/if}}
 </div>
 ```
 
-As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `imageProxy`, `ellipsis`, `if` and `getPlatforms`).
+As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `if` and `AlternativeTo_getPlatforms`).
 
 These helpers are really JavaScript functions, which operate on input and return their content to the template.
 
-The `imageProxy` helper function takes a URL string as input, and prepends `'/iu?u=` to the URL making it a relative link so that the image is proxied through DuckDuckGo's servers. This ensures the user's privacy by allowing DuckDuckGo to make the request on the user's behalf. Using the `imageProxy` helper is **required** for any `<img>`'s in your handlebars template.
+The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{AlternativeTo_getPlatforms Platforms}}` to the page.
 
-The `ellipsis` helper is used to shorten a string to a given length. In our case we use it to shorten the `Name` to a maximum of `26` characters and the `ShortDescription` to `90` characters. After shortening the string, an ellipsis ("&hellip;") is appended to it, showing that the string has been truncated.
-
-The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{getPlatform Platforms}}` to the page.
-
-You may have noticed that `getPlatforms` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
+You may have noticed that `AlternativeTo_getPlatforms` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
 
 ###### alternative_to.js
 
 ```javascript
-    Handlebars.registerHelper("getPlatform", function (platforms) {
+    Handlebars.registerHelper("AlternativeTo_getPlatform", function (platforms) {
         return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
 ```
 
-This code demonstrates how are Handlebars register is created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `getPlatforms` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
+This code demonstrates how Handlebars helpers are created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `AlternativeTo_getPlatforms` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
 
-<!-- TODO: Remove this section, no CSS should be specified -->
-Our template also gives a few elements a CSS class - this is so we can write clear CSS to modify the layout of the items. Let's take a look at the CSS:
+The AlternativeTo Spice also uses a little bit of CSS to further customize and perfect the layout of the tiles. Let's take a look at the CSS:
 
 ###### alternative_to.css
 
 ```css
-.zci--alternative_to .tile__icon {
+.tile--alternative_to .tile__icon {
     float: right;
     margin-top: 0;
     margin-right: 0;
 }
 
-.zci--alternative_to .tile__description {
-    margin-bottom: 0.5em;
-    font-weight: inherit;
+.tile--alternative_to .tile__body {
+    height: 13em;
+}
+
+.tile--alternative_to .tile__footer {
+    bottom: 0.6em;
 }
 ```
 
+As you can see, this Spice requires very little CSS. This layout is a bit unique and so we opted to modify the layout of the content slightly. In most case the use of templates will alleviate the need to write custom CSS, however sometimes it is necessary and can be used sparingly.
 
-As you can see, this Spice requires very little CSS. This layout is a bit unique and so we opted to modify they layout of the content slightly. In most case the use of templates will alleviate the need to write custom CSS, however sometimes it is necessary and can be used sparingly.
-
-The most important thing to note is that we have prefaced each of our CSS rules with the class `.zci--alternative_to`. Each Spice instant answer is wrapped in a `<div>` with a class called `.zci--<spice_name>` where `<spice_name>` matches the Spice's package name. This allows us to **namespace** all the CSS rules for each individual Spice. The is very important because DuckDuckGo simultaneously loads and triggers multiple Spice instant answers (depending on the query) and so namespaceing the CSS is extremely important to ensure that our Spice's CSS rules don't affect other elements on the page. If your Spice requires any CSS, it **must** only target  child elements of `.zci--<spice_name>`.
+The most important thing to note is that we have prefaced each of our CSS rules with the class `.tile--alternative_to`. Each Spice instant answer is wrapped in a `<div>` that has a class called `.zci--<spice_name>` where `<spice_name>` matches the Spice's package name. As well, when a tile view is used, *each tile* is wrapped in a `div` that has a class called `.tile--<spice_name>`. These allow us to **namespace** all the CSS rules for each individual Spice and their tiles. The is very important because DuckDuckGo simultaneously loads and triggers multiple Spice instant answers (depending on the query) and so namespaceing the CSS is necessary to ensure that none of our Spices' CSS rules affect other elements on the page. If your Spice requires any CSS, it **must** only target child elements of `.zci--<spice_name>` for the detail area and/or `.tile--<spice_name>` for the tiles.
 
 
-## Walkthrough #2: InTheaters (Medium)
+<More to Come...>
+
+<!-- ## Walkthrough #2: InTheaters (Medium)
 
 The **InTheaters** instant answer is a little more advanced than **NPM** and **Alternative.To**, but it's still fairly easy to understand. Let's start by looking at the JavaScript:
 
 ###### in_theaters.js
-
-```javascript
-
-```
+ -->
 
 <!--
     

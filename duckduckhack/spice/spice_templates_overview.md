@@ -1,8 +1,8 @@
 # Spice Templates
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various components enabled by default.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various fetures enabled by default.
 
-For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and components work best for your Spice instant answer.
+For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and fetures work best for your Spice instant answer.
 
 
 # Templates Groups
@@ -14,7 +14,7 @@ There are several template groups to choose from:
 - [info](#info)
 - [products](#products)
 - [products_simple](#products_simple)
-- [Default Template Options (No Template Group Selected)](#default-template-options-no-template-group-selected)
+- [Default Template Options (When no template group selected)](#default-template-options-when-no-template-group-selected)
 
 ------
 
@@ -49,6 +49,7 @@ A basic template for simple, text-only results. This template offers a title, de
 ### Default Templates
 
 - item: *'text_item'*
+- detail: *'text_detail'*
 
 ### Default Options
 
@@ -130,7 +131,7 @@ A simplified version of the **products** group. This provides a basic `item` tem
 
 ------
 
-## Default Template Options (No Template Group Selected)
+## Default Template Options (When no template group selected)
 
 When no `templates.options` are specified **and** no template `group` has been selected, the default options are as follows:
 
@@ -150,6 +151,7 @@ The list of built-in Spice templates includes:
 - [base_item](#base_item)
 - [base_detail](#base_detail)
 - [text_item](#text_item)
+- [text_detail](#text_detail)
 - [basic_item](#basic_item)
 - [basic_image_item](#basic_image_item)
 - [basic_image_detail](#basic_image_detail)
@@ -163,10 +165,10 @@ The list of built-in Spice templates includes:
 
 ## base_item
 
-### Components
+### Features
 
 - url [optional]
-- content
+- content *sub-template*
 
 ### Example
 
@@ -176,9 +178,11 @@ The list of built-in Spice templates includes:
 
 ## base_detail
 
-### Components
+### Features
 
 - content
+OR
+- content *sub-template*
 
 ### Example
 
@@ -188,7 +192,7 @@ The list of built-in Spice templates includes:
 
 ## text_item
 
-### Components
+### Features
 
 - url [optional]
 - title
@@ -202,11 +206,25 @@ The list of built-in Spice templates includes:
 
 ------
 
+## text_detail
+
+### Features
+
+- title_content [optional] *sub-template*
+- title [optional, replaces `title_content`]
+- content [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
 ## basic_item
 
-### Components
+### Features
 
-- content
+- content *sub-template*
 
 ### Example
 
@@ -216,7 +234,7 @@ The list of built-in Spice templates includes:
 
 ## basic_image_item
 
-### Components
+### Features
 
 - link [optional]
 - image
@@ -233,7 +251,7 @@ The list of built-in Spice templates includes:
 
 ## basic_image_detail
 
-### Components
+### Features
 
 - image [optional]
 - title
@@ -247,7 +265,7 @@ The list of built-in Spice templates includes:
 
 ## products_item
 
-### Components
+### Features
 
 - url [optional]
 - img
@@ -265,7 +283,7 @@ The list of built-in Spice templates includes:
 
 ## products_detail
 
-### Components
+### Features
 
 - img [optional]
 - url
@@ -286,7 +304,7 @@ The list of built-in Spice templates includes:
 
 ## products_item_detail
 
-### Components
+### Features
 
 - img_m [optional, replaces `img`]
 - img
@@ -305,7 +323,7 @@ The list of built-in Spice templates includes:
 
 ## basic_info_detail
 
-### Components
+### Features
 
 - image [optional]
 - title [optional]
@@ -346,10 +364,72 @@ templates: {
 }
 ```
 
-### Components
+### Features
 
 *none*
 
 ### Example
 
 <!-- todo -->
+
+------
+
+# Tile Variants
+
+If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants which each offer tiles with different dimensions (some wider, some taller):
+
+- [narrow](#narrow)
+- [poster](#poster)
+- [wide](#wide)
+- [xwide](#xwide)
+- [video](#video)
+
+------
+
+## narrow
+
+Narrower tile width, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## poster
+
+Tall and thin, like a movie poster.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## wide
+
+Increased width, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## xwide
+
+Super wide, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## video
+
+Shorter height, increased width.
+
+### Example
+
+<!-- Image -->
