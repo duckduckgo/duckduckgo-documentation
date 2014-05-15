@@ -92,12 +92,9 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 
 ### Products
 
-The products template group consists of templates for tiles and detail that are structured for items to buy. Rating, brand, price, etc. There is a second group called products_simple which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
+The products template group consists of templates for tiles and detail that are structured for items to buy. Rating, brand, price, etc. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
 
-<!--
 ![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/products_detail.png)
--->
-![amazon using the products group](../assets/products_detail.png)
 
 ![Tile comparsion: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/tile_comparison.png)
 
@@ -105,10 +102,7 @@ Recipies, on the left, is using the products_simple tile, and amazon on the righ
 
 In Theaters uses the products_simple template group, but simplifies the tile even more by turning off all the tile's features except the image. Additionally it sets the tile to use the 'poster' variant, shaped like a movie poster.
 
-<!--
-![Movies using products_simple group](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/movies.png)
--->
-![in_theaters using the products_simple template group](../assets/movies.png)
+![in_theaters using the products_simple template group](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/movies.png)
 
 [In Theaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating and ratingText so the image occupies the entirety of the tile.
 
@@ -117,18 +111,12 @@ In Theaters uses the products_simple template group, but simplifies the tile eve
 
 Info is a sophisticated template for showing summary information with an optional image and embedded auxiliary box. Both the text and auxiliary box are expandable, by default showing four lines of text in height. Both the text and the auxiliary box can contain arbitrary content by using an IA-defined template.
 
-<!--
 ![Last.fm using the info template](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/artist.png)
--->
-![Last.fm using the info template](../assets/artist.png)
 
 The info template also supports an embedded auxiliary box on the right.
 There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-spice/issues/684) to display the artist's top tracks in the auxiliary box.
 
-<!--
 ![Info template with embedded auxiliary box, no image](https://raw.github.com/duckduckgo/duckduckgo-documentation/russell/beta/duckduckhack/assets/drinks-infobox.png)
--->
-![Info template with embedded auxiliary box, no image](../assets/drinks-infobox.png)
 
 Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/drinks) uses the auxilliary box for its ingredients list. By default the info template only shows the part of the box that fitw within the default template height. Here it's shown in the open state.
 
