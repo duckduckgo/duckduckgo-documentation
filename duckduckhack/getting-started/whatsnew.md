@@ -85,6 +85,8 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 
 ![dictionary definition using text group, showing detail](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png)
 
+------
+
 [dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/dictionary/definition) uses a custom template for the title in detail view.
 
 ### Products
@@ -92,6 +94,8 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 The products template group consists of templates for tiles and detail that are structured for items to buy. Rating, brand, price, etc. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
 
 ![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/products_detail.png)
+
+------
 
 ![Tile comparsion: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/tile_comparison.png)
 
@@ -129,4 +133,3 @@ Because APIs define their data in their own ways, instant answers that use built
 [Goodies]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md
 [Fathead]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md
 [triggers]:https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/spice_triggers.md
-
