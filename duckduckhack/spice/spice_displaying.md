@@ -94,9 +94,9 @@ The following options are used to define elements of the **MetaBar** including t
     You will likely want to use the `heading` property as the `title` for the **basic_image_item** template, so your `normalize` function would need to look like this:
 
     ```javascript
-    normalize: function(obj){
+    normalize: function(item){
         return {
-            title: obj.heading
+            title: item.heading
         };
     }
     ```
@@ -178,10 +178,6 @@ A `templates: {}` property should be used to specify the template group and all 
     *For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
 
     **\*\*Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
-
-- ### detail_custom `string|function`
-
-    Ssh. This doesn't exist either...
 
 - ### detail_mobile `string|function`
 
