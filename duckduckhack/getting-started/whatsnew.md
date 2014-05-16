@@ -2,23 +2,23 @@
 
 **May 2014**
 
-The new version of DuckDuckGo has launched into public beta!  This document highlights changes to the Instant Answer platform.
+The new version of DuckDuckGo has launched into public beta! This document highlights changes to the Instant Answer platform.
 
 
 ## Highlights
 
-- AnswerBar: many Instant Answers can display on the page at once
-- Wider: Instant Answers can fill the width of the page in certain cases
-- New views for Instant Answers: Tile view with grid mode, Interactive maps, Image view
-- New templates and layouts: Text, Info, Products with variations and feature flags
-- Automated api result relevancy checking and data sorting
+- AnswerBar: Many Instant Answers can display on the page at once.
+- Wider: Instant Answers can fill the width of the page in certain cases.
+- New views for Instant Answers: Tile view with grid mode, interactive maps, and image view.
+- New templates and layouts: Text, Info, Products with variations and feature flags.
+- Automated API result relevancy checking and data sorting.
 
-Most of the changes to instant answers apply only to the [Spice][Spice] instant answer type (external API),but these abilities will be brought soon to the [Goodies][Goodies] type.
+Most of the changes to instant answers apply only to the [Spice][Spice] instant answer type (external API), but these abilities will be brought soon to the [Goodies][Goodies] type.
 
 
 ## AnswerBar
 
-The AnswerBar display instant answers in tabs. Because many IAs can load together, they need to play well together now. For example, they can't arbitrarily name CSS or helper functions arbitrary names as there is a chance of conflict.
+The AnswerBar display instant answers in tabs. Because many IAs can load together, they need to play well together now. For example, they can't arbitrarily name CSS or helper functions as there is a chance of conflict.
 
 ![AnswerBar](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee.png)
 
@@ -33,12 +33,12 @@ In this example:
 
 DuckDuckGo's internal processes determined the About, Images, Video, and Meanings results.
 
-The others, Spice Instant Answers, individually define a query space with their [triggers][triggers]. In the above example, Recipes, Dictionary and Products have already received data from their respective external APIs and have determined that the data is actually relevant to the user's query.
+The other results, which are Spice IA's, define their own query space because they provide their own [triggers][triggers]. In the above example, Recipes, Dictionary, and Products have already received data from their respective external APIs and have determined that the data is actually relevant to the user's query.
 
 
 ## Answers
 
-Instant answers are of two fundamental types: single- and multi-item. Below is a single item, the dictionary definition Spice instant answer:
+Instant answers are of two fundamental types: single- and multi-item. Below is a single item—the dictionary definition Spice instant answer:
 
 ![Single item, detail view](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png)
 
@@ -51,7 +51,7 @@ When an Instant Answer has multiple items, they are generally shown in the Tile 
 
 ![Multiple items in a Tile View](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_recipes.png)
 
-Each *tile* is a container that displays an item, which is rendered with a template as defined by the instant answer. The term *item* refers to the single unit of data as defined by the IA - in these examples, a definition or single recipe is an item.
+Each *tile* is a container that displays an item, which is rendered with a template as defined by the instant answer. The term *item* refers to the single unit of data as defined by the IA—in these examples, a definition or single recipe is an item.
 
 The item can also be shown with its detail template:
 
@@ -61,7 +61,7 @@ The item can also be shown with its detail template:
 
 ## Templates and Layouts
 
-Instant Answers (Spice only, for now) provide templates to allow the AnswerBar to display their data in different contexts - as tiles, or as detail, or both. DuckDuckHack provides several built-in types to cover common general cases, with the ability to make substitutions and turn features on and off as desired.
+Instant Answers (Spice only, for now) provide templates that allow the AnswerBar to display their data in different contexts—as tiles, as detail, or both. DuckDuckHack provides several built-in types to cover common general cases, with the ability to make substitutions and turn features on and off as desired.
 
 Templates can be named individually, and they have been organized into named groups for convenience, with default feature options set appropriately. For instance, `products_simple` is just `products` with the brand and price turned off; an individual IA could further turn off the rating, or other items to reuse the basic structure. See the InTheaters example below.
 
@@ -70,7 +70,7 @@ Template groups:
 - text: title and description
 - icon: text with small inset image
 - info: structured expandable text with auxiliary box
-- products: product information with icons, rating, price
+- products: product information with icons, rating, and price
 - products_simple: less structured variation of products
 - map
 
@@ -113,7 +113,7 @@ Because Drinks doesn't have an image, it's not shown and the text is aligned lef
 
 ### Products
 
-The products template group consists of templates for tiles and detail that are structured for items to buy. Rating, brand, price, etc. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
+The products template group consists of templates for tiles and detail that are structured for items that can be bought. Rating, brand, and price are a few of the things that we need. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
 
 ![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/products_detail.png)
 
@@ -127,7 +127,7 @@ InTheaters uses the products_simple template group, but simplifies the tile even
 
 ![in_theaters using the products_simple template group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/movies.png)
 
-[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating and ratingText so the image occupies the entirety of the tile.
+[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
 
 ### Map
 
