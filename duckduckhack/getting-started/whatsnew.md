@@ -72,6 +72,7 @@ Template groups:
 - info: structured expandable text with auxiliary box
 - products: product information with icons, rating, price
 - products_simple: less structured variation of products
+- map
 
 ### Text template group
 
@@ -128,7 +129,11 @@ InTheaters uses the products_simple template group, but simplifies the tile even
 
 [InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating and ratingText so the image occupies the entirety of the tile.
 
+### Map
 
+IAs can present their data using an interactive map. [Zipcode](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/zipcode) is a simple example that centers the map on this zip (postal) code.
+
+![Zipcode using the Map](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/map.png)
 
 ## Data Mapping with normalize()
 
