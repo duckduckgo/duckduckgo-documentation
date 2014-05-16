@@ -32,7 +32,7 @@ Instant answers should *always* be unambiguously **better** than organic links. 
 
 
 **Relevancy:** Does the instant answer always provide relevant information?
-Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrelevant information (e.g. "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the instant answer is accepted and goes live.
+Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrelevant information (e.g., "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the instant answer is accepted and goes live.
 
 - **Example test:** Search for something that will trigger the instant answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the instant answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMdB.
 
@@ -67,7 +67,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 - Is this the right instant answer type? Would it be better to implement this as another IA type?
 
-	- If this should really be another IA type (e.g. JavaScript heavy Goodie should probably be a Spice) it's best to note this as early in the process as possible, since the instant answer will need to be re-implemented and a new pull-request submitted.
+	- If this should really be another IA type (e.g., JavaScript heavy Goodie should probably be a Spice) it's best to note this as early in the process as possible, since the instant answer will need to be re-implemented and a new pull-request submitted.
 
 - What other data is available from this source? (check the API response for anything really useful that's not being displayed).
 
@@ -97,7 +97,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 **Low Level (Perl)**
 
-- Static variables (e.g. lists, hashes, regular expressions) and helper functions should not be declared inside `handle` functions (this will cause them to be redefined each time the instant answer is triggered). The same applies when reading files &mdash; the file handler should be outside the `handle` function.
+- Static variables (e.g., lists, hashes, regular expressions) and helper functions should not be declared inside `handle` functions (this will cause them to be redefined each time the instant answer is triggered). The same applies when reading files &mdash; the file handler should be outside the `handle` function.
 
 - Long lists of trigger words/phrases should be moved to a `triggers.txt` file (in the share directory) and `slurp()` should be used to convert them into a list.
 
@@ -113,7 +113,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 - Cross-browser compatibility is very important! Use jQuery methods where applicable to ensure this. We're trying to support IE 8, and it's good to be aware of these. Search for the method on MDN if you're unsure.
 
-	- E.g. `Array.prototype.forEach()` should be replaced with `$.each()`.
+	- e.g., `Array.prototype.forEach()` should be replaced with `$.each()`.
 
 - Watch out for `console.log` &mdash; that won't work on IE 8.
 

@@ -8,7 +8,7 @@ Before you begin building anything, you'll need to know what instant answer it i
 
 Now that you know which queries you'd like to show an instant answer for, you'll need to determine what the source for your instant answer will be.
 
-Most instant answers rely on some type of data source to provide their answer, however many of them are able to provide their instant answer through the use of pure code. An example would be a string manipulation instant answer, which would only require the use of a function (code) to return an answer.
+Most instant answers rely on some type of data source to provide their answer; however many of them are able to provide their instant answer through the use of pure code. An example would be a string manipulation instant answer, which would only require the use of a function (code) to return an answer.
 
 Please use the following flowchart to help you to determine which kind of instant answer you'll be creating. Your instant answer type will be based on the date source your instant answer will be using:
 

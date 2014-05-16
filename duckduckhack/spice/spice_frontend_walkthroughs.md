@@ -9,7 +9,7 @@
 
 ## Walkthrough #1 - Alternative.To (Simple)
 
-The Alternative.To instant answer is very similar to NPM in that it's also relatively simple, however, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
+The Alternative.To instant answer is very similar to NPM in that it's also relatively simple. However, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
 
@@ -59,11 +59,11 @@ The Alternative.To instant answer is very similar to NPM in that it's also relat
 }(this)); 
 ```
 
-Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties, however, it also uses a few new properties. The biggest difference between the two Spices though, is that the AlternativeTo API returns an array of items, which is given to `data`, rather than a single item like the NPM API. This means first and foremost, that we'll be dealing with a tile view so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
+Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties. However, it also uses a few new properties as well. The biggest difference between the two Spices though, is that the AlternativeTo API returns an array of items, which is given to `data`, rather than a single item like the NPM API. This means first and foremost, that we'll be dealing with a tile view, so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
 
-- `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g. "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
+- `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g., "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
 
-- `itemType` is the type of item being shown (e.g. Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
+- `itemType` is the type of item being shown (e.g., Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
 
 - `normalize` allows you to normalize an item before it is passed on to the template. You can add or modify properties of the item that are used by your templates. In our case, we're using `normalize` to modify the `ShortDescription` property of each item, by removing HTML content from it and we also use it to add a few properties to our `item`, which our template will use.
 
@@ -573,8 +573,8 @@ To begin, let's look at the first callback function definition in the Dictionary
 // define dictionary - gives the definition of the word "dictionary."
 //
 // Notes:
-// ddg_spice_dictionary_definition - gets the definitions of a given word (e.g. noun. A sound or a combination of sounds).
-// ddg_spice_dictionary_pronunciation - gets the pronunciation of a word (e.g. wûrd).
+// ddg_spice_dictionary_definition - gets the definitions of a given word (e.g., noun. A sound or a combination of sounds).
+// ddg_spice_dictionary_pronunciation - gets the pronunciation of a word (e.g., wûrd).
 // ddg_spice_dictionary_audio - gets the audio file.
 // ddg_spice_dictionary_reference - handles plural words. (Improve on this in the future.)
 ```
@@ -806,7 +806,7 @@ The callback then verifies the API returned a pronunciation of the queried word 
 
 Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavaScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
 
-**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (e.g. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
+**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (e.g., [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
 
 ```javascript
     // Initialize the soundManager object.
@@ -883,7 +883,7 @@ We then check if the `this.[0].pluralOf` variable has been set. As you may recal
 
 Then the template creates two empty elements, a `<span>` tag to contain the phonetic spelling, which may or may not be populated by our `dictionary_pronunciation()` callback, depending on whether or not the API has a phonetic spelling for the queried word. Similarly we create an empty `<button>` tag to play an audio recording of the word pronunciation which is potentially populated by the `dictionary_audio()` callback, again if the API has an audio file for the queried word's pronunciation.
 
-The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (e.g. noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
+The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (e.g., noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
 
 ###### dictionary\_definition.js (continued) - part helper
 

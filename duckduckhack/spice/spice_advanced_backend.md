@@ -39,7 +39,7 @@ You can have multiple return values in your handle function like the [Alternativ
 return $prog, $platform, $license;
 ```
 
-In this case they are URL encoded and joined together with '/' chars, e.g. in this case **$prog/$platform/$license**. Then that full string is fed into the **spice from** regexp.
+In this case they are URL encoded and joined together with '/' chars, e.g., in this case **$prog/$platform/$license**. Then that full string is fed into the **spice from** regexp.
 
 ```perl
 spice from => '([^/]+)/?(?:([^/]+)/?(?:([^/]+)|)|)';

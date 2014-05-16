@@ -61,11 +61,11 @@ my $title = $line[0] || '';
 # R for redirect.
 my $type = $line[1] || '';
 
-# Only for redirects, e.g. 
+# Only for redirects, e.g., 
 # an alias for a title such as
 # a common misspelling or AKA.
 # For example: Duck Duck Go -> DuckDuckGo.
-# The format is the full title of the Redirect, e.g. DuckDuckGo.
+# The format is the full title of the Redirect, e.g., DuckDuckGo.
 my $redirect = $line[2] || '';
 
 # Ignore.
@@ -82,7 +82,7 @@ my $categories = $line[4] || '';
 my $references = $line[5] || '';
 
 # You can reference related topics here, which get turned into links in the Zero-click Info box.
-# On the perl example, e.g. Perl Data Language
+# On the perl example, e.g., Perl Data Language
 # You would do: [[Perl Data Language]]
 # If the link name is different, you could do [[Perl Data Language|PDL]]
 my $see_also = $line[6] || '';

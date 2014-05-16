@@ -36,7 +36,7 @@ The following options are used to define elements of the **MetaBar** including t
 
 - ### itemType `string`
 
-    The type of item being shown (e.g. Videos, Images, Recipes). `itemType` is used by the MetaBar to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
+    The type of item being shown (e.g., Videos, Images, Recipes). `itemType` is used by the MetaBar to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
 
 ------
 
@@ -56,7 +56,7 @@ The following options are used to define elements of the **MetaBar** including t
 
 - ### sourceLogo `string` (url)
 
-    If defined, the image provided will replace the `sourceName` with a logo. Generally this should not be necessary, however in rare cases, API providers require that a specific image be used to represent their brand and so this can be used.
+    If defined, the image provided will replace the `sourceName` with a logo. Generally this should not be necessary, but in rare cases, API providers require that a specific image be used to represent their brand and so this can be used.
 
 - ### sourceUrl `string` (url) [required]
 
@@ -77,9 +77,9 @@ The following options are used to define elements of the **MetaBar** including t
 
     This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
 
-    This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
+    This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
 
-    If you are using a built-in template (e.g. **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+    If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
     For example, if you have a `data` object that looks like this:
 
@@ -157,15 +157,11 @@ A `templates: {}` property should be used to specify the template group and all 
 
     The template to be used for the body of each tile in a tile view.
 
-    **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (e.g. Jobs, Recipes, Apps), meaning the object given to `data` is an *`array`* with more than 1 elements.
+    **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (like the recipe or app instant answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
 
-    - Generally, a *`string`* is provided to indicate the name of the built-in Spice template to be used, e.g. "products_item"
+    - Generally, a *`string`* is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
 
-    - Alternatively, a **function** can be provided when a custom template is necessary, e.g. `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
-
-- ### item_custom `string|function`
-
-    Ssh. This doesn't exist...
+    - Alternatively, a **function** can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
 
 - ### item_mobile `string|function`
 
@@ -201,7 +197,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
 - ### options `object`
 
-    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g. the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
+    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
 
     ### Tile Variants
 
@@ -245,7 +241,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
-In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. However, if your Spice is capable of dealing with different types of queries, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy, however the app's category does and so two separate relevancy blocks, `primary` and `category` are used to define the different relevancy constraints.
+In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
 
 ### Relevancy Blocks
 
@@ -314,16 +310,16 @@ category: [
 
 - ### dup `string`
 
-    This indicates which property should be used to check for de-duplication. The given string supports dot path formatting, e.g. "item.foo.bar"
+    This indicates which property should be used to check for de-duplication. The given string supports dot path formatting, e.g., "item.foo.bar"
 
 
 # Sorting
 
-In some cases, the order of the tiles is important (e.g. price, rating, popularity) and so use can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
+In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
 
 ### sort_fields `object`
 
-This object specifies sorting fields (e.g. name, price, rating, reviews) and their respective comparison functions, which will be passed along to JavaScript's `sort()` method.
+This object specifies sorting fields (e.g., name, price, rating, reviews) and their respective comparison functions, which will be passed along to JavaScript's `sort()` method.
 
 Example:
 
