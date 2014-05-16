@@ -33,7 +33,7 @@ In this example:
 
 DuckDuckGo's internal processes determined the About, Images, Video, and Meanings results.
 
-The other Spice Instant Answers individually define a query space with their [triggers][triggers]. In the above example, Recipes, Dictionary, and Products have already received data from their respective external APIs and have determined that the data is actually relevant to the user's query.
+The other results, which are Spice IA's, define their own query space because they provide their own [triggers][triggers]. In the above example, Recipes, Dictionary, and Products have already received data from their respective external APIs and have determined that the data is actually relevant to the user's query.
 
 
 ## Answers
