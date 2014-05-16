@@ -9,11 +9,11 @@ For example the `products_simple` **template group** works well when your Spice 
 
 There are several template groups to choose from:
 
-- [base](#base)
 - [text](#text)
 - [info](#info)
 - [products](#products)
 - [products_simple](#products_simple)
+- [base](#base)
 - [Default Template Options (When no template group selected)](#default-template-options-when-no-template-group-selected)
 
 ------
@@ -22,19 +22,22 @@ There are several template groups to choose from:
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
 
-### Default Templates:
+### Default Templates & Options
 
-- item: *'base_item'*
-- detail: *'base_detail'*
-
-### Default Options
-
-- price: *false*
-- brand: *false*
-- priceAndBrand: *false*
-- rating: *false*
-- ratingText: *false*
-- moreAt: *false*
+```javascript
+templates: {
+    item: 'base_item',
+    detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: false,
+        moreAt: false
+    }
+}
+```
 
 ### Example
 
@@ -44,16 +47,17 @@ This is the most rudimentary template group. It provides a minimal container tem
 
 ## text
 
-A basic template for simple, text-only results. This template offers a title, description and footer.
+A basic template group for simple, text-only results. This template offers a title, description and footer.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'text_item'*
-- detail: *'text_detail'*
-
-### Default Options
-
-*none*
+```javascript
+templates: {
+    item: 'text_item',
+    detail: 'text_detail',
+    options: { /* none */ }
+}
+```
 
 ### Example
 
@@ -63,18 +67,21 @@ A basic template for simple, text-only results. This template offers a title, de
 
 ## info
 
-A template best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an infobox and a "More At" link.
+A template group best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'basic_item'*
-- item_detail: *'basic_info_item_detail'*
-- detail: *'basic_info_detail'*
-
-### Default Options: {
-
-- moreAt: *true*
-- infoBox: *false*
+```javascript
+templates: {
+    item: 'basic_item',
+    item_detail: 'basic_info_item_detail',
+    detail: 'basic_info_detail',
+    options: {
+        moreAt: true,
+        aux: false
+    }
+}
+```
 
 ### Example
 
@@ -84,21 +91,24 @@ A template best used for more detailed information including an image, title, an
 
 ## products
 
-A template best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
+A template group best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'products_item'*
-- detail: *'products_detail'*
-- item_detail: *'products_item_detail'*
-- wrap_detail: *'base_detail'*
-
-### Default Options
-
-- rating: *true*
-- price: *true*
-- brand: *true*
-- priceAndBrand: *true*
+```javascript
+templates: {
+    item: 'products_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        rating: true,
+        price: true,
+        brand: true,
+        priceAndBrand: true
+    }
+}
+```
 
 ### Example
 
@@ -110,20 +120,23 @@ A template best used to showcase products with an image, rating, review, brand a
 
 A simplified version of the **products** group. This provides a basic `item` template, which includes an image, title and description, but uses the same `detail` template as the **products** group.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'basic_image_item'*
-- detail: *'products_detail'*
-- item_detail: *'products_item_detail'*
-- wrap_detail: *'base_detail'*
-  
-### Default Options
-
-- price: *false*
-- brand: *false*
-- priceAndBrand: *false*
-- rating: *false*
-- ratingText: *true*
+```javascript
+templates: {
+    item: 'basic_image_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: true
+    }
+}
+```
 
 ### Example
 
@@ -135,21 +148,26 @@ A simplified version of the **products** group. This provides a basic `item` tem
 
 When no `templates.options` are specified **and** no template `group` has been selected, the default options are as follows:
 
-- price: *true*
-- brand: *true*
-- priceAndBrand: *true*
-- rating: *true*
-- ratingText: *true*
-- moreAt: *true*
-- content: *false*
+```javascript
+    options: {
+        price: true,
+        brand: true,
+        priceAndBrand: true,
+        rating: true,
+        ratingText: true,
+        moreAt: true,
+        content: false
+    }
+```
 
 ------
 
 # Built-In Spice Templates
 
 The list of built-in Spice templates includes:
-- [base_item](#base_item)
-- [base_detail](#base_detail)
+
+- [record](#record)
+- [icon](#icon)
 - [text_item](#text_item)
 - [text_detail](#text_detail)
 - [basic_item](#basic_item)
@@ -159,180 +177,8 @@ The list of built-in Spice templates includes:
 - [products_detail](#products_detail)
 - [products_item_detail](#products_item_detail)
 - [basic_info_detail](#basic_info_detail)
-- [record](#record)
-
-------
-
-## base_item
-
-### Features
-
-- url [optional]
-- content *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## base_detail
-
-### Features
-
-- content
-OR
-- content *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## text_item
-
-### Features
-
-- url [optional]
-- title
-- subtitle
-- description
-- footer [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## text_detail
-
-### Features
-
-- title_content [optional] *sub-template*
-- title [optional, replaces `title_content`]
-- content [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_item
-
-### Features
-
-- content *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_image_item
-
-### Features
-
-- link [optional]
-- image
-- title
-- description [optional]
-- rating [optional]
-- ratingText [optional]
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_image_detail
-
-### Features
-
-- image [optional]
-- title
-- content
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_item
-
-### Features
-
-- url [optional]
-- img
-- title
-- price
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_detail
-
-### Features
-
-- img [optional]
-- url
-- heading
-- price [optional]
-- priceAndBrand [optional]
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
-- abstract
-- buy [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_item_detail
-
-### Features
-
-- img_m [optional, replaces `img`]
-- img
-- url
-- price [optional] 
-- brand [optional]
-- rating [optional]
-- abstract
-- buy [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_info_detail
-
-### Features
-
-- image [optional]
-- title [optional]
-- content [optional, replaces `description`] *sub-template*
-- description
-
-### Example
-
-<!-- todo -->
+- [base_item](#base_item)
+- [base_detail](#base_detail)
 
 ------
 
@@ -364,7 +210,7 @@ templates: {
 }
 ```
 
-### Features
+### Available Features
 
 *none*
 
@@ -373,6 +219,196 @@ templates: {
 <!-- todo -->
 
 ------
+
+## icon
+
+### Available Features
+
+- icon
+- title
+- sub-title [optional]
+- description
+- footer [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_item
+
+### Available Features
+
+- url [optional]
+- title
+- subtitle
+- description
+- footer [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_detail
+
+### Available Features
+
+- title_content [optional] *sub-template*
+- title [optional, replaces `title_content`]
+- content [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_item
+
+### Available Features
+
+- content *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_image_item
+
+### Available Features
+
+- link [optional]
+- image
+- title
+- description [optional]
+- rating [optional]
+- ratingText [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_image_detail
+
+### Available Features
+
+- image [optional]
+- title
+- content
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item
+
+### Available Features
+
+- url [optional]
+- img
+- title
+- price
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_detail
+
+### Available Features
+
+- img [optional]
+- url
+- heading
+- price [optional]
+- priceAndBrand [optional]
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item_detail
+
+### Available Features
+
+- img_m [optional, replaces `img`]
+- img
+- url
+- price [optional] 
+- brand [optional]
+- rating [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_info_detail
+
+### Available Features
+
+- image [optional]
+- title [optional]
+- content [optional, replaces `description`] *sub-template*
+- description
+
+### Example
+
+<!-- todo -->
+
+------
+
+## base_item
+
+### Available Features
+
+- url [optional]
+- content *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## base_detail
+
+### Available Features
+
+- content
+OR
+- content *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
 
 # Tile Variants
 
