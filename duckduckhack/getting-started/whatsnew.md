@@ -38,7 +38,7 @@ The other results, which are Spice IA's, define their own query space because th
 
 ## Answers
 
-Instant answers are of two fundamental types: single- and multi-item. Below is a single item--the dictionary definition Spice instant answer:
+Instant answers are of two fundamental types: single- and multi-item. Below is a single item—the dictionary definition Spice instant answer:
 
 ![Single item, detail view](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png)
 
@@ -51,7 +51,7 @@ When an Instant Answer has multiple items, they are generally shown in the Tile 
 
 ![Multiple items in a Tile View](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_recipes.png)
 
-Each *tile* is a container that displays an item, which is rendered with a template as defined by the instant answer. The term *item* refers to the single unit of data as defined by the IA--in these examples, a definition or single recipe is an item.
+Each *tile* is a container that displays an item, which is rendered with a template as defined by the instant answer. The term *item* refers to the single unit of data as defined by the IA—in these examples, a definition or single recipe is an item.
 
 The item can also be shown with its detail template:
 
@@ -61,7 +61,7 @@ The item can also be shown with its detail template:
 
 ## Templates and Layouts
 
-Instant Answers (Spice only, for now) provide templates that allow the AnswerBar to display their data in different contexts--as tiles, as detail, or both. DuckDuckHack provides several built-in types to cover common general cases, with the ability to make substitutions and turn features on and off as desired.
+Instant Answers (Spice only, for now) provide templates that allow the AnswerBar to display their data in different contexts—as tiles, as detail, or both. DuckDuckHack provides several built-in types to cover common general cases, with the ability to make substitutions and turn features on and off as desired.
 
 Templates can be named individually, and they have been organized into named groups for convenience, with default feature options set appropriately. For instance, `products_simple` is just `products` with the brand and price turned off; an individual IA could further turn off the rating, or other items to reuse the basic structure. See the InTheaters example below.
 
