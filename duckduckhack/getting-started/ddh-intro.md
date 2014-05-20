@@ -1,4 +1,4 @@
-# DuckDuckHack: Toward Better Instant Answers!
+# Welcome!
 
 DuckDuckGo users believe in better answers with fewer clicks. After all, why sift through a page full of links, when an answer is readily available?
 

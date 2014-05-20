@@ -1,4 +1,4 @@
-## Instant Answer Metadata
+# Metadata
 
 Including metadata helps us to categorize and describe your instant answer. This document explains the different types of metadata that you may add to the source code of your instant answer.
 

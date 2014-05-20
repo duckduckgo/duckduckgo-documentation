@@ -1,4 +1,4 @@
-## Spice Frontend Walkthoughs 
+# Frontend Walkthoughs
 
 - [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
 - [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)

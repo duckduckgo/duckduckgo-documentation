@@ -1,4 +1,4 @@
-## Testing HTML
+# Display
 
 You should have already tested your triggers by following the [Testing triggers](https://github.com/duckduckgo/duckduckgo#testing-triggers) section. Now that you're confident your triggers are functioning properly, follow these steps to see how it looks on a live server!
 

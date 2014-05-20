@@ -1,0 +1,74 @@
+---
+title: DuckDuckHack Documentation Index
+repo_url: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/
+sections:
+  - dir_name: getting-started
+    entries:
+      - ddh-intro.md
+      - whatsnew.md
+      - duckduckhack_vision.md
+      - determine_your_instant_answer_type.md
+  - dir_name: goodie
+    faq_anchor: goodie
+    entries:
+      - goodie_overview.md
+      - goodie_basic_tutorial.md
+      - goodie_triggers.md
+      - goodie_advanced_handle_functions.md
+  - dir_name: spice
+    faq_anchor: spice
+    entries:
+      - spice_overview.md
+      - spice_basic_tutorial.md
+      - spice_triggers.md
+      - spice_displaying.md
+      - spice_templates_overview.md
+      - spice_frontend_walkthroughs.md
+      - spice_advanced_backend.md
+      - spice_advanced_frontend.md
+      - spice_js_api.md
+      - spice_handlebars_helpers.md
+      - spice_perl_api.md
+      - spice_attributes.md
+  - dir_name: fathead
+    faq_anchor: fathead
+    entries:
+      - fathead_overview.md
+      - fathead_basic_tutorial.md
+  - dir_name: longtail
+    faq_anchor: longtail
+    entries:
+      - longtail_overview.md
+      - longtail_basic_tutorial.md
+  - dir_name: testing
+    entries:
+      - installing_duckpan.md
+      - testing_triggers.md
+      - testing_html.md
+      - test_files.md
+      - advanced_testing.md
+      - testing_location_api.md
+  - dir_name: submitting-your-instant-answer
+    entries:
+      - preparing_for_a_pull_request.md
+      - review_process.md
+      - developer_checklist.md
+      - metadata.md
+      - making_a_pull_request.md
+  - dir_name: advanced
+    entries:
+      - location_api.md
+  - dir_name: resources
+    entries:
+      - common_pitfalls.md
+      - how_to_qa.md
+      - faq.md
+  - dir_name: styleguides
+    entries:
+      - styleguide_overview.md
+      - design_styleguide.md
+      - goodie_styleguide.md
+      - spice_styleguide.md
+      - fathead_styleguide.md
+      - longtail_styleguide.md
+      - code_styleguide.md

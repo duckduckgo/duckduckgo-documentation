@@ -1,4 +1,4 @@
-## Advanced Testing
+# Advanced
 
 The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
 

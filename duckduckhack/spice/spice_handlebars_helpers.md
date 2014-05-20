@@ -1,4 +1,4 @@
-## Spice Helpers (Handlebars)
+# Handlebars Helpers
 
 Spice specific Handlebars helpers:
 

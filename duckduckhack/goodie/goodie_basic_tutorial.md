@@ -1,4 +1,4 @@
-## Basic Goodie Tutorial
+# Basic Tutorial
 
 In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
 

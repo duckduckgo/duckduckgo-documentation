@@ -1,4 +1,4 @@
-# Fathead Instant Answers
+# Overview
 
 Fatheads are key-value instant answers backed by a database. The keys of the database are typically words or phrases, and they are also used as the triggers for the instant answer. When a database key is queried, the corresponding row from the database is returned, which is typically a paragraph of text. Developing a Fathead instant answer entails writing a program that generates an **output.txt** file. This tab-delimited file indicates the keys and values for the database, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
 
