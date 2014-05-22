@@ -70,13 +70,13 @@ A unique identifier for your Spice. The `id` should match the name of your callb
 
 The name that will be used for your Spice's AnswerBar tab. The Spice system will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Spice provides. Here are some examples:
 
-| Spice      | `name`    |
-| -----------|---------- |
-| GitHub     | Software  |
-| Last.fm    | Music     |
-| HackerNews | News      |
-| Twitter    | Social    |
-| Amazon     | Products  |
+```
+GitHub      -> name: 'Software'
+Last.fm     -> name: 'Music'
+HackerNews  -> name: 'News'
+Twitter     -> name: 'Social'
+Amazon      -> name: 'Products'
+```
 
 ### data `object` [required]
 
