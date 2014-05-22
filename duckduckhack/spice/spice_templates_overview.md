@@ -1,8 +1,8 @@
 # Spice Templates
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various fetures enabled by default.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** as they will automatically determine which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
-For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and fetures work best for your Spice instant answer.
+For example the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
 
 # Templates Groups
@@ -12,7 +12,7 @@ There are several template groups to choose from:
 - [text](#text)
 - [info](#info)
 - [products](#products)
-- [products_simple](#products_simple)
+- [media](#media)
 - [base](#base)
 - [Default Template Options (When no template group selected)](#default-template-options-when-no-template-group-selected)
 
@@ -73,7 +73,7 @@ A template group best used for more detailed information including an image, tit
 
 ```javascript
 templates: {
-    item: 'basic_item',
+    item: 'basic_image_item',
     item_detail: 'basic_info_item_detail',
     detail: 'basic_info_detail',
     options: {
@@ -116,7 +116,7 @@ templates: {
 
 ------
 
-## products_simple
+## media
 
 A simplified version of the **products** group. This provides a basic `item` template, which includes an image, title and description, but uses the same `detail` template as the **products** group.
 
@@ -170,9 +170,7 @@ The list of built-in Spice templates includes:
 - [icon](#icon)
 - [text_item](#text_item)
 - [text_detail](#text_detail)
-- [basic_item](#basic_item)
 - [basic_image_item](#basic_image_item)
-- [basic_image_detail](#basic_image_detail)
 - [products_item](#products_item)
 - [products_detail](#products_detail)
 - [products_item_detail](#products_item_detail)
@@ -266,18 +264,6 @@ templates: {
 
 ------
 
-## basic_item
-
-### Available Features
-
-- content *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
 ## basic_image_item
 
 ### Available Features
@@ -288,20 +274,6 @@ templates: {
 - description [optional]
 - rating [optional]
 - ratingText [optional]
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_image_detail
-
-### Available Features
-
-- image [optional]
-- title
-- content
 
 ### Example
 
@@ -373,8 +345,8 @@ templates: {
 
 - image [optional]
 - title [optional]
-- content [optional, replaces `description`] *sub-template*
 - description
+- content [optional, replaces `description`] *sub-template*
 
 ### Example
 
@@ -399,9 +371,7 @@ templates: {
 
 ### Available Features
 
-- content
-OR
-- content *sub-template*
+- content *string* OR *sub-template*
 
 ### Example
 
