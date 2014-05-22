@@ -18,33 +18,6 @@ There are several template groups to choose from:
 
 ------
 
-## base
-
-This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
-
-### Default Templates & Options
-
-```javascript
-templates: {
-    item: 'base_item',
-    detail: 'base_detail',
-    options: {
-        price: false,
-        brand: false,
-        priceAndBrand: false,
-        rating: false,
-        ratingText: false,
-        moreAt: false
-    }
-}
-```
-
-### Example
-
-<!-- Image -->
-
-------
-
 ## text
 
 A basic template group for simple, text-only results. This template offers a title, description and footer.
@@ -134,6 +107,33 @@ templates: {
         priceAndBrand: false,
         rating: false,
         ratingText: true
+    }
+}
+```
+
+### Example
+
+<!-- Image -->
+
+------
+
+## base
+
+This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
+
+### Default Templates & Options
+
+```javascript
+templates: {
+    item: 'base_item',
+    detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: false,
+        moreAt: false
     }
 }
 ```
