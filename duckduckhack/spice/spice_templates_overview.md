@@ -32,10 +32,6 @@ templates: {
 }
 ```
 
-### Example
-
-<!-- Image -->
-
 -------
 
 ## info
@@ -55,10 +51,6 @@ templates: {
     }
 }
 ```
-
-### Example
-
-<!-- Image -->
 
 ------
 
@@ -82,10 +74,6 @@ templates: {
     }
 }
 ```
-
-### Example
-
-<!-- Image -->
 
 ------
 
@@ -111,10 +99,6 @@ templates: {
 }
 ```
 
-### Example
-
-<!-- Image -->
-
 ------
 
 ## base
@@ -137,10 +121,6 @@ templates: {
     }
 }
 ```
-
-### Example
-
-<!-- Image -->
 
 ------
 
@@ -215,7 +195,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![record template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png)
 
 ------
 
@@ -231,7 +211,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![icon template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
 
 ------
 
@@ -247,7 +227,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![text_item template ](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
 
 ------
 
@@ -261,7 +241,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![text_detail template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/ext_detail.png)
 
 ------
 
@@ -278,7 +258,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![basic_image_item template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png)
 
 ------
 
@@ -296,7 +276,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![products_item template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png)
 
 ------
 
@@ -317,7 +297,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![products_detail template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png)
 
 ------
 
@@ -336,7 +316,7 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![products_item_detail template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png)
 
 ------
 
@@ -348,10 +328,15 @@ templates: {
 - title [optional]
 - description
 - content [optional, replaces `description`] *sub-template*
+- aux [optional] *sub-template*
 
 ### Example
 
-<!-- todo -->
+![basic_info_detail template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail.png)
+
+### Example with Auxiliary Information Box:
+
+![basic_info_detail_w_aux template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png)
 
 ------
 
@@ -364,7 +349,11 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![base_item template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_simple.png)
+
+### Complex Example
+
+![base_item template (complex example)](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_complex.png)
 
 ------
 
@@ -376,7 +365,11 @@ templates: {
 
 ### Example
 
-<!-- todo -->
+![base_detail template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail_simple.png)
+
+### Complex Example
+
+![base_detail template (complex example)](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail_complex.png)
 
 ------
 
