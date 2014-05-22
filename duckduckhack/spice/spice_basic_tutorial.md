@@ -1,4 +1,4 @@
-# Basic Spice Tutorial
+d# Basic Spice Tutorial
 
 In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
 
@@ -177,7 +177,7 @@ The instant answer system works like this at the highest level:
 
 As mentioned, every instant answer requires a Spice callback function. For the *NPM* instant answer, the callback function will be named `ddg_spice_npm()` and will be defined in the **npm.js** file. 
 
-The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::Npm`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg\_spice\_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
+The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::Npm`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg_spice_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
 
 To clarify:
 
