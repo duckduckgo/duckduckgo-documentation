@@ -53,7 +53,7 @@ All instant answers, regardless of their type (Spice, Goodie, Fathead or Longtai
 
 - #### Font Color
   
-  All text should be colored black, `#000000`, unless otherwise necessary. Coloring text grey, `#808080` is also a good way to emphasize/differentiate text, however **no bolded text is allowed**. We reserve bolding to highlight exact matches in our results. Furthermore, **all links** should be colored blue, `#1168CE`.
+  All text should be colored black, `#000000`, unless otherwise necessary. Coloring text grey, `#808080` is also a good way to emphasize/differentiate text. However, **no bolded text is allowed**. We reserve bolding to highlight exact matches in our results. Furthermore, **all links** should be colored blue, `#1168CE`.
 
 - #### Rollover / Hover
   
@@ -65,7 +65,7 @@ Aside from continuity, all instant answers should also be designed with simplici
 
 - #### Easy to Find
   
-  Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether it's text, an image, a table, etc., should be easy to find within the Instant Answer Box. An instant answer's content should be succinct and to-the-point. Sentence form is preferred when feasible, however large paragraphs of text should be avoided.
+  Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether it's text, an image, a table, etc., should be easy to find within the Instant Answer Box. An instant answer's content should be succinct and to-the-point. Sentence form is preferred when feasible; however, large paragraphs of text should be avoided.
 
 - #### Easy to Read
   

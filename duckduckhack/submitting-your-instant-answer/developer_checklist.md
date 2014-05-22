@@ -16,7 +16,7 @@ Before your instant answer is ready to be submitted, please go over this checkli
      - Did you set `is_unsafe` to true?
 
 - Can this instant answer return an HTML response?
-     - Have you guaranteed that the response does not contain unsanitized user-supplied strings (e.g. the query string) which could lead to [cross-site scripting attacks](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29)?
+     - Have you guaranteed that the response does not contain unsanitized user-supplied strings (e.g., the query string) which could lead to [cross-site scripting attacks](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29)?
 
 ## Spice
 

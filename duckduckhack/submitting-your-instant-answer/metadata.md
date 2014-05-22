@@ -8,7 +8,7 @@ Including metadata allows us to categorize and describe your instant answer on t
 
 A unique name for this instant answer.
 
-While this can be arbitrary, it is considered good practice to have the chosen name be similar to the Perl package in which it is contained, e.g. DDG::Spice::RedditSubSearch.
+While this can be arbitrary, it is considered good practice to have the chosen name be similar to the Perl package in which it is contained, e.g., DDG::Spice::RedditSubSearch.
 
 ```perl
 name "Subreddit Search";

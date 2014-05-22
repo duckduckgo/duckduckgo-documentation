@@ -1,20 +1,20 @@
 # Spice Templates
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which can be chosen to automatically use a built-in collection of templates for your spice which have various components enabled by default.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** as they will automatically determine which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
-For example the `products_simple` **template group** works well when your Spice is related to a product, or "thing" which may have an image to display, a brand, a rating or review. This template group may very well work for some other type of result and we're here to help you determine which template group and components work best for your Spice instant answer.
+For example the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
 
 # Templates Groups
 
 There are several template groups to choose from:
 
-- [base](#base)
 - [text](#text)
 - [info](#info)
 - [products](#products)
-- [products_simple](#products_simple)
-- [Default Template Options (No Template Group Selected)](#default-template-options-no-template-group-selected)
+- [media](#media)
+- [base](#base)
+- [Default Template Options (When no template group selected)](#default-template-options-when-no-template-group-selected)
 
 ------
 
@@ -22,19 +22,22 @@ There are several template groups to choose from:
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
 
-### Default Templates:
+### Default Templates & Options
 
-- item: *'base_item'*
-- detail: *'base_detail'*
-
-### Default Options
-
-- price: *false*
-- brand: *false*
-- priceAndBrand: *false*
-- rating: *false*
-- ratingText: *false*
-- moreAt: *false*
+```javascript
+templates: {
+    item: 'base_item',
+    detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: false,
+        moreAt: false
+    }
+}
+```
 
 ### Example
 
@@ -44,15 +47,17 @@ This is the most rudimentary template group. It provides a minimal container tem
 
 ## text
 
-A basic template for simple, text-only results. This template offers a title, description and footer.
+A basic template group for simple, text-only results. This template offers a title, description and footer.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'text_item'*
-
-### Default Options
-
-*none*
+```javascript
+templates: {
+    item: 'text_item',
+    detail: 'text_detail',
+    options: { /* none */ }
+}
+```
 
 ### Example
 
@@ -62,18 +67,21 @@ A basic template for simple, text-only results. This template offers a title, de
 
 ## info
 
-A template best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an infobox and a "More At" link.
+A template group best used for more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'basic_item'*
-- item_detail: *'basic_info_item_detail'*
-- detail: *'basic_info_detail'*
-
-### Default Options: {
-
-- moreAt: *true*
-- infoBox: *false*
+```javascript
+templates: {
+    item: 'basic_image_item',
+    item_detail: 'basic_info_item_detail',
+    detail: 'basic_info_detail',
+    options: {
+        moreAt: true,
+        aux: false
+    }
+}
+```
 
 ### Example
 
@@ -83,21 +91,24 @@ A template best used for more detailed information including an image, title, an
 
 ## products
 
-A template best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
+A template group best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'products_item'*
-- detail: *'products_detail'*
-- item_detail: *'products_item_detail'*
-- wrap_detail: *'base_detail'*
-
-### Default Options
-
-- rating: *true*
-- price: *true*
-- brand: *true*
-- priceAndBrand: *true*
+```javascript
+templates: {
+    item: 'products_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        rating: true,
+        price: true,
+        brand: true,
+        priceAndBrand: true
+    }
+}
+```
 
 ### Example
 
@@ -105,24 +116,27 @@ A template best used to showcase products with an image, rating, review, brand a
 
 ------
 
-## products_simple
+## media
 
 A simplified version of the **products** group. This provides a basic `item` template, which includes an image, title and description, but uses the same `detail` template as the **products** group.
 
-### Default Templates
+### Default Templates & Options
 
-- item: *'basic_image_item'*
-- detail: *'products_detail'*
-- item_detail: *'products_item_detail'*
-- wrap_detail: *'base_detail'*
-  
-### Default Options
-
-- price: *false*
-- brand: *false*
-- priceAndBrand: *false*
-- rating: *false*
-- ratingText: *true*
+```javascript
+templates: {
+    item: 'basic_image_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: true
+    }
+}
+```
 
 ### Example
 
@@ -130,191 +144,39 @@ A simplified version of the **products** group. This provides a basic `item` tem
 
 ------
 
-## Default Template Options (No Template Group Selected)
+## Default Template Options (When no template group selected)
 
 When no `templates.options` are specified **and** no template `group` has been selected, the default options are as follows:
 
-- price: *true*
-- brand: *true*
-- priceAndBrand: *true*
-- rating: *true*
-- ratingText: *true*
-- moreAt: *true*
-- content: *false*
+```javascript
+    options: {
+        price: true,
+        brand: true,
+        priceAndBrand: true,
+        rating: true,
+        ratingText: true,
+        moreAt: true,
+        content: false
+    }
+```
 
 ------
 
 # Built-In Spice Templates
 
 The list of built-in Spice templates includes:
-- [base_item](#base_item)
-- [base_detail](#base_detail)
+
+- [record](#record)
+- [icon](#icon)
 - [text_item](#text_item)
-- [basic_item](#basic_item)
+- [text_detail](#text_detail)
 - [basic_image_item](#basic_image_item)
-- [basic_image_detail](#basic_image_detail)
 - [products_item](#products_item)
 - [products_detail](#products_detail)
 - [products_item_detail](#products_item_detail)
 - [basic_info_detail](#basic_info_detail)
-- [record](#record)
-
-------
-
-## base_item
-
-### Components
-
-- url [optional]
-- content
-
-### Example
-
-<!-- todo -->
-
-------
-
-## base_detail
-
-### Components
-
-- content
-
-### Example
-
-<!-- todo -->
-
-------
-
-## text_item
-
-### Components
-
-- url [optional]
-- title
-- subtitle
-- description
-- footer [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_item
-
-### Components
-
-- content
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_image_item
-
-### Components
-
-- link [optional]
-- image
-- title
-- description [optional]
-- rating [optional]
-- ratingText [optional]
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_image_detail
-
-### Components
-
-- image [optional]
-- title
-- content
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_item
-
-### Components
-
-- url [optional]
-- img
-- title
-- price
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_detail
-
-### Components
-
-- img [optional]
-- url
-- heading
-- price [optional]
-- priceAndBrand [optional]
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
-- abstract
-- buy [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## products_item_detail
-
-### Components
-
-- img_m [optional, replaces `img`]
-- img
-- url
-- price [optional] 
-- brand [optional]
-- rating [optional]
-- abstract
-- buy [optional] *sub-template*
-
-### Example
-
-<!-- todo -->
-
-------
-
-## basic_info_detail
-
-### Components
-
-- image [optional]
-- title [optional]
-- content [optional, replaces `description`] *sub-template*
-- description
-
-### Example
-
-<!-- todo -->
+- [base_item](#base_item)
+- [base_detail](#base_detail)
 
 ------
 
@@ -346,10 +208,234 @@ templates: {
 }
 ```
 
-### Components
+### Available Features
 
 *none*
 
 ### Example
 
 <!-- todo -->
+
+------
+
+## icon
+
+### Available Features
+
+- icon
+- title
+- sub-title [optional]
+- description
+- footer [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_item
+
+### Available Features
+
+- url [optional]
+- title
+- subtitle
+- description
+- footer [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## text_detail
+
+### Available Features
+
+- title_content [optional] *sub-template*
+- title [optional, replaces `title_content`]
+- content [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_image_item
+
+### Available Features
+
+- link [optional]
+- image
+- title
+- description [optional]
+- rating [optional]
+- ratingText [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item
+
+### Available Features
+
+- url [optional]
+- img
+- title
+- price
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_detail
+
+### Available Features
+
+- img [optional]
+- url
+- heading
+- price [optional]
+- priceAndBrand [optional]
+- brand [optional]
+- rating [optional]
+- reviewCount [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## products_item_detail
+
+### Available Features
+
+- img_m [optional, replaces `img`]
+- img
+- url
+- price [optional] 
+- brand [optional]
+- rating [optional]
+- abstract
+- buy [optional] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## basic_info_detail
+
+### Available Features
+
+- image [optional]
+- title [optional]
+- description
+- content [optional, replaces `description`] *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## base_item
+
+### Available Features
+
+- url [optional]
+- content *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+## base_detail
+
+### Available Features
+
+- content *string* OR *sub-template*
+
+### Example
+
+<!-- todo -->
+
+------
+
+
+# Tile Variants
+
+If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants which each offer tiles with different dimensions (some wider, some taller):
+
+- [narrow](#narrow)
+- [poster](#poster)
+- [wide](#wide)
+- [xwide](#xwide)
+- [video](#video)
+
+------
+
+## narrow
+
+Narrower tile width, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## poster
+
+Tall and thin, like a movie poster.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## wide
+
+Increased width, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## xwide
+
+Super wide, normal height.
+
+### Example
+
+<!-- Image -->
+
+------
+
+## video
+
+Shorter height, increased width.
+
+### Example
+
+<!-- Image -->

@@ -72,7 +72,7 @@ triggers query_raw => $regex;
 
 ## Regex Guards
 
-We much prefer you use **trigger words** when possible because they are faster on the backend. In some cases however, **regular expressions** are necessary, e.g. you need to trigger on sub-words. In this case we suggest you consider using a **word trigger** and supplement it with a **regex guard**. A regex guard is a return clause immediately inside the `handle` function.
+We much prefer you use **trigger words** when possible because they are faster on the backend. In some cases however, **regular expressions** are necessary, e.g., you need to trigger on sub-words. In this case we suggest you consider using a **word trigger** and supplement it with a **regex guard**. A regex guard is a return clause immediately inside the `handle` function.
 
 A good example of this is the Base64 goodie. In this case we want to trigger on queries with the form "base64 encode/decode \<string\>". Here's an excerpt from [Base64.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base64.pm) which shows how this case is handled using a word trigger, with a regex guard:
 

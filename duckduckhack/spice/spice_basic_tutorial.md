@@ -1,6 +1,6 @@
 # Basic Spice Tutorial
 
-In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](#coming-soon) and the first part, the "backend" component, will look like this:
+In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
 
 # NPM Spice - Backend (Perl)
 
@@ -72,7 +72,7 @@ On the next line enter:
 spice to => 'http://registry.npmjs.org/$1/latest';
 ```
 
-The Spice **to** is used to define the URL that the Spice will use to make an API request. The URL has a **$1** placeholder, which will eventually be populated with whatever value our `handle` function (which we'll define shortly) returns. In most cases, Spice instant answers tend to use some sort of search endpoint for a given API. We need to indicate in our API request what it is we're searching for and so the `handle` function and the `spice to` URL work together to send our search term(s) to the API by replacing the **$1** placeholder, with the term(s) we're searching for.
+The **spice to** attribute indicates the API endpoint we'll be using, which means a `GET` request will be made to this URL. The URL has a **$1** placeholder, which will eventually be replaced with whatever string our `handle` function (which we'll define shortly) returns. Generally, Spice instant answers use a search endpoint for a given API and so, we'll need to pass along our search term(s) in the API request. We do this by returning the desired search terms in the `handle` function and then the **$1** placeholder, in the `spice to` URL, will be replaced accordingly.
 
 Using the previous example, if we wanted to search for "**uglify-js**" with the NPM API, we'd need to replace `$1` with `uglify-js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "uglify-js" NPM Package.
 
@@ -116,7 +116,7 @@ Once triggers are specified, we define how to *handle* the query. `handle` is an
 
 You can *handle* different parts of the search query, but the most common is the **remainder**, which refers to the remainder of the query, after the first matched trigger word/phrase has been removed. 
 
-For example, if the query was "**npm uglify-js**", the trigger would be *npm* and the remainder would be *uglify-js*.
+For example, if the query was "**npm uglify-js**", the trigger would be *npm* and the **remainder** would be *uglify-js*.
 
 Now let's add a few more lines to complete the handle function:
 
@@ -233,7 +233,7 @@ Let's go through it line-by-line:
     "use strict";
 ```
 
-We begin by invoking an anonymous, immediately-executing function, which takes an object as input (i.e. the environment). This is better known as the JavaScript "[Module Pattern](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)" and it ensures that any variables or functions created within our anonymous function do not affect the global scope. It also allows us to explicitly import anything from the outside environment, which we use to pass along the global scope into our `env` variable (you'll see this at the end), so we can still access and modify the global scope as needed. After creating our module, we then we turn on JavaScript's [Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode) which also offers various benefits. You don't really need to understand the purpose of these first two lines to create a Spice instant answer, however they're both necessary and must be included when defining a Spice callback function.
+We begin by invoking an anonymous, immediately-executing function, which takes an object as input (i.e. the environment). This is better known as the JavaScript "[Module Pattern](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)" and it ensures that any variables or functions created within our anonymous function do not affect the global scope. It also allows us to explicitly import anything from the outside environment, which we use to pass along the global scope into our `env` variable (you'll see this at the end), so we can still access and modify the global scope as needed. After creating our module, we then we turn on JavaScript's [Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode) which also offers various benefits. You don't really need to understand the purpose of these first two lines to create a Spice instant answer; however, they're both necessary and must be included when defining a Spice callback function.
 
 ## Define our Callback Function
 
@@ -329,7 +329,25 @@ At this point, the rendering of the Spice instant answer changes context from Ja
 <pre>$ npm install {{name}}</pre>
 ```
 
-As you can see, this is a special type of HTML template where all of `api_result`'s properties (e.g. `version`, `description`) can be accessed by wrapping their respective names in double curly braces. This is possible, because we passed along the `api_result` object (containing all the JSON) to the `data` parameter, which becomes the **context** for our template.
+As you can see, this is a special type of HTML template where all of `api_result`'s properties (e.g., `version`, `description`) can be accessed by wrapping their respective names in double curly braces. This is possible, because we passed along the `api_result` object (containing all the JSON) to the `data` parameter, which becomes the **context** for our template.
+
+This is what our JSON response looks like, and our template refers by name to the properties of our JSON object:
+
+###### Sample API response from NPM
+
+```json
+{
+
+    "name": "http-server",
+    "version": "0.6.1",
+    "author": {
+        "name": "Nodejitsu",
+        "email": "support@nodejitsu.com"
+    },
+    "description": "a simple zero-configuration command-line http server",
+    ...
+}
+```
 
 For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
 
