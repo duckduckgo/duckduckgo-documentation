@@ -37,6 +37,8 @@ Spice.add({
     },
 
     templates: {
+        group: String,
+
         item: String|Function,
         item_custom: String|Function,
         item_mobile: String|Function,
