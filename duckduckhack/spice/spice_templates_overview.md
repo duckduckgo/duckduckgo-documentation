@@ -345,7 +345,7 @@ templates: {
 
 ### Features Diagram
 
-![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/ext_detail.png)
+![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/text_detail.png)
 
 ### Which template groups use this?
 
