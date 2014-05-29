@@ -29,7 +29,7 @@ Specify the template group like this:
 
 ```javascript
 templates: {
-    group: 'icon'
+    group: 'text'
 }
 ```
 
