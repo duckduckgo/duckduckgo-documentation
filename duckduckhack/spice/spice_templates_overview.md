@@ -184,16 +184,17 @@ The list of built-in Spice templates includes:
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains the key and value.
 
-**\*\*Note:** This template **requires** a `record_keys` property (in your `data` object) which should be created in `normalize: {}`. The `record_keys` array should provide a list of *strings* indicating the names of the keys to be included in the `<table>`.
+**\*\*Note:** This template **requires** that your data to be displayed is contained in a `record_data` object.  The `record_keys` property is optional and should be created in `normalize: {}`. The `record_keys` array should provide a list of *strings* indicating the names of the keys to be included in the `<table>`.  If `record_keys` is not provided then all of the data contained in `record_data` will be displayed.  
 
 For example this is how your `normalize` and `templates` should look when using the **record** template:
 
 ```javascript
-data: {
-    name: 'Bob',
-    phone: '123-456-7890',
-    email: 'bob@bobstheman.com',
-    address: '123 First Street'
+data: { record_data: {
+        name: 'Bob',
+        phone: '123-456-7890',
+        email: 'bob@bobstheman.com',
+        address: '123 First Street'
+    }
 },
 normalize: function(item){
     return {
