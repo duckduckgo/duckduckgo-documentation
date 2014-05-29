@@ -28,9 +28,9 @@ Best used for simple, text-only results. This template offers a title, descripti
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'icon'
-    }
+templates: {
+    group: 'icon'
+}
 ```
 
 which is equivalent to this:
@@ -53,9 +53,9 @@ Best used for results with more detailed information including an image, title, 
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'info'
-    }
+templates: {
+    group: 'info'
+}
 ```
 
 which is equivalent to this:
@@ -83,9 +83,9 @@ Best used to showcase products with an image, rating, review, brand and/or price
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'products'
-    }
+templates: {
+    group: 'products'
+}
 ```
 
 which is equivalent to this:
@@ -116,9 +116,9 @@ Best used for simple results that have a picture (essentially a simplified versi
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'media'
-    }
+templates: {
+    group: 'media'
+}
 ```
 
 which is equivalent to this:
@@ -150,9 +150,9 @@ This template is similar to the **text** group, however, it allows the use of a 
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'icon'
-    }
+templates: {
+    group: 'icon'
+}
 ```
 
 which is equivalent to this:
@@ -176,9 +176,9 @@ This is the most rudimentary template group. It provides a minimal container tem
 Specify the template group like this:
 
 ```javascript
-    templates: {
-        group: 'base'
-    }
+templates: {
+    group: 'base'
+}
 ```
 
 which is equivalent to this:
