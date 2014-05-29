@@ -1,4 +1,4 @@
-d# Basic Spice Tutorial
+# Basic Spice Tutorial
 
 In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
 
