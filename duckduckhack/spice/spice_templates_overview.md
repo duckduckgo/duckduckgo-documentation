@@ -308,11 +308,11 @@ templates: {
 
 ![record template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/record.png)
 
-### Template groups using **record**
+### Template groups using "record"
 
 - *none by default*
 
-### Instant answers using **record**
+### Instant answers using "record"
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
@@ -334,11 +334,11 @@ templates: {
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/icon.png)
 
-### Template groups using **icon**
+### Template groups using "icon"
 
 - [icon](#icon)
 
-### Instant answers using **icon**
+### Instant answers using "icon"
 
 - [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
@@ -358,11 +358,11 @@ templates: {
 
 ![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/icon.png)
 
-### Template groups using **text_item**
+### Template groups using "text_item"
 
 - [text](#text)
 
-### Instant answers using **text_item**
+### Instant answers using "text_item"
 
 - [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
 - [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
@@ -382,11 +382,11 @@ templates: {
 
 ![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/text_detail.png)
 
-### Template groups using **text_detail**
+### Template groups using "text_detail"
 
 - [text](#text)
 
-### Instant answers using **text_detail**
+### Instant answers using "text_detail"
 
 - [Rhymes](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
 - [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
@@ -408,12 +408,12 @@ templates: {
 
 ![basic_image_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/basic_image_item.png)
 
-### Template groups using **basic_image_item**
+### Template groups using "basic_image_item"
 
 - [info](#info)
 - [media](#media)
 
-### Instant answers using **basic_image_item**
+### Instant answers using "basic_image_item"
 
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
@@ -437,11 +437,11 @@ templates: {
 
 ![products_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/products_item.png)
 
-### Template groups using **products_item**
+### Template groups using "products_item"
 
 - [products](#products)
 
-### Instant answers using **products_item**
+### Instant answers using "products_item"
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [CouponMountain](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
@@ -468,13 +468,13 @@ templates: {
 
 ![products_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/products_detail.png)
 
-### Template groups using **products_detail**
+### Template groups using "products_detail"
 
 - [products](#products)
 - [media](#media)
 - [icon](#icon)
 
-### Instant answers using **products_detail**
+### Instant answers using "products_detail"
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [CouponMountain](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
@@ -499,13 +499,13 @@ templates: {
 
 ![products_item_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/products_item_detail.png)
 
-### Template groups using **products_item_detail**
+### Template groups using "products_item_detail"
 
 - [products](#products)
 - [media](#media)
 - [icon](#icon)
 
-### Instant answers using **products_item_detail**
+### Instant answers using "products_item_detail"
 
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
@@ -531,11 +531,11 @@ templates: {
 
 ![basic_info_detail_w_aux template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png)
 
-### Template groups using **basic_info_detail**
+### Template groups using "basic_info_detail"
 
 - [info](#info)
 
-### Instant answers using **basic_info_detail**
+### Instant answers using "basic_info_detail"
 
 - [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
@@ -558,11 +558,11 @@ templates: {
 
 ![base_item template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/base_item_complex.png)
 
-### Template groups using **base_item**
+### Template groups using "base_item"
 
 - [base](#base)
 
-### Instant answers using **base_item**
+### Instant answers using "base_item"
 
 - [GithubJobs](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github_jobs/github_jobs.js)
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
@@ -583,11 +583,11 @@ templates: {
 
 ![base_detail template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/base_detail_complex.png)
 
-### Template groups using **base_detail**
+### Template groups using "base_detail"
 
 - [base](#base)
 
-### Instant answers using **base_detail**
+### Instant answers using "base_detail"
 
 - [FlashVersion](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js)
 - [NPM](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js)
@@ -624,10 +624,10 @@ templates: {
 }
 ```
 
-### Instant answers using **poster**
+### Examples
 
-- [Movies](https://duckduckgo.com/?q=the+dark+knight+movie)
-- [InTheaters](https://duckduckgo.com/?q=currently+in+theaters)
+- ["the dark knight movie"](https://duckduckgo.com/?q=the+dark+knight+movie)
+- ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters)
 
 ------
 
@@ -647,10 +647,10 @@ templates: {
 }
 ```
 
-### Instant answers using **narrow**
+### Examples
 
-- [Apps](https://duckduckgo.com/?q=alarm+clock+apps)
-- [Congress](https://duckduckgo.com/?q=pa+representatives)
+- ["alarm clock apps"](https://duckduckgo.com/?q=alarm+clock+apps)
+- ["pa representatives"](https://duckduckgo.com/?q=pa+representatives)
 
 ------
 
@@ -670,9 +670,9 @@ templates: {
 }
 ```
 
-### Instant answers using **wide**
+### Examples
 
-*none*...yet!
+none...*yet!*
 
 ------
 
@@ -692,9 +692,9 @@ templates: {
 }
 ```
 
-### Instant answers using **xwide**
+### Examples
 
-- [Airlines](https://duckduckgo.com/?q=flight+aa102)
+- ["flight aa102"](https://duckduckgo.com/?q=flight+aa102)
 
 ------
 
@@ -714,6 +714,6 @@ templates: {
 }
 ```
 
-### Instant answers using **video**
+### Examples
 
-<!-- *none*...yet! -->
+none...*yet!*
