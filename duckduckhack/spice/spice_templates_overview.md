@@ -42,7 +42,13 @@ templates: {
 }
 ```
 
--------
+### Examples
+
+- ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo)
+- ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome)
+- ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo)
+
+------
 
 ## info
 
@@ -71,6 +77,12 @@ templates: {
     }
 }
 ```
+
+### Examples
+
+- ["green day band"](https://duckduckgo.com/?q=green+day+band)
+- ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price)
+- ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt)
 
 ------
 
@@ -104,6 +116,12 @@ templates: {
     }
 }
 ```
+
+### Examples
+
+- ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego)
+- ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps)
+- ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2)
 
 ------
 
@@ -139,6 +157,12 @@ templates: {
 }
 ```
 
+### Examples
+
+- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie)
+- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie)
+- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule)
+
 ------
 
 ## icon
@@ -164,6 +188,10 @@ templates: {
     item_detail: 'products_item_detail'
 }
 ```
+
+### Examples
+
+- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop)
 
 ------
 
@@ -197,6 +225,12 @@ templates: {
     }
 }
 ```
+
+### Examples
+
+- ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote)
+- ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus)
+- ["define indelible"](https://duckduckgo.com/?q=define+indelible)
 
 ------
 
@@ -564,23 +598,13 @@ templates: {
 
 # Tile Variants
 
-If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants which each offer tiles with different dimensions (some wider, some taller):
+If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):
 
-- [narrow](#narrow)
 - [poster](#poster)
+- [narrow](#narrow)
 - [wide](#wide)
 - [xwide](#xwide)
 - [video](#video)
-
-------
-
-## narrow
-
-Narrower tile width, normal height.
-
-### Example 
-
-Coming Soon! <!-- Image -->
 
 ------
 
@@ -588,9 +612,45 @@ Coming Soon! <!-- Image -->
 
 Tall and thin, like a movie poster.
 
-### Example 
+### Usage
 
-Coming Soon! <!-- Image -->
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        variant: 'poster'
+    }
+}
+```
+
+### Instant answers using **poster**
+
+- [Movies](https://duckduckgo.com/?q=the+dark+knight+movie)
+- [InTheaters](https://duckduckgo.com/?q=currently+in+theaters)
+
+------
+
+## narrow
+
+Narrower tile width, normal height.
+
+### Usage
+
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        variant: 'narrow'
+    }
+}
+```
+
+### Instant answers using **narrow**
+
+- [Apps](https://duckduckgo.com/?q=alarm+clock+apps)
+- [Congress](https://duckduckgo.com/?q=pa+representatives)
 
 ------
 
@@ -598,9 +658,21 @@ Coming Soon! <!-- Image -->
 
 Increased width, normal height.
 
-### Example 
+### Usage
 
-Coming Soon! <!-- Image -->
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        variant: 'wide'
+    }
+}
+```
+
+### Instant answers using **wide**
+
+*none*...yet!
 
 ------
 
@@ -608,9 +680,21 @@ Coming Soon! <!-- Image -->
 
 Super wide, normal height.
 
-### Example 
+### Usage
 
-Coming Soon! <!-- Image -->
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        variant: 'xwide'
+    }
+}
+```
+
+### Instant answers using **xwide**
+
+- [Airlines](https://duckduckgo.com/?q=flight+aa102)
 
 ------
 
@@ -618,6 +702,18 @@ Coming Soon! <!-- Image -->
 
 Shorter height, increased width.
 
-### Example 
+### Usage
 
-Coming Soon! <!-- Image -->
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        variant: 'video'
+    }
+}
+```
+
+### Instant answers using **video**
+
+<!-- *none*...yet! -->
