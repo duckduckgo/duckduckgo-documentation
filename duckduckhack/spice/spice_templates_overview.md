@@ -69,7 +69,6 @@ which is equivalent to this:
 ```javascript
 templates: {
     item: 'basic_image_item',
-    item_detail: 'basic_info_item_detail',
     detail: 'basic_info_detail',
     options: {
         moreAt: true,
