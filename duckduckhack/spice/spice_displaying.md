@@ -72,13 +72,36 @@ A unique identifier for your Spice. The `id` should match the name of your callb
 
 The name that will be used for your Spice's AnswerBar tab. The Spice system will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Spice provides. Here are some examples:
 
-```
-GitHub      -> name: 'Software'
-Last.fm     -> name: 'Music'
-HackerNews  -> name: 'News'
-Twitter     -> name: 'Social'
-Amazon      -> name: 'Products'
-```
+<table>
+    <thead>
+        <tr>
+            <th>Spice IA</th>
+            <th><pre>name</pre></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GitHub</td>
+            <td>'Software'</td>
+        </tr>
+        <tr>
+            <td>Last.fm</td>
+            <td>'Music'</td>
+        </tr>
+        <tr>
+            <td>HackerNews</td>
+            <td>'News'</td>
+        </tr>
+        <tr>
+            <td>Twitter</td>
+            <td>'Social'</td>
+        </tr>
+        <tr>
+            <td>Amazon</td>
+            <td>'Products'</td>
+        </tr>
+    </tbody>
+</table>
 
 ### data `object` [required]
 
