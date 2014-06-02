@@ -80,15 +80,15 @@ templates: {
 
 ### Examples
 
-- ["green day band"](https://duckduckgo.com/?q=green+day+band)
-- ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price)
-- ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt)
+- ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
+- ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js))
+- ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
 
 ------
 
 ## products
 
-Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
+Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
 ### Usage
 
@@ -462,7 +462,7 @@ templates: {
 - rating [optional]
 - reviewCount [optional]
 - abstract
-- buy [optional] *sub-template*
+- action [optional] *sub-template*
 
 ### Features Diagram
 
@@ -493,7 +493,7 @@ templates: {
 - brand [optional]
 - rating [optional]
 - abstract
-- buy [optional] *sub-template*
+- action [optional] *sub-template*
 
 ### Features Diagram
 
