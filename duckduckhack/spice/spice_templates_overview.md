@@ -356,7 +356,7 @@ templates: {
 
 ### Features Diagram
 
-![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/icon.png)
+![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/zaahir/docs-diagrams/duckduckhack/assets/diagrams/text_item.png)
 
 ### Template groups using "text_item"
 
