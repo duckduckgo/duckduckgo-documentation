@@ -44,9 +44,9 @@ templates: {
 
 ### Examples
 
-- ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo)
-- ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome)
-- ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo)
+- ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
+- ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js))
+- ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit/reddit.js))
 
 ------
 
@@ -118,9 +118,9 @@ templates: {
 
 ### Examples
 
-- ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego)
-- ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps)
-- ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2)
+- ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+- ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))
+- ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
 
 ------
 
@@ -158,9 +158,9 @@ templates: {
 
 ### Examples
 
-- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie)
-- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie)
-- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule)
+- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
+- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
+- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
 
 ------
 
@@ -190,7 +190,7 @@ templates: {
 
 ### Examples
 
-- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop)
+- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
 
 ------
 
@@ -227,9 +227,9 @@ templates: {
 
 ### Examples
 
-- ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote)
-- ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus)
-- ["define indelible"](https://duckduckgo.com/?q=define+indelible)
+- ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
+- ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
+- ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
 
 ------
 
