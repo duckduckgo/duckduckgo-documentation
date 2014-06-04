@@ -1,8 +1,8 @@
 # Spice Templates
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** as they will automatically determine which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
-For example the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
+For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
 
 # Templates Groups
@@ -25,15 +25,13 @@ Best used for simple, text-only results. This template offers a title, descripti
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'text'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
@@ -56,15 +54,13 @@ Best used for results with more detailed information including an image, title, 
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'info'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
@@ -91,15 +87,13 @@ Best used to showcase products with an image, rating, review, brand and/or price
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'products'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
@@ -130,15 +124,13 @@ Best used for simple results that have a picture (essentially a simplified versi
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'media'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
@@ -170,15 +162,13 @@ This template is similar to the **text** group, however, it allows the use of a 
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'icon'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
@@ -200,15 +190,13 @@ This is the most rudimentary template group. It provides a minimal container tem
 
 ### Usage
 
-Specify the template group like this:
-
 ```javascript
 templates: {
     group: 'base'
 }
 ```
 
-which is equivalent to this:
+This is equivalent to:
 
 ```javascript
 templates: {
