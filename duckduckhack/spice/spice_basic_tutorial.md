@@ -129,7 +129,7 @@ handle remainder => sub {
 
 This function (the part within the **{}**, after **sub**) is a very important part of the Spice. It defines what our Spice instant answer will replace the **$1** placeholder with.
 
-Whatever you are *handling* is passed to the `handle` function in the **$\_** variable ( **$\_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for *"npm uglify-js"*, the value of **$\_** will be *"this is a test"*, i.e. the **remainder** of the query.
+Whatever you are *handling* is passed to the `handle` function in the **$\_** variable ( **$\_** is a special default variable in Perl that is commonly used to store temporary values). For example, if you searched DuckDuckGo for *"npm uglify-js"*, the value of **$\_** will be *"uglify-js"*, i.e. the **remainder** of the query.
 
 Let's take a closer look at the first line of the function:
 
