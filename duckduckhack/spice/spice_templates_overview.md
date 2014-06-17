@@ -4,8 +4,42 @@ There are several built-in Spice templates (both `item` and `detail`) which can 
 
 For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
+The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice instant answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
-# Templates Groups
+## Index
+
+- [**Template Groups**](#template-groups)
+    - [Default Template Options](#default-template-options)
+    - [text](#text)
+    - [info](#info)
+    - [products](#products)
+    - [media](#media)
+    - [icon](#icon)
+    - [base](#base)
+- [**Built-In Spice Templates**](#built-in-spice-templates)
+    - [record](#record)
+    - [icon_item](#iconitem)
+    - [text_item](#textitem)
+    - [text_detail](#textdetail)
+    - [basic_image_item](#basicimageitem)
+    - [products_item](#productsitem)
+    - [products_detail](#productsdetail)
+    - [products_item_detail](#productsitemdetail)
+    - [basic_info_detail](#basicinfodetail)
+    - [base_item](#baseitem)
+    - [base_detail](#basedetail)
+- [**Tile Variants**](#tile-variants)
+    - [poster](#poster)
+    - [narrow](#narrow)
+    - [wide](#wide)
+    - [xwide](#xwide)
+    - [video](#video)
+<!-- - [**Detail Variants**](#tile-variants)
+    - [light](#light) -->
+
+------
+
+# Template Groups
 
 There are several template groups to choose from:
 
@@ -15,215 +49,10 @@ There are several template groups to choose from:
 - [media](#media)
 - [icon](#icon)
 - [base](#base)
-- [Default Template Options (When no template group selected)](#default-template-options-when-no-template-group-selected)
 
-------
+### Default Template Options
 
-## text
-
-Best used for simple, text-only results. This template offers a title, description and footer.
-
-### Usage
-
-```javascript
-templates: {
-    group: 'text'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'text_item',
-    detail: 'text_detail'
-}
-```
-
-### Examples
-
-- ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
-- ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js))
-- ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js))
-
-------
-
-## info
-
-Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
-
-### Usage
-
-```javascript
-templates: {
-    group: 'info'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'basic_image_item',
-    detail: 'basic_info_detail',
-    options: {
-        moreAt: true,
-        aux: false
-    }
-}
-```
-
-### Examples
-
-- ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
-- ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js))
-- ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
-
-------
-
-## products
-
-Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
-
-### Usage
-
-```javascript
-templates: {
-    group: 'products'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'products_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail',
-    wrap_detail: 'base_detail',
-    options: {
-        rating: true,
-        price: true,
-        brand: true,
-        priceAndBrand: true
-    }
-}
-```
-
-### Examples
-
-- ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
-- ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))
-- ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
-
-------
-
-## media
-
-Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
-
-### Usage
-
-```javascript
-templates: {
-    group: 'media'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'basic_image_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail',
-    wrap_detail: 'base_detail',
-    options: {
-        price: false,
-        brand: false,
-        priceAndBrand: false,
-        rating: false,
-        ratingText: true
-    }
-}
-```
-
-### Examples
-
-- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
-- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
-- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
-
-------
-
-## icon
-
-This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
-
-### Usage
-
-```javascript
-templates: {
-    group: 'icon'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'icon_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail'
-}
-```
-
-### Examples
-
-- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
-
-------
-
-## base
-
-This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. Using this template should be a last resort if other templates don't suffice.
-
-### Usage
-
-```javascript
-templates: {
-    group: 'base'
-}
-```
-
-This is equivalent to:
-
-```javascript
-templates: {
-    item: 'base_item',
-    detail: 'base_detail',
-    options: {
-        price: false,
-        brand: false,
-        priceAndBrand: false,
-        rating: false,
-        ratingText: false,
-        moreAt: false
-    }
-}
-```
-
-### Examples
-
-- ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
-- ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
-- ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
-
-------
-
-## Default Template Options (When no template group selected)
-
-When no `templates.options` are specified **and** no template `group` has been selected, the `options` are implicity set as follows:
+**When no `templates.options` are specified and no template `group` has been selected, the `options` are implicity set as follows:**
 
 ```javascript
     options: {
@@ -239,21 +68,318 @@ When no `templates.options` are specified **and** no template `group` has been s
 
 ------
 
+## text
+
+Best used for simple, text-only results. This template offers a title, description and footer.
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'text'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'text'
+// does this for you!
+templates: {
+    item: 'text_item',
+    detail: 'text_detail'
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [text_item](#textitem)
+- [text_detail](#textdetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'text' template group
+
+- ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
+- ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js))
+- ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js))
+
+------
+
+## info
+
+Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'info'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'info'
+// does this for you!
+templates: {
+    item: 'basic_image_item',
+    detail: 'basic_info_detail',
+    options: {
+        moreAt: true,
+        aux: false
+    }
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [basic_image_item](#basicimageitem)
+- [basic_info_detail](#basicinfodetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'info' template group
+
+- ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
+- ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js))
+- ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
+
+------
+
+## products
+
+Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'products'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'products'
+// does this for you!
+templates: {
+    item: 'products_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        rating: true,
+        price: true,
+        brand: true,
+        priceAndBrand: true
+    }
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [products_item](#productsitem)
+- [products_detail](#productsdetail)
+- [products_item_detail](#productsitemdetail)
+- [base_detail](#basedetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'products' template group
+
+- ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+- ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))
+- ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
+
+------
+
+## media
+
+Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'media'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'media'
+// does this for you!
+templates: {
+    item: 'basic_image_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: true
+    }
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [basic_image_item](#basicimageitem)
+- [products_detail](#productsdetail)
+- [products_item_detail](#productsitemdetail)
+- [base_detail](#basedetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'media' template group
+
+- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
+- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
+- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
+
+------
+
+## icon
+
+This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'icon'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'icon'
+// does this for you!
+templates: {
+    item: 'icon_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail'
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [icon_item](#iconitem)
+- [products_detail](#productsdetail)
+- [products_item_detail](#productsitemdetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's **features**, which you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'icon' template group
+
+- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+
+------
+
+## base
+
+This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'base'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'base'
+// does this for you!
+templates: {
+    item: 'base_item',
+    detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        priceAndBrand: false,
+        rating: false,
+        ratingText: false,
+        moreAt: false
+    }
+}
+```
+
+#### This template group is comprised of the following built-in templates:
+
+- [base_item](#baseitem)
+- [base_detail](#basedetail)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example uses of the 'base' template group
+
+- ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
+- ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
+- ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
+
+------
+
 # Built-In Spice Templates
 
 The list of built-in Spice templates includes:
 
 - [record](#record)
-- [icon](#icon)
-- [text_item](#text_item)
-- [text_detail](#text_detail)
-- [basic_image_item](#basic_image_item)
-- [products_item](#products_item)
-- [products_detail](#products_detail)
-- [products_item_detail](#products_item_detail)
-- [basic_info_detail](#basic_info_detail)
-- [base_item](#base_item)
-- [base_detail](#base_detail)
+- [icon_item](#iconitem)
+- [text_item](#textitem)
+- [text_detail](#textdetail)
+- [basic_image_item](#basicimageitem)
+- [products_item](#productsitem)
+- [products_detail](#productsdetail)
+- [products_item_detail](#productsitemdetail)
+- [basic_info_detail](#basicinfodetail)
+- [base_item](#baseitem)
+- [base_detail](#basedetail)
 
 ------
 
@@ -307,7 +433,7 @@ templates: {
 
 ------
 
-## icon
+## icon_item
 
 ### Available Features
 
@@ -321,7 +447,7 @@ templates: {
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
 
-### Template groups using "icon"
+### Template groups using "icon_item"
 
 - [icon](#icon)
 
