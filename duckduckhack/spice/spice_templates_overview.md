@@ -830,3 +830,33 @@ templates: {
 ### Examples
 
 none...*yet!*
+
+<!-- 
+
+TODO: Unhide this once live
+
+------
+
+# Detail Variants
+
+## light
+
+Gives the detail area a lighter (white) background. This is ideally used when the detail pane is displaying images with white backgrounds, such as products or logos.
+
+### Usage
+
+```javascript
+templates: {
+    ...
+    options: {
+        ...
+        detailVariant: 'light'
+    }
+}
+```
+
+### Examples
+
+- ["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons)
+
+-->
