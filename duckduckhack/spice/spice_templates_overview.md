@@ -34,8 +34,11 @@ The purpose of this page is to help you understand what each template group look
     - [wide](#wide)
     - [xwide](#xwide)
     - [video](#video)
-<!-- - [**Detail Variants**](#tile-variants)
-    - [light](#light) -->
+
+<!--
+[**Detail Variants**](#tile-variants)
+    - [light](#light)
+-->
 
 ------
 
