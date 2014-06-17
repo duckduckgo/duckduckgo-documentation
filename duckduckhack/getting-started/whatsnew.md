@@ -127,7 +127,7 @@ InTheaters uses the products_simple template group, but simplifies the tile even
 
 ![in_theaters using the products_simple template group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/movies.png)
 
-[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "buy" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
+[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "action" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
 
 ### Map
 
