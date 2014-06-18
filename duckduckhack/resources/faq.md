@@ -130,3 +130,9 @@ A result abstract can be either plain text (generally one readable sentence, end
 ## Longtail
 
 (This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+
+## DuckPAN
+
+### How do I install Perl dependencies?
+
+Open the instant answer that needs dependencies such as `Factors.pm`. If you look in the file, it says that it uses the `Math::Prime::Util` module. You can install this by typing in `cpanm Math::Prime::Util`.
