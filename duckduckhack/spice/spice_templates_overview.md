@@ -392,7 +392,7 @@ In order for these templates to display correctly, you need to ensure that each 
     ![DuckDuckGo search for "gandhi quote"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/gandhi_quote.png)
 
 - ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
-    ![DuckDuckGo search for "cpan App::cpanminus"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/cpan_app::cpanminus.png)
+    ![DuckDuckGo search for "cpan App::cpanminus"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/cpan_app_cpanminus.png)
 
 - ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
     ![DuckDuckGo search for "define indelible"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png)
