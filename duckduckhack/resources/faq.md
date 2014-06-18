@@ -136,3 +136,5 @@ A result abstract can be either plain text (generally one readable sentence, end
 ### How do I install Perl dependencies?
 
 Open the instant answer that's missing a dependency, e.g., `Factors.pm`. If you look in the file, it says that it uses the `Math::Prime::Util` module. You can install this by typing in `cpanm Math::Prime::Util`.
+
+![dependency](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/dependency.png)
