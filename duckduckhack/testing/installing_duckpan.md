@@ -6,9 +6,9 @@ DuckPAN is an application built to provide developers a testing environment for 
 
 ## Disclaimer
 
-Currently, DuckPAN has been developed on, and works well with **Ubuntu**. More specifically, we regularly build, test and run DuckPAN on **Ubuntu 12.04**. We have also successfully installed and run DuckPAN on older and newer Ubuntu releases, e.g. Ubuntu 10.04, 12.10, and 13.04.
+Currently, DuckPAN has been developed on, and works well with **Ubuntu**. More specifically, we regularly build, test and run DuckPAN on **Ubuntu 12.04**. We have also successfully installed and run DuckPAN on older and newer Ubuntu releases, e.g., Ubuntu 10.04, 12.10, and 13.04.
 
-Developers have also been successful running DuckPAN on other Linux distros (e.g. Arch, Debian), but **we make no promises that it will work outside of Ubuntu**.
+Developers have also been successful running DuckPAN on other Linux distros (e.g., Arch, Debian), but **we make no promises that it will work outside of Ubuntu**.
 
 As well, **there have been reported issues with installing DuckPAN on Mac OSX and Windows**, so we don't recommend you go down that path.
 
@@ -93,7 +93,7 @@ Supports: Windows, Linux
 
 #### Happy Hacking!
 
-Once you have installed the virtual machine you should be able to startup the VM and login with the following credentials: 
+Once you have installed the virtual machine you should be able to start up the VM and login with the following credentials: 
 - **username** : `dax`
 - **password** : `duckduckhack`
 
@@ -130,15 +130,17 @@ If you run into any issues, please file an issue in the [duckpan-vagrant issue p
 
 There are a couple of key Vagrant commands that you'll use to manage your environment.
 
-    $ vagrant
+```shell
+$ vagrant
 
-    up       - Build environment from Vagrantfile or resume a previously halted environment.
-    ssh      - Connect to your running VM via SSH.
-    suspend  - Pause the VM, storing its current state to disk.
-    resume   - Bring a suspended VM back to life.
-    reload   - The equivalent of running a halt followed by an up.  Use this when you make changes to Vagrantfile.
-    halt     - Shut down the VM. Tries to gracefully shutdown first; if that fails, it will forcefully shut the VM down.
-    destroy  - Stop the currently running VM and blow everything away.
+up       - Build environment from Vagrantfile or resume a previously halted environment.
+ssh      - Connect to your running VM via SSH.
+suspend  - Pause the VM, storing its current state to disk.
+resume   - Bring a suspended VM back to life.
+reload   - The equivalent of running a halt followed by an up.  Use this when you make changes to Vagrantfile.
+halt     - Shut down the VM. Tries to gracefully shutdown first; if that fails, it will forcefully shut the VM down.
+destroy  - Stop the currently running VM and blow everything away.
+```
 
 Run these commands from the directory containing your `Vagrantfile`.
 
@@ -182,7 +184,7 @@ If during the course of your DuckPAN install you run into errors, don't panic, t
 
 First, try running the install command again (`curl http://duckpan.org/install.pl | perl`), this often solves issues related to any dependencies.
 
-If that doesn't work, you should investigate the build.log and see what's wrong. It might be a depencency issue which you can resolve by manually installing whichever dependency is missing via `cpanm`.
+If that doesn't work, you should investigate the build.log and see what's wrong. It might be a dependency issue which you can resolve by manually installing whichever dependency is missing via `cpanm`.
 
 If it still won't install with `cpanm` try adding `--notest` to the cpanm command:
 
@@ -191,6 +193,7 @@ cpanm Test::More --notest
 ```
 
 If that still doesn't work, you can also try using `--force`:
+
 ```shell
 cpanm Test::More --force
 ```

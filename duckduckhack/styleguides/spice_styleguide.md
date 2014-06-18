@@ -8,7 +8,7 @@
 
 (This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
 
-#### Consistant Variable Names
+#### Consistent Variable Names
 
 ex. "api_return"
 

@@ -34,14 +34,14 @@ We ask that you please use this template when submitting an instant answer pull 
 
 **\*\*Note:** Please attach a **screenshot** for new instant answer pull requests, and for pull requests which modify the look/design of existing instant answers.
 
-##Checklist
-Please place a ✔ where appropriate.
+## Checklist
+Please place an 'X' where appropriate.
 
 ```
 [] Added metadata and attribution information
 [] Wrote test file and added to t/ directory
 [] Verified that instant answer adheres to design guidelines(https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
-[] Tested cross-browser compatability
+[] Tested cross-browser compatibility
 
     Please let us know which browsers/devices you've tested on:
     - Windows 8

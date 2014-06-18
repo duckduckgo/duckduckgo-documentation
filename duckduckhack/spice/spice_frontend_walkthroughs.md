@@ -1,168 +1,151 @@
-# Spice Frontend Walkthroughs
-
 # Index
 
-- [Example #1: Alternative.To (Basic Carousel Instant Answer)](#example-1---alternativeto-basic-carousel-instant-answer)
-- [Example #2: Movie (Advanced Instant Answer)](#example-2---movie-advance-instant-answer)
-- [Example #3: Quixey (Advanced Carousel Instant Answer)](#example-3---quixey-advanced-carousel-instant-answer)
-- [Example #4: Dictionary (More Advanced Instant Answer)](#example-4---dictionary-more-advanced-instant-answer)
+- [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
+- [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
+- [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)
+- [Walkthrough #4: Quixey (Advanced)](#walkthrough-4-quixey-advanced)
 
 ------
 
-## Example #1 - Alternative.To (Basic Carousel Instant Answer)
+## Walkthrough #1 - Alternative.To (Simple)
 
-The Alternative.To instant answer is very similar to NPM in that it is also relatively basic, however, it uses the **Carousel** Spice Template. Let's take a look at the code and see how this is done:
+The Alternative.To instant answer is very similar to NPM in that it's also relatively simple. However, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
 
 ###### alternative_to.js
 
 ```javascript
-function ddg_spice_alternative_to(api_result) {
-    if(!api_result || !api_result.Items || api_result.Items.length === 0) {
-        return;
-    }
+(function(env) {
+    "use strict";
 
-    Spice.render({
-        data                     : api_result,
-        source_name              : 'AlternativeTo',
-        source_url               : api_result.Url,
-        spice_name               : 'alternative_to',
-        more_icon_offset         : '-2px',
-        template_frame           : "carousel",
-        template_options         : {
-            items                : api_result.Items,
-            template_item        : "alternative_to",
-            template_detail      : "alternative_to_details",
-            li_height            : 65,
-            single_item_handler  : function(obj) {            // gets called in the event of a single result
-                obj.header1 = obj.data.Items[0].Name;         // set the header
-                obj.image_url = obj.data.Items[0].IconUrl;    // set the image
+    env.ddg_spice_alternative_to = function(api_result) {
+
+        if (!api_result || !api_result.Items) {
+            return Spice.failed('alternative_to');
+        }
+
+        Spice.add({
+            id: 'alternative_to',
+            name: 'Software',
+            data: api_result.Items,
+            signal: 'high',
+            meta: {
+                searchTerm: api_result.Name,
+                itemType: 'Alternatives',
+                sourceUrl: 'http://alternativeto.net/',
+                sourceName: 'AlternativeTo'
+            },
+            normalize: function(item) {
+                return {
+                    ShortDescription: DDG.strip_html(DDG.strip_href(item.ShortDescription)),
+                    url: item.Url,
+                    icon: item.IconUrl,
+                    title: item.Name,
+                    description: item.ShortDescription
+                };
+            },
+            templates: {
+                group: 'icon',
+        options: {
+            footer: Spice.alternative_to.footer
+        }
             }
-        },
+        });
+    };
+
+    Handlebars.registerHelper("AlternativeTo_getPlatform", function (platforms) {
+        return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
-}
+
+}(this)); 
 ```
 
-Just like the NPM instant answer, Alternative.To uses `Spice.render()` with most of the same properties, however, it also uses a few new properties as well:
+Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties. However, it also uses a few new properties as well. The biggest difference between the two Spices though, is that the AlternativeTo API returns an array of items, which is given to `data`, rather than a single item like the NPM API. This means first and foremost, that we'll be dealing with a tile view, so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
 
-- `template_frame` is used to tell the Render function that the base template for this instant answer will be the **Carousel** template.  
-**\*\*Note**: This is a template which we have already created and you don't have to worry about creating or modifying.*
+- `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g., "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
 
-- `template_options` is a property which is used to specify more properties that are specific to the current `template_frame`. In this case, we use `template_options` to define more properties for the `carosuel` template.
+- `itemType` is the type of item being shown (e.g., Videos, Images, Alternatives) and this is also used in the MetaBar. In the previous example, "Showing 10 **iTunes** Alternatives", "Alternatives" is the `itemType`.
 
-- `items` is **required** when using the carousel template. It passes along an array or object to be iterated over by the carousel template. Each of these items becomes the context for the `alternative_to.handlebars` template which defines the content of each `<li>` in the carousel.
+- `normalize` allows you to normalize an item before it is passed on to the template. You can add or modify properties of the item that are used by your templates. In our case, we're using `normalize` to modify the `ShortDescription` property of each item, by removing HTML content from it and we also use it to add a few properties to our `item`, which our template will use.
 
-- `template_item` tell the carousel template which sub-template should be applied to each of the objects in the `items` array. This template defines what the contents of each `<li>` in the carousel will contain. Generally for a `carousel` Instant Answer, each `<li>` should contain an image and title for the current item.
+    **\*\*Note:** This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do.
 
-- `template_detail` similarly to `template_frame` this is again another sub-template applied to each of the objects in the `items` array, however this template defines the look/layout of the **detail area**, which opens up below the carousel with more information about the selected item.
+- `templates` is used to specify the template `group` and any other templates that are being used. Template `options` may also be provided to enable or disable template components used by the chosen `group`. In our case we've specified that we're using the `icon` template group and in the `options` block, we've specified the sub-template to be used for the `footer` component.
 
-- `li_height` is an optional property which defines the height of each of the carousel's `<li>`'s
-
-- `single_item_handler` is a property which defines a function that let's you modify the other properties of `Spice.render()` if and only if a single item is returned from the upstream API. In this case, we use it to  set values for the `header1` and the `image_url`related to the single item returned. If these had not been set, the carousel will still automatically (by default) apply the `template_detail` to the single item returned and display that, rather than a carousel with a single item in it. This can be overridden by setting the `use_alternate_template` property to false, inside the `template_options` property.
-
-- `carousel_template_detail` is an **optional** parameter which specifies the Handlebars template to be used for the Carousel ***detail*** area - the space below the template which appears after clicking a carousel item. For Alternative.To, when a user clicks a carousel item (icon), the detail area appears and provides more information about that particular item. This is similarly used for the [Quixey instant answer](https://duckduckgo.com/?q=ios+flight+tracking+app).
+    The `icon` template has a few features including a `title`, `icon` and `description`. It also has an optional `footer` feature, which is actually a sub-template. We've created a **footer.handlebars** template and placed in the AlternativeTo Spice's share directory, **/share/spice/alternative_to**. We specify in the `options` block that the template to be used for the `footer` feature is the template we've created by referencing its name: `Spice.alternative_to.footer`.
 
 ------
 
-Now, let's take a look at the Alternative.To Handlebars templates:
+Now, let's take a look at the Footer Handlebars template:
 
-###### alternative_to.handlebars
-
-```html
-<img src="/iu/?u={{IconUrl}}">
-<span>{{{condense Name maxlen="25"}}}</span>
-```
-
-This simple template is used to define each of the carousel items. More specifically, it defines what the contents of each `<li>` in the carousel will be. In this case we specify an image - the result's icon - and a span tag, which contains the name of the result.
-
-You might notice that we prepend the `<img>`'s `src` url with the string `"/iu/?u="`. This is **required** for any images in your handlebars template. What this line does is proxy the image through our own servers, which ensure the user's privacy (because it forces the request to come from DuckDuckGo instead of the user).
-
-The carousel uses this template by iterating over each item in the object given to `carousel_items` and uses that item as the context of the template.
-
-Another important point is that we use `{{{condense Name maxlen="25"}}}` which demonstrates the usage of a Handlebars helper function. In this case, we are using the `condense` function (defined elsewhere, internally) which takes two parameters: `Name` (from `api_result`), which is the string to be shortened and `maxlen="25"` which specifies the length the string will be shortened to. 
-
-Seeing as this is a carousel instant answer, which uses the optional carousel details area, it has another Handlebars template which defines the content for that.  Let's have a look at the Alternative.To details template:
-
-###### alternative_to_details.handlebars
+###### footer.handlebars (in /share/spice/alternative_to/)
 
 ```html
-{{#rt}} <a href="{{Url}}">{{Name}}</a> <span class="likes">({{Votes}} likes)</span>{{/rt}}
-{{#rd "Description"}} {{{ShortDescription}}}{{/rd}}
-{{#rd "Platforms"}} {{#concat Platforms sep=", " conj=" and "}}{{this}}{{/concat}}{{/rd}}
+<div>
+    {{Votes}} likes{{#if Platforms}} &bull; {{AlternativeTo_getPlatform Platforms}}{{/if}}
+</div>
 ```
-    
-This template is also relatively simple and it utilizes more of our Handlebars helpers to create a few elements and populates them with relevant information related to the carousel item that was clicked.
 
-In this case we're using the `{{#rt}}` and `{{#rd}}` Handlebars block helpers, which are perfect for this kind of data, which represent a "record" where each piece of data has a name/title. The `{{#rt}}` helper is used to define the record title. It creates a `div` tag with special css class of `rd_title`. Inside the div, a `<span>` is created with a class of `rt_val`. This `<span>` contains the content defined in the `{{#rt}}` block, which in this case is an `<a>` tag and another `<span>`.
+As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `if` and `AlternativeTo_getPlatform`).
 
-Likewise, the `{{#rd}}` helper creates a `<div>` that has a css class of `rd_normal`. Inside the `<div>` two `<span>` tags are created: the first one has a css of `rd_key` and it contains the string that was given to the `{{#rd}}` helper as input. The other `<span>` has a class of `rd_val` and it contains the content defined in the `{{#rd}}` block.
+These helpers are really JavaScript functions, which operate on input and return their content to the template.
 
-In the second `{{#rd}}` you'll notice the use of another Handlebars helper function, `{{#concat}}`. This function takes an array as its first parameter and iterates over each element in the array. For each iteration, `{{#concat}}` sets the context of the block equal to the current array element and then concatenates the content of its block, joining each by the separator string (`sep=`) with the final element separated by the `conj=` string. In this case, if `Platforms` is a list of operating systems: `["windows", "linux", "mac"]`, then `concat` would return: **"widows, linux and mac"**.
+The `if` helper is a **block helper**, which acts like a normal `if` statement. When the specified variable exists, the code contained within the block, `{{#if}}...{{/if}}`, is executed. In our case, we use it to make sure the `Platforms` property is defined for the current item (remember we're looping over each item and applying this template) and if so, we add a bullet point, ` &bull; ` and the result of `{{AlternativeTo_getPlatform Platforms}}` to the page.
 
-## Example #2 - Movie (Advanced Instant Answer)
+You may have noticed that `AlternativeTo_getPlatform` is actually defined alongside our `ddg_spice_alternative_to` callback function. Let's take a quick look at it:
 
-The movie instant answer is a more advanced than **NPM** and **Alternative.To**, but most of the logic is used to obtain the most relevant movie from list given to us in `api_result`. Other than that, it's relatively easy to understand, so let's start by looking at the Movie instant answer's javascript:
-
-###### movie.js
+###### alternative_to.js
 
 ```javascript
-function ddg_spice_movie (api_result) {
-    if (api_result.total === 0) {
-        return;
-    }
-
-    var ignore = ["movie", "film", "rotten", "rating", "rt", "tomatoes", "release date"];
-    var result, max_score = 0;
-
-    // Assign a ranking value for the movie. This isn't a complete sorting value though
-    // also we are blindling assuming these values exist
-    var score = function(m) {
-        var s = m.ratings.critics_score * m.ratings.audience_score;
-        if (s > max_score) max_score = s;
-        // If any above are undefined, s is undefined.
-        return s;
-    };
-
-    // returns the more relevant of the two movies
-    var better = function(currentbest, next) {
-        // If score() returns undefined, this is false, so we're still OK.
-        return (score(next) > score(currentbest) &&
-                (next.year > currentbest.year) &&
-                DDG.isRelevant(next.title, ignore)) ? next : currentbest;
-    };
-
-    result = DDG_bestResult(api_result.movies, better);
-
-    // Favor the first result if the max score is within 1% of the score for the first result.
-    if (result !== api_result.movies[0] && Math.abs(score(api_result.movies[0]) - max_score) / max_score < 0.1) {
-        result = api_result.movies[0];
-    }
-
-    // Check if the movie that we have is relevant enough.
-    if (!DDG.isRelevant(result.title, ignore)) {
-        return;
-    }
-
-    var checkYear = function(year) {
-        if (year) {
-            return " (" + year + ")";
-        }
-        return "";
-    };
-
-    if ((result.synopsis && result.synopsis.length) ||
-        (result.critics_consensus && result.critics_consensus.length)) {
-        result.hasContent = true;
-    }
-
+    Handlebars.registerHelper("AlternativeTo_getPlatform", function (platforms) {
+        return (platforms.length > 1) ? "Multiplatform" : platforms[0];
+    });
 ```
+
+This code demonstrates how Handlebars helpers are created and made available to the templates. Using the `Handlebars.register()` method, you are able to specify the name of the helper you are registering, as well as the function it executes. The `AlternativeTo_getPlatform` helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms".
+
+The AlternativeTo Spice also uses a little bit of CSS to further customize and perfect the layout of the tiles. Let's take a look at the CSS:
+
+###### alternative_to.css
+
+```css
+.tile--alternative_to .tile__icon {
+    float: right;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.tile--alternative_to .tile__body {
+    height: 13em;
+}
+
+.tile--alternative_to .tile__footer {
+    bottom: 0.6em;
+}
+```
+
+As you can see, this Spice requires very little CSS. This layout is a bit unique and so we opted to modify the layout of the content slightly. In most case the use of templates will alleviate the need to write custom CSS, however sometimes it is necessary and can be used sparingly.
+
+The most important thing to note is that we have prefaced each of our CSS rules with the class `.tile--alternative_to`. Each Spice instant answer is wrapped in a `<div>` that has a class called `.zci--<spice_name>` where `<spice_name>` matches the Spice's package name. As well, when a tile view is used, *each tile* is wrapped in a `div` that has a class called `.tile--<spice_name>`. These allow us to **namespace** all the CSS rules for each individual Spice and their tiles. The is very important because DuckDuckGo simultaneously loads and triggers multiple Spice instant answers (depending on the query) and so namespaceing the CSS is necessary to ensure that none of our Spices' CSS rules affect other elements on the page. If your Spice requires any CSS, it **must** only target child elements of `.zci--<spice_name>` for the detail area and/or `.tile--<spice_name>` for the tiles.
+
+
+<More to Come...>
+
+<!-- ## Walkthrough #2: InTheaters (Medium)
+
+The **InTheaters** instant answer is a little more advanced than **NPM** and **Alternative.To**, but it's still fairly easy to understand. Let's start by looking at the JavaScript:
+
+###### in_theaters.js
+ -->
+
+<!--
     
-We start by making sure that the `api_result` actually returned 1 or more results, if not we exit out, which will display nothing because no call has been made to `spice.render()`.
+We start by making sure that the `api_result` actually returned 1 or more results, if not we exit out, which will display nothing because no call has been made to `spice.add()`.
 
 We then go on to define some functions used to determine which movie is the most relevant by taking into consideration the rating, release date and relevancy of the title, compared to the search terms. We won't go into the details of how the `score()` and `better()` functions are defined, but you'll notice that inside `better()` we use the function `DDG.isRelevant()`. This function takes as input a string and has an optional second input containing an array of strings. `DDG.isRelevant` can be used to compare the given string to the search terms and returns a `boolean` which lets us know if the input is considered "relevant" to the search terms. The optional 2nd input, the array of strings is called the **skip array** and it contains words which should be ignored when considering the relevancy of the search term and the input to `DDG.isRelevant`. In this case, we are using `DDG.isRelevant` to compare the title of the movies returned from the Rotten Tomatoes API to the user's search term. The skip array contains arbitrary words which are likely to be found in the query, that we assume aren't relevant to the title of the movie.
 
 You'll also notice the use of `DDG_bestResult()`. This function takes as input a list of objects, and a comparator function. It then applies the comparator function, which takes two parameters, `currentbest` and `next` to each consecutive item in the input list. It assumes that the first item is the `currentbest`.
 
-By this point we have either determined that there is a relevant movie to display, or we have found nothing to be relevant and have exited out. If we have a relevant movie, we then call `Spice.render()` as we would in any other Spice instant answer:
+By this point we have either determined that there is a relevant movie to display, or we have found nothing to be relevant and have exited out. If we have a relevant movie, we then call `Spice.add()` as we would in any other Spice instant answer:
 
 ###### movie.js (continued)
 
@@ -180,7 +163,7 @@ By this point we have either determined that there is a relevant movie to displa
 }
 ```
 
-This is a fairly simple call to `Spice.render()`, but it slightly differs from other instant answers because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this instant answer is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
+This is a fairly simple call to `Spice.add()`, but it slightly differs from other instant answers because it not only defines `template_normal`, the default template to be used, but it also defines `template_small` which is the template to be used when this instant answer is shown in a stacked state i.e., it is shown below another zero click result, but the content is minimal, preferably a single line of text.
 
 Before looking at the implementation of the Handlebars helper functions, let's first take a look at the Movie Spice's Handlebars template to see how the helper functions are used:
 
@@ -266,7 +249,7 @@ Now let's take a look at the implementation of `{{#rating_adjective}}`:
 /*
  * rating_adjective
  *
- * help make the description of the movie gramatically correct
+ * help make the description of the movie grammatically correct
  * used in reference to the rating of the movie, as in
  *   'an' R rated movie, or
  *   'a'  PG rated movie
@@ -282,7 +265,7 @@ Again, this is a fairly simple function which simply returns either "a" or "an" 
 
 Now that you've seen a more advanced instant answer and understand how to use Handlebars helpers, let's look at another advanced instant answer example.
 
-## Example #3 - Quixey (Advanced Carousel Instant Answer)
+## Walkthrough #3 - Quixey (Advanced Carousel Instant Answer)
 
 The Quixey instant answer is one of our more advanced carousel instant answers which uses a considerable amount of Handlebars helpers and similarly to the **Movie** instant answer has a relevancy checking component. Let's begin by taking a look at the Quixey instant answer's JavaScript:
 
@@ -319,7 +302,7 @@ function ddg_spice_quixey (api_result) {
 
 Similarly to **Alternative.To**, the Quixey instant answer uses the carousel, and sets values for all the required carousel-specific properties. However, this instant answer also uses the `force_big_header` property to create a ZeroClick header and subsequently sets the value of the header text, `header1`. Also, the `more_logo` property is set, which allows a custom image to be used instead of the `source_name` text for the "More at" link.  
 
-Similarly to the **Movie** instant answer, in the **Quixey** instant answer, we use the `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.render()`. We are required to get relevant results in this manner so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
+Similarly to the **Movie** instant answer, in the **Quixey** instant answer, we use the `getRelevants()` function (defined below in **Quixey.js**), which is used to check for relevant results before calling `Spice.add()`. We are required to get relevant results in this manner so that only the results we want included in the carousel are passed on to the **quixey.handlebars** template.
 
 Moving on, let's take a look at the implementation of the `getRelevants()` helper:
 
@@ -366,7 +349,7 @@ function getRelevants (results) {
     else {
         // No relevant results,
         // check if it was a categorical search
-        // Eg."social apps for android"
+        // E.g."social apps for android"
         var q = DDG.get_query();
         res = q.match(categories) ? results : null;
     }
@@ -387,7 +370,7 @@ Before looking at the implementation of the remaining Quixey Handlebars helpers,
 <span>{{{condense name maxlen="40"}}}</span>
 ```
 
-This template is very simple, it creates an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlilke **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be misaligned. So, if the images for your instant answer aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
+This template is very simple, it creates an `<img>` tag, for the resulting app icon and a `<span>` tag for the app name. You may also notice that unlike **Alternative.To**, we placed the `<img>` tag inside `<p>` tags. We do this to automatically center and align the images, through the use of carousel specific CSS that we wrote, because the images aren't all the same size and would otherwise be misaligned. So, if the images for your instant answer aren't the same size, simply wrap them in `<p>` tags and the carousel will take care of the rest. If not, simply ignore the use of the `<p>` tags.
 
 Now let's take a look at the Quixey `carousel_template_detail` template. This template is more advanced, but most of the content is basic HTML which is populated by various `api_result` properties and Handlebars helpers:
 
@@ -528,7 +511,7 @@ Handlebars.registerHelper("platform_icon", function(icon_url) {
 });
 ```
 
-Another very simple helper function, the `platform_icon()` function simply checks if its input is equal to `2005` or `2015` and if so returns a special url for the platform icon. If not, it returns the originial icon url but adds our proxy redirect, `/iu/?u=` as previously discussed.
+Another very simple helper function, the `platform_icon()` function simply checks if its input is equal to `2005` or `2015` and if so returns a special url for the platform icon. If not, it returns the original icon url but adds our proxy redirect, `/iu/?u=` as previously discussed.
 
 ###### quixey.js (continued) -  platform\_name helper
 
@@ -558,7 +541,7 @@ Handlebars.registerHelper("platform_name", function() {
 });
 ```
 
-This helper is also quite simple, it is used to return a platform name and someties also unifies the platform name when multiple platforms exist for an app. If the app is available for both 'iPhone' and 'iPad', the `switch()` will catch this and indicate the app is availabe for "iOS".
+This helper is also quite simple, it is used to return a platform name and sometimes also unifies the platform name when multiple platforms exist for an app. If the app is available for both 'iPhone' and 'iPad', the `switch()` will catch this and indicate the app is available for "iOS".
 
 ###### quixey.js (continued) -  quixey\_star helper
 
@@ -571,11 +554,11 @@ Handlebars.registerHelper("quixey_star", function() {
 
 This helper is also very simple, but it is important because it uses the `DDG.get_asset_path()` function which returns the URI for an asset stored in an instant answer's share folder. This is necessary because Spice instant answers and their content are versioned internally. So the URI returned by this function will contain the proper version number, which is required to access any assets.
 
-## Example #4 - Dictionary (More Advanced Instant Answer)
+## Walkthrough #4 - Dictionary (More Advanced Instant Answer)
 
-The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a subdirectory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked seperately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own subdirectories and would also each have their own respective JavaScript, Handlebars and CSS files. 
+The dictionary instant answer is a more advanced instant answer than the previous examples, because it requires multiple endpoints (which means it has multiple perl modules -`.pm` files) in order to function properly. You will notice the `definition` endpoint is a sub-directory of the `dictionary` directory: `zeroclickinfo-spice/share/spice/dictionary/definition/`. In the case of the **Dictionary** instant answer, its Perl modules work together as one instant answer, however if the other endpoints worked separately from the `definition` endpoint, such as they do in the **[Last.FM](https://github.com/duckduckgo/zeroclickinfo-spice/tree/spice2/share/spice/lastfm)** instant answer, they would each have their own sub-directories and would also each have their own respective JavaScript, Handlebars and CSS files. 
 
-To begin, let's look at the first callback function definition in the Dictionary javascript:
+To begin, let's look at the first callback function definition in the Dictionary JavaScript:
 
 ###### dictionary\_definition.js
 
@@ -590,17 +573,17 @@ To begin, let's look at the first callback function definition in the Dictionary
 // define dictionary - gives the definition of the word "dictionary."
 //
 // Notes:
-// ddg_spice_dictionary_definition - gets the definitions of a given word (e.g. noun. A sound or a combination of sounds).
-// ddg_spice_dictionary_pronunciation - gets the pronunciation of a word (e.g. wûrd).
+// ddg_spice_dictionary_definition - gets the definitions of a given word (e.g., noun. A sound or a combination of sounds).
+// ddg_spice_dictionary_pronunciation - gets the pronunciation of a word (e.g., wûrd).
 // ddg_spice_dictionary_audio - gets the audio file.
 // ddg_spice_dictionary_reference - handles plural words. (Improve on this in the future.)
 ```
 
-The comments at the beginning of the file explain what the various callbacks are for. Each of these callback functions is connected to a different endpoint, meaning they each belong to a different Perl module. As you can see, the name of each callback correlates to the name of the perlmodule. So `dictionary_definition()` is the callback for `DDG::Spice::Dictionary::Definition`, likewise `dictionary_audio` is for `DDG::Spice::Dictionary::Audio`, etc.
+The comments at the beginning of the file explain what the various callbacks are for. Each of these callback functions is connected to a different endpoint, meaning they each belong to a different Perl module. As you can see, the name of each callback correlates to the name of the perl module. So `dictionary_definition()` is the callback for `DDG::Spice::Dictionary::Definition`, likewise `dictionary_audio` is for `DDG::Spice::Dictionary::Audio`, etc.
 
-Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an ajax call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary\_definition.js**
+Each of these endpoints are used to make different API calls (either to a different endpoint or possibly even a different API altogether), which can only be done by creating a different Perl module for each endpoint. We can make these endpoints work together for a given instant answer by using the jQuery `getScript()` function which makes an AJAX call to a given endpoint, which results in a call to that endpoint's callback function. This function needs to be defined before it is called, so the Dictionary instant answer defines all **four** callback functions in **dictionary\_definition.js**
 
-Moving on, let's take a look at the implementation of the `Spice.render()` call and the `dictionary_definition()`  callback:
+Moving on, let's take a look at the implementation of the `Spice.add()` call and the `dictionary_definition()`  callback:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
 
@@ -634,9 +617,9 @@ function ddg_spice_dictionary_definition (api_result) {
     };
 ```
 
-We begin by wrapping the `Spice.render()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the seperate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
+We begin by wrapping the `Spice.add()` call in a function which also does a little extra work. Specifically after rendering the result it calls the Wordnik API, this time using two different API endpoints. The first gets the pronunciation text, the second gets the audio file for the pronunciation of the word. As mentioned, these endpoints are used to work together as one instant answer, so, using the returns from the separate API calls, we construct one dictionary instant answer result which contains the word definition, the pronunciation text and the audio recording of the pronunciation.
 
-The reason for wrapping the `Spice.render()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_defintion()` callback as well as the `dictionary_reference()` callback, as you will see below:
+The reason for wrapping the `Spice.add()` call in a function is because we need to be able to call our `render()` function from both the `dictionary_definition()` callback as well as the `dictionary_reference()` callback, as you will see below:
 
 ###### dictionary\_definition.js (continued) - dictionary_definition callback
 
@@ -700,7 +683,7 @@ function ddg_spice_dictionary_reference (api_result) {
 };
 ```
 
-In this relatively simple callback, we begin by using the previously defined render property of the `dictionary_definiton()` function to give this callback access to the `render()` function we defined at the beginning of `quixey.js`. Then we confirm that this callback's `api_result` actually received the singular form of the originially searched query. If so, we add the singular and plural form of the word to our `api_result` object so we can check for and use them later in our Handlebars template.
+In this relatively simple callback, we begin by using the previously defined render property of the `dictionary_definition()` function to give this callback access to the `render()` function we defined at the beginning of `quixey.js`. Then we confirm that this callback's `api_result` actually received the singular form of the originally searched query. If so, we add the singular and plural form of the word to our `api_result` object so we can check for and use them later in our Handlebars template.
 
 ###### dictionary\_definition.js (continued) - dictionary_hyphenation callback
 
@@ -737,7 +720,7 @@ function ddg_spice_dictionary_pronunciation (api_result) {
 };
 ```
 
-Similarly to the `dictionary_hyphenation()` callback, this callback receives a phonetic spelling of the queried word and injects it into the Spice result by using jQuery as well to modify the HTML of the **#pronounciation** `<div>`.
+Similarly to the `dictionary_hyphenation()` callback, this callback receives a phonetic spelling of the queried word and injects it into the Spice result by using jQuery as well to modify the HTML of the **#pronunciation** `<div>`.
  
 ###### dictionary\_definition.js (continued) - dictionary_audio callback
 
@@ -821,9 +804,9 @@ The callback then verifies the API returned a pronunciation of the queried word 
     };
 ```
 
-Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavasScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
+Here, we define a function, `loadSound()` that uses the [**SoundManager**](http://www.schillmania.com/projects/soundmanager2/) JavaScript library to load the audio file and also allows us to easily control the playing of the audio. An important piece of this `loadSound()` function is the use of our audio proxy: `url: "/audio/?u=" + url`. Similarly to any images used in a instant answer, any audio files must also be proxied through DuckDuckGo to ensure our users' privacy.
 
-**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (eg. [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
+**\*\*Note:** The use of the SoundManager library for this instant answer shouldn't be taken lightly. We chose to use a JavaScript library to ensure cross-browser compatibility but the use of 3rd party libraries is not something we advocate, however since this was an internally written instant answer, we decided to use the SoundManager library for this instant answer as well as all others which utilize audio (e.g., [Forvo](https://duckduckgo.com/?q=pronounce+awesome)).
 
 ```javascript
     // Initialize the soundManager object.
@@ -900,7 +883,7 @@ We then check if the `this.[0].pluralOf` variable has been set. As you may recal
 
 Then the template creates two empty elements, a `<span>` tag to contain the phonetic spelling, which may or may not be populated by our `dictionary_pronunciation()` callback, depending on whether or not the API has a phonetic spelling for the queried word. Similarly we create an empty `<button>` tag to play an audio recording of the word pronunciation which is potentially populated by the `dictionary_audio()` callback, again if the API has an audio file for the queried word's pronunciation.
 
-The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (eg. noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
+The template then uses a Handlebars `{{#each}}` helper to iterate over the context (because it is an array in this case, not an object) and for each element creates a snippet of text indicating the usage of the term (e.g., noun, verb) and provides the definition of the term. This `{{#each}}` helper also uses two Handlebars helpers defined in **dictionary\_definition.js**, `{{part}}` and `{{format}}`. Let's take a look at how they're implemented:
 
 ###### dictionary\_definition.js (continued) - part helper
 
@@ -1021,3 +1004,4 @@ Most of the above CSS has actually been borrowed from the [Skeleton](http://gets
 As you can see, most of this CSS is specific to the `.widget-button` class and is used to style the look of the play button. Also its worth mentioning that this particular CSS has been written to be very cross-browser compatible as you can see by the comments which indicate the browsers each line has been written for.
 
 As you can see, the Dictionary instant answer is one of the most involved Spice instant answers we have due to its use of multiple endpoints and their respective callback functions. Most instant answers however shouldn't need to be so complex in order to function, so we greatly prefer that instant answers are built as simple and straightforward as possible.
+ -->

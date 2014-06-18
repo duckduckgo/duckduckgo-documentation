@@ -4,24 +4,29 @@ Spice instant answers are triggered by a backend Perl component that then calls 
 
 ## Spice Frontend
 
-The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to render a Spice result at the top of the DuckDuckGo search results page.
+The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to display a Spice result at the top of the DuckDuckGo search results page.
 
 ### Spice Templates
 
-In order to render the Spice result, the Spice callback needs to specify a template which determines how the result will look. There are several templates to choose from and it is up to the developer's discretion to choose the best template for the given data and desired output.
+In order to display the result, the Spice callback function needs to specify a template, which will determine how the result looks. There are several built-in templates to choose from and you are able to choose whichever template works best for the given data and desired output.
 
-### Tech
+### Third-Party Libraries
 
-The Spice frontend uses [Handlebars](http://handlebarsjs.com) for templates and includes [jQuery](https://jquery.org) (although its use is not required). It also allows the use of custom CSS when necessary.
+Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
-If you're not already familiar with Handlebars, *please* read the [Handlebars documentation](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars; the examples will explain it to you. But you should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. (Don't worry, it should only take a few minutes to read!)
+- [jQuery](https://jquery.org) v1.10.2
+- and [Handlebars](http://handlebarsjs.com) v1.3.0
 
-Later, we will walk you through several examples ranging from simple to complicated, which will explain how to use the template system and make your instant answers look awesome.
+If you're not already familiar with Handlebars, *please* read the [Handlebars documentationn](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
+
+Likewise, using jQuery is not required for making a Spice instant answer. But, it does offer certain benefits, such as cross-browser compatible implementations of various JavaScript functions. For example, jQuery's `$.each()` should be used in place of the native `Array.prototype.forEach()`, as it does **not** work in IE 6,7,8.
+
+Later, we will walk you through several examples, ranging from simple to complex, which will explain how to use templates and make your instant answers look awesome :)
 
 ## Spice Files
 
 A typical Spice instant answer requires several files to function properly.
-- The Perl files go in the **lib** directory: `lib/DDG/Spice/instantAnswerName.pm`
+- The Perl files go in the **lib** directory: `lib/DDG/Spice/InstantAnswerName.pm`
 - The frontend files (JS, Handlebars, CSS) discussed later go in the **share** directory: `share/spice/instant_answer_name/`
 
 **\*\*Note** : The file and folder names must adhere to our naming conventions (covered later) in order for everything to function properly.

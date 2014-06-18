@@ -1,17 +1,10 @@
 # Location API
 
-Sometimes, an instant answer needs the user's location. This is where the Location API comes in. An example is the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer. Before reading this, you should be familiar with the genereal workings of your instant answer type (ie. Goodie, Spice, Fathead or Longtail).
+Some instant answers need the user's location to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer depends on knowing where the user is located.
 
-The Location API is implemented by [DuckDuckGo](https://github.com/duckduckgo/duckduckgo), which is a package used by instant answers. When testing instant answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States," but don't worry - it will show the real location once it's live.
+The [core DDG library](https://github.com/duckduckgo/duckduckgo) provides a Location API. Since Goodie and Spice instant answers inherit from this package, their `handle` functions have access to a `$loc` variable which refers to a [Location object](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm).
 
-Inside the handlers of Goodie and Spice instant answers, the `$loc` variable refers to a Location object that can be accessed. Here's the code that the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) Spice is using to read the location.
-
-```perl
-# Phoenixville, Pennsylvania, United States
-my $location = join(", ", $loc->city, $loc->region_name, $loc->country_name);
-```
-
-It isn't limited to just the city, the state, and the country. [Location.pm](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm#L6) lists all the things that you can possibly use:
+This Location object has a number of [useful attributes](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm#L6) to help you provide relevant answers:
 
 ```perl
 my @geo_ip_record_attrs = qw( country_code country_code3 country_name region
@@ -19,20 +12,31 @@ my @geo_ip_record_attrs = qw( country_code country_code3 country_name region
     continent_code metro_code );
 ```
 
-Sample contents of `$loc`:
+Example data from `$loc`:
 
 ```perl
-longitude => -75.5385
-country_name => United States
-area_code => 610
-region_name => Pennsylvania
-country_code => US
-region => PA
+country_code   => US
+country_code3  => USA
+country_name   => United States
+region         => PA
+region_name    => Pennsylvania
+city           => Phoenixville
+postal_code    => 19460
+latitude       => 40.1246
+longitude      => -75.5385
+time_zone      => America/New_York
+area_code      => 610
 continent_code => NA
-city => Phoenixville
-postal_code => 19460
-latitude => 40.1246
-time_zone => America/New_York
-metro_code => 504
-country_code3 => USA
+metro_code     => 504
 ```
+
+When testing instant answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States":
+
+```perl
+# Phoenixville, Pennsylvania, United States
+my $location = join(", ", $loc->city, $loc->region_name, $loc->country_name);
+```
+
+For assistance with setting the location to be used in automated testing, please refer to the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md).
+
+Naturally, once your instant answer is live, `$loc` will refer to the appropriate location.

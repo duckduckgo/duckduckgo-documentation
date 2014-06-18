@@ -1,5 +1,4 @@
-DuckDuckGo-Documentation
-========================
+# DuckDuckGo-Documentation
 
 This will eventually be the central repository for all DuckDuckGo Documentation.
 

@@ -21,7 +21,7 @@ ddg_spice_test(
     # search box.
     '619 xkcd' => test_spice(
         # The first argument is the Spice callback. It includes the javascript
-        # endpoint and the argument list contructed by the Perl code. In this
+        # endpoint and the argument list constructed by the Perl code. In this
         # case, the endpoint is '/js/spice/xkcd/', and the argument returned by
         # the Perl code is 619.
         '/js/spice/xkcd/619',
