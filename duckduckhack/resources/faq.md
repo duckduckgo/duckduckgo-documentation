@@ -145,6 +145,6 @@ cpan install Math::Prime::Util
 cpanm Math::Prime::Util
 ```
 
-Alternatively, if you would like to install all the dependencies for the repo (e.g. zeroclickinfo-goodies), you can run `duckpan installdeps`. Please note that installing all the dependencies will take *several minutes* to install as there are many dependencies.
+Alternatively, if you would like to install all the dependencies for the repo (e.g. zeroclickinfo-goodies), you can run `duckpan installdeps`. Please note that installing all the dependencies will take **several minutes** to install as there are many dependencies.
 
 ![dependency](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/dependency.png)
