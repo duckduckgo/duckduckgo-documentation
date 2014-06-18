@@ -100,7 +100,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'text' group:
 
 - [text_item](#textitem)
 - [text_detail](#textdetail)
@@ -154,7 +154,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'info' group:
 
 - [basic_image_item](#basicimageitem)
 - [basic_info_detail](#basicinfodetail)
@@ -212,7 +212,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'products' group:
 
 - [products_item](#productsitem)
 - [products_detail](#productsdetail)
@@ -273,7 +273,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'media' group:
 
 - [basic_image_item](#basicimageitem)
 - [products_detail](#productsdetail)
@@ -326,7 +326,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'icon' group:
 
 - [icon_item](#iconitem)
 - [products_detail](#productsdetail)
@@ -379,7 +379,7 @@ templates: {
 }
 ```
 
-#### This template group is comprised of the following built-in templates:
+#### Default templates used in the 'base' group:
 
 - [base_item](#baseitem)
 - [base_detail](#basedetail)
@@ -452,15 +452,15 @@ templates: {
 
 *none*
 
-### Features Diagram
+### Diagram
 
 ![record template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png)
 
-### Template groups using "record"
+### Template groups using the "record" template:
 
 - *none by default*
 
-### Instant answers using "record"
+### Example usage of the "record" template:
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
@@ -482,11 +482,11 @@ templates: {
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
 
-### Template groups using "icon_item"
+### Template groups using the "icon_item" template:
 
 - [icon](#icon)
 
-### Instant answers using "icon"
+### Example usage of the "icon" template:
 
 - [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
@@ -506,11 +506,11 @@ templates: {
 
 ![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png)
 
-### Template groups using "text_item"
+### Template groups using the "text_item" template:
 
 - [text](#text)
 
-### Instant answers using "text_item"
+### Example usage of the "text_item" template:
 
 - [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
 - [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
@@ -530,11 +530,11 @@ templates: {
 
 ![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png)
 
-### Template groups using "text_detail"
+### Template groups using the "text_detail" template:
 
 - [text](#text)
 
-### Instant answers using "text_detail"
+### Example usage of the "text_detail" template:
 
 - [Rhymes](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
 - [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
@@ -556,12 +556,12 @@ templates: {
 
 ![basic_image_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png)
 
-### Template groups using "basic_image_item"
+### Template groups using the "basic_image_item" template:
 
 - [info](#info)
 - [media](#media)
 
-### Instant answers using "basic_image_item"
+### Example usage of the "basic_image_item" template:
 
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
@@ -584,11 +584,11 @@ templates: {
 
 ![products_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png)
 
-### Template groups using "products_item"
+### Template groups using the "products_item" template:
 
 - [products](#products)
 
-### Instant answers using "products_item"
+### Example usage of the "products_item" template:
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [CouponMountain](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
@@ -615,13 +615,13 @@ templates: {
 
 ![products_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png)
 
-### Template groups using "products_detail"
+### Template groups using the "products_detail" template:
 
 - [products](#products)
 - [media](#media)
 - [icon](#icon)
 
-### Instant answers using "products_detail"
+### Example usage of the "products_detail" template:
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [CouponMountain](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
@@ -646,13 +646,13 @@ templates: {
 
 ![products_item_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png)
 
-### Template groups using "products_item_detail"
+### Template groups using the "products_item_detail" template:
 
 - [products](#products)
 - [media](#media)
 - [icon](#icon)
 
-### Instant answers using "products_item_detail"
+### Example usage of the "products_item_detail" template:
 
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
@@ -678,11 +678,11 @@ templates: {
 
 ![basic_info_detail_w_aux template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png)
 
-### Template groups using "basic_info_detail"
+### Template groups using the "basic_info_detail" template:
 
 - [info](#info)
 
-### Instant answers using "basic_info_detail"
+### Example usage of the "basic_info_detail" template:
 
 - [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
@@ -705,11 +705,11 @@ templates: {
 
 ![base_item template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_complex.png)
 
-### Template groups using "base_item"
+### Template groups using the "base_item" template:
 
 - [base](#base)
 
-### Instant answers using "base_item"
+### Example usage of the "base_item" template:
 
 - [GithubJobs](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github_jobs/github_jobs.js)
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
@@ -730,11 +730,11 @@ templates: {
 
 ![base_detail template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail_complex.png)
 
-### Template groups using "base_detail"
+### Template groups using the "base_detail" template:
 
 - [base](#base)
 
-### Instant answers using "base_detail"
+### Example usage of the "base_detail" template:
 
 - [FlashVersion](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js)
 - [NPM](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js)
