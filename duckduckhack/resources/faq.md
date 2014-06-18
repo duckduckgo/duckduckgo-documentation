@@ -135,7 +135,7 @@ A result abstract can be either plain text (generally one readable sentence, end
 
 ### How do I install a missing Perl dependency?
 
-Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the class `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
+Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the module `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
 
 In order to install any missing dependencies you can use cpan or cpanm like so:
 
