@@ -452,7 +452,7 @@ templates: {
 
 *none*
 
-### Diagram
+### Template Diagram
 
 ![record template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png)
 
@@ -478,7 +478,7 @@ templates: {
 - description
 - footer [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
 
@@ -502,7 +502,7 @@ templates: {
 - description
 - footer [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png)
 
@@ -526,7 +526,7 @@ templates: {
 - title [optional, replaces `title_content`]
 - content [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png)
 
@@ -552,7 +552,7 @@ templates: {
 - rating [optional]
 - ratingText [optional]
 
-### Features Diagram
+### Template Diagram
 
 ![basic_image_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png)
 
@@ -580,7 +580,7 @@ templates: {
 - rating [optional]
 - reviewCount [optional]
 
-### Features Diagram
+### Template Diagram
 
 ![products_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png)
 
@@ -611,7 +611,7 @@ templates: {
 - abstract
 - action [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![products_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png)
 
@@ -642,7 +642,7 @@ templates: {
 - abstract
 - action [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![products_item_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png)
 
@@ -670,7 +670,7 @@ templates: {
 - content [optional, replaces `description`] *sub-template*
 - aux [optional] *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![basic_info_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail.png)
 
@@ -697,7 +697,7 @@ templates: {
 - url [optional]
 - content *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![base_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item.png)
 
@@ -722,7 +722,7 @@ templates: {
 
 - content *string* OR *sub-template*
 
-### Features Diagram
+### Template Diagram
 
 ![base_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail.png)
 
