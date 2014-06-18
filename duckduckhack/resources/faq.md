@@ -135,6 +135,16 @@ A result abstract can be either plain text (generally one readable sentence, end
 
 ### How do I install a missing Perl dependency?
 
-Open the instant answer that's missing a dependency, e.g., `Factors.pm`. If you look in the file, it says that it uses the `Math::Prime::Util` module. You can install this by typing in `cpanm Math::Prime::Util`.
+Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the class `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
+
+In order to install any missing dependencies you can use cpan or cpanm like so:
+
+```perl
+cpan install Math::Prime::Util
+# or
+cpanm Math::Prime::Util
+```
+
+Alternatively, if you would like to install all the dependencies for the repo (e.g. zeroclickinfo-goodies), you can run `duckpan installdeps`. Please note that installing all the dependencies will take *several minutes* to install as there are many dependencies.
 
 ![dependency](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/dependency.png)
