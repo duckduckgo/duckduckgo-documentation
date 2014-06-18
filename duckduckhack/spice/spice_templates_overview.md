@@ -110,8 +110,14 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'text' template group
 
 - ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
+    ![DuckDuckGo search for "github duckduckgo"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png)
+
 - ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js))
+    ![DuckDuckGo search for "what rhymes with awesome"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/what_rhymes_with_awesome.png)
+
 - ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js))
+    ![DuckDuckGo search for "reddit duckduckgo"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/reddit_duckduckgo.png)
+
 
 ------
 
@@ -158,8 +164,14 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'info' template group
 
 - ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
+    ![DuckDuckGo search for "green day band"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png)
+
 - ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js))
+    ![DuckDuckGo search for "bitcoin price"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bitcoin_price.png)
+
 - ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
+    ![DuckDuckGo search for "gravatar matt"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/gravatar_matt.png)
+
 
 ------
 
@@ -212,8 +224,14 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'products' template group
 
 - ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+    ![DuckDuckGo search for "buy batman lego"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/buy_batman_lego.png)
+
 - ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))
+    ![DuckDuckGo search for "flight tracking apps"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/flight_tracking_apps.png)
+
 - ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
+    ![DuckDuckGo search for "octopart 1770019-2"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/octopart_1770019-2.png)
+
 
 ------
 
@@ -267,8 +285,14 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'media' template group
 
 - ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
-- ["watch a movie"](https://duckduckgo.com/?q=watch+a+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
+    ![DuckDuckGo search for "lord of the rings movie"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/lord_of_the_rings_movie.png)
+
+- ["movies"](https://duckduckgo.com/?q=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
+    ![DuckDuckGo search for "movies"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/movies.png)
+
 - ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
+    ![DuckDuckGo search for "BBC schedule"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png)
+
 
 ------
 
@@ -313,6 +337,8 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'icon' template group
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+    ![DuckDuckGo search for "alternative to photoshop"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png)
+
 
 ------
 
@@ -363,8 +389,14 @@ In order for these templates to display correctly, you need to ensure that each 
 ### Example uses of the 'base' template group
 
 - ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
+    ![DuckDuckGo search for "gandhi quote"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/gandhi_quote.png)
+
 - ["cpan App::cpanminus"](https://duckduckgo.com/?q=cpan+App::cpanminus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
+    ![DuckDuckGo search for "cpan App::cpanminus"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/cpan_app::cpanminus.png)
+
 - ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
+    ![DuckDuckGo search for "define indelible"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png)
+
 
 ------
 
