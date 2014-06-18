@@ -133,7 +133,7 @@ A result abstract can be either plain text (generally one readable sentence, end
 
 ## DuckPAN
 
-### How do I install Perl dependencies?
+### How do I install a missing Perl dependency?
 
 Open the instant answer that's missing a dependency, e.g., `Factors.pm`. If you look in the file, it says that it uses the `Math::Prime::Util` module. You can install this by typing in `cpanm Math::Prime::Util`.
 
