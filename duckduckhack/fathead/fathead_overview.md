@@ -1,42 +1,26 @@
 # Fathead Instant Answers
 
-Fathead instant answers are powered by a simple database. When the instant answer is triggered, the corresponding row from the database is returned, using a single template for all Fathead instant answers. Your job, as the author of an instant answer, is to write a program that generates the database, known as output.txt. The program may be written in any reasonable language, and will be run periodically to keep the database current.
+Each Fathead instant answer is powered by a simple database. When the instant answer is triggered, the corresponding row from the database is returned, using a single template for all Fathead instant answers. Your job, as the author of an instant answer, is to write a program that generates the database, known as output.txt. The program may be written in any reasonable language, and will be run periodically to keep the database current.
 
 ## Structure
 
-Each Fathead instant answer has its own directory. Some of the directories are in use on the live system, and some are still in development.
+Each Fathead instant answer has its own directory, which looks like this:
 
-Each directory has a structure like this:
+- ``lib/DDG/Fathead/FatheadName.pm`` &ndash; a Perl file that lists some meta information about the instant answer
 
-```shell
-# This is a Perl file that lists some meta information about the instant answer
-lib/DDG/Fathead/FatheadName.pm
+- ``share/fathead_name/fetch.sh`` &ndash; a shell script called to fetch the data. 
 
-# This shell script is called to fetch the data. 
-# Tmp files should go in a directory called download.
-share/fathead_name/fetch.sh
+- ``share/fathead_name/download/`` &ndash; a directory to hold temp files created by fetch.sh
 
-# This is the script used to parse the data once it has been fetched. 
-# .xx can be .pl, .py, .rb, .js, etc. depending on what language you use.
-share/fathead_name/parse.xx
+- ``share/fathead_name/parse.xx`` &ndash; the script used to parse the data once it has been fetched. .xx can be .pl, .py, .rb, .js, etc. depending on what language you use.
 
-# This shell script is called to run the parser. 
-share/fathead_name/parse.sh
+- ``share/fathead_name/parse.sh`` &ndash; a shell script wrapper around parse.xx
 
-# Please include any dependencies here,
-# or other special instructions for people
-# trying to run it.
-share/fathead_name/README.txt
+- ``share/fathead_name/README.txt`` &ndash; Please include any dependencies here, or other special instructions for people trying to run it. Currently, Fathead instant answers require some hand work by DuckDuckGo staff during integration.
 
-# This is the output file.
-# Generally it should NOT be committed,
-# but if it is small (<1MB) it is useful to do so.
-share/fathead_name/output.txt
+- ``share/fathead_name/output.txt`` &ndash; the output file. It generally should *NOT* be committed to github, but may be committed if it is small (<1MB).
 
-# This is an optional pointer to a URL in the cloud somewhere,
-# which contains the data to process.
-share/fathead_name/data.url
-```
+- ``share/fathead_name/data.url`` &ndash; an optional pointer to a URL in the cloud somewhere, which contains the data to process.
 
 
 ## Data File Format
@@ -49,7 +33,7 @@ The output format from parse.xx depends on the type of content. In any case, it 
 
 Every line in the output file must contain thirteen fields, separated by tabs. Some of the fields may be empty. The fields are as follows:
 
-  1. Full article title. Must be unique across the data set of this Instant Answer. *This field is required.* Examples: ``Perl``
+  1. Full article title. Must be unique across the data set of this instant answer. *This field is required.* Examples: ``Perl``
 
   2. Type of article. ``A`` for actual articles, ``D`` for disambiguation pages, or ``R`` for redirects. *This field is required.*
 
