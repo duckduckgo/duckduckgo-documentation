@@ -1,6 +1,6 @@
 # Fathead Instant Answers
 
-(intro - tbd)
+Fathead instant answers are powered by a simple database. When the instant answer is triggered, the corresponding row from the database is returned, using a single template for all Fathead instant answers. Your job, as the author of an instant answer, is to write a program that generates the database, known as output.txt. The program may be written in any reasonable language, and will be run periodically to keep the database current.
 
 ## Structure
 
