@@ -49,47 +49,31 @@ The output format from parse.xx depends on the type of content. In any case, it 
 
 Every line in the output file must contain thirteen fields, separated by tabs. Some of the fields may be empty. The fields are as follows:
 
-  1. Full article title. Must be unique across the data set of this Instant Answer. *This field is required.*
-
-    - Examples: ``Perl``
+  1. Full article title. Must be unique across the data set of this Instant Answer. *This field is required.* Examples: ``Perl``
 
   2. Type of article. ``A`` for actual articles, ``D`` for disambiguation pages, or ``R`` for redirects. *This field is required.*
 
-  3. *For redirects only.* An alias for a title such as a common misspelling or AKA. The format is the full title of the Redirect, e.g., DuckDuckGo.
-
-    - Examples: ``Duck Duck Go -> DuckDuckGo``
+  3. *For redirects only.* An alias for a title such as a common misspelling or AKA. The format is the full title of the Redirect, e.g., DuckDuckGo. Examples: ``Duck Duck Go -> DuckDuckGo``
 
   4. *Ignore.*
 
-  5. Categories. An article can have multiple categories, and category pages will be created automatically. An example of a category page can be seen at [http://duckduckgo.com/c/Procedural_programming_languages](http://duckduckgo.com/c/Procedural_programming_languages). Multiple categories must be separated by an escaped newline, ``\\n``. Categories should generally end with a plural noun.
-
-    - Examples: ``Procedural programming languages\\n``
+  5. Categories. An article can have multiple categories, and category pages will be created automatically. An example of a category page can be seen at [http://duckduckgo.com/c/Procedural_programming_languages](http://duckduckgo.com/c/Procedural_programming_languages). Multiple categories must be separated by an escaped newline, ``\\n``. Categories should generally end with a plural noun. Examples: ``Procedural programming languages\\n``
 
   6. *Ignore.*
 
-  7. Related topics. These will be turned into links in the Zero-click Info box.
-
-    - Examples: ``[[Perl Data Language]]``. If the link name is different, ``[[Perl Data Language|PDL]]``.
+  7. Related topics. These will be turned into links in the Zero-click Info box. Examples: ``[[Perl Data Language]]``. If the link name is different, ``[[Perl Data Language|PDL]]``.
 
   8. *Ignore.*
 
-  9. External links. These will be displayed first when an article is shown. The canonical example is an official site, which looks like ``[$url Official site]\\n``. You can have several, separated by an escaped newline, though only a few will be used. You can also have before and after text or put multiple links in one.
-
-    - Examples: ``Before text [$url link text] after text [$url2 second link].\\n``
+  9. External links. These will be displayed first when an article is shown. The canonical example is an official site, which looks like ``[$url Official site]\\n``. You can have several, separated by an escaped newline, though only a few will be used. You can also have before and after text or put multiple links in one. Examples: ``Before text [$url link text] after text [$url2 second link].\\n``
 
   10. *Ignore.*
 
-  11. Image. You can reference an external image that we will download and reformat for display.
+  11. Image. You can reference an external image that we will download and reformat for display. Examples: ``[[Image:$url]]``
 
-    - Examples: ``[[Image:$url]]``
+  12. Abstract. This is the snippet info. It should generally be ONE readable sentence, ending in a period. Examples: ``Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.``
 
-  12. Abstract. This is the snippet info. It should generally be ONE readable sentence, ending in a period.
-
-    - Examples: ``Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.``
-
-  13. URL. This is the full URL for the source. If all the URLs are relative to the main domain, this can be relative to that domain.
-
-    - Examples: ``http://www.perl.org``
+  13. URL. This is the full URL for the source. If all the URLs are relative to the main domain, this can be relative to that domain. Examples: ``http://www.perl.org``
 
 
 
