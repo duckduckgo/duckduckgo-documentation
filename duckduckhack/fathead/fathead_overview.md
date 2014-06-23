@@ -94,10 +94,15 @@ print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images
 ```
 
 There is a pre-process script that is run on this output, which:
+
 * drops duplicates (on $title).
+
 * reduces $abstract to one sentence.
+
 * drops records that look like spam.
+
 * normalizes spacing.
+
 * makes sure the $abstract ends in a sentence.
 
 
