@@ -47,74 +47,64 @@ The output file needs to use UTF-8 encoding so we can process it. Please make su
 
 The output format from parse.xx depends on the type of content. In any case, it should be a tab delimited file, with one line per entry. Usually there is no need for newline characters, but if there is a need for some reason, escape them with a backslash like \\\n. If you want a newline displayed, use &lt;br&gt;
 
-The output fields are as follows, not all are required to have values, but all must be accounted for in the delimitations. This example is written in simple [Perl](https://duckduckgo.com/Perl).
+Every line in the output file must contain thirteen fields, separated by tabs. Some of the fields may be empty. The fields are as follows:
 
+  1. Full article title. Must be unique across the data set of this Instant Answer. *This field is required.*
+
+    - Examples: ``Perl``
+
+  2. Type of article. ``A`` for actual articles, ``D`` for disambiguation pages, or ``R`` for redirects. *This field is required.*
+
+  3. *For redirects only.* An alias for a title such as a common misspelling or AKA. The format is the full title of the Redirect, e.g., DuckDuckGo.
+
+    - Examples: ``Duck Duck Go -> DuckDuckGo``
+
+  4. *Ignore.*
+
+  5. Categories. An article can have multiple categories, and category pages will be created automatically. An example of a category page can be seen at [http://duckduckgo.com/c/Procedural_programming_languages](http://duckduckgo.com/c/Procedural_programming_languages). Multiple categories must be separated by an escaped newline, ``\\n``. Categories should generally end with a plural noun.
+
+    - Examples: ``Procedural programming languages\\n``
+
+  6. *Ignore.*
+
+  7. Related topics. These will be turned into links in the Zero-click Info box.
+
+    - Examples: ``[[Perl Data Language]]``. If the link name is different, ``[[Perl Data Language|PDL]]``.
+
+  8. *Ignore.*
+
+  9. External links. These will be displayed first when an article is shown. The canonical example is an official site, which looks like ``[$url Official site]\\n``. You can have several, separated by an escaped newline, though only a few will be used. You can also have before and after text or put multiple links in one.
+
+    - Examples: ``Before text [$url link text] after text [$url2 second link].\\n``
+
+  10. *Ignore.*
+
+  11. Image. You can reference an external image that we will download and reformat for display.
+
+    - Examples: ``[[Image:$url]]``
+
+  12. Abstract. This is the snippet info. It should generally be ONE readable sentence, ending in a period.
+
+    - Examples: ``Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.``
+
+  13. URL. This is the full URL for the source. If all the URLs are relative to the main domain, this can be relative to that domain.
+
+    - Examples: ``http://www.perl.org``
+
+
+
+An example snippet from parse.xx written in [Perl](https://duckduckgo.com/Perl) may look like this:
 
 ```perl
-# REQUIRED: full article title, e.g. Perl.
-# This should be unique across the data set.
-my $title = $line[0] || '';
 
-# REQUIRED: 
-# A for article.
-# D for disambiguation page.
-# R for redirect.
-my $type = $line[1] || '';
-
-# Only for redirects, e.g., 
-# an alias for a title such as
-# a common misspelling or AKA.
-# For example: Duck Duck Go -> DuckDuckGo.
-# The format is the full title of the Redirect, e.g., DuckDuckGo.
-my $redirect = $line[2] || '';
-
-# Ignore.
-my $otheruses = $line[3] || '';
-
-# You can put the article in multiple categories, and category pages will be created automatically.
-# E.g.: http://duckduckgo.com/c/Procedural_programming_languages
-# You would do: Procedural programming languages\\n
-# You can have several categories, separated by an escaped newline.
-# Categories should generally end with a plural noun.
-my $categories = $line[4] || '';
-
-# Ignore.
-my $references = $line[5] || '';
-
-# You can reference related topics here, which get turned into links in the Zero-click Info box.
-# On the perl example, e.g., Perl Data Language
-# You would do: [[Perl Data Language]]
-# If the link name is different, you could do [[Perl Data Language|PDL]]
-my $see_also = $line[6] || '';
-
-# Ignore.
-my $further_reading = $line[7] || '';
-
-# You can add external links that get put first when this article comes out.
-# The canonical example is an official site, which looks like:
-# [$url Official site]\\n
-# You can have several, separated by an escaped newline though only a few will be used.
-# You can also have before and after text or put multiple links in one like this.
-# Before text [$url link text] after text [$url2 second link].\\n
-my $external_links = $line[8] || '';
-
-# Ignore.
-my $disambiguation = $line[9] || '';
-
-# You can reference an external image that we will download and reformat for display.
-# You would do: [[Image:$url]]
-my $images = $line[10] || '';
-
-# This is the snippet info.
-# It should generally be ONE readable sentence, ending in a period.
-my $abstract = $line[11] || '';
-
-# This is the full URL for the source.
-# If all the URLs are relative to the main domain, 
-# this can be relative to that domain.
-my $source_url = $line[12] || '';
-
-In all this may look like:
+my $title = "Perl";
+my $type = "A";
+my $categories = "Procedural programming languages\\n";
+my $see_also = "";
+my $external_links = "[$url Official site]\\n";
+my $images = "";
+my $abstract = "Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.";
+my $source_url = "";
 
 print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
 ```
