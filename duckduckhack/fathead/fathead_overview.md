@@ -65,14 +65,19 @@ An example snippet from parse.xx written in [Perl](https://duckduckgo.com/Perl) 
 
 ```perl
 
-my $title = "Perl";
-my $type = "A";
-my $categories = "Procedural programming languages\\n";
-my $see_also = "";
-my $external_links = "[$url Official site]\\n";
-my $images = "";
-my $abstract = "Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.";
-my $source_url = "";
+my $title = $line[0] || '';
+my $type = $line[1] || '';
+my $redirect = $line[2] || '';
+my $otheruses = $line[3] || '';
+my $categories = $line[4] || '';
+my $references = $line[5] || '';
+my $see_also = $line[6] || '';
+my $further_reading = $line[7] || '';
+my $external_links = $line[8] || '';
+my $disambiguation = $line[9] || '';
+my $images = $line[10] || '';
+my $abstract = $line[11] || '';
+my $source_url = $line[12] || '';
 
 print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
 ```
