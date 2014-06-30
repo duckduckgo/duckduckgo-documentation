@@ -51,7 +51,7 @@ There are times, though, where one source does a drastically better job of answe
 - Speed (does the service return results fast enough?) 
 - Quality (does the service answer the queries better than any other service?)
 
-If the new instant answer is on par or better than the old instant answer, we ___.
+If you think you have a source that is better, let's talk about it on the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814).
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
