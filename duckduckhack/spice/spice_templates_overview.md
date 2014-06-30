@@ -444,6 +444,7 @@ templates: {
     group: 'base',
     options: {
         content: 'record',
+        /* optional - highlight alternate rows */
         rowHighlight: true
     }
 }
