@@ -422,7 +422,7 @@ The list of built-in Spice templates includes:
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
-**\*\*Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.
+**\*\*Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.  An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting. 
 
 For example this is how your Spice code should look when using the **record** template:
 
@@ -443,7 +443,9 @@ normalize: function(item){
 templates: {
     group: 'base',
     options: {
-        content: 'record'
+        content: 'record',
+        /* optional - highlight alternate rows */
+        rowHighlight: true
     }
 }
 ```
