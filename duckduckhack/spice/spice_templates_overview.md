@@ -1,7 +1,7 @@
 # Spice Templates
 <span style="display: none;">
 <h2 id="summary">Spice Template Summary</h2>
-<p id="summary-text" markdown="1">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information look these three sections:
+<p id="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information look these three sections:
 	<br>
 	<li><a href="http://duck.co/duckduckhack/spice_template_overview#template-groups"><strong>Template Groups</strong></a><li>
 	<li><a href="http://duck.co/duckduckhack/spice_template_overview#built-in-spice-templates"><strong>Built-In Spice Templates</strong></a><li>
