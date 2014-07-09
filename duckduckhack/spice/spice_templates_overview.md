@@ -1,7 +1,7 @@
 # Spice Templates
 <span style="display: none;">
 <h2 id="summary">Spice Template Summary</h2>
-<p id="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.
+<p id="summary-text" markdown="1">There are several built-in Spice templates (both item and detail) which can be used for any Spice.
 - [**Template Groups**](#template-groups)
     - [Default Template Options](#default-template-options)
     - [text](#text)
