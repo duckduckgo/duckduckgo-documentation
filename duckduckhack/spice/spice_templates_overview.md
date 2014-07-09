@@ -1,5 +1,5 @@
 # Spice Templates
-<h2 class="summary no-js">Spice Template Summary</h2>
+<h2 class="summary" class="no-js">Spice Template Summary</h2>
 <p class="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information look these three sections:</p>
 <li class="summary-text"><a href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups</a><li>
 <li class="summary-text"><a href="http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates">Built-In Spice Templates</a><li>
