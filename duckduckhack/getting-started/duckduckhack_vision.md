@@ -16,7 +16,7 @@ In order to make sure these instant answers are worthy of being displayed, there
 
 3. **Minimal Vertical Space**.  
     Only include the most important information and then offer the user to click through for more if needed.  
-    ![minimize space](https://s3.amazonaws.com/ddg-assets/docs/minimize_space.png)
+    ![minimize space](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/minimal_vertical_space.png)
 
 4. **Consistent Design**.  
     In order to display instant answers, we have four different instant answer types: **Goodie**, **Spice**, **Fathead** and **Longtail**. Although each instant answer type serves a different purpose, the instant answers they provide should look and feel similar. When in doubt, copy what already exists or ask us! We already have a few cool designs, like [this one](https://duckduckgo.com/?q=movies) and [this one](https://duckduckgo.com/?q=garlic+steak+recipe).
