@@ -1,9 +1,8 @@
 # Spice Templates
-<div style="display: none;">
 <h2 id="summary">Spice Template Summary</h2>
 <p id="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information look these three sections:
+	<li><a href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups</a><li>
 </p>
-</div>
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
 For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
