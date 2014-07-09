@@ -10,7 +10,13 @@
 
 #### Consistent Variable Names
 
-ex. "api_return"
+- Use `api_result` as the argument name in the callback function.
+
+```javascript
+env.ddg_spice_sound_cloud = function(api_result) {
+    ...
+}
+```
 
 #### Spice Header Format
 
