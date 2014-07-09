@@ -1,5 +1,5 @@
 # Spice Templates
-
+# summary title
 <h2 id="summary"> This is the summary title </h2>
 <p id="summary-text"> this is the text for the summary </p>This is the summary title </h2>
 
