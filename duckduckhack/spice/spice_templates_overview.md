@@ -2,7 +2,6 @@
 
 <h2 id="summary"> This is the summary title </h2>
 <p id="summary-text"> this is the text for the summary </p>This is the summary title </h2>
-<p id="summary-text"> this is the text for the summary </p>
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
