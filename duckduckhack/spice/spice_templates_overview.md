@@ -1,7 +1,16 @@
 # Spice Templates
 <span style="display: none;">
 <h2 id="summary">Spice Template Summary</h2>
-<p id="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.</p>
+<p id="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.
+- [**Template Groups**](#template-groups)
+    - [Default Template Options](#default-template-options)
+    - [text](#text)
+    - [info](#info)
+    - [products](#products)
+    - [media](#media)
+    - [icon](#icon)
+    - [base](#base)
+	</p>
 </span>
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
