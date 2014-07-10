@@ -114,6 +114,7 @@ In order for these templates to display correctly, you need to ensure that each 
 <h2 class='summary'>Spice text template</h2>
 <p class='summary-text'>The text group has both a tile and detail view.  See the examples below or visit the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Spice Template Overview</a> page
 </p>
+<img class='summary-text' href="https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png">
 
 ### Example uses of the 'text' template group
 
