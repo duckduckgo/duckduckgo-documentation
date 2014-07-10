@@ -321,7 +321,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<h2 class='summary' moreAt="spice_templates_overview#media">Spice media template</h2>
+<h2 class='summary' moreAt="spice_templates_overview#icon">Spice icon template</h2>
 <p class='summary-text'>
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 </p>
@@ -371,7 +371,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<h2 class='summary' moreAt="spice_templates_overview#media">Spice media template</h2>
+<h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
 <p class='summary-text'>
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 </p>
