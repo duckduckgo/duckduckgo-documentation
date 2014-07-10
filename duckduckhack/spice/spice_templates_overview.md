@@ -112,8 +112,7 @@ templates: {
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 <h2 class='summary'>Spice text template</h2>
-<p class='summary-text'>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.
-</p>
+<p class='summary-text'>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
 
 ### Example uses of the 'text' template group
 
