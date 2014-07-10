@@ -43,7 +43,15 @@ var foo = 1,
 ```
 
 + We try to support all modern browsers, including IE 8. As such, please remember the following:
-    + Trailing semicolons in objects will not work.
+    + Trailing commas in objects will not work.
+
+    ```javascript
+    var foo = {
+        a: 'b',
+        c: 42, //<-- BAD
+    };
+    ```
+    
     + `Array.prototype.map()` and `Array.prototype.forEach()` will not work. Consider using the jQuery equivalents [`$.map()`](http://api.jquery.com/jQuery.map/) and [`$.each()`](http://api.jquery.com/jQuery.each/).
 + Don't modify a native object's prototype, as this takes global effect. Consider using local functions instead.
 + Objects are better defined all at once:
