@@ -260,7 +260,7 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 </p>
-
+<img class='summary-text' src=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png'></img>
 ## media
 
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
