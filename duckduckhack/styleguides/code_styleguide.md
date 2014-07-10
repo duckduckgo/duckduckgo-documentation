@@ -6,7 +6,7 @@ This document outlines some language specifc guidelines for formatting your code
 
 - **Indent with 4 spaces** (soft tabs)
 
-    All DuckDuckHack code should be indented with four spaces. (ie. configure your text editor to insert four spaces when you hit the tab button. This is referred to as a "soft-tab"). If you are correcting the indentation of a file, please submit that change in a seperate pull request. Mixing code changes with indentation fixes makes for git diffs that are difficult to read.
+    All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a seperate pull request. Mixing code changes with indentation fixes makes for git diffs that are difficult to read.
 
 - **Document your code** 
 
@@ -28,16 +28,55 @@ This document outlines some language specifc guidelines for formatting your code
 
 - Use the ["One True Brace Style"](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS) (opening brace on the same line)
 
+    ```javascript
+    // Bad
+    if ( ... )
+    {
+        ...
+    } 
+    else
+    {
+        ...
+    }
+
+    // Good
+    if ( ... ) {
+        ...
+    } else {
+        ...
+    }
+    ```
+
 - Use `{}` instead of `new Object()`, and `[]` instead of `new Array()`.
+    
+    ```javascript
+    // Bad
+    var arr = new Array();
+    var obj = new Object();
+
+    // Good
+    var arr = [];
+    var obj = {};
+    ```
 
 - Use `===` and `!==` instead of `==` and `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
 
 - Declare variables with `var`, chaining these like so is encouraged, with one line per variable:
 
     ```javascript
+
+    // Bad
+    var foo = 1;
+    var bar = true;
+    var baz = "string";
+    
+    // good
     var foo = 1,
         bar = true,
         baz = "string";
+
+    // when initialzing undefined variables
+    var foo, bar, baz;
     ```
     
     Note: We're using ECMAScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode), so you'll *need* to declare every variable with `var`.
@@ -68,42 +107,42 @@ This document outlines some language specifc guidelines for formatting your code
 
 - Define default properties when the object is created:
 
-```javascript
-// Bad
-var bar = {};
-bar.a = 'b';
-bar.c = 42;
+    ```javascript
+    // Bad
+    var bar = {};
+    bar.a = 'b';
+    bar.c = 42;
 
-// Good
-var foo = {
-    a: 'b',
-    c: 42
-};
-```
+    // Good
+    var foo = {
+        a: 'b',
+        c: 42
+    };
+    ```
 
 - Store jQuery selectors:
 
     If you need to re-use a jQuery selector (eg. `$('#myDiv')`), store it in a variable for speed and efficiency. Otherwise, jQuery will need to traverse the DOM each time you use the same selector.
 
-```javascript
-// Bad
-// Traverse the DOM and find '#text_element'...
-$('#text_element').show();
-// ... now do all that work again!
-$('#text_element').html('abc');
+    ```javascript
+    // Bad
+    // Traverse the DOM and find '#text_element'...
+    $('#text_element').show();
+    // ... now do all that work again!
+    $('#text_element').html('abc');
 
-// Good
-// Traverse the DOM and find '#text_element', then store it in memory
-// Convention is to prefix varaibles with a '$' when they hold a jQuery object
-var $text_element = $('#text_element');
-$text_element.show();
-$text_element.html('abc');
+    // Good
+    // Traverse the DOM and find '#text_element', then store it in memory
+    // Convention is to prefix varaibles with a '$' when they hold a jQuery object
+    var $text_element = $('#text_element');
+    $text_element.show();
+    $text_element.html('abc');
 
-// Better
-// jQuery supports method chaining!
-$('#text_element').show().html('abc');
+    // Better
+    // jQuery supports method chaining!
+    $('#text_element').show().html('abc');
 
-```
+    ```
 
 ## Handlebars
 
@@ -111,29 +150,29 @@ The goal here is to ensure the Handlebars template is easy to read and understan
 
 - Put nested elements on new lines:
 
-```html
-<!-- bad -->
-<ul>
-<li><a href="#">link text</a></li>
-<li><div><a href="#">other link text</a></div></li>
-</ul>
+    ```html
+    <!-- bad -->
+    <ul>
+    <li><a href="#">link text</a></li>
+    <li><div><a href="#">other link text</a></div></li>
+    </ul>
 
-<!-- good -->
-<ul>
-    <li>
-        <a href="#">link text</a>
-    </li>
-    <li>
-        <div>
-            <a href="#">other link text</a>
-        </div>
-    </li>
-</ul>
-```
+    <!-- good -->
+    <ul>
+        <li>
+            <a href="#">link text</a>
+        </li>
+        <li>
+            <div>
+                <a href="#">other link text</a>
+            </div>
+        </li>
+    </ul>
+    ```
 
 ## CSS
 
-All CSS should be "namespaced" with the container element. For Spices, use `.zci--spicename`, and for Goodies, use `.zci--answer .zci--spicename`:
+All CSS should be "namespaced" with the container element. For Spices, use `.zci--spicename`, and for Goodies, use `.zci--answer`:
 
 ```css
 /* Stopwatch Spice */
