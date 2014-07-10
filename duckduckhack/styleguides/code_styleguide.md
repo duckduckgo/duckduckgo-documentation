@@ -188,32 +188,32 @@ The easiest way to verify your code meets our style guide is to test it with [JS
 
 All CSS should be "namespaced" with the container element. For Spices, use `.zci--spicename`, and for Goodies, use `.zci--answer`:
 
-```css
-/* Stopwatch Spice */
-.zci--stopwatch .spice-pane {
-    ...
-}
+    ```css
+    /* Stopwatch Spice */
+    .zci--stopwatch .spice-pane {
+        ...
+    }
 
-/* Calendar Goodie */
-.zci--answer table.calendar {
-    ...
-}
-```
+    /* Calendar Goodie */
+    .zci--answer table.calendar {
+        ...
+    }
+    ```
 
 - Put multiple selectors on new lines for each rule:
 
-```css
-/* Bad */
-.zci--stopwatch .spice-pane, .zci--stopwatch .spice-pane-right {
-    ...
-}
+    ```css
+    /* Bad */
+    .zci--stopwatch .spice-pane, .zci--stopwatch .spice-pane-right {
+        ...
+    }
 
-/* Good */
-.zci--stopwatch .spice-pane,
-.zci--stopwatch .spice-pane-right {
-    ...
-}
-```
+    /* Good */
+    .zci--stopwatch .spice-pane,
+    .zci--stopwatch .spice-pane-right {
+        ...
+    }
+    ```
 
 - Avoid using inline CSS. For Goodies, we prefer a separate CSS file (/share/Goodie/my_goodie/style.css) that can be slurped in.
     Here is a great [example](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/7a4d762f3f694ea1d9f1d93b49b4b80b32165da4/lib/DDG/Goodie/Conversions.pm#L62-66):
