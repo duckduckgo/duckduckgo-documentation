@@ -6,14 +6,19 @@ This document outlines some language specifc guidelines for formatting your code
 
 - **Indent with 4 spaces** (soft tabs)
 
-    All DuckDuckHack code should be formatted to an indent level of four spaces (that is, configure your editor to insert four spaces when you hit the tab button. This might be called a "soft-tab"). If you need to change a file to fix this, keep that change in its own commit.
+    All DuckDuckHack code should be indented with four spaces. (ie. configure your text editor to insert four spaces when you hit the tab button. This is referred to as a "soft-tab"). If you are correcting the indentation of a file, please submit that change in a seperate pull request. Mixing code changes with indentation fixes makes for git diffs that are difficult to read.
+
 - **Document your code** 
 
     Well documented code helps others understand what you've written. It's likely that somone else will read your code and might even need to change it at some point in the future. Help make everyone's lives a little easier by explaining the non-obvious.
+
 - **Writing meaningful commits**
 
     Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number (this automatically closes the issue when your pull request is merged).
-    If your PR modifies affects more than one Instant Answer, please preface your commit messages with the name of the IA your commit modifies. E.g. `Movies: updated title font color to match mockup`.
+    
+    If your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the modified IA:
+
+    `Movies: updated title font color to match mockup`.
 
 ## Javascript
 
