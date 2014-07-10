@@ -186,7 +186,9 @@ The easiest way to verify your code meets our style guide is to test it with [JS
 
 ## CSS
 
-All CSS should be "namespaced" with the container element. For Spices, use `.zci--spicename`, and for Goodies, use `.zci--answer`:
+- All CSS should be "namespaced" with the container element.
+
+    For Spices, use `.zci--spicename`, and for Goodies, use `.zci--answer`:
 
     ```css
     /* Stopwatch Spice */
