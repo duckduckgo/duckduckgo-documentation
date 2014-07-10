@@ -59,7 +59,17 @@ This document outlines some language specifc guidelines for formatting your code
     var obj = {};
     ```
 
-- Use `===` and `!==` instead of `==` and `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
+- Use `===` instead of `==`, and `!==` instead of `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
+
+    ```javascript
+    // Bad
+    if (foo == bar) { ... }
+    if (foo != bar) { ... }
+
+    // Good
+    if (foo === bar) { ... }
+    if (foo !== bar) { ... }
+    ```
 
 - Declare variables with `var`, chaining these like so is encouraged, with one line per variable:
 
@@ -169,6 +179,10 @@ The goal here is to ensure the Handlebars template is easy to read and understan
         </li>
     </ul>
     ```
+
+------
+
+The easiest way to verify your code meets our style guide is to test it with [JSHint](http://jshint.com/).
 
 ## CSS
 
