@@ -39,7 +39,7 @@ You can have multiple return values in your handle function like the [Alternativ
 return $prog, $platform, $license;
 ```
 
-In this case they are URL encoded and joined together with '/' chars, e.g. in this case **$prog/$platform/$license**. Then that full string is fed into the **spice from** regexp.
+In this case they are URL encoded and joined together with '/' chars, e.g., in this case **$prog/$platform/$license**. Then that full string is fed into the **spice from** regexp.
 
 ```perl
 spice from => '([^/]+)/?(?:([^/]+)/?(?:([^/]+)|)|)';
@@ -53,7 +53,7 @@ Some APIs require API keys to function properly like in the [RandWord Spice](htt
 spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
 ```
 
-You can set the variable when you start duckpan server like this:
+You can set the variable when you start DuckPAN server like this:
 
 ```bash
 DDG_SPICE_RANDWORD_APIKEY=xyz duckpan server
@@ -116,7 +116,7 @@ When a Spice triggers, its Perl code is used to construct the URL for the API ca
 "random word" => http://api.wordnik.com/v4/words.json/randomWord
 ```
 
-Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice instant answer uses the GEOLocation API and uses it to append the user's location to the API call: 
+Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice instant answer uses the Location API and uses it to append the user's location to the API call:
 
 ```
 # This query will NEVER make the same API call, because the location is dynamic

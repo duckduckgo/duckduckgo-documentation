@@ -29,7 +29,7 @@ ddg_goodie_test(
             # The first argument to test_zci is the plain text (default)
             # returned from a goodie.  If your goodie also returns an HTML
             # version, you can pass that along explicitly as the second
-            # argument. If your goodie is random, you can use regexs instead of
+            # argument. If your goodie is random, you can use regexps instead of
             # strings to match against.
             'Default login for the BELKIN F5D6130: Username: (none) Password: password',
             html => 'Default login for the BELKIN F5D6130:<br><i>Username</i>: (none)<br><i>Password</i>: password'

@@ -1,60 +1,72 @@
 # Instant Answer Metadata
 
-Metadata allows us to categorize and describe instant answers on our [Goodies page](http://duckduckgo.com/goodies).
-
-The different types of metadata that you can add to your instant answer are explained below. The metadata must be added to the appropriate `.pm` file(s) for your instant answer.
+Including metadata allows us to categorize and describe your instant answer on the [Goodies page](http://duckduckgo.com/goodies). This document explains the different types of metadata that you may add to the source code of your instant answer.
 
 ------
 
-## Name
+## name
 
-An arbitrary, unique name for the instant answer (generally this should match the name that you've given Perl module and the `.pm` file. E.g DDG::Spice::RedditSubSearch, RedditSubSearch.pm).
+A unique name for this instant answer.
+
+While this can be arbitrary, it is considered good practice to have the chosen name be similar to the Perl package in which it is contained, e.g., DDG::Spice::RedditSubSearch.
 
 ```perl
 name "Subreddit Search";
 ```
 
-## Description
+## source
 
-A succinct explanation of what the instant answer does. Try to *exclude* the source name if possible.
-
-```perl
-description "Search for Subreddits";
-```
-
-## Primary Example Queries
-
-Used to highlight the most common types of queries which will trigger your instant answer.
-
-```perl
-primary_example_queries "/r/pizza", "subreddit nature";
-```
-
-## Secondary Example Queries (optional)
-
-Used to highlight any other, less common trigger words or phrases for your instant answer, should they exist.
-
-```perl
-secondary_example_queries "r/accounting";
-```
-
-## Source
-
-Name of the data source used for your instant answer.
+The name of the data source used for your instant answer.
 
 ```perl
 source "Reddit";
 ```
 
-## Category
+## icon_url (optional)
 
-The category which best fits your instant answer.
+The favicon URL for the data source used.
 
-**\*\*Note:** Only ***one*** category can be specified.
+**Note:** The favicon is not always located at `http://domain/favicon.ico`. It is often given as an explicit URL in the HTML header as `x-icon`, `apple-touch-icon` or similar.
+
+Favicons can sometimes be found by searching for the data source on DuckDuckGo. If a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
 
 ```perl
-category "forums";
+icon_url "http://www.reddit.com/favicon.ico";
 ```
+
+or, for DuckDuckGo-sourced favicons,
+
+```perl
+icon_url "/i/reddit.com.ico";
+```
+
+## description
+
+A succinct explanation of what the instant answer does. Please **exclude** the source name if possible.
+
+```perl
+description "Search for Subreddits";
+```
+
+## primary_example_queries
+
+Examples of the most common types of queries which will trigger the instant answer.
+
+```perl
+primary_example_queries "/r/pizza", "subreddit nature";
+```
+
+## secondary_example_queries (optional)
+
+Examples of other, less common, trigger words or phrases for the instant answer, if applicable.
+
+```perl
+secondary_example_queries "r/accounting";
+```
+
+## category
+
+The category into which your instant answer best fits.
 
 Supported categories include:
 
@@ -85,15 +97,15 @@ Supported categories include:
 - time_sensitive
 - transformations
 
-## Topics
-
-The topic(s) which best fit your instant answer.
-
-**\*\*Note:** ***Multiple*** topics can be specified.
+**Note:** Instant answers may specify ***exactly one*** category.
 
 ```perl
-topics "social", "entertainment", "special_interest";
+category "forums";
 ```
+
+## topics
+
+A list of the topics to which your instant answer applies.
 
 Supported topics include:
 
@@ -118,22 +130,10 @@ Supported topics include:
 - web_design
 - words\_and\_games
 
-## icon_url (optional)
-
-If a favicon exists for the data source used, provide the URL. 
-
-**\*\*Note:** The favicon is not always at `http://url/favicon.ico`, but is often given as an explicit URL in the HTML header as `x-icon` or `apple-touch-icon` or possibly, something similar.
+**Note:** Instant answers may specify ***multiple*** topics.
 
 ```perl
-icon_url "http://www.reddit.com/favicon.ico";
-```
-
-or
-
-Favicons can sometimes be found by searching for the data source on DuckDuckGo, if a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
-
-```perl
-icon_url "/i/reddit.com.ico";
+topics "social", "entertainment", "special_interest";
 ```
 
 ## code_url
@@ -144,41 +144,27 @@ URL for the instant answer code on github.
 code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RedditSubSearch.pm";
 ```
 
-## Attribution
+## attribution
 
-```perl
-attribution twitter => ["mithrandiragain", "Mithrandir"],
-            github => ["MithrandirAgain", "Gary Herreman"],
-            web => ['http://atomitware.tk/mith','MithrandirAgain'];
-```
+Information about you, the author.
 
 Supported attribution sources include:
 
-- Email
-- Twitter
-- Web (website)
-- Github
-- Facebook
-- Cpan
+- email
+- twitter
+- web
+- github
+- facebook
+- cpan
 
-**\*\*Note:** There is a specific syntax for giving attribution. For each attribution type you can provide a single string, or an array with two values.
+**Note:** For each attribution type, you may provide either a single string or an array reference with two values.
 
-If one value is given, it will be used to create a link to whichever profile you are defining and it will serve as the **text** for the link.
+If a single string is given, it will be used to create a link to the defined profile and **also** serve as the **text** for the link.
 
-Likewise, if two values are given, the first will be used for the `href`, while the second will be used as the **text** for the link.
-
-E.g.
+When an array reference is provided, the first element will be used to create the link while the second will be used as the text for the link.
 
 ```perl
-github => ["duckduckgo", "DuckDuckGo"];
+attribution twitter => "mithrandiragain",
+            github  => ["MithrandirAgain", "Gary Herreman"],
+            web     => ['http://atomitware.tk/mith', 'MithrandirAgain'];
 ```
-
-Will render `<a href=https://github.com/duckduckgo>DuckDuckGo</a>`
-
-Similarly,
-
-```perl
-twitter => "duckduckgo";
-```
-
-Will render `<a href=https://twitter.com/duckduckgo>@duckduckgo</a>`

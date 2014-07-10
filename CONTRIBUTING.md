@@ -10,7 +10,7 @@ If submitting a **bug/suggestion**:
 - Check if a GitHub issue already exists for the given bug/suggestion
     - If one doesn't exist, create a GitHub issue in the DuckDuckGo-Documentation repository
         - Clearly describe the bug/improvement, including steps to reproduce when it is a bug
-    - If one already exists, please add any aditional comments you have regarding the matter
+    - If one already exists, please add any additional comments you have regarding the matter
 
 If submitting a **pull request** (bugfix/addition):
 - Fork the DuckDuckGo-Documentation repository on GitHub

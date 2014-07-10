@@ -6,15 +6,15 @@
 
 We hope you will consider making DuckDuckGo instant answers to:
 
-- Improve results in areas you personally search and care about, e.g. [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
-- Increase usage of your own projects, e.g. data and [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
+- Improve results in areas you personally search and care about, e.g., [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
+- Increase usage of your own projects, e.g., data and [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
 - Attribution [on our site](https://duckduckgo.com/goodies.html) and [Twitter](https://twitter.com/duckduckhack) (working on more).
 - See your code live on a [growing](https://duckduckgo.com/traffic.html) search engine!
 - Learn something new.
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [instand answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all and you've ended up here, please go over to our [instant answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
@@ -27,7 +27,7 @@ Of course! Here are the easiest ways to contact someone who can help answer your
 
 ### What if I don't know Perl?
 
-If you don't know Perl, that's OK! Several <a href="README.md#overview">instant answer types</a> are not in Perl. Also, if you know PHP, Ruby, or Python you should be able to write Goodies in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
+If you don't know Perl, that's OK! Some instant answer types ([Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md), [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)) don't require the use of Perl. Also, if you know PHP, Ruby, or Python you should be able to write a [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md) in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
 
 ### Do you have any instant answer ideas?
 
@@ -47,7 +47,7 @@ The ultimate arbiter is the user, and that's the perspective we take. In other w
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
-If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons (e.g. the WolframAlpha instant answer), but our
+If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons (e.g., the WolframAlpha instant answer), but our
 over-arching goal is to make all of our instant answers available on their own.
 
 ### Can I do something more complicated?
@@ -81,11 +81,13 @@ Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/po
 
 ## Goodie
 
-### Can Goodie instant answers make HTTP requests?
+### Can Goodie instant answers make network requests?
 
-Sorry, but unfortunately not. You might want to consider creating a Spice instant answer if you are trying to use an API.
+No. If you are trying to use an API, you should consider creating a Spice instant answer instead.
 
-(This section is still growing! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+### Can Goodie instant answers include the user's query string?
+
+Yes. **However**, they must be handled *very* carefully. User-supplied strings create a lot of potential for [cross-site scripting attacks](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29).  While the platform attempts to mitigate these issues in pure ASCII responses, HTML responses should **never** include a raw query string. It is safest to return only data which is generated by your Goodie itself.
 
 ## Spice
 
@@ -128,3 +130,21 @@ A result abstract can be either plain text (generally one readable sentence, end
 ## Longtail
 
 (This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+
+## DuckPAN
+
+### How do I install a missing Perl dependency?
+
+Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the module `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
+
+In order to install any missing dependencies you can use cpan or cpanm like so:
+
+```perl
+cpan install Math::Prime::Util
+# or
+cpanm Math::Prime::Util
+```
+
+Alternatively, if you would like to install all the dependencies for the repo (e.g. zeroclickinfo-goodies), you can run `duckpan installdeps`. Please note that installing all the dependencies will take **several minutes** to install as there are many dependencies.
+
+![dependency](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/dependency.png)
