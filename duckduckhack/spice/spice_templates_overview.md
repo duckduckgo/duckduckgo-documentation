@@ -47,12 +47,12 @@ The purpose of this page is to help you understand what each template group look
 
 ------
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</p>- basic template to display text-only data in detail or tile views</li>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</p>- detailed results with image, description, and title</li>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</p>- used for products with an image, rating, review, brand/price</li>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#media>media'</p>- simple results with an image (simplified version of the products group)</li>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#icon>icon'</p>- similar to text group but with a small icon in the tile</li>
-<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#base>base'</p>- minimal container for highly customized mark-up</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</a>- basic template to display text-only data in detail or tile views</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</a>- used for products with an image, rating, review, brand/price</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#media>media'</a>- simple results with an image (simplified version of the products group)</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#icon>icon'</a>- similar to text group but with a small icon in the tile</li>
+<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#base>base'</a>- minimal container for highly customized mark-up</li>
 
 # Template Groups
 
