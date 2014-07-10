@@ -1,5 +1,5 @@
 # Spice Templates
-<h2 class="summary" moreAt="spice_template_overview">Spice Template Summary</h2>
+<h2 class="summary" moreAt="spice_templates_overview">Spice Template Summary</h2>
 <p class="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:</p>
 <li class="summary-text"><a  href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups</a>- Defines the main type of view for the instant answer</li>
 <li class="summary-text"><a  href="http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates">Built-In Spice Templates</a>- Different views and options for each template</li>
@@ -46,6 +46,13 @@ The purpose of this page is to help you understand what each template group look
 -->
 
 ------
+<h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#text>text</p>- basic template to display text-only data in detail or tile views</li>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#info>info</p>- detailed results with image, description, and title</li>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#products>products</p>- used for products with an image, rating, review, brand/price</li>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#media>media</p>- simple results with an image (simplified version of the products group)</li>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#icon>icon</p>- similar to text group but with a small icon in the tile</li>
+<li class='summary-text'><p href='http://duck.co/duckduckhack/spice_templates_overview#base>base</p>- minimal container for highly customized mark-up</li>
 
 # Template Groups
 
@@ -111,7 +118,7 @@ templates: {
 - [text_detail](#textdetail)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
-<h2 class='summary' moreAt="spice_template_overview#text">Spice text template</h2>
+<h2 class='summary' moreAt="spice_templates_overview#text">Spice text template</h2>
 <p class='summary-text'>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
 
 ### Example uses of the 'text' template group
