@@ -5,10 +5,13 @@ This document outlines some language specifc guidelines for formatting your code
 ## General
 
 - **Indent with 4 spaces** (soft tabs)
+
     All DuckDuckHack code should be formatted to an indent level of four spaces (that is, configure your editor to insert four spaces when you hit the tab button. This might be called a "soft-tab"). If you need to change a file to fix this, keep that change in its own commit.
 - **Document your code** 
+
     Well documented code helps others understand what you've written. It's likely that somone else will read your code and might even need to change it at some point in the future. Help make everyone's lives a little easier by explaining the non-obvious.
 - **Writing meaningful commits**
+
     Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number (this automatically closes the issue when your pull request is merged).
     If your PR modifies affects more than one Instant Answer, please preface your commit messages with the name of the IA your commit modifies. E.g. `Movies: updated title font color to match mockup`.
 
@@ -17,9 +20,13 @@ This document outlines some language specifc guidelines for formatting your code
 **We generally adhere to Crockford's Code Conventions** (http://javascript.crockford.com/code.html). Most importantly:
 
 - Use semicolons;
+
 - Use the ["One True Brace Style"](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS) (opening brace on the same line)
+
 - Use `{}` instead of `new Object()`, and `[]` instead of `new Array()`.
+
 - Use `===` and `!==` instead of `==` and `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
+
 - Declare variables with `var`, chaining these like so is encouraged, with one line per variable:
 
     ```javascript
@@ -29,7 +36,9 @@ This document outlines some language specifc guidelines for formatting your code
     ```
     
     Note: We're using ECMAScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode), so you'll *need* to declare every variable with `var`.
+
 - Avoid trailing commas
+
     We support all modern browsers, including IE 8, which breaks when it reaches a trailing comma in objects. It also treats trailing commas in arrays [differently than you might expect](http://www.akawebdesign.com/2011/06/23/the-curious-case-of-trailing-commas-in-ie/).
 
     ```javascript
@@ -47,8 +56,11 @@ This document outlines some language specifc guidelines for formatting your code
     ```
     
 - Use [`$.map()`](http://api.jquery.com/jQuery.map/) and [`$.each()`](http://api.jquery.com/jQuery.each/) instead of `Array.prototype.map()` and `Array.prototype.forEach()`, again for IE support.
+
 - Don't modify a native object's prototype.
+
     These types of changes affect the global scope. It's best to use a local function instead.
+
 - Define default properties when the object is created:
 
 ```javascript
@@ -65,6 +77,7 @@ var foo = {
 ```
 
 - Store jQuery selectors:
+
     If you need to re-use a jQuery selector (eg. `$('#myDiv')`), store it in a variable for speed and efficiency. Otherwise, jQuery will need to traverse the DOM each time you use the same selector.
 
 ```javascript
