@@ -1,35 +1,57 @@
 # Basic Fathead Tutorial
 
-In this tutorial, we'll be making a Fathead instant answer that shows you a small "Hello World" example program for a given programming language. The end result works [like this](https://duckduckgo.com/?q=hello+world+scala) and the tab-delimited, output file our Fathead instant answer generates, will look like this:
+In this tutorial, we'll be making a Fathead instant answer that shows example source code for a "Hello World" program in whatever language is specificed by the user's query. The live instant answer looks like this: https://duckduckgo.com/?q=hello+world+scala. As discussed in [the Fathead overview](/duckduckhack/fathead_overview), our goal is to generate an output.txt, which will look something like this:
 
-###### output.txt
+###### output.txt (snippet)
 
 ```
-hello world (python) [TAB(S)] https://github.com/leachim6/hello-world        Hello World in python (python.py) [TAB(S)] #!/usr/bin/env python\nprint "Hello World"\n                        
-
-hello world (postscript_page) [TAB(S)] https://github.com/leachim6/hello-world [TAB(S)] Hello World in postscript_page (postscript_page.ps) [TAB(S)] % run> gs -q postscript_page.ps\n/pt {72 div} def\n/y 9 def\n/textdraw {/Courier findfont 12 pt scalefont setfont 8 pt y moveto show} def\n\n72 72 scale\n0 0 0 setrgbcolor\n\n(Hello world!) textdraw\nshowpage\nquit                        
-
-hello world (perl) [TAB(S)] https://github.com/leachim6/hello-world [TAB(S)] Hello World in perl (perl.pl) [TAB(S)] #!/usr/bin/perl\nprint "Hello World\\n";\n
+hello world (python)		https://github.com/leachim6/hello-world	Hello World in python (python.py)	#!/usr/bin/env python\nprint "Hello World"\n			
+hello world (postscript_page)		https://github.com/leachim6/hello-world	Hello World in postscript_page (postscript_page.ps)	% run> gs -q postscript_page.ps\n/pt {72 div} def\n/y 9 def\n/textdraw {/Courier findfont 12 pt scalefont setfont 8 pt y moveto show} def\n\n72 72 scale\n0 0 0 setrgbcolor\n\n(Hello world!) textdraw\nshowpage\nquit			
+hello world (perl)		https://github.com/leachim6/hello-world	Hello World in perl (perl.pl)	#!/usr/bin/perl\nprint "Hello World\\n";\n			
 ```
 
-## Naming our Fathead Package
+## Step 1: Write Perl module
 
-To begin, open your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
+To begin, use your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad, or [emacs](http://www.gnu.org/software/emacs/) to open `lib/DDG/Fathead/HelloWorld.pm` and type the following:
 
 ```perl
 package DDG::Fathead::HelloWorld;
 # ABSTRACT: Provides an example "Hello World" program for a given programming language
 ```
 
-## Import the Fathead Class
-
-Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic behind](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) our instant answer system.
+Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) behind our instant answer system.
 
 ```perl
 use DDG::Fathead;
 ```
 
-## Return True at EOF
+Next, we'll add some metadata fields. These should be self-explanatory, but for more information, please refer to [Metadata](/duckduckhack/metadata).
+
+```perl
+primary_example_queries "hello world perl";
+
+secondary_example_queries
+    "javascript hello world",
+    "hello world in c";
+
+description "Hello World programs in many program languages";
+
+name "HelloWorld";
+
+icon_url "/i/www.github.com.ico";
+
+source "GitHub";
+
+code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/hello_world";
+
+topics "geek", "programming";
+
+category "programming";
+
+attribution
+    twitter => ['https://twitter.com/jperla', 'jperla'],
+    web => ['http://www.jperla.com/blog', 'Joseph Perla'];
+```
 
 Finally, all Perl packages that load correctly should [return a true value](http://stackoverflow.com/questions/5293246/why-the-1-at-the-end-of-each-perl-package) so add a 1 on the very last line, and make sure to also add a newline at the end of the file.
 
@@ -38,36 +60,73 @@ Finally, all Perl packages that load correctly should [return a true value](http
 
 ```
 
-At this point our Perl Package is mostly complete. We'll come back to this file later, when we have more to add.
+Our Perl package is now complete. The entire file should look like this:
 
-## Define the Fetch.sh Shell Script
+```perl
+package DDG::Fathead::HelloWorld;
+# ABSTRACT: Provides an example "Hello World" program for a given programming language
 
-Every Fathead instant answer requires a **fetch.sh** file in its share directory. This shell script is invoked to fetch the data that our Fathead will use to produce its **output.txt** file. For example, following script will retrieve the **c.c** file and place it under **download** directory
+use DDG::Fathead;
 
-###### fetch.sh
+primary_example_queries "hello world perl";
+
+secondary_example_queries
+    "javascript hello world",
+    "hello world in c";
+
+description "Hello World programs in many program languages";
+
+name "HelloWorld";
+
+icon_url "/i/www.github.com.ico";
+
+source "GitHub";
+
+code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/hello_world";
+
+topics "geek", "programming";
+
+category "programming";
+
+attribution
+    twitter => ['https://twitter.com/jperla', 'jperla'],
+    web => ['http://www.jperla.com/blog', 'Joseph Perla'];
+
+1;
+
+```
+
+## Step 2: Create a directory
+
+Every Fathead has a directory under share/ that contains all files except the one we just created. The name of the directory does not need to be the same as the name of the Perl package, but it should be closely related. We'll use `share/hello_world/`.
+
+## Step 3: Write the fetch.sh script
+
+Every Fathead instant answer requires a `fetch.sh` file. This shell script is invoked to fetch the remote data that we need in order to generate our output. For example, following script will clone a git repository that contains a collection of hello world source files:
+
+###### share/hello_world/fetch.sh
 
 ```shell
-#!/bin/bash
+#!/bin/sh
+
 git clone git://github.com/leachim6/hello-world.git download
 ```
 
-In this case the "data" being used to produce the `output.txt` is actually a GitHub repository which is then parsed using a **python** script.
+In this case, the git repository is just a collection of source files; we'll need to do some parsing in order to get it into the format we need. Note that *git clone* is not the only way to fetch data. Most Fatheads use *curl* or *wget*.
 
-This of course is not the only way to "download" the required data. Most other Fatheads use `curl` and `wget` to download HTML or files that are then processed and parsed by their respective parsing scripts.
+**Also Note:** All temporary files should be placed in the `download/` subdirectory within your Fathead's directory. For this example, that means `share/hello_world/download/`. *git* creates this subdirectory for us, but if your plugin uses a different tool, you make have to include `mkdir download` in your fetch script.
 
-**\*\*Note:** All temporary files should be placed in a `/download` directory, within your Fathead's `/share` directory. Your `fetch.sh` script should create and utilize this directory.
+## Step 4: Write the parsing script
 
-## Define the Parsing Script
+The data we just fetched needs to be parsed before we can use it, so we'll write a script to do that. Parse scripts can be written in any language, but please use a common language like Perl, Python, JavaScript, Go, or similar. The harder your script is to run, the harder it will be for us to integrate your instant answer into our environment, and the harder future maintenance will be. **Please keep things as simple and straightforward as possible.**
 
-Every Fathead must parse the data it downloads in order to generate the required `output.txt` file. The parser can technically be written in any language however we ask that you use a more commonly used languages such as Perl, Python, JavaScript, Go, etc. If your chosen language requires a complicated setup or your parser has many external dependencies, it will likely make things much more difficult for us to do, so we ask that you **please try to keep things as simple and straightforward as possible**. Also, if the parser is written in a more uncommon language, it will make future maintenance or bug fixes very difficult for us and our community of developers, so please keep these in mind when writing your parser.
+**\*\*Note:** Our machines are running **Ubuntu 12.04**. These are the machines that will be used to test and run your parser, so **please make sure your language and dependencies are compatible with our environment**.
 
-Seeing as every Fathead is unique and different we can't really tell you how to parse your data and produce your `output.txt` file. It is **suggested** that you look through the [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share) to see how other developers have written their parsing scripts.
+Since Fatheads can have vastly different data sources, we can't tell you what is the best approach to parsing. We suggest you look through the [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share) to get ideas from other developers.
 
-**\*\*Note:** Our development machines are running **Ubuntu 12.04**. These are the machines that will be used to test and run your parser, so **please make sure your language and dependencies are compatible with our environment**.
+For the purposes of this tutorial, we're going to use Python to parse the git repository we just cloned.
 
-For the purpose of the tutorial, let's take a quick look at the approach used in the **HelloWorld** Fathead:
-
-###### parse.py
+###### share/hello_world/parse.py
 
 ```python
 if __name__ == "__main__":
@@ -100,7 +159,7 @@ if __name__ == "__main__":
     logger.info("Parsed %d domain rankings successfully" % count)
 ```
 
-This uses a relatively simple loop, `for filepath in glob.glob('download/*/*'):` which iterates over each of the files in the repository our `fetch.sh` script cloned into the `download` directory. After doing some checks to make sure the files is a "Hello World" program, it opens the file, reads the file, escapes newline (`\n`) and tab (`\t`) characters and then then "parses" the file to create an `item` using the `HelloWorldItem` class:
+This uses a relatively simple loop, `for filepath in glob.glob('download/*/*'):` which iterates over each of the files in the repository our fetch script cloned into the `download/` directory. After doing some checks to make sure the files is a "Hello World" program, it opens the file, reads the file, escapes newline (`\n`) and tab (`\t`) characters and then then "parses" the file to create an `item` using the `HelloWorldItem` class:
 
 ###### parse.py (continued)
 
@@ -132,100 +191,37 @@ The `HelloWorldItem` class works by defining the string representation of itself
 
 The most important thing to note about the string representation function, `def __str__(self):`, is that it creates an array containing the relevant information we need to pass along to `output.txt`, which **includes a few blank lines to represent the optional output fields we have not used** and then joins them with tab characters (`\t`). It also appends a newline (`\n`) at the end of our built string. This string now represent a single line in our `output.txt` file and denotes the **title**, **abstract**, **synopsis** and the **source_url**.
 
-## Step 6 
+## Step 5: Write a wrapper for the parse script
 
-As we can see above, we have the wrapper script which simply invokes the following Python script, which will
-read **download/c.c** and format it then write into **output.txt** file.
+Since the parse script can be written in any language, we use a thin wrapper called `parse.sh` so we have a consistent name to execute. This is easy:
 
-```python
-# content of  zeroclickinfo-fathead/share/HelloWorldInC/parse.py 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import  logging, os
+###### parse.sh
 
-class HelloWorldItem:
-  def __init__(self, language, filename, source):
-    self.language = language
-    self.filename = filename
+```shell
+#!/bin/sh
 
-    source = source.replace('\\n', '~~~n')
-    source = source.replace('\n', '\\n')
-    source = source.replace('~~~n', '\\\\n')
-    self.source = source.replace('\t', '\\t')
+python parse.py
+```
 
-  def __str__(self):
-    fields = [ "hello world (%s)" % self.language,
-               "", # namespace
-               "https://raw.github.com/leachim6/hello-world/master/c/c.c",
-               "Hello World in %s (%s)" % (self.language, self.filename),
-               self.source, # synposis (code)
-             ]
+## Step 6
 
-    output = "%s\n" % ("\t".join(fields))
-    return output
+The last thing we need to write is a README.txt. This file is used to inform other developers and DuckDuckGo staff of any special considerations. At the very least, it should list dependencies required by your parse script. You may also want to mention known shortcomings, opportunities for future improvement, or anything else you think might be important.
 
-if __name__ == "__main__":
-    # setup logger
-    logging.basicConfig(level=logging.INFO,format="%(message)s")
-    logger = logging.getLogger()
-    
-    # dump config items into output.txt
-    with open("output.txt", "wt") as output_file:
-        for filepath in os.listdir('download/'):
-	    filepath =  os.path.join('download/',filepath)
-            _,filename = os.path.split(filepath)
-            language,_ = os.path.splitext(filename)
+###### README.txt
 
-            with open(filepath, 'r') as f:
-                source = f.read()
-                    
-            item = HelloWorldItem(language, filename, source)
-            output_file.write(str(item))
+```
+Dependencies:
 
-    logger.info("Parsed domain successfully")
+Python 3
+
+To install in Ubuntu 10.04 (Lucid):
+
+sudo apt-get install python3-minimal
 ```
 
 ## Step 7
 
-Now we will execute the Python script via wrapper like 
+You're done! The only thing left is to submit your instant answer for review. Please see [Preparing for a Pull Request](/duckduckhack/preparing_for_a_pull_request).
 
-```shell
-$ ./parse.sh 
-Parsed domain successfully
-```
-
-It has created the final **output.txt** file.
-
-## Step 8
-
-The content of output file is
-
-```shell
-$ cat output.txt 
-hello world (c)		https://raw.github.com/leachim6/hello-world/master/c/c.c	Hello World in c (c.c)	#include<stdio.h>\n\nint main(void) {\n\tprintf("Hello World\\n");\n\treturn 0;\n}\n
-```
-
-As we need to complete the tutorial in 10 steps here comes 
-
-## Step 8.5 
-
-:) You can commit this **output.txt** along with Perl,Bash script or Python (.pm/.sh/.py) files since **output.txt** is less than **1MB**. 
-
-## Step 9
-
-You can create optional **data.url** file which will point to URL that contains the data to process.
-Thus you don't need to perform fetch operation (step 4).
-
-## Step 10
-
-You can add specific instruction or any dependencies on a file named **README.txt**.
-The final structure of your **share/HelloWorldInC** shoud look like 
-
-```shell
-$ ls
-data.url  download  fetch.sh  output.txt  parse.py  parse.sh  README.txt
-```
-
-
-That's it, go ahead, create a patch and sent it for review.
+**\*\*Note:** The duckpan server cannot (currently) run Fatheads. That means you can't run or test your plugin before submission.
 
