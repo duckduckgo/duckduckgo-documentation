@@ -4,12 +4,12 @@ In any large open-source project, maintainability is required, so a set of style
 
 ## General
 
-+ All DuckDuckHack code should be formatted to tabs of four spaces. If you need to change a file to fix this, keep that change in its own commit.
++ All DuckDuckHack code should be formatted to an indent level of four spaces (that is, configure your editor to insert four spaces when you hit the tab button. This might be called a "soft-tab"). If you need to change a file to fix this, keep that change in its own commit.
 + Comments are a Good Thing<sup>TM</sup>. Let's have more of those!
 + Commit messages should be concise and informative. They are generally in the form `InstantAnswer: changed colors to match mockup`. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number (this automatically closes the issue when your pull request is merged). 
 
 ## Javascript
-**We generally adhere to Crockford's Code Convetions: http://javascript.crockford.com/code.html** Most importantly:
+**We generally adhere to Crockford's Code Conventions: http://javascript.crockford.com/code.html**. Most importantly:
 
 + Be sure to follow the closure structure listed [here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md#npm-spice---frontend-javascript). The canonical structure is as follows: 
 
@@ -124,7 +124,7 @@ The goal here is to ensure the Handlebars template is easy to read and understan
 }
 ```
 
-+ Please no inline CSS. For Goodies, we prefer a separate share file that can be slurped in.
++ Please no inline CSS. For Goodies, we prefer a separate share file that can be slurped in. [Example](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/7a4d762f3f694ea1d9f1d93b49b4b80b32165da4/lib/DDG/Goodie/Conversions.pm#L62)
 
 ## Perl
 
