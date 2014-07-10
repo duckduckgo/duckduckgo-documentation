@@ -9,6 +9,7 @@ In any large open-source project, maintainability is required, so a set of style
 + Commit messages should be concise and informative. They are generally in the form `InstantAnswer: changed colors to match mockup`. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number (this automatically closes the issue when your pull request is merged). 
 
 ## Javascript
+**We generally adhere to Crockford's Code Convetions: http://javascript.crockford.com/code.html** Most importantly:
 
 + Be sure to follow the closure structure listed [here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md#npm-spice---frontend-javascript). The canonical structure is as follows: 
 
@@ -35,7 +36,10 @@ In any large open-source project, maintainability is required, so a set of style
 ```
 
 + We use semicolons everywhere for consistency.
-+ We're using ECMAScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode), so you'll need to declare every variable with `var`. Chaining these like so is encouraged.
++ Use the ["One True Brace Style"](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS) (opening brace on the same line)
++ Use `{}` instead of `new Object()`, and `[]` instead of `new Array()`.
++ Use `===` and `!==` instead of `==` and `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
++ We're using ECMAScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode), so you'll need to declare every variable with `var`. Chaining these like so is encouraged, with one line per variable.
 
 ```javascript
 var foo = 1,
@@ -84,7 +88,22 @@ $('#text_element').html('abc');
 
 ## Handlebars
 
-(This section is coming soon! Know what should go here? Then **please** [contribute to the documentation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/CONTRIBUTING.md)!)
+The goal here is to ensure the Handlebars template is easy to read and understand. Please:
+
++ put nested elements on new lines:
+
+```html
+<ul>
+    <li>
+        <a href="#">link text</a>
+    </li>
+    <li>
+        <div>
+            <a href="#">other link text</a>
+        </div>
+    </li>
+</ul>
+```
 
 ## CSS
 
