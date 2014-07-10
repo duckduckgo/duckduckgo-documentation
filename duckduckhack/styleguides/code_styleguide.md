@@ -143,7 +143,7 @@ This document outlines some language specifc guidelines for formatting your code
 
     // Good
     // Traverse the DOM and find '#text_element', then store it in memory
-    // Convention is to prefix varaibles with a '$' when they hold a jQuery object
+    // Convention is to prefix variables with a '$' when they hold a jQuery object
     var $text_element = $('#text_element');
     $text_element.show();
     $text_element.html('abc');
