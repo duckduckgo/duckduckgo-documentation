@@ -1,9 +1,9 @@
 # Spice Templates
 <h2 class="summary">Spice Template Summary</h2>
 <p class="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:</p>
-<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups</a>- Defines the main type of view for the instant answer</li>
-<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates">Built-In Spice Templates</a>- Different views and options for each template</li>
-<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#tile-variants">Tile Variants</a>- Used to modify width of the tiles</li>
+<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups- Defines the main type of view for the instant answer</a></li>
+<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates">Built-In Spice Templates- Different views and options for each templatei</a></li>
+<li class="summary-text"><a class="summary-text" href="http://duck.co/duckduckhack/spice_templates_overview#tile-variants">Tile Variants- Used to modify width of the tiles</a></li>
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
