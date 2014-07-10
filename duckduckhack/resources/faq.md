@@ -43,7 +43,15 @@ Submit GitHub issues in the [appropriate repo](http://github.com/duckduckgo).
 
 ### What if there are instant answer conflicts?
 
-The ultimate arbiter is the user, and that's the perspective we take. In other words, we ask "what is best for the user experience?" That said, it often makes sense to combine ideas into one, better instant answer.
+Instant answer sources often compete to answer the same searches. In a lot of cases, the experience can be blended together so that the user is shown answers from more than one source. Our long-term vision for instant answers involves multiple sources used in that way.
+
+There are times, though, where one source does a drastically better job of answering a particular query set. In those cases, the source used for those queries should be the source most capable of delivering the best possible user experience. Our community evaluates those in a few ways: 
+
+- Consistent performance (is the service reliable?) 
+- Speed (does the service return results fast enough?) 
+- Quality (does the service answer the queries better than any other service?)
+
+If you think you have a source that is better, let's talk about it on the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814).
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
