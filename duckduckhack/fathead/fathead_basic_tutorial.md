@@ -98,7 +98,7 @@ attribution
 
 ## Step 2: Create a directory
 
-Every Fathead has a directory under share/ that contains all files except the one we just created. The name of the directory does not need to be the same as the name of the Perl package, but it should be closely related. We'll use `share/hello_world/`.
+Every Fathead has a directory under share/ that contains all files except the one we just created. The name of the directory must be the name of the Perl module converted to [snake case](https://en.wikipedia.org/wiki/Snake_case). For this tutorial, we'll use `share/hello_world/`.
 
 ## Step 3: Write the fetch.sh script
 
