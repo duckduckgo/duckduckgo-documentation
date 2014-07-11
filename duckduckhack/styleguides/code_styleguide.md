@@ -1,16 +1,16 @@
 # DuckDuckHack - Code Style Guide
 
-This document outlines some language specifc guidelines for formatting your code and also highlights best practices, and things to avoid. In any large open-source project, maintainability is of utmost importance, so a style guide is necessary to help our contributors write clean, readable and maintainable code.
+This document outlines some language specific guidelines for formatting your code and also highlights best practices, and things to avoid. In any large open-source project, maintainability is of utmost importance, so a style guide is necessary to help our contributors write clean, readable and maintainable code.
 
 ## General
 
 - **Indent with 4 spaces** (soft tabs)
 
-    All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a seperate pull request. It is important that code reviewers are able to easily differentiate between functional and stylistic changes.
+    All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a separate pull request. It is important that code reviewers are able to easily differentiate between functional and stylistic changes.
 
 - **Document your code** 
 
-    Well-documented code helps others understand what you've written. It's likely that somone else will read your code and might even need to change it at some point in the future. Comments should primarily document the intent of the code. Reviewers are much more effective when they know exactly what you were trying to do. Meaningful variable names also help to document your intent.
+    Well-documented code helps others understand what you've written. It's likely that someone else will read your code and might even need to change it at some point in the future. Comments should primarily document the intent of the code. Reviewers are much more effective when they know exactly what you were trying to do. Meaningful variable names also help to document your intent.
 
 - **Writing meaningful commits**
 
@@ -24,7 +24,7 @@ This document outlines some language specifc guidelines for formatting your code
     - Commit 2: `InTheaters: updated title text, typo fix`.
     - Commit 2: `Movies, InTheaters, Kwixer: change title to h5 tag`.
 
-## Javascript
+## JavaScript
 
 **We generally adhere to [Crockford's Code Conventions](http://javascript.crockford.com/code.html)**. Most importantly:
 
@@ -89,7 +89,7 @@ This document outlines some language specifc guidelines for formatting your code
         bar = true,
         baz = "string";
 
-    // when initialzing undefined variables
+    // when initializing undefined variables
     var foo, bar, baz;
     ```
     
@@ -117,7 +117,7 @@ This document outlines some language specifc guidelines for formatting your code
 
 - Avoid modifying object prototypes
 
-    Do not modify the prototypes of objects which are defined outside of your code. For example, modifcations to `Array.prototype` or `Spice` will affect the global scope and may cause problems. In general, we advocate the use of local, private functions instead.
+    Do not modify the prototypes of objects which are defined outside of your code. For example, modifications to `Array.prototype` or `Spice` will affect the global scope and may cause problems. In general, we advocate the use of local, private functions instead.
 
 - Define default properties when the object is created:
 
@@ -136,7 +136,7 @@ This document outlines some language specifc guidelines for formatting your code
 
 - Store jQuery selectors:
 
-    If you need to re-use a jQuery selector (eg. `$('#myDiv')`), store it in a variable for speed and efficiency. Otherwise, jQuery will need to traverse the DOM each time you use the same selector.
+    If you need to re-use a jQuery selector (e.g. `$('#myDiv')`), store it in a variable for speed and efficiency. Otherwise, jQuery will need to traverse the DOM each time you use the same selector.
 
     ```javascript
     // Bad
