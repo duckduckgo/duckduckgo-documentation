@@ -6,23 +6,27 @@ This document outlines some language specifc guidelines for formatting your code
 
 - **Indent with 4 spaces** (soft tabs)
 
-    All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a seperate pull request. Mixing code changes with indentation fixes makes for git diffs that are difficult to read.
+    All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a seperate pull request. It is important that code reviewers are able to easily differentiate between functional and stylistic changes.
 
 - **Document your code** 
 
-    Well documented code helps others understand what you've written. It's likely that somone else will read your code and might even need to change it at some point in the future. Help make everyone's lives a little easier by explaining the non-obvious.
+    Well-documented code helps others understand what you've written. It's likely that somone else will read your code and might even need to change it at some point in the future. Comments should primarily document the intent of the code. Reviewers are much more effective when they know exactly what you were trying to do. Meaningful variable names also help to document your intent.
 
 - **Writing meaningful commits**
 
-    Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number (this automatically closes the issue when your pull request is merged).
+    Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number. Doing this will automatically close the specified issue when your pull request is merged.
     
-    If your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the modified IA:
+    Usually pull requests only deal with a single instant answer. If however your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the IA modified by your commit:
 
-    `Movies: updated title font color to match mockup`.
+    For example, if your pull request updates the Movies, InTheaters and Kwixer IA's:
+
+    - Commit 1: `Movies: updated title font color to match mockup`.
+    - Commit 2: `InTheaters: updated title text, typo fix`.
+    - Commit 2: `Movies, InTheaters, Kwixer: change title to h5 tag`.
 
 ## Javascript
 
-**We generally adhere to Crockford's Code Conventions** (http://javascript.crockford.com/code.html). Most importantly:
+**We generally adhere to [Crockford's Code Conventions](http://javascript.crockford.com/code.html)**. Most importantly:
 
 - Use semicolons;
 
@@ -71,7 +75,7 @@ This document outlines some language specifc guidelines for formatting your code
     if (foo !== bar) { ... }
     ```
 
-- Declare variables with `var`, chaining these like so is encouraged, with one line per variable:
+- Declare variables with var, chaining multiple declarations -- one per line:
 
     ```javascript
 
@@ -111,9 +115,9 @@ This document outlines some language specifc guidelines for formatting your code
     
 - Use [`$.map()`](http://api.jquery.com/jQuery.map/) and [`$.each()`](http://api.jquery.com/jQuery.each/) instead of `Array.prototype.map()` and `Array.prototype.forEach()`, again for IE support.
 
-- Don't modify a native object's prototype.
+- Avoid modifying object prototypes
 
-    These types of changes affect the global scope. It's best to use a local function instead.
+    Do not modify the prototypes of objects which are defined outside of your code. For example, modifcations to `Array.prototype` or `Spice` will affect the global scope and may cause problems. In general, we advocate the use of local, private functions instead.
 
 - Define default properties when the object is created:
 
@@ -156,7 +160,7 @@ This document outlines some language specifc guidelines for formatting your code
 
 ## Handlebars
 
-The goal here is to ensure the Handlebars template is easy to read and understand. Please:
+Handlebars templates and Handlebars helpers should be easy to read and understand. Please:
 
 - Put nested elements on new lines:
 
@@ -178,6 +182,28 @@ The goal here is to ensure the Handlebars template is easy to read and understan
             </div>
         </li>
     </ul>
+    ```
+
+-  Define helper functions with `Spice.registerHelper`, instead of `Handlebars.registerHelper`:
+
+    ```javascript
+    // Bad
+    Handlebars.registerHelper("spice_name_do_something", function(){ ... });
+
+    // Good
+    Spice.registerHelper("spice_name_do_something", function(){ ... });
+    ```
+
+- Namespace your helper functions:
+
+    Handlebars helpers are all created in the same scope, so any two helpers with the same name will collied (we plan to fix this). This can be avoided by prepending your helpers with the name of your Spice IA.
+
+    ```javascript
+    // Bad
+    Spice.registerHelper("do_something", function(){ ... });
+
+    // Good
+    Spice.registerHelper("spice_name_do_something", function(){ ... });
     ```
 
 ------
