@@ -487,30 +487,10 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 For example this is how your Spice code should look when using the **record** template:
 
 <!--
-<span class="summary-text"> 
-<pre><code class="language-javascript">data: { 
-    record_data: {
-	        name: 'Bob',
-			        phone: '123-456-7890',
-					        email: 'bob@bobstheman.com',
-							        address: '123 First Street'
-									    }
-										},
-										normalize: function(item){
-										    return {
-											        record_keys: [&quot;name&quot;, &quot;phone&quot;, &quot;email&quot;]
-													    }
-														},
-														templates: {
-														    group: 'base',
-															    options: {
-																        content: 'record',
-																		        /* optional - highlight alternate rows */
-																				        rowHighlight: true
-																						    }
-																							}</code></pre>
-																							</span>
-
+<span class="summary-text">
+<p>Template Diagram</p>
+<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png'></img></a>
+</span>
 -->
 '''javascript
 data: { 
