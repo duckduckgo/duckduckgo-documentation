@@ -194,10 +194,12 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 <!--
-<h2 class='summary' moreAt="spice_templates_overview#products">Spice products template</h2>
+<h2 class='summary' moreAt="spice_templates_overview#products">DuckDuckHack: Spice products template</h2>
 <p class='summary-text'>
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 </p>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
 -->
 ## products
 
