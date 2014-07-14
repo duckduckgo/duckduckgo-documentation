@@ -121,8 +121,12 @@ templates: {
 - [text_detail](#textdetail)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+<!--
 <h2 class='summary' moreAt="spice_templates_overview#text">Spice text template</h2>
 <p class='summary-text'>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github/github.js">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=github+duckduckgo"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
+-->
 
 ### Example uses of the 'text' template group
 
@@ -143,7 +147,7 @@ In order for these templates to display correctly, you need to ensure that each 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 </p>
 <p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=green+day+band"> "green day band"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/lastfm/artist/lastfm_artist.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=flight+tracking+apps"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png'></img></a>
+<a class="summary-text" href="https://duckduckgo.com/?q=green+day+band"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png'></img></a>
 -->
 ## info
 
