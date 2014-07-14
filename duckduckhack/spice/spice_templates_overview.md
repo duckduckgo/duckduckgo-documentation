@@ -1,6 +1,8 @@
 # Spice Templates
 <h2 class="summary" moreAt="spice_templates_overview">Spice Template Summary</h2>
+<!--
 <p class="summary-text">There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:</p>
+-->
 <li class="summary-text"><a  href="http://duck.co/duckduckhack/spice_templates_overview#template-groups">Template Groups</a>- Defines the main type of view for the instant answer</li>
 <li class="summary-text"><a  href="http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates">Built-In Spice Templates</a>- Different views and options for each template</li>
 <li class="summary-text"><a  href="http://duck.co/duckduckhack/spice_templates_overview#tile-variants">Tile Variants</a>- Used to modify width of the tiles</li>
@@ -135,11 +137,14 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+<!--
 <h2 class='summary' moreAt="spice_templates_overview#info">Spice info template</h2>
 <p class='summary-text'>
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 </p>
-
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=green+day+band"> "green day band"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/lastfm/artist/lastfm_artist.js">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=flight+tracking+apps"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png'></img></a>
+-->
 ## info
 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
@@ -194,12 +199,12 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 <!--
-<h2 class='summary' moreAt="spice_templates_overview#products">DuckDuckHack: Spice products template</h2>
+<h2 class='summary' moreAt="spice_templates_overview#products">Spice products template</h2>
 <p class='summary-text'>
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 </p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "flight tracking apps"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/quixey/quixey.js">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=flight+tracking+apps"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/flight_tracking_apps.png'></img></a>
 -->
 ## products
 
@@ -265,7 +270,7 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 </p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=bbc+schedule"> "BBC schedule"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc">(code)</a></p>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=bbc+schedule"> "BBC schedule"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc/bbc.js">(code)</a></p>
 <a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png'></img></a>
 -->
 
@@ -334,6 +339,8 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 </p>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=alternative+to+photoshop"> "alternative to photoshop"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/alternative_to/alternative_to.js">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png'></img></a>
 -->
 ## icon
 
@@ -385,6 +392,8 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 </p>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=define+indelible"> "define indelible"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition/dictionary_definition.js">(code)</a></p>
+<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png'></img></a>
 -->
 ## base
 
