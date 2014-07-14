@@ -46,6 +46,7 @@ The purpose of this page is to help you understand what each template group look
 -->
 
 ------
+<!--
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
 <li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</a>- basic template to display text-only data in detail or tile views</li>
 <li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
@@ -53,7 +54,7 @@ The purpose of this page is to help you understand what each template group look
 <li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#media'>media</a>- simple results with an image (simplified version of the products group)</li>
 <li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#icon'>icon</a>- similar to text group but with a small icon in the tile</li>
 <li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#base'>base</a>- minimal container for highly customized mark-up</li>
-
+-->
 # Template Groups
 
 There are several template groups to choose from:
@@ -192,11 +193,12 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+<!--
 <h2 class='summary' moreAt="spice_templates_overview#products">Spice products template</h2>
 <p class='summary-text'>
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 </p>
-
+-->
 ## products
 
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
@@ -261,8 +263,8 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 </p>
-<h5 class='summary-text'>Example use:</h5>
-<a class="summary-text" href="https://duckduckgo.com/?q\=bbc\+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png'></img></a>
+<h5 class='summary-text'>Example use:</h5><a href="https://duckduckgo.com/?=bbc+schedule"> BBC</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc">(code)</a>
+<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png'></img></a>
 -->
 
 ## media
@@ -325,11 +327,12 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+<!--
 <h2 class='summary' moreAt="spice_templates_overview#icon">Spice icon template</h2>
 <p class='summary-text'>
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 </p>
-
+-->
 ## icon
 
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
@@ -375,11 +378,12 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+<!--
 <h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
 <p class='summary-text'>
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 </p>
-
+-->
 ## base
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
