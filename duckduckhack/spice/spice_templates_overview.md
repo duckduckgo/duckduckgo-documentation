@@ -263,7 +263,7 @@ In order for these templates to display correctly, you need to ensure that each 
 <p class='summary-text'>
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 </p>
-<h5 class='summary-text'>Example use:</h5><a href="https://duckduckgo.com/?=bbc+schedule"> BBC</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc">(code)</a>
+<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=bbc+schedule"> "BBC schedule"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc">(code)</a></p>
 <a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png'></img></a>
 -->
 
