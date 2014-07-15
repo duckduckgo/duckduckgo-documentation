@@ -476,7 +476,7 @@ The list of built-in Spice templates includes:
 ------
 <!-- 
 <h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice record template</h2>
-<p class="summary-text">A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.</p>
+<p class="summary-text">A special template that is ideal for key-value data. It generates a table where each row contains a key and value.</p>
 -->
 ## record
 
@@ -488,7 +488,7 @@ For example this is how your Spice code should look when using the **record** te
 
 <!--
 <span class="summary-text">
-<p>Template Diagram</p>
+<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "metacpan Moose"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js"> (code)</a></p>
 <img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png'></img></a>
 </span>
 -->
