@@ -908,6 +908,7 @@ templates: {
 <!-- 
 <h2 class="summary" moreat="spice_templates_overview#tile-variants">Spice tile variants</h2>
 <span class="summary-text">
+<p>If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):</p>
 <ul>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#poster">poster </a> Tall and thin, like a movie poster </li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#narrow">narrow </a> Narrower tile width, normal height </li>
