@@ -477,6 +477,10 @@ The list of built-in Spice templates includes:
 <!-- 
 <h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice record template</h2>
 <p class="summary-text">A special template that is ideal for key-value data. It generates a table where each row contains a key and value.</p>
+<span class="summary-text">
+<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "metacpan Moose"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js"> (code)</a></p>
+<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png'></img></a>
+</span>
 -->
 ## record
 
@@ -486,12 +490,6 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 For example this is how your Spice code should look when using the **record** template:
 
-<!--
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "metacpan Moose"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png'></img></a>
-</span>
--->
 '''javascript
 data: { 
     record_data: {
@@ -534,6 +532,14 @@ templates: {
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
 
 ------
+<!-- 
+<h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice icon template</h2>
+<p class="summary-text">A tile template used to display basic text content with an icon</p>
+<span class="summary-text">
+<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "alternative to vim"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js"> (code)</a></p>
+<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png'></img></a>
+</span>
+-->
 
 ## icon_item
 
