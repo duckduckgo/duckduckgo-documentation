@@ -397,7 +397,7 @@ In order for these templates to display correctly, you need to ensure that each 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 </p>
 <p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=define+indelible"> "define indelible"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition/dictionary_definition.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png'></img>
+<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png'></img></a>
 -->
 ## base
 
@@ -467,8 +467,8 @@ In order for these templates to display correctly, you need to ensure that each 
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#textdetail">text_detail</a></li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicimageitem">basic_image_item</a></li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitem">products_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsdetail"></a>products_detail</li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitemdetail"></a>products_item_detail</li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsdetail">products_detail</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitemdetail">products_item_detail</a></li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicinfodetail">basic_info_detail</a></li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#baseitem">base_item</a></li>
 	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basedetail">base_detal</a></li>
