@@ -456,6 +456,25 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+<!-- 
+<h2 class="summary" moreat="spice_templates_overview#record">Spice built-in templates</h2>
+<span class="summary-text">
+<p>The list of built-in Spice templates includes: </p>
+<ul>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#record">record</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#iconitem">icon_item</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#textitem">text_item</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#textdetail">text_detail</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicimageitem">basic_image_item</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitem">products_item</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsdetail"></a>products_detail</li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitemdetail"></a>products_item_detail</li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicinfodetail">basic_info_detail</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#baseitem">base_item</a></li>
+	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basedetail">base_detal</a></li>
+</ul>
+</span>
+-->
 
 # Built-In Spice Templates
 
@@ -742,7 +761,7 @@ templates: {
 
 ------
 <!-- 
-<h2 class="summary" moreat="spice_templates_overview#productsitemdetail"></h2>
+<h2 class="summary" moreat="spice_templates_overview#productsitemdetail">Spice products item detail</h2>
 <p class="summary-text"></p>
 <span class="summary-text">
 <p>Template Diagram:<a href="https://duckduckgo.com/?q=the+hobbit"> "the hobbit" - see products detail view</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js"> (code)</a></p>
