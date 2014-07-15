@@ -475,7 +475,7 @@ The list of built-in Spice templates includes:
 
 ------
 <!-- 
-<h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice record template</h2>
+<h2 class="summary" moreat="spice_templates_overview#record">Spice record template</h2>
 <p class="summary-text">A special template that is ideal for key-value data. It generates a table where each row contains a key and value.</p>
 <span class="summary-text">
 <p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "metacpan Moose"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js"> (code)</a></p>
@@ -533,7 +533,7 @@ templates: {
 
 ------
 <!-- 
-<h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice icon template</h2>
+<h2 class="summary" moreat="spice_templates_overview#iconitem">Spice icon item template</h2>
 <p class="summary-text">A tile template used to display basic text content with an icon</p>
 <span class="summary-text">
 <p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "alternative to vim"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js"> (code)</a></p>
@@ -565,11 +565,11 @@ templates: {
 
 ------
 <!-- 
-<h2 class="summary" moreat="http://duck.co/duckduckhack/spice_templates/overview#record">Spice text template</h2>
-<p class="summary-text">A tile template used to display basic text content with an icon</p>
+<h2 class="summary" moreat="spice_templates_overview#textitem">Spice text item template</h2>
+<p class="summary-text">A basic tile used to display text-only content</p>
 <span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "alternative to vim"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png'></img></a>
+<p>Template Diagram:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js"> (code)</a></p>
+<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png'></img></a>
 </span>
 -->
 
@@ -598,6 +598,14 @@ templates: {
 - [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
 
 ------
+<!-- 
+<h2 class="summary" moreat="spice_templates_overview#textdetail">Spice text detail template</h2>
+<p class="summary-text">A detail view used to display basic text-only content</p>
+<span class="summary-text">
+<p>Template Diagram:<a href="https://duckduckgo.com/?q=synonym+of+eye"> "synonym of eye"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js"> (code)</a></p>
+<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png'></img></a>
+</span>
+-->
 
 ## text_detail
 
