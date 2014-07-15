@@ -509,7 +509,7 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 For example this is how your Spice code should look when using the **record** template:
 
-'''javascript
+```javascript
 data: { 
     record_data: {
         name: 'Bob',
@@ -531,7 +531,7 @@ templates: {
         rowHighlight: true
     }
 }
-'''
+```
 ### Available Features
 
 *none*
