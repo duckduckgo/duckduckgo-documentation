@@ -344,11 +344,11 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#icon">Spice icon template</h2>
-<p class='summary-text'>
+<span markdown="1" class='summary-text'>
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
-</p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=alternative+to+photoshop"> "alternative to photoshop"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/alternative_to/alternative_to.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png'></img></a>
+Example use: [alternative to photoshop](https://duckduckgo.com/?=alternative+to+photoshop) [(code)](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/alternative_to/alternative_to.js)
+[![alternativeto][https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png][http://duckduckgo.com/?q=alternative+to+vim]
+</span>
 -->
 ## icon
 
@@ -397,11 +397,11 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
-<p class='summary-text'>
+<span class='summary-text'>
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
-</p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?=define+indelible"> "define indelible"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition/dictionary_definition.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png'></img></a>
+Example use: [define indelible](https://duckduckgo.com/?=define+indelible) [(code)](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition/dictionary_definition.js)
+[![define_indelible][https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png][http://duckduckgo.com/?q=define+indelible]
+</span>
 -->
 ## base
 
