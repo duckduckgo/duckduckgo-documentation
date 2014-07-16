@@ -97,11 +97,12 @@ Email them! - If you explain what it's for, they might be willing to create and 
 
 ### Can I use an API that returns XML?
 
-Sorry, but **no**. We currently don't support XML. We're considering it though...
+Sorry, but **not right now**. XML support is coming soon.
+**Note:** If an API supports both JSON and XML, we *stronly enourage* you to use **JSON**.
 
 ### Can I use an API that returns HTML or a String? 
 
-If the response is a single string, then yes - you can use `zci wrap_jsonp_callback`. You can read more about that [here](#). Or take a look at the [Automeme](https://github.com/duckduckgo/zeroclickinfo-spice/blob/spice2/lib/DDG/Spice/Automeme.pm#L8) instant answer. If the response is more complicated, then sorry but **no**.
+Sorry, but **no**. We currently don't support HTML or plain text API's.
 
 ### Can I use the 'X', 'Y' or 'Z' JavaScript library?
 
