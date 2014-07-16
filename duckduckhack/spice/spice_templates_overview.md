@@ -50,12 +50,14 @@ The purpose of this page is to help you understand what each template group look
 ------
 <!--
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</a>- basic template to display text-only data in detail or tile views</li>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</a>- used for products with an image, rating, review, brand/price</li>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#media'>media</a>- simple results with an image (simplified version of the products group)</li>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#icon'>icon</a>- similar to text group but with a small icon in the tile</li>
-<li class='summary-text'><a href='http://duck.co/duckduckhack/spice_templates_overview#base'>base</a>- minimal container for highly customized mark-up</li>
+<span markdown="1" class="summary-text">
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</a>- basic template to display text-only data in detail or tile views</li>
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</a>- used for products with an image, rating, review, brand/price</li>
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#media'>media</a>- simple results with an image (simplified version of the products group)</li>
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#icon'>icon</a>- similar to text group but with a small icon in the tile</li>
+<li><a href='http://duck.co/duckduckhack/spice_templates_overview#base'>base</a>- minimal container for highly customized mark-up</li>
+</span>
 -->
 # Template Groups
 
@@ -123,9 +125,11 @@ templates: {
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#text">Spice text template</h2>
-<p class='summary-text'>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github/github.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=github+duckduckgo"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
+<span markdown="1" class="summary-text">
+<p>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
+<p>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github/github.js">(code)</a></p>
+<a href="https://duckduckgo.com/?q=github+duckduckgo"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
+</span>
 -->
 
 ### Example uses of the 'text' template group
