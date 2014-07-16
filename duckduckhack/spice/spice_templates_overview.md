@@ -51,7 +51,7 @@ The purpose of this page is to help you understand what each template group look
 <!--
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
 <span markdown="1" class="summary-text">
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#text'>text</a>- basic template to display text-only data in detail or tile views</li>
+- [text](http://duck.co/duckduckhack/spice_templates_overview#text) basic template to display text-only data in detail or tile views
 <li><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
 <li><a href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</a>- used for products with an image, rating, review, brand/price</li>
 <li><a href='http://duck.co/duckduckhack/spice_templates_overview#media'>media</a>- simple results with an image (simplified version of the products group)</li>
