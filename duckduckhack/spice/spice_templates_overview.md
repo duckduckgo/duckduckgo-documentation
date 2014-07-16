@@ -51,12 +51,12 @@ The purpose of this page is to help you understand what each template group look
 <!--
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
 <span markdown="1" class="summary-text">
-- [text](http://duck.co/duckduckhack/spice_templates_overview#text) basic template to display text-only data in detail or tile views
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#info'>info</a>- detailed results with image, description, and title</li>
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#products'>products</a>- used for products with an image, rating, review, brand/price</li>
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#media'>media</a>- simple results with an image (simplified version of the products group)</li>
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#icon'>icon</a>- similar to text group but with a small icon in the tile</li>
-<li><a href='http://duck.co/duckduckhack/spice_templates_overview#base'>base</a>- minimal container for highly customized mark-up</li>
+- [text](http://duck.co/duckduckhack/spice_templates_overview#text): basic template to display text-only data in detail or tile views
+- [info](http://duck.co/duckduckhack/spice_templates_overview#info): detailed results with image, description, and title
+- [products](http://duck.co/duckduckhack/spice_templates_overview#products): used for products with an image, rating, review, brand/price
+- [media](http://duck.co/duckduckhack/spice_templates_overview#media): simple results with an image (simplified version of the products group)
+- [icon](http://duck.co/duckduckhack/spice_templates_overview#icon): similar to text group but with a small icon in the tile
+- [base](http://duck.co/duckduckhack/spice_templates_overview#base): minimal container for highly customized mark-up
 </span>
 -->
 # Template Groups
