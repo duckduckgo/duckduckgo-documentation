@@ -399,8 +399,8 @@ In order for these templates to display correctly, you need to ensure that each 
 <h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
 <span class='summary-text'>
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.** <br>
-Example use: [define indelible](https://duckduckgo.com/?=define+indelible) ["(code)"](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition/dictionary_definition.js)
-["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js))
+<br>
+Example use: ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js)) <br>
 ![DuckDuckGo search for "define indelible"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png)
 </span>
 -->
