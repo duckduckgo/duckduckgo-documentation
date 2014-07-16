@@ -277,8 +277,8 @@ In order for these templates to display correctly, you need to ensure that each 
 <h2 class="summary" style="display: none" moreAt="spice_templates_overview#media">Spice media template</h2>
 <span markdown="1" class='summary-text'>
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
-Example use: [BBC schedule](https://duckduckgo.com/?q=bbc+schedule) [(code)](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/bbc/bbc.js)
-<a href="https://duckduckgo.com/?q=bbc+schedule"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png'></img></a>
+Example use: ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))<br>
+![DuckDuckGo search for "BBC schedule"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png)
 </span>
 -->
 
