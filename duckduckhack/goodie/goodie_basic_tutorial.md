@@ -1,5 +1,10 @@
 # Basic Goodie Tutorial
-
+<!--
+<h2 class="summary">Basic goodie tutorial</h2>
+<span class="summary-text" markdown="1">
+In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F)
+</span>
+-->
 In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
 
 ###### chars.pm
