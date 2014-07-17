@@ -2,6 +2,8 @@
 
 Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
 
+**Note:** Spice instant answers *must* use JSON or JSONP API's. We do not support the use of XML (it's coming soon though!), HTML or Plain text responses.
+
 ## Spice Frontend
 
 The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to display a Spice result at the top of the DuckDuckGo search results page.
