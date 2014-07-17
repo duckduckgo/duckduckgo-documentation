@@ -18,6 +18,7 @@ List of Spice specific Handlebars helpers:
 
 For the built-in helpers included with Handlebars see: [Handlebars Helpers](http://handlebarsjs.com/#helpers)
 </span>
+-->
 ###{{#concat}}
 
 **Block Helper**
