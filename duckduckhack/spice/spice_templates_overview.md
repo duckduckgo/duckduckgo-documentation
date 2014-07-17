@@ -147,11 +147,12 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#info">Spice info template</h2>
-<p class='summary-text'>
+<span class='summary-text'>
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
-</p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=green+day+band"> "green day band"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/lastfm/artist/lastfm_artist.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=green+day+band"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png'></img></a>
+
+Example use: ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))<br>
+![DuckDuckGo search for "green day band"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png)
+</span>
 -->
 ## info
 
@@ -208,11 +209,12 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#products">Spice products template</h2>
-<p class='summary-text'>
+<span class='summary-text'>
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
-</p>
-<p class='summary-text'>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "flight tracking apps"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/quixey/quixey.js">(code)</a></p>
-<a class="summary-text" href="https://duckduckgo.com/?q=flight+tracking+apps"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/flight_tracking_apps.png'></img></a>
+
+Example use: ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))<br>
+![DuckDuckGo search for "flight tracking apps"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/flight_tracking_apps.png)
+</span>
 -->
 ## products
 
@@ -347,8 +349,9 @@ In order for these templates to display correctly, you need to ensure that each 
 <h2 class='summary' moreAt="spice_templates_overview#icon">Spice icon template</h2>
 <span markdown="1" class='summary-text'>
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
-Example use: [alternative to photoshop](https://duckduckgo.com/?=alternative+to+photoshop) [(code)](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/alternative_to/alternative_to.js)
-[![alternativeto][https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png][http://duckduckgo.com/?q=alternative+to+vim]
+
+Example use: ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))<br>
+![DuckDuckGo search for "alternative to photoshop"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png)
 </span>
 -->
 ## icon
@@ -398,9 +401,9 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 <!--
 <h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
-<span class='summary-text'>
+<span class='summary-text' markdown="1">
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.** <br>
-<br>
+
 Example use: ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js)) <br>
 ![DuckDuckGo search for "define indelible"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png)
 </span>
