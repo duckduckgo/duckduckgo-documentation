@@ -1,6 +1,6 @@
 # Basic Goodie Tutorial
 <!--
-<h2 class="summary">Basic goodie tutorial</h2>
+<h2 class="summary" moreat="goodie_basic_tutorial">Basic goodie tutorial</h2>
 <span class="summary-text" markdown="1">
 In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F)
 </span>
@@ -26,7 +26,16 @@ handle remainder => sub {
 ```
 
 ## Naming our Goodie Package
+<!-- <h2 class="summary" moreat="goodie_basic_tutorial#naming-our-goodie-package">Naming a Goodie Package</h2>
+<span class="summary-text" markdown="1">
+To begin, open your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
+```perl
+package DDG::Goodie::Chars;
+# ABSTRACT: Give the number of characters (length) of the query.
+```
+</span>
+-->
 To begin, open your favourite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
 ```perl
@@ -65,7 +74,15 @@ Let's say someone searched "**chars this is a test**". **chars** is the *first* 
 There are several other keywords like **start** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
 ## Define the Handle Function
+<!-- <h2 class="summary" moreat="goodie_basic_tutorial#naming-our-goodie-package">Goodie defining the handle function</h2>
+<span class="summary-text" markdown="1">
+```perl
+handle remainder => sub {
+```
 
+Once triggers are specified, we define how to *handle* the query. `handle` is another keyword, similar to **triggers**.
+</span>
+-->
 Moving on, enter this on the next line:
 
 ```perl
