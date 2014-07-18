@@ -1,7 +1,7 @@
 # Spice Helpers (Handlebars)
 <!--
-<span class="summary">Spice handlebars helpers</span>
-<span class="summary-text chomp" markdown="1">
+<span class="summary" moreat="spice_handlebars_helpers">Spice handlebars helpers</span>
+<span class="summary-text ellipsis" markdown="1">
 List of Spice specific Handlebars helpers:
 
 - [concat](https://duck.co/duckduckhack/spice_handlebars_helpers/#concat): Concatenates all the elements in a collection
@@ -12,9 +12,9 @@ List of Spice specific Handlebars helpers:
 
 - [loop](https://duck.co/duckduckhack/spice_handlebars_helpers/#loop): Counts from zero to the value of `context`
 
-- [each](https://duck.co/duckduckhack/spice_handlebars_helpers/#each): Extends Handlebars' built-in `{{each}}` lets you specify optional inclusive first and last indices
+- [each](https://duck.co/duckduckhack/spice_handlebars_helpers/#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
 
-- [keys](https://duck.co/duckduckhack/spice_handlebars_helpers/#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" for each
+- [keys](https://duck.co/duckduckhack/spice_handlebars_helpers/#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
 
 - [include](https://duck.co/duckduckhack/spice_handlebars_helpers/#include): Loads the specified Handlebars template and applies it with the current context
 
