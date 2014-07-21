@@ -2,8 +2,7 @@
 <!--
 <h2 class="summary" moreat="spice-advanced-backend">Advanced Spice Backend</h2>
 -->
-<span class="summary-text" markdown="1">
-The spice advanced backend tutorial covers the following topics:
+<div class="summary-text" markdown="1">
 
 - [Multiple Placeholders in Spice To URL](http://duck.co/duckduckhack/spice_advanced_backend#Multiple-Placeholders-in-Spice-To-URL)
 
@@ -19,7 +18,7 @@ The spice advanced backend tutorial covers the following topics:
 
 - [Caching API Calls](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-calls)
 
-</span>
+</div>
 ## Multiple Placeholders in Spice To URL
 <!--
 <h2 class="summary" moreat="spice_advanced_backend#multiple-placeholders-in-spice-to-url">Spice URL Placeholders</h2>
@@ -27,7 +26,7 @@ The spice advanced backend tutorial covers the following topics:
 If you need to substitute multiple parameters into the API call like how the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) uses two numbers to specify the min and max length of the random word, you can use the **Spice from** keyword:
 
 ```perl
-spice from => '(?:([0-9]+)\-([0-9]+)|)';
+spice from =\> '(?:([0-9]+)\-([0-9]+)|)';
 ```
 </span>
 
