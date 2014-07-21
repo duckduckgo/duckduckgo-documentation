@@ -6,11 +6,17 @@
 The spice advanced backend tutorial covers the following topics:
 
 - [Multiple Placeholders in Spice To URL](http://duck.co/duckduckhack/spice_advanced_backend#Multiple-Placeholders-in-Spice-To-URL)
-- [Returning Multiple Values (to Spice From)](http://duck.co/duckduckhack/spice_advanced_backend#Returning-Multiple-Values-to-Spice-From) )
+
+- [Returning Multiple Values (to Spice From)](http://duck.co/duckduckhack/spice_advanced_backend#Returning-Multiple-Values-to-Spice-From)
+
 - [API Keys](http://duck.co/duckduckhack/spice_advanced_backend#api-keys)
+
 - [JSON -> JSONP](http://duck.co/duckduckhack/spice_advanced_backend#json-gt-jsonp)
+
 - [Pure JS functions](http://duck.co/duckduckhack/spice_advanced_backend#pure-js-functions)
+
 - [Caching API Responses](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-responses)
+
 - [Caching API Calls](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-calls)
 
 </span>
