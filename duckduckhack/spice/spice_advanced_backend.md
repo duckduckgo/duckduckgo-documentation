@@ -147,6 +147,17 @@ return $_ eq 'flash version' ? call : ();
 The return of **call** will run whatever is in the **call\_type** setting. **self** is a special keyword to just run the callback function directly, in this case **ddg\_spice\_flash_version()**.
 
 ## Caching
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#caching">Spice: caching</h2>
+<div class="summary-text" markdown="1">
+Spice instant answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query).
+
+- [Caching API Responses](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-responses)
+
+- [Caching API Calls](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-calls)
+
+</div>
+-->
 
 Spice instant answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
 
