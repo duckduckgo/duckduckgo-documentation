@@ -1,6 +1,6 @@
 # Advanced Spice Handlers
 <!--
-<h2 class="summary" moreat="spice-advanced-backend">Advanced Spice Backend</h2>
+<h2 class="summary" moreat="spice-advanced-backend">Spice: advanced backend</h2>
 -->
 <div class="summary-text" markdown="1">
 
@@ -21,7 +21,7 @@
 </div>
 ## Multiple Placeholders in Spice To URL
 <!--
-<h2 class="summary" moreat="spice_advanced_backend#multiple-placeholders-in-spice-to-url">Spice URL Placeholders</h2>
+<h2 class="summary" moreat="spice_advanced_backend#multiple-placeholders-in-spice-to-url">Spice: URL placeholders</h2>
 <span class="summary-text" markdown="1">
 If you need to substitute multiple parameters into the API call like how the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) uses two numbers to specify the min and max length of the random word, you can use the **Spice from** keyword:
 
@@ -61,7 +61,16 @@ spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLen
 **\*\*Note:** The reason why you do not need to specify a **from** keyword by default, is that the default value of `spice from` is **(.*)**, which means whatever you return gets gets captured into `$1`.
 
 ## Returning Multiple Values (to Spice From)
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#returning-multiple-values-to-spice-from">Spice: returning multiple values</h2>
+<div class="summary-text" markdown="1">
+You can have multiple return values in your handle function like the [AlternativeTo Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/AlternativeTo.pm).
 
+```perl
+return $prog, $platform, $license;
+```
+</div>
+-->
 You can have multiple return values in your handle function like the [AlternativeTo Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/AlternativeTo.pm).
 
 ```perl
@@ -75,7 +84,16 @@ spice from => '([^/]+)/?(?:([^/]+)/?(?:([^/]+)|)|)';
 ```
 
 ## API Keys
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#api-keys">Spice: API keys</h2>
+<div class="summary-text" markdown="1">
+Some APIs require API keys to function properly like in the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm). You can insert an API key for testing in the callback function and replace it with a variable reference when submitting.
 
+```perl
+spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
+```
+</div>
+-->
 Some APIs require API keys to function properly like in the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm). You can insert an API key for testing in the callback function and replace it with a variable reference when submitting.
 
 ```perl
@@ -89,7 +107,16 @@ DDG_SPICE_RANDWORD_APIKEY=xyz duckpan server
 ```
 
 ## JSON -> JSONP
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#json-gt-jsonp">Spice: JSONP</h2>
+<div class="summary-text" markdown="1">
+Some APIs don't do JSONP by default, i.e. don't have the ability to return the JSON object to a callback function. In this case, first you should try to contact the API provider and see if it can be added. Where it cannot, you can tell us to wrap the JSON object return in a callback function like in the [XKCD Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Xkcd.pm).
 
+```perl
+spice wrap_jsonp_callback => 1;
+```
+</div>
+-->
 Some APIs don't do JSONP by default, i.e. don't have the ability to return the JSON object to a callback function. In this case, first you should try to contact the API provider and see if it can be added. Where it cannot, you can tell us to wrap the JSON object return in a callback function like in the [XKCD Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Xkcd.pm).
 
 ```perl
@@ -97,7 +124,12 @@ spice wrap_jsonp_callback => 1;
 ```
 
 ## Pure JS functions
-
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#json-gt-jsonp">Spice: pure JS functions</h2>
+<div class="summary-text" markdown="1">
+Sometimes no external API is necessary to deliver the instant answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/spice.js).
+</div>
+-->
 Sometimes no external API is necessary to deliver the instant answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/spice.js).
 
 In cases like these you can define a **spice\_call\_type** as 'self' like this:
