@@ -1,5 +1,13 @@
 # Index
-
+<!--
+<h2 class='summary' moreat='spice_frontend_walkthroughs'>Spice frontend tutorials</h2>
+<div markdown="1" class="summary-text">
+- [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
+- [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
+- [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)
+- [Walkthrough #4: Quixey (Advanced)](#walkthrough-4-quixey-advanced)
+</div>
+-->
 - [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
 - [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
 - [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)

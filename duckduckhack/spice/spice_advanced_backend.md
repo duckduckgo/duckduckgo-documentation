@@ -125,7 +125,7 @@ spice wrap_jsonp_callback => 1;
 
 ## Pure JS functions
 <!--
-<h2 class="summary" moreat="spice_advanced_backend#json-gt-jsonp">Spice: pure JS functions</h2>
+<h2 class="summary" moreat="spice_advanced_backend#pure-js-functions">Spice: pure JS functions</h2>
 <div class="summary-text" markdown="1">
 Sometimes no external API is necessary to deliver the instant answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/spice.js).
 </div>
@@ -158,7 +158,6 @@ Spice instant answers have two forms of caching: API Response caching (remembers
 
 </div>
 -->
-
 Spice instant answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
 
 ### Caching API Responses
