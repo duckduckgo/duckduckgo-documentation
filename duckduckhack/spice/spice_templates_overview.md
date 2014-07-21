@@ -51,6 +51,7 @@ The purpose of this page is to help you understand what each template group look
 <!--
 <h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
 <span markdown="1" class="summary-text">
+
 - [text](http://duck.co/duckduckhack/spice_templates_overview#text): basic template to display text-only data in detail or tile views
 
 - [info](http://duck.co/duckduckhack/spice_templates_overview#info): detailed results with image, description, and title

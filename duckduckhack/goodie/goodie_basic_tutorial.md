@@ -32,7 +32,7 @@ To begin, open your favourite text editor like [gedit](http://projects.gnome.org
 
 ```perl
 package DDG::Goodie::Chars;
-# ABSTRACT: Give the number of characters (length) of the query.
+ABSTRACT: Give the number of characters (length) of the query.
 ```
 </span>
 -->

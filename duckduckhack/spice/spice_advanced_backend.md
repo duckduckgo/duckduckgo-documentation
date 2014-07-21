@@ -1,7 +1,30 @@
 # Advanced Spice Handlers
+<!--
+<h2 class="summary" moreat="spice-advanced-backend">Advanced Spice Backend</h2>
+-->
+<span class="summary-text" markdown="1">
+The spice advanced backend tutorial covers the following topics:
 
+[Multiple Placeholders in Spice To URL](http://duck.co/duckduckhack/spice-advanced-backend#Multiple-Placeholders-in-Spice-To-URL)
+[Returning Multiple Values (to Spice From)](http://duck.co/duckduckhack/spice-advanced-backend#Returning-Multiple-Values-to-Spice-From) )
+[API Keys](http://duck.co/duckduckhack/spice-advanced-backend#api-keys)
+[JSON -> JSONP](http://duck.co/duckduckhack/spice-advanced-backend#json-gt-jsonp)
+[Pure JS functions](http://duck.co/duckduckhack/spice-advanced-backend#pure-js-functions)
+[Caching API Responses](http://duck.co/duckduckhack/spice-advanced-backend#caching-api-responses)
+[Caching API Calls](http://duck.co/duckduckhack/spice-advanced-backend#caching-api-calls)
+</span>
 ## Multiple Placeholders in Spice To URL
+<!--
+<h2 class="summary" moreat="spice_advanced_backend#multiple-placeholders-in-spice-to-url">Spice URL Placeholders</h2>
+<span class="summary-text" markdown="1">
+If you need to substitute multiple parameters into the API call like how the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) uses two numbers to specify the min and max length of the random word, you can use the **Spice from** keyword:
 
+```perl
+spice from => '(?:([0-9]+)\-([0-9]+)|)';
+```
+</span>
+
+-->
 If you need to substitute multiple parameters into the API call like how the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) uses two numbers to specify the min and max length of the random word, you can use the **Spice from** keyword:
 
 ```perl
