@@ -4,7 +4,7 @@
 <div markdown="1" class="summary-text">
 There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 
-[Word trigger example:](http://duck.co/duckduckhack/spice_triggers#word-triggeres)
+[Word trigger example](http://duck.co/duckduckhack/spice_triggers#word-triggeres)
 
 ```perl
 triggers start => "trigger my instant answer", "trigger myIA", "myIA";
