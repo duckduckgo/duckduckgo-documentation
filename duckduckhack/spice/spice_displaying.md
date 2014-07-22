@@ -136,14 +136,14 @@ The object containing the data to be used by your templates. In most cases, it i
 <div markdown="1" class="summary-text">
 The following options are used to define elements of the **MetaBar**:
 
--[searchTerm](http://duck.co/duckduckhack/spice_displaying#searchterm) Determines the item in the phrase "Showing 15 `term` "
--[itemType](http://duck.co/duckduckhack/spice_displaying#itemtype) The type of item being shown (e.g., Videos, Images, Recipes)
--[primaryText](http://duck.co/duckduckhack/spice_displaying#primarytext)  If defined, this text will replace the MetaBar's "Showing **n** Items" text
--[secondaryText](http://duck.co/duckduckhack/spice_displaying#secondarytext) This is an optional text label that will be displayed to the left of the "More at" link
--[sourceName](http://duck.co/duckduckhack/spice_displaying#sourcename)The name of the source as it should be shown in the "More at" link
--[sourceLogo](http://duck.co/duckduckhack/spice_displaying#sourceLogo) If defined, the image provided will replace the `sourceName` with a logo
--[sourceUrl](http://duck.co/duckduckhack/spice_displaying#sourceurl) The URL to follow when the "More at" link is clicked
--[sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
+- [searchTerm](http://duck.co/duckduckhack/spice_displaying#searchterm) Determines the item in the phrase "Showing 15 `term` "
+- [itemType](http://duck.co/duckduckhack/spice_displaying#itemtype) The type of item being shown (e.g., Videos, Images, Recipes)
+- [primaryText](http://duck.co/duckduckhack/spice_displaying#primarytext)  If defined, this text will replace the MetaBar's "Showing **n** Items" text
+- [secondaryText](http://duck.co/duckduckhack/spice_displaying#secondarytext) This is an optional text label that will be displayed to the left of the "More at" link
+- [sourceName](http://duck.co/duckduckhack/spice_displaying#sourcename)The name of the source as it should be shown in the "More at" link
+- [sourceLogo](http://duck.co/duckduckhack/spice_displaying#sourceLogo) If defined, the image provided will replace the `sourceName` with a logo
+- [sourceUrl](http://duck.co/duckduckhack/spice_displaying#sourceurl) The URL to follow when the "More at" link is clicked
+- [sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
 
 </div>
 -->
