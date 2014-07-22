@@ -75,12 +75,12 @@ Used to add your Spice to the AnswerBar and has the following required propertie
 
 - [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
 - [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
-- [data](http://duck.co/duckduckhack/spice_displaying#data-codestringcode-required) The object containing the data to be used by your templates
+- [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
 
 Other properties and fuctions of `spice.add()` include:
 
 - [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
-- [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` object (or array of items) before it is passed on to the template
+- [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
 - [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
 
@@ -131,7 +131,22 @@ The object containing the data to be used by your templates. In most cases, it i
 
 
 # Instant Answer Metadata
+<!--
+<h2 class='summary' moreat='spice_displaying#instant-answer-metadata'>Spice metadata</h2>
+<div markdown="1" class="summary-text">
+The following options are used to define elements of the **MetaBar**:
 
+-[searchTerm](http://duck.co/duckduckhack/spice_displaying#searchterm) Determines the item in the phrase "Showing 15 `term` "
+-[itemType](http://duck.co/duckduckhack/spice_displaying#itemtype) The type of item being shown (e.g., Videos, Images, Recipes)
+-[primaryText](http://duck.co/duckduckhack/spice_displaying#primarytext)  If defined, this text will replace the MetaBar's "Showing **n** Items" text
+-[secondaryText](http://duck.co/duckduckhack/spice_displaying#secondarytext) This is an optional text label that will be displayed to the left of the "More at" link
+-[sourceName](http://duck.co/duckduckhack/spice_displaying#sourcename)The name of the source as it should be shown in the "More at" link
+-[sourceLogo](http://duck.co/duckduckhack/spice_displaying#sourceLogo) If defined, the image provided will replace the `sourceName` with a logo
+-[sourceUrl](http://duck.co/duckduckhack/spice_displaying#sourceurl) The URL to follow when the "More at" link is clicked
+-[sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
+
+</div>
+-->
 The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
 
 - ### searchTerm `string`
