@@ -1,5 +1,10 @@
 # Spice Overview
-
+<!--
+<h2 class='summary' moreat='spice_overview'>Spice instant answer overview</h2>
+<div markdown="1" class="summary-text">
+Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
+</div>
+-->
 Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
 
 ## Spice Frontend
@@ -11,7 +16,15 @@ The Spice frontend is the code that is triggered by the Perl backend for your sp
 In order to display the result, the Spice callback function needs to specify a template, which will determine how the result looks. There are several built-in templates to choose from and you are able to choose whichever template works best for the given data and desired output.
 
 ### Third-Party Libraries
+<!--
+<h2 class='summary' moreat='spice_overview#third-party-libraries'>Spice libraries/h2>
+<div markdown="1" class="summary-text">
+Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
+- [jQuery](https://jquery.org) v1.10.2
+- and [Handlebars](http://handlebarsjs.com) v1.3.0
+</div>
+-->
 Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
 - [jQuery](https://jquery.org) v1.10.2
