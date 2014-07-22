@@ -1,4 +1,10 @@
 # Advanced Testing
+<!--
+<h2 class='summary' moreat='advanced_testing'>DuckDuckHack test files</h2>
+<div markdown="1" class="summary-text">
+The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
+</div>
+-->
 
 The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
 

@@ -1,5 +1,10 @@
 # DuckDuckHack FAQ
-
+<!--
+<h2 class='summary' moreat='faq'>DuckDuckHack FAQ</h2>
+<div markdown="1" class="summary-text">
+[DuckDuckHack FAQ page](http://duck.co/duckduckhack/faq)
+</div>
+-->
 ## General
 
 ### Why should I make instant answers?
@@ -19,7 +24,12 @@ If you don't code at all and you've ended up here, please go over to our [instan
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
 ### Can you help me?
-
+<!--
+<h2 class='summary' moreat='faq'>DuckDuckHack mailing list</h2>
+<div markdown="1" class="summary-text">
+Subscribe to the DuckDuckHack [discussion list](https://www.listbox.com/subscribe/?list_id=197814)
+</div>
+-->
 Of course! Here are the easiest ways to contact someone who can help answer your questions:
 
 - Write us publicly on the [discussion list](https://www.listbox.com/subscribe/?list_id=197814).
@@ -134,7 +144,21 @@ A result abstract can be either plain text (generally one readable sentence, end
 ## DuckPAN
 
 ### How do I install a missing Perl dependency?
+<!--
+<h2 class='summary' moreat='faq#how-do-i-install-a-missing-perl-dependency'>DuckPAN installing dependencies</h2>
+<div markdown="1" class="summary-text">
+Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the module `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
 
+In order to install any missing dependencies you can use cpan or cpanm like so:
+
+```perl
+cpan install Math::Prime::Util
+# or
+cpanm Math::Prime::Util
+```
+
+</div>
+-->
 Any Perl module (.pm file) that has external Perl dependencies will load them with a `use` statement. Typically these statements are located near the top of the file. For example, the Factors Goodie (`lib/DDG/Goodie/Factors.pm`) loads the module `Math::Prime::Util`. If this is not installed on your system, DuckPAN will not be able to use the Factors Goodie and you will likely see an error or warning.
 
 In order to install any missing dependencies you can use cpan or cpanm like so:
