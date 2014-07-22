@@ -72,15 +72,18 @@ Spice.add({
 <h2 class='summary' moreat='spice_displaying'>Spice add function</h2>
 <div markdown="1" class="summary-text">
 Used to add your Spice to the AnswerBar and has the following required properties:
+
 - ['id'](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
 - ['name'](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
 - ['data'](http://duck.co/duckduckhack/spice_displaying#data-codestringcode-required) The object containing the data to be used by your templates
 
 Other properties and fuctions of `spice.add()`
+
 - [`meta`](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 - [`normalize`](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` object (or array of items) before it is passed on to the template
 - [`templates`](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - ['relevancy'](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
+
 </div>
 -->
 ### id `string` [required]
