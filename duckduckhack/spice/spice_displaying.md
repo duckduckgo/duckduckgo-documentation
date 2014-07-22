@@ -514,7 +514,7 @@ sort_default: {
 
 # Events
 <!--
-<h2 class='summary' moreat='spice_displaying#sorting'>Spice event handlers</h2>
+<h2 class='summary' moreat='spice_displaying#events'>Spice event handlers</h2>
 <div markdown="1" class="summary-text">
 If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function:
 

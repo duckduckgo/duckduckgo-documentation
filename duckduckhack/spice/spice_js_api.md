@@ -1,5 +1,13 @@
 # Spice JavaScript API Reference
+<!--
+<h2 class='summary' moreat='spice_js_api'>Spice JS API</h2>
+<div markdown="1" class="summary-text">
+For a list of avaliable Spice JS functions see:
 
+- [DDG Namespace Functions](http://duck.co/duckduckhack/spice_js_api#ddg-namespace)
+- [Spice Namespace Functions](http://duck.co/duckduckhack/spice_js_api#spice-namespace)
+</div>
+-->
 ## DDG Namespace
 
 
