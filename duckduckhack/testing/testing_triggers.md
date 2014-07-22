@@ -1,5 +1,10 @@
 # Testing
-
+<!--
+<h2 class='summary' moreat='testing_triggers'>Spice testing triggers</h2>
+<div markdown="1" class="summary-text">
+Testing is crucial to ensuring a smooth integration process.  This section of the documentation walks you through the process of testing everything that you've written so far. Don't forget to write your test files!
+</div>
+-->
 Testing is crucial to ensuring a smooth integration process.  This section of the documentation walks you through the process of testing everything that you've written so far. Don't forget to write your test files!
 
 ## Interactive Testing
