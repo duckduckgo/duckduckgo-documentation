@@ -191,6 +191,15 @@ The following options are used to define elements of the **MetaBar** including t
 
 
 # Data Normalization
+<!--
+<h2 class='summary' moreat='spice_displaying#data-normalization'>Spice normalize data</h2>
+<div markdown="1" class="summary-text">
+normalize `function` [required depending on template and data]
+
+This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
+
+</div>
+-->
 
 - ### normalize `function` [required depending on template and data]
 
@@ -255,7 +264,12 @@ The following options are used to define elements of the **MetaBar** including t
 
 
 # Templates
-
+<!--
+<h2 class='summary' moreat='spice_displaying#templates'>Spice add templates</h2>
+<div markdown="1" class="summary-text">
+A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
+</div>
+-->
 A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
 - ### group `string` [required unless `item` or `detail` is specified]
@@ -310,6 +324,20 @@ A `templates: {}` property should be used to specify the template group and all 
 
 ------
 
+<!--
+<h2 class='summary' moreat='spice_displaying#templates'>Spice template options</h2>
+<div markdown="1" class="summary-text">
+Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
+</div>
+-->
+
+<!--
+<h2 class='summary' moreat='spice_displaying#templates'>Spice tile variants</h2>
+<div markdown="1" class="summary-text">
+Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants availble can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
+</div>
+-->
+
 - ### options `object`
 
     Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
@@ -353,12 +381,24 @@ A `templates: {}` property should be used to specify the template group and all 
     ```
 
 # Relevancy
+<!--
+<h2 class='summary' moreat='spice_displaying#relevancy'>Spice relevancy</h2>
+<div markdown="1" class="summary-text">
+If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
+</div>
+-->
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
 In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
 
 ### Relevancy Blocks
+<!--
+<h2 class='summary' moreat='spice_displaying#relevancy-blocks'>Spice relevancy block</h2>
+<div markdown="1" class="summary-text">
+A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an [example](http://duck.co/duckduckhack/spice_displaying#relevancy-blocks)
+</div>
+-->
 
 A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
 
@@ -429,6 +469,12 @@ category: [
 
 
 # Sorting
+<!--
+<h2 class='summary' moreat='spice_displaying#sorting'>Spice sorting</h2>
+<div markdown="1" class="summary-text">
+In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
+</div>
+-->
 
 In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
 
@@ -467,7 +513,18 @@ sort_default: {
 
 
 # Events
+<!--
+<h2 class='summary' moreat='spice_displaying#sorting'>Spice event handlers</h2>
+<div markdown="1" class="summary-text">
+If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function:
 
+- [onItemSelect](http://duck.co/duckduckhack/spice_displaying#onitemselect-codefunctioncode) This event occurs each time a tile is selected
+- [onItemUnselect](http://duck.co/duckduckhack/spice_displaying#onitemunselect-codefunctioncode) This event occurs each time a tile is unselected
+- [onShow](http://duck.co/duckduckhack/spice_displaying#onshow-codefunctioncode) This event occurs when a Spice tab initially opens
+- [onHide](http://duck.co/duckduckhack/spice_displaying#onhide-codefunctioncode) This event occurs when a Spice tab is closed i.e. when another tab is selected
+
+</div>
+-->
 If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function.
 
 ### onItemSelect `function`
