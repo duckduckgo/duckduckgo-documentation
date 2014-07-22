@@ -46,7 +46,7 @@ The easiest way to get started with DuckPAN is to **use [our Codio Project Templ
 
 ## Codio Project Template
 <!--
-<h2 class='summary' moreat='installing_duckpan'>Using DuckPAN</h2>
+<h2 class='summary' moreat='installing_duckpan'>Using DuckPAN with Codio</h2>
 <div markdown="1" class="summary-text">
 [See this tutorial for using DuckPan with Codio](http://duck.co/duckduckhack/installing_duckpan#codio-project-template)
 </div>
