@@ -153,7 +153,7 @@ In order to install any missing dependencies you can use cpan or cpanm like so:
 
 ```perl
 cpan install Math::Prime::Util
-# or
+or
 cpanm Math::Prime::Util
 ```
 
