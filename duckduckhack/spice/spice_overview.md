@@ -17,7 +17,7 @@ In order to display the result, the Spice callback function needs to specify a t
 
 ### Third-Party Libraries
 <!--
-<h2 class='summary' moreat='spice_overview#third-party-libraries'>Spice libraries/h2>
+<h2 class='summary' moreat='spice_overview#third-party-libraries'>Spice libraries</h2>
 <div markdown="1" class="summary-text">
 Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
