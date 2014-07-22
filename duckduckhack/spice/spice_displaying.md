@@ -327,7 +327,7 @@ A `templates: {}` property should be used to specify the template group and all 
 <!--
 <h2 class='summary' moreat='spice_displaying#templates'>Spice template options</h2>
 <div markdown="1" class="summary-text">
-Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
+Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `info` template). Depending on the templates being used, the features will vary. For example, the `info` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
 </div>
 -->
 
