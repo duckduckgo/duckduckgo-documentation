@@ -1,5 +1,24 @@
 # Triggers
+<!--
+<h2 class='summary' moreat='spice_triggers'>Spice triggers</h2>
+<div markdown="1" class="summary-text">
+There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 
+[Word trigger example:](http://duck.co/duckduckhack/spice_triggers#word-triggeres)
+
+```perl
+triggers start => "trigger my instant answer", "trigger myIA", "myIA";
+```
+
+[Trigger locations](http://duck.co/duckduckhack/spice_triggers#trigger-locations)
+
+- `start` &mdash; Word exists at the start of the query
+- `end` &mdash; Word exists at the end of the query
+- `startend` &mdash; Word is at the beginning or end of the query
+- `any` &mdash; Word is anywhere in the query
+
+</div>
+-->
 There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 
 ## Word Triggers
