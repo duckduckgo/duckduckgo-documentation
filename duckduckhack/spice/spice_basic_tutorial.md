@@ -1,5 +1,10 @@
 # Basic Spice Tutorial
-
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial'>Spice tutorial</h2>
+<div markdown="1" class="summary-text">
+In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest).
+</div>
+-->
 In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
 
 # NPM Spice - Backend (Perl)
@@ -26,7 +31,15 @@ handle remainder => sub {
 ```
 
 ## Naming our Spice Package
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#naming-our-spice-package'>Spice naming package</h2>
+<div markdown="1" class="summary-text">
 
+```perl
+package DDG::Spice::Npm;
+```
+</div>
+-->
 To begin, open your favorite text editor like [gedit](http://projects.gnome.org/gedit/), notepad or [emacs](http://www.gnu.org/software/emacs/) and type the following:
 
 ```perl
@@ -49,6 +62,17 @@ use DDG::Spice;
 **\*\*Note:** Right after the above line, you should include any Perl modules that you'll be leveraging to help generate the answer. **Make sure** you add those modules to the `dist.ini` file in this repository. If you're not using any additional modules, carry on!
 
 ## Define the Trigger Word(s)
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#define-the-trigger-words'>Spice define trigger words</h2>
+<div markdown="1" class="summary-text">
+
+**triggers** are keywords/phrases that tell us when to make the instant answer run. When a particular *trigger word* (or phrase) is part of a search query, it tells DuckDuckGo to *trigger* the instant answer(s) that have indicated they should trigger for the given word (or phrase).
+
+```perl
+triggers startend => 'npm';
+```
+</div>
+-->
 
 On the next line, type:
 
@@ -65,6 +89,17 @@ Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, s
 There are several other keywords like **startend** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
 ## Define the API Call
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#define-the-api-call'>Spice API call</h2>
+<div markdown="1" class="summary-text">
+
+```perl
+spice to => 'http://registry.npmjs.org/$1/latest';
+```
+
+The **spice to** attribute indicates the API endpoint we'll be using, which means a `GET` request will be made to this URL. The URL has a **$1** placeholder, which will eventually be replaced with whatever string our `handle` function (which we'll define shortly) returns. Generally, Spice instant answers use a search endpoint for a given API and so, we'll need to pass along our search term(s) in the API request. We do this by returning the desired search terms in the `handle` function and then the **$1** placeholder, in the `spice to` URL, will be replaced accordingly.
+</div>
+-->
 
 On the next line enter:
 
@@ -77,6 +112,16 @@ The **spice to** attribute indicates the API endpoint we'll be using, which mean
 Using the previous example, if we wanted to search for "**uglify-js**" with the NPM API, we'd need to replace `$1` with `uglify-js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "uglify-js" NPM Package.
 
 ## Indicate our Callback Function
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#indicate-our-callback-function'>Spice callback function</h2>
+<div markdown="1" class="summary-text">
+```perl
+http://www.api.awesome.com/?q=<search_term>&callback=<function_name>
+```
+
+This parameter is used to wrap the JSON object being returned, in a JavaScript function call to the function named in the `callback` parameter. Unfortunately, the NPM API doesn't allow for this parameter to be specified, so we force this manually by using the **spice wrap\_jsonp\_callback** function.
+</div>
+-->
 
 In most cases, APIs allow for a "callback" parameter, which usually looks like this:
 
@@ -105,6 +150,18 @@ Where `{{callback}}` is another special placeholder which will be **automaticall
 **\*\*Note:** Not every API uses the word "callback" for their callback parameter. Some use "jsonp" (i.e.`&jsonp=myCallbackFn`), but these names are simply convention. Therefore it's best to read the documentation for the API you're using to ensure the correct callback parameter name is used.
 
 ## Define the Handle Function
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#define-the-handle-function'>Spice handle function</h2>
+<div markdown="1" class="summary-text">
+
+```perl
+handle remainder => sub {
+```
+
+Once triggers are specified, we define how to *handle* the query. `handle` is another keyword, similar to **triggers**.
+
+</div>
+-->
 
 Moving on, enter this on the next line:
 
@@ -246,6 +303,21 @@ We now define our callback function, `ddg_spice_npm`, using a function expressio
 ## Validate our API Response
 
 ###### npm.js (continued)
+
+<!--
+<h2 class='summary' moreat='spice_basic_tutorial#define-the-handle-function'>Spice validating the API response</h2>
+<div markdown="1" class="summary-text">
+
+```javascript
+        if (api_result.error) {
+            return Spice.failed('npm');
+        }
+```
+
+Here we specify that if the `error` property in the API result is defined (meaning there are no results to use) we `return` a call to `Spice.failed('npm')`, which stops the execution of the function and as a result, won't display an instant answer. It's important to use `Spice.failed();` because this lets the rest of the Spice system know our Spice isn't going to display so that other relevant answers can be given an opportunity to display.
+
+</div>
+-->
 
 ```javascript
         if (api_result.error) {
