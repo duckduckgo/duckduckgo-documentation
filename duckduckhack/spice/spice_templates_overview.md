@@ -49,7 +49,7 @@ The purpose of this page is to help you understand what each template group look
 -->
 
 ------
-# Template Groups
+## Template Groups
 
 There are several template groups to choose from:
 
@@ -59,6 +59,7 @@ There are several template groups to choose from:
 - [media](#media)
 - [icon](#icon)
 - [base](#base)
+<!-- /summary -->
 
 ### Default Template Options
 
@@ -95,7 +96,7 @@ templates: {
     group: 'text'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
