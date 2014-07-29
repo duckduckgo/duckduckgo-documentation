@@ -1,4 +1,5 @@
 # Spice Templates
+
 ##Spice Template Summary
 
 There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
@@ -48,23 +49,6 @@ The purpose of this page is to help you understand what each template group look
 -->
 
 ------
-<!--
-<h2 class='summary' moreat='spice_templates_overview#template-groups'>Spice Template Groups</h2>
-<span markdown="1" class="summary-text">
-
-- [text](http://duck.co/duckduckhack/spice_templates_overview#text): basic template to display text-only data in detail or tile views
-
-- [info](http://duck.co/duckduckhack/spice_templates_overview#info): detailed results with image, description, and title
-
-- [products](http://duck.co/duckduckhack/spice_templates_overview#products): used for products with an image, rating, review, brand/price
-
-- [media](http://duck.co/duckduckhack/spice_templates_overview#media): simple results with an image (simplified version of the products group)
-
-- [icon](http://duck.co/duckduckhack/spice_templates_overview#icon): similar to text group but with a small icon in the tile
-
-- [base](http://duck.co/duckduckhack/spice_templates_overview#base): minimal container for highly customized mark-up
-</span>
--->
 # Template Groups
 
 There are several template groups to choose from:
@@ -129,14 +113,6 @@ templates: {
 - [text_detail](#textdetail)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
-<!--
-<h2 class='summary' moreAt="spice_templates_overview#text">Spice text template</h2>
-<span markdown="1" class="summary-text">
-<p>The text group has both a tile and detail view and is used for displaying basic text-only results. See the <a href="http://duck.co/duckduckhack/spice_templates_overview#text">Text Template</a> page.</p>
-<p>Example use:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github/github.js">(code)</a></p>
-<a href="https://duckduckgo.com/?q=github+duckduckgo"><img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/github_duckduckgo.png'></img></a>
-</span>
--->
 
 ### Example uses of the 'text' template group
 
@@ -151,15 +127,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!--
-<h2 class='summary' moreAt="spice_templates_overview#info">Spice info template</h2>
-<span class='summary-text'>
-Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
-Example use: ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))<br>
-![DuckDuckGo search for "green day band"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/green_day_band.png)
-</span>
--->
 ## info
 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
@@ -213,15 +181,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!--
-<h2 class='summary' moreAt="spice_templates_overview#products">Spice products template</h2>
-<span class='summary-text'>
-Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
-Example use: ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))<br>
-![DuckDuckGo search for "flight tracking apps"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/flight_tracking_apps.png)
-</span>
--->
 ## products
 
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
@@ -281,15 +241,6 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!--
-<h2 class="summary" moreAt="spice_templates_overview#media">Spice media template</h2>
-<span markdown="1" class='summary-text'>
-Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
-
-Example use: ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))<br>
-![DuckDuckGo search for "BBC schedule"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/bbc_schedule.png)
-</span>
--->
 
 ## media
 
@@ -351,15 +302,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!--
-<h2 class='summary' moreAt="spice_templates_overview#icon">Spice icon template</h2>
-<span markdown="1" class='summary-text'>
-This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 
-Example use: ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))<br>
-![DuckDuckGo search for "alternative to photoshop"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/alternative_to_photoshop.png)
-</span>
--->
 ## icon
 
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
@@ -405,15 +348,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!--
-<h2 class='summary' moreAt="spice_templates_overview#base">Spice base template</h2>
-<span class='summary-text' markdown="1">
-This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.** <br>
 
-Example use: ["define indelible"](https://duckduckgo.com/?q=define+indelible) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js)) <br>
-![DuckDuckGo search for "define indelible"](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/template_groups/define_indelible.png)
-</span>
--->
 ## base
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
@@ -471,25 +406,6 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#record">Spice built-in templates</h2>
-<span class="summary-text">
-<p>The list of built-in Spice templates includes: </p>
-<ul>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#record">record</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#iconitem">icon_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#textitem">text_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#textdetail">text_detail</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicimageitem">basic_image_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitem">products_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsdetail">products_detail</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#productsitemdetail">products_item_detail</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basicinfodetail">basic_info_detail</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#baseitem">base_item</a></li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#basedetail">base_detal</a></li>
-</ul>
-</span>
--->
 
 # Built-In Spice Templates
 
@@ -508,14 +424,7 @@ The list of built-in Spice templates includes:
 - [base_detail](#basedetail)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#record">Spice record template</h2>
-<p class="summary-text">A special template that is ideal for key-value data. It generates a table where each row contains a key and value.</p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "metacpan Moose"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/record.png'></img>
-</span>
--->
+
 ## record
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
@@ -566,14 +475,6 @@ templates: {
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#iconitem">Spice icon item template</h2>
-<p class="summary-text">A tile template used to display basic text content with an icon</p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=cpan+Moose"> "alternative to vim"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png'></img>
-</span>
--->
 
 ## icon_item
 
@@ -598,14 +499,6 @@ templates: {
 - [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#textitem">Spice text item template</h2>
-<p class="summary-text">A basic tile used to display text-only content</p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=github+duckduckgo"> "github duckduckgo"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png'></img>
-</span>
--->
 
 ## text_item
 
@@ -632,14 +525,6 @@ templates: {
 - [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#textdetail">Spice text detail template</h2>
-<p class="summary-text">A detail view used to display basic text-only content</p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=synonym+of+eye"> "synonym of eye"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png'></img>
-</span>
--->
 
 ## text_detail
 
@@ -663,14 +548,6 @@ templates: {
 - [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#basicimageitem">Spice basic image item template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=bbc+schedule"> "BBC schedule"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png'></img>
-</span>
--->
 
 ## basic_image_item
 
@@ -698,14 +575,6 @@ templates: {
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#productsitem">Spice products item template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=star+wars+lego"> "star wars lego"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png'></img>
-</span>
--->
 
 ## products_item
 
@@ -734,14 +603,6 @@ templates: {
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#productsdetail">Spice products detail template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=star+wars+lego"> "star wars lego"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png'></img>
-</span>
--->
 
 ## products_detail
 
@@ -775,14 +636,6 @@ templates: {
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#productsitemdetail">Spice products item detail</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=the+hobbit"> "the hobbit" - see products detail view</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png'></img></a>
-</span>
--->
 
 ## products_item_detail
 
@@ -814,14 +667,6 @@ templates: {
 - [CouponMountain](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#basicinfodetail">Spice basic info detail template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=mix+a+tom+colins"> "mix a tom colins"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png'></img>
-</span>
--->
 
 ## basic_info_detail
 
@@ -852,14 +697,6 @@ templates: {
 - [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#baseitem">Spice base item template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=aa+102"> "aa102"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_complex.png'></img>
-</span>
--->
 
 ## base_item
 
@@ -886,14 +723,6 @@ templates: {
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#basedetail">Spice base detail template</h2>
-<p class="summary-text"></p>
-<span class="summary-text">
-<p>Template Diagram:<a href="https://duckduckgo.com/?q=flash+version"> "flash version"</a><a href="https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js"> (code)</a></p>
-<img src='https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail.png'></img></a>
-</span>
--->
 
 ## base_detail
 
@@ -920,20 +749,6 @@ templates: {
 - [XKCD](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/xkcd/xkcd.js)
 
 ------
-<!-- 
-<h2 class="summary" moreat="spice_templates_overview#tile-variants">Spice tile variants</h2>
-<span class="summary-text">
-<p>If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):</p>
-<ul>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#poster">poster </a> Tall and thin, like a movie poster </li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#narrow">narrow </a> Narrower tile width, normal height </li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#poster">wide </a> Increased width, normal height  </li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#poster">xwide </a> Super wide, normal height </li>
-	<li><a href="https://duck.co/duckduckhack/spice_templates_overview#poster">video </a> Shorter height, increased width </li>
-</ul>
-</span>
--->
-
 
 # Tile Variants
 
