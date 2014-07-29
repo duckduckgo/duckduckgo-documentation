@@ -11,7 +11,7 @@ There are several built-in Spice templates (both item and detail) which can be u
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
 For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
-
+<!-- /summary -->
 The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice instant answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
 ## Index
