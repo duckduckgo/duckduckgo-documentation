@@ -79,7 +79,7 @@ There are several template groups to choose from:
 
 ------
 
-## text
+## text template group
 
 Best used for simple, text-only results. This template offers a title, description and footer.
 
@@ -129,7 +129,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## info
+## info template group
 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
@@ -183,7 +183,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## products
+## products template group
 
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
@@ -243,7 +243,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## media
+## media template group
 
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 
@@ -304,7 +304,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## icon
+## icon template group
 
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 
@@ -350,7 +350,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## base
+## base template group
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 
@@ -426,7 +426,7 @@ The list of built-in Spice templates includes:
 
 ------
 <!-- /summary -->
-## record
+## record template
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
@@ -477,7 +477,7 @@ templates: {
 
 ------
 
-## icon_item
+## icon_item template
 
 ### Available Features
 
@@ -501,8 +501,8 @@ templates: {
 
 ------
 
-## text_item
-
+## text_item template
+ 
 ### Available Features
 
 - url [optional]
@@ -527,7 +527,7 @@ templates: {
 
 ------
 
-## text_detail
+## text_detail template
 
 ### Available Features
 
@@ -550,7 +550,7 @@ templates: {
 
 ------
 
-## basic_image_item
+## basic_image_item template
 
 ### Available Features
 
@@ -577,7 +577,7 @@ templates: {
 
 ------
 
-## products_item
+## products_item template
 
 ### Available Features
 
@@ -605,7 +605,7 @@ templates: {
 
 ------
 
-## products_detail
+## products_detail template
 
 ### Available Features
 
@@ -638,7 +638,7 @@ templates: {
 
 ------
 
-## products_item_detail
+## products_item_detail template
 
 ### Available Features
 
@@ -669,7 +669,7 @@ templates: {
 
 ------
 
-## basic_info_detail
+## basic_info_detail template
 
 ### Available Features
 
@@ -699,7 +699,7 @@ templates: {
 
 ------
 
-## base_item
+## base_item template
 
 ### Available Features
 
@@ -725,7 +725,7 @@ templates: {
 
 ------
 
-## base_detail
+## base_detail template
 
 ### Available Features
 
@@ -763,7 +763,7 @@ If the default tile dimensions are not perfect for your Spice result, you can ch
 
 ------
 
-## poster
+## poster variant
 
 Tall and thin, like a movie poster.
 
@@ -786,7 +786,7 @@ templates: {
 
 ------
 
-## narrow
+## narrow variant
 
 Narrower tile width, normal height.
 
@@ -809,7 +809,7 @@ templates: {
 
 ------
 
-## wide
+## wide variant
 
 Increased width, normal height.
 
@@ -831,7 +831,7 @@ none...*yet!*
 
 ------
 
-## xwide
+## xwide variant
 
 Super wide, normal height.
 
@@ -853,7 +853,7 @@ templates: {
 
 ------
 
-## video
+## video variant
 
 Shorter height, increased width.
 
