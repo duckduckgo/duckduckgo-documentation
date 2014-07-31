@@ -1,7 +1,14 @@
 # Instant Answer Design Style Guide
 
 ### Important Terms
+<!--
+<h2 class='summary' moreat='faq#how-do-i-install-a-missing-perl-dependency'>DuckDuckHack style guide</h2>
+<div markdown="1" class="summary-text">
 
+- [Design Style Guide](http://duck.co/duckduckhack/design_styleguide)
+- [Code Style Guide](http://duck.co/duckduckhack/code_styleguide) 
+</div>
+-->
 Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
 
 - #### Instant Answer Box

@@ -1,17 +1,14 @@
-# Spice JavaScript API Reference
-<!--
-<h2 class='summary' moreat='spice_js_api'>Spice JS API</h2>
-<div markdown="1" class="summary-text">
+## Spice JavaScript API Reference
+
 For a list of avaliable Spice JS functions see:
 
 - [DDG Namespace Functions](http://duck.co/duckduckhack/spice_js_api#ddg-namespace)
 - [Spice Namespace Functions](http://duck.co/duckduckhack/spice_js_api#spice-namespace)
-</div>
--->
-## DDG Namespace
+
+# DDG Namespace
 
 
-### get_query_encoded()
+## get_query_encoded()
 
 Provides the value of `DDG.get_query` as a URIEncoded string
 
@@ -19,7 +16,7 @@ Note: The query is trimmed (i.e. no leading or trailing spaces) and
 has any extra spaces within the query removed
 
 
-### get_query()
+## get_query()
 
 Provides the search query, as displayed in the search box
 
@@ -27,7 +24,7 @@ Note: The query is trimmed (i.e. no leading or trailing spaces) and
 has any extra spaces within the query removed
 
 
-### get_is_safe_search()
+## get_is_safe_search()
 
 Indicates if "safe search" is on, for the current query
 
@@ -36,7 +33,7 @@ Indicates if "safe search" is on, for the current query
 *boolean*,  Either `1` or `0` (on/off)
 
 
-### get_asset_path(spice_name, asset)
+## get_asset_path(spice_name, asset)
 
 Provides the path to the given asset, for the specified Spice Instant Answer
 
@@ -51,7 +48,7 @@ Example:
 **asset**:  *string*,  The filename of the asset, including extension
 
 
-### getRelevants(p)
+## getRelevants(p)
 
 Provides an array of relevant strings, given an input array of comparator strings
 
@@ -74,7 +71,7 @@ Only the `candidates` array is required, the other parameters are optional. `num
 **p**:  *object*,  An object containing an array of candidate strings and other optional parameters to be passed along to `DDG.isRelevant`, including: `num` - the maximum amount of results to return, `skipArray`, `minWordLength`, and `strict`
 
 
-### isRelevant(candidate, skipArray, minWordLength, strict)
+## isRelevant(candidate, skipArray, minWordLength, strict)
 
 Determines if the candidate string is relevant to **the search query**
 
@@ -89,7 +86,7 @@ Determines if the candidate string is relevant to **the search query**
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
 
-### stringsRelevant(s1, s2, skipArray, minWordLength, strict)
+## stringsRelevant(s1, s2, skipArray, minWordLength, strict)
 
 Determines if the candidate string is relevant to the given comparator string
 
@@ -106,7 +103,7 @@ Determines if the candidate string is relevant to the given comparator string
 **strict**:  *boolean*,  **[optional]** Turns on stricter relevancy checking, by switching candidate and comparator strings, Default: `0`
 
 
-### parse_link(string, wanted)
+## parse_link(string, wanted)
 
 Parses a string containing an anchor tag, ('<a href="URL">text</a>'), and returns the URL or text
 as indicated
@@ -128,7 +125,7 @@ Example:
 **wanted**:  *string*,  **[optional]** The piece of the link to return Default: `'url'`
 
 
-### getDateFromString(date)
+## getDateFromString(date)
 
 Provides a JavaScript `Date()` object for the given Date string
 
@@ -137,7 +134,7 @@ Provides a JavaScript `Date()` object for the given Date string
 **date**:  *string*,  Date string in UTC format with time (yyyy-mm-ddThh:mm:ss) or without (yyyy-mm-dd)
 
 
-### strip_html(html)
+## strip_html(html)
 
 Removes HTML tags/characters from a string
 
@@ -145,7 +142,7 @@ Removes HTML tags/characters from a string
 
 **html**:  *string*,  String containing HTML
 
-### getOrdinal(number)
+## getOrdinal(number)
 
 Provides the proper ordinal noun for a given number
 
@@ -158,7 +155,7 @@ Example:
 **number**:  *number*,  The number you need an ordinal for
 
 
-### strip_non_alpha(str)
+## strip_non_alpha(str)
 
 Removes Non-Alpha characters (`\W`) from a string
 
@@ -166,7 +163,7 @@ Removes Non-Alpha characters (`\W`) from a string
 
 **str**:  *sting*,  The input string to strip
 
-### capitalize(str)
+## capitalize(str)
 
 Capitalizes the first letter of the given string
 
@@ -175,7 +172,7 @@ Capitalizes the first letter of the given string
 **str**:  *string*,  String to capitalize
 
 
-### capitalizeWords(str)
+## capitalizeWords(str)
 
 Capitalizes the first letter of each word in the given string
 
@@ -184,7 +181,7 @@ Capitalizes the first letter of each word in the given string
 **str**:  *string*,  String to capitalize
 
 
-### getProperty(obj, pathname)
+## getProperty(obj, pathname)
 
 Provides the member of an object using dot separated path
 
@@ -210,10 +207,10 @@ Example:
 
 ------
 
-## Spice Namespace
+# Spice Namespace
 
 
-### add(ops)
+## add(ops)
 
 Add a Spice instant answer to the AnswerBar and display it
 
@@ -224,7 +221,7 @@ Note: A detailed explanation of `Spice.add()` can be found in [Displaying your S
 **ops**:  *object*,  The object containing all necessary information for creating a Spice instant answer
 
 
-### getDOM(id)
+## getDOM(id)
 
 Provides a scoped DOM for a given Spice id
 
@@ -243,7 +240,7 @@ Example:
 *object*, A jQuery object, matching the selector that targets the given Spice id
 
 
-### registerHelper(id, fn)
+## registerHelper(id, fn)
 
 Provides access to `Handlebars.registerHelper()` so you can register helpers for your Spice
 
@@ -254,7 +251,7 @@ Provides access to `Handlebars.registerHelper()` so you can register helpers for
 **fn**:  *function*,  The function we are registering
 
 
-### failed(id)
+## failed(id)
 
 Alerts the frontend that a Spice has stopped executing, preventing it from being displayed.
 

@@ -1,7 +1,5 @@
-# Triggers
-<!--
-<h2 class='summary' moreat='spice_triggers'>Spice triggers</h2>
-<div markdown="1" class="summary-text">
+## Triggers
+
 There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 
 [Word trigger example](http://duck.co/duckduckhack/spice_triggers#word-triggeres)
@@ -17,10 +15,6 @@ triggers start => "trigger my instant answer", "trigger myIA", "myIA";
 - `startend` &mdash; Word is at the beginning or end of the query
 - `any` &mdash; Word is anywhere in the query
 
-</div>
--->
-There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
-
 ## Word Triggers
 
 ### Usage
@@ -28,7 +22,7 @@ There are two types of triggers, **words** and **regex**. We insist that you use
 ```perl
 triggers <location> => <array of words and phrases>
 ```
-
+<!-- /summary -->
 #### Examples
 
 ```perl
@@ -49,7 +43,7 @@ triggers start => "starting phrase of query";
 triggers end => "ending phrase of query";
 ```
 
-### Trigger Locations
+## Trigger Locations
 
 - `start` &mdash; Word exists at the start of the query
 - `end` &mdash; Word exists at the end of the query
@@ -65,7 +59,7 @@ triggers end => "ending phrase of query";
 ```perl
 triggers <query_format> => <regular expression>
 ```
-
+<!-- /summary -->
 #### Examples
 
 ```perl
@@ -92,7 +86,7 @@ triggers query_raw => $regex;
 ## Regex Guards
 
 We much prefer you use **trigger words** when possible because they are faster on the backend. In some cases however, **regular expressions** are necessary, e.g. you need to trigger on sub-words. In this case we suggest you consider using a **word trigger** and supplement it with a **regex guard**. A regex guard is a return clause immediately inside the `handle` function.
-
+<!-- /summary -->
 A good example of this is the Base64 goodie. In this case we want to trigger on queries with the form "base64 encode/decode \<string\>". Here's an excerpt from [Base64.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Base64.pm) which shows how this case is handled using a word trigger, with a regex guard:
 
 ```perl

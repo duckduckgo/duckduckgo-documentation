@@ -1,8 +1,6 @@
-# Spice Helpers (Handlebars)
-<!--
-<span class="summary" moreat="spice_handlebars_helpers">Spice handlebars helpers</span>
-<span class="summary-text ellipsis" markdown="1">
-List of Spice specific Handlebars helpers:
+## Spice Helpers (Handlebars)
+
+Spice specific Handlebars helpers:
 
 - [concat](https://duck.co/duckduckhack/spice_handlebars_helpers/#concat): Concatenates all the elements in a collection
 
@@ -29,9 +27,10 @@ List of Spice specific Handlebars helpers:
 - [trim](https://duck.co/duckduckhack/spice_handlebars_helpers/#trim): Removes leading and trailing spaces from text 
 
 For the built-in helpers included with Handlebars see: [Handlebars Helpers](http://handlebarsjs.com/#helpers)
-</span>
--->
-###{{#concat}}
+
+<!-- /summary -->
+
+##{{#concat}}
 
 **Block Helper**
 
@@ -61,7 +60,7 @@ when `context` is:
 **conj**:  *string*,  **[optional]** Final separator, precedes last item. Default: `''`
 
 
-###{{#condense}}
+##{{#condense}}
 
 **Block Helper**
 
@@ -86,7 +85,7 @@ the truncation string to the output
 **{string**,  truncation **[optional]** The truncation string. Default: `'...'`
 
 
-###{{#stripHTML}}
+##{{#stripHTML}}
 
 **Block Helper**
 
@@ -97,7 +96,7 @@ Example:
 `{{#stripHTML stringWithHTML}}Here is my string: {{this}}{{/stripHTML}}`
 
 
-###{{#loop}}
+##{{#loop}}
 
 **Block Helper**
 
@@ -115,7 +114,7 @@ Example:
 ```
 
 
-###{{#each}}
+##{{#each}}
 
 **Block Helper**
 
@@ -148,7 +147,7 @@ will only do the first five items
 **to**:  *number*,  **[optional]** Index to end on. Default: array/object length
 
 
-###{{#keys}}
+##{{#keys}}
 
 **Block Helper**
 
@@ -164,7 +163,7 @@ Example:
 ```
 
 
-###{{include}}
+##{{include}}
 
 Loads the specified Handlebars template and applies it with
 the current context
@@ -189,7 +188,7 @@ Identical to:
 **with**:  *string*,  **[optional]** Context to use when including the template. Supports simple dot paths.
 
 
-###{{plural}}
+##{{plural}}
 
 Returns the value of `context` (assuming `context` is a **number**)
 and appends the singular or plural form of the specified word,
@@ -212,7 +211,7 @@ Will produce:
 **delimiter**:  *string*,  **[optional]** Format the number with the `numFormat` helper
 
 
-###{{numFormat}}
+##{{numFormat}}
 
 Delimits a number or string with multiple numbers,
 using commas or given delimiter
@@ -233,7 +232,7 @@ Example:
 
 **delimiter**:  *string*,  **[optional]** The delimiter string. Default: `','`
 
-###{{imageProxy}}
+##{{imageProxy}}
 
 Rewrite a URL as a DuckDuckGo image redirect
 
@@ -244,7 +243,7 @@ Example:
 produces: `/iu/?u={{imageURL}}`
 
 
-###{{trim}}
+##{{trim}}
 
 Removes leading and trailing spaces from text
 
@@ -253,7 +252,7 @@ Example:
 `{{trim stringWithSpaces}}`
 
 
-###{{ellipsis}}
+##{{ellipsis}}
 
 Shortens a string by removing words until string length is <= `limit` and
 appends an ellipsis ('...') to the output
