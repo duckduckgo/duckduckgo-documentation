@@ -1,10 +1,5 @@
-# Adding Your Spice to the AnswerBar
-<!--
-<h2 class='summary' moreat='spice_displaying'>Spice adding to the AnswerBar</h2>
-<div markdown="1" class="summary-text">
-`Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
-</div>
--->
+## Adding Your Spice to the AnswerBar
+
 `Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
 
 ## Spice.add Properties Overview
@@ -67,10 +62,8 @@ Spice.add({
   });
 ```
 
-# Essential Properties
-<!--
-<h2 class='summary' moreat='spice_displaying'>Spice add function</h2>
-<div markdown="1" class="summary-text">
+## Spice.add Properties
+
 Used to add your Spice to the AnswerBar and has the following required properties:
 
 - [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
@@ -84,8 +77,7 @@ Other properties and fuctions of `spice.add()` include:
 - [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
 
-</div>
--->
+<!-- /summary -->
 ### id `string` [required]
 
 A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
@@ -130,10 +122,8 @@ The name that will be used for your Spice's AnswerBar tab. The Spice system will
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
 
 
-# Instant Answer Metadata
-<!--
-<h2 class='summary' moreat='spice_displaying#instant-answer-metadata'>Spice metadata</h2>
-<div markdown="1" class="summary-text">
+## Instant Answer Metadata
+
 The following options are used to define elements of the **MetaBar**:
 
 - [searchTerm](http://duck.co/duckduckhack/spice_displaying#searchterm) Determines the item in the phrase "Showing 15 `term` "
@@ -145,8 +135,7 @@ The following options are used to define elements of the **MetaBar**:
 - [sourceUrl](http://duck.co/duckduckhack/spice_displaying#sourceurl) The URL to follow when the "More at" link is clicked
 - [sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
 
-</div>
--->
+<!-- /summary -->
 The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
 
 - ### searchTerm `string`
@@ -190,16 +179,7 @@ The following options are used to define elements of the **MetaBar** including t
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
 
 
-# Data Normalization
-<!--
-<h2 class='summary' moreat='spice_displaying#data-normalization'>Spice normalize data</h2>
-<div markdown="1" class="summary-text">
-normalize `function` [required depending on template and data]
-
-This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
-
-</div>
--->
+## Data Normalization
 
 - ### normalize `function` [required depending on template and data]
 
@@ -208,7 +188,7 @@ This allows you to normalize the `data` object (or array of items) before it is 
     This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
 
     If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
-
+<!-- /summary -->
     For example, if you have a `data` object that looks like this:
 
     ```javascript
@@ -263,15 +243,11 @@ This allows you to normalize the `data` object (or array of items) before it is 
     ```
 
 
-# Templates
-<!--
-<h2 class='summary' moreat='spice_displaying#templates'>Spice add templates</h2>
-<div markdown="1" class="summary-text">
-A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
-</div>
--->
+## Templates
+
 A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
+<!-- /summary -->
 - ### group `string` [required unless `item` or `detail` is specified]
 
     Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The various options for this will be explained later in the [template overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md).
@@ -324,20 +300,6 @@ A `templates: {}` property should be used to specify the template group and all 
 
 ------
 
-<!--
-<h2 class='summary' moreat='spice_displaying#templates'>Spice template options</h2>
-<div markdown="1" class="summary-text">
-Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `info` template). Depending on the templates being used, the features will vary. For example, the `info` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
-</div>
--->
-
-<!--
-<h2 class='summary' moreat='spice_displaying#templates'>Spice tile variants</h2>
-<div markdown="1" class="summary-text">
-Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants availble can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
-</div>
--->
-
 - ### options `object`
 
     Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
@@ -380,28 +342,16 @@ Sometimes the default height or width of the tile might not be perfect for your 
     }
     ```
 
-# Relevancy
-<!--
-<h2 class='summary' moreat='spice_displaying#relevancy'>Spice relevancy</h2>
-<div markdown="1" class="summary-text">
-If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
-</div>
--->
+## Relevancy
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
 In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
 
-### Relevancy Blocks
-<!--
-<h2 class='summary' moreat='spice_displaying#relevancy-blocks'>Spice relevancy block</h2>
-<div markdown="1" class="summary-text">
-A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an [example](http://duck.co/duckduckhack/spice_displaying#relevancy-blocks)
-</div>
--->
+## Relevancy Blocks
 
 A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
-
+<!-- /summary -->
 ```javascript
 // First we provide the name for the relevancy block, "primary"
 primary: [
@@ -468,16 +418,10 @@ category: [
     This indicates which property should be used to check for de-duplication. The given string supports dot path formatting, e.g., "item.foo.bar"
 
 
-# Sorting
-<!--
-<h2 class='summary' moreat='spice_displaying#sorting'>Spice sorting</h2>
-<div markdown="1" class="summary-text">
-In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
-</div>
--->
+## Sorting
 
 In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
-
+<!-- /summary -->
 ### sort_fields `object`
 
 This object specifies sorting fields (e.g., name, price, rating, reviews) and their respective comparison functions, which will be passed along to JavaScript's `sort()` method.
@@ -512,22 +456,17 @@ sort_default: {
 ```
 
 
-# Events
-<!--
-<h2 class='summary' moreat='spice_displaying#events'>Spice event handlers</h2>
-<div markdown="1" class="summary-text">
+## Events
+
 If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function:
 
 - [onItemSelect](http://duck.co/duckduckhack/spice_displaying#onitemselect-codefunctioncode) This event occurs each time a tile is selected
 - [onItemUnselect](http://duck.co/duckduckhack/spice_displaying#onitemunselect-codefunctioncode) This event occurs each time a tile is unselected
 - [onShow](http://duck.co/duckduckhack/spice_displaying#onshow-codefunctioncode) This event occurs when a Spice tab initially opens
 - [onHide](http://duck.co/duckduckhack/spice_displaying#onhide-codefunctioncode) This event occurs when a Spice tab is closed i.e. when another tab is selected
+<!-- /summary -->
 
-</div>
--->
-If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function.
-
-### onItemSelect `function`
+## onItemSelect `function`
 
 This event occurs each time a tile is selected.
 
@@ -541,16 +480,16 @@ onItemSelected: function(item) {
 
 **\*\*Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-### onItemUnselect `function`
+## onItemUnselect `function`
 
 This event occurs each time a tile is unselected.
 
 **\*\*Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-### onShow `function`
+## onShow `function`
 
 This event occurs when a Spice tab initially opens.
 
-### onHide `function`
+## onHide `function`
 
 This event occurs when a Spice tab is closed i.e. when another tab is selected.
