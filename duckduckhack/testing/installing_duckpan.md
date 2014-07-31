@@ -1,13 +1,5 @@
-# DuckPAN
-<!--
-<h2 class='summary' moreat='installing_duckpan'>DuckPAN</h2>
-<div markdown="1" class="summary-text">
+## DuckPAN
 
-**The DuckDuckHack Testing Tool**
-
-DuckPAN is an application built to provide developers a testing environment for DuckDuckHack Instant Answers. It allows you to test instant answer triggers and preview their visual design and output.
-</div>
--->
 **The DuckDuckHack Testing Tool**
 
 DuckPAN is an application built to provide developers a testing environment for DuckDuckHack Instant Answers. It allows you to test instant answer triggers and preview their visual design and output.
@@ -23,19 +15,6 @@ As well, **there have been reported issues with installing DuckPAN on Windows**,
 That being said, we are more than willing to help you debug any installation problems, so please come to us with your problems and we'll try to get your issues sorted out. If you'd like some help from our community, feel free to engage with them on the [DuckDuckGo forum](http://duck.co/).
 
 ## Getting Started
-<!--
-<h2 class='summary' moreat='installing_duckpan'>Using DuckPAN</h2>
-<div markdown="1" class="summary-text">
-
-The easiest way to get started with DuckPAN is to **use [our Codio Project Template](http://duck.co/duckduckhack/installing_duckpan#codio-project-template)**. Alternative ways to install DuckPAN include:
-
-- Use our DuckDuckHack development virtual machine image ([see below](http://duck.co/duckduckhack/installing_duckpan#duckduckhack-development-virtual-machine)); or
-- Use the Vagrant virtual environment to run DuckDuckHack ([see below](http://duck.co/duckduckhack/installing_duckpan#vagrant-virtual-environment)); or
-- Download and install [Ubuntu](http://www.ubuntu.com/download) yourself; or
-- Download and install a different Linux distro (but as mentioned above, you may run into issues).
-
-</div>
--->
 
 The easiest way to get started with DuckPAN is to **use [our Codio Project Template](#codio-project-template)**. Alternative ways to install DuckPAN include:
 
@@ -45,12 +24,6 @@ The easiest way to get started with DuckPAN is to **use [our Codio Project Templ
 - Download and install a different Linux distro (but as mentioned above, you may run into issues).
 
 ## Codio Project Template
-<!--
-<h2 class='summary' moreat='installing_duckpan'>Using DuckPAN with Codio</h2>
-<div markdown="1" class="summary-text">
-[See this tutorial for using DuckPan with Codio](http://duck.co/duckduckhack/installing_duckpan#codio-project-template)
-</div>
--->
 
 1. Create an account on [Codio](https://codio.com/).
 2. Go to https://codio.com/duckduckgo/duckduckhack and fork the project. Make sure to fork the project and the box.  
@@ -81,37 +54,18 @@ The purpose of our DuckDuckHack VM is to provide a sandbox for DuckDuckGo Instan
 - Firefox (Configured via fixtracking.com)
 - Platform specific virtualization guest tools (optimizes hardware emulation)
 
-#### For VirtualBox hosts
-<!--
-<h2 class='summary' moreat='installing_duckpan#for-virtualbox-hosts'>DuckDuckHack virtual machine</h2>
-<div markdown="1" class="summary-text">
-
-For VirtualBox hosts [(Install instructions)](http://duck.co/duckduckhack/installing_duckpan#using-the-virtual-machine)
+## For VirtualBox hosts
 
 ddh-vbox.rar  
 MD5: 1734373cbecc5820bb7d18406eb42854  
 https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
 
-For VMWare hosts [(Install instructions)](http://duck.co/duckduckhack/installing_duckpan#vmware-player-free)
+## For VMWare hosts
 
 ddh-vmw.rar:  
 MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e  
 https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
-
-
-</div>
--->
-
-ddh-vbox.rar  
-MD5: 1734373cbecc5820bb7d18406eb42854  
-https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
-
-#### For VMWare hosts
-
-ddh-vmw.rar:  
-MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e  
-https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
-
+<!-- /summary -->
 #### Roadmap
 
 - Docker support
@@ -120,7 +74,7 @@ https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
 ## Using the Virtual Machine
 
 To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
-
+<!-- /summary -->
 #### VirtualBox (free)
 
 Website: https://www.virtualbox.org/  
@@ -159,20 +113,11 @@ Once you have installed the virtual machine you should be able to start up the V
 
 
 ## Vagrant Virtual Environment
-<!--
-<h2 class='summary' moreat='installing_duckpan#vagrant-virtual-environment'>DuckDuckHack Vagrant Enviorment</h2>
-<div markdown="1" class="summary-text">
-
-The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM, but rather than downloading a prebuilt VM, Vagrant creates an environment for you based on the defined configuration.  Vagrant is an awesome tool for building development environments
-
-</div>
--->
-
 
 The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM, but rather than downloading a prebuilt VM, Vagrant creates an environment for you based on the defined configuration.  Vagrant is an awesome tool for building development environments.  One command - `vagrant up` - gets you a complete working environment in minutes.  Something go wrong with the environment?  No messing around with snapshots.  Tear the VM down and build a fresh environment.  The DuckDuckHack Vagrant environment uses Chef cookbooks and the DuckPAN installer script, so configuration is transparent and easily shared.
 
 Through the Vagrant configuration, you can easily switch back and forth between a headless-mode and the traditional VirtualBox interface.  The configuration defaults to headless.
-
+<!-- /summary -->
 ##### Setup Instructions
 
 1. Install: [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and [Bundler](http://bundler.io/#getting-started)
@@ -215,39 +160,6 @@ For more information, please see the (excellent) [Vagrant docs](http://docs.vagr
 
 
 ## Installing DuckPAN
-<!--
-<h2 class='summary' moreat='installing_duckpan#installing-duckpan'>Installing DuckPAN</h2>
-<div markdown="1" class="summary-text">
-
-To install DuckPan, open your terminal and run:
-
-```shell
-curl http://duckpan.org/install.pl | perl
-```
-
-[This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have.
-
-If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:
-
-```shell
-please now re-login to your user account and run it again!
-```
-
-If everything works, you should see this at the end:
-
-```shell
-EVERYTHING OK! You can now go hacking! :)
-```
-
-Note that with local::lib now installed, you can easily install [Perl modules](http://search.cpan.org/) with [cpanm](https://metacpan.org/module/cpanm).
-
-```shell
-cpanm App::DuckPAN
-App::DuckPAN is up to date.
-```
-
-</div>
--->
 
 **\*\*Note**: You don't need to install DuckPAN if you're using our DuckDuckHack virtual machine or the Vagrant virtual environment. It's already installed for you!
 
@@ -256,7 +168,7 @@ To install DuckPan, open your terminal and run:
 ```shell
 curl http://duckpan.org/install.pl | perl
 ```
-
+<!-- /summary -->
 [This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have.
 
 If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:

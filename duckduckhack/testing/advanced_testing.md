@@ -1,10 +1,4 @@
-# Advanced Testing
-<!--
-<h2 class='summary' moreat='advanced_testing'>DuckDuckHack test files</h2>
-<div markdown="1" class="summary-text">
-The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
-</div>
--->
+## Advanced Testing
 
 The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
 
@@ -14,7 +8,7 @@ Make a new file in the test directory **t/**. The name of the file should match 
 For example, if the name of your instant answer was **Chars**, the file would be `Chars.t`.
 
 The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
-
+<!-- /summary -->
 ```perl
 #!/usr/bin/env perl
 
@@ -113,7 +107,7 @@ Run your instant answer test file like this:
 ```txt
 perl -Ilib t/Chars.t
 ```
-
+<!-- /summary -->
 If successful, you should see a lot of **ok** lines.
 
 ```txt

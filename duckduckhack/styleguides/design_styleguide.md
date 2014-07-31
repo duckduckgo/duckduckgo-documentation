@@ -1,14 +1,7 @@
 # Instant Answer Design Style Guide
 
 ### Important Terms
-<!--
-<h2 class='summary' moreat='faq#how-do-i-install-a-missing-perl-dependency'>DuckDuckHack style guide</h2>
-<div markdown="1" class="summary-text">
 
-- [Design Style Guide](http://duck.co/duckduckhack/design_styleguide)
-- [Code Style Guide](http://duck.co/duckduckhack/code_styleguide) 
-</div>
--->
 Before we begin, please take a moment to familiarize yourself with these terms. They will be used throughout the documentation:
 
 - #### Instant Answer Box
@@ -21,7 +14,7 @@ Before we begin, please take a moment to familiarize yourself with these terms. 
 
 ---
 
-## Key Concepts
+## Style Guide Key Concepts
 
 When designing an instant answer there are a few key concepts to keep in mind:
 
@@ -29,11 +22,12 @@ When designing an instant answer there are a few key concepts to keep in mind:
 - [Simplicity](#simplicity)
 - [Flexibility](#flexibility)
 - [Space](#space)
+<!-- /summary -->
 
 ## Continuity
 
 All instant answers, regardless of their type (Spice, Goodie, Fathead or Longtail) should maintain visual design continuity. This means that the styling and placement of the Instant Answer Box elements should be the same for all instant answers. The following design elements should remain consistent across all instant answers:
-
+<!-- /summary -->
 - #### Instant Answer Width
   
   The width of instant answers is automatically calculated based on the users screen size and should not be modified. Individual users are able to change the width of the SERP by modifying their settings.
@@ -69,7 +63,7 @@ All instant answers, regardless of their type (Spice, Goodie, Fathead or Longtai
 ## Simplicity
 
 Aside from continuity, all instant answers should also be designed with simplicity in mind. The information an instant answer provides is the most important part, which means that it should be:
-
+<!-- /summary -->
 - #### Easy to Find
   
   Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether it's text, an image, a table, etc., should be easy to find within the Instant Answer Box. An instant answer's content should be succinct and to-the-point. Sentence form is preferred when feasible; however, large paragraphs of text should be avoided.

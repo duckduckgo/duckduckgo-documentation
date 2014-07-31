@@ -1,15 +1,11 @@
-# Testing
-<!--
-<h2 class='summary' moreat='testing_triggers'>Spice testing triggers</h2>
-<div markdown="1" class="summary-text">
-Testing is crucial to ensuring a smooth integration process.  This section of the documentation walks you through the process of testing everything that you've written so far. Don't forget to write your test files!
-</div>
--->
+## Testing
+
 Testing is crucial to ensuring a smooth integration process.  This section of the documentation walks you through the process of testing everything that you've written so far. Don't forget to write your test files!
 
 ## Interactive Testing
 
 Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
+<!-- /summary -->
 
 1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
     
