@@ -1,7 +1,7 @@
-# Goodies Tests
+## Goodies Tests
 
 For this example, we will look at the test file of the **RouterPasswords** Goodie, which is `t/RouterPasswords.t` [(link)](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/t/RouterPasswords.t).
-
+<!-- /summary -->
 ```perl
 #!/usr/bin/env perl
 
