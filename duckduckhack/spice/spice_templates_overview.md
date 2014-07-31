@@ -4,9 +4,9 @@
 
 There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
 
-- [Template Groups](http://duck.co/duckduckhack/spice_templates_overview#template-groups)  Defines the main type of view for the instant answer
-- [Built-In Spice Templates](http://duck.co/duckduckhack/spice_templates_overview#built-in-spice-templates)  Different views and options for each templat
-- [Tile Variants](http://duck.co/duckduckhack/spice_templates_overview#tile-variants)  Used to modify width of the tiles
+- [Template Groups](#template-groups)  Defines the main type of view for the instant answer
+- [Built-In Spice Templates](#built-in-spice-templates)  Different views and options for each templat
+- [Tile Variants](#tile-variants)  Used to modify width of the tiles
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
 
