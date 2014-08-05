@@ -84,7 +84,7 @@
    "goodie_advanced_handle_functions.md" : {
       "next" : [],
       "prev" : [
-         "goodie_triggers.md"
+         "goodie_tests.md"
       ]
    },
    "goodie_basic_tutorial.md" : {
@@ -109,9 +109,17 @@
          "design_styleguide.md"
       ]
    },
-   "goodie_triggers.md" : {
+   "goodie_tests.md" : {
       "next" : [
          "goodie_advanced_handle_functions.md"
+      ],
+      "prev" : [
+         "goodie_triggers.md"
+      ]
+   },
+   "goodie_triggers.md" : {
+      "next" : [
+         "goodie_tests.md"
       ],
       "prev" : [
          "goodie_basic_tutorial.md"
@@ -218,7 +226,7 @@
          "spice_templates_overview.md"
       ],
       "prev" : [
-         "spice_triggers.md"
+         "spice_tests.md"
       ]
    },
    "spice_frontend_walkthroughs.md" : {
@@ -275,9 +283,17 @@
          "spice_displaying.md"
       ]
    },
-   "spice_triggers.md" : {
+   "spice_tests.md" : {
       "next" : [
          "spice_displaying.md"
+      ],
+      "prev" : [
+         "spice_triggers.md"
+      ]
+   },
+   "spice_triggers.md" : {
+      "next" : [
+         "spice_tests.md"
       ],
       "prev" : [
          "spice_basic_tutorial.md"

@@ -10,6 +10,7 @@
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
+  - [Tests](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_tests.md)
   - [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 
@@ -17,6 +18,7 @@
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md)
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_triggers.md)
+  - [Tests](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_tests.md)
   - [Adding Your Spice to the AnswerBar](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md)
   - [Spice Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md)
   - [Frontend Walkthoughs](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_frontend_walkthroughs.md)
