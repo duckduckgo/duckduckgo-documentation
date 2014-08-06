@@ -52,7 +52,7 @@ Spice.add({
     },
 
     sort_fields: Object,
-    sort_default: Object,
+    sort_default: String|Object,
 
     onItemSelect: Function,
     onItemUnselect: Function,
@@ -417,11 +417,16 @@ sort_fields: {
 
 A string specifying the default `sort_field` to be used for initial sorting of the tiles.
 
+```javascript
+sort_default: 'name';
+```
+
 If you have used **more than one** relevancy block, `sort_default` can be given an `object` specifying the default `sort_field` for each relevancy block.
 
 For example, if we had two relevancy blocks named `primary` and `category` our `default_sort` could look like this:
 
 ```javascript
+//because we have two relevancy blocks... 
 sort_default: {
     primary: 'name',
     category: 'rating'
