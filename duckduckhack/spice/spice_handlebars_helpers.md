@@ -1,7 +1,36 @@
-# Spice Helpers (Handlebars)
+## Spice Helpers (Handlebars)
 
+Spice specific Handlebars helpers:
 
-###{{#concat}}
+- [concat](https://duck.co/duckduckhack/spice_handlebars_helpers/#concat): Concatenates all the elements in a collection
+
+- [condense](https://duck.co/duckduckhack/spice_handlebars_helpers/#condense): Shortens a string
+
+- [stripHTML](https://duck.co/duckduckhack/spice_handlebars_helpers/#stripHTML): Strips HTML tags/elements from text
+
+- [loop](https://duck.co/duckduckhack/spice_handlebars_helpers/#loop): Counts from zero to the value of `context`
+
+- [each](https://duck.co/duckduckhack/spice_handlebars_helpers/#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
+
+- [keys](https://duck.co/duckduckhack/spice_handlebars_helpers/#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
+
+- [include](https://duck.co/duckduckhack/spice_handlebars_helpers/#include): Loads the specified Handlebars template and applies it with the current context
+
+- [plural](https://duck.co/duckduckhack/spice_handlebars_helpers/#plural): Returns the value of `context` and appends the singular or plural form of the specified word
+
+- [numFormat](https://duck.co/duckduckhack/spice_handlebars_helpers/#numFormat): Delimits a number or string with multiple numbers, using commas or given delimiter
+
+- [imageProxy](https://duck.co/duckduckhack/spice_handlebars_helpers/#imageProxy): Rewrite a URL as a DuckDuckGo image redirect
+
+- [ellipsis](https://duck.co/duckduckhack/spice_handlebars_helpers/#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
+
+- [trim](https://duck.co/duckduckhack/spice_handlebars_helpers/#trim): Removes leading and trailing spaces from text 
+
+For the built-in helpers included with Handlebars see: [Handlebars Helpers](http://handlebarsjs.com/#helpers)
+
+<!-- /summary -->
+
+##{{#concat}}
 
 **Block Helper**
 
@@ -31,7 +60,7 @@ when `context` is:
 **conj**:  *string*,  **[optional]** Final separator, precedes last item. Default: `''`
 
 
-###{{#condense}}
+##{{#condense}}
 
 **Block Helper**
 
@@ -56,7 +85,7 @@ the truncation string to the output
 **{string**,  truncation **[optional]** The truncation string. Default: `'...'`
 
 
-###{{#stripHTML}}
+##{{#stripHTML}}
 
 **Block Helper**
 
@@ -67,7 +96,7 @@ Example:
 `{{#stripHTML stringWithHTML}}Here is my string: {{this}}{{/stripHTML}}`
 
 
-###{{#loop}}
+##{{#loop}}
 
 **Block Helper**
 
@@ -85,7 +114,7 @@ Example:
 ```
 
 
-###{{#each}}
+##{{#each}}
 
 **Block Helper**
 
@@ -118,7 +147,7 @@ will only do the first five items
 **to**:  *number*,  **[optional]** Index to end on. Default: array/object length
 
 
-###{{#keys}}
+##{{#keys}}
 
 **Block Helper**
 
@@ -134,7 +163,7 @@ Example:
 ```
 
 
-###{{include}}
+##{{include}}
 
 Loads the specified Handlebars template and applies it with
 the current context
@@ -159,7 +188,7 @@ Identical to:
 **with**:  *string*,  **[optional]** Context to use when including the template. Supports simple dot paths.
 
 
-###{{plural}}
+##{{plural}}
 
 Returns the value of `context` (assuming `context` is a **number**)
 and appends the singular or plural form of the specified word,
@@ -182,7 +211,7 @@ Will produce:
 **delimiter**:  *string*,  **[optional]** Format the number with the `numFormat` helper
 
 
-###{{numFormat}}
+##{{numFormat}}
 
 Delimits a number or string with multiple numbers,
 using commas or given delimiter
@@ -203,7 +232,7 @@ Example:
 
 **delimiter**:  *string*,  **[optional]** The delimiter string. Default: `','`
 
-###{{imageProxy}}
+##{{imageProxy}}
 
 Rewrite a URL as a DuckDuckGo image redirect
 
@@ -214,7 +243,7 @@ Example:
 produces: `/iu/?u={{imageURL}}`
 
 
-###{{trim}}
+##{{trim}}
 
 Removes leading and trailing spaces from text
 
@@ -223,7 +252,7 @@ Example:
 `{{trim stringWithSpaces}}`
 
 
-###{{ellipsis}}
+##{{ellipsis}}
 
 Shortens a string by removing words until string length is <= `limit` and
 appends an ellipsis ('...') to the output

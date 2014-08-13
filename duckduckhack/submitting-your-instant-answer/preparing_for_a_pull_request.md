@@ -1,4 +1,4 @@
-# Preparing for Pull Request
+## Preparing for Pull Request
 
 By now you should have:
 

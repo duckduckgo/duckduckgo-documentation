@@ -1,7 +1,7 @@
-# Basic Goodie Tutorial
+## Basic Goodie Tutorial
 
 In this tutorial, we'll be making a Goodie instant answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
-
+<!-- /summary -->
 ###### chars.pm
 
 ```perl
@@ -28,7 +28,7 @@ To begin, open your favourite text editor like [gedit](http://projects.gnome.org
 package DDG::Goodie::Chars;
 # ABSTRACT: Give the number of characters (length) of the query.
 ```
-
+<!-- /summary -->
 Each instant answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Goodie (or any new instant answer), you would change **Chars** to the name of the instant answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
 
 The second line is a special comment line that is used for documentation purposes.
@@ -70,7 +70,7 @@ handle remainder => sub {
 Once triggers are specified, we define how to *handle* the query. `handle` is another keyword, similar to **triggers**.
 
 You can *handle* different parts of the search query, but the most common is the **remainder**, which refers to the remainder of the query, after the first matched trigger word/phrase has been removed. 
-
+<!-- /summary -->
 For example, if the query was "**chars this is a test**", the trigger would be *chars* and the remainder would be *this is a test*.
 
 Now let's add a few more lines to complete the handle function:

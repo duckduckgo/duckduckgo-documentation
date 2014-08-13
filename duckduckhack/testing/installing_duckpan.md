@@ -1,11 +1,10 @@
-# DuckPAN [![Build Status](https://travis-ci.org/duckduckgo/p5-app-duckpan.png?branch=master)](https://travis-ci.org/duckduckgo/p5-app-duckpan)
+## DuckPAN ![Build Status](https://travis-ci.org/duckduckgo/p5-app-duckpan.png?branch=master)
 
 **The DuckDuckHack Testing Tool**
 
 DuckPAN is an application built to provide developers a testing environment for DuckDuckHack Instant Answers. It allows you to test instant answer triggers and preview their visual design and output.
 
 ## Disclaimer
-
 Currently, DuckPAN has been developed on, and works well with **Ubuntu**. More specifically, we regularly build, test and run DuckPAN on **Ubuntu 12.04**. We have also successfully installed and run DuckPAN on older and newer Ubuntu releases, e.g. Ubuntu 10.04, 12.10, and 13.04.
 
 Developers have also been successful running DuckPAN on other Linux distros (e.g. Arch, Debian) and on Mac OS X 10.8 and later, but **we make no promises that it will work outside of Ubuntu**.
@@ -58,36 +57,19 @@ After installing DuckPAN, be sure to checkout the [Using DuckPAN](#using-duckpan
 
 Try typing in queries like "define hello," and see if it works for you. You might be wondering why there are no search results in the page. It's because DuckPAN isn't configured to work with search results—it's only for testing instant answers.
 
-------
 
-## DuckDuckHack Development Virtual Machine
-
-The purpose of our DuckDuckHack VM is to provide a sandbox for DuckDuckGo Instant Answer development that is quick to set up and start working with.
-
-#### DDH VM Breakdown
-
-- Ubuntu 12.04 LTS
-- Perl 5.16.3 (managed by Perlbrew)
-- build-essential (for make, gcc, cc, etc)
-- cpanminus (managed by Perlbrew)
-- App::DuckPAN
-- XFCE Window Manager
-- SublimeText, vim, emacs
-- Firefox (Configured via fixtracking.com)
-- Platform specific virtualization guest tools (optimizes hardware emulation)
-
-#### For VirtualBox hosts
+## For VirtualBox hosts
 
 ddh-vbox.rar  
 MD5: 1734373cbecc5820bb7d18406eb42854  
 https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
 
-#### For VMWare hosts
+## For VMWare hosts
 
 ddh-vmw.rar:  
 MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e  
 https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
-
+<!-- /summary -->
 #### Roadmap
 
 - Docker support
@@ -96,7 +78,7 @@ https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
 ### Using the Virtual Machine
 
 To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
-
+<!-- /summary -->
 #### VirtualBox (free)
 
 Website: https://www.virtualbox.org/  
@@ -140,7 +122,7 @@ Once you have installed the virtual machine you should be able to start up the V
 The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM, but rather than downloading a prebuilt VM, Vagrant creates an environment for you based on the defined configuration.  Vagrant is an awesome tool for building development environments.  One command - `vagrant up` - gets you a complete working environment in minutes.  Something go wrong with the environment?  No messing around with snapshots.  Tear the VM down and build a fresh environment.  The DuckDuckHack Vagrant environment uses Chef cookbooks and the DuckPAN installer script, so configuration is transparent and easily shared.
 
 Through the Vagrant configuration, you can easily switch back and forth between a headless-mode and the traditional VirtualBox interface.  The configuration defaults to headless.
-
+<!-- /summary -->
 ### Setup Instructions
 
 1. Install: [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and [Bundler](http://bundler.io/#getting-started)
@@ -192,7 +174,7 @@ To install DuckPAN, open your terminal and run:
 ```shell
 curl http://duckpan.org/install.pl | perl
 ```
-
+<!-- /summary -->
 [This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have.
 
 If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:

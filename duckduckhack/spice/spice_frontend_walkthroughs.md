@@ -1,15 +1,18 @@
-# Index
+## Spice Frontend Walkthoughs 
 
 - [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
 - [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
 - [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)
 - [Walkthrough #4: Quixey (Advanced)](#walkthrough-4-quixey-advanced)
 
+<!-- /summary -->
+
 ------
 
 ## Walkthrough #1 - Alternative.To (Simple)
 
 The Alternative.To instant answer is very similar to NPM in that it's also relatively simple. However, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
+<!-- /summary -->
 
 ###### alternative_to.js
 

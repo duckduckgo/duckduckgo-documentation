@@ -1,4 +1,18 @@
-# Advanced Spice Handlers
+##Spice Handlers
+
+- [Multiple Placeholders in Spice To URL](http://duck.co/duckduckhack/spice_advanced_backend#Multiple-Placeholders-in-Spice-To-URL)
+
+- [Returning Multiple Values (to Spice From)](http://duck.co/duckduckhack/spice_advanced_backend#Returning-Multiple-Values-to-Spice-From)
+
+- [API Keys](http://duck.co/duckduckhack/spice_advanced_backend#api-keys)
+
+- [JSON -> JSONP](http://duck.co/duckduckhack/spice_advanced_backend#json-gt-jsonp)
+
+- [Pure JS functions](http://duck.co/duckduckhack/spice_advanced_backend#pure-js-functions)
+
+- [Caching API Responses](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-responses)
+
+- [Caching API Calls](http://duck.co/duckduckhack/spice_advanced_backend#caching-api-calls)
 
 ## Multiple Placeholders in Spice To URL
 
@@ -22,7 +36,7 @@ handle remainder => sub {
   return;
 }
 ```
-
+<!-- /summary -->
 Then the the string `10-100` would be sent to the `spice from` regexp, which would capture the two numbers into `$1` and `$2`. These two placeholders are then used to replace `$1` and `$2` in the `spice to` URL:
 
 ```perl
@@ -88,7 +102,7 @@ The return of **call** will run whatever is in the **call\_type** setting. **sel
 ## Caching
 
 Spice instant answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
-
+<!-- /summary -->
 ### Caching API Responses
 
 By default, we cache API responses for for **24 hours**. We use [nginx](https://duckduckgo.com/?q=nginx) and get this functionality by using the [proxy_cache_valid](http://wiki.nginx.org/HttpProxyModule#proxy_cache_valid) directive. You can override our default behavior by setting your own `spice proxy_cache_valid` directive like in the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm):

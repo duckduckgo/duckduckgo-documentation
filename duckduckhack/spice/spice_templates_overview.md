@@ -1,12 +1,20 @@
 # Spice Templates
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+##Spice Template Summary
 
+There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
+
+- [Template Groups](#template-groups)  Defines the main type of view for the instant answer
+- [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each templat
+- [Tile Variants](#tile-variants)  Used to modify width of the tiles
+
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+<!-- /summary -->
 For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
 The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice instant answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
-## Index
+## Index of Spice Templates
 
 - [**Template Groups**](#template-groups)
     - [Default Template Options](#default-template-options)
@@ -41,8 +49,7 @@ The purpose of this page is to help you understand what each template group look
 -->
 
 ------
-
-# Template Groups
+## Template Groups
 
 There are several template groups to choose from:
 
@@ -52,6 +59,7 @@ There are several template groups to choose from:
 - [media](#media)
 - [icon](#icon)
 - [base](#base)
+<!-- /summary -->
 
 ### Default Template Options
 
@@ -71,7 +79,7 @@ There are several template groups to choose from:
 
 ------
 
-## text
+## text template group
 
 Best used for simple, text-only results. This template offers a title, description and footer.
 
@@ -88,7 +96,7 @@ templates: {
     group: 'text'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -121,7 +129,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## info
+## info template group
 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
@@ -138,7 +146,7 @@ templates: {
     group: 'info'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -175,7 +183,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## products
+## products template group
 
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
@@ -192,7 +200,7 @@ templates: {
     group: 'products'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -235,7 +243,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## media
+## media template group
 
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 
@@ -252,7 +260,7 @@ templates: {
     group: 'media'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -296,7 +304,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## icon
+## icon template group
 
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 
@@ -313,7 +321,7 @@ templates: {
     group: 'icon'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -342,7 +350,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## base
+## base template group
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 
@@ -359,7 +367,7 @@ templates: {
     group: 'base'
 }
 ```
-
+<!-- /summary -->
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -400,7 +408,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-# Built-In Spice Templates
+## Built-In Spice Templates
 
 The list of built-in Spice templates includes:
 
@@ -417,13 +425,13 @@ The list of built-in Spice templates includes:
 - [base_detail](#basedetail)
 
 ------
-
-## record
+<!-- /summary -->
+## record template
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
 **\*\*Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.  An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting. 
-
+<!-- /summary -->
 For example this is how your Spice code should look when using the **record** template:
 
 ```javascript
@@ -449,7 +457,6 @@ templates: {
     }
 }
 ```
-
 ### Available Features
 
 *none*
@@ -470,7 +477,7 @@ templates: {
 
 ------
 
-## icon_item
+## icon_item template
 
 ### Available Features
 
@@ -483,7 +490,7 @@ templates: {
 ### Template Diagram
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
-
+<!-- /summary -->
 ### Template groups using the "icon_item" template:
 
 - [icon](#icon)
@@ -494,8 +501,8 @@ templates: {
 
 ------
 
-## text_item
-
+## text_item template
+ 
 ### Available Features
 
 - url [optional]
@@ -507,7 +514,7 @@ templates: {
 ### Template Diagram
 
 ![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png)
-
+<!-- /summary -->
 ### Template groups using the "text_item" template:
 
 - [text](#text)
@@ -520,7 +527,7 @@ templates: {
 
 ------
 
-## text_detail
+## text_detail template
 
 ### Available Features
 
@@ -531,7 +538,7 @@ templates: {
 ### Template Diagram
 
 ![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png)
-
+<!-- /summary -->
 ### Template groups using the "text_detail" template:
 
 - [text](#text)
@@ -543,7 +550,7 @@ templates: {
 
 ------
 
-## basic_image_item
+## basic_image_item template
 
 ### Available Features
 
@@ -557,7 +564,7 @@ templates: {
 ### Template Diagram
 
 ![basic_image_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png)
-
+<!-- /summary -->
 ### Template groups using the "basic_image_item" template:
 
 - [info](#info)
@@ -570,7 +577,7 @@ templates: {
 
 ------
 
-## products_item
+## products_item template
 
 ### Available Features
 
@@ -585,7 +592,7 @@ templates: {
 ### Template Diagram
 
 ![products_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png)
-
+<!-- /summary -->
 ### Template groups using the "products_item" template:
 
 - [products](#products)
@@ -598,7 +605,7 @@ templates: {
 
 ------
 
-## products_detail
+## products_detail template
 
 ### Available Features
 
@@ -616,7 +623,7 @@ templates: {
 ### Template Diagram
 
 ![products_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png)
-
+<!-- /summary -->
 ### Template groups using the "products_detail" template:
 
 - [products](#products)
@@ -631,7 +638,7 @@ templates: {
 
 ------
 
-## products_item_detail
+## products_item_detail template
 
 ### Available Features
 
@@ -647,7 +654,7 @@ templates: {
 ### Template Diagram
 
 ![products_item_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png)
-
+<!-- /summary -->
 ### Template groups using the "products_item_detail" template:
 
 - [products](#products)
@@ -662,7 +669,7 @@ templates: {
 
 ------
 
-## basic_info_detail
+## basic_info_detail template
 
 ### Available Features
 
@@ -675,7 +682,7 @@ templates: {
 ### Template Diagram
 
 ![basic_info_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail.png)
-
+<!-- /summary -->
 ### Example with Auxiliary Information Box:
 
 ![basic_info_detail_w_aux template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png)
@@ -692,7 +699,7 @@ templates: {
 
 ------
 
-## base_item
+## base_item template
 
 ### Available Features
 
@@ -702,7 +709,7 @@ templates: {
 ### Template Diagram
 
 ![base_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item.png)
-
+<!-- /summary -->
 ### Complex Example
 
 ![base_item template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_complex.png)
@@ -718,7 +725,7 @@ templates: {
 
 ------
 
-## base_detail
+## base_detail template
 
 ### Available Features
 
@@ -727,7 +734,7 @@ templates: {
 ### Template Diagram
 
 ![base_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail.png)
-
+<!-- /summary -->
 ### Complex Example
 
 ![base_detail template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail_complex.png)
@@ -744,8 +751,7 @@ templates: {
 
 ------
 
-
-# Tile Variants
+## Tile Variants
 
 If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):
 
@@ -757,7 +763,7 @@ If the default tile dimensions are not perfect for your Spice result, you can ch
 
 ------
 
-## poster
+## poster variant
 
 Tall and thin, like a movie poster.
 
@@ -772,7 +778,7 @@ templates: {
     }
 }
 ```
-
+<!-- /summary -->
 ### Examples
 
 - ["the dark knight movie"](https://duckduckgo.com/?q=the+dark+knight+movie)
@@ -780,7 +786,7 @@ templates: {
 
 ------
 
-## narrow
+## narrow variant
 
 Narrower tile width, normal height.
 
@@ -795,7 +801,7 @@ templates: {
     }
 }
 ```
-
+<!-- /summary -->
 ### Examples
 
 - ["alarm clock apps"](https://duckduckgo.com/?q=alarm+clock+apps)
@@ -803,7 +809,7 @@ templates: {
 
 ------
 
-## wide
+## wide variant
 
 Increased width, normal height.
 
@@ -818,14 +824,14 @@ templates: {
     }
 }
 ```
-
+<!-- /summary -->
 ### Examples
 
 none...*yet!*
 
 ------
 
-## xwide
+## xwide variant
 
 Super wide, normal height.
 
@@ -847,7 +853,7 @@ templates: {
 
 ------
 
-## video
+## video variant
 
 Shorter height, increased width.
 

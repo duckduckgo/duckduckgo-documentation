@@ -1,4 +1,4 @@
-# Spice Overview
+## Spice Overview
 
 Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
 
@@ -8,11 +8,11 @@ Spice instant answers are triggered by a backend Perl component that then calls 
 
 The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to display a Spice result at the top of the DuckDuckGo search results page.
 
-### Spice Templates
+## Spice Templates
 
 In order to display the result, the Spice callback function needs to specify a template, which will determine how the result looks. There are several built-in templates to choose from and you are able to choose whichever template works best for the given data and desired output.
 
-### Third-Party Libraries
+## Third-Party Libraries
 
 Aside from HTML and CSS, the Spice frontend also utilizes the following third-party libraries:
 
@@ -20,7 +20,7 @@ Aside from HTML and CSS, the Spice frontend also utilizes the following third-pa
 - and [Handlebars](http://handlebarsjs.com) v1.3.0
 
 If you're not already familiar with Handlebars, *please* read the [Handlebars documentationn](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
-
+<!-- /summary -->
 Likewise, using jQuery is not required for making a Spice instant answer. But, it does offer certain benefits, such as cross-browser compatible implementations of various JavaScript functions. For example, jQuery's `$.each()` should be used in place of the native `Array.prototype.forEach()`, as it does **not** work in IE 6,7,8.
 
 Later, we will walk you through several examples, ranging from simple to complex, which will explain how to use templates and make your instant answers look awesome :)

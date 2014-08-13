@@ -73,13 +73,14 @@ Template groups:
 - products: product information with icons, rating, and price
 - products_simple: less structured variation of products
 - map
+<!-- /summary -->
 
-### Text template group
+## Text template group
 
 Tiles support title, subtitle, and content and footer sub templates which the IA can provide.
 
 ![github using text group, showing tiles](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/github_duckduckgo.png)
-
+<!-- /summary -->
 [github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/github) using the text template group with a custom footer
 
 ------
@@ -88,19 +89,19 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 
 [dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/dictionary/definition) uses a custom template for the title in detail view.
 
-### Icon
+## Icon
 
 Similar to text but with an embedded small image in the upper right. Title, description, custom footer template, image.
 
 ![AlternativeTo using the icon template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/icon_tile.png)
 
 
-### Info
+## Info
 
 Info is a sophisticated template for showing summary information with an optional image and embedded auxiliary box. Both the text and auxiliary box are expandable, by default showing four lines of text in height. Both the text and the auxiliary box can contain arbitrary content by using an IA-defined template.
 
 ![Last.fm using the info template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/artist.png)
-
+<!-- /summary -->
 The info template also supports an embedded auxiliary box on the right.
 There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-spice/issues/684) to display the artist's top tracks in the auxiliary box.
 
@@ -111,12 +112,12 @@ Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/
 Because Drinks doesn't have an image, it's not shown and the text is aligned left to fill the space. Since the text already fits within four lines, no "Show More" expander button is displayed.
 
 
-### Products
+## Products
 
 The products template group consists of templates for tiles and detail that are structured for items that can be bought. Rating, brand, and price are a few of the things that we need. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
 
 ![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/products_detail.png)
-
+<!-- /summary -->
 ------
 
 ![Tile comparison: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/tile_comparison.png)
@@ -129,7 +130,7 @@ InTheaters uses the products_simple template group, but simplifies the tile even
 
 [InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "action" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
 
-### Map
+## Map
 
 IAs can present their data using an interactive map. [Zipcode](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/zipcode) is a simple example that centers the map on this zip (postal) code.
 

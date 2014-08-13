@@ -1,4 +1,4 @@
-# Goodie Instant Answers
+## Goodie Instant Answers
 
 Goodies are Perl-only instant answers that can essentially be contained within one Perl function. They are evaluated on our servers and include no external calls to other services.
 

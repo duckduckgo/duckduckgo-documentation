@@ -1,6 +1,8 @@
 # DuckDuckHack Vision
 
+## DuckDuckHack Email List
 Join the [DuckDuckHack email list](https://www.listbox.com/subscribe/?list_id=197814) to reach out to us and other developers with feedback/questions!
+<!-- /summary -->
 
 ###The goal of DuckDuckHack is to provide users with relevant and useful instant answers.
 
