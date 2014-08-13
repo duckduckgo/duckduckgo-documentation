@@ -43,7 +43,15 @@ Submit GitHub issues in the [appropriate repo](http://github.com/duckduckgo).
 
 ### What if there are instant answer conflicts?
 
-The ultimate arbiter is the user, and that's the perspective we take. In other words, we ask "what is best for the user experience?" That said, it often makes sense to combine ideas into one, better instant answer.
+Instant answer sources often compete to answer the same searches. In a lot of cases, the experience can be blended together so that the user is shown answers from more than one source. Our long-term vision for instant answers involves multiple sources used in that way.
+
+There are times, though, where one source does a drastically better job of answering a particular query set. In those cases, the source used for those queries should be the source most capable of delivering the best possible user experience. Our community evaluates those in a few ways: 
+
+- Consistent performance (is the service reliable?) 
+- Speed (does the service return results fast enough?) 
+- Quality (does the service answer the queries better than any other service?)
+
+If you think you have a source that is better, let's talk about it on the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814).
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
@@ -97,11 +105,12 @@ Email them! - If you explain what it's for, they might be willing to create and 
 
 ### Can I use an API that returns XML?
 
-Sorry, but **no**. We currently don't support XML. We're considering it though...
+Sorry, but **not right now**. XML support is coming soon.
+**Note:** If an API supports both JSON and XML, we *stronly enourage* you to use **JSON**.
 
 ### Can I use an API that returns HTML or a String? 
 
-If the response is a single string, then yes - you can use `zci wrap_jsonp_callback`. You can read more about that [here](#). Or take a look at the [Automeme](https://github.com/duckduckgo/zeroclickinfo-spice/blob/spice2/lib/DDG/Spice/Automeme.pm#L8) instant answer. If the response is more complicated, then sorry but **no**.
+Sorry, but **no**. We currently don't support HTML or plain text API's.
 
 ### Can I use the 'X', 'Y' or 'Z' JavaScript library?
 
