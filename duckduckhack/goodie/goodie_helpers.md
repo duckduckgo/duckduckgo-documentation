@@ -24,6 +24,11 @@ $perl_number *= 2;
 $output = $styler->for_display($perl_number);
 ```
 
+To aid with ambiguity `number_style_for()` can also take an array to parse as a set:
+```
+my @numbers = qw(123,450 543.43);
+my $styler = number_style_for(@numbers);
+```
 ### Date Parsing
 
 Dates are especially complicated as different cultures use different formats; to this end we have the Date role, a simple usage of which is:
