@@ -5,7 +5,7 @@ A few commonly used things are wrapped up into useful helpers that can be easily
 ### Numbers
 
 Often matching and outputting numbers intelligently is required, for this the NumberStyler role is ideal:
-```
+```perl
 with 'DDG::GoodieRole::NumberStyler';
 # get the regex for something that "looks like a number"
 my $number_re = number_style_regex();
@@ -25,14 +25,14 @@ $output = $styler->for_display($perl_number);
 ```
 
 To aid with ambiguity `number_style_for()` can also take an array to parse as a set:
-```
+```perl
 my @numbers = qw(123,450 543.43);
 my $styler = number_style_for(@numbers);
 ```
 ### Date Parsing
 
 Dates are especially complicated as different cultures use different formats; to this end we have the Date role, a simple usage of which is:
-```
+```perl
 with 'DDG::GoodieRole::Dates';
 
 # get the regex for something that "looks like a date"; this doesn't mean it *is* a valid date
@@ -50,7 +50,7 @@ $parsed_date->add( days => 1 );
 $output = date_output_string($parsed_date);
 ```
 To aid in distinguishing amiguous formats (such as 01/02/2003) multiple strings can be parsed collectively as one format like so:
-```
+```perl
 my @date_strings = qw(01/02/2001 02/13/2002);
 
 # by parsing as below, it will understand the user meant 2nd Jan 2001 and 13th Feb 2002
@@ -63,7 +63,6 @@ Also available for use are:
 * `month_regex()` - matches either short or full month names
 * `full_day_of_week_regex()` -  maches full weekday i.e. Wednesday
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
-* `parse_string_to_date()` - Returns a `DateTime` of the string when in `date_regex()` format or `undef` if the date is invalid
 * `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
  
@@ -72,7 +71,7 @@ Also available for use are:
 
 In all situations when the querystring is output as html, it *must be encoded*; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for goodies in the form of:
 
-```
+```perl
 # simple scalar:
 my $safe_to_output = html_enc($query_string);
 
