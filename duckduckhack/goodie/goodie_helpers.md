@@ -35,10 +35,11 @@ Dates are especially complicated as different cultures use different formats; to
 ```
 with 'DDG::GoodieRole::Dates';
 
-# get the regex for somethig that "looks like a date"
+# get the regex for something that "looks like a date"; this doesn't mean it *is* a valid date
 my $date_regex = date_regex();
 
 my $probable_date = qr/($date_regex)/i;
+# returns a DateTime object or undef if the date is invalid
 my $parsed_date = parse_string_to_date($probable_date);
 return unless $parsed_date;
 
