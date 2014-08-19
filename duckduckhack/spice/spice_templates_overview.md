@@ -5,7 +5,7 @@
 There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
 
 - [Template Groups](#template-groups)  Defines the main type of view for the instant answer
-- [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each templat
+- [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each template
 - [Tile Variants](#tile-variants)  Used to modify width of the tiles
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
@@ -18,30 +18,30 @@ The purpose of this page is to help you understand what each template group look
 
 - [**Template Groups**](#template-groups)
     - [Default Template Options](#default-template-options)
-    - [text](#text)
-    - [info](#info)
-    - [products](#products)
-    - [media](#media)
-    - [icon](#icon)
-    - [base](#base)
-- [**Built-In Spice Templates**](#built-in-spice-templates)
-    - [record](#record)
-    - [icon_item](#iconitem)
-    - [text_item](#textitem)
-    - [text_detail](#textdetail)
-    - [basic_image_item](#basicimageitem)
-    - [products_item](#productsitem)
-    - [products_detail](#productsdetail)
-    - [products_item_detail](#productsitemdetail)
-    - [basic_info_detail](#basicinfodetail)
-    - [base_item](#baseitem)
-    - [base_detail](#basedetail)
+    - [text](#text-template-group)
+    - [info](#info-template-group)
+    - [products](#products-template-group)
+    - [media](#media-template-group)
+    - [icon](#icon-template-group)
+    - [base](#base-template-group)
+- [**Built-In Spice Templates**](#builtin-spice-templates)
+    - [record](#record-template)
+    - [icon_item](#iconitem-template)
+    - [text_item](#textitem-template)
+    - [text_detail](#textdetail-template)
+    - [basic_image_item](#basicimageitem-template)
+    - [products_item](#productsitem-template)
+    - [products_detail](#productsdetail-template)
+    - [products_item_detail](#productsitemdetail-template)
+    - [basic_info_detail](#basicinfodetail-template)
+    - [base_item](#baseitem-template)
+    - [base_detail](#basedetail-template)
 - [**Tile Variants**](#tile-variants)
-    - [poster](#poster)
-    - [narrow](#narrow)
-    - [wide](#wide)
-    - [xwide](#xwide)
-    - [video](#video)
+    - [poster](#poster-variant)
+    - [narrow](#narrow-variant)
+    - [wide](#wide-variant)
+    - [xwide](#xwide-variant)
+    - [video](#video-variant)
 
 <!--
 [**Detail Variants**](#tile-variants)
@@ -53,12 +53,12 @@ The purpose of this page is to help you understand what each template group look
 
 There are several template groups to choose from:
 
-- [text](#text)
-- [info](#info)
-- [products](#products)
-- [media](#media)
-- [icon](#icon)
-- [base](#base)
+- [text](#text-template-group)
+- [info](#info-template-group)
+- [products](#products-template-group)
+- [media](#media-template-group)
+- [icon](#icon-template-group)
+- [base](#base-template-group)
 <!-- /summary -->
 
 ### Default Template Options
@@ -412,17 +412,17 @@ In order for these templates to display correctly, you need to ensure that each 
 
 The list of built-in Spice templates includes:
 
-- [record](#record)
-- [icon_item](#iconitem)
-- [text_item](#textitem)
-- [text_detail](#textdetail)
-- [basic_image_item](#basicimageitem)
-- [products_item](#productsitem)
-- [products_detail](#productsdetail)
-- [products_item_detail](#productsitemdetail)
-- [basic_info_detail](#basicinfodetail)
-- [base_item](#baseitem)
-- [base_detail](#basedetail)
+- [record](#record-template)
+- [icon_item](#iconitem-template)
+- [text_item](#textitem-template)
+- [text_detail](#textdetail-template)
+- [basic_image_item](#basicimageitem-template)
+- [products_item](#productsitem-template)
+- [products_detail](#productsdetail-template)
+- [products_item_detail](#productsitemdetail-template)
+- [basic_info_detail](#basicinfodetail-template)
+- [base_item](#baseitem-template)
+- [base_detail](#basedetail-template)
 
 ------
 <!-- /summary -->
@@ -493,7 +493,7 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "icon_item" template:
 
-- [icon](#icon)
+- [icon](#icon-template-group)
 
 ### Example usage of the "icon" template:
 
@@ -517,7 +517,7 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "text_item" template:
 
-- [text](#text)
+- [text](#text-template-group)
 
 ### Example usage of the "text_item" template:
 
@@ -541,7 +541,7 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "text_detail" template:
 
-- [text](#text)
+- [text](#text-template-group)
 
 ### Example usage of the "text_detail" template:
 
@@ -567,8 +567,8 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "basic_image_item" template:
 
-- [info](#info)
-- [media](#media)
+- [info](#info-template-group)
+- [media](#media-template-group)
 
 ### Example usage of the "basic_image_item" template:
 
@@ -595,7 +595,7 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "products_item" template:
 
-- [products](#products)
+- [products](#products-template-group)
 
 ### Example usage of the "products_item" template:
 
@@ -626,9 +626,9 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "products_detail" template:
 
-- [products](#products)
-- [media](#media)
-- [icon](#icon)
+- [products](#products-template-group)
+- [media](#media-template-group)
+- [icon](#icon-template-group)
 
 ### Example usage of the "products_detail" template:
 
@@ -657,9 +657,9 @@ templates: {
 <!-- /summary -->
 ### Template groups using the "products_item_detail" template:
 
-- [products](#products)
-- [media](#media)
-- [icon](#icon)
+- [products](#products-template-group)
+- [media](#media-template-group)
+- [icon](#icon-template-group)
 
 ### Example usage of the "products_item_detail" template:
 
@@ -689,7 +689,7 @@ templates: {
 
 ### Template groups using the "basic_info_detail" template:
 
-- [info](#info)
+- [info](#info-template-group)
 
 ### Example usage of the "basic_info_detail" template:
 
@@ -716,7 +716,7 @@ templates: {
 
 ### Template groups using the "base_item" template:
 
-- [base](#base)
+- [base](#base-template-group)
 
 ### Example usage of the "base_item" template:
 
@@ -741,7 +741,7 @@ templates: {
 
 ### Template groups using the "base_detail" template:
 
-- [base](#base)
+- [base](#base-template-group)
 
 ### Example usage of the "base_detail" template:
 
@@ -755,11 +755,11 @@ templates: {
 
 If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):
 
-- [poster](#poster)
-- [narrow](#narrow)
-- [wide](#wide)
-- [xwide](#xwide)
-- [video](#video)
+- [poster](#poster-variant)
+- [narrow](#narrow-variant)
+- [wide](#wide-variant)
+- [xwide](#xwide-variant)
+- [video](#video-variant)
 
 ------
 
