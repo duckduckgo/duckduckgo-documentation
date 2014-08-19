@@ -58,3 +58,13 @@ Also available for use are:
 
 ### HTML Encoding
 
+In all situations when the querystring is output as html, it *must be encoded*; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for goodies in the form of:
+
+```
+# simple scalar:
+my $safe_to_output = html_enc($query_string);
+
+# also takes an array:
+my @safe_strings = html_enc(@unsafe_strings);
+
+```
