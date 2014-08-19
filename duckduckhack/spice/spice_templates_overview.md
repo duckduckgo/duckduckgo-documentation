@@ -53,12 +53,12 @@ The purpose of this page is to help you understand what each template group look
 
 There are several template groups to choose from:
 
-- [text](#text)
-- [info](#info)
-- [products](#products)
-- [media](#media)
-- [icon](#icon)
-- [base](#base)
+- [text](#text template group)
+- [info](#info template group)
+- [products](#products template group)
+- [media](#media template group)
+- [icon](#icon template group)
+- [base](#base template group)
 <!-- /summary -->
 
 ### Default Template Options
