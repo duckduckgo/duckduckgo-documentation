@@ -24,9 +24,37 @@ $perl_number *= 2;
 $output = $styler->for_computation($perl_number);
 ```
 
-
 ### Date Parsing
 
+Dates are especially complicated as different cultures use different formats; to this end we have the Date role:
+```
+with 'DDG::GoodieRole::Dates';
+
+# get the regex for somethig that "looks like a date"
+my $date_regex = date_regex();
+
+my $probable_date = qr/($date_regex)/i;
+my $parsed_date = parse_string_to_date($probable_date);
+return unless $parsed_date;
+
+# do something with $parsed_date
+$parsed_date->add( days => 1 );
+
+# output in the standard format
+$output = date_output_string($parsed_date);
+```
+
+Also available for use are:
+* `full_month_regex()` - matches full month names, i.e. January
+* `short_month_regex()` - matches short month names. i.e. Feb
+* `month_regex()` - matches either short or full month names
+* `full_day_of_week_regex()` -  maches full weekday i.e. Wednesday
+* `short_day_of_week_regex()` - matches short weekday i.e. Thu
+* `parse_string_to_date()` - Returns a `DateTime` of the string when in `date_regex()` format or undef if the date is invalid
+* `parse_all_strings_to_date()` - Takes an array of strings to parse and returns an array of `DateTime`s; if the format is ambiguous (01/01/2001) then it will look over all the dates to settle on a common format
+* `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
+* `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
+ 
 
 ### HTML Encoding
 
