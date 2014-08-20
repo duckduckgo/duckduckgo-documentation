@@ -1,8 +1,11 @@
-## Goodie Helpers
+# Goodie Helpers
 
-A few commonly used things are wrapped up into useful helpers that can be easily used by any goodie. These are implemented as "roles" that can be used by using `with 'DDG::GoodieRole::RoleName'`
+A few commonly used functions are wrapped up into useful helpers that can be easily used by any goodie. These are implemented as "roles" that can be used adding the following line to your Goodie's Perl module (.pm file):
+```perl
+with 'DDG::GoodieRole::RoleName';
+```
 
-### Numbers
+## Numbers
 
 Often matching and outputting numbers intelligently is required, for this the NumberStyler role is ideal:
 ```perl
@@ -29,7 +32,7 @@ To aid with ambiguity `number_style_for()` can also take an array to parse as a 
 my @numbers = qw(123,450 543.43);
 my $styler = number_style_for(@numbers);
 ```
-### Date Parsing
+## Date Parsing
 
 Dates are especially complicated as different cultures use different formats; to this end we have the Date role, a simple usage of which is:
 ```perl
@@ -37,8 +40,8 @@ with 'DDG::GoodieRole::Dates';
 
 # get the regex for something that "looks like a date"; this doesn't mean it *is* a valid date
 my $date_regex = date_regex();
-
 my $probable_date = qr/($date_regex)/i;
+
 # returns a DateTime object or undef if the date is invalid
 my $parsed_date = parse_string_to_date($probable_date);
 return unless $parsed_date;
@@ -67,9 +70,9 @@ Also available for use are:
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
  
 
-### HTML Encoding
+## HTML Encoding
 
-In all situations when the querystring is output as html, it *must be encoded*; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for goodies in the form of:
+In all situations when the querystring is output as html, it ***must be encoded***; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for Goodies in the form of:
 
 ```perl
 # simple scalar:
