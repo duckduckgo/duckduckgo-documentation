@@ -46,6 +46,11 @@
 
 	"goodie_advanced_handle_functions.md": {
 		"prev": ["goodie_triggers.md"],
+		"next": ["goodie_helpers.md"]
+	},
+
+	"goodie_helpers.md": {
+		"prev": ["goodie_triggers.md"],
 		"next": ["faq.md#goodie"]
 	},
 
