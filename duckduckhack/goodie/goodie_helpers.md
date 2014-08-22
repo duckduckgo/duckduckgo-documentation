@@ -32,6 +32,7 @@ To aid with ambiguity `number_style_for()` can also take an array to parse as a 
 my @numbers = qw(123,450 543.43);
 my $styler = number_style_for(@numbers);
 ```
+
 ## Date Parsing
 
 Dates are especially complicated as different cultures use different formats; to this end we have the Date role, a simple usage of which is:
@@ -52,6 +53,7 @@ $parsed_date->add( days => 1 );
 # output in the standard format
 $output = date_output_string($parsed_date);
 ```
+
 To aid in distinguishing amiguous formats (such as 01/02/2003) multiple strings can be parsed collectively as one format like so:
 ```perl
 my @date_strings = qw(01/02/2001 02/13/2002);
@@ -68,7 +70,6 @@ Also available for use are:
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
 * `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
- 
 
 ## HTML Encoding
 
@@ -80,5 +81,4 @@ my $safe_to_output = html_enc($query_string);
 
 # also takes an array:
 my @safe_strings = html_enc(@unsafe_strings);
-
 ```
