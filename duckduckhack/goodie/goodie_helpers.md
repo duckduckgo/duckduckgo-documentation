@@ -1,13 +1,16 @@
 # Goodie Helpers
 
 A few commonly used functions are wrapped up into useful helpers that can be easily used by any goodie. These are implemented as "roles" that can be used adding the following line to your Goodie's Perl module (.pm file):
+
 ```perl
 with 'DDG::GoodieRole::RoleName';
 ```
 
+
 ## Numbers
 
 Often matching and outputting numbers intelligently is required, for this the NumberStyler role is ideal:
+
 ```perl
 with 'DDG::GoodieRole::NumberStyler';
 # get the regex for something that "looks like a number"
@@ -27,14 +30,19 @@ $perl_number *= 2;
 $output = $styler->for_display($perl_number);
 ```
 
+
 To aid with ambiguity `number_style_for()` can also take an array to parse as a set:
+
 ```perl
 my @numbers = qw(123,450 543.43);
 my $styler = number_style_for(@numbers);
 ```
+
+
 ## Date Parsing
 
 Dates are especially complicated as different cultures use different formats; to this end we have the Date role, a simple usage of which is:
+
 ```perl
 with 'DDG::GoodieRole::Dates';
 
@@ -52,13 +60,17 @@ $parsed_date->add( days => 1 );
 # output in the standard format
 $output = date_output_string($parsed_date);
 ```
+
+
 To aid in distinguishing amiguous formats (such as 01/02/2003) multiple strings can be parsed collectively as one format like so:
+
 ```perl
 my @date_strings = qw(01/02/2001 02/13/2002);
 
 # by parsing as below, it will understand the user meant 2nd Jan 2001 and 13th Feb 2002
 my @date_objects = parse_all_strings_to_date(@date_strings);
 ```
+
 
 Also available for use are:
 * `full_month_regex()` - matches full month names, i.e. January
@@ -68,7 +80,6 @@ Also available for use are:
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
 * `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
- 
 
 ## HTML Encoding
 
@@ -80,5 +91,5 @@ my $safe_to_output = html_enc($query_string);
 
 # also takes an array:
 my @safe_strings = html_enc(@unsafe_strings);
-
 ```
+
