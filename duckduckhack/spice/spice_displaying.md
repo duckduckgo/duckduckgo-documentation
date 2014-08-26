@@ -78,6 +78,7 @@ Other properties and fuctions of `spice.add()` include:
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
 
 <!-- /summary -->
+
 ### id `string` [required]
 
 A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
@@ -137,6 +138,7 @@ The following options are used to define elements of the **MetaBar**:
 - [sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
 
 <!-- /summary -->
+
 The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
 
 - ### searchTerm `string`
@@ -190,7 +192,7 @@ The following options are used to define elements of the **MetaBar** including t
 
     If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
-<!-- /summary -->
+    <!-- /summary -->
     
     For example, if you have a `data` object that looks like this:
 
@@ -355,7 +357,9 @@ In most cases you will only need to specify relevancy properties for the, **prim
 ## Relevancy Blocks
 
 A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
+
 <!-- /summary -->
+
 ```javascript
 // First we provide the name for the relevancy block, "primary"
 primary: [
@@ -425,7 +429,9 @@ category: [
 ## Sorting
 
 In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
+
 <!-- /summary -->
+
 ### sort_fields `object`
 
 This object specifies sorting fields (e.g., name, price, rating, reviews) and their respective comparison functions, which will be passed along to JavaScript's `sort()` method.
@@ -473,6 +479,7 @@ If you need to fire off an event handler when a tile is clicked or when your Spi
 - [onItemUnselect](http://duck.co/duckduckhack/spice_displaying#onitemunselect-codefunctioncode) This event occurs each time a tile is unselected
 - [onShow](http://duck.co/duckduckhack/spice_displaying#onshow-codefunctioncode) This event occurs when a Spice tab initially opens
 - [onHide](http://duck.co/duckduckhack/spice_displaying#onhide-codefunctioncode) This event occurs when a Spice tab is closed i.e. when another tab is selected
+
 <!-- /summary -->
 
 ## onItemSelect `function`
