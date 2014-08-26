@@ -73,6 +73,7 @@ my @date_objects = parse_all_strings_to_date(@date_strings);
 
 
 Also available for use are:
+
 * `full_month_regex()` - matches full month names, i.e. January
 * `short_month_regex()` - matches short month names. i.e. Feb
 * `month_regex()` - matches either short or full month names
