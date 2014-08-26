@@ -117,6 +117,7 @@ The name that will be used for your Spice's AnswerBar tab. The Spice system will
     </tbody>
 </table>
 
+
 ### data `object` [required]
 
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
@@ -188,7 +189,9 @@ The following options are used to define elements of the **MetaBar** including t
     This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
 
     If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+
 <!-- /summary -->
+    
     For example, if you have a `data` object that looks like this:
 
     ```javascript
@@ -248,6 +251,7 @@ The following options are used to define elements of the **MetaBar** including t
 A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
 <!-- /summary -->
+
 - ### group `string` [required unless `item` or `detail` is specified]
 
     Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The various options for this will be explained later in the [template overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md).
