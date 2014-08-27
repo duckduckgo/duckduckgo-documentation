@@ -80,6 +80,8 @@ spice to => 'http://registry.npmjs.org/$1/latest';
 
 The **spice to** attribute indicates the API endpoint we'll be using, which means a `GET` request will be made to this URL. The URL has a **$1** placeholder, which will eventually be replaced with whatever string our `handle` function (which we'll define shortly) returns. Generally, Spice instant answers use a search endpoint for a given API and so, we'll need to pass along our search term(s) in the API request. We do this by returning the desired search terms in the `handle` function and then the **$1** placeholder, in the `spice to` URL, will be replaced accordingly.
 
+Please note that we prefer to use **HTTP** endpoints, even when an HTTPS endpoint is available.  The faster connections make for a better user experience.  User security and privacy is not violated because all requests are proxied through an HTTPS connection to the DuckDuckGo servers.
+
 <!-- /summary -->
 
 Using the previous example, if we wanted to search for "**uglify-js**" with the NPM API, we'd need to replace `$1` with `uglify-js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "uglify-js" NPM Package.
