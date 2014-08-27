@@ -1,7 +1,9 @@
 ## Review Process
 
 When you submit a pull request, a community leader will assign themselves to your pull request and work with you to get your instant answer live on DuckDuckGo. All comments and suggestions for your pull request should be discussed publicly in the pull request on Github, so that others can follow the progression. Of course, you can always contact anyone from the community or team if you have questions. Here are some community leaders who are available to help out: 
+
 <!-- /summary -->
+
 - [@bradcater](https://github.com/bradcater)
 - [@jdorweiler](https://github.com/jdorweiler)
 - [@kablamo](https://github.com/kablamo)

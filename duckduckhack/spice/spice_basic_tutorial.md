@@ -1,7 +1,9 @@
 ## Basic Spice Tutorial
 
 In this tutorial, we'll be making a Spice instant answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
+
 <!-- /summary -->
+
 # NPM Spice - Backend (Perl)
 
 ###### Npm.pm
@@ -33,7 +35,9 @@ To begin, open your favorite text editor like [gedit](http://projects.gnome.org/
 package DDG::Spice::Npm;
 # ABSTRACT: Returns package information from npm package manager's registry.
 ```
+
 <!-- /summary -->
+
 Each instant answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Spice (or any new instant answer), you would change **npm** to the name of the instant answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
 
 The second line is a special comment line that is used for documentation purposes.
@@ -57,7 +61,9 @@ triggers startend => 'npm';
 ```
 
 **triggers** are keywords/phrases that tell us when to make the instant answer run. When a particular *trigger word* (or phrase) is part of a search query, it tells DuckDuckGo to *trigger* the instant answer(s) that have indicated they should trigger for the given word (or phrase).
+
 <!-- /summary -->
+
 In this case there is one trigger word: "**npm**". 
 
 Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, so it would trigger our Spice because the **startend** keyword says, "Make sure the *trigger word* is at the *start*, or the *end*, of the query." 
@@ -73,7 +79,9 @@ spice to => 'http://registry.npmjs.org/$1/latest';
 ```
 
 The **spice to** attribute indicates the API endpoint we'll be using, which means a `GET` request will be made to this URL. The URL has a **$1** placeholder, which will eventually be replaced with whatever string our `handle` function (which we'll define shortly) returns. Generally, Spice instant answers use a search endpoint for a given API and so, we'll need to pass along our search term(s) in the API request. We do this by returning the desired search terms in the `handle` function and then the **$1** placeholder, in the `spice to` URL, will be replaced accordingly.
+
 <!-- /summary -->
+
 Using the previous example, if we wanted to search for "**uglify-js**" with the NPM API, we'd need to replace `$1` with `uglify-js` which would result in this URL: <http://registry.npmjs.org/uglify-js/latest>. If you follow that link, you'll notice the API returns a JSON object containing all the data pertaining to the "uglify-js" NPM Package.
 
 ## Indicate our Callback Function
@@ -89,7 +97,9 @@ This parameter is used to wrap the JSON object being returned, in a JavaScript f
 ```perl
 spice wrap_jsonp_callback => 1;
 ```
+
 <!-- /summary -->
+
 Now, when the JSON is returned by the API, it will be wrapped in a call to our Spice's JavaScript callback function, which we'll define later.
 
 ------
@@ -115,7 +125,9 @@ handle remainder => sub {
 Once triggers are specified, we define how to *handle* the query. `handle` is another keyword, similar to **triggers**.
 
 You can *handle* different parts of the search query, but the most common is the **remainder**, which refers to the remainder of the query, after the first matched trigger word/phrase has been removed. 
+
 <!-- /summary -->
+
 For example, if the query was "**npm uglify-js**", the trigger would be *npm* and the **remainder** would be *uglify-js*.
 
 Now let's add a few more lines to complete the handle function:
@@ -233,7 +245,9 @@ Let's go through it line-by-line:
 (function (env) {
     "use strict";
 ```
+
 <!-- /summary -->
+
 We begin by invoking an anonymous, immediately-executing function, which takes an object as input (i.e. the environment). This is better known as the JavaScript "[Module Pattern](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)" and it ensures that any variables or functions created within our anonymous function do not affect the global scope. It also allows us to explicitly import anything from the outside environment, which we use to pass along the global scope into our `env` variable (you'll see this at the end), so we can still access and modify the global scope as needed. After creating our module, we then we turn on JavaScript's [Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode) which also offers various benefits. You don't really need to understand the purpose of these first two lines to create a Spice instant answer; however, they're both necessary and must be included when defining a Spice callback function.
 
 ## Define our Callback Function
@@ -241,7 +255,9 @@ We begin by invoking an anonymous, immediately-executing function, which takes a
 ```javascript
     env.ddg_spice_npm = function (api_result) {
 ```
+
 <!-- /summary -->
+
 We now define our callback function, `ddg_spice_npm`, using a function expression and set it as a property of the `env` object that was passed into our anonymous function. The name we specify here ***must*** match the name of our Spice package, which we discussed above. We also specify that the callback function takes one input parameter, which we have named `api_result`. All Spice callback functions should look like this. The name for the input should **always** be called `api_result`. This is part of our naming convention and helps to standardize the JavaScript code.
 
 ## Validate our API Response
@@ -253,7 +269,9 @@ We now define our callback function, `ddg_spice_npm`, using a function expressio
             return Spice.failed('npm');
         }
 ```
+
 <!-- /summary -->
+
 Here we specify that if the `error` property in the API result is defined (meaning there are no results to use) we `return` a call to `Spice.failed('npm')`, which stops the execution of the function and as a result, won't display an instant answer. It's important to use `Spice.failed();` because this lets the rest of the Spice system know our Spice isn't going to display so that other relevant answers can be given an opportunity to display.
 
 In other cases, because most APIs return an array of results, a similar check should be made to see if the results array has a `length`. This way, if no results were returned from the API we can stop and display nothing.
@@ -284,7 +302,9 @@ Moving on, the next part is very important, it defines how the Spice result shou
 ```
 
 Here we make a call to the `Spice.add()` function, which operates on an input object that we normally define inside the function call. Let's go over each of the parameters specified in the object we give to `Spice.add()`:
+
 <!-- /summary -->
+
 - `id` is the unique identifier for your Spice instant answer, as convention, we use the name of the spice, just like we do for the callback function.
 
 - `name` is the text to be used for the Spice's AnswerBar tab.
@@ -319,7 +339,9 @@ Lastly, we close our callback function expression, as well as our module, and we
 ## Define our Handlebars Template
 
 At this point, the rendering of the Spice instant answer changes context from JavaScript to Handlebars.js. As mentioned, our `Spice.add()` call specifies our template and the **context** for the template, so now `Spice.add()` executes the template function using `data` as the input. Let's look at the NPM instant answer's Handlebars template to see how it displays the instant answer result:
+
 <!-- /summary -->
+
 ###### detail.handlebars
 
 ```html

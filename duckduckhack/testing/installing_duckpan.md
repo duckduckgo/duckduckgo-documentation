@@ -69,7 +69,9 @@ https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
 ddh-vmw.rar:  
 MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e  
 https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
+
 <!-- /summary -->
+
 #### Roadmap
 
 - Docker support
@@ -78,7 +80,9 @@ https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
 ### Using the Virtual Machine
 
 To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
+
 <!-- /summary -->
+
 #### VirtualBox (free)
 
 Website: https://www.virtualbox.org/  
@@ -122,7 +126,9 @@ Once you have installed the virtual machine you should be able to start up the V
 The Vagrant-based DuckDuckHack virtual environment provides a similar sandbox to the DuckDuckHack VM, but rather than downloading a prebuilt VM, Vagrant creates an environment for you based on the defined configuration.  Vagrant is an awesome tool for building development environments.  One command - `vagrant up` - gets you a complete working environment in minutes.  Something go wrong with the environment?  No messing around with snapshots.  Tear the VM down and build a fresh environment.  The DuckDuckHack Vagrant environment uses Chef cookbooks and the DuckPAN installer script, so configuration is transparent and easily shared.
 
 Through the Vagrant configuration, you can easily switch back and forth between a headless-mode and the traditional VirtualBox interface.  The configuration defaults to headless.
+
 <!-- /summary -->
+
 ### Setup Instructions
 
 1. Install: [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and [Bundler](http://bundler.io/#getting-started)
@@ -174,7 +180,9 @@ To install DuckPAN, open your terminal and run:
 ```shell
 curl http://duckpan.org/install.pl | perl
 ```
+
 <!-- /summary -->
+
 [This script](https://github.com/duckduckgo/p5-duckpan-installer) will setup [local::lib](https://metacpan.org/module/local::lib), which is a way to install Perl modules without changing your base Perl installation. If you already use local::lib or [perlbrew](https://metacpan.org/module/perlbrew), don't worry, this script will intelligently use what you already have.
 
 If you didn't have a local::lib before running the install script, you will need to run the script twice. It should tell you when like this:

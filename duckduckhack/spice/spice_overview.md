@@ -20,7 +20,9 @@ Aside from HTML and CSS, the Spice frontend also utilizes the following third-pa
 - and [Handlebars](http://handlebarsjs.com) v1.3.0
 
 If you're not already familiar with Handlebars, *please* read the [Handlebars documentationn](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
+
 <!-- /summary -->
+
 Likewise, using jQuery is not required for making a Spice instant answer. But, it does offer certain benefits, such as cross-browser compatible implementations of various JavaScript functions. For example, jQuery's `$.each()` should be used in place of the native `Array.prototype.forEach()`, as it does **not** work in IE 6,7,8.
 
 Later, we will walk you through several examples, ranging from simple to complex, which will explain how to use templates and make your instant answers look awesome :)
