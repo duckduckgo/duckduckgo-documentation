@@ -57,7 +57,7 @@ In this case there is one trigger word: "**chars**".
 
 Let's say someone searched "**chars this is a test**". **chars** is the *first* word, so it would trigger our Goodie because the **start** keyword says, "Make sure the *trigger word* is at the *start* of the query." 
 
-There are several other keywords like **start** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
+There are several other keywords like **start**. We'll cover triggers in detail later, but if you're curious, [you can read about them now.](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md) The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
 ## Define the Handle Function
 
