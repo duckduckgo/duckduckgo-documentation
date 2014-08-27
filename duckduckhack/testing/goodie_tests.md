@@ -4,6 +4,8 @@ For this example, we will look at the test file of the **RouterPasswords** Goodi
 
 <!-- /summary -->
 
+Good test files can help you quickly test code iterations. They also serve as a functional specification for your code. This specification helps everyone quickly understand and verify the expected behavior of the tested code, improving the quality of the feedback you receive and accelerating the review process.
+
 ```perl
 #!/usr/bin/env perl
 
