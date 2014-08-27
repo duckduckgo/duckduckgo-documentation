@@ -103,12 +103,16 @@ Yes. **However**, they must be handled *very* carefully. User-supplied strings c
 
 Email them! - If you explain what it's for, they might be willing to create and endpoint for you! If not, it's probably best to find another API.
 
+### The API provides both HTTP and HTTPS endpoints; which should I use?
+
+We prefer to use **HTTP endpoints** because the reduced connection setup time allows us to provide faster answers to the user.  Note that the end-user's query will still be secure in transit, because it is proxied ( e.g. https://duckduckgo.com/js/spice/movie/mib ) through an HTTPS connection to the DuckDuckGo servers.
+
 ### Can I use an API that returns XML?
 
 Sorry, but **not right now**. XML support is coming soon.
 **Note:** If an API supports both JSON and XML, we *stronly enourage* you to use **JSON**.
 
-### Can I use an API that returns HTML or a String? 
+### Can I use an API that returns HTML or a String?
 
 Sorry, but **no**. We currently don't support HTML or plain text API's.
 
