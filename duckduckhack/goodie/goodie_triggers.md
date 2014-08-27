@@ -9,7 +9,9 @@ There are two types of triggers, **words** and **regex**. We insist that you use
 ```perl
 triggers <location> => <array of words and phrases>
 ```
+
 <!-- /summary -->
+
 #### Examples
 
 ```perl
@@ -46,7 +48,9 @@ triggers end => "ending phrase of query";
 ```perl
 triggers <query_format> => <regular expression>
 ```
+
 <!-- /summary -->
+
 #### Examples
 
 ```perl

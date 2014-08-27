@@ -9,7 +9,9 @@ There are several built-in Spice templates (both item and detail) which can be u
 - [Tile Variants](#tile-variants)  Used to modify width of the tiles
 
 There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+
 <!-- /summary -->
+
 For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
 
 The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice instant answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
@@ -96,7 +98,9 @@ templates: {
     group: 'text'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -146,7 +150,9 @@ templates: {
     group: 'info'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -200,7 +206,9 @@ templates: {
     group: 'products'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -260,7 +268,9 @@ templates: {
     group: 'media'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -321,7 +331,9 @@ templates: {
     group: 'icon'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -367,7 +379,9 @@ templates: {
     group: 'base'
 }
 ```
+
 <!-- /summary -->
+
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -425,13 +439,17 @@ The list of built-in Spice templates includes:
 - [base_detail](#basedetail-template)
 
 ------
+
 <!-- /summary -->
+
 ## record template
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
 **\*\*Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.  An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting. 
+
 <!-- /summary -->
+
 For example this is how your Spice code should look when using the **record** template:
 
 ```javascript
@@ -490,7 +508,9 @@ templates: {
 ### Template Diagram
 
 ![icon template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/icon.png)
+
 <!-- /summary -->
+
 ### Template groups using the "icon_item" template:
 
 - [icon](#icon-template-group)
@@ -514,7 +534,9 @@ templates: {
 ### Template Diagram
 
 ![text_item template ](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_item.png)
+
 <!-- /summary -->
+
 ### Template groups using the "text_item" template:
 
 - [text](#text-template-group)
@@ -538,7 +560,9 @@ templates: {
 ### Template Diagram
 
 ![text_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/text_detail.png)
+
 <!-- /summary -->
+
 ### Template groups using the "text_detail" template:
 
 - [text](#text-template-group)
@@ -564,7 +588,9 @@ templates: {
 ### Template Diagram
 
 ![basic_image_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_image_item.png)
+
 <!-- /summary -->
+
 ### Template groups using the "basic_image_item" template:
 
 - [info](#info-template-group)
@@ -592,7 +618,9 @@ templates: {
 ### Template Diagram
 
 ![products_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item.png)
+
 <!-- /summary -->
+
 ### Template groups using the "products_item" template:
 
 - [products](#products-template-group)
@@ -623,7 +651,9 @@ templates: {
 ### Template Diagram
 
 ![products_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_detail.png)
+
 <!-- /summary -->
+
 ### Template groups using the "products_detail" template:
 
 - [products](#products-template-group)
@@ -654,7 +684,9 @@ templates: {
 ### Template Diagram
 
 ![products_item_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/products_item_detail.png)
+
 <!-- /summary -->
+
 ### Template groups using the "products_item_detail" template:
 
 - [products](#products-template-group)
@@ -682,7 +714,9 @@ templates: {
 ### Template Diagram
 
 ![basic_info_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail.png)
+
 <!-- /summary -->
+
 ### Example with Auxiliary Information Box:
 
 ![basic_info_detail_w_aux template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/basic_info_detail_w_aux.png)
@@ -709,7 +743,9 @@ templates: {
 ### Template Diagram
 
 ![base_item template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item.png)
+
 <!-- /summary -->
+
 ### Complex Example
 
 ![base_item template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_item_complex.png)
@@ -734,7 +770,9 @@ templates: {
 ### Template Diagram
 
 ![base_detail template](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail.png)
+
 <!-- /summary -->
+
 ### Complex Example
 
 ![base_detail template (complex example)](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/diagrams/base_detail_complex.png)
@@ -778,7 +816,9 @@ templates: {
     }
 }
 ```
+
 <!-- /summary -->
+
 ### Examples
 
 - ["the dark knight movie"](https://duckduckgo.com/?q=the+dark+knight+movie)
@@ -801,7 +841,9 @@ templates: {
     }
 }
 ```
+
 <!-- /summary -->
+
 ### Examples
 
 - ["alarm clock apps"](https://duckduckgo.com/?q=alarm+clock+apps)
@@ -824,7 +866,9 @@ templates: {
     }
 }
 ```
+
 <!-- /summary -->
+
 ### Examples
 
 none...*yet!*

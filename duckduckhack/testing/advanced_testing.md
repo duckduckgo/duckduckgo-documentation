@@ -108,7 +108,9 @@ Run your instant answer test file like this:
 ```txt
 perl -Ilib t/Chars.t
 ```
+
 <!-- /summary -->
+
 If successful, you should see a lot of **ok** lines.
 
 ```txt

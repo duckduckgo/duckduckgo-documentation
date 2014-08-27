@@ -20,7 +20,9 @@ handle remainder => sub {
 Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
 
 The `share` function gives each instant answer access to a subdirectory of the repository's `share` directory. The subdirectory for your instant answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words.  For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/regex_cheat_sheet) to store its custom CSS.
+
 <!-- /summary -->
+
 Meanwhile, the [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) uses the `share` directory to hold data for processing purposes:
 
 ```perl

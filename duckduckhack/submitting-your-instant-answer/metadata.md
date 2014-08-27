@@ -67,7 +67,9 @@ secondary_example_queries "r/accounting";
 ## category
 
 The category into which your instant answer best fits.
+
 <!-- /summary -->
+
 Supported categories include:
 
 - bang
@@ -106,7 +108,9 @@ category "forums";
 ## topics
 
 A list of the topics to which your instant answer applies.
+
 <!-- /summary -->
+
 Supported topics include:
 
 - everyday
@@ -147,7 +151,9 @@ code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/
 ## attribution
 
 Information about you, the author.
+
 <!-- /summary -->
+
 Supported attribution sources include:
 
 - email

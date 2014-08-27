@@ -80,7 +80,9 @@ Template groups:
 Tiles support title, subtitle, and content and footer sub templates which the IA can provide.
 
 ![github using text group, showing tiles](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/github_duckduckgo.png)
+
 <!-- /summary -->
+
 [github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/github) using the text template group with a custom footer
 
 ------
@@ -101,7 +103,9 @@ Similar to text but with an embedded small image in the upper right. Title, desc
 Info is a sophisticated template for showing summary information with an optional image and embedded auxiliary box. Both the text and auxiliary box are expandable, by default showing four lines of text in height. Both the text and the auxiliary box can contain arbitrary content by using an IA-defined template.
 
 ![Last.fm using the info template](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/artist.png)
+
 <!-- /summary -->
+
 The info template also supports an embedded auxiliary box on the right.
 There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-spice/issues/684) to display the artist's top tracks in the auxiliary box.
 
@@ -117,7 +121,9 @@ Because Drinks doesn't have an image, it's not shown and the text is aligned lef
 The products template group consists of templates for tiles and detail that are structured for items that can be bought. Rating, brand, and price are a few of the things that we need. There is a second group called `products_simple` which is similar but with the price and brand turned off by default, and a slightly simpler tile structure.
 
 ![amazon using the products group](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/products_detail.png)
+
 <!-- /summary -->
+
 ------
 
 ![Tile comparison: variations of 'products'](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/tile_comparison.png)
