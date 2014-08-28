@@ -16,6 +16,7 @@ sections:
       - goodie_triggers.md
       - goodie_tests.md
       - goodie_advanced_handle_functions.md
+      - goodie_helpers.md
   - dir_name: spice
     faq_anchor: spice
     entries:

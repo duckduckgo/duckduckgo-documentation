@@ -82,7 +82,9 @@
       ]
    },
    "goodie_advanced_handle_functions.md" : {
-      "next" : [],
+      "next" : [
+         "goodie_helpers.md"
+      ],
       "prev" : [
          "goodie_tests.md"
       ]
@@ -93,6 +95,12 @@
       ],
       "prev" : [
          "goodie_overview.md"
+      ]
+   },
+   "goodie_helpers.md" : {
+      "next" : [],
+      "prev" : [
+         "goodie_advanced_handle_functions.md"
       ]
    },
    "goodie_overview.md" : {

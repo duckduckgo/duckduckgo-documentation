@@ -12,6 +12,7 @@
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md)
   - [Tests](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_tests.md)
   - [Advanced Handle Functions](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_advanced_handle_functions.md)
+  - [Goodie Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_helpers.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 
 - **Spice**
