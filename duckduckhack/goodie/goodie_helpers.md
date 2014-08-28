@@ -15,7 +15,7 @@ Often matching and outputting numbers intelligently is required, for this the Nu
 with 'DDG::GoodieRole::NumberStyler';
 # get the regex for something that "looks like a number"
 my $number_re = number_style_regex();
-my $number_string = qr/($number_re)/;
+my $number_string =~ qr/($number_re)/;
 
 # get an object that can handle the number
 my $styler = number_style_for($number_string);
@@ -62,7 +62,7 @@ $output = date_output_string($parsed_date);
 ```
 
 
-To aid in distinguishing amiguous formats (such as 01/02/2003) multiple strings can be parsed collectively as one format like so:
+To aid in distinguishing ambiguous formats (such as 01/02/2003) multiple strings can be parsed collectively as one format like so:
 
 ```perl
 my @date_strings = qw(01/02/2001 02/13/2002);
@@ -77,14 +77,14 @@ Also available for use are:
 * `full_month_regex()` - matches full month names, i.e. January
 * `short_month_regex()` - matches short month names. i.e. Feb
 * `month_regex()` - matches either short or full month names
-* `full_day_of_week_regex()` -  maches full weekday i.e. Wednesday
+* `full_day_of_week_regex()` -  matches full weekday i.e. Wednesday
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
 * `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
 
 ## HTML Encoding
 
-In all situations when the querystring is output as html, it ***must be encoded***; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for Goodies in the form of:
+In all situations when the query string is output as HTML, it ***must be encoded***; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for Goodies in the form of:
 
 ```perl
 # simple scalar:
