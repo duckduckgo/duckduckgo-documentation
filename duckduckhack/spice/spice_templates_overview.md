@@ -170,8 +170,8 @@ templates: {
 
 #### Default templates used in the 'info' group:
 
-- [basic_image_item](#basicimageitem)
-- [basic_info_detail](#basicinfodetail)
+- [basic_image_item](#basicimageitem-template)
+- [basic_info_detail](#basicinfodetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -230,10 +230,10 @@ templates: {
 
 #### Default templates used in the 'products' group:
 
-- [products_item](#productsitem)
-- [products_detail](#productsdetail)
-- [products_item_detail](#productsitemdetail)
-- [base_detail](#basedetail)
+- [products_item](#productsitem-template)
+- [products_detail](#productsdetail-template)
+- [products_item_detail](#productsitemdetail-template)
+- [base_detail](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -293,10 +293,10 @@ templates: {
 
 #### Default templates used in the 'media' group:
 
-- [basic_image_item](#basicimageitem)
-- [products_detail](#productsdetail)
-- [products_item_detail](#productsitemdetail)
-- [base_detail](#basedetail)
+- [basic_image_item](#basicimageitem-template)
+- [products_detail](#productsdetail-template)
+- [products_item_detail](#productsitemdetail-template)
+- [base_detail](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -348,9 +348,9 @@ templates: {
 
 #### Default templates used in the 'icon' group:
 
-- [icon_item](#iconitem)
-- [products_detail](#productsdetail)
-- [products_item_detail](#productsitemdetail)
+- [icon_item](#iconitem-template)
+- [products_detail](#productsdetail-template)
+- [products_item_detail](#productsitemdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's **features**, which you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -403,8 +403,8 @@ templates: {
 
 #### Default templates used in the 'base' group:
 
-- [base_item](#baseitem)
-- [base_detail](#basedetail)
+- [base_item](#baseitem-template)
+- [base_detail](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
