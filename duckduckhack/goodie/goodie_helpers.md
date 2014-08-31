@@ -79,6 +79,7 @@ Also available for use are:
 * `month_regex()` - matches either short or full month names
 * `full_day_of_week_regex()` -  matches full weekday i.e. Wednesday
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
+* `vague_datestring_regex()` - matches strings that can be parsed with `parse_vague_string_to_date()`
 * `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
 
