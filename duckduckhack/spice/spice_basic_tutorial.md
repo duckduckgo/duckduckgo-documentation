@@ -228,7 +228,7 @@ The final **npm.js** will look like this:
             templates: {
                 group: 'base',
                 options:{
-                    content: Spice.npm.content,
+                    content: Spice.npm.detail,
                     moreAt: true
                 }
             }
@@ -296,7 +296,7 @@ Moving on, the next part is very important, it defines how the Spice result shou
             templates: {
                 group: 'base',
                 options:{
-                    content: Spice.npm.content,
+                    content: Spice.npm.detail,
                     moreAt: true
                 }
             }
