@@ -46,12 +46,12 @@ Dates are especially complicated as different cultures use different formats; to
 ```perl
 with 'DDG::GoodieRole::Dates';
 
-# get the regex for something that "looks like a date"; this doesn't mean it *is* a valid date
-my $date_regex = date_regex();
-my $probable_date = qr/($date_regex)/i;
+# get the regex for something that "looks like a date string"; this doesn't mean it *is* a valid date
+my $datestring_regex = datestring_regex();
+my $probable_date = qr/($datestring_regex)/i;
 
 # returns a DateTime object or undef if the date is invalid
-my $parsed_date = parse_string_to_date($probable_date);
+my $parsed_date = parse_datestring_to_date($probable_date);
 return unless $parsed_date;
 
 # do something with $parsed_date
@@ -68,7 +68,7 @@ To aid in distinguishing ambiguous formats (such as 01/02/2003) multiple strings
 my @date_strings = qw(01/02/2001 02/13/2002);
 
 # by parsing as below, it will understand the user meant 2nd Jan 2001 and 13th Feb 2002
-my @date_objects = parse_all_strings_to_date(@date_strings);
+my @date_objects = parse_all_datestrings_to_date(@date_strings);
 ```
 
 
@@ -79,8 +79,10 @@ Also available for use are:
 * `month_regex()` - matches either short or full month names
 * `full_day_of_week_regex()` -  matches full weekday i.e. Wednesday
 * `short_day_of_week_regex()` - matches short weekday i.e. Thu
-* `vague_datestring_regex()` - matches strings that can be parsed with `parse_vague_string_to_date()`
-* `parse_vague_string_to_date()` - Takes a string like "next december" and produces the first of the month
+* `parse_descriptive_datestring_to_date()` - Takes a string like "next december" and produces the first of the month
+* `descriptive_datestring_regex()` - matches strings that can be parsed with `parse_descriptive_datestring_to_date()`
+* `parse_formatted_datestring_to_date()` - Takes a string in a variety of formats which can be recognized as exact dates
+* `formatted_datestring_regex()` - matches strings that can be parsed with `parse_formatted_datestring_to_date()`
 * `date_output_string()` - Takes a DateTime object (or a string which can be parsed into one) and returns a standard formatted output string or an empty string if it cannot be parsed.
 
 ## HTML Encoding
@@ -95,3 +97,14 @@ my $safe_to_output = html_enc($query_string);
 my @safe_strings = html_enc(@unsafe_strings);
 ```
 
+## URI Escaping
+
+It is also possible to URI escape ("percent-encode") strings in accordance with RFC 3986.  The Goodie helper works like:
+
+```perl
+# simple scalar:
+my $percent_encoded = uri_esc($uri);
+
+# also takes an array:
+my @percent_encodings = uri_esc(@uris);
+```
