@@ -15,7 +15,7 @@ This document outlines some language specific guidelines for formatting your cod
 - **Writing meaningful commits**
 
     Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number. Doing this will automatically close the specified issue when your pull request is merged.
-    
+
     Usually pull requests only deal with a single instant answer. If however your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the IA modified by your commit:
 
     For example, if your pull request updates the Movies, InTheaters and Kwixer IA's:
@@ -52,7 +52,7 @@ This document outlines some language specific guidelines for formatting your cod
     ```
 
 - Use `{}` instead of `new Object()`, and `[]` instead of `new Array()`.
-    
+
     ```javascript
     // Bad
     var arr = new Array();
@@ -83,7 +83,7 @@ This document outlines some language specific guidelines for formatting your cod
     var foo = 1;
     var bar = true;
     var baz = "string";
-    
+
     // good
     var foo = 1,
         bar = true,
@@ -92,7 +92,7 @@ This document outlines some language specific guidelines for formatting your cod
     // when initializing undefined variables
     var foo, bar, baz;
     ```
-    
+
     Note: We're using ECMAScript's [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FFunctions_and_function_scope%2FStrict_mode), so you'll *need* to declare every variable with `var`.
 
 - Avoid trailing commas
@@ -112,7 +112,7 @@ This document outlines some language specific guidelines for formatting your cod
         c: 42 //<-- no trailing comma
     };
     ```
-    
+
 - Use [`$.map()`](http://api.jquery.com/jQuery.map/) and [`$.each()`](http://api.jquery.com/jQuery.each/) instead of `Array.prototype.map()` and `Array.prototype.forEach()`, again for IE support.
 
 - Avoid modifying object prototypes
@@ -243,16 +243,7 @@ The easiest way to verify your code meets our style guide is to test it with [JS
     }
     ```
 
-- Avoid using inline CSS. For Goodies, we prefer a separate CSS file (/share/Goodie/my_goodie/style.css) that can be slurped in.
-    Here is a great [example](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/7a4d762f3f694ea1d9f1d93b49b4b80b32165da4/lib/DDG/Goodie/Conversions.pm#L62-66):
-
-    ```perl
-    my $css = share("style.css")->slurp;
-    sub append_css {
-        my $html = shift;
-        return "<style type='text/css'>$css</style>$html";
-    }
-    ```
+- Avoid using inline CSS. Custom CSS should be placed in a file (`/share/{goodie,spice}/my_ia/my_ia.css`) to be automatically included in the Instant Answer response.
 
 ## Perl
 
