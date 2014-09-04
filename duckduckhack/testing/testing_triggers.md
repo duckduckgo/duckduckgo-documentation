@@ -79,7 +79,8 @@ Before reading this section, make sure you've worked through the the [Basic Good
         internals: {
             answer   14,
             answer_type   "chars",
-            is_cached   1
+            is_cached   1,
+            is_unsafe   0
         }
     }
     ```
@@ -90,11 +91,12 @@ Before reading this section, make sure you've worked through the the [Basic Good
         internals: {
             answer   14,
             answer_type   "chars",
-            is_cached   1
+            is_cached   1,
+            is_unsafe   0
         }
     ```
 
-    Here you can see the answer returned, as well as any **zci** keywords (by default there will be an **answer\_type** and **is\_cached** value).
+    Here you can see the answer returned, as well as any **zci** keywords (by default there will be an **answer\_type**, **is\_cached** and **is_unsafe** value).
 
     A blank query will exit interactive mode.
 
