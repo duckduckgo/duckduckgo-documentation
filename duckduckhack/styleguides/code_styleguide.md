@@ -243,9 +243,9 @@ The easiest way to verify your code meets our style guide is to test it with [JS
     }
     ```
 
-- Try to avoid using vendor prefixes unless absolutely necessary: if it's experimental enough to require a prefix, then it might not be appropriate for an instant answer.
+- Avoid the use of vendor prefixes and experimental features. We strive for a uniform experience on all current browsers and your IA *must* work across them.
 
-    When in doubt, [CanIUse](http://caniuse.com/) is a good resource for determining if prefixes are needed. Keep in mind that we support IE8+, and two versions before the current of Chrome, FireFox, Safari, and Opera
+    When in doubt, [CanIUse](http://caniuse.com/) is a good resource for determining if prefixes are needed. Keep in mind that we support IE8+, and recent versions of Chrome, Firefox, Safari, and Opera.
 
     ```css
     /* Bad */
@@ -264,7 +264,6 @@ The easiest way to verify your code meets our style guide is to test it with [JS
     ```
 
 - Avoid using inline CSS. Custom CSS should be placed in a file (`/share/{goodie,spice}/my_ia/my_ia.css`) to be automatically included in the Instant Answer response.
->>>>>>> dc9d5030a4af046a302749585a4d62ad952180eb
 
 ## Perl
 
