@@ -344,7 +344,7 @@ At this point, the rendering of the Spice instant answer changes context from Ja
 
 <!-- /summary -->
 
-###### detail.handlebars
+###### content.handlebars
 
 ```html
 <h5>
@@ -387,7 +387,7 @@ And that's it, you're done! You now have a working Spice instant answer! The bac
 We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`, named `Npm.pm`, which defines the API to use and the triggers for our Spice and we've created **two** files in the Spice share directory, `share/spice/npm/`:
 
 1. `npm.js` - which delegates the API's response and calls `Spice.add()`
-2. `detail.handlebars` - which specifies the instant answer's HTML structure and determines which properties of the API response are placed into the HTML result
+2. `content.handlebars` - which specifies the instant answer's HTML structure and determines which properties of the API response are placed into the HTML result
 
 Again, the Spice instant answer system works like so:
 
