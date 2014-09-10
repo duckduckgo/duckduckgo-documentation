@@ -26,7 +26,7 @@ Before moving forward, you **must** know which instant answer type you will be u
 
 ## Fork the Instant Answer Repository
 
-Now that you know which instant answer type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack  the repository instant answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
+Now that you know which instant answer type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack instant answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
 
 Once you have an account, please fork the appropriate repository:
 
