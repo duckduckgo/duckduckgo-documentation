@@ -22,7 +22,7 @@ This document outlines some language specific guidelines for formatting your cod
 
     - Commit 1: `Movies: updated title font color to match mockup`.
     - Commit 2: `InTheaters: updated title text, typo fix`.
-    - Commit 2: `Movies, InTheaters, Kwixer: change title to h5 tag`.
+    - Commit 3: `Movies, InTheaters, Kwixer: change title to h5 tag`.
 
 ## JavaScript
 
@@ -55,12 +55,12 @@ This document outlines some language specific guidelines for formatting your cod
 
     ```javascript
     // Bad
-    var arr = new Array();
     var obj = new Object();
+    var arr = new Array();
 
     // Good
-    var arr = [];
     var obj = {};
+    var arr = [];
     ```
 
 - Use `===` instead of `==`, and `!==` instead of `!=`. [Why?](http://stackoverflow.com/a/359509/1998450)
@@ -240,6 +240,26 @@ The easiest way to verify your code meets our style guide is to test it with [JS
     .zci--stopwatch .spice-pane,
     .zci--stopwatch .spice-pane-right {
         ...
+    }
+    ```
+
+- Avoid the use of vendor prefixes and experimental features. We strive for a uniform experience on all current browsers and your IA *must* work across them.
+
+    When in doubt, [CanIUse](http://caniuse.com/) is a good resource for determining if prefixes are needed. Keep in mind that we support IE8+, and recent versions of Chrome, Firefox, Safari, and Opera.
+
+    ```css
+    /* Bad */
+    .element {
+        -webkit-border-radius: 45px;
+        -o-border-radius: 45px;
+        -moz-border-radius: 45px;
+        -khtml-border-radius: 45px;
+        border-radius: 45px;
+    }
+
+    /* Good */
+    .element {
+        border-radius: 45px;
     }
     ```
 
