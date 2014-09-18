@@ -21,7 +21,7 @@ Anyone in the world can help improve the search experience on DuckDuckGo. Whethe
 
 2. **Recommending Sources**
 
-  Everyone has a favorite source for useful information (maybe it's Rotten Tomatoes for movies or Yelp for local restaurant information). Our users concluded that Last.fm was a great source for answers about music. Now it is used for [album searches](https://duckduckgo.com/?q=Dookie+album+by+greenday) on DuckDuckGo!
+  Everyone has a favorite source for useful information (maybe it's Rotten Tomatoes for movies or Yelp for local restaurant information). Our users concluded that SoundCloud was a great source for answers about music. Now it is used for [music searches](https://duckduckgo.com/?q=daft+punk+music) on DuckDuckGo!
 
   Since not every idea comes with the best possible data source in mind, you can help us determine the right place to find relevant answers. Simply leave a comment with your own source recommendation.
 
