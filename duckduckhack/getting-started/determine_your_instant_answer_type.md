@@ -40,20 +40,26 @@ Once you have an account, please fork the appropriate repository:
 
 ## Give Us a Heads Up
 
-We know you're eager to get started, and we're super excited to see your awesome instant answer creations! Before you start coding up a storm though, **please send us an email** (open@duckduckgo.com) to let us know that you plan on submitting a new instant answer. This way we can quickly give you the green light to move forward if everything is okay.
+We know you're eager to get started, and we're super excited to see your awesome instant answer creations! Before you start coding up a storm though, **please send us an email** (open@duckduckgo.com) to let us know that you plan on submitting a new instant answer. We suggest you do this to save you from wasting time in case your Instant Answer doesn't get approved. Reasons why your instant answer might not get approved include:
 
-In case everything *isn't* okay, (e.g. that instant answer already exists, we need to ensure the source is acceptable, or we'd like to help you iron out the details) we'll be able to let you know before you possibly waste a lot of time and effort, which we'd certainly like to help you avoid!
+ - the instant answer already exists
+ - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
+ - the idea needs more thought or planning
 
-Here's a small email template to help you out:
+Here's an example email to help you out:
 
 ```text
 To: open@duckduckgo.com
 Subject: Instant Answer Approvals
-Body: I'd like to make an instant answer for \<topic/subject\>!
+
+I'd like to make an instant answer for \<topic/subject\>!
 This is the data source: \<link, description, Perl module, etc.\>.
 This is the related Duck.co idea: \<url, if applicable\>.
+This is my Github username: \<username\>.
 
 Thanks!
+
+PS: DuckDuckGo is awesome!
 ```
 
 We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this instant answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
