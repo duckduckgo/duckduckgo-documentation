@@ -35,7 +35,7 @@ We ask that you please use this template when submitting an Instant Answer pull 
 **Where did you hear about DuckDuckHack? (For first time contributors)**
 
 
-**What does the Instant Answer look like? (Provide a screenshot for new/updated IA's)**
+**What does the Instant Answer look like? (Provide a screenshot for new or updated Instant Answers)**
 
 
 ## Checklist
