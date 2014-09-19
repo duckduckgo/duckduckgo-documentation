@@ -5,9 +5,9 @@ In this tutorial, we'll be making a Fathead instant answer that shows example so
 ###### output.txt (snippet)
 
 ```
-hello world (python)		https://github.com/leachim6/hello-world	Hello World in python (python.py)	#!/usr/bin/env python\nprint "Hello World"\n			
-hello world (postscript_page)		https://github.com/leachim6/hello-world	Hello World in postscript_page (postscript_page.ps)	% run> gs -q postscript_page.ps\n/pt {72 div} def\n/y 9 def\n/textdraw {/Courier findfont 12 pt scalefont setfont 8 pt y moveto show} def\n\n72 72 scale\n0 0 0 setrgbcolor\n\n(Hello world!) textdraw\nshowpage\nquit			
-hello world (perl)		https://github.com/leachim6/hello-world	Hello World in perl (perl.pl)	#!/usr/bin/perl\nprint "Hello World\\n";\n			
+hello world (python)	A										Hello World in python (python.py)<br>#!/usr/bin/env python\nprint "Hello World"\n	https://github.com/leachim6/hello-world
+hello world (postscript page)	A										Hello World in postscript_page (postscript_page.ps)<br>% run> gs -q postscript_page.ps\n/pt {72 div} def\n/y 9 def\n/textdraw {/Courier findfont 12 pt scalefont setfont 8 pt y moveto show} def\n\n72 72 scale\n0 0 0 setrgbcolor\n\n(Hello world!) textdraw\nshowpage\nquit	https://github.com/leachim6/hello-world
+hello world (perl)	A										Hello World in perl (perl.pl)<br>#!/usr/bin/perl\nprint "Hello World\\n";\n	https://github.com/leachim6/hello-world
 ```
 
 ## Step 1: Write Perl module
@@ -172,14 +172,19 @@ class HelloWorldItem:
 
   def __str__(self):
     
-    fields = [ "hello world (%s)" % self.language,
-               "", # namespace
-               "https://github.com/leachim6/hello-world",
-               "Hello World in %s (%s)" % (self.language, self.filename),
-               self.source, # synposis (code)
-               "", # details
-               "", # type
-               "", # lang
+    fields = [ "hello world (%s)" % self.language,  #title
+               "A", #type
+               "",
+               "",
+               "",  #categories
+               "",
+               "",  #see_also
+               "",
+               "",  #external_links
+               "",
+               "",  #images
+               "Hello World in %s (%s)<br>%s" % (self.language, self.filename, self.source),
+               "https://github.com/leachim6/hello-world"
              ]
 
     output = "%s\n" % ("\t".join(fields))
