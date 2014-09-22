@@ -497,11 +497,11 @@ Available Models:
 - Product
 - Video
 
-### Audio attributes:
+#### Audio attributes:
 
-### Image attributes:
+#### Image attributes:
 
-### Place attributes:
+#### Place attributes:
 
 If you use the Place data model, you can normalize your data into objects with these attributes and the built-in Map/Places views will automatically know how to handle them:
 
@@ -521,12 +521,12 @@ If you use the Place data model, you can normalize your data into objects with t
 - hours (object): hash where three char day is the key and the value is a string of hours for that day, i.e.: { 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }
 - phone (string)
 
-### Product attributes:
+#### Product attributes:
 
-### Video attributes:
+#### Video attributes:
 
 
-### Examples
+#### Examples:
 
 Render a single location on a map:
 
