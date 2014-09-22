@@ -76,8 +76,8 @@ Other properties and fuctions of `spice.add()` include:
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
 - [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
-- [view] This allows you to explicitly specify the view class used for displaying the Instant Answer
-- [model] This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
+- [view](http://duck.co/duckduckhack/spice_displaying#views) This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](http://duck.co/duckduckhack/spice_displaying#model) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
 <!-- /summary -->
 
