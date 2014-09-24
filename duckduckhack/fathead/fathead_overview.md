@@ -1,42 +1,28 @@
 # Fathead Instant Answers
 
-(intro - tbd)
+Fatheads are key-value instant answers backed by a database. The keys of the database are typically words or phrases, and they are also used as the triggers for the instant answer. When a database key is queried, the corresponding row from the database is returned, which is typically a paragraph of text. Developing a Fathead instant answer entails writing a program that generates an ``output.txt`` file. This tab-delimited file indicates the keys and values for the database, as well as some other important information discussed below. The program may be written in any reasonable language, and if necessary, will be run periodically to keep the database current.
+
+The "output.txt" file that is generated will be consumed by the DuckDuckGo backend, cleaned up (details below) and then finally entered into an SQL database.
 
 ## Structure
 
-Each Fathead instant answer has its own directory. Some of the directories are in use on the live system, and some are still in development.
+Each Fathead instant answer has its own directory, which looks like this:
 
-Each directory has a structure like this:
+- ``lib/DDG/Fathead/FatheadName.pm`` &ndash; a Perl file that lists some meta information about the instant answer
 
-```shell
-# This is a Perl file that lists some meta information about the instant answer
-lib/DDG/Fathead/FatheadName.pm
+- ``share/fathead_name/fetch.sh`` &ndash; a shell script called to fetch the data. 
 
-# This shell script is called to fetch the data. 
-# Tmp files should go in a directory called download.
-share/fathead_name/fetch.sh
+- ``share/fathead_name/download/`` &ndash; a directory to hold temp files created by fetch.sh
 
-# This is the script used to parse the data once it has been fetched. 
-# .xx can be .pl, .py, .rb, .js, etc. depending on what language you use.
-share/fathead_name/parse.xx
+- ``share/fathead_name/parse.xx`` &ndash; the script used to parse the data once it has been fetched. .xx can be .pl, .py, .rb, .js, etc. depending on what language you use.
 
-# This shell script is called to run the parser. 
-share/fathead_name/parse.sh
+- ``share/fathead_name/parse.sh`` &ndash; a shell script wrapper around parse.xx
 
-# Please include any dependencies here,
-# or other special instructions for people
-# trying to run it.
-share/fathead_name/README.txt
+- ``share/fathead_name/README.txt`` &ndash; Please include any dependencies here, or other special instructions for people trying to run it. Currently, Fathead instant answers require some hand work by DuckDuckGo staff during integration.
 
-# This is the output file.
-# Generally it should NOT be committed,
-# but if it is small (<1MB) it is useful to do so.
-share/fathead_name/output.txt
+- ``share/fathead_name/output.txt`` &ndash; the output file. It generally should *NOT* be committed to github, but may be committed if it is small (<1MB).
 
-# This is an optional pointer to a URL in the cloud somewhere,
-# which contains the data to process.
-share/fathead_name/data.url
-```
+- ``share/fathead_name/data.url`` &ndash; an optional pointer to a URL in the cloud somewhere, which contains the data to process.
 
 
 ## Data File Format
@@ -47,83 +33,67 @@ The output file needs to use UTF-8 encoding so we can process it. Please make su
 
 The output format from parse.xx depends on the type of content. In any case, it should be a tab delimited file, with one line per entry. Usually there is no need for newline characters, but if there is a need for some reason, escape them with a backslash like \\\n. If you want a newline displayed, use &lt;br&gt;
 
-The output fields are as follows, not all are required to have values, but all must be accounted for in the delimitations. This example is written in simple [Perl](https://duckduckgo.com/Perl).
+Every line in the output file must contain thirteen fields, separated by tabs. Some of the fields may be empty. The fields are as follows:
 
+  1. Full article title. Must be unique across the data set of this instant answer. *This field is required.* Examples: ``Perl``
+
+  2. Type of article. ``A`` for actual articles, ``D`` for disambiguation pages, or ``R`` for redirects. *This field is required.*
+
+  3. *For redirects only.* An alias for a title such as a common misspelling or AKA. The format is the full title of the Redirect, e.g., DuckDuckGo. Examples: ``Duck Duck Go -> DuckDuckGo``
+
+  4. *Ignore.*
+
+  5. Categories. An article can have multiple categories, and category pages will be created automatically. An example of a category page can be seen at [http://duckduckgo.com/c/Procedural_programming_languages](http://duckduckgo.com/c/Procedural_programming_languages). Multiple categories must be separated by an escaped newline, ``\\n``. Categories should generally end with a plural noun. Examples: ``Procedural programming languages\\n``
+
+  6. *Ignore.*
+
+  7. Related topics. These will be turned into links in the Zero-click Info box. Examples: ``[[Perl Data Language]]``. If the link name is different, ``[[Perl Data Language|PDL]]``.
+
+  8. *Ignore.*
+
+  9. External links. These will be displayed first when an article is shown. The canonical example is an official site, which looks like ``[$url Official site]\\n``. You can have several, separated by an escaped newline, though only a few will be used. You can also have before and after text or put multiple links in one. Examples: ``Before text [$url link text] after text [$url2 second link].\\n``
+
+  10. *Ignore.*
+
+  11. Image. You can reference an external image that we will download and reformat for display. Examples: ``[[Image:$url]]``
+
+  12. Abstract. This is the snippet info. It should generally be ONE readable sentence, ending in a period. Examples: ``Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages.``
+
+  13. URL. This is the full URL for the source. If all the URLs are relative to the main domain, this can be relative to that domain. Examples: ``http://www.perl.org``
+
+
+
+An example snippet from parse.xx written in [Perl](https://duckduckgo.com/Perl) may look like this:
 
 ```perl
-# REQUIRED: full article title, e.g. Perl.
-# This should be unique across the data set.
+
 my $title = $line[0] || '';
-
-# REQUIRED: 
-# A for article.
-# D for disambiguation page.
-# R for redirect.
 my $type = $line[1] || '';
-
-# Only for redirects, e.g., 
-# an alias for a title such as
-# a common misspelling or AKA.
-# For example: Duck Duck Go -> DuckDuckGo.
-# The format is the full title of the Redirect, e.g., DuckDuckGo.
 my $redirect = $line[2] || '';
-
-# Ignore.
 my $otheruses = $line[3] || '';
-
-# You can put the article in multiple categories, and category pages will be created automatically.
-# E.g.: http://duckduckgo.com/c/Procedural_programming_languages
-# You would do: Procedural programming languages\\n
-# You can have several categories, separated by an escaped newline.
-# Categories should generally end with a plural noun.
 my $categories = $line[4] || '';
-
-# Ignore.
 my $references = $line[5] || '';
-
-# You can reference related topics here, which get turned into links in the Zero-click Info box.
-# On the perl example, e.g., Perl Data Language
-# You would do: [[Perl Data Language]]
-# If the link name is different, you could do [[Perl Data Language|PDL]]
 my $see_also = $line[6] || '';
-
-# Ignore.
 my $further_reading = $line[7] || '';
-
-# You can add external links that get put first when this article comes out.
-# The canonical example is an official site, which looks like:
-# [$url Official site]\\n
-# You can have several, separated by an escaped newline though only a few will be used.
-# You can also have before and after text or put multiple links in one like this.
-# Before text [$url link text] after text [$url2 second link].\\n
 my $external_links = $line[8] || '';
-
-# Ignore.
 my $disambiguation = $line[9] || '';
-
-# You can reference an external image that we will download and reformat for display.
-# You would do: [[Image:$url]]
 my $images = $line[10] || '';
-
-# This is the snippet info.
-# It should generally be ONE readable sentence, ending in a period.
 my $abstract = $line[11] || '';
-
-# This is the full URL for the source.
-# If all the URLs are relative to the main domain, 
-# this can be relative to that domain.
 my $source_url = $line[12] || '';
-
-In all this may look like:
 
 print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
 ```
 
 There is a pre-process script that is run on this output, which:
+
 * drops duplicates (on $title).
+
 * reduces $abstract to one sentence.
+
 * drops records that look like spam.
+
 * normalizes spacing.
+
 * makes sure the $abstract ends in a sentence.
 
 
