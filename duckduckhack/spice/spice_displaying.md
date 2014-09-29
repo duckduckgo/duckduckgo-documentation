@@ -76,6 +76,8 @@ Other properties and fuctions of `spice.add()` include:
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
 - [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
+- [view](http://duck.co/duckduckhack/spice_displaying#views) This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](http://duck.co/duckduckhack/spice_displaying#model) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
 <!-- /summary -->
 
@@ -470,6 +472,143 @@ sort_default: {
 }
 ```
 
+## Views
+
+Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the Soundcloud IA, or the Maps used in our Places IA.
+
+Avaiable Views:
+- Audio
+- Detail (default view for IA's with a single item)
+- Images
+- Map
+- Places
+- Tiles (default view for IA's with multiple items)
+- TilesWithTopics
+- Videos
+
+## Models
+
+Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models that can help with formatting things like Lat/Lon for a Place or Dimensions for an Image. Also, to use some of our non-default views, like Audio or Places you need to use a compatible data model.
+
+Available Models:
+- Audio
+- Image
+- Place
+- Product
+- Video
+
+#### Audio attributes:
+
+#### Image attributes:
+
+#### Place attributes:
+
+If you use the Place data model, you can normalize your data into objects with these attributes and the built-in Map/Places views will automatically know how to handle them:
+
+- id (string): unique identifier for the location
+- name (string): name of the location
+- address (string): display address of the location
+- city (string)
+- neighborhood (string): if neighborhood and city are both passed in, it will use neighborhood for the tile and fall back to the city when it's not there
+- image (string): path to image thumbnail to be used for the location, will use default marker image if none is provided
+- polygonPoints (array): if the location represents a region, array of lat/lon coordinates that create the shaded outline in queries like 'Paris map'
+- lat (number): latitude of the location
+- lon (number): longitude of the location
+- rating (number): number from [0-5], supports half's, i.e. 3.5
+- ratingImageURL (string): optional, use custom rating image URL (i.e. Yelp)
+- reviews (number): number of reviews
+- price (number): integer from [0-4], will be converted to $$$$ symbols
+- hours (object): hash where three char day is the key and the value is a string of hours for that day, i.e.: { 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }
+- phone (string)
+
+#### Product attributes:
+
+#### Video attributes:
+
+
+#### Examples:
+
+Render a single location on a map:
+
+```
+Spice.add({
+  id: 'landmarks',
+  name: 'Landmarks',
+  model: 'Place',
+  view: 'Map',
+  templates: {
+    group: 'places'
+  },
+  meta: {
+    sourceName: 'Wikipedia',
+    sourceUrl: 'https://wikipedia.org'
+  },
+  data: [{
+    id: 'uniqueid-1',
+    name: 'Empire State Building',
+    url: 'https://en.wikipedia.org/wiki/Empire_State_Building',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Empire_State_Building_by_David_Shankbone.jpg/480px-Empire_State_Building_by_David_Shankbone.jpg',
+    rating: '3.5',
+    address: '350 Fifth Ave',
+    neighborhood: 'Midtown',
+    city: 'New York City',
+    price: 3,
+    lat: 40.7484324,
+    lon: -73.98566413,
+    hours: {
+      Thu: '8am - 5pm'
+    }
+  }]
+});
+```
+
+Render multiple locations as tiles with an expandable map:
+```
+Spice.add({
+  id: 'landmarks',
+  name: 'Landmarks',
+  model: 'Place',
+  view: 'Places',
+  templates: {
+    group: 'places'
+  },
+  meta: {
+    type: 'Landmarks',
+    sourceName: 'Wikipedia',
+    sourceUrl: 'https://wikipedia.org'
+  },
+  data: [{
+    id: 'uniqueid-1',
+    name: 'Empire State Building',
+    url: 'https://en.wikipedia.org/wiki/Empire_State_Building',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Empire_State_Building_by_David_Shankbone.jpg/480px-Empire_State_Building_by_David_Shankbone.jpg',
+    rating: '3.5',
+    address: '350 Fifth Ave',
+    neighborhood: 'Midtown',
+    city: 'New York City',
+    price: 3,
+    lat: 40.7484324,
+    lon: -73.98566413,
+    hours: {
+      Thu: '8am - 5pm'
+    }
+  },{
+    id: 'uniqueid-2',
+    name: 'Central Park',
+    url: 'https://en.wikipedia.org/wiki/Central_Park',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Southwest_corner_of_Central_Park%2C_looking_east%2C_NYC.jpg/240px-Southwest_corner_of_Central_Park%2C_looking_east%2C_NYC.jpg',
+    rating: 5,
+    address: '86th Street, Traverse Road',
+    neighborhood: 'Midtown',
+    city: 'New York City',
+      lat: "40.78257765",
+      lon: "-73.9654435614027",
+    phone: '867-5309',
+    reviews: 327,
+    polygonPoints: [["-73.9812971","40.7685782"],["-73.9812422","40.7686381"],["-73.9808211","40.7692536"],["-73.9582984","40.8002063"],["-73.958121","40.8002149"],["-73.9580084","40.8002271"],["-73.9578827","40.8002631"],["-73.957767","40.8003367"],["-73.9577187","40.8003814"],["-73.9497096","40.7969917"],["-73.9497163","40.7969425"],["-73.9497167","40.7968837"],["-73.9497187","40.796838"],["-73.9497076","40.7967616"],["-73.9496758","40.7966888"],["-73.9496293","40.7966412"],["-73.9495571","40.79659"],["-73.9724949","40.7650918"],["-73.9732368","40.7653987"],["-73.9737105","40.7647739"],["-73.9793669","40.767163"],["-73.9810178","40.7678443"],["-73.9809825","40.7678988"],["-73.9809709","40.7679534"],["-73.9809572","40.7680187"],["-73.9808933","40.7680086"],["-73.9808902","40.7680668"],["-73.980888","40.7681073"],["-73.9809093","40.7682121"],["-73.9808827","40.7682181"],["-73.980908","40.7682967"],["-73.9809213","40.7682936"],["-73.9809652","40.7684004"],["-73.9810569","40.7683631"],["-73.9810729","40.7683834"],["-73.9811234","40.7684477"],["-73.9811992","40.7685112"],["-73.9812971","40.7685782"]]
+  }]
+});
+```
 
 ## Events
 
