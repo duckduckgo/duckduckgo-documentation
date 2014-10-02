@@ -477,6 +477,7 @@ sort_default: {
 Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the Soundcloud IA, or the Maps used in our Places IA.
 
 Avaiable Views:
+
 - Audio
 - Detail (default view for IA's with a single item)
 - Images
@@ -491,6 +492,7 @@ Avaiable Views:
 Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models that can help with formatting things like Lat/Lon for a Place or Dimensions for an Image. Also, to use some of our non-default views, like Audio or Places you need to use a compatible data model.
 
 Available Models:
+
 - Audio
 - Image
 - Place
@@ -524,7 +526,6 @@ If you use the Place data model, you can normalize your data into objects with t
 #### Product attributes:
 
 #### Video attributes:
-
 
 #### Examples:
 
@@ -563,6 +564,7 @@ Spice.add({
 ```
 
 Render multiple locations as tiles with an expandable map:
+
 ```
 Spice.add({
   id: 'landmarks',
@@ -609,6 +611,7 @@ Spice.add({
   }]
 });
 ```
+
 
 ## Events
 
