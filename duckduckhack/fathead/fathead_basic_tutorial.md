@@ -1,6 +1,6 @@
 # Basic Fathead Tutorial
 
-In this tutorial, we'll be making a Fathead instant answer that shows example source code for a "Hello World" program in whatever language is specificed by the user's query. The live instant answer looks like this: https://duckduckgo.com/?q=hello+world+scala. As discussed in [the Fathead overview](/duckduckhack/fathead_overview), our goal is to generate an output.txt, which will look something like this:
+In this tutorial, we'll be making a Fathead instant answer that shows example source code for a "Hello World" program in whatever language is specified by the user's query. The live instant answer looks like this: https://duckduckgo.com/?q=hello+world+scala. As discussed in [the Fathead overview](/duckduckhack/fathead_overview), our goal is to generate an output.txt, which will look something like this:
 
 ###### output.txt (snippet)
 
@@ -133,7 +133,7 @@ if __name__ == "__main__":
     # setup logger
     logging.basicConfig(level=logging.INFO,format="%(message)s")
     logger = logging.getLogger()
-    
+
     # dump config items
     count = 0
     with open("output.txt", "wt") as output_file:
@@ -149,7 +149,7 @@ if __name__ == "__main__":
                 source = source.replace('\n', '\\n')
                 source = source.replace('~~~n', '\\\\n')
                 source = source.replace('\t', '\\t')
-                    
+
                 item = HelloWorldItem(language, filename, source)
                 if count % 10 == 0:
                     logger.info("%d languages processed" % count )
@@ -171,7 +171,7 @@ class HelloWorldItem:
     self.source = source
 
   def __str__(self):
-    
+
     fields = [ "hello world (%s)" % self.language,  #title
                "A", #type
                "",
