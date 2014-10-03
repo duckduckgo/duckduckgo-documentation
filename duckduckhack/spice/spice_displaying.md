@@ -70,7 +70,7 @@ Used to add your Spice to the AnswerBar and has the following required propertie
 - [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
 - [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
 
-Other properties and fuctions of `spice.add()` include:
+Other properties and functions of `spice.add()` include:
 
 - [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
@@ -192,10 +192,10 @@ The following options are used to define elements of the **MetaBar** including t
 
     This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
 
-    If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+    If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g. `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
     <!-- /summary -->
-    
+
     For example, if you have a `data` object that looks like this:
 
     ```javascript
@@ -314,14 +314,14 @@ A `templates: {}` property should be used to specify the template group and all 
 
     ### Tile Variants
 
-    Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants availble can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
+    Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants available can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
 
     **\*\*Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
 
     ```javascript
     normalize: function(item){
         return {
-            // these won't work! 
+            // these won't work!
             rating: item.customerRating,
             brand: item.brandname
         };
@@ -474,16 +474,16 @@ sort_default: {
 
 ## Views
 
-Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the Soundcloud IA, or the Maps used in our Places IA.
+Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the SoundCloud IA, or the Maps used in our Places IA.
 
-Avaiable Views:
+Available Views:
 
 - Audio
-- Detail (default view for IA's with a single item)
+- Detail (default view for IAs with a single item)
 - Images
 - Map
 - Places
-- Tiles (default view for IA's with multiple items)
+- Tiles (default view for IAs with multiple items)
 - TilesWithTopics
 - Videos
 
