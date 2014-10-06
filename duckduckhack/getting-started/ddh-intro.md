@@ -15,7 +15,7 @@ Anyone in the world can help improve the search experience on DuckDuckGo. Whethe
 
 1. **Suggesting Instant Answer Ideas**
 
-  On DuckDuckGo, searches like ["what is the height of the eiffel tower"](https://duckduckgo.com/?q=what+is+the+height+of+the+eiffel+tower) will show you that it's exactly 1063 feet tall, while ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.  We depend on suggestions from users like yourself to know what sort of useful instant answers you want from your search engine.
+  On DuckDuckGo, searches like ["chicken souvlaki recipe"](https://duckduckgo.com/?q=chicken+souvlaki+recipe) will show you tons of great recipes, while ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.  We depend on suggestions from users like yourself to know what sort of useful instant answers you want from your search engine.
 
      **[Have an Instant Answer Suggestion?](https://dukgo.com/ideas)**
 

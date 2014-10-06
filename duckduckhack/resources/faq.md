@@ -55,8 +55,7 @@ If you think you have a source that is better, let's talk about it on the [DuckD
 
 ### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
-If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons (e.g., the WolframAlpha instant answer), but our
-over-arching goal is to make all of our instant answers available on their own.
+If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons, but our over-arching goal is to make all of our instant answers available on their own.
 
 ### Can I do something more complicated?
 
