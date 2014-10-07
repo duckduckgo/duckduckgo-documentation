@@ -8,6 +8,7 @@ When you submit a pull request, a community leader will assign themselves to you
 - [@jdorweiler](https://github.com/jdorweiler)
 - [@kablamo](https://github.com/kablamo)
 - [@loganom](https://github.com/loganom)
+- [@MariagraziaAlastra](https://github.com/MariagraziaAlastra)
 - [@mattr555](https://github.com/mattr555)
 - [@mintsoft](https://github.com/mintsoft)
 - [@mwmiller](https://github.com/mwmiller)
