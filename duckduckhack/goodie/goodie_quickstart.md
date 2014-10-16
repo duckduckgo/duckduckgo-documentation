@@ -80,10 +80,13 @@ Now that you have your own copy of the code on GitHub, we need to copy the code 
 3. You should now see the three-paned window we previously saw. Personally, I'm not a huge fan of this layout so **press Ctrl+Alt+R** (Cmd+Alt+R on a Mac) to change the layout (you can also click View->Layouts->Default from the command bar at the top).
 4. Open up a command-line terminal by pressing **Shift+Alt+T** (you can also click Tools->Terminal from the command bar at the top). You should see the large, right side pane change into a black terminal.
 5. We're now going to use that GitHub URL I asked you to remember. Type **`git clone <github_url>.git`** into the terminal, replacing `<github_url>` with the URL for your copy of the Goodie code. It should look something like this:
+
     ```
     [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
     ```
+
 6. Press "**Enter**". You should see the terminal print out some text that looks like this:
+
     ```
     [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
     Cloning into 'zeroclickinfo-goodies'...
@@ -95,7 +98,9 @@ Now that you have your own copy of the code on GitHub, we need to copy the code 
     Checking connectivity... done.
     [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
     ```
+
 7. Now, move to that directory, by typing **`cd zeroclickinfo-goodies`** and press "**Enter**". The command-line prompt should change to show you that you're now in the **zeroclickinfo-goodies** folder:
+
     ```
     [07:39 PM codio@buffalo-pixel workspace {master}]$ cd zeroclickinfo-goodies
     [07:39 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$
@@ -118,11 +123,13 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
 1. Type **`duckpan new`** and press "**Enter**". You should see the terminal change, prompting you to enter a name for your Instant Answer.
 2. Type "**MyFirstGoodie::<your GitHub username>**", replacing "<your GitHub username>" with your actual GitHub username:
+
     ```
     [08:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ duckpan new
     Please enter a name for your Instant Answer: MyFirstGoodie::Moollaza
     ```
-3. 
+
+3.
 
 
 
