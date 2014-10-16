@@ -1,6 +1,6 @@
 # My First Goodie Instant Answer!
 
-This is a quick tutorial designed to teach about Goodie instant answers. You'll be making and submitted your first Instant Answer to the DuckDuckHack project. In order to get moving quickly, we'll be using a web based IDE, [Codio](https://codio.com), along with a pre-configured DuckDuckHack environment.
+This is a quick start tutorial designed to teach about Goodie instant answers. You'll be making and submitting your first Instant Answer to the DuckDuckHack project. In order to get moving quickly, we'll be using a web based IDE, [Codio](https://codio.com), along with a pre-configured DuckDuckHack environment.
 
 This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
@@ -47,8 +47,10 @@ Congrats! You now have a Codio account. You'll notice that you didn't need to pr
 
 1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
 2. From the dropdown, select the **Fork** option.
+
 ![Codio Fork](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork.png)
 3. In the pop-up window, select the **3rd** option, "**Clone both the Project and its Box**".
+
 ![Codio Fork Both](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork_both.png)
 4. Wait a minute while the project forks...
 5. After it's done, you should see a new window with three panes. It should say "DuckDuckHack" at the top of the left-pane
@@ -78,33 +80,30 @@ Now that you have your own copy of the code on GitHub, we need to copy the code 
 3. You should now see the three-paned window we previously saw. Personally, I'm not a huge fan of this layout so **press Ctrl+Alt+R** (Cmd+Alt+R on a Mac) to change the layout (you can also click View->Layouts->Default from the command bar at the top).
 4. Open up a command-line terminal by pressing **Shift+Alt+T** (you can also click Tools->Terminal from the command bar at the top). You should see the large, right side pane change into a black terminal.
 5. We're now going to use that GitHub URL I asked you to remember. Type **`git clone <github_url>.git`** into the terminal, replacing `<github_url>` with the URL for your copy of the Goodie code. It should look something like this:
-
-```
-[07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
-```
-
+    ```
+    [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
+    ```
 6. Press "**Enter**". You should see the terminal print out some text that looks like this:
-
-```
-[07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
-Cloning into 'zeroclickinfo-goodies'...
-remote: Counting objects: 18623, done.
-remote: Compressing objects: 100% (8083/8083), done.
-remote: Total 18623 (delta 8084), reused 18179 (delta 7868)
-Receiving objects: 100% (18623/18623), 5.50 MiB | 9.51 MiB/s, done.
-Resolving deltas: 100% (8084/8084), done.
-Checking connectivity... done.
-[07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
-```
-
+    ```
+    [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
+    Cloning into 'zeroclickinfo-goodies'...
+    remote: Counting objects: 18623, done.
+    remote: Compressing objects: 100% (8083/8083), done.
+    remote: Total 18623 (delta 8084), reused 18179 (delta 7868)
+    Receiving objects: 100% (18623/18623), 5.50 MiB | 9.51 MiB/s, done.
+    Resolving deltas: 100% (8084/8084), done.
+    Checking connectivity... done.
+    [07:39 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/moollaza/zeroclickinfo-goodies.git
+    ```
 7. Now, move to that directory, by typing **`cd zeroclickinfo-goodies`** and press "**Enter**". The command-line prompt should change to show you that you're now in the **zeroclickinfo-goodies** folder:
-
-```
-[07:39 PM codio@buffalo-pixel workspace {master}]$ cd zeroclickinfo-goodies
-[07:39 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$
-```
+    ```
+    [07:39 PM codio@buffalo-pixel workspace {master}]$ cd zeroclickinfo-goodies
+    [07:39 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$
+    ```
 
 Congrats! You've now cloned your fork of the Goodie repo onto your Codio machine. Now, let's code our first Goodie and run it!
+
+------
 
 *Curious to know what we just did?*
 
@@ -119,13 +118,11 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
 1. Type **`duckpan new`** and press "**Enter**". You should see the terminal change, prompting you to enter a name for your Instant Answer.
 2. Type "**MyFirstGoodie::<your GitHub username>**", replacing "<your GitHub username>" with your actual GitHub username:
-
-```
-[08:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ duckpan new
-Please enter a name for your Instant Answer: MyFirstGoodie::Moollaza
-```
-
-
+    ```
+    [08:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ duckpan new
+    Please enter a name for your Instant Answer: MyFirstGoodie::Moollaza
+    ```
+3. 
 
 
 
