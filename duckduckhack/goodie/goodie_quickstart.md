@@ -249,16 +249,20 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     zci is_cached   => 1;
 
     ddg_goodie_test(
-        [qw(
-            DDG::Goodie::IsAwesome::GitHubUsername
-        )],
-        'example query' => test_zci('query')
+        [qw( DDG::Goodie::IsAwesome::GitHubUsername )],
+        # At a minimum, be sure to include tests for all:
+        # - primary_example_queries
+        # - secondary_example_queries
+        'example query' => test_zci('query'),
+        # Try to include some examples of queries on which it might
+        # appear that your answer will trigger, but does not.
+        'bad example query' => undef,
     );
 
     done_testing;
     ```
 
-2. Change the **`ddg_goodie_test`** (lines 11-16) to this:
+2. Change the **`ddg_goodie_test`** (lines 11-20) to this:
 
     ```perl
     ddg_goodie_test(
