@@ -18,7 +18,7 @@ Aside from a working internet connection and a computer, there are two important
 
 ## Sign up for a GitHub Account
 
-*Already have a GitHub Account? Perfect, move on to [the next step](#setup_codio_environment)!*
+*Already have a GitHub Account? Perfect, move on to [the next step](#sign_up_for_a_codio_account)!*
 
 If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that'll you likely be using long after this tutorial. To get started, let's sign up!
 
@@ -64,7 +64,7 @@ Next, you'll need to get an account for Codio:
 
 In order to test out and create your own Goodie Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
 
-1. Go to https://github.com/duckduckgo/zeroclickinfo-goodie. This is the home page for the DuckDuckHack Goodie repository (also known as a "repo").
+1. Go to https://github.com/duckduckgo/zeroclickinfo-goodies. This is the home page for the DuckDuckHack Goodie repository (also known as a "repo").
 2. Do you see your username in the top right corner?
     - **Yes**? Perfect. Move on to the next step.
     - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
@@ -384,11 +384,11 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
        138f5bc..c69c517  master -> master
     ```
 
-6. Open a **new browser tab** and go to https://github.com/githubusername/zeroclickinfo-goodies.com.
+6. Open a **new browser tab** and go to https://github.com/githubusername/zeroclickinfo-goodies.
 7. Click the "**Pull Request**" button.
 8. Review the changes.
 9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-10. Copy and paste the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/---finish--this--url) and paste in into the "Pull Request Description".
+10. Copy and paste the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the "Pull Request Description".
 11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 12. Go back to your Codio.com browser tab.
 13. Open the "Terminal" tab and type `duckpan server` then press "**Enter**".
