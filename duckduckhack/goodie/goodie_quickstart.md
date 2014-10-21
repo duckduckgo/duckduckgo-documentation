@@ -10,7 +10,7 @@ This tutorial assumes zero knowledge and walks you through every step required. 
 Aside from a working internet connection and a computer, there are two important things you'll need to get started:
 
 - a **free** Codio account
-    + Codio provides a web-based code editor where you will be creating and testing new Instant Answers. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes preconfigured with the necessary software for Instant Answer development.
+    + Codio provides a web-based code editor where you will be creating and testing new Instant Answers. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes pre-configured with the necessary software for Instant Answer development.
 - a **free** GitHub account
     + GitHub provides a place for you to save your code on the internet.
     + When your Instant Answer is ready for us to review, you'll use GitHub to send us your code!
@@ -20,9 +20,9 @@ Aside from a working internet connection and a computer, there are two important
 
 *Already have a GitHub Account? Perfect, move on to [the next step](#sign_up_for_a_codio_account)!*
 
-If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that'll you likely be using long after this tutorial. To get started, let's sign up!
+If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
 
-1. Go to https://github.com/join and enter the reqiured information, then click "**Create an Account**"
+1. Go to https://github.com/join and enter the required information, then click "**Create an Account**"
 2. Click "**Finish Signup**" to continue with a **Free** GitHub account.
 
 **Congrats!** You now have a GitHub account.
@@ -46,7 +46,7 @@ Next, you'll need to get an account for Codio:
 ## Fork the DuckDuckHack Project on Codio
 
 1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
-2. In the dropdown, select the "**Fork**" option.
+2. In the drop-down, select the "**Fork**" option.
 
     ![Codio Fork](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork.png)
 
@@ -81,7 +81,7 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 1. Go to https://codio.com/home/projects.
     - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign_up_for_a_codio_account)).
 2. Click the "**DuckDuckHack**" project.
-3. You should now see the three-paned window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
+3. You should now see the three-pane window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
 4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
 5. Type **`git clone <Your GitHub URL Here>.git`** into the Terminal, replacing `<Your GitHub URL Here>` accordingly. It should look something like this:
 
@@ -103,7 +103,7 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-7. The filetree on the left side should update, there should be a new "**zeroclickinfo-goodies**" directory.
+7. The file tree on the left side should update, there should be a new "**zeroclickinfo-goodies**" directory.
 
 **Congrats!** You've now cloned your fork of the Goodie repo onto your Codio machine. Now, let's code our first Goodie and run it!
 
@@ -328,7 +328,7 @@ Congrats! Your first Goodie is working! You specified its **`trigger`** and told
     Result: PASS
     ```
 
-    Sucess! The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
+    Success! The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
 Congrats! You've written and tested your first Goodie! There's so much more that Goodies can do though, checkout our other tutorials to learn more. You can also explore the Goodie repo by looking at the other Goodies in the `/lib/DDG/Goodie` directory. Read their **.pm** files and look at the `triggers`. You can test them all in the `duckpan server`.
 
@@ -392,13 +392,13 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 7. Click the "**Pull Request**" button.
 8. Review the changes.
 9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-10. Copy the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the textbox that says "**Leave a comment**".
+10. Copy the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the text box that says "**Leave a comment**".
 11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 12. Go back to your Codio.com browser tab.
 13. Open the "Terminal" tab and type `duckpan server` then press "**Enter**".
 14. Click the DuckPAN Server button, and search for "duckduckhack GitHubUsername"
-15. Take a screenshot of your awesome Instant Answer result, save it somewhere easily accessible.
+15. Take a screen shot of your awesome Instant Answer result, save it somewhere easily accessible.
 16. Go back to your GitHub.com browser tab.
-17. Drag-and-Drop your screenshot into the Pull Request Description (where it asks for a screenshot).
+17. Drag-and-Drop your screen shot into the Pull Request Description (where it asks for a screen shot).
 18. Click "Submit Pull Request"
 19. Now sit back and relax. When a Community Leader or Staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in
