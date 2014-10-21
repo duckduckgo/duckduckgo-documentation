@@ -70,7 +70,7 @@ In order to test out and create your own Goodie Instant Answer, you'll need the 
     - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
 3. Click "**Fork**", near the top-right corner.
 4. Wait while the repo forks...
-5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like "**https://github.com/\<your user name\>/zeroclickinfo-goodie**". This is the URL for your personal copy of the DuckDuckHack Goodie code.
+5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like "**https://github.com/yourGitHubUsername/zeroclickinfo-goodie**". This is the URL for your personal copy of the DuckDuckHack Goodie code.
 6. **Keep this URL handy, we'll be using it in a minute!**
 
 
@@ -80,9 +80,9 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 
 1. Go to https://codio.com/home/projects.
     - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign_up_for_a_codio_account)).
-2. Click "**DuckDuckHack**" to select that project.
-3. You should now see the three-paned window we previously saw. We're going to change the layout a bit, press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac). *You can also click View->Layouts->Default from the command bar at the top*.
-4. Press **Shift+Alt+T** to open a new Terminal. *You can also click Tools->Terminal from the command bar at the top*.You should see the right side pane change into a black command prompt.
+2. Click the "**DuckDuckHack**" project.
+3. You should now see the three-paned window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
+4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
 5. Type **`git clone <Your GitHub URL Here>.git`** into the Terminal, replacing `<Your GitHub URL Here>` accordingly. It should look something like this:
 
     ```
@@ -100,12 +100,10 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     Receiving objects: 100% (18623/18623), 5.50 MiB | 9.51 MiB/s, done.
     Resolving deltas: 100% (8084/8084), done.
     Checking connectivity... done.
-    [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
+    [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
 7. The filetree on the left side should update, there should be a new "**zeroclickinfo-goodies**" directory.
-
-<!-- PICTURE OF UPDATE DIRECTORY -->
 
 **Congrats!** You've now cloned your fork of the Goodie repo onto your Codio machine. Now, let's code our first Goodie and run it!
 
@@ -118,10 +116,10 @@ You just used a program called **Git**, to **clone** (copy) the Git repository (
 
 ## Creating Your First Goodie
 
-Now we're going to create our first Goodie! We'll be using the DuckPAN tool to generate some boilerplate code for us to make things easier.
+Now we're going to create our first Goodie! We'll be using the DuckPAN tool to generate some boilerplate code for us.
 
-1. Click the "**DuckPAN New Goodie**" button on the command bar. The should Terminal prompt you to enter a name for your Instant Answer.
-2. Type **`IsAwesome::GitHubUsername`**, replacing `GitHubUsername` with your actual GitHub username, then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
+1. Click the "**DuckPAN New Goodie**" button on the command bar. The Terminal should prompt you to enter a name for your Instant Answer.
+2. Type **`IsAwesome::GitHubUsername`** (replacing `GitHubUsername` with your actual GitHub username), then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
 
     ```
     [04:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ cd ~/workspace/zeroclickinfo-goodies/ && duckpan new
@@ -143,9 +141,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     Successfully created Goodie: IsAwesome::GitHubUsername
     ```
 
-    These two generates files only contain boilerplate code and comments. We'll have to complete the code in order to get your new Goodie working!
+    These two generated files only contain boilerplate code and comments. We'll have to complete the code in order to get your new Goodie working!
 
-4. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (If you prefer a Terminal text editor, Vim, Emacs and Nano are also available). It should look like this:
+4. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). It should look like this:
 
     ```perl
     package DDG::Goodie::IsAwesome::GitHubUsername;
@@ -208,7 +206,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     This will make your Goodie tell everyone that you're totally awesome!
 
 7. Switch back to you Terminal by clicking on the "**Terminal**" tab.
-8. Ttype **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
+8. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
     ```
     Starting up webserver...
@@ -339,12 +337,12 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
-1. Open "**GitHubUsername.pm**" in the editor and change the Metadata to this:
+1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** to this:
 
     ```perl
     # Metadata.  See https://duck.co/duckduckhack/metadata for help in filling out this section.
     name "IsAwesome GitHubUsername";
-    description "My first Goodie, it let's the world know GitHubUsername is awesome";
+    description "My first Goodie, it let's the world know that GitHubUsername is awesome";
     primary_example_queries "duckduckhack GitHubUsername";
     category "";
     topics "";
@@ -354,6 +352,12 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
     ```
 
     Note: The "TwitterUserName" is optional. If you don't want us to attribute your Twitter handle, just remove that line. Make sure the `attribution` statement still ends with a semicolon (`;`) though!
+
+    Also, update the **`Abstract`** (top of the file) to this:
+
+    ```perl
+    # ABSTRACT: GitHubUsername's first Goodie
+    ```
 
 2. Switch back to the "**Terminal**" tab.
 3. Type **`git add .`**, then press enter.
@@ -388,7 +392,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 7. Click the "**Pull Request**" button.
 8. Review the changes.
 9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-10. Copy and paste the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the "Pull Request Description".
+10. Copy the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the textbox that says "**Leave a comment**".
 11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 12. Go back to your Codio.com browser tab.
 13. Open the "Terminal" tab and type `duckpan server` then press "**Enter**".
