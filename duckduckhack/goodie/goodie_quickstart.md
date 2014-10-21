@@ -220,17 +220,17 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 10. You should see a DuckDuckGo Instant Answer displaying the text, "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!". This is the text we told your Goodie to **`return`**!
 11. In the Terminal, press "**Ctrl+C**" (Cmd+C on a Mac) to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
 
-```
-Starting up webserver...
+    ```
+    Starting up webserver...
 
-You can stop the webserver with Ctrl-C
+    You can stop the webserver with Ctrl-C
 
-HTTP::Server::PSGI: Accepting connections at http://0:5000/
-^C
-[04:32 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$
-```
+    HTTP::Server::PSGI: Accepting connections at http://0:5000/
+    ^C
+    [04:32 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$
+    ```
 
-Congrats! Your first Goodie is working! You specified its **`trigger`** and told it what to **`return`**. You're almost done, we should write a test to make sure the Goodie only triggers when we want it to.
+**Congrats!** Your first Goodie is working! You specified its **`trigger`** and told it what to **`return`**. You're almost done! Now you should write a test to make sure your Goodie only triggers when we want it to.
 
 
 ## Writing Your First Goodie Test File
@@ -328,9 +328,9 @@ Congrats! Your first Goodie is working! You specified its **`trigger`** and told
     Result: PASS
     ```
 
-    Success! The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
+    **Success!** The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
-Congrats! You've written and tested your first Goodie! There's so much more that Goodies can do though, checkout our other tutorials to learn more. You can also explore the Goodie repo by looking at the other Goodies in the `/lib/DDG/Goodie` directory. Read their **.pm** files and look at the `triggers`. You can test them all in the `duckpan server`.
+**Congrats!** You've written and tested your first Goodie! There's so much more that Goodies can do though, checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more. You can also explore the Goodie repo by looking at the other Goodies in the `/lib/DDG/Goodie` directory. Read their **.pm** files and look at the `triggers`. You can test them all in the `duckpan server`.
 
 At this point you're done the tutorial, but we have a bonus surprise for you...
 
@@ -389,16 +389,19 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
     ```
 
 6. Open a **new browser tab** and go to https://github.com/githubusername/zeroclickinfo-goodies.
-7. Click the "**Pull Request**" button.
-8. Review the changes.
+7. Click the "**Pull Request**" button (grey text, middle of the screen).
+8. Review the changes and click "**Create Pull Request**".
 9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-10. Copy the Goodie Pull Request Template from [here](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md) and paste in into the text box that says "**Leave a comment**".
+10. Copy the "Goodie Pull Request Template" from [here](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md), and paste it into the text box that says "**Leave a comment**".
 11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 12. Go back to your Codio.com browser tab.
-13. Open the "Terminal" tab and type `duckpan server` then press "**Enter**".
+13. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
 14. Click the DuckPAN Server button, and search for "duckduckhack GitHubUsername"
 15. Take a screen shot of your awesome Instant Answer result, save it somewhere easily accessible.
 16. Go back to your GitHub.com browser tab.
-17. Drag-and-Drop your screen shot into the Pull Request Description (where it asks for a screen shot).
-18. Click "Submit Pull Request"
-19. Now sit back and relax. When a Community Leader or Staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in
+17. Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
+18. Move the screenshot link **above the "Checklist"** in the pull request template. (where it asks for a screen shot).
+19. Click **"Create Pull Request"**.
+20. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in.
+
+**Congrats!** You're all done. Don't forget to checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more.
