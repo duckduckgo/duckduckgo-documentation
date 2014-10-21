@@ -398,5 +398,3 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 17. Drag-and-Drop your screenshot into the Pull Request Description (where it asks for a screenshot).
 18. Click "Submit Pull Request"
 19. Now sit back and relax. When a Community Leader or Staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in
-
-GitHub instructions: https://help.github.com/articles/using-pull-requests/#initiating-the-pull-request
