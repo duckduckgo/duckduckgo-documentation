@@ -4,7 +4,7 @@ This is a quick start tutorial designed to teach about Goodie Instant Answers. Y
 
 This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
-**Note:** If you have any questions, comment or concerns, please feel free to email us at open@duckduckgo.com
+**Note:** If you have any questions, comment or concerns, please feel free to email us at **open@duckduckgo.com**
 
 
 ## Before We Get Going...
@@ -12,7 +12,7 @@ This tutorial assumes zero knowledge and walks you through every step required. 
 Aside from a working internet connection and a computer, there are two important things you'll need to get started:
 
 - a **free** Codio account
-    + Codio provides a web-based code editor where you will be creating and testing new Instant Answers. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes pre-configured with the necessary software for Instant Answer development.
+    + Codio provides a web-based development environment that you will be using to create and test a new Instant Answer. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes pre-configured with the necessary software for Instant Answer development.
 - a **free** GitHub account
     + GitHub provides a place for you to save your code on the internet.
     + When your Instant Answer is ready for us to review, you'll use GitHub to send us your code!
@@ -36,7 +36,7 @@ Next, you'll need to get an account for Codio:
 
 *Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
 
-1. Go to https://codio.com and click "Sign Up", at the top right corner.
+1. Go to https://codio.com and click "**Sign Up**", at the top right corner.
 2. Click "**Sign Up via GitHub**".
 3. Enter your GitHub login details and then click"**Sign In**".
 4. Click "**Authorize Application**" to continue.
@@ -72,7 +72,7 @@ In order to test out and create your own Goodie Instant Answer, you'll need the 
     - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
 3. Click "**Fork**", near the top-right corner.
 4. Wait while the repo forks...
-5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like "**https://github.com/yourGitHubUsername/zeroclickinfo-goodie**". This is the URL for your personal copy of the DuckDuckHack Goodie code.
+5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like **`https://github.com/yourGitHubUsername/zeroclickinfo-goodie`**. This is the URL for your personal copy of the DuckDuckHack Goodie code.
 6. **Keep this URL handy, we'll be using it in a minute!**
 
 
@@ -219,8 +219,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     ```
 
 9. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage. Type "**duckduckhack GitHubUsername**" and press "**Enter**".
-10. You should see a DuckDuckGo Instant Answer displaying the text, "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!". This is the text we told your Goodie to **`return`**!
-11. In the Terminal, press "**Ctrl+C**" (Cmd+C on a Mac) to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
+10. You should see a DuckDuckGo Instant Answer displaying the text, "**GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!**". This is the text we told your Goodie to **`return`**!
+11. In the Terminal, press "**Ctrl+C**" to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
 
     ```
     Starting up webserver...
@@ -264,7 +264,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     done_testing;
     ```
 
-2. Change the **`ddg_goodie_test`** (lines 11-20) to this:
+2. Change the **`ddg_goodie_test`** function (lines 11-20) to this:
 
     ```perl
     ddg_goodie_test(
@@ -394,7 +394,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
        138f5bc..c69c517  master -> master
     ```
 
-6. Open a **new browser tab** and go to https://github.com/githubusername/zeroclickinfo-goodies.
+6. Open a **new browser tab** and go to **`https://github.com/githubusername/zeroclickinfo-goodies`**.
 7. Click the "**Pull Request**" button (grey text, middle of the screen).
 8. Review the changes and click "**Create Pull Request**".
 9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
@@ -402,7 +402,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 12. Go back to your Codio.com browser tab.
 13. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
-14. Click the DuckPAN Server button, and search for "duckduckhack GitHubUsername"
+14. Click the DuckPAN Server button, and search for "**duckduckhack GitHubUsername**"
 15. Take a screen shot of your awesome Instant Answer result, save it somewhere easily accessible.
 16. Go back to your GitHub.com browser tab.
 17. Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
