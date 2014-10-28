@@ -1,40 +1,107 @@
 DuckPAN is an application built to provide developers a testing environment for the ZeroClickInfo Plugins. It allows users to test plugin triggers, and lets you preview their visual design. 
 
-# Using DuckPAN
+## Using DuckPAN
 
-## Install commands
+### Help
 
-    duckpan installdeps
+```shell
+duckpan
+```
+
+or
+
+```shell
+duckpan help
+```
+
+or
+
+```shell
+man duckpan
+```
+
+Prints out the DuckPAN man page
+
+### Install Commands
+
+```shell
+duckpan installdeps
+```
+
 Install all requirements of the specific DuckDuckHack project (if
 possible), like zeroclickinfo-spice, zeroclickinfo-goodie, duckduckgo
 or community-platform
 
-    duckpan check
+```shell
+duckpan roadrunner
+```
+
+Same as `installdeps`, but avoids testing anything. Useful for speed, but
+not recommended unless you know what you are doing.
+
+```shell
+duckpan check
+```
+
 Check if you fulfill all requirements for the development
 environment (this is run automatically during setup)
 
-## Plugin testing
+```shell
+duckpan reinstall
+```
 
-    duckpan query
-Test goodies and spice triggers interactively on the command line
+Force installation of the latest released versions of DuckPAN and DDG
 
-    duckpan server
-Test spice plugins on a local web server (for design/layout purposes)
+### Instant Answer Testing
 
-## Advanced features 
+```shell
+duckpan query
+```
 
-    duckpan env
+Test Goodie and Spice triggers interactively on the command line
+
+
+```shell
+duckpan server [--verbose] [--no-cache] [--port <number>]
+```
+
+Test Goodie and Spice instant answers on a local web server (for design/layout purposes)
+
+Options:
+
+- `--verbose` to provide more details
+- `--no-cache` to prevent DuckPAN's cache from being used (this forces the requested files to be pushed into the cache)
+- `--port` to specify which port DuckPAN's server should run on (defaults to 5000)
+
+### Advanced Features 
+
+```shell
+duckpan env
+```
+
 View env commands and also shows the env variables currently stored in ~/.duckpan/env.ini
 
-    duckpan env <name> <value>
+```shell
+duckpan env <name> <value>
+```
+
 Add an environment variable that duckpan will remember. Useful for
 spice API keys. Variables are stored in ~/.duckpan/env.ini
 
-    duckpan env <name>
+```shell
+duckpan env <name>
+```
+
 Retrieve the matching key for a given env variable.
 
-    duckpan env rm <name>
+```shell
+duckpan env rm <name>
+```
+
 Remove an environment variable from duckpan
 
-    duckpan release
+```shell
+duckpan release
+```
+
 Release the project of the current directory to DuckPAN

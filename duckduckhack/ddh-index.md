@@ -8,6 +8,7 @@
 
 - **Goodie**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
+  - [Quick Start](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
   - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_testing_triggers.md)
   - [Goodie Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/goodie_tests.md)
