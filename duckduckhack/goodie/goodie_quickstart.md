@@ -4,6 +4,8 @@ This is a quick start tutorial designed to teach about Goodie Instant Answers. Y
 
 This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
+**Note:** If you have any questions, comment or concerns, please feel free to email us at open@duckduckgo.com
+
 
 ## Before We Get Going...
 
