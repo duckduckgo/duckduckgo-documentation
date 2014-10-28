@@ -20,7 +20,7 @@ Aside from a working internet connection and a computer, there are two important
 
 ## Sign up for a GitHub Account
 
-*Already have a GitHub Account? Perfect, move on to [the next step](#sign_up_for_a_codio_account)!*
+*Already have a GitHub Account? Perfect, move on to [the next step](#sign-up-for-a-codio-account)!*
 
 If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
 
@@ -34,7 +34,7 @@ If you're new to programming, GitHub is a well known, popular tool that many ind
 
 Next, you'll need to get an account for Codio:
 
-*Already have a Codio Account? Perfect, move on to [the next step](#fork_the_duckduckhack_project_on_codio)!*
+*Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
 
 1. Go to https://codio.com and click "Sign Up", at the top right corner.
 2. Click "**Sign Up via GitHub**".
@@ -81,7 +81,7 @@ In order to test out and create your own Goodie Instant Answer, you'll need the 
 Now we need to "clone" the code from GitHub to your Codio box so you can see it, modify it and run it!
 
 1. Go to https://codio.com/home/projects.
-    - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign_up_for_a_codio_account)).
+    - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign-up-for-a-codio-account)).
 2. Click the "**DuckDuckHack**" project.
 3. You should now see the three-pane window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
 4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
@@ -237,7 +237,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
 ## Writing Your First Goodie Test File
 
-1. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t" and press "**Enter**". This will open the file for editing in Codio's text editor. It should look like this:
+1. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. It should look like this:
 
     ```perl
     #!/usr/bin/env perl
@@ -305,7 +305,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     ```
 
 
-    Uh oh! We failed a test! The output says a DDG::ZeroClickInfo object was returned, but the test was expecting `undef`. Let's update our code to make this test pass.
+    Uh oh! We failed a test! The output says a `DDG::ZeroClickInfo` object was returned, but the test was expecting `undef`. Let's update our code to make this test pass.
 
 4. Switch back to your text editor by clicking the tab if it's still open, or open the "**GitHubUsername.pm**" file with "**Ctrl+O**" (Cmd+O on a Mac).
 5. Update the **`handle`** statement to this:
