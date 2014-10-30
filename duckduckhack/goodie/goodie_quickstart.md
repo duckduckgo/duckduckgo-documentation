@@ -1,11 +1,10 @@
 # My First Goodie Instant Answer!
 
-This is a quick start tutorial designed to teach about Goodie Instant Answers. You'll be making and submitting your first Instant Answer to the DuckDuckHack project. In order to get moving quickly, we'll be using a web based IDE, [Codio](https://codio.com), along with a pre-configured DuckDuckHack environment.
+*First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
 
-This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
+This is a quick-start tutorial designed to give an overview of the instant answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
-**Note:** If you have any questions, comment or concerns, please feel free to email us at **open@duckduckgo.com**
-
+To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial). 
 
 ## Before We Get Going...
 
