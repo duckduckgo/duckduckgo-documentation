@@ -1,4 +1,4 @@
-## DuckPAN ![Build Status](https://travis-ci.org/duckduckgo/p5-app-duckpan.png?branch=master)
+## DuckPAN
 
 **The DuckDuckHack Testing Tool**
 
