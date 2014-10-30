@@ -66,7 +66,7 @@ Next, you'll need to get an account for Codio:
 
 In order to test out and create your own Goodie Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
 
-1. Go to https://github.com/duckduckgo/zeroclickinfo-goodies. This is the home page for the DuckDuckHack Goodie repository (also known as a "repo").
+1. Go to https://github.com/duckduckgo/zeroclickinfo-goodies, this is the home page for the DuckDuckHack Goodie repository (also known as a "repo").
 2. Do you see your username in the top right corner?
     - **Yes**? Perfect. Move on to the next step.
     - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
