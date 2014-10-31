@@ -196,6 +196,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     This tells the Instant Answer system to trigger your Goodie when the query **starts** with the phrase "**duckduckhack githubusername**".
 
+    **Note:** Triggers must be entered in **lowercase**. If your username has uppercase letters, **don't worry**, a lowercased trigger will always work because we compare the *lowercased query* against the trigger.
+
 6. Change the **`handle`** statement (lines 28-36) to this:
 
     ```perl
@@ -217,6 +219,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     HTTP::Server::PSGI: Accepting connections at http://0:5000/
     ```
+
+    **Note:** If you modify **GitHubUsername.pm** (or any other Perl files) while DuckPAN Server is *running*, you **must restart the server** for the changes to take effect. In the Terminal, press "**Ctrl+C**" to shut down the DuckPAN Server. Type **`duckpan server`** and press "**Enter**" to start it again.
 
 9. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage. Type "**duckduckhack GitHubUsername**" and press "**Enter**".
 10. You should see a DuckDuckGo Instant Answer displaying the text, "**GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!**". This is the text we told your Goodie to **`return`**!
@@ -346,28 +350,29 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** to this:
 
     ```perl
-    # Metadata.  See https://duck.co/duckduckhack/metadata for help in filling out this section.
     name "IsAwesome GitHubUsername";
     description "My first Goodie, it let's the world know that GitHubUsername is awesome";
     primary_example_queries "duckduckhack GitHubUsername";
-    category "";
-    topics "";
+    category "special";
+    topics "special_interest", "geek";
     code_url "https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IsAwesome/GitHubUsername.pm";
     attribution github => ["https://github.com/GitHubUsername", "GitHubUserName"],
                 twitter => "TwitterUserName";
     ```
 
-    Note: The "TwitterUserName" is optional. If you don't want us to attribute your Twitter handle, just remove that line. Make sure the `attribution` statement still ends with a semicolon (`;`) though!
+    **Note:** The "TwitterUserName" is optional. If you don't want us to attribute your Twitter handle, just remove that line. Make sure the `attribution` statement still ends with a semicolon (`;`) though!
 
-    Also, update the **`Abstract`** (top of the file) to this:
+    If you do fill in your Twitter handle, please **leave out the @ symbol**. There are also other forms of attribution you can use listed [here](https://duck.co/duckduckhack/metadata#attribution).
+
+2. Update the **`Abstract`** (top of the file) to this:
 
     ```perl
     # ABSTRACT: GitHubUsername's first Goodie
     ```
 
-2. Switch back to the "**Terminal**" tab.
-3. Type **`git add .`**, then press enter.
-4. Type **`git commit -m "Created my first Goodie"`** and press **`Enter`**. Git should print some text confirming the changes that have been committed.
+3. Switch back to the "**Terminal**" tab.
+4. Type **`git add .`**, then press enter.
+5. Type **`git commit -m "Created my first Goodie"`** and press **`Enter`**. Git should print some text confirming the changes that have been committed.
 
     ```
     [04:35 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ git commit -m "Created my first Goodie"
@@ -379,7 +384,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
     This shows you've **created** two new files, **`lib/DDG/Goodie/IsAwesome/GitHubUsername.pm`** and **`t/IsAwesome/GitHubUsername.t`**.
 
-5. Type **`git push`** and press **`Enter`**. Enter your GitHub Username and password, press **`Enter`** after each. Git will print some text to the Terminal letting you know that your code has been pushed to GitHub.
+6. Type **`git push`** and press **`Enter`**. Enter your GitHub Username and password, press **`Enter`** after each. Git will print some text to the Terminal letting you know that your code has been pushed to GitHub.
 
     ```
     [04:35 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ git push
@@ -394,20 +399,20 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
        138f5bc..c69c517  master -> master
     ```
 
-6. Open a **new browser tab** and go to **`https://github.com/githubusername/zeroclickinfo-goodies`**.
-7. Click the "**Pull Request**" button (grey text, middle of the screen).
-8. Review the changes and click "**Create Pull Request**".
-9. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-10. Copy the "Goodie Pull Request Template" from [here](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md), and paste it into the text box that says "**Leave a comment**".
-11. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
-12. Go back to your Codio.com browser tab.
-13. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
-14. Click the DuckPAN Server button, and search for "**duckduckhack GitHubUsername**"
-15. Take a screen shot of your awesome Instant Answer result, save it somewhere easily accessible.
-16. Go back to your GitHub.com browser tab.
-17. Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
-18. Move the screenshot link **above the "Checklist"** in the pull request template. (where it asks for a screen shot).
-19. Click **"Create Pull Request"**.
-20. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in.
+7. Open a **new browser tab** and go to **`https://github.com/githubusername/zeroclickinfo-goodies`**.
+8. Click the "**Pull Request**" button (grey text, middle of the screen).
+9. Review the changes and click "**Create Pull Request**".
+10. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
+11. Copy the "Goodie Pull Request Template" from [here](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md), and paste it into the text box that says "**Leave a comment**".
+12. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
+13. Go back to your Codio.com browser tab.
+14. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
+15. Click the DuckPAN Server button, and search for "**duckduckhack GitHubUsername**"
+16. Take a screen shot of your awesome Instant Answer result, save it somewhere easily accessible.
+17. Go back to your GitHub.com browser tab.
+18. Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
+19. Move the screenshot link **above the "Checklist"** in the pull request template. (where it asks for a screen shot).
+20. Click **"Create Pull Request"**.
+21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in.
 
 **Congrats!** You're all done. Don't forget to checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more.
