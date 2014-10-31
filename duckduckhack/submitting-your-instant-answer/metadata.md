@@ -175,5 +175,5 @@ The same attribution type can appear multiple times if necessary, for example wh
 attribution twitter => "mithrandiragain",
             github  => ["MithrandirAgain", "Gary Herreman"],
             web     => ['http://atomitware.tk/mith', 'MithrandirAgain'],
-            github  => ["jarmokivekas", "Jarmo Kivekäs"];
+            github  => ["jarmokivekas", "Jarmo Kivekas"];
 ```
