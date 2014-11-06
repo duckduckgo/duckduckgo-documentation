@@ -6,9 +6,7 @@ In order to get moving with Instant Answer development, you'll need to setup you
 
 We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
 
-<p class="text-light" markdown=1>
 **Note:** You can also [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) *if you're using Mac OS/Ubuntu*, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. If you're a **Windows** user, you'll need to use Codio, or the virtual machine. Local development is not possible. Sorry.
-</p>
 
 ## Sign up for a GitHub Account
 

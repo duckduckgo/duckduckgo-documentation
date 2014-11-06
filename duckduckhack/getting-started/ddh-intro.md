@@ -1,10 +1,6 @@
-# Welcome!
+# Thanks for joining DuckDuckHack!
 
-Thanks for joining DuckDuckHack! We are a community of developers and non-developers alike, with a passion for search and privacy, who are helping to make DuckDuckGo and its community a better place. As a developer, we need your help creating and improving the coolest part of our search engine &emdash; our Instant Answers! You may have questions along the way, so here are some useful resources:
-
-- [Join the developer mailing list](https://www.listbox.com/subscribe/?list_id=197814)
-- [Ask the staff](mailto:"open@duckduckgo.com)
-- [See suggested ideas](https://duck.co/ideas)
+We are a community of developers and non-developers alike, with a passion for search and privacy, who are helping to make DuckDuckGo and its community a better place. As a developer, we need your help creating and improving the coolest part of our search engine - our Instant Answers!
 
 ## What are Instant Answers?
 
@@ -24,4 +20,9 @@ Once you know the Instant Answer you'd like to provide, you'll need to [determin
 
 ------
 
-**One more thing:** We'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!
+**One more thing:** We'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll help you out!
+
+We also have other useful resources:
+
+- [Our Community Forum](https://duck.co/forum)
+- [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814)
