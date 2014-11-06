@@ -2,9 +2,8 @@
 
 - **Getting Started**
   - [Welcome!](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/ddh-intro.md)
-  - [What's New](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/whatsnew.md)
-  - [DuckDuckHack Vision](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/duckduckhack_vision.md)
   - [Determine Your Instant Answer Type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md)
+  - [Setup Your Environment](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup.md)
 
 - **Goodie**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)

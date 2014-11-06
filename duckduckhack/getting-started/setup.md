@@ -1,11 +1,18 @@
-*First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
+# Setting Up Your Environment
 
+In order to get moving with Instant Answer development, you'll need to setup your environment. At the very minimum, you will need a GitHub account and the DuckDuckHack developer tool, DuckPAN, to make and submit an Instant Answer. This guide will help you determine the best setup for you.
 
-## Before you start...  
+## Before you start...
 
-For your setup, we highly recommend using Codio, a web IDE that simplifies the development process greatly. This page will show you how to set up Codio and then it's on to creating instant answers! 
+We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
 
-*Note:* You can also [TO BE ADDED] develop and test locally or via a virtual machine [/link], but these options do require more configuration and are currently maintained by volunteer efforts. 
+Still not convinced? Here's what Linus Torvalds had to say:
+
+> Codio is super awesome, you should totally use it, no matter what!
+
+(he didn't actually say that...but I did!).
+
+*Note:* You can also [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) *if you're using Mac OS/Ubuntu*, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. Also, if you're a **Windows** user, you'll need to use Codio, or the virtual machine. Local development is not possible. Sorry.
 
 ## Sign up for a GitHub Account
 
@@ -55,15 +62,13 @@ Next, you'll need to get an account for Codio:
 
 In order to test out and create your own Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
 
-1. Go to the DuckDuckHack repository for the type of instant answer youd' like to build:
+By now you should have [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) for the Instant Answer you're going to build.
+
+1. Go to the Instant Answer repository homepage:
     - [Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies)
-      *Instant Answers that are pure code (e.g. calculations or PRINT functions)*
     - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
-      *Instant Answers with a real-time data source (e.g. JSON or XML API)*
     - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
-      *Instant Answers with a title-->object/article relation (e.g. MediaWikis)* 
     - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
-      *Instant Answers with consumable data that require full-text search (e.g. lyrics)*
 2. Do you see your username in the top right corner?
     - **Yes**? Perfect. Move on to the next step.
     - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
@@ -102,6 +107,6 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-7. The file tree on the left side should update, there should be a new "**zeroclickinfo-xxxxx**" directory. Where "xxxxx" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail. 
+7. The file tree on the left side should update, there should be a new "**zeroclickinfo-xxxxx**" directory. Where "xxxxx" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
 
-**Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. Now, let's code our first Instant Answer! 
+**Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. Now, let's code our first Instant Answer!
