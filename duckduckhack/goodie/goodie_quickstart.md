@@ -4,7 +4,7 @@
 
 This is a quick-start tutorial designed to give an overview of the instant answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
-To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial). 
+To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial).
 
 ## Before We Get Going...
 
@@ -112,7 +112,7 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 
 *Curious to know what we just did?*
 
-You just used a program called **Git**, to **clone** (copy) the Git repository (a special file containing all the code) located at "https://github.com/GitHubUsername/zeroclickinfo-goodies.git" onto your Codio machine. Git automatically creates a new folder based on the name of the repository it's cloning and copies the code into it. In our case, Git create a folder, "zeroclickinfo-goodies", and copied all the code into there.
+You just used a program called **Git**, to **clone** (copy) the Git repository (a special file containing all the code) located at **`https://github.com/GitHubUsername/zeroclickinfo-goodies.git`** onto your Codio machine. Git automatically creates a new folder based on the name of the repository it's cloning and copies the code into it. In our case, Git create a folder, "zeroclickinfo-goodies", and copied all the code into there.
 
 
 ## Creating Your First Goodie
@@ -369,6 +369,21 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
     # ABSTRACT: GitHubUsername's first Goodie
     ```
 
+    and remove any remaining comments from the code:
+
+    ```
+    # Start at https://duck.co/duckduckhack/goodie_overview if you are new
+    # to Instant Answer development
+
+    # Metadata.  See https://duck.co/duckduckhack/metadata for help in filling out this section.
+
+    # Uncomment and fill out before submitting
+
+    # Triggers
+
+    # Handle Statement
+    ```
+
 3. Switch back to the "**Terminal**" tab.
 4. Type **`git add .`**, then press enter.
 5. Type **`git commit -m "Created my first Goodie"`** and press **`Enter`**. Git should print some text confirming the changes that have been committed.
@@ -412,6 +427,6 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 18. Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
 19. Move the screenshot link **above the "Checklist"** in the pull request template. (where it asks for a screen shot).
 20. Click **"Create Pull Request"**.
-21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in.
+21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in. Once it's merged, it will be deployed to the site and should be live within a few days. **We'll be sure to let you know once it's live!**
 
 **Congrats!** You're all done. Don't forget to checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more.
