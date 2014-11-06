@@ -1,4 +1,12 @@
 {
+   "Setup.md" : {
+      "next" : [
+         "goodie_basic_tutorial.md"
+      ],
+      "prev" : [
+         "goodie_quickstart.md"
+      ]
+   },
    "advanced_testing.md" : {
       "next" : [
          "testing_location_api.md"
@@ -86,15 +94,15 @@
          "goodie_helpers.md"
       ],
       "prev" : [
-         "goodie_tests.md"
+         "goodie_triggers.md"
       ]
    },
    "goodie_basic_tutorial.md" : {
       "next" : [
-         "goodie_triggers.md"
+         "goodie_testing_triggers.md"
       ],
       "prev" : [
-         "goodie_overview.md"
+         "Setup.md"
       ]
    },
    "goodie_helpers.md" : {
@@ -105,9 +113,17 @@
    },
    "goodie_overview.md" : {
       "next" : [
-         "goodie_basic_tutorial.md"
+         "goodie_quickstart.md"
       ],
       "prev" : []
+   },
+   "goodie_quickstart.md" : {
+      "next" : [
+         "Setup.md"
+      ],
+      "prev" : [
+         "goodie_overview.md"
+      ]
    },
    "goodie_styleguide.md" : {
       "next" : [
@@ -117,20 +133,28 @@
          "design_styleguide.md"
       ]
    },
-   "goodie_tests.md" : {
-      "next" : [
-         "goodie_advanced_handle_functions.md"
-      ],
-      "prev" : [
-         "goodie_triggers.md"
-      ]
-   },
-   "goodie_triggers.md" : {
+   "goodie_testing_triggers.md" : {
       "next" : [
          "goodie_tests.md"
       ],
       "prev" : [
          "goodie_basic_tutorial.md"
+      ]
+   },
+   "goodie_tests.md" : {
+      "next" : [
+         "goodie_triggers.md"
+      ],
+      "prev" : [
+         "goodie_testing_triggers.md"
+      ]
+   },
+   "goodie_triggers.md" : {
+      "next" : [
+         "goodie_advanced_handle_functions.md"
+      ],
+      "prev" : [
+         "goodie_tests.md"
       ]
    },
    "how_to_qa.md" : {
@@ -223,7 +247,7 @@
    },
    "spice_basic_tutorial.md" : {
       "next" : [
-         "spice_triggers.md"
+         "spice_testing_triggers.md"
       ],
       "prev" : [
          "spice_overview.md"
@@ -234,7 +258,7 @@
          "spice_templates_overview.md"
       ],
       "prev" : [
-         "spice_tests.md"
+         "spice_triggers.md"
       ]
    },
    "spice_frontend_walkthroughs.md" : {
@@ -291,20 +315,28 @@
          "spice_displaying.md"
       ]
    },
-   "spice_tests.md" : {
-      "next" : [
-         "spice_displaying.md"
-      ],
-      "prev" : [
-         "spice_triggers.md"
-      ]
-   },
-   "spice_triggers.md" : {
+   "spice_testing_triggers.md" : {
       "next" : [
          "spice_tests.md"
       ],
       "prev" : [
          "spice_basic_tutorial.md"
+      ]
+   },
+   "spice_tests.md" : {
+      "next" : [
+         "spice_triggers.md"
+      ],
+      "prev" : [
+         "spice_testing_triggers.md"
+      ]
+   },
+   "spice_triggers.md" : {
+      "next" : [
+         "spice_displaying.md"
+      ],
+      "prev" : [
+         "spice_tests.md"
       ]
    },
    "styleguide_overview.md" : {

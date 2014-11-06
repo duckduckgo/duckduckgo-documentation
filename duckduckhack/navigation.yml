@@ -12,9 +12,12 @@ sections:
     faq_anchor: goodie
     entries:
       - goodie_overview.md
+      - goodie_quickstart.md
+      - Setup.md
       - goodie_basic_tutorial.md
-      - goodie_triggers.md
+      - goodie_testing_triggers.md
       - goodie_tests.md
+      - goodie_triggers.md
       - goodie_advanced_handle_functions.md
       - goodie_helpers.md
   - dir_name: spice
@@ -22,8 +25,9 @@ sections:
     entries:
       - spice_overview.md
       - spice_basic_tutorial.md
-      - spice_triggers.md
+      - spice_testing_triggers.md
       - spice_tests.md
+      - spice_triggers.md
       - spice_displaying.md
       - spice_templates_overview.md
       - spice_frontend_walkthroughs.md
