@@ -10,9 +10,17 @@ DuckDuckGo users believe in better answers with fewer clicks. Our Instant Answer
 
 In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the App Search Instant Answer!
 
-## Creating Your First Instant Answer
+## Get Your Hands Dirty
 
-First, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about a flight? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
+If you're new to programming, or you still unsure about what's involved in developing an Instant Answer, we've got the perfect thing for you!
+
+Our [Goodie Quickstart](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) will guide you through the setup process, and help you make a very simple Instant Answer which you can even submit to DuckDuckGo and then see it live!
+
+If you're confident that you can figure things out along the way, you're welcome to carry on, but we suggest that everyone looks over the Quick Start anyway.
+
+## Creating Your Own Instant Answer
+
+If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about a flight? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
 
 If you're at a loss for ideas, our Community has submitted and voted on hundreds of [their own ideas](https://duck.co/ideas) that you can to bring to life!
 
