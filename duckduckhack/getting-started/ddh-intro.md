@@ -16,7 +16,7 @@ First, you'll need to know what Instant Answer you want to provide. Will it perf
 
 If you're at a loss for ideas, our Community has submitted and voted on hundreds of [their own ideas](https://duck.co/ideas) that you can to bring to life!
 
-Once you know the Instant Answer you'd like to provide, you'll need to [determine your Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type).
+Once you know the Instant Answer you'd like to provide, you'll need to [determine your Instant Answer type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md).
 
 ------
 

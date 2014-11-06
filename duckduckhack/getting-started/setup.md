@@ -2,6 +2,8 @@
 
 In order to get moving with Instant Answer development, you'll need to setup your environment. At the very minimum, you will need a GitHub account and the DuckDuckHack developer tool, DuckPAN, to make and submit an Instant Answer. This guide will help you determine the best setup for you.
 
+Before moving forward, you **must** know which Instant Answer type you will be using. After this section, the documentation will be specific to each Instant Answer type.
+
 ## Before you start...
 
 We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
@@ -103,4 +105,42 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 
 7. The file tree on the left side should update. There should be a new "**zeroclickinfo-xxxxx**" directory, where "**xxxxx**" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
 
-**Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. Now, let's code our first Instant Answer!
+**Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. You're now prepared to code you first Instant Answer!
+
+## Give Us a Heads Up
+
+We know you're eager to get started, and we're super excited to see your awesome Instant Answer creations! Before you start coding up a storm though, **[please send us an email](mailto:open@duckduckgo.com)** to let us know that you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved. Some reasons why your Instant Answer might not get approved include:
+
+ - the Instant Answer already exists
+ - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
+ - the idea needs more thought or planning
+
+Here's an example email to help you out:
+
+```text
+To: open@duckduckgo.com
+Subject: Instant Answer Approvals
+
+I'd like to make an Instant Answer for <topic/subject>!
+This is the data source: <link, description, Perl module, etc.>.
+This is the related Duck.co idea: <url, if applicable>.
+This is my Github username: <username>.
+
+Thanks!
+
+PS: DuckDuckGo is awesome!
+```
+
+We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
+
+## Start Coding!
+
+At this point, you're ready to start learning about the Instant Answer type you'll be using.
+
+- For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
+
+- For **Spice**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
+
+- For **Fathead**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
+
+- For **Longtail**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
