@@ -1,32 +1,24 @@
 # Determine Your Instant Answer Type
 
-## Choose an Instant Answer
+Most Instant Answers rely on some type of data source (e.g. database, textfile, API) to provide their answer. Others however, are able to provide their answer through the use of pure code, like a pre-existing Perl package on CPAN or simply a script you write (e.g. a string manipulation function).
 
-Before you begin building anything, you'll need to know what instant answer it is that you want to provide. If you don't have any ideas, feel free to borrow one from our [ideas forum](https://dukgo.com/ideas).
+The following flowchart will help you to determine what type of Instant Answer you'll be creating, which is based on your Instant Answer's date source:
 
-## Determine Instant Answer Source
-
-Now that you know which queries you'd like to show an instant answer for, you'll need to determine what the source for your instant answer will be.
-
-Most instant answers rely on some type of data source to provide their answer; however many of them are able to provide their instant answer through the use of pure code. An example would be a string manipulation instant answer, which would only require the use of a function (code) to return an answer.
-
-Please use the following flowchart to help you to determine which kind of instant answer you'll be creating. Your instant answer type will be based on the date source your instant answer will be using:
-
-![instant answer type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png)
+![Instant Answer type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png)
 
 <!-- /summary -->
 
-If you were able to determine which instant answer type you will be using, please continue below to fork the repository so you can begin coding!
+If you were able to determine your Instant Answer type, then [continue below](#fork-the-instant-answer-repository)!
 
-If the right instant answer type is still not obvious, don't worry, the DuckDuckGo community is here for you! Please visit our [instant answer idea forum](https://dukgo.com/forum) and post a new thread for your instant answer. Be sure to describe the instant answer you have in mind, and don't forget to indicate where you think the data should come from. Someone from the community or the DuckDuckGo team will be able to help you determine the best course of action for you.
+If the right Instant Answer type is still not obvious, don't worry, the DuckDuckGo Community is here for you! Please visit our [Instant Answer Ideas Forum](https://dukgo.com/ideas) and post a new thread for your Instant Answer. Be sure to describe the Instant Answer you have in mind, and don't forget to indicate where you think the data should come from. Someone from the community or the DuckDuckGo staff will be able to help you determine the best course of action for you.
 
-**\*\*Note:** Sometimes more than one instant answer types can work (depending on the data source), and we can help you figure out which one would work best.
+**\*\*Note:** Sometimes more than one Instant Answer type can work (depending on the data source), and we can help you figure out which one would work best.
 
-Before moving forward, you **must** know which instant answer type you will be using. From this point onwards, the documentation will be specific to each instant answer type.
+Before moving forward, you **must** know which Instant Answer type you will be using. From this point onwards, the documentation will be specific to each Instant Answer type.
 
 ## Fork the Instant Answer Repository
 
-Now that you know which instant answer type you'll be using for your instant answer, you'll have to fork the associated DuckDuckHack instant answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
+Now that you know which Instant Answer type you'll be using for your Instant Answer, you'll have to fork the associated DuckDuckHack Instant Answer repository ([GitHub instructions](http://help.github.com/fork-a-repo/)) so you can start coding. If you don't already have a GitHub account, please [signup](https://github.com/signup/free) now. This is required because we use GitHub to handle all incoming *Pull Requests* (code modifications) and *Issues* (bug reports) which cannot be made without a GitHub account.
 
 Once you have an account, please fork the appropriate repository:
 
@@ -40,9 +32,9 @@ Once you have an account, please fork the appropriate repository:
 
 ## Give Us a Heads Up
 
-We know you're eager to get started, and we're super excited to see your awesome instant answer creations! Before you start coding up a storm though, **please send us an email** (open@duckduckgo.com) to let us know that you plan on submitting a new instant answer. We suggest you do this to save you from wasting time in case your Instant Answer doesn't get approved. Reasons why your instant answer might not get approved include:
+We know you're eager to get started, and we're super excited to see your awesome Instant Answer creations! Before you start coding up a storm though, **please send us an email** (open@duckduckgo.com) to let us know that you plan on submitting a new Instant Answer. We suggest you do this to save you from wasting time in case your Instant Answer doesn't get approved. Reasons why your Instant Answer might not get approved include:
 
- - the instant answer already exists
+ - the Instant Answer already exists
  - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
  - the idea needs more thought or planning
 
@@ -52,7 +44,7 @@ Here's an example email to help you out:
 To: open@duckduckgo.com
 Subject: Instant Answer Approvals
 
-I'd like to make an instant answer for \<topic/subject\>!
+I'd like to make an Instant Answer for \<topic/subject\>!
 This is the data source: \<link, description, Perl module, etc.\>.
 This is the related Duck.co idea: \<url, if applicable\>.
 This is my Github username: \<username\>.
@@ -62,11 +54,11 @@ Thanks!
 PS: DuckDuckGo is awesome!
 ```
 
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this instant answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
+We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
 
 ## Start Coding!
 
-At this point, you're ready to start learning about the instant answer type you'll be using.
+At this point, you're ready to start learning about the Instant Answer type you'll be using.
 
 - For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
 

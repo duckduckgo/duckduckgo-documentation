@@ -6,13 +6,9 @@ In order to get moving with Instant Answer development, you'll need to setup you
 
 We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
 
-Still not convinced? Here's what Linus Torvalds had to say:
-
-> Codio is super awesome, you should totally use it, no matter what!
-
-(he didn't actually say that...but I did!).
-
-*Note:* You can also [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) *if you're using Mac OS/Ubuntu*, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. Also, if you're a **Windows** user, you'll need to use Codio, or the virtual machine. Local development is not possible. Sorry.
+<p class="text-light" markdown=1>
+**Note:** You can also [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) *if you're using Mac OS/Ubuntu*, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. If you're a **Windows** user, you'll need to use Codio, or the virtual machine. Local development is not possible. Sorry.
+</p>
 
 ## Sign up for a GitHub Account
 
@@ -62,10 +58,10 @@ Next, you'll need to get an account for Codio:
 
 In order to test out and create your own Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
 
-By now you should have [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) for the Instant Answer you're going to build.
+By now you should have [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) you're going to build.
 
 1. Go to the Instant Answer repository homepage:
-    - [Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies)
+    - [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
     - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
     - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
     - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
@@ -107,6 +103,6 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-7. The file tree on the left side should update, there should be a new "**zeroclickinfo-xxxxx**" directory. Where "xxxxx" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
+7. The file tree on the left side should update. There should be a new "**zeroclickinfo-xxxxx**" directory, where "**xxxxx**" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
 
 **Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. Now, let's code our first Instant Answer!
