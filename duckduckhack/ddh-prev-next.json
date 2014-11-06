@@ -6,17 +6,17 @@
 
 	"determine_your_instant_answer_type.md": {
 		"prev": ["ddh-intro.md"],
-		"next": ["setup.md"]
+		"next": ["setup_dev_environment.md"]
 	},
 
-	"setup.md": {
+	"setup_dev_environment.md": {
 		"prev": ["determine_your_instant_answer_type.md"],
 		"next": ["goodie_overview.md", "spice_overview.md", "fathead_overview.md", "longtail_overview.md"]
 	},
 
 	"goodie_overview.md": {
 		"prev": ["determine_your_instant_answer_type.md"],
-		"next": ["goodie_quickstart.md"]
+		"next": ["goodie_basic_tutorial.md"]
 	},
 
 	"goodie_quickstart.md": {
@@ -25,7 +25,7 @@
 	},
 
 	"goodie_basic_tutorial.md": {
-		"prev": ["goodie_quickstart.md"],
+		"prev": ["goodie_overview.md"],
 		"next": ["goodie_testing_triggers.md"]
 	},
 
@@ -73,7 +73,7 @@
 		"prev": ["spice_testing_triggers.md"],
 		"next": ["spice_triggers.md"]
 	},
-	
+
 	"spice_triggers.md": {
 		"prev": ["spice_tests.md"],
 		"next": ["spice_templates_overview.md"]

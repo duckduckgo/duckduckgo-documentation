@@ -3,7 +3,7 @@
 - **Getting Started**
   - [Welcome!](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/ddh-intro.md)
   - [Determine Your Instant Answer Type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md)
-  - [Setup Your Environment](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup.md)
+  - [Setup Your Development Environment](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup_dev_environment.md)
 
 - **Goodie**
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
