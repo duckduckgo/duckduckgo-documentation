@@ -8,7 +8,9 @@ The following flowchart will help you to determine what type of Instant Answer y
 
 <!-- /summary -->
 
-If you were able to determine your Instant Answer type, then you're ready to [setup your development environmentt](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup_dev_environment.md)!
+If you were able to determine your Instant Answer type, then you're ready to [setup your development environment](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup_dev_environment.md)!
+
+------
 
 If the right Instant Answer type is still not obvious, don't worry, the DuckDuckGo Community is here for you! Please visit our [Instant Answer Ideas Forum](https://dukgo.com/ideas) and post a new thread for your Instant Answer. Be sure to describe the Instant Answer you have in mind, and don't forget to indicate where you think the data should come from. Someone from the community or the DuckDuckGo staff will be able to help you determine the best course of action for you.
 
