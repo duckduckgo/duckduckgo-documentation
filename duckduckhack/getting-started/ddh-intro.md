@@ -4,7 +4,7 @@ DuckDuckGo users believe in better answers with fewer clicks. After all, why sif
 
 At DuckDuckGo, our instant answers are always placed at the top of the results page; often providing exactly what you want without any extra clicks.
 
-![instant answer example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png)
+![instant answer example](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png&f=1)
 
 In the above example, Quixey was a source recommended by our community for searching mobile apps. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey results as an instant answer!
 

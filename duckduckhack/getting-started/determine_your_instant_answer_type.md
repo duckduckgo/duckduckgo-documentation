@@ -12,7 +12,7 @@ Most instant answers rely on some type of data source to provide their answer; h
 
 Please use the following flowchart to help you to determine which kind of instant answer you'll be creating. Your instant answer type will be based on the date source your instant answer will be using:
 
-![instant answer type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png)
+![instant answer type flow chart](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png&f=1)
 
 <!-- /summary -->
 
