@@ -21,7 +21,7 @@ If you're confident that you can figure things out along the way, you're welcome
 
 ## Creating Your Own Instant Answer
 
-If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about a flight? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
+If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about an event? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
 
 If you're at a loss for ideas, our Community has submitted and voted on hundreds of [their own ideas](https://duck.co/ideas) that you can to bring to life!
 
