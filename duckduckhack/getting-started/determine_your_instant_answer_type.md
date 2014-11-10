@@ -4,7 +4,7 @@ Most Instant Answers rely on some type of data source (e.g. database, text file,
 
 The following flowchart will help you to determine what type of Instant Answer you'll be creating, which is based on your Instant Answer's date source:
 
-![Instant Answer type flow chart](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png)
+![Instant Answer type flow chart](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png&f=1)
 
 <!-- /summary -->
 

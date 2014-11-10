@@ -4,9 +4,10 @@ We are a community of developers and non-developers alike, with a passion for se
 
 ## What are Instant Answers?
 
+
 DuckDuckGo users believe in better answers with fewer clicks. Our Instant Answers are always placed at the top of the results page to provide exactly what you want, often without requiring any extra clicks.
 
-![App search Instant Answer example](https://raw.github.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png)
+![App search Instant Answer example](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png&f=1)
 
 In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the App Search Instant Answer!
 
