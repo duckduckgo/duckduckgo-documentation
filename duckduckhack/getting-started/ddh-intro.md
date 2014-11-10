@@ -9,7 +9,7 @@ DuckDuckGo users believe in better answers with fewer clicks. Our Instant Answer
 
 ![App search Instant Answer example](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png&f=1)
 
-In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the App Search Instant Answer!
+In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey App Search Instant Answer!
 
 ## Get Your Hands Dirty
 
