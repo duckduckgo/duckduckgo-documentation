@@ -83,13 +83,13 @@ Tiles support title, subtitle, and content and footer sub templates which the IA
 
 <!-- /summary -->
 
-[github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/github) using the text template group with a custom footer
+[github](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/github) using the text template group with a custom footer
 
 ------
 
 ![dictionary definition using text group, showing detail](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/coffee_definition.png&f=1)
 
-[dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/dictionary/definition) uses a custom template for the title in detail view.
+[dictionary definition](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/dictionary/definition) uses a custom template for the title in detail view.
 
 ## Icon
 
@@ -111,7 +111,7 @@ There's an [open issue for Last.fm](https://github.com/duckduckgo/zeroclickinfo-
 
 ![Info template with embedded auxiliary box, no image](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/drinks-infobox.png&f=1)
 
-Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/drinks) uses the auxiliary box for its ingredients list. By default the info template only shows the part of the box that fits within the default template height. Here it's shown in the open state.
+Here [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/drinks) uses the auxiliary box for its ingredients list. By default the info template only shows the part of the box that fits within the default template height. Here it's shown in the open state.
 
 Because Drinks doesn't have an image, it's not shown and the text is aligned left to fill the space. Since the text already fits within four lines, no "Show More" expander button is displayed.
 
@@ -134,11 +134,11 @@ InTheaters uses the products_simple template group, but simplifies the tile even
 
 ![in_theaters using the products_simple template group](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/movies.png&f=1)
 
-[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "action" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
+[InTheaters](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/in_theaters) substitutes a custom template for the rating line in the products detail template (to conform to the Rotten Tomatoes way of rating things) and provides its own "action" template for the button "Reviews and Showtimes". In the tiles it turns off the title, rating, and ratingText so the image occupies the entirety of the tile.
 
 ## Map
 
-IAs can present their data using an interactive map. [Zipcode](https://github.com/duckduckgo/zeroclickinfo-spice/tree/bttf/share/spice/zipcode) is a simple example that centers the map on this zip (postal) code.
+IAs can present their data using an interactive map. [Zipcode](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/zipcode) is a simple example that centers the map on this zip (postal) code.
 
 ![Zipcode using the Map](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/map.png&f=1)
 
@@ -150,4 +150,4 @@ Because APIs define their data in their own ways, instant answers that use built
 [Spice]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md
 [Goodies]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md
 [Fathead]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md
-[triggers]:https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/spice_triggers.md
+[triggers]:https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md
