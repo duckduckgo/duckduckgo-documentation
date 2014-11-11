@@ -88,4 +88,8 @@ Instant answers must be compatible with **all platforms, operating systems and b
 
 Vertical space is of utmost importance with regards to instant answers. The space an instant answer occupies is very valuable (it would otherwise be used for links!) and so it's important that developers keep this in mind when designing their instant answers. Only the most important information should be displayed in an instant answer but if a user wants to see more information, most instant answers include a **"More at ..."** link, which users can follow for more detailed information.
 
-For more detailed guidelines specific to individual instant answers please see the [instant answer Specific Design Style Guide](https://github.com/duckduckgo/DuckDuckGo-Documentation/tree/master/DuckDuckHack/Styleguide/instant answer-Specific-Design-Style-Guide)
+For more detailed guidelines specific to individual instant answers please see the Instant Answer Specific Design Style Guides:
+- [Goodies](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/goodie_styleguide.md)
+- [Spice](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/spice_styleguide.md)
+- [Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/fathead_styleguide.md)
+- [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/longtail_styleguide.md)
