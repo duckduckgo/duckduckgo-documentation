@@ -187,7 +187,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     ```
 
-5. Change the **`trigger`** (line 23) to this:
+5. Change the **`trigger`** (line 25) to this:
 
     ```perl
     triggers start => "duckduckhack githubusername";
