@@ -150,4 +150,4 @@ Because APIs define their data in their own ways, instant answers that use built
 [Spice]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md
 [Goodies]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md
 [Fathead]: https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md
-[triggers]:https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_triggers.md
+[triggers]:https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_triggers.md
