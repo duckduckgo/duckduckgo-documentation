@@ -162,8 +162,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     description "Succinct explanation of what this Instant Answer does";
     primary_example_queries "first example query", "second example query";
     secondary_example_queries "optional -- demonstrate any additional triggers";
-    # Uncomment and fill out before submitting
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#category
     # category "";
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#topics
     # topics "";
     code_url "https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IsAwesome/GitHubUsername.pm";
     attribution github => ["GitHubAccount", "Friendly Name"],
@@ -184,7 +185,6 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     };
 
     1;
-
     ```
 
 5. Change the **`trigger`** (line 25) to this:
@@ -346,7 +346,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
-1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** to this:
+1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
 
     ```perl
     name "IsAwesome GitHubUsername";
