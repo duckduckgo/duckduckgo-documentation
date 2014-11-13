@@ -346,7 +346,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
-1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** to this:
+1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
 
     ```perl
     name "IsAwesome GitHubUsername";
