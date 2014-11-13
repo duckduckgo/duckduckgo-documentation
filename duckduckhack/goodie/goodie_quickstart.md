@@ -162,8 +162,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     description "Succinct explanation of what this Instant Answer does";
     primary_example_queries "first example query", "second example query";
     secondary_example_queries "optional -- demonstrate any additional triggers";
-    # Uncomment and fill out before submitting
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#category
     # category "";
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#topics
     # topics "";
     code_url "https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IsAwesome/GitHubUsername.pm";
     attribution github => ["GitHubAccount", "Friendly Name"],
@@ -184,10 +185,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     };
 
     1;
-
     ```
 
-5. Change the **`trigger`** (line 23) to this:
+5. Change the **`trigger`** (line 25) to this:
 
     ```perl
     triggers start => "duckduckhack githubusername";
