@@ -1,11 +1,12 @@
+# Setup
+
 *First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
 
+## Before you start...
 
-## Before you start...  
+For your setup, we highly recommend using Codio, a web IDE that simplifies the development process greatly. This page will show you how to set up Codio and then it's on to creating instant answers!
 
-For your setup, we highly recommend using Codio, a web IDE that simplifies the development process greatly. This page will show you how to set up Codio and then it's on to creating instant answers! 
-
-*Note:* You can also [TO BE ADDED] develop and test locally or via a virtual machine [/link], but these options do require more configuration and are currently maintained by volunteer efforts. 
+*Note:* You can also [TO BE ADDED] develop and test locally or via a virtual machine [/link], but these options do require more configuration and are currently maintained by volunteer efforts.
 
 ## Sign up for a GitHub Account
 
@@ -102,6 +103,6 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-7. The file tree on the left side should update, there should be a new "**zeroclickinfo-xxxxx**" directory. Where "xxxxx" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail. 
+7. The file tree on the left side should update, there should be a new "**zeroclickinfo-xxxxx**" directory. Where "xxxxx" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
 
 **Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. Now, let's code our first Instant Answer! 

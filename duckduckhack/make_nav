@@ -1,0 +1,95 @@
+#!/usr/bin/env perl
+# Generate navigation files from YAML structure
+use 5.010;
+use strict;
+use warnings;
+
+use JSON;
+use Path::Tiny;
+use YAML qw( LoadFile );
+
+my $md_nav_filename   = 'ddh-index.md';
+my $json_nav_filename = 'ddh-prev-next.json';
+my $yaml_nav_filename = 'navigation.yml';
+my $faq_path          = 'resources/faq.md';
+
+my $here      = path(__FILE__)->realpath->parent;
+my $repo_root = $here->parent;                      # Note this assumption!
+
+my $yaml_nav      = $here->child($yaml_nav_filename);
+my $nav_structure = LoadFile($yaml_nav);
+
+my $base_repo_link = $nav_structure->{repo_url} . $here->relative($repo_root) . '/';
+my $faq_link       = $base_repo_link . $faq_path;
+
+my $prev_next;
+my @md_lines = ('# ' . $nav_structure->{title} . "\n");
+
+my %seen_and_unseen;
+
+foreach my $section (@{$nav_structure->{sections}}) {
+    my $prev;
+    my $section_dir = $here->child($section->{dir_name});
+    foreach my $child ($section_dir->children) {
+        $seen_and_unseen{$child->relative($here)} = undef;
+    }
+    push @md_lines, "\n- **" . dir_to_title($section_dir) . "**\n";
+    foreach my $filename (@{$section->{entries}}) {
+        my $file_path = $section_dir->child($filename);
+        delete $seen_and_unseen{$file_path->relative($here)};
+        push @md_lines, '  - [' . extract_title_from_md_file($file_path) . '](' . $base_repo_link . $file_path->relative($here) . ")\n";
+        if ($prev) {
+            push @{$prev_next->{$prev}->{next}}, $filename;
+            $prev_next->{$filename} = {
+                prev => [$prev],
+                next => [],
+            };
+        } else {
+            $prev_next->{$filename} = {
+                prev => [],
+                next => [],
+            };
+        }
+        $prev = $filename;
+    }
+    if (my $anchor = $section->{faq_anchor}) {
+        push @md_lines, '  - [FAQ](' . $faq_link . '#' . $anchor . ")\n";
+    }
+}
+
+foreach my $missed (keys %seen_and_unseen) {
+    warn $missed . ' does not appear in ' . $yaml_nav->relative($here);
+}
+
+# Output point.
+$here->child($md_nav_filename)->spew_utf8(@md_lines);
+my $json_fh = IO::File->new($here->child($json_nav_filename), 'w');
+print $json_fh JSON->new->utf8(1)->pretty(1)->canonical(1)->encode($prev_next);
+
+sub dir_to_title {
+    # In a sub just in case this standard changes later
+    # or exceptions are needed
+    my $dir = shift;
+
+    # Title case (kinda) and turn `-` into ` `
+    return join(' ', map { ucfirst } (split '-', $dir->basename));
+}
+
+sub extract_title_from_md_file {
+    my $file = shift;
+
+    my $title = '';
+    if (my $fh = $file->openr) {
+        my $first_line = $fh->getline;
+
+        if ($first_line =~ /^# (.*)$/) {
+            $title = $1;
+        } else {
+            warn 'No title found in ' . $file;
+        }
+    } else {
+        warn 'Could not open: ' . $file;
+    }
+
+    return $title;
+}

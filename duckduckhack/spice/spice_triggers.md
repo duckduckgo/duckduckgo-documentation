@@ -1,4 +1,4 @@
-## Triggers
+# Triggers Overview
 
 There are two types of triggers, **words** and **regex**. We insist that you use word triggers whenever possible as they are simpler and faster.
 

@@ -1,4 +1,4 @@
-## DuckPAN
+# DuckPAN
 
 **The DuckDuckHack Testing Tool**
 

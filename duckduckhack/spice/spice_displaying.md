@@ -1,4 +1,4 @@
-## Adding Your Spice to the AnswerBar
+# Adding Your Spice to the AnswerBar
 
 `Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
 

@@ -1,4 +1,4 @@
-# What's New in the DuckDuckHack Platform
+# What's New
 
 **May 2014**
 

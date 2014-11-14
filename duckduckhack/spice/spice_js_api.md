@@ -1,4 +1,4 @@
-## Spice JavaScript API Reference
+# JavaScript API Reference
 
 For a list of avaliable Spice JS functions see:
 

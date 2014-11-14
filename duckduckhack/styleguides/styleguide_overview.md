@@ -1,4 +1,4 @@
-## DuckDuckHack - Instant Answer Style Guide
+# DuckDuckHack - Instant Answer Style Guide
 
 - [Design Style Guide](http://duck.co/duckduckhack/design_styleguide)
 - [Code Style Guide](http://duck.co/duckduckhack/code_styleguide) 

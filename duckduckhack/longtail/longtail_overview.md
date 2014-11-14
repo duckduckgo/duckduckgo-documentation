@@ -1,4 +1,4 @@
-# Longtail Instant Answers
+# Overview
 
 Each longtail instant answer produces a (generally large) data file that gets used for showing answers in [long tail queries](https://duckduckgo.com/?q=i'm+a+walking+contradiction+lyrics).
 

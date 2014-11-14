@@ -1,4 +1,4 @@
-## Testing with the Location API
+# Testing with the Location API
 
 To write a test for a location-aware instant answer, you'll need to pass the test function an extra parameter - a `DDG::Request` object, with the location specified. To do this, you'll need to `use DDG::Test::Location` and `use DDG::Request`. Here is a working annotated example excerpted from the **Goodie::HelpLine** test file `t/HelpLine.t`. The same process should be used for Spice.
 

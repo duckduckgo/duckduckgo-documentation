@@ -1,4 +1,4 @@
-##Spice Handlers
+# Spice Handlers
 
 - [Multiple Placeholders in Spice To URL](http://duck.co/duckduckhack/spice_advanced_backend#Multiple-Placeholders-in-Spice-To-URL)
 

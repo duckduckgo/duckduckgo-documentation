@@ -1,4 +1,4 @@
-# Spice Attributes (Perl)
+# Spice Attributes
 
 ## Spice `to`
 

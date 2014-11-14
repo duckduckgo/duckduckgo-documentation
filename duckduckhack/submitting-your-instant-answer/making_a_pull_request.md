@@ -1,4 +1,4 @@
-## Making a Pull Request
+# Making a Pull Request
 
 Now that you have completed the [developer checklist](https://dukgo.com/duckduckhack/developer_checklist) and added [Metadata](https://dukgo.com/duckduckhack/metadata) to your instant answer, you are ready to submit a pull request.
 

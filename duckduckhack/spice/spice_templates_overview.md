@@ -1,4 +1,4 @@
-# Spice Templates
+# Spice Templates Overview
 
 ##Spice Template Summary
 

@@ -1,4 +1,4 @@
-## Location API
+# Location API
 
 Some instant answers need the user's location to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer depends on knowing where the user is located.
 
