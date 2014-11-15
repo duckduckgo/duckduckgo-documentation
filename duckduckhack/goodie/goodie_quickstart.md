@@ -315,7 +315,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     ```perl
     handle remainder => sub {
-        return if $_;
+        return if $_; # if we have a remainder (i.e. query != trigger), bail out
         return "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!";
     };
     ```
