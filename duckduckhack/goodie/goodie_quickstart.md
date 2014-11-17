@@ -417,7 +417,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 8. Click the "**Pull Request**" button (grey text, middle of the screen).
 9. Review the changes and click "**Create Pull Request**".
 10. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-11. Copy the "Goodie Pull Request Template" from [here](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md&f=1), and paste it into the text box that says "**Leave a comment**".
+11. Copy the "Goodie Pull Request Template" from [here](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md), and paste it into the text box that says "**Leave a comment**".
 12. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 13. Go back to your Codio.com browser tab.
 14. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
