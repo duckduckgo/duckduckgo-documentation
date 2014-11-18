@@ -162,8 +162,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     description "Succinct explanation of what this Instant Answer does";
     primary_example_queries "first example query", "second example query";
     secondary_example_queries "optional -- demonstrate any additional triggers";
-    # Uncomment and fill out before submitting
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#category
     # category "";
+    # Uncomment and complete: https://duck.co/duckduckhack/metadata#topics
     # topics "";
     code_url "https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IsAwesome/GitHubUsername.pm";
     attribution github => ["GitHubAccount", "Friendly Name"],
@@ -184,10 +185,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     };
 
     1;
-
     ```
 
-5. Change the **`trigger`** (line 23) to this:
+5. Change the **`trigger`** (line 25) to this:
 
     ```perl
     triggers start => "duckduckhack githubusername";
@@ -346,7 +346,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
-1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** to this:
+1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
 
     ```perl
     name "IsAwesome GitHubUsername";
@@ -417,7 +417,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 8. Click the "**Pull Request**" button (grey text, middle of the screen).
 9. Review the changes and click "**Create Pull Request**".
 10. Enter a title for your pull request, "Submitting My First Goodie" or similar is perfect.
-11. Copy the "Goodie Pull Request Template" from [here](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md&f=1), and paste it into the text box that says "**Leave a comment**".
+11. Copy the "Goodie Pull Request Template" from [here](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md), and paste it into the text box that says "**Leave a comment**".
 12. Answer the questions in the Pull Request Template (this helps the DDG Staff and Community understand your Pull Request better).
 13. Go back to your Codio.com browser tab.
 14. Open the "Terminal" tab and type `duckpan server`, then press "**Enter**".
