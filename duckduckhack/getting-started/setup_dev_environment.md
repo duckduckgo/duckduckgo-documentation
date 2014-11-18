@@ -42,11 +42,11 @@ Next, you'll need to get an account for Codio:
 1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
 2. In the drop-down, select the "**Fork**" option.
 
-    ![Codio Fork](https://duckduckgo.com/iu/?u=raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork.png&f=1)
+    ![Codio Fork](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork.png&f=1)
 
 3. In the pop-up window, select "**Clone both the Project and its Box**".
 
-    ![Codio Fork Both](https://duckduckgo.com/iu/?u=raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork_both&f=1.png)
+    ![Codio Fork Both](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork_both.png&f=1)
 
 4. Wait a minute while the project forks...
 5. You should now see a new window with three panes. It should say "**DuckDuckHack**" at the top of the left pane.
