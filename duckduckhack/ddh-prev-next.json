@@ -16,7 +16,7 @@
 
 	"goodie_overview.md": {
 		"prev": ["determine_your_instant_answer_type.md"],
-		"next": ["goodie_basic_tutorial.md"]
+		"next": ["goodie_quickstart.md"]
 	},
 
 	"goodie_quickstart.md": {
@@ -25,7 +25,7 @@
 	},
 
 	"goodie_basic_tutorial.md": {
-		"prev": ["goodie_overview.md"],
+		"prev": ["goodie_quickstart.md"],
 		"next": ["goodie_testing_triggers.md"]
 	},
 
