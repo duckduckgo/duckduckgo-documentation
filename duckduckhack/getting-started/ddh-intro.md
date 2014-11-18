@@ -1,36 +1,37 @@
-# DuckDuckHack: Toward Better Instant Answers!
+# Thanks for joining DuckDuckHack!
 
-DuckDuckGo users believe in better answers with fewer clicks. After all, why sift through a page full of links, when an answer is readily available?
+We are a community of developers and non-developers alike, with a passion for search and privacy, who are helping to make DuckDuckGo and its community a better place. As a developer, we need your help creating and improving the coolest part of our search engine - our Instant Answers!
 
-At DuckDuckGo, our instant answers are always placed at the top of the results page; often providing exactly what you want without any extra clicks.
+## What are Instant Answers?
 
-![instant answer example](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png&f=1)
 
-In the above example, Quixey was a source recommended by our community for searching mobile apps. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey results as an instant answer!
+DuckDuckGo users believe in better answers with fewer clicks. Our Instant Answers are always placed at the top of the results page to provide exactly what you want, often without requiring any extra clicks.
 
-## Getting Involved
+![App search Instant Answer example](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/app_search_example.png&f=1)
 
-Anyone in the world can help improve the search experience on DuckDuckGo. Whether you can code or not, there are many ways for you to contribute. You can get started by suggesting new instant answers to the community, recommending better data sources, or actually hacking away on your own instant answer.
-<!-- /summary -->
+In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey App Search Instant Answer!
 
-1. **Suggesting Instant Answer Ideas**
+## Get Your Hands Dirty
 
-  On DuckDuckGo, searches like ["chicken souvlaki recipe"](https://duckduckgo.com/?q=chicken+souvlaki+recipe) will show you tons of great recipes, while ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters) will show you what's actually playing in nearby movie theaters.  We depend on suggestions from users like yourself to know what sort of useful instant answers you want from your search engine.
+If you're new to programming, or you still unsure about what's involved in developing an Instant Answer, we've got the perfect thing for you!
 
-     **[Have an Instant Answer Suggestion?](https://dukgo.com/ideas)**
+Our [Goodie Quickstart](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) will guide you through the setup process, and help you make a very simple Instant Answer which you can even submit to DuckDuckGo and then see it live!
 
-2. **Recommending Sources**
+If you're confident that you can figure things out along the way, you're welcome to carry on, but we suggest that everyone looks over the Quick Start anyway.
 
-  Everyone has a favorite source for useful information (maybe it's Rotten Tomatoes for movies or Yelp for local restaurant information). Our users concluded that SoundCloud was a great source for answers about music. Now it is used for [music searches](https://duckduckgo.com/?q=daft+punk+music) on DuckDuckGo!
+## Creating Your Own Instant Answer
 
-  Since not every idea comes with the best possible data source in mind, you can help us determine the right place to find relevant answers. Simply leave a comment with your own source recommendation.
+If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about an event? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
 
-    **[Have a Better Source?](https://dukgo.com/ideas)**
+If you're at a loss for ideas, our Community has submitted and voted on hundreds of [their own ideas](https://duck.co/ideas) that you can to bring to life!
 
-3. **Hacking on Instant Answers**
+Once you know the Instant Answer you'd like to provide, you'll need to [determine your Instant Answer type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md).
 
-  Instant Answers depend on awesome open source developers to both create and improve them. If you're a developer and you'd like to create a new instant answer (or improve [current ones](https://duckduckgo.com/goodies)), we welcome your contributions!
+------
 
-     **[Have an Itch to Code?](https://dukgo.com/duckduckhack/duckduckhack_vision)**
+**One more thing:** We'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll help you out!
 
-Do you have ideas which don't seem to fit into any of these categories? You can always engage with the community through [our web forum](https://dukgo.com/forum) or the [DuckDuckHack email list](https://www.listbox.com/subscribe/?list_id=197814).
+We also have other useful resources:
+
+- [Our Community Forum](https://duck.co/forum)
+- [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814)
