@@ -640,7 +640,7 @@ The reason for wrapping the `Spice.add()` call in a function is because we need 
     // Check if we have results we need.
     if (api_result && api_result.length > 0) {
 
-        // Wait, before we display the Instant Answer, let's check if it's a plural
+        // Wait, before we display the instant answer, let's check if it's a plural
         // such as the word "cacti."
         var singular = api_result[0].text.match(/^(?:A )?plural (?:form )?of <xref>([^<]+)<\/xref>/i);
 
@@ -650,7 +650,7 @@ The reason for wrapping the `Spice.add()` call in a function is because we need 
             ddg_spice_dictionary_definition.pluralOf = api_result[0].word;
             $.getScript(path + "/reference/" + singular[1]);
         } else {
-            // Render the Instant Answer if everything is fine.
+            // Render the instant answer if everything is fine.
             render(api_result, api_result[0].word, api_result[0].word);
         }
     }
@@ -680,7 +680,7 @@ function ddg_spice_dictionary_reference (api_result) {
         api_result[0].pluralOf = word;
         api_result[0].word = ddg_spice_dictionary_definition.pluralOf;
 
-        // Render the Instant Answer.
+        // Render the instant answer.
         render(api_result, api_result[0].word, word);
     }
 };

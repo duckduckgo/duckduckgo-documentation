@@ -15,13 +15,13 @@ triggers <location> => <array of words and phrases>
 #### Examples
 
 ```perl
-triggers start => "trigger my Instant Answer", "trigger myIA", "myIA";
+triggers start => "trigger my instant answer", "trigger myIA", "myIA";
 ```
 
 or
 
 ```perl
-@triggers = qw(these are separate triggers for my Instant Answer);
+@triggers = qw(these are separate triggers for my instant answer);
 triggers any => @triggers;
 ```
 
@@ -54,13 +54,13 @@ triggers <query_format> => <regular expression>
 #### Examples
 
 ```perl
-triggers query_lc => qr/trigger (?:my|your|our) Instant Answer/;
+triggers query_lc => qr/trigger (?:my|your|our) instant answer/;
 ```
 
 or
 
 ```perl
-my $regex = qr/^this is an? Instant Answer regexp$/;
+my $regex = qr/^this is an? instant answer regexp$/;
 triggers query_raw => $regex;
 ```
 
