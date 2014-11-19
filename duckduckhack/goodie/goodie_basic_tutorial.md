@@ -33,7 +33,7 @@ package DDG::Goodie::Chars;
 
 <!-- /summary -->
 
-Each Instant Answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For a new Goodie (or any new Instant Answer), you would change **Chars** to the name of the Instant Answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
+Each Instant Answer is a [Perl package](https://duckduckgo.com/?q=perl+package), so we start by declaring the package namespace. For brand new development, you would change **Chars** to the name of the Instant Answer (written in [CamelCase](https://duckduckgo.com/?q=camelcase) format).
 
 The second line is a special comment line that is used for documentation purposes.
 
@@ -55,7 +55,7 @@ On the next line, type:
 triggers start => 'chars';
 ```
 
-**triggers** are keywords/phrases that tell us when to make the Instant Answer run. When a particular *trigger word* (or phrase) is part of a search query, it tells DuckDuckGo to *trigger* the Instant Answer(s) that have indicated they should trigger for the given word (or phrase).
+**triggers** are keywords/phrases that tell us when to make the Instant Answer run. When a particular *trigger word* (or phrase) appears in a search query, the DuckDuckGo engine knows that *triggering* the Instant Answer may *handle* the query.
 
 In this case there is one trigger word: "**chars**".
 
