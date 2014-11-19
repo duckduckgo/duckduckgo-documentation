@@ -12,7 +12,7 @@ Please use the following guide when QA-ing Instant Answers:
 
 ### How do they work?
 
-Instant answers are a bundle of code that make information from one source available directly on DuckDuckGo. Anyone can suggest them and anyone can create them!
+Instant Answers are a bundle of code that make information from one source available directly on DuckDuckGo. Anyone can suggest them and anyone can create them!
 Check out some examples of what we mean:
 
 - [Definition search:](https://duckduckgo.com/?q=define+hello)
@@ -26,19 +26,19 @@ Check out some examples of what we mean:
 ### What we're looking for in QA
 
 **Function:** Is the Instant Answer actually useful?
-Instant answers should *always* be unambiguously **better** than organic links. If it doesn't add value to the page, then it should not be approved.
+Instant Answers should *always* be unambiguously **better** than organic links. If it doesn't add value to the page, then it should not be approved.
 
 - **Example test:** Search for something that will trigger the Instant Answer and compare it to the organic links. The user should benefit from having the Instant Answer available. In the best case scenario, the Instant Answer should give the user all the information they need, so they don't even have to click a link. At the very least, the Instant Answer should offer some different and more valuable information than the links.
 
 
 **Relevancy:** Does the Instant Answer always provide relevant information?
-Instant answers should only show information that is correct and relevant to the user's search. If an Instant Answer is capable of returning irrelevant information (e.g., "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the Instant Answer is accepted and goes live.
+Instant Answers should only show information that is correct and relevant to the user's search. If an Instant Answer is capable of returning irrelevant information (e.g., "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the Instant Answer is accepted and goes live.
 
-- **Example test:** Search for something that will trigger the Instant Answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the Instant Answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMdB.
+- **Example test:** Search for something that will trigger the Instant Answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the Instant Answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMDb.
 
 
 **Triggering:** Does the Instant Answer trigger when it shouldn't? Are there any queries that *should* trigger the Instant Answer, but don't?
-Goodie and Spice Instant Answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that Instant Answer when those triggers appear in a search query. If they are too generic, it will cause the Instant Answer to be shown in cases which are inappropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an Instant Answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
+Goodie and Spice Instant Answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that Instant Answer when those triggers appear in a search query. If they are too generic, it will cause the Instant Answer to be shown in cases which are inappropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant Answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an Instant Answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
 
 - **Example test:** Can you think of any queries that should or shouldn't be triggering this Instant Answer? Let's say we have an Instant Answer that shows movies, and it triggers with the term, "movie". The query, "movie Thor" would trigger this Instant Answer, but other queries, such as, "watch Thor", "Thor movies", "film Thor" or "Thor film" should also trigger this Instant Answer.
 
