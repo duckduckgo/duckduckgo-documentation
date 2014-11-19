@@ -48,7 +48,7 @@ All Instant Answers, regardless of their type (Spice, Goodie, Fathead or Longtai
 
 - #### Font-Family
 
-  Instant answer headers and abstracts should use the DuckDuckGo font stack: `'Helvetica Neue', 'Segoe UI', 'Nimbus Sans L', 'Liberation Sans', 'Open Sans', FreeSans, Arial, sans-serif`.
+  Instant Answer headers and abstracts should use the DuckDuckGo font stack: `'Helvetica Neue', 'Segoe UI', 'Nimbus Sans L', 'Liberation Sans', 'Open Sans', FreeSans, Arial, sans-serif`.
 
 - #### Font-Size
 
@@ -70,7 +70,7 @@ Aside from continuity, all Instant Answers should also be designed with simplici
 
 - #### Easy to Find
 
-  Instant answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether it's text, an image, a table, etc., should be easy to find within the Instant Answer Box. An Instant Answer's content should be succinct and to-the-point. Sentence form is preferred when feasible; however, large paragraphs of text should be avoided.
+  Instant Answers should be easy to find, which is why we keep them at the top of the page and the actual answer to the question, whether it's text, an image, a table, etc., should be easy to find within the Instant Answer Box. An Instant Answer's content should be succinct and to-the-point. Sentence form is preferred when feasible; however, large paragraphs of text should be avoided.
 
 - #### Easy to Read
 
@@ -78,11 +78,11 @@ Aside from continuity, all Instant Answers should also be designed with simplici
 
 - #### Easy to Understand
 
-  Instant answers should also be easy to understand and should provide enough context for the user to understand what question is being answered. If the user can't tell what they are looking at, the answer might be disregarded or worse, misunderstood.
+  Instant Answers should also be easy to understand and should provide enough context for the user to understand what question is being answered. If the user can't tell what they are looking at, the answer might be disregarded or worse, misunderstood.
 
 ## Flexibility
 
-Instant answers must be compatible with **all platforms, operating systems and browsers**. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degradation (eg. border-radius). This also means that all Instant Answers should look and function correctly on both mobile devices (small screens) and desktop environments (larger screens). For some Instant Answer types (ie. Fatheads, Longtail) this is easily achieved because they most often return text. However, for other Instant Answers (ie. Spice) which use JavaScript and CSS, this will require a little more effort on the developer's part to ensure everything works properly.
+Instant Answers must be compatible with **all platforms, operating systems and browsers**. This means that care must be taken to ensure any special CSS has backwards compatibility or graceful degradation (eg. border-radius). This also means that all Instant Answers should look and function correctly on both mobile devices (small screens) and desktop environments (larger screens). For some Instant Answer types (ie. Fatheads, Longtail) this is easily achieved because they most often return text. However, for other Instant Answers (ie. Spice) which use JavaScript and CSS, this will require a little more effort on the developer's part to ensure everything works properly.
 
 ## Space
 

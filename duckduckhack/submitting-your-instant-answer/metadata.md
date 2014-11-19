@@ -99,7 +99,7 @@ Supported categories include:
 - time_sensitive
 - transformations
 
-**Note:** Instant answers may specify ***exactly one*** category.
+**Note:** Instant Answers may specify ***exactly one*** category.
 
 ```perl
 category "forums";
@@ -134,7 +134,7 @@ Supported topics include:
 - web_design
 - words\_and\_games
 
-**Note:** Instant answers may specify ***multiple*** topics.
+**Note:** Instant Answers may specify ***multiple*** topics.
 
 ```perl
 topics "social", "entertainment", "special_interest";

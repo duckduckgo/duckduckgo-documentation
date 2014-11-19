@@ -14,9 +14,9 @@ We hope you will consider making DuckDuckGo Instant Answers to:
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [Instant Answers Ideas Forum](http://ideas.duckduckhack.com/) where you can suggest and comment on Instant Answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current Instant Answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all, please check out our [Instant Answers Ideas Forum](https://duck.co/ideas) where you can suggest and comment on Instant Answer ideas. For instance, identifying the best sources to draw from is extremely important but developers may not know what they are. Similarly, you can submit [issues about current Instant Answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
-If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
+If you're a business and want your data to be utilized, adding your service to the [Instant Answers Ideas Forum](https://duck.co/ideas) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
 ### Can you help me?
 
@@ -31,11 +31,11 @@ If you don't know Perl, that's OK! Some Instant Answer types ([Fathead](https://
 
 ### Do you have any Instant Answer ideas?
 
-Yup! We maintain [a growing list](http://ideas.duckduckhack.com/). There are also improvement ideas for [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies/issues), [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/issues), [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead/issues) and [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail/issues).
+Yup! We maintain [a growing list](https://duck.co/ideas). There are also improvement ideas for [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies/issues), [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/issues), [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead/issues) and [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail/issues).
 
 ### How do I note that I've started on something?
 
-In your initial pull request, please note the link on the [idea list](http://ideas.duckduckhack.com/). We'll move it to the "in process" bucket for you.
+In your initial pull request, please note the link on the [Ideas Forum](https://https://duck.co/ideas). We'll move it to the "in process" bucket for you.
 
 ### Where I can report Instant Answer bugs?
 
