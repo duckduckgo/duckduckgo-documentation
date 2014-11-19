@@ -1,12 +1,12 @@
 ## Instant Answer Metadata
 
-Including metadata helps us to categorize and describe your instant answer. This document explains the different types of metadata that you may add to the source code of your instant answer.
+Including metadata helps us to categorize and describe your Instant Answer. This document explains the different types of metadata that you may add to the source code of your Instant Answer.
 
 ------
 
 ## name
 
-A unique name for this instant answer.
+A unique name for this Instant Answer.
 
 While this can be arbitrary, it is considered good practice to have the chosen name be similar to the Perl package in which it is contained, e.g., DDG::Spice::RedditSubSearch.
 
@@ -16,7 +16,7 @@ name "Subreddit Search";
 
 ## source
 
-The name of the data source used for your instant answer.
+The name of the data source used for your Instant Answer.
 
 ```perl
 source "Reddit";
@@ -42,7 +42,7 @@ icon_url "/i/reddit.com.ico";
 
 ## description
 
-A succinct explanation of what the instant answer does. Please **exclude** the source name if possible.
+A succinct explanation of what the Instant Answer does. Please **exclude** the source name if possible.
 
 ```perl
 description "Search for Subreddits";
@@ -50,7 +50,7 @@ description "Search for Subreddits";
 
 ## primary_example_queries
 
-Examples of the most common types of queries which will trigger the instant answer.
+Examples of the most common types of queries which will trigger the Instant Answer.
 
 ```perl
 primary_example_queries "/r/pizza", "subreddit nature";
@@ -58,7 +58,7 @@ primary_example_queries "/r/pizza", "subreddit nature";
 
 ## secondary_example_queries (optional)
 
-Examples of other, less common, trigger words or phrases for the instant answer, if applicable.
+Examples of other, less common, trigger words or phrases for the Instant Answer, if applicable.
 
 ```perl
 secondary_example_queries "r/accounting";
@@ -66,7 +66,7 @@ secondary_example_queries "r/accounting";
 
 ## category
 
-The category into which your instant answer best fits.
+The category into which your Instant Answer best fits.
 
 <!-- /summary -->
 
@@ -107,7 +107,7 @@ category "forums";
 
 ## topics
 
-A list of the topics to which your instant answer applies.
+A list of the topics to which your Instant Answer applies.
 
 <!-- /summary -->
 
@@ -142,7 +142,7 @@ topics "social", "entertainment", "special_interest";
 
 ## code_url
 
-URL for the instant answer code on github.
+URL for the Instant Answer code on github.
 
 ```perl
 code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RedditSubSearch.pm";

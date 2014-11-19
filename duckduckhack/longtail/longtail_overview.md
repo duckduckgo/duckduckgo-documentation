@@ -1,8 +1,8 @@
 # Longtail Instant Answers
 
-Each longtail instant answer produces a (generally large) data file that gets used for showing answers in [long tail queries](https://duckduckgo.com/?q=i'm+a+walking+contradiction+lyrics).
+Each longtail Instant Answer produces a (generally large) data file that gets used for showing answers in [long tail queries](https://duckduckgo.com/?q=i'm+a+walking+contradiction+lyrics).
 
-Longtail instant answers are in alpha and both the interface and testing procedure are not yet well defined. However, you can work away without worrying about what any changes might do to your instant answers -- we'll take care of all that.
+Longtail Instant Answers are in alpha and both the interface and testing procedure are not yet well defined. However, you can work away without worrying about what any changes might do to your Instant Answers -- we'll take care of all that.
 
 ## Example
 
@@ -10,7 +10,7 @@ Longtail instant answers are in alpha and both the interface and testing procedu
 
 ## Structure
 
-Longtails consist of two primary files. The first is a metadata file that describes the instant answer you are building. Its structure is identical to the Fathead metadata file, described [here](https://github.com/duckduckgo/zeroclickinfo-fathead#meta-file). The second, which can be generated using a language of your choosing, contains the data set in a format ready for us to deploy:
+Longtails consist of two primary files. The first is a metadata file that describes the Instant Answer you are building. Its structure is identical to the Fathead metadata file, described [here](https://github.com/duckduckgo/zeroclickinfo-fathead#meta-file). The second, which can be generated using a language of your choosing, contains the data set in a format ready for us to deploy:
 
 ```
 <!-- This XML declaration can be simply copied and is necessary for all longtail. -->

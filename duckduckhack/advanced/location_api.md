@@ -1,10 +1,10 @@
 ## Location API
 
-Some instant answers need the user's location to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) instant answer depends on knowing where the user is located.
+Some Instant Answers need the user's location to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) Instant Answer depends on knowing where the user is located.
 
 <!-- /summary -->
 
-The [core DDG library](https://github.com/duckduckgo/duckduckgo) provides a Location API. Since Goodie and Spice instant answers inherit from this package, their `handle` functions have access to a `$loc` variable which refers to a [Location object](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm).
+The [core DDG library](https://github.com/duckduckgo/duckduckgo) provides a Location API. Since Goodie and Spice Instant Answers inherit from this package, their `handle` functions have access to a `$loc` variable which refers to a [Location object](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm).
 
 This Location object has a number of [useful attributes](https://github.com/duckduckgo/duckduckgo/blob/master/lib/DDG/Location.pm#L6) to help you provide relevant answers:
 
@@ -32,7 +32,7 @@ continent_code => NA
 metro_code     => 504
 ```
 
-When testing instant answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States":
+When testing Instant Answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States":
 
 ```perl
 # Phoenixville, Pennsylvania, United States
@@ -41,4 +41,4 @@ my $location = join(", ", $loc->city, $loc->region_name, $loc->country_name);
 
 For assistance with setting the location to be used in automated testing, please refer to the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md).
 
-Naturally, once your instant answer is live, `$loc` will refer to the appropriate location.
+Naturally, once your Instant Answer is live, `$loc` will refer to the appropriate location.

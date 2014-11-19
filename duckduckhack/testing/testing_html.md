@@ -36,7 +36,7 @@ You should have already tested your triggers by following the [Testing triggers]
 
 5. Debug.
 
-    If your search doesn't hit an instant answer, there will be an error message displayed on the page: "Sorry, no hit for your instant answer."
+    If your search doesn't hit an Instant Answer, there will be an error message displayed on the page: "Sorry, no hit for your Instant Answer."
 
   If the trigger is hit but you do not see something displayed on the screen, a number of things could be wrong:
 

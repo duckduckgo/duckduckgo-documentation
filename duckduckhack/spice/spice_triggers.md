@@ -18,7 +18,7 @@ triggers start => "trigger my instant answer", "trigger myIA", "myIA";
 ## Word Triggers
 
 ### Usage
- 
+
 ```perl
 triggers <location> => <array of words and phrases>
 ```
@@ -52,7 +52,7 @@ triggers end => "ending phrase of query";
 - `startend` &mdash; Word is at the beginning or end of the query
 - `any` &mdash; Word is anywhere in the query
 
-**\*\*Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrates the usage of multiple Word trigger statements.
+**Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrates the usage of multiple Word trigger statements.
 
 ## Regex Triggers
 
@@ -85,7 +85,7 @@ triggers query_raw => $regex;
 - `query_nowhitespace` &mdash; `query` with all whitespace removed
 - `query_clean` &mdash; `query_lc`, but with whitespace and non-alphanumeric ascii removed
 
-**\*\*Note:** You **cannot** combine the use of **Regex Triggers** with **Word Triggers**.
+**Note:** You **cannot** combine the use of **Regex Triggers** with **Word Triggers**.
 
 ## Regex Guards
 

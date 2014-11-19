@@ -1,11 +1,11 @@
 ## Advanced Testing
 
-The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each instant answer.
+The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each Instant Answer.
 
 ## Create Test File
 
-Make a new file in the test directory **t/**. The name of the file should match the name of your instant answer, but this time followed by the extension **.t** for test because it is a Perl testing file. 
-For example, if the name of your instant answer was **Chars**, the file would be `Chars.t`.
+Make a new file in the test directory **t/**. The name of the file should match the name of your Instant Answer, but this time followed by the extension **.t** for test because it is a Perl testing file. 
+For example, if the name of your Instant Answer was **Chars**, the file would be `Chars.t`.
 
 The top of the file reads like a normal Perl script with some use statements to include testing modules, including the DuckDuckGo testing module.
 <!-- /summary -->
@@ -19,7 +19,7 @@ use Test::More;
 use DDG::Test::Goodie;
 ```
 
-Then you define any default **zci** values that you set for your instant answer. These should match exactly what you set in your **.pm** file.
+Then you define any default **zci** values that you set for your Instant Answer. These should match exactly what you set in your **.pm** file.
 
 ```perl
 zci answer_type => 'chars';
@@ -103,7 +103,7 @@ done_testing;
 
 ## Test your Instant Answer
 
-Run your instant answer test file like this:
+Run your Instant Answer test file like this:
 
 ```txt
 perl -Ilib t/Chars.t
