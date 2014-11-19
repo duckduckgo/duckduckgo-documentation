@@ -2,7 +2,7 @@
 
 ## Further Qualifying the Query
 
-Trigger words are coarse filters; they may send you queries you cannot handle. Your instant answer should return nothing in these cases.  As such, you generally need to further qualify the query in your code.
+Trigger words are coarse filters; they may send you queries you cannot handle. Your Instant Answer should return nothing in these cases.  As such, you generally need to further qualify the query in your code.
 
 There are many techniques for doing this qualification.  One of the most popular is to `return` as soon as a query can be disqualified.
 
@@ -19,7 +19,7 @@ handle remainder => sub {
 
 Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
 
-The `share` function gives each instant answer access to a subdirectory of the repository's `share` directory. The subdirectory for your instant answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words.  For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/regex_cheat_sheet) to store its custom CSS.
+The `share` function gives each Instant Answer access to a subdirectory of the repository's `share` directory. The subdirectory for your Instant Answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words.  For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/regex_cheat_sheet) to store its custom CSS.
 
 <!-- /summary -->
 
@@ -42,7 +42,7 @@ handle sub {
 };
 ```
 
-Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a **string** and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display as plain text or HTML instant answer.
+Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a **string** and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display as plain text or HTML Instant Answer.
 
 One further consideration is whether your data file contains non-ASCII characters. If so, you will want to prepare the file with UTF-8 encoding.  The [Shortcut Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Shortcut.pm) uses a UTF-8 data file:
 

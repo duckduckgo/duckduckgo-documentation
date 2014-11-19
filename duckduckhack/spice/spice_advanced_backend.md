@@ -45,7 +45,7 @@ Then the the string `10-100` would be sent to the `spice from` regexp, which wou
 spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
 ```
 
-**\*\*Note:** The reason why you do not need to specify a **from** keyword by default, is that the default value of `spice from` is **(.*)**, which means whatever you return gets gets captured into `$1`.
+**Note:** The reason why you do not need to specify a **from** keyword by default, is that the default value of `spice from` is **(.*)**, which means whatever you return gets gets captured into `$1`.
 
 ## Returning Multiple Values (to Spice From)
 
@@ -85,7 +85,7 @@ spice wrap_jsonp_callback => 1;
 
 ## Pure JS functions
 
-Sometimes no external API is necessary to deliver the instant answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/spice.js).
+Sometimes no external API is necessary to deliver the Instant Answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/spice.js).
 
 In cases like these you can define a **spice\_call\_type** as 'self' like this:
 
@@ -103,7 +103,7 @@ The return of **call** will run whatever is in the **call\_type** setting. **sel
 
 ## Caching
 
-Spice instant answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
+Spice Instant Answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
 
 <!-- /summary -->
 
@@ -134,17 +134,17 @@ When a Spice triggers, its Perl code is used to construct the URL for the API ca
 "random word" => http://api.wordnik.com/v4/words.json/randomWord
 ```
 
-Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice instant answer uses the Location API and uses it to append the user's location to the API call:
+Sometimes, a given query won't always require the same API call. This scenario generally arises when a Spice Instant Answer uses the Location API and uses it to append the user's location to the API call:
 
 ```
 # This query will NEVER make the same API call, because the location is dynamic
 "weather" => http://forecast.io/ddg?q=<user_location>
 ```
 
-To **turn off** API Call caching, you must set `spice is_cached` to `0` as we do in the [Forecast](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Forecast.pm) instant answer:
+To **turn off** API Call caching, you must set `spice is_cached` to `0` as we do in the [Forecast](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Forecast.pm) Instant Answer:
 
 ```perl
 spice is_cached => 0;
 ```
 
-This way, every time the Forecast instant answer is triggered, **Forecast.pm** will be run, so the correct URL will be built and  the current user's location will be used for the API call.
+This way, every time the Forecast Instant Answer is triggered, **Forecast.pm** will be run, so the correct URL will be built and  the current user's location will be used for the API call.

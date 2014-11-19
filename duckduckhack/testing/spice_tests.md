@@ -38,7 +38,7 @@ ddg_spice_test(
         is_cached => 0
     ),
     # You should include more test cases here. Try to think of ways that your
-    # instant answer might break, and add them here to ensure they won't. Here are is
+    # Instant Answer might break, and add them here to ensure they won't. Here are is
     # another that is tested for this Spice.
     'xkcd' => test_spice(
         '/js/spice/xkcd/',

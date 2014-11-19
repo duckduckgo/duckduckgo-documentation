@@ -2,9 +2,9 @@
 
 ## General FAQ
 
-### Why should I make instant answers?
+### Why should I make Instant Answers?
 
-We hope you will consider making DuckDuckGo instant answers to:
+We hope you will consider making DuckDuckGo Instant Answers to:
 
 - Improve results in areas you personally search and care about, e.g., [programming documentation](https://duckduckgo.com/?q=perl+split), [gaming](https://duckduckgo.com/?q=roll+3d12+%2B+4) or [entertainment](https://duckduckgo.com/?q=xkcd).
 - Increase usage of your own projects, e.g., data and [APIs](https://duckduckgo.com/?q=cost+of+living+nyc+philadelphia).
@@ -14,7 +14,7 @@ We hope you will consider making DuckDuckGo instant answers to:
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [instant answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on instant answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current instant answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all and you've ended up here, please go over to our [Instant Answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on Instant Answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current Instant Answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
@@ -27,9 +27,9 @@ Of course! Here are the easiest ways to contact someone who can help answer your
 
 ### What if I don't know Perl?
 
-If you don't know Perl, that's OK! Some instant answer types ([Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md), [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)) don't require the use of Perl. Also, if you know PHP, Ruby, or Python you should be able to write a [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md) in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
+If you don't know Perl, that's OK! Some Instant Answer types ([Fathead](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md), [Longtail](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)) don't require the use of Perl. Also, if you know PHP, Ruby, or Python you should be able to write a [Goodie](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md) in Perl pretty easily using [this awesome cheat sheet](http://hyperpolyglot.org/scripting).
 
-### Do you have any instant answer ideas?
+### Do you have any Instant Answer ideas?
 
 Yup! We maintain [a growing list](http://ideas.duckduckhack.com/). There are also improvement ideas for [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies/issues), [Spice](https://github.com/duckduckgo/zeroclickinfo-spice/issues), [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead/issues) and [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail/issues).
 
@@ -37,25 +37,25 @@ Yup! We maintain [a growing list](http://ideas.duckduckhack.com/). There are als
 
 In your initial pull request, please note the link on the [idea list](http://ideas.duckduckhack.com/). We'll move it to the "in process" bucket for you.
 
-### Where I can report instant answer bugs?
+### Where I can report Instant Answer bugs?
 
 Submit GitHub issues in the [appropriate repo](http://github.com/duckduckgo).
 
-### What if there are instant answer conflicts?
+### What if there are Instant Answer conflicts?
 
-Instant answer sources often compete to answer the same searches. In a lot of cases, the experience can be blended together so that the user is shown answers from more than one source. Our long-term vision for instant answers involves multiple sources used in that way.
+Instant answer sources often compete to answer the same searches. In a lot of cases, the experience can be blended together so that the user is shown answers from more than one source. Our long-term vision for Instant Answers involves multiple sources used in that way.
 
-There are times, though, where one source does a drastically better job of answering a particular query set. In those cases, the source used for those queries should be the source most capable of delivering the best possible user experience. Our community evaluates those in a few ways: 
+There are times, though, where one source does a drastically better job of answering a particular query set. In those cases, the source used for those queries should be the source most capable of delivering the best possible user experience. Our community evaluates those in a few ways:
 
-- Consistent performance (is the service reliable?) 
-- Speed (does the service return results fast enough?) 
+- Consistent performance (is the service reliable?)
+- Speed (does the service return results fast enough?)
 - Quality (does the service answer the queries better than any other service?)
 
 If you think you have a source that is better, let's talk about it on the [DuckDuckHack e-mail list](https://www.listbox.com/subscribe/?list_id=197814).
 
-### Why isn't my instant answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
+### Why isn't my Instant Answer in the [DuckDuckGo Instant Answers API](https://api.duckduckgo.com)?
 
-If your instant answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons, but our over-arching goal is to make all of our instant answers available on their own.
+If your Instant Answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons, but our over-arching goal is to make all of our Instant Answers available on their own.
 
 ### Can I do something more complicated?
 
@@ -65,22 +65,22 @@ Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we
 
 Here's what we're working on (in roughly in this order):
 
-- better testing/file structure for spice instant answers.
-- better JS interface for spice instant answer callback functions.
+- better testing/file structure for spice Instant Answers.
+- better JS interface for spice Instant Answer callback functions.
 - better attribution.
-- embedding instant answers.
-- better testing/file structure for fathead instant answers.
-- more defined structure for longtail instant answers.
-- better testing for longtail instant answers.
+- embedding Instant Answers.
+- better testing/file structure for fathead Instant Answers.
+- more defined structure for longtail Instant Answers.
+- better testing for longtail Instant Answers.
 
-### Are there other open source projects? 
+### Are there other open source projects?
 
 Yes! Check out the other repositories in [our GitHub account](https://github.com/duckduckgo). You can email open@duckduckgo.com if you have any questions on those.
 
-### Can I get the instant answers through an API?
+### Can I get the Instant Answers through an API?
 
-Yes! Check out the [DuckDuckGo API](https://api.duckduckgo.com). Our goal is to make as many instant answers as possible
-available through this interface. Fathead and goodie instant answers are automatically syndicated through the API, and Spice and Longtail are selectively (due to licensing complications) mixed in.
+Yes! Check out the [DuckDuckGo API](https://api.duckduckgo.com). Our goal is to make as many Instant Answers as possible
+available through this interface. Fathead and goodie Instant Answers are automatically syndicated through the API, and Spice and Longtail are selectively (due to licensing complications) mixed in.
 
 ### Can I talk to you about a partnership idea?###
 
@@ -88,11 +88,11 @@ Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/po
 
 ## Goodie FAQ
 
-### Can Goodie instant answers make network requests?
+### Can Goodie Instant Answers make network requests?
 
-No. If you are trying to use an API, you should consider creating a Spice instant answer instead.
+No. If you are trying to use an API, you should consider creating a Spice Instant Answer instead.
 
-### Can Goodie instant answers include the user's query string?
+### Can Goodie Instant Answers include the user's query string?
 
 Yes. **However**, they must be handled *very* carefully. User-supplied strings create a lot of potential for [cross-site scripting attacks](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29).  While the platform attempts to mitigate these issues in pure ASCII responses, HTML responses should **never** include a raw query string. It is safest to return only data which is generated by your Goodie itself.
 
@@ -117,7 +117,7 @@ Sorry, but **no**. We currently don't support HTML or plain text API's.
 
 ### Can I use the 'X', 'Y' or 'Z' JavaScript library?
 
-Probably not. Maybe, if it is very small, but we prefer that no third party, extra libraries are used. ***Please*** ask us first before writing an instant answer that is **dependent** on an extra library - we don't want you to waste your time and energy on something we can't accept!
+Probably not. Maybe, if it is very small, but we prefer that no third party, extra libraries are used. ***Please*** ask us first before writing an Instant Answer that is **dependent** on an extra library - we don't want you to waste your time and energy on something we can't accept!
 
 ### Can I use Coffeescript?
 

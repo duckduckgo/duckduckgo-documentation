@@ -1,16 +1,16 @@
 # Fathead Instant Answers
 
-Fatheads are key-value instant answers backed by a database. The keys of the database are typically words or phrases, and they are also used as the triggers for the instant answer. When a database key is queried, the corresponding row from the database is returned, which is typically a paragraph of text. Developing a Fathead instant answer entails writing a program that generates an **output.txt** file. This tab-delimited file indicates the keys and values for the database, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
+Fatheads are key-value Instant Answers backed by a database. The keys of the database are typically words or phrases, and they are also used as the triggers for the Instant Answer. When a database key is queried, the corresponding row from the database is returned, which is typically a paragraph of text. Developing a Fathead Instant Answer entails writing a program that generates an **output.txt** file. This tab-delimited file indicates the keys and values for the database, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
 
 The **output.txt** file that is generated will be consumed by the DuckDuckGo backend, cleaned up (details below) and then finally entered into an SQL database.
 
 ## Structure
 
-Each Fathead instant answer has its own directory, which looks like this:
+Each Fathead Instant Answer has its own directory, which looks like this:
 
-- ``lib/DDG/Fathead/FatheadName.pm`` &ndash; a Perl file that lists some meta information about the instant answer
+- ``lib/DDG/Fathead/FatheadName.pm`` &ndash; a Perl file that lists some meta information about the Instant Answer
 
-- ``share/fathead_name/fetch.sh`` &ndash; a shell script called to fetch the data. 
+- ``share/fathead_name/fetch.sh`` &ndash; a shell script called to fetch the data.
 
 - ``share/fathead_name/download/`` &ndash; a directory to hold temp files created by fetch.sh
 
@@ -18,7 +18,7 @@ Each Fathead instant answer has its own directory, which looks like this:
 
 - ``share/fathead_name/parse.sh`` &ndash; a shell script wrapper around parse.xx
 
-- ``share/fathead_name/README.txt`` &ndash; Please include any dependencies here, or other special instructions for people trying to run it. Currently, Fathead instant answers require some hand work by DuckDuckGo staff during integration.
+- ``share/fathead_name/README.txt`` &ndash; Please include any dependencies here, or other special instructions for people trying to run it. Currently, Fathead Instant Answers require some hand work by DuckDuckGo staff during integration.
 
 - ``share/fathead_name/output.txt`` &ndash; the output file. It generally should **not** be committed to github, but may be committed if it is small (<1MB).
 
@@ -35,7 +35,7 @@ The output format from `parse.xx` depends on the type of content. In any case, i
 
 Every line in the output file must contain thirteen fields, separated by tabs. Some of the fields may be empty. The fields are as follows:
 
-  1. Full article title. Must be unique across the data set of this instant answer. *This field is required.* Examples: `Perl`
+  1. Full article title. Must be unique across the data set of this Instant Answer. *This field is required.* Examples: `Perl`
 
   2. Type of article. `A` for actual articles, `D` for disambiguation pages, or `R` for redirects. *This field is required.*
 

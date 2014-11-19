@@ -8,7 +8,7 @@ This document outlines some language specific guidelines for formatting your cod
 
     All DuckDuckHack code should be indented with four spaces. Be sure to configure your text editor to insert four spaces when you press the tab button - this is referred to as a "soft-tab". If you are correcting the indentation of a file, please submit that change in a separate pull request. It is important that code reviewers are able to easily differentiate between functional and stylistic changes.
 
-- **Document your code** 
+- **Document your code**
 
     Well-documented code helps others understand what you've written. It's likely that someone else will read your code and might even need to change it at some point in the future. Comments should primarily document the intent of the code. Reviewers are much more effective when they know exactly what you were trying to do. Meaningful variable names also help to document your intent.
 
@@ -16,7 +16,7 @@ This document outlines some language specific guidelines for formatting your cod
 
     Commit messages should be concise and informative. If the specific commit fixes a bug on GitHub, note that by saying `fixes #123`, where `123` is the issue number. Doing this will automatically close the specified issue when your pull request is merged.
 
-    Usually pull requests only deal with a single instant answer. If however your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the IA modified by your commit:
+    Usually pull requests only deal with a single Instant Answer. If however your pull request modifies more than one Instant Answer, please preface your commit messages with the name of the IA modified by your commit:
 
     For example, if your pull request updates the Movies, InTheaters and Kwixer IA's:
 
@@ -37,7 +37,7 @@ This document outlines some language specific guidelines for formatting your cod
     if ( ... )
     {
         ...
-    } 
+    }
     else
     {
         ...

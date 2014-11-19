@@ -65,7 +65,7 @@ Test Goodie and Spice triggers interactively on the command line
 duckpan server [--verbose] [--no-cache] [--port <number>]
 ```
 
-Test Goodie and Spice instant answers on a local web server (for design/layout purposes)
+Test Goodie and Spice Instant Answers on a local web server (for design/layout purposes)
 
 Options:
 

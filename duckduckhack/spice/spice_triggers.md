@@ -5,7 +5,7 @@ There are two types of triggers, **words** and **regex**. We insist that you use
 [Word trigger example](http://duck.co/duckduckhack/spice_triggers#word-triggeres)
 
 ```perl
-triggers start => "trigger my instant answer", "trigger myIA", "myIA";
+triggers start => "trigger my Instant Answer", "trigger myIA", "myIA";
 ```
 
 [Trigger locations](http://duck.co/duckduckhack/spice_triggers#trigger-locations)
@@ -18,7 +18,7 @@ triggers start => "trigger my instant answer", "trigger myIA", "myIA";
 ## Word Triggers
 
 ### Usage
- 
+
 ```perl
 triggers <location> => <array of words and phrases>
 ```
@@ -28,13 +28,13 @@ triggers <location> => <array of words and phrases>
 #### Examples
 
 ```perl
-triggers start => "trigger my instant answer", "trigger myIA", "myIA";
+triggers start => "trigger my Instant Answer", "trigger myIA", "myIA";
 ```
 
 or
 
 ```perl
-@triggers = qw(these are separate triggers for my instant answer);
+@triggers = qw(these are separate triggers for my Instant Answer);
 triggers any => @triggers;
 ```
 
@@ -52,7 +52,7 @@ triggers end => "ending phrase of query";
 - `startend` &mdash; Word is at the beginning or end of the query
 - `any` &mdash; Word is anywhere in the query
 
-**\*\*Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrates the usage of multiple Word trigger statements.
+**Note:** You can combine several trigger statements if, for example, you want certain words or phrases to be **startend** but others to be **start**. The [Average Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Average.pm#L5) demonstrates the usage of multiple Word trigger statements.
 
 ## Regex Triggers
 
@@ -67,13 +67,13 @@ triggers <query_format> => <regular expression>
 #### Examples
 
 ```perl
-triggers query_lc => qr/trigger (?:my|your|our) instant answer/;
+triggers query_lc => qr/trigger (?:my|your|our) Instant Answer/;
 ```
 
 or
 
 ```perl
-my $regex = qr/^this is an? instant answer regexp$/;
+my $regex = qr/^this is an? Instant Answer regexp$/;
 triggers query_raw => $regex;
 ```
 
@@ -85,7 +85,7 @@ triggers query_raw => $regex;
 - `query_nowhitespace` &mdash; `query` with all whitespace removed
 - `query_clean` &mdash; `query_lc`, but with whitespace and non-alphanumeric ascii removed
 
-**\*\*Note:** You **cannot** combine the use of **Regex Triggers** with **Word Triggers**.
+**Note:** You **cannot** combine the use of **Regex Triggers** with **Word Triggers**.
 
 ## Regex Guards
 

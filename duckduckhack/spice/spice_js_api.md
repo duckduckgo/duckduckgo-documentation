@@ -212,13 +212,13 @@ Example:
 
 ## add(ops)
 
-Add a Spice instant answer to the AnswerBar and display it
+Add a Spice Instant Answer to the AnswerBar and display it
 
 Note: A detailed explanation of `Spice.add()` can be found in [Displaying your Spice](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md)
 
 **Parameters**
 
-**ops**:  *object*,  The object containing all necessary information for creating a Spice instant answer
+**ops**:  *object*,  The object containing all necessary information for creating a Spice Instant Answer
 
 
 ## getDOM(id)
@@ -261,7 +261,7 @@ Example:
 
 ```javascript
 if (/* check for no results */) {
-    
+
 ```
 
 **Parameters**

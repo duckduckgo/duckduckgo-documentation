@@ -8,13 +8,13 @@ Before reading this section, make sure you've worked through the the [Basic Good
 <!-- /summary -->
 
 1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
-    
+
     - Option A. &mdash; Install via this script:
-        
+
         ```shell
         curl http://duckpan.org/install.pl | perl
         ```
-    
+
     - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which comes with DuckPAN installed
 
     More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
@@ -31,11 +31,11 @@ Before reading this section, make sure you've worked through the the [Basic Good
     duckpan installdeps
     ```
 
-    This command will install all the Perl modules used by the DuckDuckGo instant answers within your local repository. These requirements are defined in the [/dist.ini file](http://blog.urth.org/2010/06/walking-through-a-real-distini.html) (at the root).
+    This command will install all the Perl modules used by the DuckDuckGo Instant Answers within your local repository. These requirements are defined in the [/dist.ini file](http://blog.urth.org/2010/06/walking-through-a-real-distini.html) (at the root).
 
-4. Add your instant answer.
+4. Add your Instant Answer.
 
-    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the instant answer followed by the extension **.pm** because it is a Perl package. For example, if the name of your instant answer was **"test instant answer"**, the file would be `TestInstantAnswer.pm`.
+    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the Instant Answer followed by the extension **.pm** because it is a Perl package. For example, if the name of your Instant Answer was **"test Instant Answer"**, the file would be `TestInstantAnswer.pm`.
 
 5. Test your triggers interactively.
 
@@ -45,7 +45,7 @@ Before reading this section, make sure you've worked through the the [Basic Good
     duckpan query
     ```
 
-    This command will initially output all of the instant answers available in your local repository. You should see your instant answer in this output.
+    This command will initially output all of the Instant Answers available in your local repository. You should see your Instant Answer in this output.
 
     ```shell
     Using the following DDG::Goodie plugins:

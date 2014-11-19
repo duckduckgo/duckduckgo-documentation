@@ -1,6 +1,6 @@
 ## Adding Your Spice to the AnswerBar
 
-`Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your instant answer is excellent.
+`Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your Instant Answer is excellent.
 
 ## Spice.add Properties Overview
 
@@ -274,7 +274,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
     The template to be used for the body of each tile in a tile view.
 
-    **\*\*Note:** The `item` template is only used when your Spice instant answer returns multiple items (like the recipe or app instant answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
+    **Note:** The `item` template is only used when your Spice Instant Answer returns multiple items (like the recipe or app Instant Answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
 
     - Generally, a *`string`* is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
 
@@ -294,7 +294,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
     *For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
 
-    **\*\*Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
+    **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
 
 - ### detail_mobile `string|function`
 
@@ -316,7 +316,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
     Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants available can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
 
-    **\*\*Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
+    **Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
 
     ```javascript
     normalize: function(item){
@@ -403,7 +403,7 @@ category: [
 ],
 ```
 
-**\*\*Note:** The relevancy checking is done using the `DDG.isRelevant()` function.
+**Note:** The relevancy checking is done using the `DDG.isRelevant()` function.
 
 - ### type `string`
 
@@ -465,7 +465,7 @@ If you have used **more than one** relevancy block, `sort_default` can be given 
 For example, if we had two relevancy blocks named `primary` and `category` our `default_sort` could look like this:
 
 ```javascript
-//because we have two relevancy blocks... 
+//because we have two relevancy blocks...
 sort_default: {
     primary: 'name',
     category: 'rating'
@@ -636,13 +636,13 @@ onItemSelected: function(item) {
 }
 ```
 
-**\*\*Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
+**Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
 ## onItemUnselect `function`
 
 This event occurs each time a tile is unselected.
 
-**\*\*Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
+**Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
 ## onShow `function`
 

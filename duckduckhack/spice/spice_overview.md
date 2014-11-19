@@ -1,12 +1,12 @@
 ## Spice Overview
 
-Spice instant answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the instant answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
+Spice Instant Answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the Instant Answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
 
-**Note:** Spice instant answers *must* use JSON or JSONP API's. We do not support the use of XML (it's coming soon though!), HTML or Plain text responses.
+**Note:** Spice Instant Answers *must* use JSON or JSONP API's. We do not support the use of XML (it's coming soon though!), HTML or Plain text responses.
 
 ## Spice Frontend
 
-The Spice frontend is the code that is triggered by the Perl backend for your spice instant answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to display a Spice result at the top of the DuckDuckGo search results page.
+The Spice frontend is the code that is triggered by the Perl backend for your spice Instant Answer. It mainly consists of a function (the Spice "callback" function) that takes a JSON formatted, API response as its input and uses the data to display a Spice result at the top of the DuckDuckGo search results page.
 
 ## Spice Templates
 
@@ -23,13 +23,13 @@ If you're not already familiar with Handlebars, *please* read the [Handlebars do
 
 <!-- /summary -->
 
-Likewise, using jQuery is not required for making a Spice instant answer. But, it does offer certain benefits, such as cross-browser compatible implementations of various JavaScript functions. For example, jQuery's `$.each()` should be used in place of the native `Array.prototype.forEach()`, as it does **not** work in IE 6,7,8.
+Likewise, using jQuery is not required for making a Spice Instant Answer. But, it does offer certain benefits, such as cross-browser compatible implementations of various JavaScript functions. For example, jQuery's `$.each()` should be used in place of the native `Array.prototype.forEach()`, as it does **not** work in IE 6,7,8.
 
-Later, we will walk you through several examples, ranging from simple to complex, which will explain how to use templates and make your instant answers look awesome :)
+Later, we will walk you through several examples, ranging from simple to complex, which will explain how to use templates and make your Instant Answers look awesome :)
 
 ## Spice Files
 
-A typical Spice instant answer requires several files to function properly.
+A typical Spice Instant Answer requires several files to function properly.
 - The Perl files go in the **lib** directory: `lib/DDG/Spice/InstantAnswerName.pm`
 - The frontend files (JS, Handlebars, CSS) discussed later go in the **share** directory: `share/spice/instant_answer_name/`
 

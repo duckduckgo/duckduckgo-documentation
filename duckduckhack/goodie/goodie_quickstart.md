@@ -2,7 +2,7 @@
 
 *First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
 
-This is a quick-start tutorial designed to give an overview of the instant answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
+This is a quick-start tutorial designed to give an overview of the Instant Answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
 
 To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial).
 

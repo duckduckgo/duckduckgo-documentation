@@ -1,6 +1,6 @@
 # Basic Fathead Tutorial
 
-In this tutorial, we'll be making a Fathead instant answer that shows example source code for a "Hello World" program in whatever language is specified by the user's query. The live instant answer looks like this: https://duckduckgo.com/?q=hello+world+scala. As discussed in [the Fathead overview](/duckduckhack/fathead_overview), our goal is to generate an output.txt, which will look something like this:
+In this tutorial, we'll be making a Fathead Instant Answer that shows example source code for a "Hello World" program in whatever language is specified by the user's query. The live Instant Answer looks like this: https://duckduckgo.com/?q=hello+world+scala. As discussed in [the Fathead overview](/duckduckhack/fathead_overview), our goal is to generate an output.txt, which will look something like this:
 
 ###### output.txt (snippet)
 
@@ -19,7 +19,7 @@ package DDG::Fathead::HelloWorld;
 # ABSTRACT: Provides an example "Hello World" program for a given programming language
 ```
 
-Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) behind our instant answer system.
+Next, type the following [use statement](https://duckduckgo.com/?q=perl+use) to import [the magic](https://github.com/duckduckgo/duckduckgo/tree/master/lib/DDG) behind our Instant Answer system.
 
 ```perl
 use DDG::Fathead;
@@ -102,7 +102,7 @@ Every Fathead has a directory under share/ that contains all files except the on
 
 ## Step 3: Write the fetch.sh script
 
-Every Fathead instant answer requires a `fetch.sh` file. This shell script is invoked to fetch the remote data that we need in order to generate our output. For example, following script will clone a git repository that contains a collection of hello world source files:
+Every Fathead Instant Answer requires a `fetch.sh` file. This shell script is invoked to fetch the remote data that we need in order to generate our output. For example, following script will clone a git repository that contains a collection of hello world source files:
 
 ###### share/hello_world/fetch.sh
 
@@ -118,9 +118,9 @@ In this case, the git repository is just a collection of source files; we'll nee
 
 ## Step 4: Write the parsing script
 
-The data we just fetched needs to be parsed before we can use it, so we'll write a script to do that. Parse scripts can be written in any language, but please use a common language like Perl, Python, JavaScript, Go, or similar. The harder your script is to run, the harder it will be for us to integrate your instant answer into our environment, and the harder future maintenance will be. **Please keep things as simple and straightforward as possible.**
+The data we just fetched needs to be parsed before we can use it, so we'll write a script to do that. Parse scripts can be written in any language, but please use a common language like Perl, Python, JavaScript, Go, or similar. The harder your script is to run, the harder it will be for us to integrate your Instant Answer into our environment, and the harder future maintenance will be. **Please keep things as simple and straightforward as possible.**
 
-**\*\*Note:** Our machines are running **Ubuntu 12.04**. These are the machines that will be used to test and run your parser, so **please make sure your language and dependencies are compatible with our environment**.
+**Note:** Our machines are running **Ubuntu 12.04**. These are the machines that will be used to test and run your parser, so **please make sure your language and dependencies are compatible with our environment**.
 
 Since Fatheads can have vastly different data sources, we can't tell you what is the best approach to parsing. We suggest you look through the [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share) to get ideas from other developers.
 
@@ -226,7 +226,7 @@ sudo apt-get install python3-minimal
 
 ## Step 7
 
-You're done! The only thing left is to submit your instant answer for review. Please see [Preparing for a Pull Request](/duckduckhack/preparing_for_a_pull_request).
+You're done! The only thing left is to submit your Instant Answer for review. Please see [Preparing for a Pull Request](/duckduckhack/preparing_for_a_pull_request).
 
-**\*\*Note:** The duckpan server cannot (currently) run Fatheads. That means you can't run or test your plugin before submission.
+**Note:** The duckpan server cannot (currently) run Fatheads. That means you can't run or test your plugin before submission.
 

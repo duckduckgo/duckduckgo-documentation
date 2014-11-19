@@ -4,7 +4,7 @@
 
 There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
 
-- [Template Groups](#template-groups)  Defines the main type of view for the instant answer
+- [Template Groups](#template-groups)  Defines the main type of view for the Instant Answer
 - [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each template
 - [Tile Variants](#tile-variants)  Used to modify width of the tiles
 
@@ -12,9 +12,9 @@ There are several built-in Spice templates (both `item` and `detail`) which can 
 
 <!-- /summary -->
 
-For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice instant answer.
+For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice Instant Answer.
 
-The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice instant answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
 ## Index of Spice Templates
 
@@ -446,14 +446,14 @@ The list of built-in Spice templates includes:
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
-**\*\*Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.  An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting. 
+**Note:** This template **requires** that your `data` object has a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. However, if you want to specify exactly which properties of the `record_data` object should be displayed, an optional `record_keys` property can be defined. It should be an array of *strings*, indicating the names of the **keys** to be included in the `<table>`.  An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting.
 
 <!-- /summary -->
 
 For example this is how your Spice code should look when using the **record** template:
 
 ```javascript
-data: { 
+data: {
     record_data: {
         name: 'Bob',
         phone: '123-456-7890',
@@ -522,7 +522,7 @@ templates: {
 ------
 
 ## text_item template
- 
+
 ### Available Features
 
 - url [optional]
@@ -675,7 +675,7 @@ templates: {
 - img_m [optional, replaces `img`]
 - img
 - url
-- price [optional] 
+- price [optional]
 - brand [optional]
 - rating [optional]
 - abstract
@@ -917,7 +917,7 @@ templates: {
 
 none...*yet!*
 
-<!-- 
+<!--
 
 TODO: Unhide this once live
 

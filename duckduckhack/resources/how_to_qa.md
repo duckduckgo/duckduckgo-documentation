@@ -1,11 +1,11 @@
 # How to QA an Instant Answer
 
-Our goal is to have a great instant answer for every search. When a developer submits a new instant answer, it must first be thoroughly reviewed by our community and internal staff before going live on DuckDuckGo.
-Please use the following guide when QA-ing instant answers:
+Our goal is to have a great Instant Answer for every search. When a developer submits a new Instant Answer, it must first be thoroughly reviewed by our community and internal staff before going live on DuckDuckGo.
+Please use the following guide when QA-ing Instant Answers:
 
 ## Everyone (Reviewing Quality):
 
-### What's an instant answer made of?
+### What's an Instant Answer made of?
 
 1. Some code
 2. A data source (like a website)
@@ -25,49 +25,49 @@ Check out some examples of what we mean:
 
 ### What we're looking for in QA
 
-**Function:** Is the instant answer actually useful?
+**Function:** Is the Instant Answer actually useful?
 Instant answers should *always* be unambiguously **better** than organic links. If it doesn't add value to the page, then it should not be approved.
 
-- **Example test:** Search for something that will trigger the instant answer and compare it to the organic links. The user should benefit from having the instant answer available. In the best case scenario, the instant answer should give the user all the information they need, so they don't even have to click a link. At the very least, the instant answer should offer some different and more valuable information than the links.
+- **Example test:** Search for something that will trigger the Instant Answer and compare it to the organic links. The user should benefit from having the Instant Answer available. In the best case scenario, the Instant Answer should give the user all the information they need, so they don't even have to click a link. At the very least, the Instant Answer should offer some different and more valuable information than the links.
 
 
-**Relevancy:** Does the instant answer always provide relevant information?
-Instant answers should only show information that is correct and relevant to the user's search. If an instant answer is capable of returning irrelevant information (e.g., "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the instant answer is accepted and goes live.
+**Relevancy:** Does the Instant Answer always provide relevant information?
+Instant answers should only show information that is correct and relevant to the user's search. If an Instant Answer is capable of returning irrelevant information (e.g., "free gaming apps" should *only* show free apps, "the dark knight movie" should ensure both words, "dark" and "knight" are in the resulting movie's title), then the relevancy must be improved before the Instant Answer is accepted and goes live.
 
-- **Example test:** Search for something that will trigger the instant answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the instant answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMdB.
+- **Example test:** Search for something that will trigger the Instant Answer and compare the information provided to the original source's website (if one exists) or another credible source. For example, if the Instant Answer performs arithmetic operations, you could verify that its calculations are correct using your calculator at home. If it provides movie information, you could verify that it's correct using Wikipedia or IMdB.
 
 
-**Triggering:** Does the instant answer trigger when it shouldn't? Are there any queries that *should* trigger the instant answer, but don't?
-Goodie and Spice instant answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that instant answer when those triggers appear in a search query. If they are too generic, it will cause the instant answer to be shown in cases which are inappropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an instant answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
+**Triggering:** Does the Instant Answer trigger when it shouldn't? Are there any queries that *should* trigger the Instant Answer, but don't?
+Goodie and Spice Instant Answers use a list of, "trigger words" (or phrases) that signal DuckDuckGo to use that Instant Answer when those triggers appear in a search query. If they are too generic, it will cause the Instant Answer to be shown in cases which are inappropriate. For example, "app" is a very generic word which occurs in many queries that aren't necessarily an app search. Instant answers that use generic triggers should always further qualify the query to make sure it should return an answer. On the other hand, if triggers are too specific, it can lead users to believe that an Instant Answer doesn't exist for that topic or query space, reducing the value in searching with DuckDuckGo.
 
-- **Example test:** Can you think of any queries that should or shouldn't be triggering this instant answer? Let's say we have an instant answer that shows movies, and it triggers with the term, "movie". The query, "movie Thor" would trigger this instant answer, but other queries, such as, "watch Thor", "Thor movies", "film Thor" or "Thor film" should also trigger this instant answer.
+- **Example test:** Can you think of any queries that should or shouldn't be triggering this Instant Answer? Let's say we have an Instant Answer that shows movies, and it triggers with the term, "movie". The query, "movie Thor" would trigger this Instant Answer, but other queries, such as, "watch Thor", "Thor movies", "film Thor" or "Thor film" should also trigger this Instant Answer.
 
 
 **Adult Content:**
-Is the instant answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in instant answers, by default. If an instant answer is capable of displaying profanity or questionable adult humor, it should not be approved (if it's vulgar or distasteful), or it can be set to only show when safe search is off. If ever in doubt, please ask community leaders or DDG staff for help.
+Is the Instant Answer effectively preventing adult words or inappropriate content from showing? There shouldn't be any adult imagery or profanity in Instant Answers, by default. If an Instant Answer is capable of displaying profanity or questionable adult humor, it should not be approved (if it's vulgar or distasteful), or it can be set to only show when safe search is off. If ever in doubt, please ask community leaders or DDG staff for help.
 
-- **Example test:** Check if the instant answer is capable of producing profanity or adult imagery by searching for relevant (profane) keywords or risqué content. If so, the instant answer should block all instances of adult language and adult imagery. If not, you've found a bug! 
+- **Example test:** Check if the Instant Answer is capable of producing profanity or adult imagery by searching for relevant (profane) keywords or risqué content. If so, the Instant Answer should block all instances of adult language and adult imagery. If not, you've found a bug!
 
 
 **Design:**
-Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other instant answers? (It should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live instant answers as an example.
+Can we minimize the space used? How does it look on smaller screens? Can you break the design? For example, try using non-UTF8 characters or long search queries. Do the design and layout make sense given the type of information? Does it look and feel like other Instant Answers? (It should!) Spotting design bugs and improvements can be tricky, since everyone's eye for design is a bit different, but you can refer to live Instant Answers as an example.
 
-- **Example test:** Test the instant answer with a few different queries. Make sure the most important information is easy to identify and understand. The information shouldn't be too crowded or too sparse. Try previewing the instant answer on a mobile device (phone, tablet) and check if the design breaks or if too much vertical space is used. Ideally, an instant answer on mobile screens should ***not*** push organic links off the page. If this is the case, look for ways to either increase the information density or reduce the information shown &mdash; this is a great way to determine what information is absolutely necessary and deserves to be shown.
+- **Example test:** Test the Instant Answer with a few different queries. Make sure the most important information is easy to identify and understand. The information shouldn't be too crowded or too sparse. Try previewing the Instant Answer on a mobile device (phone, tablet) and check if the design breaks or if too much vertical space is used. Ideally, an Instant Answer on mobile screens should ***not*** push organic links off the page. If this is the case, look for ways to either increase the information density or reduce the information shown &mdash; this is a great way to determine what information is absolutely necessary and deserves to be shown.
 
 
 **Conflicts:**
-Does it conflict with other instant answers? We wouldn't want to step on the query space of other instant answers.
+Does it conflict with other Instant Answers? We wouldn't want to step on the query space of other Instant Answers.
 
-- **Example test:** Check to see if an instant answer already exists for the new instant answer's triggers. For example, [a search for "Bill Murray"](https://duckduckgo.com/?q=bill+murray) currently shows Wikipedia, so if the new instant answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one instant answer is better than the other.
+- **Example test:** Check to see if an Instant Answer already exists for the new Instant Answer's triggers. For example, [a search for "Bill Murray"](https://duckduckgo.com/?q=bill+murray) currently shows Wikipedia, so if the new Instant Answer will show for searches like, "Bill Murray," then it should be noted to the developer in case one Instant Answer is better than the other.
 
 
 ## Developers (Reviewing Code):
 
 **High Level (Perl & JavaScript)**
 
-- Is this the right instant answer type? Would it be better to implement this as another IA type?
+- Is this the right Instant Answer type? Would it be better to implement this as another IA type?
 
-	- If this should really be another IA type (e.g., JavaScript heavy Goodie should probably be a Spice) it's best to note this as early in the process as possible, since the instant answer will need to be re-implemented and a new pull-request submitted.
+	- If this should really be another IA type (e.g., JavaScript heavy Goodie should probably be a Spice) it's best to note this as early in the process as possible, since the Instant Answer will need to be re-implemented and a new pull-request submitted.
 
 - What other data is available from this source? (check the API response for anything really useful that's not being displayed).
 
@@ -77,7 +77,7 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 **Regarding the code...**
 
-- The code should well organized. If things don't make sense, make comments and ask questions! It's better to go overboard with your feedback than to hold back. 
+- The code should well organized. If things don't make sense, make comments and ask questions! It's better to go overboard with your feedback than to hold back.
 
 	- For Perl modules, metadata comes first, then static variables and function definitions, then the `handle` function last.
 
@@ -93,11 +93,11 @@ Does it conflict with other instant answers? We wouldn't want to step on the que
 
 	- Consider `is_cached` and `proxy_cache_valid`.
 
-- If an instant answer is capable of displaying profanity or questionable adult humor, make sure the `is_unsafe` flag is set.
+- If an Instant Answer is capable of displaying profanity or questionable adult humor, make sure the `is_unsafe` flag is set.
 
 **Low Level (Perl)**
 
-- Static variables (e.g., lists, hashes, regular expressions) and helper functions should not be declared inside `handle` functions (this will cause them to be redefined each time the instant answer is triggered). The same applies when reading files &mdash; the file handler should be outside the `handle` function.
+- Static variables (e.g., lists, hashes, regular expressions) and helper functions should not be declared inside `handle` functions (this will cause them to be redefined each time the Instant Answer is triggered). The same applies when reading files &mdash; the file handler should be outside the `handle` function.
 
 - Long lists of trigger words/phrases should be moved to a `triggers.txt` file (in the share directory) and `slurp()` should be used to convert them into a list.
 
