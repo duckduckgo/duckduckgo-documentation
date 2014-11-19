@@ -14,7 +14,7 @@ We hope you will consider making DuckDuckGo Instant Answers to:
 
 ### What if I'm not a coder at all?
 
-If you don't code at all and you've ended up here, please go over to our [Instant Answers ideas forum](http://ideas.duckduckhack.com/) where you can suggest and comment on Instant Answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current Instant Answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
+If you don't code at all and you've ended up here, please go over to our [Instant Answers Ideas Forum](http://ideas.duckduckhack.com/) where you can suggest and comment on Instant Answer ideas. For instance, identifying the best sources to draw from is extremely important but not many developers know the best sources, which is where you come in! Similarly, you can submit [issues about current Instant Answers](https://github.com/duckduckgo/duckduckgo/issues?direction=desc&sort=created&state=open). Both of these activities are very valuable and will help direct community efforts.
 
 If you're a business and want your data to be utilized, adding your service to [ideas.duckduckhack.com](http://ideas.duckduckhack.com) is a great way for your API to get picked up by a developer and integrated into the search engine.
 
