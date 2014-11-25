@@ -197,7 +197,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     **Note:** Triggers must be entered in **lowercase**. If your username has uppercase letters, **don't worry**, a lowercased trigger will always work because we compare the *lowercased query* against the trigger.
 
-6. Change the **`handle`** statement (lines 28-36) to this:
+6. Change the **`handle`** statement (lines 28-36) to this *(**Note** do **not** remove the '1;' from the end of the file. This declares that the file needs to return a true value)*:
 
     ```perl
     handle remainder => sub {
