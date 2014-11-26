@@ -197,7 +197,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     **Note:** Triggers must be entered in **lowercase**. If your username has uppercase letters, **don't worry**, a lowercased trigger will always work because we compare the *lowercased query* against the trigger.
 
-6. Change the **`handle`** statement (lines 28-36) to this *(**Note** do **not** remove the '1;' from the end of the file. This declares that the file needs to return a true value)*:
+6. Change the **`handle`** statement (lines 28-36) to this:
 
     ```perl
     handle remainder => sub {
@@ -207,6 +207,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     ```
 
     This will make your Goodie tell everyone that you're totally awesome!
+    
+    **Note:** Do ***not*** remove the `1;` from the end of the file. This is required because Perl modules must to return a true value.
 
 7. Switch back to you Terminal by clicking on the "**Terminal**" tab.
 8. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
