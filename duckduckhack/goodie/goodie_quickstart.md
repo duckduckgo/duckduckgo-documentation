@@ -210,7 +210,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     
     **Note:** Do ***not*** remove the `1;` from the end of the file. This is required because Perl modules must return a true value.
 
-7. Switch back to you Terminal by clicking on the "**Terminal**" tab.
+7. Switch back to your Terminal by clicking on the "**Terminal**" tab.
 8. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
     ```
@@ -286,7 +286,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     1. For the query "**duckduckhack GitHubUsername**", your Goodie returns "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!".
     2. For the query "**duckduckhack GitHubUsername is awesome**", your Goodie returns **`undef`**, meaning it won't display any result for that query.
 
-3. Switch back to you Terminal by clicking on the "**Terminal**" tab.
+3. Switch back to your Terminal by clicking on the "**Terminal**" tab.
 4. Type **`prove -Ilib t/IsAwesome/GitHubUsername.t`** and press "**Enter**". The prompt should print the results of the test.
 
     ```
