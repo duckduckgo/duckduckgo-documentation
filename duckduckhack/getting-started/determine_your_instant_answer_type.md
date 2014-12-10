@@ -2,7 +2,7 @@
 
 Most Instant Answers rely on some type of data source (e.g. database, text file, API) to provide their answer. Others however, are able to provide their answer through the use of pure code, like a pre-existing Perl package on CPAN or simply a script you write (e.g. a string manipulation function).
 
-The following flowchart will help you to determine what type of Instant Answer you'll be creating, which is based on your Instant Answer's date source:
+The following flowchart will help you to determine what type of Instant Answer you'll be creating, which is based on your Instant Answer's data source:
 
 ![Instant Answer type flow chart](https://duckduckgo.com/iu/?u=https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckduckhack/assets/instant_answer_flowchart.png&f=1)
 
