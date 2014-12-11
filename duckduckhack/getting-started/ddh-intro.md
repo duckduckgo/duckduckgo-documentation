@@ -15,13 +15,13 @@ In the above example, Quixey was a source that our own DuckDuckHack Community su
 
 If you're new to programming, or you still unsure about what's involved in developing an Instant Answer, we've got the perfect thing for you!
 
-Our [Goodie Quickstart](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) will guide you through the setup process, and help you make a very simple Instant Answer which you can even submit to DuckDuckGo and then see it live!
+Our [Goodie Quickstart](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) will guide you through the setup process, and help you make a simple Instant Answer that will go live on DuckDuckGo.com! 
 
-If you're confident that you can figure things out along the way, you're welcome to carry on, but we suggest that everyone looks over the Quick Start anyway.
+If you're confident that you can figure things out along the way, you're welcome to carry on, but we suggest that everyone look over the Quick Start anyway. If you'd like an overview of what building an Instant Answer is like, check out [this post by YouriAckx](http://blog.ackx.net/duckduckhack-accepted.html). 
 
 ## Creating Your Own Instant Answer
 
-If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about an event? There's many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
+If you're ready to create your own Instant Answer, you'll need to know what Instant Answer you want to provide. Will it perform a calculation? or maybe, provide real-time information about an event? There are many possibilities for what you can do, but your Instant Answer should always provide more value than any regular search result links, and it should use the best data source possible.
 
 If you're at a loss for ideas, our Community has submitted and voted on hundreds of [their own ideas](https://duck.co/ideas) that you can to bring to life!
 
