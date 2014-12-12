@@ -6,7 +6,7 @@ Longtail Instant Answers are in alpha and both the interface and testing procedu
 
 ## Example
 
-![lyrics example](https://s3.amazonaws.com/ddg-assets/docs/longtail_example.png)
+![lyrics example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fddg-assets%2Fdocs%2Flongtail_example.png&f=1)
 
 ## Structure
 
