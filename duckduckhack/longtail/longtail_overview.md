@@ -2,8 +2,6 @@
 
 Each longtail Instant Answer produces a (generally large) data file that gets used for showing answers in [long tail queries](https://duckduckgo.com/?q=i'm+a+walking+contradiction+lyrics).
 
-Longtail Instant Answers are in alpha and both the interface and testing procedure are not yet well defined. However, you can work away without worrying about what any changes might do to your Instant Answers -- we'll take care of all that.
-
 ## Example
 
 ![lyrics example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fddg-assets%2Fdocs%2Flongtail_example.png&f=1)
