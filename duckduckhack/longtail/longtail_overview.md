@@ -1,18 +1,12 @@
 # Longtail Instant Answers
 
-Each longtail Instant Answer produces a (generally large) data file that gets used for showing answers in [long tail queries](https://duckduckgo.com/?q=i'm+a+walking+contradiction+lyrics).
-
-Longtail Instant Answers are in alpha and both the interface and testing procedure are not yet well defined. However, you can work away without worrying about what any changes might do to your Instant Answers -- we'll take care of all that.
-
-## Example
-
-![lyrics example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.amazonaws.com%2Fddg-assets%2Fdocs%2Flongtail_example.png&f=1)
+Longtails are database-backed, full text search, Instant Answers. For every query DuckDuckGo receives, each Longtail's database of articles is searched and any matching articles are used to display a paragraph of text, highlighting the portion of the article which matches the query. Developing a Longtail Instant Answer entails writing a program that generatess an XML data file. This XML file describes each article, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
 
 ## Structure
 
 Longtails consist of two primary files. The first is a metadata file that describes the Instant Answer you are building. Its structure is identical to the Fathead metadata file, described [here](https://github.com/duckduckgo/zeroclickinfo-fathead#meta-file). The second, which can be generated using a language of your choosing, contains the data set in a format ready for us to deploy:
 
-```
+```XML
 <!-- This XML declaration can be simply copied and is necessary for all longtail. -->
 <?xml version="1.0" encoding="UTF-8"?>
 <add allowDups="true">
