@@ -17,9 +17,9 @@ handle remainder => sub {
 
 ## Using Structured Responses
 
-Most Goodies essentially take some input and provide output based from it, for example the [Calculator Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm).
+Most Goodies essentially take some input and provide output based from it. One example is the [Calculator Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm).
 
-As this is often used, Goodies can returned a structured answer which will always be displayed in a consistent way between goodies. A simple example is as follows:
+As this is often used, Goodies can return a structured answer which will always be displayed in a consistent way between goodies. A simple example is as follows:
 
 ```perl
 return "Text output",
