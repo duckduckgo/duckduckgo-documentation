@@ -15,6 +15,26 @@ handle remainder => sub {
 }
 ```
 
+## Using Structured Responses
+
+Most Goodies essentially take some input and provide output based from it, for example the [Calculator Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm).
+
+As this is often used, Goodies can returned a structured answer which will always be displayed in a consistent way between goodies. A simple example is as follows:
+
+```perl
+return "Text output",
+  structured_answer => {
+    input     => "What the input was, usually highlighting how it has been parsed",
+    operation => "What has been perfomed, for example 'calculate' or 'convert'",
+    result    => "The actual output or answer to the input query",
+};
+```
+
+Realistic examples are scattered through the Goodie Repository:
+ * [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm#L155...L162)
+ * [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L47..L52)
+ * [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L45..L50)
+ 
 ## Using Files in the Share Directory
 
 Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
