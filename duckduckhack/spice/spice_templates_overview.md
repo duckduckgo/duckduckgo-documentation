@@ -8,7 +8,9 @@ There are several built-in Spice templates (both item and detail) which can be u
 - [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each template
 - [Tile Variants](#tile-variants)  Used to modify width of the tiles
 
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we highly recommend you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we require that you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
+
+If an extraorinary circumstance exists wherein you cannot properly use an available template, email us at open@duckduckgo.com and we'll assist you with a custom design. 
 
 <!-- /summary -->
 
