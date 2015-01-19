@@ -205,6 +205,48 @@ Example:
 
 **pathname**:  *string*,  the dot separated path of object properties and/or array indices
 
+## abbrevNumber(value)
+
+Returns an abbreviated string representation of a number.
+
+**Parameters**
+
+**value**: *number*, the number to abbreviate
+
+
+Example:
+
+- `abbrevNumber(1)` -> `1`
+- `abbrevNumber(1000)` -> `1k`
+- `abbrevNumber(1000000)` -> `1M`
+
+## commifyNumber(value)
+
+Returns the comma seperated string representation of a number
+
+**Parameters**
+
+**value**: *number*, the number to comma seperate
+
+Example:
+
+- `commifyNumber(10000)` -> `10,000`
+
+## formatDuration(value)
+
+Returns a string in the format of HH:MM:SS
+
+**Parameters**
+
+**value**: *number*, the total milliseconds to format
+
+Example:
+
+- `formatDuration(86400000)` -> `24:00:00`
+- `formatDuration(150000)` -> `2:30`
+- `formatDuration(1000)` -> `0:01`
+
+
 ------
 
 # Spice Namespace
