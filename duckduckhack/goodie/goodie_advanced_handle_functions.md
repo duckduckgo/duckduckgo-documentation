@@ -76,4 +76,7 @@ As an example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickin
 
 ## Stylesheets
 
-Goodies not using structured answers can use custom stylesheets from the `share` directory. A `.css` with the same filename as the directory is automatically included along with the Goodie's output. For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet] and has an automatically included stylesheet (https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/regex_cheat_sheet/regex_cheat_sheet.css).
+Goodies can load custom stylesheets by adding a `.css` file to their `share` directory, with a filename identical to the parent directory. Goodie stylesheets will be automatically included along with the Goodie's output when triggered. For example, the [RegexCheatSheet Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory 'share/goodie/regex_cheat_sheet' which contains a [custom stylesheet](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/regex_cheat_sheet/regex_cheat_sheet.css).
+
+**Note:** Custom stylesheets should be used sparingly and only when absolutely necessary. 
+
