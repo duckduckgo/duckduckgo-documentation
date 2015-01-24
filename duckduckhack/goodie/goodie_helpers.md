@@ -87,7 +87,7 @@ Also available for use are:
 
 ## HTML Encoding
 
-In all situations when the query string is output as HTML, it ***must be encoded***; this is important for protection from XSS (cross site scripting) attacks. There is a handy helper available for Goodies in the form of:
+In all situations when the query string is output as HTML, it ***must be encoded***; this is important for protection from [cross-site scripting attacks](https://duckduckgo.com/Cross-site_scripting?ia=about). There is a handy helper available for Goodies in the form of:
 
 ```perl
 # simple scalar:
