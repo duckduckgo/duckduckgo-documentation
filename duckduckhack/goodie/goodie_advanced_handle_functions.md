@@ -31,18 +31,11 @@ return "Text output",
 ```
 
 Realistic examples are scattered through the Goodie Repository:
-<<<<<<< HEAD
- * [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm#L155...L162)
- * [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L47..L52)
- * [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L45..L50)
-
-=======
 
  - [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm#L153-L161)
  - [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L46-L52)
  - [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L49-L55)
  
->>>>>>> Docs: Update links in advanced_handle_functions
 ## Using Files in the Share Directory
 
 Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
