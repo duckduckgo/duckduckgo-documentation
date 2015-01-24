@@ -34,16 +34,16 @@ Realistic examples are scattered through the Goodie Repository:
  * [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm#L155...L162)
  * [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L47..L52)
  * [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L45..L50)
- 
+
 ## Using Files in the Share Directory
 
 Goodies can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
 
-The `share` function gives each Instant Answer access to a subdirectory of the repository's `share` directory. The subdirectory for your Instant Answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words.  For example, the [DDG::Goodie::RegexCheatSheet package](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory [share/goodie/regex_cheat_sheet](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/regex_cheat_sheet) to store its custom CSS.
+The `share` function gives each Instant Answer access to a subdirectory of the repository's `share` directory. The subdirectory for your Instant Answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words. 
 
 <!-- /summary -->
 
-Meanwhile, the [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) uses the `share` directory to hold data for processing purposes:
+For example the [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) uses the `share` directory to hold data for processing purposes:
 
 ```perl
 my @words = share('words.txt')->slurp;
@@ -77,3 +77,10 @@ As with the Passphrase Goodie example above, each line becomes an entry in the r
 In some cases, you may need to generate the data files you will `slurp` from the share directory. If so, please put the required generation scripts in the Goodie's `share` directory. While **shell scripts are preferred**, your scripts can be written in the language of your choice.
 
 As an example, the [CurrencyIn Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) uses a [combination of Shell and Python scripts](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/currency_in) to generate its input data, `currency.txt`.
+
+## Stylesheets
+
+Goodies can load custom stylesheets by adding a `.css` file to their `share` directory, with a filename identical to the parent directory. Goodie stylesheets will be automatically included along with the Goodie's output when triggered. For example, the [RegexCheatSheet Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/RegexCheatSheet.pm) uses the directory `share/goodie/regex_cheat_sheet` which contains a [custom stylesheet](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/regex_cheat_sheet/regex_cheat_sheet.css).
+
+**Note:** Custom stylesheets should be used sparingly and only when absolutely necessary. 
+
