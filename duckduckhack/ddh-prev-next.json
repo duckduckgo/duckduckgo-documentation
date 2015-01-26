@@ -171,11 +171,16 @@
 
 	"testing_location_api.md": {
 		"prev": ["advanced_testing.md"],
+		"next": ["testing_language_api.md"]
+	},
+
+	"testing_language_api.md": {
+		"prev": ["testing_location_api.md"],
 		"next": []
 	},
 
 	"preparing_for_a_pull_request.md" : {
-		"prev" : ["testing_location_api.md"],
+		"prev" : ["testing_language_api.md"],
 		"next" : ["review_process.md"]
 	},
 
@@ -201,6 +206,11 @@
 
 	"location_api.md": {
 		"prev": [],
+		"next": ["language_api.md"]
+	},
+
+	"language_api.md": {
+		"prev": ["location_api.md"],
 		"next": []
 	},
 

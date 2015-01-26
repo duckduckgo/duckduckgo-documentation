@@ -50,6 +50,7 @@
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
   - [Advanced](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/advanced_testing.md)
   - [Testing with the Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md)
+  - [Testing with the Language API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_language_api.md)
 
 - **Submitting Your Instant Answer**
   - [Preparing for a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/preparing_for_a_pull_request.md)
@@ -60,6 +61,7 @@
 
 - **Advanced**
   - [Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/location_api.md)
+  - [Language API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/language_api.md)
 
 - **Resources**
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
