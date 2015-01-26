@@ -1,6 +1,6 @@
 ## Testing with the Location API
 
-To write a test for a location-aware Instant Answer, you'll need to pass the test function an extra parameter - a `DDG::Request` object, with the location specified. To do this, you'll need to `use DDG::Test::Location` and `use DDG::Request`. Here is a working annotated example excerpted from the **Goodie::HelpLine** test file `t/HelpLine.t`. The same process should be used for Spice.
+To write a test for a location-aware Instant Answer, you'll need to pass the test function an extra parameter - a `DDG::Request` object, with the location specified. To do this, you'll need to `use DDG::Test::Location` and `use DDG::Request`. Here is a working annotated example excerpted from the [Spice::Snow](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/t/Snow.t) Instant Answer test file. The same process should be used for Goodies.
 
 <!-- /summary -->
 
@@ -21,7 +21,7 @@ use DDG::Request;
 
 ddg_spice_test(
     [qw( DDG::Spice::Snow )],
-    # This optional argument to ddg_goodie_test is a DDG::Request object.
+    # This optional argument to ddg_spice_test is a DDG::Request object.
     # The object constructor takes two arguments of its own:
     # the query (usually specified in the test_zci),
     # and a location object - created by test_location (with a country code).
