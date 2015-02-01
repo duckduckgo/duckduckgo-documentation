@@ -2,7 +2,7 @@
 
 **The DuckDuckHack Developer Tool**
 
-DuckPAN is an application built to aid DuckDuckHack developers. It is mainly used to generate the required files for new Instant Answers (the devloper must implement functionality) and also test both the triggering and visual display of Instant Answers.
+DuckPAN is an application built to aid DuckDuckHack developers. It is mainly used to generate the required files for new Instant Answers (the developer must implement functionality) and also test both the triggering and visual display of Instant Answers.
 
 **Currently DuckPAN only supports Goodie and Spice Instant Answers.**
 
