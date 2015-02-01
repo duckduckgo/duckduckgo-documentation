@@ -109,7 +109,7 @@ We prefer to use **HTTP endpoints** because the reduced connection setup time al
 ### Can I use an API that returns XML?
 
 Sorry, but **not right now**. XML support is coming soon.
-**Note:** If an API supports both JSON and XML, we *stronly enourage* you to use **JSON**.
+**Note:** If an API supports both JSON and XML, we *strongly encourage* you to use **JSON**.
 
 ### Can I use an API that returns HTML or a String?
 

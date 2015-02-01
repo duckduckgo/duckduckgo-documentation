@@ -196,7 +196,7 @@ Handlebars templates and Handlebars helpers should be easy to read and understan
 
 - Namespace your helper functions:
 
-    Handlebars helpers are all created in the same scope, so any two helpers with the same name will collied (we plan to fix this). This can be avoided by prepending your helpers with the name of your Spice IA.
+    Handlebars helpers are all created in the same scope, so any two helpers with the same name will collide (we plan to fix this). This can be avoided by prepending your helpers with the name of your Spice IA.
 
     ```javascript
     // Bad
