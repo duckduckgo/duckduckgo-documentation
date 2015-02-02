@@ -42,7 +42,7 @@ If you're returning multiple values in your backend `handle` function, you may n
 ```
 // our JSONP response has src like "/js/spice/example_answer/term1/term2"
 
-var matches = source.match(/example_answer\/([^\/]+)/([^\/]+)),
+var matches = source.match(/example_answer\/([^\/]+)\/([^\/]+)/),
     partOne = matches[1], // equals "term1"
     partTwo = matches[2]; // equals "term2"
 ```
