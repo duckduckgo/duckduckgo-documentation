@@ -229,6 +229,18 @@ The following options are used to define elements of the **MetaBar** including t
 
     Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
 
+    If for some reason the object from you're iterating through is invalid and you don't want to display it, you can return `null`. This will prevent the object from being passed on to the template. For example:
+
+    ```javascript
+    normalize: function (item){
+        if (!item.requiredProperty) {
+            return null;
+        }
+
+        // else normalize continues as normal
+    }
+    ```
+
     ---
 
     #### exactMatch `boolean` & boost `boolean`
