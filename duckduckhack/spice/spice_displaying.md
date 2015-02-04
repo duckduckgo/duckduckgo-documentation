@@ -229,17 +229,6 @@ The following options are used to define elements of the **MetaBar** including t
 
     Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
 
-    If for some reason the object from you're iterating through is invalid and you don't want to display it, you can return `null`. This will prevent the object from being passed on to the template. For example:
-
-    ```javascript
-    normalize: function (item){
-        if (!item.requiredProperty) {
-            return null;
-        }
-
-        // else normalize continues as normal
-    }
-    ```
 
     ---
 
@@ -261,6 +250,24 @@ The following options are used to define elements of the **MetaBar** including t
     }
     ```
 
+    ---
+
+    #### Filtering unwanted items
+
+    It is possible to filter out objects in the `normalize` function. You would normally do that using the [relevancy block](https://duck.co/duckduckhack/spice_displaying#relevancy), however there could be more complex cases that the relevancy block can't handle.
+    
+    In those cases you can simply return `null`, which will prevent the object from being passed on to the template. For example:
+
+    ```javascript
+    normalize: function (item){
+        // display only items with a rating of 3.5 or more
+        if (!item.rating < 3.5) {
+            return null;
+        }
+
+        // else normalize continues as normal
+    }
+    ```
 
 ## Templates
 
