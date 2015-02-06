@@ -1,6 +1,6 @@
 ## Advanced Testing
 
-The [testing triggers](testing.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each Instant Answer.
+The [testing triggers](testing_triggers.md#testing-triggers) section explained interactive testing. Before going live we also make programmatic tests for each Instant Answer.
 
 ## Create Test File
 
