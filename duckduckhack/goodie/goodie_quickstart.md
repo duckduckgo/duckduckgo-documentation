@@ -352,7 +352,7 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 
     ```perl
     name "IsAwesome GitHubUsername";
-    description "My first Goodie, it let's the world know that GitHubUsername is awesome";
+    description "My first Goodie, it lets the world know that GitHubUsername is awesome";
     primary_example_queries "duckduckhack GitHubUsername";
     category "special";
     topics "special_interest", "geek";
