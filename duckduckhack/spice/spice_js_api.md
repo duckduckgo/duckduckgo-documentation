@@ -148,13 +148,13 @@ Example:
 - `strip_html("<a href='http://duckduckgo.com'>DuckDuckGo</a>'")` -> `"DuckDuckGo"`
 
 ## strip_href(html)
-Removes src and href attributes from a string
+Removes `src` and `href` attributes from a string
 
-Note: The src and href attributes are not removed entirely. They are prefixed with _ 
+Note: The `src` and `href` attributes are not removed entirely. They are prefixed with `_`
 
 **Parameters**
 
-**html** : *string*, String containing href or src attribute
+**html** : *string*, String containing `href` or `src` attributes
 
 Example:
 
@@ -226,7 +226,7 @@ Example:
 
 ## isNumber(value)
 
-Determines if a input is a Number
+Determines if an input is a Number
 
 **Parameters**
 
@@ -307,7 +307,7 @@ Example:
 
 
 ## scaleToFit(width, height, maxWidth, maxHeight)
-Returns an object with a with width and height properties scaled proportionally to fit within a specified range
+Returns an object containing width and height properties scaled proportionally to fit within a specified range
 
 **Parameters**
 
