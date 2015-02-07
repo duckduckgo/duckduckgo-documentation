@@ -15,13 +15,13 @@ Please use the following guide when QA-ing Instant Answers:
 Instant Answers are a bundle of code that make information from one source available directly on DuckDuckGo. Anyone can suggest them and anyone can create them!
 Check out some examples of what we mean:
 
-- [Definition search:](https://duckduckgo.com/?q=define+hello)
+- [Definition search:](https://duckduckgo.com/?q=define+hello&ia=definition)
 	- [Code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dictionary/definition/dictionary_definition.js)
 	- [Data Source](https://www.wordnik.com/)
 
-- [Coupon search:](https://duckduckgo.com/?q=running+shoes+coupons)
-	- [Code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/coupon_mountain/coupon_mountain.js)
-	- [Data Source](http://www.couponmountain.com/)
+- [Weather search:](https://duckduckgo.com/?q=weather+in+chicago&ia=weather)
+	- [Code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Forecast.pm)
+	- [Data Source](https://developer.forecast.io/)
 
 ### What we're looking for in QA
 
