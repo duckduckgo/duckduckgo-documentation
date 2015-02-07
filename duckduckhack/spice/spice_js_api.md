@@ -247,6 +247,31 @@ Example:
 - `formatDuration(1000)` -> `0:01`
 
 
+## toHTTPS(url)
+
+Returns a string with the https protocol
+
+**Parameters**
+
+**url**: *string*, A url with the http protocol
+
+Example:
+ - `toHTTPS("http://duckduckgo.com")` -> `"https://duckduckgo.com"`
+ - `toHTTPS("duckduckgo.com")` -> `"duckduckgo.com"`
+
+
+## toHTTP(url)
+
+Returns a string with the http protocol
+
+**Parameters**
+
+**url**: *string*, A url with the https protocol
+
+Example:
+ - `toHTTP("https://duckduckgo.com")` -> `"http://duckduckgo.com"`
+ - `toHTTP("duckduckgo.com")` -> `"duckduckgo.com"`
+
 ------
 
 # Spice Namespace
