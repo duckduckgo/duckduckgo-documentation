@@ -142,6 +142,11 @@ Removes HTML tags/characters from a string
 
 **html**:  *string*,  String containing HTML
 
+Example:
+	
+- `strip_html("<strong>DuckDuckGo</strong>")` -> `"DuckDuckGo"`
+- `strip_html("<a href='http://duckduckgo.com'>DuckDuckGo</a>'")` -> `"DuckDuckGo"`
+
 ## getOrdinal(number)
 
 Provides the proper ordinal noun for a given number
