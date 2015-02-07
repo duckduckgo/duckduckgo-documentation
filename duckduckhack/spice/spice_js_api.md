@@ -147,6 +147,20 @@ Example:
 - `strip_html("<strong>DuckDuckGo</strong>")` -> `"DuckDuckGo"`
 - `strip_html("<a href='http://duckduckgo.com'>DuckDuckGo</a>'")` -> `"DuckDuckGo"`
 
+## strip_href(html)
+Removes src and href attributes from a string
+
+Note: The src and href attributes are not removed entirely. They are prefixed with _ 
+
+**Parameters**
+
+**html** : *string*, String containing href or src attribute
+
+Example:
+
+- `strip_href("<a href='http://duckduckgo.com'>DuckDuckGo</a>")` -> `"<a _href='http://duckduckgo.com'>DuckDuckGo</a>"`
+- `strip_href("<img src='image.png'")` -> `"<img _src='image.png'"`
+
 ## getOrdinal(number)
 
 Provides the proper ordinal noun for a given number
@@ -209,6 +223,20 @@ Example:
 **obj**:  *object*,  the object to look through
 
 **pathname**:  *string*,  the dot separated path of object properties and/or array indices
+
+## isNumber(value)
+
+Determines if a input is a Number
+
+**Parameters**
+
+**value**: the value to check
+
+Example:
+
+- `isNumber(10)` -> `true`
+- `isNumber("HelloWorld")` -> `false`
+- `isNumber(NaN)` -> 'false'
 
 ## abbrevNumber(value)
 
@@ -276,6 +304,25 @@ Returns a string with the http protocol
 Example:
  - `toHTTP("https://duckduckgo.com")` -> `"http://duckduckgo.com"`
  - `toHTTP("duckduckgo.com")` -> `"duckduckgo.com"`
+
+
+## scaleToFit(width, height, maxWidth, maxHeight)
+Returns an object with a with width and height properties scaled proportionally to fit within a specified range
+
+**Parameters**
+
+**width** : *number*, Current width of an element
+
+**height** : *number*, Current height of an element
+
+**maxWidth** : *number*, Max width available for element
+
+**maxHeight** : *number*, Max height available for element
+
+Example:
+
+- `scaleToFit(4,2, 2, 1)` -> `{ width: 2, height: 1 }`
+- `scaleToFit(10,10,5,3);` -> `{ width: 3, height: 3 }`
 
 ------
 
