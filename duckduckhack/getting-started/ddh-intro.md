@@ -5,7 +5,7 @@ We are a community of developers and non-developers alike, with a passion for se
 ## What are Instant Answers?
 
 
-In short, Instant Answers help you find what you're looking for in few or zero clicks. They're placed above ads and regular search results and are created/maintained by you (the community). Some Instant Answers are built from pure code and others involve external sources (API requests), databases, and key-value stores. The possibilities are endless but the point is to provide a perfect result for every search. 
+Instant Answers are special results that help you find what you're looking for in few or zero clicks. They're placed above ads and regular search results, and they're created/maintained by you (the community). Some Instant Answers are built from pure code and others require external sources (API requests), databases, or key-value stores. The possibilities are endless but the point is to provide a perfect result for every search. 
 
 ![App search Instant Answer example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fapp_search_example.png&f=1)
 
@@ -48,5 +48,3 @@ If you're new to programming, you can try out the quick-start [guide](https://gi
 ## Creating Your Own Instant Answer
 
 After getting approval, you'll need to [determine your Instant Answer back-end type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md).
-
-------
