@@ -2,7 +2,7 @@
 
 **The DuckDuckHack Developer Tool**
 
-DuckPAN is an application built to aid DuckDuckHack developers. It is mainly used to generate the required files for new Instant Answers (the developer must implement functionality) and also test both the triggering and visual display of Instant Answers.
+DuckPAN is an application built to aid DuckDuckHack developers. It is mainly used to generate the required files for new Instant Answers (the devloper must implement functionality) and also test both the triggering and visual display of Instant Answers.
 
 **Currently DuckPAN only supports Goodie and Spice Instant Answers.**
 
@@ -35,9 +35,10 @@ We run our DuckPAN tests against Perl 5.16 and 5.18 using Travis (https://travis
 - [Getting Started](#getting-started)
 - [Using the Codio Project Template](#using-the-codio-project-template)
 - [DuckDuckHack Development Virtual Machine](#duckduckhack-development-virtual-machine)
+    + [Installing the Virtual Machine](#installing-the-virtual-machine)
     + [Using the Virtual Machine](#using-the-virtual-machine)
 - [Vagrant Virtual Environment](#vagrant-virtual-environment)
-    + [Setup Instructions](#setup-instructions-2)
+    + [Setup Instructions](#setup-instructions)
 - [Installing DuckPAN Locally](#installing-duckpan-locally)
     + [Adding Shell Completion](#adding-shell-completion)
 - [Using DuckPAN](#using-duckpan)
@@ -55,7 +56,7 @@ We run our DuckPAN tests against Perl 5.16 and 5.18 using Travis (https://travis
 
 Getting started with DuckPAN is easy! Here's a list of ways you can get DuckPAN up & running:
 
-- **Use our Codio Project Template ([see below](#codio-project-template))**. We highly recommended this choice! It's *super* quick and easy.
+- **Use our Codio Project Template ([see below](#using-the-codio-project-template))**. We highly recommended this choice! It's *super* quick and easy.
 - Use our DuckDuckHack development virtual machine image ([see below](#duckduckhack-development-virtual-machine))
 - Use the Vagrant virtual environment ([see below](#vagrant-virtual-environment))
 - Install DuckPAN locally ([see below](#installing-duckpan-locally)). Keep in mind, this **requires Linux or Mac OS X**. We suggest you install [Ubuntu](http://www.ubuntu.com/download).
@@ -68,15 +69,15 @@ After installing DuckPAN, be sure to checkout the [Using DuckPAN](#using-duckpan
 ## Using the Codio Project Template
 
 1. Create an account on [Codio](https://codio.com/).
-2. Go to https://codio.com/duckduckgo/duckduckhack and fork the project. Make sure to fork the project and the box.  
-![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork.png&f=1)
-![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork_both.png&f=1)
-3. Visit one of our Instant Answer repositories (such as https://github.com/duckduckgo/zeroclickinfo-spice), and follow GitHub's instructions to first [fork](https://help.github.com/articles/fork-a-repo) the repository. You can then clone the repo into your Codio machine (You need to open the Terminal for this).  
-![Codio Terminal](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_terminal.png&f=1)
-4. Go into the directory (by typing in `cd zeroclickinfo-spice`) and run `duckpan server`. Click on "DuckPAN Server" to view the webpage.  
-![Codio Server](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_server.png&f=1)
-5. You're all set!  
-![Codio Success](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_success.png&f=1)
+2. Go to https://codio.com/duckduckgo/duckduckhack and fork the project. Make sure to fork the project and the box.
+![Codio Fork](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork.png)
+![Codio Fork Both](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_fork_both.png)
+3. Visit one of our Instant Answer repositories (such as https://github.com/duckduckgo/zeroclickinfo-spice), and follow GitHub's instructions to first [fork](https://help.github.com/articles/fork-a-repo) the repository. You can then clone the repo into your Codio machine (You need to open the Terminal for this).
+![Codio Terminal](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_terminal.png)
+4. Go into the directory (by typing in `cd zeroclickinfo-spice`) and run `duckpan server`. Click on "DuckPAN Server" to view the webpage.
+![Codio Server](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_server.png)
+5. You're all set!
+![Codio Success](https://raw.githubusercontent.com/duckduckgo/duckduckgo-documentation/master/duckpan/assets/codio_success.png)
 
 Try typing in queries like "define hello," and see if it works for you. You might be wondering why there are no search results in the page. It's because DuckPAN isn't configured to work with search results—it's only for testing Instant Answers.
 
@@ -103,16 +104,20 @@ The purpose of our DuckDuckHack VM is to provide a sandbox for DuckDuckGo Instan
 
 #### For VirtualBox hosts
 
-ddh-vbox.rar
-MD5: 1734373cbecc5820bb7d18406eb42854
-https://ddg-community.s3.amazonaws.com/ddh-vbox.rar
+ddh-vbox-2014-12-23.ova:
+
+MD5: 02a0fb03db2b2466504bf9fbc894c7dd
+
+https://ddg-community.s3.amazonaws.com/ddh-vbox-2014-12-23.ova
 
 
 #### For VMWare hosts
 
-ddh-vmw.rar:
-MD5: 95ad9acfacadb4b0cb0cf23ffaa3516e
-https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
+ddh-vmw-2014-12-23.ova:
+
+MD5: 6ecdeb8ead2c2eb7a9aba1db22359c4b
+
+https://ddg-community.s3.amazonaws.com/ddh-vmw-2014-12-23.ova
 
 
 #### Roadmap
@@ -120,9 +125,12 @@ https://ddg-community.s3.amazonaws.com/ddh-vmw.rar
 - Docker support
 - Public AMI for use on EC2
 
-### Using the Virtual Machine
+
+### Installing the Virtual Machine
 
 To use the Virtual Machine, you will need to download and install **VirtualBox**, **VMWare Workstation** or **VMWare Player**, depending on your current OS.
+
+Then you will need to import the VM.
 
 
 #### VirtualBox (free)
@@ -131,11 +139,11 @@ Website: https://www.virtualbox.org/
 Supports: Windows, OS X, Linux
 
 
-##### Setup Instructions
+##### Import the VM
 
-1. Download the rar and verify the checksum--decompress: This archive contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files.
+1. Download the OVA
 2. Open VirtualBox, click "File" and then click "Import Appliance"
-3. Click "Open appliance..." and select the DuckDuckHack virtual appliance -- click "Next"
+3. Click "Open appliance..." and select the DuckDuckHack virtual appliance OVA file -- click "Next"
 4. Click "Import"
 
 
@@ -145,20 +153,42 @@ Website: https://www.vmware.com/products/player/
 Supports: Windows, Linux
 
 
-##### Setup Instructions
+##### Import the VM
 
-1. Download the rar and verify the checksum--decompress: This contains the VMDK (Virtual Machine Disk) and OVF (Open Virtualization Format) files.
+1. Download the OVA
 2. Open VMWare Player, and click "Open a Virtual Machine"
 3. Choose a storage path for the Virtual Machine -- click "Import"
 
 
-#### Happy Hacking!
+### Using the Virtual Machine
+
+
+#### Logging into the VM
 
 Once you have installed the virtual machine you should be able to start up the VM and login with the following credentials:
-- **username** : `dax`
+- **username** : `vagrant`
 - **password** : `duckduckhack`
 
-**The DuckPAN client has already been installed for you.** You can now clone the Instant Answer repos and start developing/testing.
+
+#### Cloning the repository on the VM
+
+**The DuckPAN client has already been installed for you.** To use it, you must 1st clone your instant answer git repository.
+
+If you haven't already done so, [Determine your Instant Answer Type](https://duck.co/duckduckhack/determine_your_instant_answer_type) and follow GitHub's instructions to [fork](https://help.github.com/articles/fork-a-repo) the instant answer repository.
+
+The instant answer repositories are:
++ [zeroclickinfo-goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
++ [zeroclickinfo-spice](https://github.com/duckduckgo/zeroclickinfo-spice)
+
+Then, run the git clone command to clone the repository. The URL is the **SSH clone URL** listed on the right side of the github webpage for your forked repository. (You can also use the **HTTPS clone URL**.)
+
+```
+git clone URL
+```
+
+#### Happy Hacking!
+
+See the instructions below on [Using DuckPAN](#using-duckpan).
 
 ------
 
@@ -172,14 +202,7 @@ Through the Vagrant configuration, you can easily switch back and forth between 
 
 ### Setup Instructions
 
-1. Install: [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and [Bundler](http://bundler.io/#getting-started)
-2. Clone the [duckpan-vagrant](https://github.com/shedd/duckpan-vagrant) repo, which contains the `Vagrantfile` and Chef cookbooks you'll need
-3. Run `bundle install` to install Berkshelf, a Chef cookbook manager.
-4. Run `vagrant plugin install vagrant-berkshelf` to hook Berkshelf into Vagrant.
-5. Review the CUSTOM_CONFIG settings at the top of `Vagrantfile`.  You will want to customize the value of the synced directory to point to your local directory containing the DuckDuckGo code you wish to test.  By default, Vagrant will load a [VirtualBox Precise64](http://files.vagrantup.com/precise64.box) machine image.  If you change this, [Ubuntu is recommended](https://github.com/duckduckgo/p5-app-duckpan#disclaimer).
-6. Run `vagrant up`
-
-The box takes some time to stand up as the duckpan-install script runs.  Refer to [the duckpan-vagrant readme](https://github.com/shedd/duckpan-vagrant#installation) for more info.
+Refer to [the duckpan-vagrant readme](https://github.com/shedd/duckpan-vagrant#installation) for installation instructions.
 
 Once the environment has been built, **the DuckPAN client is installed and ready to go.** You can now clone the Instant Answer repos and start developing/testing.
 
