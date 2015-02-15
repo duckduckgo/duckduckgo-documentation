@@ -1,50 +1,72 @@
-# Thanks for joining DuckDuckHack!
+# Welcome to DuckDuckHack!
 
-We are a community of developers and non-developers alike, with a passion for search and privacy, who are helping to make DuckDuckGo and its community a better place. As a developer, we need your help creating and improving the coolest part of our search engine - our Instant Answers!
+We are a community of developers (and non-developers) who share a passion for search and privacy. Through DuckDuckHack, we're helping to make DuckDuckGo better and develop the community that powers it. Whether you're an experienced developer or are just getting started, we need your help to create and improve the coolest part of our search engine - Instant Answers!
 
-## What are Instant Answers?
+## What is an Instant Answer?
 
+An Instant Answer helps you find the information you're looking for in zero (_or few_) clicks. They appear above ads and regular search results. An Instant Answer aims to answer your search query directly, ideally without the need to click through to another site.
 
-Instant Answers help you find what you're looking for in few or zero clicks. They're placed above ads and regular search results, and they're created/maintained by you (the community). Some Instant Answers are built from pure code and others require external sources (API requests), databases, or key-value stores. The possibilities are endless but the point is to provide a perfect result for every search. 
+Instant Answers are created and maintained by the community - that means you! Some Instant Answers get their information from pure code and others require external sources such as API requests, databases or key-value stores. 
+
+Lets illustrate with an example:
 
 ![App search Instant Answer example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fapp_search_example.png&f=1)
 
-In the above example, Quixey was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we can show the Quixey App Search Instant Answer!
+Quixey was a source that the DuckDuckHack Community suggested for mobile app search. Now, whenever someone searches for apps on DuckDuckGo, they see the Quixey App Search Instant Answer. 
 
-## Start
+DuckDuckGo already includes thousands of Instant Answers, including word definitions, calculations, movies and music. The possibilities are endless - by building a comprehensive range of Instant Answers we aim to provide a conclusive result for every search.
 
-The first step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. **[Please email us](mailto:open@duckduckgo.com)** to let us know you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved. Some reasons why your Instant Answer might not get approved include:
+## Want to Make an Instant Answer?
 
- - the Instant Answer already exists
- - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
- - the idea needs more thought or planning
- - the developer is incorrectly implementing design.
+Great! To get started, first ask yourself what it will do:
+
+- What will the user search for?
+- What information will it return?
+- Where will the information come from?
+- What will it look like?
+
+Before you start working on your Instant Answer - get in touch either via email [open@duckduckgo.com](mailto:open@duckduckgo.com) or in the [forum](https://duck.co/ideas). Each Instant Answer is a collaborative effort between you and staff/ community members, so keep talking!
+
+You can see discussions on ideas for Instant Answers in the [forum](https://duck.co/ideas) - feel free to get involved there or to get in touch about starting work a forum idea that doesn't have a developer working on it yet.
+
+**Make sure you discuss your Instant Answer before you dedicate any time to working on it**, in case there's some reason it might not work or there's something you need to bear in mind before developing it. For example:
+ - your Instant Answer might already exist, or someone else might be working on it
+ - your planned source might not be suitable (e.g. paid API, low rate limit, no JSON support)
+ - your idea or design might need a bit more thought or planning
 
 Here's an example email to help you out:
 
 ```text
 To: open@duckduckgo.com
-Subject: Instant Answer Approvals
+Subject: Instant Answer Suggestions
 
-I'd like to make an Instant Answer for <topic/subject>!
-This is the data source: <link, description, Perl module, etc.>.
-This is the related Duck.co idea: <url, if applicable>.
-This is my Github username: <username>.
+I'd like to make DuckDuckGo even more awesome with a new Instant Answer!
 
-Thanks!
+When the user searches for <user search term(s)>,
+It will display <info displayed>.
+The data will come from <data source e.g. API link, description, Perl module etc>(if applicable).
+It comes from this Duck.co idea: <url>(if applicable).
+This is my Github username: <username>(if applicable).
 
-PS: DuckDuckGo is awesome!
+Looking forward to getting started on it!
 ```
 
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff). 
+We'll try and get back to you as soon as possible (ideally within 24hrs). Unless you know the idea has already been discussed and approved, wait until you hear back from us before moving ahead - that way you won't waste any of your own time! 
 
-**One more thing:** Please consider joining our [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814) to stay in tune with the important updates happening among the community. 
+**Keep up to date:** Please consider joining our [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814) to stay in tune with what's happening the community.
 
-If you're confident that you can figure things out along the way, you're welcome to carry on, but please be patient as we assist others in the community who need a bit more help. 
+The DuckDuckHack staff and community are keen to support anyone who wants to make a contribution, regardless of development experience. We take the time to provide whatever assistance contributors need to get involved. If you are an experienced developer and want to get stuck in, bear with us as we do this - for the same reason you are encouraged to provide help and guidance to other contributors if you're in a position to do so!
 
-If you're new to programming, you can try out the quick-start [guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) which creates an Instant Answer like [this](https://duckduckgo.com/?q=duckduckhack+zekiel&ia=answer) with your username. It's not exactly an "Instant Answer" but does give you the basic idea of what's involved in the creation process, so you can go on to make something more spectacular.  
+If you're new to programming or the DuckDuckHack project, check out the [Quick Start guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) - it creates an Instant Answer that testifies to your awesomeness! ([See this example](https://duckduckgo.com/?q=duckduckhack+zekiel&ia=answer), yours will appear with your own username. _Although it doesn't create a "real" Instant Answer it will famliarize you with the development process - then you can make something more spectacular._)
 
+## Creating Your Instant Answer
 
-## Creating Your Own Instant Answer
+Once you hear back about your idea, use the flowchart to [determine your Instant Answer back-end type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md). Instant Answers are categorized as **Goodie**, **Spice**, **Fathead** and **Longtail** depending on where they get their information.
 
-After getting approval, you'll need to [determine your Instant Answer back-end type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md).
+A great way to famliarize yourself with the structure and detail of an Instant Answer is to have a good look around the GitHub repos:
+ - [Goodie Repo](https://github.com/duckduckgo/zeroclickinfo-goodies)
+ - [Spice Repo](https://github.com/duckduckgo/zeroclickinfo-spice)
+ - [Fathead Repo](https://github.com/duckduckgo/zeroclickinfo-fathead)
+ - [Longtail Repo](https://github.com/duckduckgo/zeroclickinfo-longtail)
+
+If you get stuck or are unsure about any aspect of the process at any stage of your Instant Answer development - give us a shout via [email](mailto:open@duckduckgo.com), in the [forum](https://duck.co/ideas), on GitHub (in the relevant repo) or on IRC (on irc.freenode.net in the channel #duckduckgo)!
