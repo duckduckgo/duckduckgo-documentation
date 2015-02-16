@@ -1,10 +1,10 @@
 # Welcome to DuckDuckHack!
 
-We are a community of developers (and non-developers) who share a passion for search and privacy. Through DuckDuckHack, we're helping to make DuckDuckGo better and develop the community that powers it. Whether you're an experienced developer or are just getting started, we need your help to create and improve the coolest part of our search engine - Instant Answers!
+We are a community of developers (and non-developers) who share a passion for search and privacy. Through DuckDuckHack, we're making DuckDuckGo better and growing the community that powers it. Whether you're an experienced developer or are just getting started, we need your help to create and improve the coolest part of our search engine - Instant Answers!
 
 ## What is an Instant Answer?
 
-An Instant Answer helps you find the information you're looking for in zero (_or few_) clicks. They appear above ads and regular search results. An Instant Answer aims to answer your search query directly, ideally without the need to click through to another site.
+An Instant Answer helps you find the information you're looking for in zero (_or few_) clicks. Instant Answers appear above ads and regular search results. An Instant Answer aims to answer your search query directly, ideally without the need to click through to another site.
 
 Instant Answers are created and maintained by the community - that means you! Some Instant Answers get their information from pure code and others require external sources such as API requests, databases or key-value stores. 
 
@@ -14,7 +14,7 @@ Lets illustrate with an example:
 
 Quixey was a source that the DuckDuckHack Community suggested for mobile app search. Now, whenever someone searches for apps on DuckDuckGo, they see the Quixey App Search Instant Answer. 
 
-DuckDuckGo already includes thousands of Instant Answers, including word definitions, calculations, movies and music. The possibilities are endless - by building a comprehensive range of Instant Answers we aim to provide a conclusive result for every search.
+DuckDuckGo already includes thousands of Instant Answers, including word definitions, calculations, movies and music. The possibilities are endless - by building a comprehensive range of Instant Answers our ultimate aim is to provide a conclusive result for every search.
 
 ## Want to Make an Instant Answer?
 
@@ -29,7 +29,7 @@ Before you start working on your Instant Answer - get in touch either via email 
 
 You can see discussions on ideas for Instant Answers in the [forum](https://duck.co/ideas) - feel free to get involved there or to get in touch about starting work a forum idea that doesn't have a developer working on it yet.
 
-**Make sure you discuss your Instant Answer before you dedicate any time to working on it**, in case there's some reason it might not work or there's something you need to bear in mind before developing it. For example:
+**Make sure you discuss your Instant Answer before you dedicate any time to working on it**, in case there's some reason it might not work, or there's something you need to bear in mind before developing it. For example:
  - your Instant Answer might already exist, or someone else might be working on it
  - your planned source might not be suitable (e.g. paid API, low rate limit, no JSON support)
  - your idea or design might need a bit more thought or planning
@@ -57,7 +57,7 @@ We'll try and get back to you as soon as possible (ideally within 24hrs). Unless
 
 The DuckDuckHack staff and community are keen to support anyone who wants to make a contribution, regardless of development experience. We take the time to provide whatever assistance contributors need to get involved. If you are an experienced developer and want to get stuck in, bear with us as we do this - for the same reason you are encouraged to provide help and guidance to other contributors if you're in a position to do so!
 
-If you're new to programming or the DuckDuckHack project, check out the [Quick Start guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) - it creates an Instant Answer that testifies to your awesomeness! ([See this example](https://duckduckgo.com/?q=duckduckhack+zekiel&ia=answer), yours will appear with your own username. _Although it doesn't create a "real" Instant Answer it will famliarize you with the development process - then you can make something more spectacular._)
+If you're new to programming or the DuckDuckHack project, check out the [Quick Start guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md) - it creates an Instant Answer that testifies to your awesomeness! ([See this example](https://duckduckgo.com/?q=duckduckhack+zekiel&ia=answer), yours will appear with your own username. _Although this isn't a "real" Instant Answer, the guide will famliarize you with the development process - then you can make something more spectacular._)
 
 ## Creating Your Instant Answer
 
@@ -69,4 +69,4 @@ A great way to famliarize yourself with the structure and detail of an Instant A
  - [Fathead Repo](https://github.com/duckduckgo/zeroclickinfo-fathead)
  - [Longtail Repo](https://github.com/duckduckgo/zeroclickinfo-longtail)
 
-If you get stuck or are unsure about any aspect of the process at any stage of your Instant Answer development - give us a shout via [email](mailto:open@duckduckgo.com), in the [forum](https://duck.co/ideas), on GitHub (in the relevant repo) or on IRC (on irc.freenode.net in the channel #duckduckgo)!
+If you get stuck or are unsure about any aspect of the process at any stage of your Instant Answer development - give us a shout via [email](mailto:open@duckduckgo.com), in the [forum](https://duck.co/ideas), on GitHub (in the relevant repo) or on IRC (on irc.freenode.net in the channel #duckduckgo).
