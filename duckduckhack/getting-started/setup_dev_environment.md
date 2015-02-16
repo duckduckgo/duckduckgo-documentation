@@ -1,6 +1,6 @@
 # Setting Up Your Development Environment
 
-To develop an Instant Answer, you need a GitHub account and the DuckDuckHack developer tool, DuckPAN. We also recommend using the Codio development environment. We'll go through the steps to get your development environment set up below, but **before you start**:
+To develop an Instant Answer, you need a GitHub account and the DuckDuckHack developer tool, DuckPAN. We also recommend using the Codio web IDE. We'll go through the steps to get your development environment set up below, but **before you start**:
  - Have you been in touch about your Instant Answer idea and heard back about it?
   - *If not, email [open@duckduckgo.com](mailto:open@duckduckgo.com) or post in the [forum](https://duck.co/ideas) before you continue.*
  - Have you figured out what type of Instant Answer you're making?
@@ -51,23 +51,21 @@ Your Codio account will allow you to work on your cloned copy of the GitHub repo
 
 Now you need the DuckDuckHack project added to your Codio account - this provides the tools you'll need to develop any of the Instant Answer types.
 
-### Step 1
-
 Go to https://codio.com/duckduckgo/duckduckhack - select the **Project** menu and choose **Fork**:
 
 ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fduck_fork.png&f=1)
 
 In the pop-up window, select **Box & Project**, then click **Continue**:
 
-![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fbox_project.png&f=1)
+![Fork Box Project](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fbox_project.png&f=1)
     
-![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fforked.png&f=1)
+![Project Forked](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fforked.png&f=1)
 
 Wait a minute while the project forks...
 
 You should now see **DuckDuckHack** at the top of the left pane in the window:
 
-![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fddh_open.png&f=1)
+![Project Open](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fddh_open.png&f=1)
 
 You've now successfully forked the DuckDuckHack environment and are ready to clone the GitHub repo for your Instant Answer type - then you can get developing!
 
@@ -97,22 +95,22 @@ On the repo homepage, click **Fork**, near the top-right corner.
 
 Wait while the repo forks...
 
-You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should have your username in it (**`https://github.com/yourGitHubUsername/zeroclickinfo-xxxxx`**). This is the URL for your personal copy of the DuckDuckHack code. You can make changes on your forked copy without worrying about making mistakes or messing anything up so relax and have fun with it!
+You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should have your username in it (`https://github.com/YourUsername/zeroclickinfo-xxxxx`). This is the URL for your personal copy of the DuckDuckHack code. You can make changes on your forked copy without worrying about making mistakes or messing anything up, so relax and have fun with it!
 
-**Keep the URL for your forked repo handy (or just keep it open in a browser tab), you'll be using it in a minute!**
+**Keep the URL for your forked repo handy (or just keep it open in a browser tab), you'll be using it in a minute.**
 
 ## 5. Clone your Forked Repository onto your Codio Machine
 
-Now you need to "clone" the code from your GitHub fork to your Codio box so that you can work on it and test it out.
+Now you need to clone the code from your GitHub fork to your Codio box so that you can work on it and test it out.
 
 ### Step 1
 
-Go to the [Codio projects page](https://codio.com/home/projects).
+Go to the [Codio projects page](https://codio.com/home/projects) (if you don't already have it open).
  - See a **Sign In** pop-up? Use the **Sign in via GitHub** method like you did before.
 
 Select the **DuckDuckHack** project:
 
-![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fproject_home.png&f=1)
+![Projects Home](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fproject_home.png&f=1)
 
 ### Step 2
 
@@ -120,7 +118,7 @@ You should now see the DuckDuckHack project as you did earlier. You can alter th
 
 ### Step 3
 
-Press **Shift+Alt+T** or choose **Tools &gt; Terminal** to open a new Terminal. You should see the right side pane change into a black command prompt. 
+Press **Shift+Alt+T** or choose **Tools &gt; Terminal** to open a new Terminal. You should see the pane on the right change into a black command prompt. 
 
 Type **`git clone <Your-GitHub-URL-Here>.git`** into the Terminal, inserting the URL for your forked GitHub repo. It should look something like this for a Goodie:
 
@@ -142,9 +140,11 @@ Press **Enter**. You should see the Terminal print out some text that looks like
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-The file tree on the left side should update to include a folder for the copied repo. There should be a new **zeroclickinfo-goodie**, **zeroclickinfo-spice**, **zeroclickinfo-fathead** or **zeroclickinfo-longtail** directory.
+The file tree on the left should update to include a folder for the copied repo. There should be a new **zeroclickinfo-goodie**, **zeroclickinfo-spice**, **zeroclickinfo-fathead** or **zeroclickinfo-longtail** directory.
 
-You've now cloned the DuckDuckHack code for an Instant Answer onto your Codio machine and are ready to get coding!
+You've now cloned the DuckDuckHack code for an Instant Answer onto your Codio machine and are ready to get stuck in!
+
+**To reiterate, make sure you don't waste your own time by starting work on an Instant Answer you haven't been in touch with staff/ the community about. Give us a shout to discuss your idea by [email](mailto:open@duckduckgo.com) or in the [forum](https://duck.co/ideas). Each Instant Answer is the product of collaboration, so keep in touch throughout the development process and we'll help you to make your Instant Answer as awesome as possible and ready to go as easily as possible!**
 
 ## Start Coding!
 
