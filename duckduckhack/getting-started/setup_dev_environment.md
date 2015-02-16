@@ -16,19 +16,14 @@ You can [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#
 
 ## 1. Sign up for GitHub
 
-*Already have a GitHub account? Perfect, move on to [the next step](#2.-sign-up-for-codio)!*
+*Already have a GitHub account? Perfect, move on to [the next step](#2-sign-up-for-codio)!*
 
 GitHub is a hugely popular platform for collaborative software projects. Many individuals and companies store their code in public GitHub repositories, particularly for open source projects. This allows anyone to potentially make a contribution to these projects - and lets you see how functionality has been implemented, making it a great learning resource.
 
-To sign up for Github:
+To sign up for Github: 
 
-### Step 1 
-
-Go to https://github.com/join - enter a username, email and password, then click **Create an account**
-
-### Step 2
-
-Select a **Free** account and click **Finish Signup**
+ - Go to https://github.com/join - enter a username, email and password, then click **Create an account**.
+ - Select a **Free** account and click **Finish Signup**.
 
 You're now on GitHub!
 
@@ -36,29 +31,15 @@ Your GitHub account will allow you to create your Instant Answer by cloning the 
 
 ## 2. Sign up for Codio
 
-*Already have a Codio Account? Perfect, move on to [the next step](#3.-fork-the-duckduckhack-project-on-codio)!*
+*Already have a Codio Account? Perfect, move on to [the next step](#3-fork-the-duckduckhack-project-on-codio)!*
 
 To sign up for Codio:
 
-### Step 1
-
-Go to https://codio.com and click **Sign Up**, at the top right corner.
-
-### Step 2
-
-Click **Sign Up via GitHub**.
-
-### Step 3
-
-Enter your GitHub login details, then click **Sign In**.
-
-### Step 4
-
-Click **Authorize Application** to continue.
-
-###Step 5
-
-In the new screen, enter the required details and click **Create Account**.
+ - Go to https://codio.com and click **Sign Up**, at the top right corner.
+ - Click **Sign Up via GitHub**.
+ - Enter your GitHub login details, then click **Sign In**.
+ - Click **Authorize Application** to continue.
+ - In the new screen, enter the required details and click **Create Account**.
 
 You're now on Codio!
 
@@ -76,15 +57,11 @@ Go to https://codio.com/duckduckgo/duckduckhack - select the **Project** menu an
 
 ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fduck_fork.png&f=1)
 
-### Step 2
-
 In the pop-up window, select **Box & Project**, then click **Continue**:
 
 ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fbox_project.png&f=1)
     
 ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fforked.png&f=1)
-
-### Step 3
 
 Wait a minute while the project forks...
 
@@ -118,15 +95,9 @@ Do you see your username in the top right corner?
 
 On the repo homepage, click **Fork**, near the top-right corner.
 
-### Step 4
-
 Wait while the repo forks...
 
-### Step 5
-
 You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should have your username in it (**`https://github.com/yourGitHubUsername/zeroclickinfo-xxxxx`**). This is the URL for your personal copy of the DuckDuckHack code. You can make changes on your forked copy without worrying about making mistakes or messing anything up so relax and have fun with it!
-
-### Step 6
 
 **Keep the URL for your forked repo handy (or just keep it open in a browser tab), you'll be using it in a minute!**
 
@@ -139,28 +110,23 @@ Now you need to "clone" the code from your GitHub fork to your Codio box so that
 Go to the [Codio projects page](https://codio.com/home/projects).
  - See a **Sign In** pop-up? Use the **Sign in via GitHub** method like you did before.
 
-### Step 2
-
 Select the **DuckDuckHack** project:
 
 ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fproject_home.png&f=1)
 
-### Step 3
+### Step 2
 
 You should now see the DuckDuckHack project as you did earlier. You can alter the layout using **Ctrl+Alt+R** (*Cmd+Alt+R on a Mac*) or the **View &gt; Layouts &gt; Default** menu options. *The pane on the left allows you to explore the project structure - in the pane on the right, you'll write your code and commands into the files and terminals you open.*
 
-### Step 4
+### Step 3
 
 Press **Shift+Alt+T** or choose **Tools &gt; Terminal** to open a new Terminal. You should see the right side pane change into a black command prompt. 
-
-### Step 5
 
 Type **`git clone <Your-GitHub-URL-Here>.git`** into the Terminal, inserting the URL for your forked GitHub repo. It should look something like this for a Goodie:
 
     ```
     [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
     ```
-### Step 6
 
 Press **Enter**. You should see the Terminal print out some text that looks like this:
 
@@ -175,8 +141,6 @@ Press **Enter**. You should see the Terminal print out some text that looks like
     Checking connectivity... done.
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
-
-### Step 7
 
 The file tree on the left side should update to include a folder for the copied repo. There should be a new **zeroclickinfo-goodie**, **zeroclickinfo-spice**, **zeroclickinfo-fathead** or **zeroclickinfo-longtail** directory.
 
