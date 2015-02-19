@@ -269,7 +269,7 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     done_testing;
     ```
 
-2. Change the **`ddg_goodie_test`** function (lines 11-20) to this:
+2. Change the **`ddg_goodie_test`** function (lines 11-19) to this:
 
     ```perl
     ddg_goodie_test(
