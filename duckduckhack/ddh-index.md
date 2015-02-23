@@ -5,7 +5,7 @@
   - [Determine Your Instant Answer Type](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md)
   - [Setup Your Development Environment](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/setup_dev_environment.md)
 
-- **Goodie**
+- **Goodie** (Perl)
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
   - [Quick Start](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_quickstart.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md)
@@ -16,7 +16,7 @@
   - [Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_helpers.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#goodie)
 
-- **Spice**
+- **Spice** (Perl + JS)
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md)
   - [Testing Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/spice_testing_triggers.md)
@@ -33,12 +33,12 @@
   - [Spice Attributes](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_attributes.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#spice)
 
-- **Fathead**
+- **Fathead** (Perl, Python, JS, Ruby)
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_basic_tutorial.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#fathead)
 
-- **Longtail**
+- **Longtail** (Perl, Python, JS, Ruby)
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_basic_tutorial.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#longtail)
@@ -52,7 +52,7 @@
   - [Testing with the Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md)
   - [Testing with the Language API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_language_api.md)
 
-- **Submitting Your Instant Answer**
+- **Submission**
   - [Preparing for a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/preparing_for_a_pull_request.md)
   - [Review Process](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/review_process.md)
   - [Developer Checklist](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/developer_checklist.md)
