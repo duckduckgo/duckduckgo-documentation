@@ -53,7 +53,7 @@ Every line in the output file must contain thirteen fields, separated by tabs. S
 
   9. External links. These will be displayed first when an article is shown. The canonical example is an official site, which looks like ``[$url Official site]\\n``. You can have several, separated by an escaped newline, though only a few will be used. You can also have before and after text or put multiple links in one. Examples: ``Before text [$url link text] after text [$url2 second link].\\n``
 
-  10. *Ignore.*
+  10. *For disambiguation pages only.* Content of disambiguation page. Should be a list, where each item is a link to a page followed by a one sentence description ending in a period. The items have to be separated by ``\n``. Examples: ``*[[Enum.value]], returns the value part of the Enum.\n*[[Pair.value]], returns the value part of the Pair.``
 
   11. Image. You can reference an external image that we will download and reformat for display. Examples: ``[[Image:$url]]``
 
@@ -81,7 +81,7 @@ my $images = $line[10] || '';
 my $abstract = $line[11] || '';
 my $source_url = $line[12] || '';
 
-print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t\t$images\t$abstract\t$source_url\n";
+print "$title\t$type\t\t\t$categories\t\t$see_also\t\t$external_links\t$disambiguation\t$images\t$abstract\t$source_url\n";
 ```
 
 There is a pre-process script that is run on this output, which:
