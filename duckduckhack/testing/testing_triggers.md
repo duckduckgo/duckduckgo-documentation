@@ -4,40 +4,30 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
 ## Interactive Testing
 
-Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
+*Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).*
 <!-- /summary -->
 
-1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
+1. Make sure you are in the root directory of your checked-out Instant Answer repository. 
 
-    - Option A. &mdash; Install via this script:
+	*To complete this section you will need to have your [development environment set up on Codio](https://duck.co/duckduckhack/setup_dev_environment).*
 
-        ```shell
-        curl http://duckpan.org/install.pl | perl
-        ```
+	In Codio, make sure you are in your forked DuckDuckHack project (In the menu, click Codio > [Dashboard](https://codio.com/home/projects) > DuckDuckHack).
+	
+	Next, enter a terminal window if it's not already open from the last tutorial. (Tools > Terminal).
+	
+	At the command prompt, change into the **zeroclickinfo-goodies** repository directory. (This is the repository you cloned in the previous tutorial, under your DuckDuckHack Codio project.)
+	
+	```shell
+	cd zeroclickinfo-goodies
+	```
 
-    - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which comes with DuckPAN installed
+	The command line prompt should now indicate that you are in the **master** branch of the **zeroclickinfo-goodies** repository:
+	
+	```shell
+	[ ... zeroclickinfo-goodies {master}]$    
+	```
 
-    More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
-
-2. Go to your fork of the repository (a directory or folder on your computer).
-
-    ```shell
-    cd zeroclickinfo-goodies/
-    ```
-
-3. Install the repository requirements using duckpan.
-
-    ```shell
-    duckpan installdeps
-    ```
-
-    This command will install all the Perl modules used by the DuckDuckGo Instant Answers within your local repository. These requirements are defined in the [/dist.ini file](http://blog.urth.org/2010/06/walking-through-a-real-distini.html) (at the root).
-
-4. Add your Instant Answer.
-
-    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the Instant Answer followed by the extension **.pm** because it is a Perl package. For example, if the name of your Instant Answer was **"test Instant Answer"**, the file would be `TestInstantAnswer.pm`.
-
-5. Test your triggers interactively.
+2. Test your triggers interactively.
 
     Type this command at the command line.
 
