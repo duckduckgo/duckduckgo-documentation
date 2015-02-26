@@ -42,7 +42,7 @@ handle remainder => sub {
 Then the the string `10-100` would be sent to the `spice from` regexp, which would capture the two numbers into `$1` and `$2`. These two placeholders are then used to replace `$1` and `$2` in the `spice to` URL:
 
 ```perl
-spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
+spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_WORDNIK_APIKEY}}}&callback={{callback}}';
 ```
 
 **Note:** The reason why you do not need to specify a **from** keyword by default, is that the default value of `spice from` is **(.*)**, which means whatever you return gets gets captured into `$1`.
@@ -63,16 +63,22 @@ spice from => '([^/]+)/?(?:([^/]+)/?(?:([^/]+)|)|)';
 
 ## API Keys
 
-Some APIs require API keys to function properly like in the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm). You can insert an API key for testing in the callback function and replace it with a variable reference when submitting.
+Some APIs require API keys to function properly like in the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm). You can insert an API key for testing in the callback function and replace it with a variable reference when submitting. The API key variable should be named using the provider name as a reference. As Wordnik is the API provider used for the [RandWord Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/RandWord.pm) we use `DDG_SPICE_WORDNIK_APIKEY` as the variable name.
 
 ```perl
-spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_RANDWORD_APIKEY}}}&callback={{callback}}';
+spice to => 'http://api.wordnik.com/v4/words.json/randomWord?minLength=$1&maxLength=$2&api_key={{ENV{DDG_SPICE_WORDNIK_APIKEY}}}&callback={{callback}}';
 ```
 
 You can set the variable when you start DuckPAN server like this:
 
 ```bash
-DDG_SPICE_RANDWORD_APIKEY=xyz duckpan server
+DDG_SPICE_WORDNIK_APIKEY=xyz duckpan server
+```
+
+Alternatively you can save the API key variable in the `env.ini` file, which DuckPAN will load on start, using:
+
+```bash
+duckpan env set DDG_SPICE_WORDNIK_APIKEY xyz
 ```
 
 ## JSON -> JSONP
