@@ -96,6 +96,7 @@ With some personal stories this make this step much more concrete and inviting. 
 This section has the potential to be really confusing - even thought it’s sequential, it’s hard to grasp conceptually what is going on and what the environment is composed of. 
 
 There are two big parts here: the **box** and the **repository**.
+
 1. I’d first describe the box and explain why Codio and what’s amazing about it. Why is it necessary? What does it represent? What is DuckPAN? How is it different but related to Codio? 
 2. I’d then explain that there is one Instant Answers Git repository, and you will be contributing to it and expanding it. 
 	- Of course, you can’t just directly work on it, so here is the workflow to let you test your work - and us inspect it and help you - without it being part of the actual production code till it’s ready.
@@ -162,7 +163,7 @@ The content here is presumably fine, but I would change the presentation and str
 - At the high level of structure I would give this parallel structure to the Beginners’ Tutorial. (Right now it’s awkward because the sub-steps of the Basic Tutorial are all on a flat hierarchy with the Quick Start.) By having the **structure accurately reflect the relationship** between the two paths, the documentation will be inherently clearer.
 - I would begin each section with clear context of its significance *before* diving in. For example: testing. Why is this important? Why is this *as* important as the code itself? What is the relationship between interactive testing and test pages? 
 
-*Note: when updating testing triggers, remember to fix the shell output of **duckpan query** to reflect [this comment](https://github.com/duckduckgo/duckduckgo-documentation/pull/208) by Zaahir.*
+Note: when updating testing triggers, remember to fix the shell output of **duckpan query** to reflect [this comment](https://github.com/duckduckgo/duckduckgo-documentation/pull/208) by Zaahir.
 
 ### FAQ
 
