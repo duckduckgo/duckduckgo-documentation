@@ -42,7 +42,7 @@ icon_url "/i/www.github.com.ico";
 
 source "GitHub";
 
-code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/hello_world";
+code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/fathead/hello_world";
 
 topics "geek", "programming";
 
@@ -82,7 +82,7 @@ icon_url "/i/www.github.com.ico";
 
 source "GitHub";
 
-code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/hello_world";
+code_url "https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/fathead/hello_world";
 
 topics "geek", "programming";
 
@@ -98,13 +98,13 @@ attribution
 
 ## Step 2: Create a directory
 
-Every Fathead has a directory under share/ that contains all files except the one we just created. The name of the directory must be the name of the Perl module converted to [snake case](https://en.wikipedia.org/wiki/Snake_case). For this tutorial, we'll use `share/hello_world/`.
+Every Fathead has a directory under share/fathead/ that contains all files except the one we just created. The name of the directory must be the name of the Perl module converted to [snake case](https://en.wikipedia.org/wiki/Snake_case). For this tutorial, we'll use `share/fathead/hello_world/`.
 
 ## Step 3: Write the fetch.sh script
 
 Every Fathead Instant Answer requires a `fetch.sh` file. This shell script is invoked to fetch the remote data that we need in order to generate our output. For example, following script will clone a git repository that contains a collection of hello world source files:
 
-###### share/hello_world/fetch.sh
+###### share/fathead/hello_world/fetch.sh
 
 ```shell
 #!/bin/sh
@@ -114,7 +114,7 @@ git clone git://github.com/leachim6/hello-world.git download
 
 In this case, the git repository is just a collection of source files; we'll need to do some parsing in order to get it into the format we need. Note that *git clone* is not the only way to fetch data. Most Fatheads use *curl* or *wget*.
 
-**Also Note:** All temporary files should be placed in the `download/` subdirectory within your Fathead's directory. For this example, that means `share/hello_world/download/`. *git* creates this subdirectory for us, but if your plugin uses a different tool, you make have to include `mkdir download` in your fetch script.
+**Also Note:** All temporary files should be placed in the `download/` subdirectory within your Fathead's directory. For this example, that means `share/fathead/hello_world/download/`. *git* creates this subdirectory for us, but if your plugin uses a different tool, you make have to include `mkdir download` in your fetch script.
 
 ## Step 4: Write the parsing script
 
@@ -122,11 +122,11 @@ The data we just fetched needs to be parsed before we can use it, so we'll write
 
 **Note:** Our machines are running **Ubuntu 12.04**. These are the machines that will be used to test and run your parser, so **please make sure your language and dependencies are compatible with our environment**.
 
-Since Fatheads can have vastly different data sources, we can't tell you what is the best approach to parsing. We suggest you look through the [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share) to get ideas from other developers.
+Since Fatheads can have vastly different data sources, we can't tell you what is the best approach to parsing. We suggest you look through the [Fathead repository](https://github.com/duckduckgo/zeroclickinfo-fathead/tree/master/share/fathead) to get ideas from other developers.
 
 For the purposes of this tutorial, we're going to use Python to parse the git repository we just cloned.
 
-###### share/hello_world/parse.py
+###### share/fathead/hello_world/parse.py
 
 ```python
 if __name__ == "__main__":
