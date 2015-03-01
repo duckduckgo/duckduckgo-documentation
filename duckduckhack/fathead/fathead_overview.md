@@ -105,6 +105,12 @@ If you want to include a code snippet or another pre-formatted example in the ab
 <pre><code>code block goes here</code></pre>
 ```
 
+For multiline code snippets, use only `\n` to separate lines:
+
+```html
+<pre><code>foo\nbar\nbaz</code></pre>
+```
+
 ## Notes
 
 There should be no duplicates in the `$page` (first) variable. If you have multiple things named the same thing you have a number of options:
