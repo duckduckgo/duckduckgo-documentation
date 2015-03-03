@@ -321,7 +321,7 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 - `templates:{...}` is used to specify which template group, templates and sub-templates are to be used for displaying your Spice Instant Answer:
 
-    + `group` is used to specify the template group that we are using. Here', we're using the built-in, **'base'** template group. Doing this lets the templating system know which default, built-in templates should be used for the tile view and detail area, when they are present.
+    + `group` is used to specify the template group that we are using. Here, we're using the built-in, **'base'** template group. Doing this lets the templating system know which default, built-in templates should be used for the tile view and detail area, when they are present.
 
     + `options:{...}` is used to specify certain things about our templates. Some templates have components which can be turned on and off and some have the ability to include a sub-template, called `content`. In our case, we're indicating the template to be used for `content` and that the `moreAt` component should be turned on.
 
