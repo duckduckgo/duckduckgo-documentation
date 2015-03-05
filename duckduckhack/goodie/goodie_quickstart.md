@@ -6,114 +6,11 @@ If you are more experienced with DDH, feel free to continue to the [Basic Tutori
 
 *We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help.*
 
-## Before We Get Going...
+## Set Up Your Development Environment
 
-Aside from a working internet connection and a computer, there are two important things you'll need to get started:
+Before we start writing Goodie code, we have to set up what's called a **development environment**. The DuckDuckHack development environment makes it easy to run, test, and submit your Instant Answer to the DuckDuckGo community.
 
-- a **free** Codio account
-    + Codio provides a web-based development environment that you will be using to create and test a new Instant Answer. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes pre-configured with the necessary software for Instant Answer development.
-- a **free** GitHub account
-    + GitHub provides a place for you to save your code on the internet.
-    + When your Instant Answer is ready for us to review, you'll use GitHub to send us your code!
-
-
-## Sign up for a GitHub Account
-
-*Already have a GitHub Account? Perfect, move on to [the next step](#sign-up-for-a-codio-account)!*
-
-If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
-
-1. Go to https://github.com/join and enter the required information, then click "**Create an Account**"
-2. Click "**Finish Signup**" to continue with a **Free** GitHub account.
-
-**Congrats!** You now have a GitHub account.
-
-
-## Sign up for a Codio Account
-
-Next, you'll need to get an account for Codio:
-
-*Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
-
-1. Go to https://codio.com and click "**Sign Up**", at the top right corner.
-2. Click "**Sign Up via GitHub**".
-3. Enter your GitHub login details and then click"**Sign In**".
-4. Click "**Authorize Application**" to continue.
-5. In the new screen, enter the required details and click "**Create Account**".
-
-**Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
-
-
-## Fork the DuckDuckHack Project on Codio
-
-1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
-2. In the drop-down, select the "**Fork**" option.
-
-    ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork.png&f=1)
-
-3. In the pop-up window, select "**Clone both the Project and its Box**".
-
-    ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork_both.png&f=1)
-
-4. Wait a minute while the project forks...
-5. You should now see a new window with three panes. It should say "**DuckDuckHack**" at the top of the left pane.
-
-**Congrats!** You've now successfully forked the DuckDuckHack environment. Now, let's grab the DuckDuckHack Goodie code (from GitHub.com) and start learning!
-
-
-## Fork the DuckDuckHack Goodie Repository on GitHub
-
-In order to test out and create your own Goodie Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
-
-1. Go to the [DuckDuckHack Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies) (also known as a "repo").
-2. Do you see your username in the top right corner?
-    - **Yes**? Perfect. Move on to the next step.
-    - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
-3. Click "**Fork**", near the top-right corner.
-4. Wait while the repo forks...
-5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like **`https://github.com/yourGitHubUsername/zeroclickinfo-goodie`**. This is the URL for your personal copy of the DuckDuckHack Goodie code.
-6. **Keep this URL handy, we'll be using it in a minute!**
-
-
-## Clone your Goodie Repository onto your Codio Machine
-
-Now we need to "clone" the code from GitHub to your Codio box so you can see it, modify it and run it!
-
-1. Go to the [Codio projects page](https://codio.com/home/projects).
-    - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign-up-for-a-codio-account)).
-2. Click the "**DuckDuckHack**" project.
-3. You should now see the three-pane window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
-4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
-5. Type **`git clone <Your GitHub URL Here>.git`** into the Terminal, replacing `<Your GitHub URL Here>` accordingly. It should look something like this:
-
-    ```
-    [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
-    ```
-
-6. Press "**Enter**". You should see the Terminal print out some text that looks like this:
-
-    ```
-    [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
-    Cloning into 'zeroclickinfo-goodies'...
-    remote: Counting objects: 18623, done.
-    remote: Compressing objects: 100% (8083/8083), done.
-    remote: Total 18623 (delta 8084), reused 18179 (delta 7868)
-    Receiving objects: 100% (18623/18623), 5.50 MiB | 9.51 MiB/s, done.
-    Resolving deltas: 100% (8084/8084), done.
-    Checking connectivity... done.
-    [04:30 PM codio@buffalo-pixel workspace {master}]$
-    ```
-
-7. The file tree on the left side should update, there should be a new "**zeroclickinfo-goodies**" directory.
-
-**Congrats!** You've now cloned your fork of the Goodie repo onto your Codio machine. Now, let's code our first Goodie and run it!
-
-------
-
-*Curious to know what we just did?*
-
-You just used a program called **Git**, to **clone** (copy) the Git repository (a special file containing all the code) located at **`https://github.com/GitHubUsername/zeroclickinfo-goodies.git`** onto your Codio machine. Git automatically creates a new folder based on the name of the repository it's cloning and copies the code into it. In our case, Git create a folder, "zeroclickinfo-goodies", and copied all the code into there.
-
+Before proceeding, make sure you've completed the section titled [Set Up Your Development Environment](https://duck.co/duckduckhack/setup_dev_environment). Once you've done that, you're ready to continue on to the next section.
 
 ## Creating Your First Goodie
 
