@@ -14,7 +14,9 @@ Before proceeding, make sure you've completed the section titled [Set Up Your De
 
 ## Creating Your First Goodie
 
-Now we're going to create our first Goodie! We'll be using the DuckPAN tool to generate some boilerplate code for us.
+In this tutorial we'll be making a super-simple Goodie by slightly changing some template files.
+
+We'll be using the DuckPAN tool to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your instant answer contribution.
 
 1. Click the "**DuckPAN New Goodie**" button on the command bar. The Terminal should prompt you to enter a name for your Instant Answer.
 2. Type **`IsAwesome::GitHubUsername`** (replacing `GitHubUsername` with your actual GitHub username), then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
@@ -23,6 +25,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     [04:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ cd ~/workspace/zeroclickinfo-goodies/ && duckpan new
     Please enter a name for your Instant Answer: IsAwesome::GitHubUsername
     ```
+
+	*Usually you'll be typing in just a regular name like `Calculator`, but because so many community members are creating `IsAwesome` projects, we wanted to keep them together in their own directory. Hence the `IsAwesome::` prefix.*
 
 3. DuckPAN should print some text, confirming that your first Goodie was created:
 
@@ -39,9 +43,11 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     Successfully created Goodie: IsAwesome::GitHubUsername
     ```
 
-    These two generated files only contain boilerplate code and comments. We'll have to complete the code in order to get your new Goodie working!
+	DuckPAN created two files: a code file, and a test file, each in their proper locations in the repository. That's all it takes to make a Goodie. 
 
-4. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). It should look like this:
+    Currently, these two generated files only contain boilerplate code and comments, which saves us a lot of time. Next, we'll customize the files to our liking and get your Goodie working.
+
+4. Let's start by editing your code file first. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). It should look like this:
 
     ```perl
     package DDG::Goodie::IsAwesome::GitHubUsername;
@@ -166,6 +172,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     done_testing;
     ```
 
+	*Tip: Make sure to change ALL instances of `GitHubUsername` in the file to your user name.*
+
 2. Change the **`ddg_goodie_test`** function (lines 11-20) to this:
 
     ```perl
@@ -182,6 +190,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     1. For the query "**duckduckhack GitHubUsername**", your Goodie returns "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!".
     2. For the query "**duckduckhack GitHubUsername is awesome**", your Goodie returns **`undef`**, meaning it won't display any result for that query.
+
+	*Can you guess what the `test_zci()` function does? ZCI stands for Zero Click Info. The `test_zci()` function verifies what is being returned specifically in the Zero Click Info section of the search page.*
+
 
 3. Switch back to your Terminal by clicking on the "**Terminal**" tab.
 4. Type **`prove -Ilib t/IsAwesome/GitHubUsername.t`** and press "**Enter**". The prompt should print the results of the test.
@@ -238,6 +249,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     **Success!** The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
+	*Still not passing? Make sure you changed all instances of `GitHubUsername` in the file to your user name.*
+
 **Congrats!** You've written and tested your first Goodie! Feels great, doesn't it?
 
 Of course, this was just a taste of all the things you can create using a Goodie. 
@@ -289,7 +302,11 @@ This bonus section will walk you through submitting the IsAwesome Goodie you jus
     ```
 
 3. Switch back to the "**Terminal**" tab.
+
 4. Type **`git add .`**, then press enter.
+
+	*This command tells the git repository to include and track changes to the two files you've created. Even though the files were physically located in the repository, we need to explicitly tell git to track them.*
+	
 5. Type **`git commit -m "Created my first Goodie"`** and press **`Enter`**. Git should print some text confirming the changes that have been committed.
 
     ```
