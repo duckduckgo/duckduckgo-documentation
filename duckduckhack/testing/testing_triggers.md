@@ -35,28 +35,20 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
     duckpan query
     ```
 
-    This command will initially output all of the Instant Answers available in your local repository. You should see your Instant Answer in this output.
+    This command will present you with an interactive prompt.
 
     ```shell
-    Using the following DDG::Goodie plugins:
+    Loading Instant Answers...
 
-     - DDG::Goodie::Xor (Words)
-     - DDG::Goodie::SigFigs (Words)
-     - DDG::Goodie::EmToPx (Words)
-     - DDG::Goodie::Length (Words)
-     - DDG::Goodie::ABC (Words)
-     - DDG::Goodie::Chars (Words)
-     ...
+    (Empty query for ending test)                                                   
+	Query:
     ```
 
-    The script will now proceed to an interactive prompt.
+	*In some environments, the `duckpan query` command may print a long list of country aliases - that's perfectly fine. The end of the output will still display the `Query:` prompt.*
 
-    ```shell
-    (Empty query for ending test)
-    Query:
-    ```
+    **Now type in any query to see the response.** 
 
-    Now type in any query to see the response.
+	*Typing a query here is just like using DuckDuckGo.com, except you're only viewing the ZeroClickInfo response, and in its raw form.*
 
     ```shell
     Query: chars this is a test
