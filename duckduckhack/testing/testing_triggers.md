@@ -48,7 +48,9 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
     **Now type in any query to see the response.** 
 
-	*Typing a query here is just like using DuckDuckGo.com, except you're only viewing the ZeroClickInfo response, and in its raw form.*
+	Typing a query here is just like using DuckDuckGo.com, except you're only viewing the ZeroClickInfo response, and in its raw form.
+	
+	In the following example, we've entered `chars this is a test` into the prompt and received the following response:
 
     ```shell
     Query: chars this is a test
