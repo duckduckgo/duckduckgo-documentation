@@ -1,10 +1,10 @@
 # My First Goodie Instant Answer!
 
-*First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
+If you are new to DuckDuckHack, you're in the right place. This Quick Start will get you straight to the fun parts of creating a Goodie Instant Answer.
 
-This is a quick-start tutorial designed to give an overview of the Instant Answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
+If you are more experienced with DDH, feel free to continue to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial) to dive deeper into the functionality of a Goodie. All important information will also be covered there.
 
-To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial).
+*We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help.*
 
 ## Before We Get Going...
 
@@ -341,12 +341,17 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     **Success!** The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
-**Congrats!** You've written and tested your first Goodie! There's so much more that Goodies can do though, checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more. You can also explore the Goodie repo by looking at the other Goodies in the `/lib/DDG/Goodie` directory. Read their **.pm** files and look at the `triggers`. You can test them all in the `duckpan server`.
+**Congrats!** You've written and tested your first Goodie! Feels great, doesn't it?
 
-At this point you're done the tutorial, but we have a bonus surprise for you...
+Of course, this was just a taste of all the things you can create using a Goodie. 
 
+Fortunately, you're now super ready to tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
+
+Do you enjoy looking under the hood and learning by example? You'll certainly enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
+
+This bonus section will walk you through submitting the IsAwesome Goodie you just created for review and acceptance into the *live DuckDuckGo.com codebase*. If you'd rather jump straight in and work on *your* idea, don't worry about this for now. You'll find this information in the rest of the docs as well.
 
 1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
 
