@@ -4,18 +4,18 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
 ## Interactive Testing
 
-*Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).*
+*Before reading this section, make sure you've worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).*
 <!-- /summary -->
 
-1. Make sure you are in the root directory of your checked-out Instant Answer repository. 
+1. Enter the root directory of your checked-out Instant Answer repository:
 
-	*To complete this section you will need to have your [development environment set up on Codio](https://duck.co/duckduckhack/setup_dev_environment).*
-
-	In Codio, make sure you are in your forked DuckDuckHack project (In the menu, click Codio > [Dashboard](https://codio.com/home/projects) > DuckDuckHack).
+	Log in to Codio and visit the dashboard. In the menu, click Codio > [Dashboard](https://codio.com/home/projects)
 	
-	Next, enter a terminal window if it's not already open from the last tutorial. (Tools > Terminal).
+	Click on the **DuckDuckHack project**, which you previously forked and cloned.
 	
-	At the command prompt, change into the **zeroclickinfo-goodies** repository directory. (This is the repository you cloned in the previous tutorial, under your DuckDuckHack Codio project.)
+	Next, open a terminal window if it's not already open from the last tutorial. (Tools > Terminal).
+	
+	At the command prompt, change into the **zeroclickinfo-goodies** repository directory:
 	
 	```shell
 	cd zeroclickinfo-goodies
@@ -24,7 +24,7 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 	The command line prompt should now indicate that you are in the **master** branch of the **zeroclickinfo-goodies** repository:
 	
 	```shell
-	[ ... zeroclickinfo-goodies {master}]$    
+	[ codio@border-carlo workspace zeroclickinfo-goodies {master}]$    
 	```
 
 2. Test your triggers interactively.
