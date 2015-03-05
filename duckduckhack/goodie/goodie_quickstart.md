@@ -4,7 +4,7 @@
 
 **If you are more experienced with DDH, feel free to continue to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial)**. There, you'll dive right into the functionality of a Goodie. All important information is covered there.
 
-*We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help.*
+_We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help._
 
 ## Set Up Your Development Environment
 
@@ -14,9 +14,9 @@ Before proceeding, make sure you've completed the section titled [Set Up Your De
 
 ## Creating Your First Goodie
 
-In this tutorial we'll be making a super-simple Goodie by slightly changing some template files.
+In this tutorial we'll be making a super-simple Goodie by changing some template files.
 
-We'll be using the DuckPAN tool to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your instant answer contribution.
+We'll be using the **DuckPAN tool** to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your instant answer contribution.
 
 1. Click the "**DuckPAN New Goodie**" button on the command bar. The Terminal should prompt you to enter a name for your Instant Answer.
 2. Type **`IsAwesome::GitHubUsername`** (replacing `GitHubUsername` with your actual GitHub username), then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
@@ -26,7 +26,7 @@ We'll be using the DuckPAN tool to generate this boilerplate code for us. The Du
     Please enter a name for your Instant Answer: IsAwesome::GitHubUsername
     ```
 
-	*Usually you'll be typing in just a regular name like `Calculator`, but because so many community members are creating `IsAwesome` projects, we wanted to keep them together in their own directory. Hence the `IsAwesome::` prefix.*
+	*Usually you'll be typing in just a regular name like `Calculator` with no prefix, but because so many community members are creating `IsAwesome` projects, we wanted to keep them together in their own directory. Hence the `IsAwesome::` prefix.*
 
 3. DuckPAN should print some text, confirming that your first Goodie was created:
 
@@ -47,7 +47,9 @@ We'll be using the DuckPAN tool to generate this boilerplate code for us. The Du
 
     Currently, these two generated files only contain boilerplate code and comments, which saves us a lot of time. Next, we'll customize the files to our liking and get your Goodie working.
 
-4. Let's start by editing your code file first. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). It should look like this:
+4. Let's start by editing your code file first. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). 
+
+	It should look like this:
 
     ```perl
     package DDG::Goodie::IsAwesome::GitHubUsername;
@@ -145,7 +147,9 @@ We'll be using the DuckPAN tool to generate this boilerplate code for us. The Du
 
 ## Writing Your First Goodie Test File
 
-1. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. It should look like this:
+1. Let's edit your corresponding test file. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. 
+
+	It should look like this:
 
     ```perl
     #!/usr/bin/env perl
@@ -172,7 +176,7 @@ We'll be using the DuckPAN tool to generate this boilerplate code for us. The Du
     done_testing;
     ```
 
-	*Tip: Make sure to change ALL instances of `GitHubUsername` in the file to your user name.*
+	_Make sure to change **all** instances of `GitHubUsername` in the file to your user name._
 
 2. Change the **`ddg_goodie_test`** function (lines 11-20) to this:
 
@@ -249,15 +253,13 @@ We'll be using the DuckPAN tool to generate this boilerplate code for us. The Du
 
     **Success!** The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
-	*Still not passing? Make sure you changed all instances of `GitHubUsername` in the file to your user name.*
+	_Still not passing? Make sure you changed **all** instances of `GitHubUsername` in the file to your user name._
 
 **Congrats!** You've written and tested your first Goodie! Feels great, doesn't it?
 
-Of course, this was just a taste of all the things you can create using a Goodie. 
+Of course, this was just a taste of all the things you can create using a Goodie. Fortunately, you're now super ready to tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
 
-Fortunately, you're now super ready to tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
-
-Do you enjoy looking under the hood and learning by example? You'll certainly enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
+Do you enjoy looking under the hood and learning by example? You'll enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
