@@ -2,8 +2,6 @@
 
 **If you are new to DuckDuckHack, you're in the right place.** This Quick Start will get you straight to the fun parts of creating a Goodie Instant Answer.
 
-**If you are more experienced with DDH, feel free to continue to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial)**. There, you'll dive right into the functionality of a Goodie. All important information is covered there.
-
 _We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help._
 
 ## Set Up Your Development Environment
