@@ -44,7 +44,6 @@
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#longtail)
 
 - **Testing**
-  - [Installing DuckPAN](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/installing_duckpan.md)
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
