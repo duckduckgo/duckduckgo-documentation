@@ -17,7 +17,7 @@ If you used `duckpan new` to start your project, a simple test file was automati
 
 Your test file should have **the same name** as the package it is testing. For example, the code in `lib/DDG/Goodie/Fortune.pm` is tested by `t/Fortune.t`.
 
-The [standard `duckpan` installation](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/installing_duckpan.md) includes Goodie and Spice testing libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively.) These libraries make it quick and easy to develop tests for your Instant Answer.
+The standard DuckPAN installation includes Goodie and Spice testing libraries (`DDG::Test::Goodie` and `DDG::Test::Spice`, respectively.) These libraries make it quick and easy to develop tests for your Instant Answer.
 
 ## Running Test Files
 

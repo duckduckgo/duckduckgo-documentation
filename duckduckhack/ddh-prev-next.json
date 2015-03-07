@@ -144,13 +144,8 @@
 		"next": ["faq.md#longtail"]
 	},
 
-	"installing_duckpan.md": {
-		"prev": [],
-		"next": ["testing_triggers.md"]
-	},
-
 	"testing_triggers.md": {
-		"prev": ["installing_duckpan.md"],
+		"prev": [],
 		"next": ["testing_html.md"]
 	},
 
@@ -214,8 +209,13 @@
 		"next": []
 	},
 
-	"common_pitfalls.md": {
+	"other_development_environments.md": {
 		"prev": [],
+		"next": ["common_pitfalls.md"]
+	},
+
+	"common_pitfalls.md": {
+		"prev": ["other_development_environments.md"],
 		"next": ["how_to_qa.md"]
 	},
 
