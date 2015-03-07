@@ -4,7 +4,7 @@
 
 This attribute defines the API endpoint for your Instant Answer. E.g.
 
-``` perl
+```perl
 spice to => 'http://example.com/search/$1?loc=$2';
 ```
 
@@ -14,7 +14,7 @@ A GET request will be made to this URL to retrieve data. The **$1** and **$2** i
 
 The `spice from` attribute defines a regular expression which groups data returned from the `handle` function. All parameters returned from the `handle` function in a Spice are converted into strings and joined with a `/`. Here's an example:
 
-``` perl
+```perl
 handle remainder => sub {
   # Produces the string "foo/bar/baz"
   return "foo", "bar", "baz";
