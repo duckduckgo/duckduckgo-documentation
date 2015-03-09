@@ -12,6 +12,7 @@ When you submit a pull request, a community leader will assign themselves to you
 - [@TomBebbington](https://github.com/TomBebbington)
 - [@killerfish](https://github.com/killerfish)
 - [@MrChrisW](https://github.com/mrchrisw)
+- [@javathunderman](https://github.com/javathunderman)
 
 Here's how the whole process looks, after you submit your pull request:
 
