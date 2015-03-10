@@ -26,21 +26,11 @@
 
 	"goodie_basic_tutorial.md": {
 		"prev": ["goodie_quickstart.md"],
-		"next": ["goodie_testing_triggers.md"]
-	},
-
-	"goodie_testing_triggers.md": {
-		"prev": ["goodie_basic_tutorial.md"],
-		"next": ["goodie_tests.md"]
-	},
-
-	"goodie_tests.md": {
-		"prev": ["goodie_testing_triggers.md"],
 		"next": ["goodie_triggers.md"]
 	},
 
 	"goodie_triggers.md": {
-		"prev": ["goodie_tests.md"],
+		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_advanced_handle_functions.md"]
 	},
 
@@ -61,21 +51,11 @@
 
 	"spice_basic_tutorial.md": {
 		"prev": ["spice_overview.md"],
-		"next": ["spice_testing_triggers.md"]
-	},
-
-	"spice_testing_triggers.md": {
-		"prev": ["spice_basic_tutorial.md"],
-		"next": ["spice_tests.md"]
-	},
-
-	"spice_tests.md": {
-		"prev": ["spice_testing_triggers.md"],
 		"next": ["spice_triggers.md"]
 	},
 
 	"spice_triggers.md": {
-		"prev": ["spice_tests.md"],
+		"prev": ["spice_basic_tutorial.md"],
 		"next": ["spice_templates_overview.md"]
 	},
 
