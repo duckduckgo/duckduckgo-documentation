@@ -1,14 +1,12 @@
 # My First Goodie Instant Answer!
 
-**If you are new to DuckDuckHack, you're in the right place.** This Quick Start will get you straight to the fun parts of creating a Goodie Instant Answer.
+**If you are new to DuckDuckHack, you're in the right place.** This Goodie Quick Start is meant to show you the basics of DuckDuckHack by building a simple Instant Answer that will look like [this](https://duckduckgo.com/?q=zekiel+duckduckhack&ia=answer). 
 
-_We're itching to help you out. Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump on the chance to help._
+If you're already familiar with how Instant Answers are built, feel free to move along to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial).
 
 ## Set Up Your Development Environment
 
-Before we start writing Goodie code, we have to set up what's called a **development environment**. The DuckDuckHack development environment makes it easy to run, test, and submit your Instant Answer to the DuckDuckGo community.
-
-Before proceeding, make sure you've completed the section titled [Set Up Your Development Environment](https://duck.co/duckduckhack/setup_dev_environment). Once you've done that, you're ready to continue on to the next section.
+By this point you should have already **set up your development environment** to be ready to code. If you need help with that (or anything else), please shoot us an email at: [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll jump on the chance to help!
 
 ## Creating Your First Goodie
 
