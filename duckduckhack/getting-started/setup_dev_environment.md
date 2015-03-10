@@ -109,32 +109,6 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 
 **Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. You're now prepared to code you first Instant Answer!
 
-## Give Us a Heads Up
-
-We know you're eager to get started, and we're super excited to see your awesome Instant Answer creations! Before you start coding up a storm though, **[please send us an email](mailto:open@duckduckgo.com)** to let us know that you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved. Some reasons why your Instant Answer might not get approved include:
-
- - the Instant Answer already exists
- - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
- - the idea needs more thought or planning
-
-Here's an example email to help you out:
-
-```text
-To: open@duckduckgo.com
-Subject: Instant Answer Approvals
-
-I'd like to make an Instant Answer for <topic/subject>!
-This is the data source: <link, description, Perl module, etc.>.
-This is the related Duck.co idea: <url, if applicable>.
-This is my Github username: <username>.
-
-Thanks!
-
-PS: DuckDuckGo is awesome!
-```
-
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
-
 ## Start Coding!
 
 At this point, you're ready to start learning about the Instant Answer type you'll be using.
