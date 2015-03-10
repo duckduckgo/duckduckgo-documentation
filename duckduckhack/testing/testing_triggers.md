@@ -4,8 +4,9 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
 ## Interactive Testing
 
-*Before reading this section, make sure you've worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).*
-<!-- /summary -->
+Interactive command-line testing is available using DuckPAN for **Goodie** and **Spice** instant answer types.
+
+This section assumes you've set up your development environment and worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 
 1. Enter the root directory of your checked-out Instant Answer repository:
 
@@ -13,21 +14,21 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 	
 	Click on the **DuckDuckHack project**, which you previously forked and cloned.
 	
-	Next, open a terminal window if it's not already open from the last tutorial. (Tools > Terminal).
+	Next, open a terminal window if it's not already open. (Tools > Terminal).
 	
-	At the command prompt, change into the **zeroclickinfo-goodies** repository directory:
+	At the command prompt, change into your repository directory, for example:
 	
 	```shell
 	cd zeroclickinfo-goodies
 	```
 
-	The command line prompt should now indicate that you are in the **master** branch of the **zeroclickinfo-goodies** repository:
+	The command line prompt will now indicate the repository and branch you are in, for example:
 	
 	```shell
 	[ codio@border-carlo workspace zeroclickinfo-goodies {master}]$    
 	```
 
-2. Test your triggers interactively.
+2. Next, use the DuckPAN tool to test your triggers interactively:
 
     Type this command at the command line.
 
