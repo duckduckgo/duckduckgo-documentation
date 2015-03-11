@@ -54,8 +54,7 @@
   - [Making a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/making_a_pull_request.md)
 
 - **Advanced**
-  - [Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/location_api.md)
-  - [Language API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/language_api.md)
+  - [Language & Location APIs](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/advanced/language_and_location_apis.md)
 
 - **Resources**
   - [Other Development Environments](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/other_development_environments.md)
