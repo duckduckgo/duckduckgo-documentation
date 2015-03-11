@@ -1,95 +1,132 @@
 # Setting Up Your Development Environment
 
-In order to get moving with Instant Answer development, you'll need to setup your environment. At the very minimum, you will need a GitHub account and the DuckDuckHack developer tool, DuckPAN, to make and submit an Instant Answer. This guide will help you determine the best setup for you.
+To develop an Instant Answer, you need a GitHub account and the DuckDuckHack developer tool, DuckPAN. We also recommend using the Codio web IDE. We'll go through the steps to get your development environment set up below, but **before you start**:
+ - Have you been in touch about your Instant Answer idea and heard back about it?
+  - *If not, email [open@duckduckgo.com](mailto:open@duckduckgo.com) or post in the [forum](https://duck.co/ideas) before you continue.*
+ - Have you figured out what type of Instant Answer you're making?
+  - *If not, use the [flowchart](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/getting-started/determine_your_instant_answer_type.md) to do that before you continue.*
 
-Before moving forward, you **must** know which Instant Answer type you will be using. After this section, the documentation will be specific to each Instant Answer type.
+Once you've had feedback confirming your new Instant Answer is good to go - and you know which type you're creating (**Goodie**, **Spice**, **Fathead** or **Longtail**), read on to get yourself set-up for developing it!
 
-## Before you start...
+## Development Options
 
-We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
+We strongly recommend that you use Codio, a web-based IDE that greatly simplifies the set-up and development process. If you prefer using a local text editor, that's cool, but it's still worth using Codio as the software you'll need is already installed and ready to go. 
 
-**Note:** You can also [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) *if you're using Mac OS/Ubuntu*, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. If you're a **Windows** user, you'll need to use Codio, or the virtual machine. Local development is not possible. Sorry.
+You can [develop and test locally](https://github.com/duckduckgo/p5-app-duckpan#installing-duckpan-locally) ***if you're using Mac OS/Ubuntu***, or install a [pre-configured virtual machine](https://github.com/duckduckgo/p5-app-duckpan#vagrant-virtual-environment), but these options do require more time and effort. If you're a ***Windows*** user, you'll need to use Codio, or the virtual machine - local development is unfortunately not possible.
 
-## Sign up for a GitHub Account
+## 1. Sign up for GitHub
 
-*Already have a GitHub Account? Perfect, move on to [the next step](#sign-up-for-a-codio-account)!*
+*Already have a GitHub account? Perfect, move on to [the next step](#2-sign-up-for-codio)!*
 
-If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
+GitHub is a hugely popular platform for collaborative software projects. Many individuals and companies store their code in public GitHub repositories, particularly for open source projects. This allows anyone to potentially make a contribution to these projects - and lets you see how functionality has been implemented, making it a great learning resource.
 
-1. Go to https://github.com/join and enter the required information, then click "**Create an Account**"
-2. Click "**Finish Signup**" to continue with a **Free** GitHub account.
+To sign up for Github: 
 
-**Congrats!** You now have a GitHub account.
+ - Go to https://github.com/join - enter a username, email and password, then click **Create an account**.
+ - Select a **Free** account and click **Finish Signup**.
 
+You're now on GitHub!
 
-## Sign up for a Codio Account
+Your GitHub account will allow you to create your Instant Answer by cloning the existing code, making your additions on your copy, then making a request to have your changes merged into the main repository - after which they'll go live on DuckDuckGo! Each type of Instant Answer has its own repository, as you'll see below.
 
-Next, you'll need to get an account for Codio:
+## 2. Sign up for Codio
 
-*Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
+*Already have a Codio Account? Perfect, move on to [the next step](#3-fork-the-duckduckhack-project-on-codio)!*
 
-1. Go to https://codio.com and click "**Sign Up**", at the top right corner.
-2. Click "**Sign Up via GitHub**".
-3. Enter your GitHub login details and then click"**Sign In**".
-4. Click "**Authorize Application**" to continue.
-5. In the new screen, enter the required details and click "**Create Account**".
+To sign up for Codio:
 
-**Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
+ - Go to https://codio.com and click **Sign Up**, at the top right corner.
+ - Click **Sign Up via GitHub**.
+ - Enter your GitHub login details, then click **Sign In**.
+ - Click **Authorize Application** to continue.
+ - In the new screen, enter the required details and click **Create Account**.
 
+You're now on Codio!
 
-## Fork the DuckDuckHack Project on Codio
+*You didn't need to provide a password because you've logged into Codio using your GitHub account - one less password to remember!*
 
-1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
-2. In the drop-down, select the "**Fork**" option.
+Your Codio account will allow you to work on your cloned copy of the GitHub repo in an environment that's set-up for developing Instant Answers, with development and testing utilities all provided in the browser. You'll be able to write your code, see it running and test it all within the same environment.
 
-    ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork.png&f=1)
+## 3. Fork the DuckDuckHack Project on Codio
 
-3. In the pop-up window, select "**Clone both the Project and its Box**".
+Now you need the DuckDuckHack project added to your Codio account - this provides the tools you'll need to develop any of the Instant Answer types.
 
-    ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork_both.png&f=1)
+Go to https://codio.com/duckduckgo/duckduckhack - select the **Project** menu and choose **Fork**:
 
-4. Wait a minute while the project forks...
-5. You should now see a new window with three panes. It should say "**DuckDuckHack**" at the top of the left pane.
+![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fduck_fork.png&f=1)
 
-**Congrats!** You've now successfully forked the DuckDuckHack environment. Now, let's grab the DuckDuckHack Goodie code (from GitHub.com) and start learning!
+In the pop-up window, select **Box & Project**, then click **Continue**:
 
+![Fork Box Project](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fbox_project.png&f=1)
+    
+![Project Forked](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fforked.png&f=1)
 
-## Fork the correct DuckDuckHack repository on GitHub
+Wait a minute while the project forks...
 
-In order to test out and create your own Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
+You should now see **DuckDuckHack** at the top of the left pane in the window:
 
-By now you should have [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) you're going to build.
+![Project Open](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fddh_open.png&f=1)
 
-1. Go to the Instant Answer repository homepage:
-    - [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
-    - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
-    - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
-    - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
-2. Do you see your username in the top right corner?
-    - **Yes**? Perfect. Move on to the next step.
-    - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
-3. Click "**Fork**", near the top-right corner.
-4. Wait while the repo forks...
-5. You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should look like **`https://github.com/yourGitHubUsername/zeroclickinfo-xxxxx`**. This is the URL for your personal copy of the DuckDuckHack code.
-6. **Keep this URL handy, we'll be using it in a minute!**
+You've now successfully forked the DuckDuckHack environment and are ready to clone the GitHub repo for your Instant Answer type - then you can get developing!
 
+## 4. Fork the DuckDuckHack GitHub repository for your Instant Answer type
 
-## Clone your Repository onto your Codio Machine
+To create and test your own Instant Answer you'll need the code that DuckDuckGo hosts on GitHub. We have a repo for each Instant Answer type - next you'll "fork" that code, creating your own personal copy to work on. When you're done you'll open a "Pull Request", asking for your new code to be merged into the main repo. *Normally this will involve a bit of back and forth between yourself and others in the DuckDuckGo community, as well as staff - we're a friendly crowd and will be excited to help you get your Instant Answer ready for merging!*
 
-Now we need to "clone" the code from GitHub to your Codio box so you can see it, modify it and run it!
+You should have already [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) you're going to build.
 
-1. Go to the [Codio projects page](https://codio.com/home/projects).
-    - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign-up-for-a-codio-account)).
-2. Click the "**DuckDuckHack**" project.
-3. You should now see the three-pane window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
-4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
-5. Type **`git clone <Your GitHub URL Here>.git`** into the Terminal, replacing `<Your GitHub URL Here>` accordingly. It should look something like this for a Goodie:
+### Step 1
+
+Go to the Instant Answer repo for the correct type:
+ - [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
+ - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
+ - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
+ - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
+
+### Step 2
+
+Do you see your username in the top right corner?
+ - Yes? Perfect. Move on to the next step.
+ - No? **Sign In** to GitHub to continue.
+
+### Step 3
+
+On the repo homepage, click **Fork**, near the top-right corner.
+
+Wait while the repo forks...
+
+You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should have your username in it (`https://github.com/YourUsername/zeroclickinfo-xxxxx`). This is the URL for your personal copy of the DuckDuckHack code. You can make changes on your forked copy without worrying about making mistakes or messing anything up, so relax and have fun with it!
+
+**Keep the URL for your forked repo handy (or just keep it open in a browser tab), you'll be using it in a minute.**
+
+## 5. Clone your Forked Repository onto your Codio Machine
+
+Now you need to clone the code from your GitHub fork to your Codio box so that you can work on it and test it out.
+
+### Step 1
+
+Go to the [Codio projects page](https://codio.com/home/projects) (if you don't already have it open).
+ - See a **Sign In** pop-up? Use the **Sign in via GitHub** method like you did before.
+
+Select the **DuckDuckHack** project:
+
+![Projects Home](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fproject_home.png&f=1)
+
+### Step 2
+
+You should now see the DuckDuckHack project as you did earlier. You can alter the layout using **Ctrl+Alt+R** (*Cmd+Alt+R on a Mac*) or the **View &gt; Layouts &gt; Default** menu options. *The pane on the left allows you to explore the project structure - in the pane on the right, you'll write your code and commands into the files and terminals you open.*
+
+### Step 3
+
+Press **Shift+Alt+T** or choose **Tools &gt; Terminal** to open a new Terminal. You should see the pane on the right change into a black command prompt. 
+
+Type **`git clone <Your-GitHub-URL-Here>.git`** into the Terminal, inserting the URL for your forked GitHub repo. It should look something like this for a Goodie:
 
     ```
     [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
     ```
 
-6. Press "**Enter**". You should see the Terminal print out some text that looks like this:
+Press **Enter**. You should see the Terminal print out some text that looks like this:
 
     ```
     [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
@@ -103,39 +140,15 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$
     ```
 
-7. The file tree on the left side should update. There should be a new "**zeroclickinfo-xxxxx**" directory, where "**xxxxx**" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
+The file tree on the left should update to include a folder for the copied repo. There should be a new **zeroclickinfo-goodie**, **zeroclickinfo-spice**, **zeroclickinfo-fathead** or **zeroclickinfo-longtail** directory.
 
-**Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. You're now prepared to code you first Instant Answer!
+You've now cloned the DuckDuckHack code for an Instant Answer onto your Codio machine and are ready to get stuck in!
 
-## Give Us a Heads Up
-
-We know you're eager to get started, and we're super excited to see your awesome Instant Answer creations! Before you start coding up a storm though, **[please send us an email](mailto:open@duckduckgo.com)** to let us know that you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved. Some reasons why your Instant Answer might not get approved include:
-
- - the Instant Answer already exists
- - the source isn't usable (e.g. paid API, low rate limit, no JSON support)
- - the idea needs more thought or planning
-
-Here's an example email to help you out:
-
-```text
-To: open@duckduckgo.com
-Subject: Instant Answer Approvals
-
-I'd like to make an Instant Answer for <topic/subject>!
-This is the data source: <link, description, Perl module, etc.>.
-This is the related Duck.co idea: <url, if applicable>.
-This is my Github username: <username>.
-
-Thanks!
-
-PS: DuckDuckGo is awesome!
-```
-
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (i.e. a duck.co idea that has been approved by DDG staff).
+**To reiterate, make sure you don't waste your own time by starting work on an Instant Answer you haven't been in touch with staff/ the community about. Give us a shout to discuss your idea by [email](mailto:open@duckduckgo.com) or in the [forum](https://duck.co/ideas). Each Instant Answer is the product of collaboration, so keep in touch throughout the development process and we'll help you to make your Instant Answer as awesome as possible and ready to go as easily as possible!**
 
 ## Start Coding!
 
-At this point, you're ready to start learning about the Instant Answer type you'll be using.
+You've now created your own copy of the Instant Answer repo you want to add to, cloned it into your Codio account and set-up the DuckDuckHack development tools. You're now ready to start learning about the type of Instant Answer you're creating:
 
 - For **Goodies**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_overview.md)
 
@@ -144,3 +157,5 @@ At this point, you're ready to start learning about the Instant Answer type you'
 - For **Fathead**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/fathead/fathead_overview.md)
 
 - For **Longtail**, [start here](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
+
+It's also a great idea to explore the code for existing Instant Answers on GitHub, before you start and also while you're coding. If you come up against a task you're unsure how to approach, you will likely find that another Instant Answer already does something similar.
