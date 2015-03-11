@@ -136,16 +136,11 @@
 
 	"test_files.md": {
 		"prev": ["testing_html.md"],
-		"next": ["advanced_testing.md"]
-	},
-
-	"advanced_testing.md": {
-		"prev": ["test_files.md"],
 		"next": ["testing_location_api.md"]
 	},
 
 	"testing_location_api.md": {
-		"prev": ["advanced_testing.md"],
+		"prev": ["test_files.md"],
 		"next": ["testing_language_api.md"]
 	},
 

@@ -43,7 +43,6 @@
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
   - [Display (HTML/testing/.md)](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_html.md)
   - [Test Files](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/test_files.md)
-  - [Advanced](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/advanced_testing.md)
   - [Testing with the Location API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_api.md)
   - [Testing with the Language API](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_language_api.md)
 
