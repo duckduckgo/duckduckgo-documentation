@@ -171,16 +171,11 @@
 
 	"making_a_pull_request.md": {
 		"prev": ["metadata.md"],
-		"next": ["location_api.md"]
+		"next": ["language_and_location_apis.md"]
 	},
 
-	"location_api.md": {
+	"language_and_location_apis.md": {
 		"prev": [],
-		"next": ["language_api.md"]
-	},
-
-	"language_api.md": {
-		"prev": ["location_api.md"],
 		"next": []
 	},
 
