@@ -2,29 +2,29 @@
 
 Spice specific Handlebars helpers:
 
-- [concat](https://duck.co/duckduckhack/spice_handlebars_helpers/#concat): Concatenates all the elements in a collection
+- [concat](#concat): Concatenates all the elements in a collection
 
-- [condense](https://duck.co/duckduckhack/spice_handlebars_helpers/#condense): Shortens a string
+- [condense](#condense): Shortens a string
 
-- [stripHTML](https://duck.co/duckduckhack/spice_handlebars_helpers/#stripHTML): Strips HTML tags/elements from text
+- [stripHTML](#striphtml): Strips HTML tags/elements from text
 
-- [loop](https://duck.co/duckduckhack/spice_handlebars_helpers/#loop): Counts from zero to the value of `context`
+- [loop](#loop): Counts from zero to the value of `context`
 
-- [each](https://duck.co/duckduckhack/spice_handlebars_helpers/#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
+- [each](#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
 
-- [keys](https://duck.co/duckduckhack/spice_handlebars_helpers/#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
+- [keys](#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
 
-- [include](https://duck.co/duckduckhack/spice_handlebars_helpers/#include): Loads the specified Handlebars template and applies it with the current context
+- [include](#include): Loads the specified Handlebars template and applies it with the current context
 
-- [plural](https://duck.co/duckduckhack/spice_handlebars_helpers/#plural): Returns the value of `context` and appends the singular or plural form of the specified word
+- [plural](#plural): Returns the value of `context` and appends the singular or plural form of the specified word
 
-- [numFormat](https://duck.co/duckduckhack/spice_handlebars_helpers/#numFormat): Delimits a number or string with multiple numbers, using commas or given delimiter
+- [numFormat](#numformat): Delimits a number or string with multiple numbers, using commas or given delimiter
 
-- [imageProxy](https://duck.co/duckduckhack/spice_handlebars_helpers/#imageProxy): Rewrite a URL as a DuckDuckGo image redirect
+- [imageProxy](#imageproxy): Rewrite a URL as a DuckDuckGo image redirect
 
-- [ellipsis](https://duck.co/duckduckhack/spice_handlebars_helpers/#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
+- [ellipsis](#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
 
-- [trim](https://duck.co/duckduckhack/spice_handlebars_helpers/#trim): Removes leading and trailing spaces from text 
+- [trim](#trim): Removes leading and trailing spaces from text 
 
 For the built-in helpers included with Handlebars see: [Handlebars Helpers](http://handlebarsjs.com/#helpers)
 
