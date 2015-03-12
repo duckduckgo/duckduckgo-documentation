@@ -32,9 +32,10 @@ Instant Answers come in all varieties but we encourage everyone to work on an In
 ### Forming your Idea
 
 Think of the searches you do most often:
-	What has always frustrated you about the results? 
-	What do you wish "just worked?"
-	Is there a website or source of data that would help answer most/all of those searches? 
+
+- What has always frustrated you about the results? 
+- What do you wish "just worked?"
+- Is there a website or source of data that would help answer most/all of those searches? 
 
 A great example is the [CourseBuffet Instant Answer](https://duck.co/ia/view/coursebuffet). Rubydubee (the contributor) created an Instant Answer powered by CourseBuffet's API make searching for online courses easier: https://duckduckgo.com/?q=computer+science+online+course&ia=onlinecourses 
 
