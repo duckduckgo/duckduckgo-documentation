@@ -26,21 +26,11 @@
 
 	"goodie_basic_tutorial.md": {
 		"prev": ["goodie_quickstart.md"],
-		"next": ["goodie_testing_triggers.md"]
-	},
-
-	"goodie_testing_triggers.md": {
-		"prev": ["goodie_basic_tutorial.md"],
-		"next": ["goodie_tests.md"]
-	},
-
-	"goodie_tests.md": {
-		"prev": ["goodie_testing_triggers.md"],
 		"next": ["goodie_triggers.md"]
 	},
 
 	"goodie_triggers.md": {
-		"prev": ["goodie_tests.md"],
+		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_advanced_handle_functions.md"]
 	},
 
@@ -61,21 +51,11 @@
 
 	"spice_basic_tutorial.md": {
 		"prev": ["spice_overview.md"],
-		"next": ["spice_testing_triggers.md"]
-	},
-
-	"spice_testing_triggers.md": {
-		"prev": ["spice_basic_tutorial.md"],
-		"next": ["spice_tests.md"]
-	},
-
-	"spice_tests.md": {
-		"prev": ["spice_testing_triggers.md"],
 		"next": ["spice_triggers.md"]
 	},
 
 	"spice_triggers.md": {
-		"prev": ["spice_tests.md"],
+		"prev": ["spice_basic_tutorial.md"],
 		"next": ["spice_templates_overview.md"]
 	},
 
@@ -144,13 +124,8 @@
 		"next": ["faq.md#longtail"]
 	},
 
-	"installing_duckpan.md": {
-		"prev": [],
-		"next": ["testing_triggers.md"]
-	},
-
 	"testing_triggers.md": {
-		"prev": ["installing_duckpan.md"],
+		"prev": [],
 		"next": ["testing_html.md"]
 	},
 
@@ -161,21 +136,11 @@
 
 	"test_files.md": {
 		"prev": ["testing_html.md"],
-		"next": ["advanced_testing.md"]
+		"next": ["testing_location_language_apis.md"]
 	},
 
-	"advanced_testing.md": {
+	"testing_location_language_apis.md": {
 		"prev": ["test_files.md"],
-		"next": ["testing_location_api.md"]
-	},
-
-	"testing_location_api.md": {
-		"prev": ["advanced_testing.md"],
-		"next": ["testing_language_api.md"]
-	},
-
-	"testing_language_api.md": {
-		"prev": ["testing_location_api.md"],
 		"next": []
 	},
 
@@ -201,21 +166,21 @@
 
 	"making_a_pull_request.md": {
 		"prev": ["metadata.md"],
-		"next": ["location_api.md"]
+		"next": ["language_and_location_apis.md"]
 	},
 
-	"location_api.md": {
+	"language_and_location_apis.md": {
 		"prev": [],
-		"next": ["language_api.md"]
-	},
-
-	"language_api.md": {
-		"prev": ["location_api.md"],
 		"next": []
 	},
 
-	"common_pitfalls.md": {
+	"other_development_environments.md": {
 		"prev": [],
+		"next": ["common_pitfalls.md"]
+	},
+
+	"common_pitfalls.md": {
+		"prev": ["other_development_environments.md"],
 		"next": ["how_to_qa.md"]
 	},
 

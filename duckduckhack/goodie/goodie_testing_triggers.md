@@ -1,1 +1,0 @@
-../testing/testing_triggers.md
