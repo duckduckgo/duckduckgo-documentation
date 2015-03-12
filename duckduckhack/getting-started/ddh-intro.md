@@ -19,7 +19,7 @@ Improve Current Instant Answers.
 *Fix issues in our [zeroclickinfo repositories](https://github.com/duckduckgo)*  
 
 Code review and help  
-*Help with pull requests in our [zeroclickinfo repositories](https://github.com/duckduckgo))*  
+*Help with pull requests in our [zeroclickinfo repositories](https://github.com/duckduckgo)*  
 
 Discuss Instant Answers.  
 *Help others with their [ideas](https://duck.co/ideas)*  
@@ -47,45 +47,77 @@ In both of these examples, users will more easily find what they're looking for 
 The DuckDuckGo audience is diverse in age and location. Because of our audience and some restrictions with licensing, there are a few types of Instant Answers we cannot accept at this time (though, it's always best to ask if you're not sure). Currently, the list of restricted Instant Answers includes: 
 
 
-**Content prohibited**  
--Adult content  
--Torrent search  
+**Content prohibited**
+- Adult content
+- Torrent search
 
-**Licensing/partnership prohibited**    
--App or app market search  
-*provided by Quixey*  
--Currency and currency conversions  
-*provided by XE*  
--Definitions  
-*provided by Wordnik*  
--Local/business information  
-*provided by Yelp*  
--Map data  
-*provided by Mapbox, Mapquest, and OpenStreetMaps*  
--Movie ratings  
-*provided by Rotten Tomatoes*  
--Nutrition information  
-*provided by Nutritionix*  
--Recipes  
-*provided by Yummly*  
--Sports data  
-*provided by SportsData*   
--Streaming services or search  
-*provided by GoWatchIt*  
--Time information  
-*provided by TimeandDate*   
--Quotes
-*provided by BrainyQuote*  
--Weather  
-*provided by Forecast.io*   
--YouTube video search  
-*provided by YouTube*  
+**Licensing/partnership prohibited**
+- App or app market search
 
-**Maintained by staff**  
--Image search  
--News  
--Products  
--Wikipedia  
+    *provided by Quixey*
+
+- Currency and currency conversions
+
+    *provided by XE*
+
+- Definitions
+
+    *provided by Wordnik*
+
+- Local/business information
+
+    *provided by Yelp*
+    
+- Lyrics
+
+    *provided by MetroLyrics*
+
+- Map data
+
+    *provided by Mapbox, Mapquest, and OpenStreetMaps*
+
+- Movie ratings
+
+    *provided by Rotten Tomatoes*
+
+- Nutrition information
+
+    *provided by Nutritionix*
+
+- Recipes
+
+    *provided by Yummly*
+
+- Sports data
+
+    *provided by SportsData*
+
+- Streaming services or search
+
+    *provided by GoWatchIt*
+
+- Time information
+
+    *provided by TimeandDate*
+
+- Quotes
+
+    *provided by BrainyQuote*
+
+- Weather
+
+    *provided by Forecast.io*
+
+- YouTube video search
+
+    *provided by YouTube*
+
+
+**Maintained by staff**
+- Image search
+- News
+- Products
+- Wikipedia
 
 It's also best to check that your idea doesn't already exist. You can do that by looking through the Instant Answer index: https://duck.co/ia  Of course, feel free to fix or improve a current Instant Answer instead of building one from scratch! 
 
