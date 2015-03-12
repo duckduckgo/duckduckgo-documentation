@@ -52,66 +52,20 @@ The DuckDuckGo audience is diverse in age and location. Because of our audience 
 - Torrent search
 
 **Licensing/partnership prohibited**
-- App or app market search
-
-    *provided by Quixey*
-
-- Currency and currency conversions
-
-    *provided by XE*
-
-- Definitions
-
-    *provided by Wordnik*
-
-- Local/business information
-
-    *provided by Yelp*
-    
-- Lyrics
-
-    *provided by MetroLyrics*
-
-- Map data
-
-    *provided by Mapbox, Mapquest, and OpenStreetMaps*
-
-- Movie ratings
-
-    *provided by Rotten Tomatoes*
-
-- Nutrition information
-
-    *provided by Nutritionix*
-
-- Recipes
-
-    *provided by Yummly*
-
-- Sports data
-
-    *provided by SportsData*
-
-- Streaming services or search
-
-    *provided by GoWatchIt*
-
-- Time information
-
-    *provided by TimeandDate*
-
-- Quotes
-
-    *provided by BrainyQuote*
-
-- Weather
-
-    *provided by Forecast.io*
-
-- YouTube video search
-
-    *provided by YouTube*
-
+- App or app market search (*provided by Quixey*)
+- Currency and currency conversions (*provided by XE*)
+- Definitions (*provided by Wordnik*)
+- Local/business information (*provided by Yelp*)
+- Map data (*provided by Mapbox, Mapquest, and OpenStreetMaps*)
+- Movie ratings (*provided by Rotten Tomatoes*)
+- Nutrition information (*provided by Nutritionix*)
+- Recipes (*provided by Yummly*)
+- Sports data (*provided by SportsData*)
+- Streaming services or search (*provided by GoWatchIt*)
+- Time information (*provided by TimeandDate*)
+- Quotes (*provided by BrainyQuote*)
+- Weather (*provided by Forecast.io*)
+- YouTube video search (*provided by YouTube*)
 
 **Maintained by staff**
 - Image search
