@@ -19,7 +19,7 @@ Improve Current Instant Answers.
 *Fix issues in our [zeroclickinfo repositories](https://github.com/duckduckgo)*  
 
 Code review and help  
-*Help with pull requests in our [zeroclickinfo repositories](https://github.com/duckduckgo))*  
+*Help with pull requests in our [zeroclickinfo repositories](https://github.com/duckduckgo)*  
 
 Discuss Instant Answers.  
 *Help others with their [ideas](https://duck.co/ideas)*  
@@ -67,6 +67,10 @@ The DuckDuckGo audience is diverse in age and location. Because of our audience 
 - Local/business information
 
     *provided by Yelp*
+    
+- Lyrics
+
+    *provided by MetroLyrics*
 
 - Map data
 
