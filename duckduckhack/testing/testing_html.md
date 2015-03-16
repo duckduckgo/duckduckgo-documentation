@@ -26,13 +26,13 @@ You should have already tested your triggers by following the [Testing triggers]
 
 2. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
-	    ```
-	    Starting up webserver...
+    ```shell
+    Starting up webserver...
 
-	    You can stop the webserver with Ctrl-C
+    You can stop the webserver with Ctrl-C
 
-	    HTTP::Server::PSGI: Accepting connections at http://0:5000/
-	    ```
+    HTTP::Server::PSGI: Accepting connections at http://0:5000/
+    ```
 
 3. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage.	
 	
