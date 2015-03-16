@@ -4,40 +4,31 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
 ## Interactive Testing
 
-Before reading this section, make sure you've worked through the the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
-<!-- /summary -->
+Interactive command-line testing is available using DuckPAN for **Goodie** and **Spice** instant answer types.
 
-1. Install our DuckDuckHack testing utility, called [DuckPAN](https://github.com/duckduckgo/p5-app-duckpan).
+This section assumes you've set up your development environment and worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 
-    - Option A. &mdash; Install via this script:
+1. Enter the root directory of your forked Instant Answer repository:
 
-        ```shell
-        curl http://duckpan.org/install.pl | perl
-        ```
+	Log in to Codio and visit the dashboard. In the menu, click Codio > [Dashboard](https://codio.com/home/projects)
+	
+	Click on the **DuckDuckHack project**, which you previously forked and cloned.
+	
+	Next, open a terminal window if it's not already open. (Tools > Terminal).
+	
+	At the command prompt, change into your repository directory, for example:
+	
+	```shell
+	cd zeroclickinfo-goodies
+	```
 
-    - Option B. &mdash; Use our [DuckDuckHack Virtual Machine](https://github.com/duckduckgo/p5-app-duckpan#duckduckhack-development-virtual-machine) which comes with DuckPAN installed
+	The command line prompt will now indicate the repository and branch you are in, for example:
+	
+	```shell
+	[ codio@border-carlo workspace zeroclickinfo-goodies {master}]$    
+	```
 
-    More detailed instructions can be found in the [DuckPAN README](https://github.com/duckduckgo/p5-app-duckpan/blob/master/README.md).
-
-2. Go to your fork of the repository (a directory or folder on your computer).
-
-    ```shell
-    cd zeroclickinfo-goodies/
-    ```
-
-3. Install the repository requirements using duckpan.
-
-    ```shell
-    duckpan installdeps
-    ```
-
-    This command will install all the Perl modules used by the DuckDuckGo Instant Answers within your local repository. These requirements are defined in the [/dist.ini file](http://blog.urth.org/2010/06/walking-through-a-real-distini.html) (at the root).
-
-4. Add your Instant Answer.
-
-    Make a new file in the **lib/DDG/Goodie/** directory for Goodies or the **lib/DDG/Spice/** directory for Spice. The name of the file is the name of the Instant Answer followed by the extension **.pm** because it is a Perl package. For example, if the name of your Instant Answer was **"test Instant Answer"**, the file would be `TestInstantAnswer.pm`.
-
-5. Test your triggers interactively.
+2. Next, use the DuckPAN tool to test your triggers interactively:
 
     Type this command at the command line.
 
@@ -45,28 +36,22 @@ Before reading this section, make sure you've worked through the the [Basic Good
     duckpan query
     ```
 
-    This command will initially output all of the Instant Answers available in your local repository. You should see your Instant Answer in this output.
+    This command will present you with an interactive prompt.
 
     ```shell
-    Using the following DDG::Goodie plugins:
+    Loading Instant Answers...
 
-     - DDG::Goodie::Xor (Words)
-     - DDG::Goodie::SigFigs (Words)
-     - DDG::Goodie::EmToPx (Words)
-     - DDG::Goodie::Length (Words)
-     - DDG::Goodie::ABC (Words)
-     - DDG::Goodie::Chars (Words)
-     ...
+    (Empty query for ending test)                                                   
+	Query:
     ```
 
-    The script will now proceed to an interactive prompt.
+	*In some environments, the `duckpan query` command may print a long list of country aliases - that's perfectly fine. The end of the output will still display the `Query:` prompt.*
 
-    ```shell
-    (Empty query for ending test)
-    Query:
-    ```
+    **Now type in any query to see the response.** 
 
-    Now type in any query to see the response.
+	Typing a query here is just like using DuckDuckGo.com, except you're only viewing the ZeroClickInfo response, and in its raw form.
+	
+	In the following example, we've entered `chars this is a test` into the prompt and received the following response:
 
     ```shell
     Query: chars this is a test

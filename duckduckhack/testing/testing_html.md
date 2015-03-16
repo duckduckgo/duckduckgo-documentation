@@ -4,31 +4,39 @@ You should have already tested your triggers by following the [Testing triggers]
 
 <!-- /summary -->
 
-1. Go to the root of your forked repository.
+1. Enter the root directory of your forked Instant Answer repository:
 
-  For example:
+	Log in to Codio and visit the dashboard. In the menu, click Codio > [Dashboard](https://codio.com/home/projects)
+	
+	Click on the **DuckDuckHack project**, which you previously forked and cloned.
+	
+	Next, open a terminal window if it's not already open. (Tools > Terminal).
+	
+	At the command prompt, change into your repository directory, for example:
+	
+	```shell
+	cd zeroclickinfo-goodies
+	```
+
+	The command line prompt will now indicate the repository and branch you are in, for example:
+	
+	```shell
+	[ codio@border-carlo workspace zeroclickinfo-goodies {master}]$
+	```
+
+2. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
     ```shell
-    cd zeroclickinfo-spice/
+    Starting up webserver...
+
+    You can stop the webserver with Ctrl-C
+
+    HTTP::Server::PSGI: Accepting connections at http://0:5000/
     ```
 
-2. Start the server.
-
-    ```shell
-    duckpan server
-    ```
-
-    This command will start up a small Web server running on port 5000.
-
-3. Visit the server in your browser.
-
-    If you are running the duckpan server on your local computer, you can navigate to:
-
-    [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-
-    Replace 127.0.0.1 with your server's IP address or Fully Qualified Domain Name if you have started the duckpan server remotely.
-
-    You should now be able to browse your duckpan server and see live results. The server runs code from our site which should make it look very much like the real DuckDuckGo.
+3. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage.	
+	
+    You should now be able to search and see live Instant Answer results. The server runs code from our site which should make it look very much like the real DuckDuckGo.
 
 4. Search.
 

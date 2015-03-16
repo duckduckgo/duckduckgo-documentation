@@ -1,123 +1,18 @@
 # My First Goodie Instant Answer!
 
-*First and foremost, we'd like you to know that we're here to help. If you have any questions or frustration during this process, email us at **open@duckduckgo.com** and we'll help you out!*
+**If you are new to DuckDuckHack, you're in the right place.** This Goodie Quick Start is meant to show you the basics of DuckDuckHack by building a simple Instant Answer that will look like [this](https://duckduckgo.com/?q=zekiel+duckduckhack&ia=answer). 
 
-This is a quick-start tutorial designed to give an overview of the Instant Answer process in a short amount of time. This tutorial assumes zero knowledge and walks you through every step required. No guesswork needed!
+If you're already familiar with how Instant Answers are built, feel free to move along to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial).
 
-To skip ahead to the regular (non-quick start) tutorial. [Click here](https://duck.co/duckduckhack/goodie_basic_tutorial).
+## Set Up Your Development Environment
 
-## Before We Get Going...
-
-Aside from a working internet connection and a computer, there are two important things you'll need to get started:
-
-- a **free** Codio account
-    + Codio provides a web-based development environment that you will be using to create and test a new Instant Answer. We're using Codio because it works across all platforms (Windows, Linux, Mac) and comes pre-configured with the necessary software for Instant Answer development.
-- a **free** GitHub account
-    + GitHub provides a place for you to save your code on the internet.
-    + When your Instant Answer is ready for us to review, you'll use GitHub to send us your code!
-
-
-## Sign up for a GitHub Account
-
-*Already have a GitHub Account? Perfect, move on to [the next step](#sign-up-for-a-codio-account)!*
-
-If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
-
-1. Go to https://github.com/join and enter the required information, then click "**Create an Account**"
-2. Click "**Finish Signup**" to continue with a **Free** GitHub account.
-
-**Congrats!** You now have a GitHub account.
-
-
-## Sign up for a Codio Account
-
-Next, you'll need to get an account for Codio:
-
-*Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
-
-1. Go to https://codio.com and click "**Sign Up**", at the top right corner.
-2. Click "**Sign Up via GitHub**".
-3. Enter your GitHub login details and then click"**Sign In**".
-4. Click "**Authorize Application**" to continue.
-5. In the new screen, enter the required details and click "**Create Account**".
-
-**Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
-
-
-## Fork the DuckDuckHack Project on Codio
-
-1. Go to https://codio.com/duckduckgo/duckduckhack and click "**Project**" at the top left corner.
-2. In the drop-down, select the "**Fork**" option.
-
-    ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork.png&f=1)
-
-3. In the pop-up window, select "**Clone both the Project and its Box**".
-
-    ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork_both.png&f=1)
-
-4. Wait a minute while the project forks...
-5. You should now see a new window with three panes. It should say "**DuckDuckHack**" at the top of the left pane.
-
-**Congrats!** You've now successfully forked the DuckDuckHack environment. Now, let's grab the DuckDuckHack Goodie code (from GitHub.com) and start learning!
-
-
-## Fork the DuckDuckHack Goodie Repository on GitHub
-
-In order to test out and create your own Goodie Instant Answer, you'll need the open-source code that DuckDuckGo hosts on GitHub.com. We're now going to "fork" that code, so you'll have your own personal copy which you can modify.
-
-1. Go to the [DuckDuckHack Goodie repository](https://github.com/duckduckgo/zeroclickinfo-goodies) (also known as a "repo").
-2. Do you see your username in the top right corner?
-    - **Yes**? Perfect. Move on to the next step.
-    - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
-3. Click "**Fork**", near the top-right corner.
-4. Wait while the repo forks...
-5. You should see a page that looks nearly identical to the Goodie repo home page. The URL should be different though, it should look like **`https://github.com/yourGitHubUsername/zeroclickinfo-goodie`**. This is the URL for your personal copy of the DuckDuckHack Goodie code.
-6. **Keep this URL handy, we'll be using it in a minute!**
-
-
-## Clone your Goodie Repository onto your Codio Machine
-
-Now we need to "clone" the code from GitHub to your Codio box so you can see it, modify it and run it!
-
-1. Go to the [Codio projects page](https://codio.com/home/projects).
-    - See a "**Sign In**" screen? Use the "**Sign in via GitHub**" method like you did before (see Step #2 [here](#sign-up-for-a-codio-account)).
-2. Click the "**DuckDuckHack**" project.
-3. You should now see the three-pane window we previously saw. Press **Ctrl+Alt+R** (Cmd+Alt+R on a Mac), this will improve the layout a bit. (You can also click *View->Layouts->Default* from the command bar at the top).
-4. Press **Shift+Alt+T** to open a new Terminal. (You can also click *Tools->Terminal* from the command bar at the top). You should see the right side pane change into a black command prompt.
-5. Type **`git clone <Your GitHub URL Here>.git`** into the Terminal, replacing `<Your GitHub URL Here>` accordingly. It should look something like this:
-
-    ```
-    [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
-    ```
-
-6. Press "**Enter**". You should see the Terminal print out some text that looks like this:
-
-    ```
-    [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
-    Cloning into 'zeroclickinfo-goodies'...
-    remote: Counting objects: 18623, done.
-    remote: Compressing objects: 100% (8083/8083), done.
-    remote: Total 18623 (delta 8084), reused 18179 (delta 7868)
-    Receiving objects: 100% (18623/18623), 5.50 MiB | 9.51 MiB/s, done.
-    Resolving deltas: 100% (8084/8084), done.
-    Checking connectivity... done.
-    [04:30 PM codio@buffalo-pixel workspace {master}]$
-    ```
-
-7. The file tree on the left side should update, there should be a new "**zeroclickinfo-goodies**" directory.
-
-**Congrats!** You've now cloned your fork of the Goodie repo onto your Codio machine. Now, let's code our first Goodie and run it!
-
-------
-
-*Curious to know what we just did?*
-
-You just used a program called **Git**, to **clone** (copy) the Git repository (a special file containing all the code) located at **`https://github.com/GitHubUsername/zeroclickinfo-goodies.git`** onto your Codio machine. Git automatically creates a new folder based on the name of the repository it's cloning and copies the code into it. In our case, Git create a folder, "zeroclickinfo-goodies", and copied all the code into there.
-
+By this point you should have already **set up your development environment** to be ready to code. If you need help with that (or anything else), please shoot us an email at: [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll jump on the chance to help!
 
 ## Creating Your First Goodie
 
-Now we're going to create our first Goodie! We'll be using the DuckPAN tool to generate some boilerplate code for us.
+In this tutorial we'll be making a super-simple Goodie by changing some template files.
+
+We'll be using the **DuckPAN tool** to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your instant answer contribution.
 
 1. Click the "**DuckPAN New Goodie**" button on the command bar. The Terminal should prompt you to enter a name for your Instant Answer.
 2. Type **`IsAwesome::GitHubUsername`** (replacing `GitHubUsername` with your actual GitHub username), then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
@@ -126,6 +21,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     [04:31 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ cd ~/workspace/zeroclickinfo-goodies/ && duckpan new
     Please enter a name for your Instant Answer: IsAwesome::GitHubUsername
     ```
+
+	*Usually you'll be typing in just a regular name like `Calculator` with no prefix, but because so many community members are creating `IsAwesome` projects, we wanted to keep them together in their own directory. Hence the `IsAwesome::` prefix.*
 
 3. DuckPAN should print some text, confirming that your first Goodie was created:
 
@@ -142,9 +39,13 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     Successfully created Goodie: IsAwesome::GitHubUsername
     ```
 
-    These two generated files only contain boilerplate code and comments. We'll have to complete the code in order to get your new Goodie working!
+	DuckPAN created two files: a code file, and a test file, each in their proper locations in the repository. That's all it takes to make a Goodie. 
 
-4. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). It should look like this:
+    Currently, these two generated files only contain boilerplate code and comments, which saves us a lot of time. Next, we'll customize the files to our liking and get your Goodie working.
+
+4. Let's start by editing your code file first. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.pm**" and press "**Enter**". This will open the file for editing in Codio's text editor. (Vim, Emacs and Nano are also available). 
+
+	It should look like this:
 
     ```perl
     package DDG::Goodie::IsAwesome::GitHubUsername;
@@ -242,7 +143,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
 ## Writing Your First Goodie Test File
 
-1. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. It should look like this:
+1. Let's edit your corresponding test file. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. 
+
+	It should look like this:
 
     ```perl
     #!/usr/bin/env perl
@@ -269,6 +172,8 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
     done_testing;
     ```
 
+	_Make sure to change **all** instances of `GitHubUsername` in the file to your user name._
+
 2. Change the **`ddg_goodie_test`** function (lines 11-20) to this:
 
     ```perl
@@ -285,6 +190,9 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     1. For the query "**duckduckhack GitHubUsername**", your Goodie returns "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!".
     2. For the query "**duckduckhack GitHubUsername is awesome**", your Goodie returns **`undef`**, meaning it won't display any result for that query.
+
+	*Can you guess what the `test_zci()` function does? ZCI stands for Zero Click Info. The `test_zci()` function verifies what is being returned specifically in the Zero Click Info section of the search page.*
+
 
 3. Switch back to your Terminal by clicking on the "**Terminal**" tab.
 4. Type **`prove -Ilib t/IsAwesome/GitHubUsername.t`** and press "**Enter**". The prompt should print the results of the test.
@@ -341,12 +249,17 @@ Now we're going to create our first Goodie! We'll be using the DuckPAN tool to g
 
     **Success!** The test passes, meaning that your Goodie will only `return` an answer when our query `start`s with the `trigger` "**duckduckhack GitHubUsername**" and has no `remainder` after that.
 
-**Congrats!** You've written and tested your first Goodie! There's so much more that Goodies can do though, checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more. You can also explore the Goodie repo by looking at the other Goodies in the `/lib/DDG/Goodie` directory. Read their **.pm** files and look at the `triggers`. You can test them all in the `duckpan server`.
+	_Still not passing? Make sure you changed **all** instances of `GitHubUsername` in the file to your user name._
 
-At this point you're done the tutorial, but we have a bonus surprise for you...
+**Congrats!** You've written and tested your first Goodie! Feels great, doesn't it?
 
+Of course, this was just a taste of all the things you can create using a Goodie. Fortunately, you're now super ready to tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
+
+Do you enjoy looking under the hood and learning by example? You'll enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
 
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
+
+This bonus section will walk you through submitting the IsAwesome Goodie you just created for review and acceptance into the *live DuckDuckGo.com codebase*. If you'd rather jump straight in and work on *your* idea, don't worry about this for now. You'll find this information in the rest of the docs as well.
 
 1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
 
@@ -387,7 +300,11 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
     ```
 
 3. Switch back to the "**Terminal**" tab.
+
 4. Type **`git add .`**, then press enter.
+
+	*This command tells the git repository to include and track changes to the two files you've created. Even though the files were physically located in the repository, we need to explicitly tell git to track them.*
+	
 5. Type **`git commit -m "Created my first Goodie"`** and press **`Enter`**. Git should print some text confirming the changes that have been committed.
 
     ```
@@ -431,4 +348,4 @@ At this point you're done the tutorial, but we have a bonus surprise for you...
 20. Click **"Create Pull Request"**.
 21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in. Once it's merged, it will be deployed to the site and should be live within a few days. **We'll be sure to let you know once it's live!**
 
-**Congrats!** You're all done. Don't forget to checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more.
+**Congrats!** You've now seen what creating an Instant Answer is like. Now, you're prepared to move on and create one of your own!

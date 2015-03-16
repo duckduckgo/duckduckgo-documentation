@@ -1,5 +1,12 @@
 ## Basic Goodie Tutorial
 
+**If you've already completed the [Quick Start](https://duck.co/duckduckhack/goodie_quickstart)**, you are well prepared for this section. Here you will learn more about all the things you can do with Goodie. While much of the steps will be familiar, we recommend starting from step one and creating a new Goodie from scratch.
+
+This tutorial will show you how to build a Goodie Instant Answer from scratch. If you've already completed the [Quick Start](https://duck.co/duckduckhack/goodie_quickstart), this tutorial is a great next step for getting more comfortable with creating Goodies.
+
+_Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump at the chance to help._
+
+## Goal
 In this tutorial, we'll be making a Goodie Instant Answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
 
 <!-- /summary -->

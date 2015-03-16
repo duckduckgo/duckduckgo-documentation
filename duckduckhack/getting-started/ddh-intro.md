@@ -87,7 +87,7 @@ Here's an example email to help you out:
 
 ```text
 To: open@duckduckgo.com
-Subject: Instant Answer Idea
+Subject: Awesome Instant Answer Idea
 
 I'd like to make an Instant Answer to help people searching for <topic/subject>!
 When someone searches for <your trigger idea>, it would be cool if they could see <your response idea>.
