@@ -1,8 +1,8 @@
 ## Language & Location APIs
 
-Some Instant Answers employ contextual data about the user's search to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) Instant Answer depends on knowing where the user is located.
+Some Instant Answers employ contextual data about the user's search to provide the most relevant results. For example, since weather conditions vary widely around the world, the [Is it snowing?](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Snow.pm) Instant Answer requires the user's approximate location.
 
-The [core DDG library](https://github.com/duckduckgo/duckduckgo) provide Goodie and Spice Instant Answers with location and language APIs to provide simple, helpful and delightful results.
+The [core DDG library](https://github.com/duckduckgo/duckduckgo) provides Goodie and Spice Instant Answers with location and language APIs to provide simple, helpful and delightful results.
 
 ## Location API
 
@@ -34,20 +34,20 @@ continent_code => NA
 metro_code     => 504
 ```
 
-When testing Instant Answers interactively with `duckpan`, the location will always point to "Phoenixville, Pennsylvania, United States":
+**Note:** When testing Instant Answers interactively with `duckpan`, the location will **always** point to "Phoenixville, Pennsylvania, United States":
 
 ```perl
-# Phoenixville, Pennsylvania, United States
 my $location = join(", ", $loc->city, $loc->region_name, $loc->country_name);
+# "Phoenixville, Pennsylvania, United States"
 ```
 
-For assistance with setting the location to be used in automated testing, please refer to the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_language_apis.md).
+For assistance with specifying the location to be used in automated testing, please refer to the [Location API testing guide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_location_language_apis.md).
 
 Naturally, once your Instant Answer is live, `$loc` will refer to the appropriate location.
 
 ## Language API
 
-The [core DDG library](https://github.com/duckduckgo/duckduckgo) exposes a Language API which Goodie and Spice Instant Answers can access in their `handle` functions. The location data is contained in the `$lang` variable.
+The [core DDG library](https://github.com/duckduckgo/duckduckgo) exposes a Language API which Goodie and Spice Instant Answers can access in their `handle` functions. The language data is contained in the `$lang` variable.
 
 <!-- /summary -->
 
