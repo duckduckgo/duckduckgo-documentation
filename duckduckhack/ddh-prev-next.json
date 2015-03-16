@@ -145,13 +145,13 @@
 	},
 
 	"preparing_for_a_pull_request.md" : {
-		"prev" : ["testing_language_api.md"],
+		"prev" : ["testing_location_language_apis.md"],
 		"next" : ["review_process.md"]
 	},
 
-    	"review_process.md": {
-	    	"prev": ["preparing_for_a_pull_request.md"],
-	    	"next": ["developer_checklist.md"]
+	"review_process.md": {
+    	"prev": ["preparing_for_a_pull_request.md"],
+    	"next": ["developer_checklist.md"]
 	},
 
 	"developer_checklist.md" : {
