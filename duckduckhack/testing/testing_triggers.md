@@ -8,7 +8,7 @@ Interactive command-line testing is available using DuckPAN for **Goodie** and *
 
 This section assumes you've set up your development environment and worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 
-1. Enter the root directory of your checked-out Instant Answer repository:
+1. Enter the root directory of your forked Instant Answer repository:
 
 	Log in to Codio and visit the dashboard. In the menu, click Codio > [Dashboard](https://codio.com/home/projects)
 	
