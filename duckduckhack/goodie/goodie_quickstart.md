@@ -348,4 +348,4 @@ This bonus section will walk you through submitting the IsAwesome Goodie you jus
 20. Click **"Create Pull Request"**.
 21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in. Once it's merged, it will be deployed to the site and should be live within a few days. **We'll be sure to let you know once it's live!**
 
-**Congrats!** You're all done. Don't forget to checkout our [other tutorials](https://duck.co/duckduckhack/ddh-intro) to learn more.
+**Congrats!** You've now seen what creating an Instant Answer is like. Now, you're prepared to move on and create one of your own!
