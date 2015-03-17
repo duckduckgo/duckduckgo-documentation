@@ -40,8 +40,8 @@
 	},
 
 	"goodie_helpers.md": {
-		"prev": ["goodie_triggers.md"],
-		"next": ["faq.md#goodie"]
+		"prev": ["goodie_advanced_handle_functions.md"],
+		"next": ["testing_triggers.md"]
 	},
 
 	"spice_overview.md": {
@@ -56,7 +56,7 @@
 
 	"spice_triggers.md": {
 		"prev": ["spice_basic_tutorial.md"],
-		"next": ["spice_templates_overview.md"]
+		"next": ["spice_displaying.md"]
 	},
 
 	"spice_displaying.md": {
@@ -101,7 +101,7 @@
 
 	"spice_attributes.md": {
 		"prev": ["spice_perl_api.md"],
-		"next": ["faq.md#spice"]
+		"next": ["testing_triggers.md"]
 	},
 
 	"fathead_overview.md": {
@@ -111,7 +111,7 @@
 
 	"fathead_basic_tutorial.md": {
 		"prev": ["fathead_overview.md"],
-		"next": ["faq.md#fathead"]
+		"next": ["testing_triggers.md"]
 	},
 
 	"longtail_overview.md": {
@@ -121,11 +121,11 @@
 
 	"longtail_basic_tutorial.md": {
 		"prev": ["longtail_overview.md"],
-		"next": ["faq.md#longtail"]
+		"next": ["testing_triggers.md"]
 	},
 
 	"testing_triggers.md": {
-		"prev": [],
+		"prev": ["determine_your_instant_answer_type.md"],
 		"next": ["testing_html.md"]
 	},
 
@@ -141,7 +141,7 @@
 
 	"testing_location_language_apis.md": {
 		"prev": ["test_files.md"],
-		"next": []
+		"next": ["preparing_for_a_pull_request.md"]
 	},
 
 	"preparing_for_a_pull_request.md" : {
@@ -150,8 +150,8 @@
 	},
 
 	"review_process.md": {
-    	"prev": ["preparing_for_a_pull_request.md"],
-    	"next": ["developer_checklist.md"]
+    		"prev": ["preparing_for_a_pull_request.md"],
+    		"next": ["developer_checklist.md"]
 	},
 
 	"developer_checklist.md" : {
@@ -171,7 +171,7 @@
 
 	"language_and_location_apis.md": {
 		"prev": [],
-		"next": []
+		"next": ["testing_location_language_apis.md"]
 	},
 
 	"other_development_environments.md": {
@@ -226,6 +226,6 @@
 
 	"code_styleguide.md": {
 		"prev": ["longtail_styleguide.md"],
-		"next": []
+		"next": ["preparing_for_a_pull_request.md"]
 	}
 }
