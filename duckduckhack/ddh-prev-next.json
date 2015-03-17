@@ -146,27 +146,22 @@
 
 	"preparing_for_a_pull_request.md" : {
 		"prev" : ["testing_location_language_apis.md"],
-		"next" : ["review_process.md"]
-	},
-
-	"review_process.md": {
-    		"prev": ["preparing_for_a_pull_request.md"],
-    		"next": ["developer_checklist.md"]
-	},
-
-	"developer_checklist.md" : {
-		"prev" : ["review_process.md"],
 		"next" : ["metadata.md"]
 	},
 
 	"metadata.md": {
-		"prev": ["developer_checklist.md"],
-		"next": ["making_a_pull_request.md"]
+		"prev": ["preparing_for_a_pull_request.mdd"],
+		"next": ["developer_checklist.md"]
 	},
 
-	"making_a_pull_request.md": {
-		"prev": ["metadata.md"],
-		"next": ["language_and_location_apis.md"]
+	"developer_checklist.md" : {
+		"prev" : ["metadata.md"],
+		"next" : ["submission_and_review.md"]
+	},
+
+	"submission_and_review.md": {
+    		"prev": ["developer_checklist.md"],
+    		"next": []
 	},
 
 	"language_and_location_apis.md": {
