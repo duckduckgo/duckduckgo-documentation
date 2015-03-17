@@ -30,6 +30,8 @@ return "Text output",
 };
 ```
 
+While `input` can be a list of items, auto-templating will only work if it has less than 3 items.
+
 Realistic examples are scattered through the Goodie Repository:
 
  - [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm#L153-L161)
