@@ -150,7 +150,7 @@
 	},
 
 	"metadata.md": {
-		"prev": ["preparing_for_a_pull_request.mdd"],
+		"prev": ["preparing_for_a_pull_request.md"],
 		"next": ["developer_checklist.md"]
 	},
 
