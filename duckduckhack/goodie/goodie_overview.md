@@ -14,4 +14,4 @@ If you're new to DuckDuckHack or Perl, writing a simple Goodie Instant Answer is
 - Goodies should return an answer in **less than 10ms**. Execution times between 10-50ms require review by the community. Goodies which run longer than 50ms will not be accepted.
 - Goodies should use **less than 1MB** in memory. Memory usage greater than 1MB will require review by the community.
 
-Most Goodies shouldn't have a problem, but if you think your idea might run into these constraints, we're happy to help you think through it - just email us at [open@duckduckgo.com](mailto:open@duckduckgo.com).
+Most Goodies shouldn't have a problem, but if you think your idea might run into these constraints, we're happy to help you think through it. Feel free to email us at [open@duckduckgo.com](mailto:open@duckduckgo.com).
