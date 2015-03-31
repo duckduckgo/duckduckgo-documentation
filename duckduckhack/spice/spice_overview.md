@@ -2,7 +2,14 @@
 
 Spice Instant Answers are triggered by a backend Perl component that then calls the JSON API of an upstream service. The API response is wrapped in a JavaScript function call. You, the Instant Answer author, define this callback function and handle the API's response on the client side, generating the display from the data returned by the API.
 
-**Note:** Spice Instant Answers *must* use JSON or JSONP API's. We do not support the use of XML (it's coming soon though!), HTML or Plain text responses.
+## Important Spice Criteria
+
+- APIs called by Spice Instant Answers **must use the JSON or JSONP formats**. We do not support the use of XML (it's coming soon though!), HTML, or plain text responses.
+- APIs used should be **reliable**. Pick sources that will be most likely be around and accurate for the foreseeable future.
+- APIs used should represent the **most credible source** for the information. This means it should draw upon the preferred data source of the relevant community.
+- APIs should respond to requests in **less than one second** (< 1s).
+
+If you're not sure about whether the API you'd like to use fits these criteria, we're happy to help figure it out. Email us over at [open@duckduckgo.com](mailto:open@duckduckgo.com).
 
 ## Spice Frontend
 
