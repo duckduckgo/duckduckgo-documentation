@@ -398,6 +398,7 @@ templates: {
 	    rowHighlight: false,
 	    keySpacing: false,
 	    moreAt: false
+	}
 }
 ```
 
