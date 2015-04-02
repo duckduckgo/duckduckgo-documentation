@@ -83,7 +83,7 @@ There are several template groups to choose from:
 
 ------
 
-## text template group
+## Text Template Group
 
 Best used for simple, text-only results. This template offers a title, description and footer.
 
@@ -135,7 +135,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## info template group
+## Info Template Group
 
 Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
 
@@ -191,7 +191,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## products template group
+## Products Template Group
 
 Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
@@ -217,16 +217,15 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'products'
 // does this for you!
 templates: {
-    item: 'products_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail',
-    wrap_detail: 'base_detail',
-    options: {
-        rating: true,
-        price: true,
-        brand: true,
-        priceAndBrand: true
-    }
+	item: 'products_item',
+	detail: 'products_detail',
+	item_detail: 'products_item_detail',
+	wrap_detail: 'base_detail',
+	options: {
+	    rating: true,
+	    price: true,
+	    brand: true
+	}
 }
 ```
 
@@ -253,7 +252,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## media template group
+## Media Template Group
 
 Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
 
@@ -284,11 +283,10 @@ templates: {
     item_detail: 'products_item_detail',
     wrap_detail: 'base_detail',
     options: {
-        price: false,
-        brand: false,
-        priceAndBrand: false,
-        rating: false,
-        ratingText: true
+	    price: false,
+	    brand: false,
+	    rating: false,
+	    ratingText: true
     }
 }
 ```
@@ -316,7 +314,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## icon template group
+## Icon Template Group
 
 This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
 
@@ -342,8 +340,8 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'icon'
 // does this for you!
 templates: {
-    item: 'icon_item',
-    detail: 'products_detail',
+    item: 'text_item',
+    detail: 'basic_icon_detail',
     item_detail: 'products_item_detail'
 }
 ```
@@ -364,7 +362,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ------
 
-## base template group
+## Base Template Group
 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 
@@ -391,15 +389,15 @@ When you specify this template group, it is equivalent to setting the properties
 // does this for you!
 templates: {
     item: 'base_item',
-    detail: 'base_detail',
-    options: {
-        price: false,
-        brand: false,
-        priceAndBrand: false,
-        rating: false,
-        ratingText: false,
-        moreAt: false
-    }
+	detail: 'base_detail',
+	options: {
+	    price: false,
+	    brand: false,
+	    rating: false,
+	    ratingText: false,
+	    rowHighlight: false,
+	    keySpacing: false,
+	    moreAt: false
 }
 ```
 
