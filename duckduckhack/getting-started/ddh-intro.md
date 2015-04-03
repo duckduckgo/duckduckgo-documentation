@@ -84,7 +84,7 @@ It's also best to check that your idea doesn't already exist. You can do that by
 
 The most important step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. Sometimes, we cannot accept a submitted Instant Answer because the implementation or source are not up to our standard. There are multiple ways to reach out:  
 
-- Ask in our [Gitter chat room](https://gitter.im/duckduckgo)
+- Ask in our [Gitter ideas channel](https://gitter.im/duckduckgo/Ideas)
 - Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com)
 - Join and ask our [developer's email list](https://www.listbox.com/subscribe/?list_id=197814)
 - Submit to [Duck.co/ideas](https://duck.co/ideas)
