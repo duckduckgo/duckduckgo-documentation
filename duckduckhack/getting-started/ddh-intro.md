@@ -82,11 +82,15 @@ It's also best to check that your idea doesn't already exist. You can do that by
 
 ### Submitting Your Idea
 
-The most important step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. Sometimes, we cannot accept a submitted Instant Answer because the implementation or source are not up to our standard. 
-**[Please email us](mailto:open@duckduckgo.com)** to let us know you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved.
+The most important step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. Sometimes, we cannot accept a submitted Instant Answer because the implementation or source are not up to our standard. There are multiple ways to reach out:  
+
+- Ask in our [Gitter chat room](https://gitter.im/duckduckgo)
+- Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com)
+- Join and ask our [developer's email list](https://www.listbox.com/subscribe/?list_id=197814)
+- Submit to [Duck.co/ideas](https://duck.co/ideas)
 
 
-Here's an example email to help you out:
+If choosing email, this sample will help you craft your message:
 
 ```text
 To: open@duckduckgo.com
@@ -104,9 +108,7 @@ Thanks!
 PS: DuckDuckGo is awesome!
 ```
 
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (e.g. a [duck.co idea](https://duck.co/ideas) that has been approved by DDG staff). 
-
-**One more thing:** Please consider joining our [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814) to stay in tune with the important updates happening among the community. 
+With every channel, we'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (e.g. a [duck.co idea](https://duck.co/ideas) that has been approved by DDG staff). 
 
 
 ## Creating Your Own Instant Answer
