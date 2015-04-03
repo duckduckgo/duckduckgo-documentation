@@ -361,6 +361,57 @@ In order for these templates to display correctly, you need to ensure that each 
 
 
 ------
+## Places Template Group
+
+This template group is ideal for displaying results where location is an important factor to the searcher. The places template group makes it easy for searchers to view a map showing all results, or highlighting a particular item without leaving the search page.
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'places'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'places'
+// does this for you!
+templates: {
+    item: 'places_item',
+    detail: 'places_detail'
+}
+```
+
+#### Default templates used in the 'places' group:
+
+- [places_item](#placesitem-template)
+- [places_detail](#placesdetail-template)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+#### Places Model
+
+In addition to templates, the places group makes use of a places model and places view. These are built-in when you use the places template group. The places model and view enable special map functionality and behaviors that make the places template group valuable and delightful. 
+
+The places model requires additional values passed to it to work correctly. Make sure that each item you return includes the [attributes required by the places model](https://duck.co/duckduckhack/spice_displaying#place-attributes) as well.
+
+### Example use of the 'places' template group
+
+- ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
+    ![DuckDuckGo search for "gandhi quote"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
+
+
+------
 
 ## Base Template Group
 
@@ -436,6 +487,8 @@ The list of built-in Spice templates includes:
 - [products_detail](#productsdetail-template)
 - [products_item_detail](#productsitemdetail-template)
 - [basic_info_detail](#basicinfodetail-template)
+- [places_item](#placesitem-template)
+- [places_detail](#placesdetail-template)
 - [base_item](#baseitem-template)
 - [base_detail](#basedetail-template)
 
@@ -728,6 +781,135 @@ templates: {
 - [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
 - [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js)
+
+------
+
+## places_item template
+
+The places item template is a slick way to display multiple location results. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=cafes+in+new+york), it's available to instant answers as well. Clicking a places item both displays a map showing its location. Clicking simultaneously 'flips' the item to display more detailed information. Each item can be divided in a 'front' and a 'back'.
+
+### Available Features
+
+'Front' of each item:
+- image [optional]
+- num
+- name
+- title [required if using image]
+- neighborhoodOrCity [optional]
+- ratingImageURL [optional]
+- rating [optional, superseded by ratingImageURL]
+- reviews [optional]
+
+'Back' of each item: (displayed upon click)
+- name
+- url
+- price [optional]
+- address_lines [optional]
+- address [optional, superseded by address_lines]
+- phone [optional]
+
+### Template Diagram
+
+#### 'Front'
+
+![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_front.png&f=1)
+
++--------------------+
+num
+
+		image
+
+
++--------------------+
+name
+neighborhoodOrCity
+ratingImageURL *or* rating
+reviews
++--------------------+
+
+#### 'Back'
+
+This view is displayed when the 'front' is clicked, together with the map (below).
+
+![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_back.png&f=1)
+
++--------------------+
+
+name (url)
+
+price
+
+address_lines *or* address
+
+phone
+
++--------------------+
+
+#### Map View
+
+This view is displayed when the 'front' is clicked, together with the 'back' (above).
+
+![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_map.png&f=1)
+
+
+### Template groups using the "places_item" template:
+
+- [places](#places-template-group)
+
+### Example usage of the "places_item" template:
+
+- [Parking Panda](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js): search for [parking in new york](https://duckduckgo.com/?q=parking+in+new+york).
+- Local results (built-in to DDG): search for [cafes near Ann Arbor](https://duckduckgo.com/?q=cafes+near+ann+arbor).
+
+------
+
+## places_detail template
+
+The places detail template nicely displays information about a single location with a map backdrop. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=espresso+italiano+maui), it's now available to be used in instant answers.
+
+### Available Features
+
+- url
+- name
+- image [optional]
+- title [required if using image]
+- hours [optional]
+- ratingImageURL [optional]
+- rating [optional, superseded by ratingImageURL]
+- reviews [optional]
+- price [optional]
+- address_lines [optional]
+- address [optional, superseded by address_lines]
+- phone [optional]
+
+### Template Diagram
+
+![DuckDuckGo search for "espresso italiano maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_detail.png&f=1)
+
++--------------------------------+------------+
+|   name (url)                   |            |
+|                                | image (url)|
+|   ratingImageURL *or* rating   |            |
+|   reviews                      |            |
+|   price                        |            |
+|   address_lines *or* address   |            |
+|   phone                        |            |
+|                                |            |
+|                                |            |
++--------------------------------+            |
+|                                |            |
+|    hours                       |            |
+|                                |            |
++--------------------------------+------------+
+
+
+### Template groups using the "places_detail" template:
+
+- [places](#places-template-group)
+
+### Example usage of the "places_detail" template:
+
+- Local results (built-in to DDG): search for [a particular business](https://duckduckgo.com/?q=espresso+italiano+maui).
 
 ------
 
