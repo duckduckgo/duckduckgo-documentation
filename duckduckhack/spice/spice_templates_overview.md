@@ -39,6 +39,8 @@ The purpose of this page is to help you understand what each template group look
     - [`products_detail`](#productsdetail-template)
     - [`products_item_detail`](#productsitemdetail-template)
     - [`basic_info_detail`](#basicinfodetail-template)
+	- [`places_item`](#placesitem-template)
+	- [`places_detail`](#placesdetail-template)
     - [`base_item`](#baseitem-template)
     - [`base_detail`](#basedetail-template)
 - [**Tile Variants**](#tile-variants)
