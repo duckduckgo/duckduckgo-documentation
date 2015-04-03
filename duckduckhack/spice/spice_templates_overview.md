@@ -28,6 +28,7 @@ The purpose of this page is to help you understand what each template group look
     - [Media](#media-template-group)
     - [Icon](#icon-template-group)
 	- [Places](#places-template-group)
+	- [List](#list-template-group)
     - [Base](#base-template-group)
 - [**Built-In Spice Templates**](#builtin-spice-templates)
     - [`record`](#record-template)
@@ -41,6 +42,7 @@ The purpose of this page is to help you understand what each template group look
     - [`basic_info_detail`](#basicinfodetail-template)
 	- [`places_item`](#placesitem-template)
 	- [`places_detail`](#placesdetail-template)
+	- [`list_detail`](#listdetail-template)
     - [`base_item`](#baseitem-template)
     - [`base_detail`](#basedetail-template)
 - [**Tile Variants**](#tile-variants)
@@ -413,6 +415,52 @@ The places model requires additional values passed to it to work correctly. Make
 - ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
     ![DuckDuckGo search for "gandhi quote"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
 
+------
+
+## List Template Group
+
+This template group displays either a bulleted list of items *or* a table of key-value pairs when displaying one item. It is useful for instant answers that usually return a **single item with detailed properties**. 
+
+If an instant answer using the 'list' template group returns multiple items, they are displayed using the `text_item` template (just like the Text and Icon template groups).
+
+### Usage
+
+**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
+
+------
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'list'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'lis'
+// does this for you!
+templates: {
+    item: 'text_item',
+    detail: 'list_detail'
+}
+```
+
+#### Default templates used in the 'list' group:
+
+- [`text_item`](#textitem-template)
+- [`list_detail`](#listdetail-template)
+
+In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+### Example use of the 'list' template group
+
+- ["whois"](https://duckduckgo.com/?q=whois+mozilla.org) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js))
+	![DuckDuckGo search for "whois mozilla.org"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhois_results.png&f=1)
 
 ------
 
@@ -492,6 +540,7 @@ The list of built-in Spice templates includes:
 - [`basic_info_detail`](#basicinfodetail-template)
 - [`places_item`](#placesitem-template)
 - [`places_detail`](#placesdetail-template)
+- [`list_detail`](#listdetail-template)
 - [`base_item`](#baseitem-template)
 - [`base_detail`](#basedetail-template)
 
@@ -913,6 +962,50 @@ The places detail template nicely displays information about a single location w
 ### Example usage of the "places_detail" template:
 
 - Local results (built-in to DDG): search for [a particular business](https://duckduckgo.com/?q=espresso+italiano+maui).
+
+------
+
+## `list_detail` Template
+
+The list detail template **wraps the [`record` template](#record-template)**. This template allows display of a title and subtitle above a bulleted list *or* a table of key-value pairs.
+
+### Available Features
+
+- `title` [optional]
+- `subtitle` [optional]
+
+#### If Displaying Table of Key-Value Pairs
+
+- `content` (set this value to 'record' to use the built-in record template)
+- `record_data` (an array of objects, each specifying a property named `key` and another property named `value`)
+
+#### If Displaying Bulleted List of Values
+
+- `list_content` (refers to your sub-template which populates within each `li` element)
+- `list` (an array of objects, each specifying the values available to your sub-template)
+
+*Note: The simplest way to display a bulleted list of values would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`*
+
+### Template Diagram
+
+![DuckDuckGo search for "whois mozilla.org"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhois_results.png&f=1)
+
++-------------------+
+
+title
+subtitle
+record_data *or* list
+
++-------------------+
+
+### Template groups using the "places_detail" template:
+
+- [list](#list-template-group)
+
+### Example usage of the "places_detail" template:
+
+- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js) (search for ['whois mozilla.org'](https://duckduckgo.com/?q=whois+mozilla.org))
+
 
 ------
 
