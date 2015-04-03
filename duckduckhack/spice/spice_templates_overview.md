@@ -28,7 +28,7 @@ The purpose of this page is to help you understand what each template group look
     - [Media](#media-template-group)
     - [Icon](#icon-template-group)
 	- [Places](#places-template-group)
-    - [base](#base-template-group)
+    - [Base](#base-template-group)
 - [**Built-In Spice Templates**](#builtin-spice-templates)
     - [`record`](#record-template)
     - [`icon_item`](#iconitem-template)
@@ -52,7 +52,7 @@ The purpose of this page is to help you understand what each template group look
 
 <!--
 [**Detail Variants**](#tile-variants)
-    - [light](#light)
+    - [`light`](#light-detail-variant)
 -->
 
 ------
