@@ -605,11 +605,11 @@ templates: {
 
 ### Available Features
 
-- icon
-- title
-- sub-title [optional]
-- description
-- footer [optional] *sub-template*
+- `icon`
+- `title`
+- `sub-title` [optional]
+- `description`
+- `footer` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -631,11 +631,11 @@ templates: {
 
 ### Available Features
 
-- url [optional]
-- title
-- subtitle
-- description
-- footer [optional] *sub-template*
+- `url` [optional]
+- `title`
+- `subtitle`
+- `description`
+- `footer` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -659,9 +659,9 @@ templates: {
 
 ### Available Features
 
-- title_content [optional] *sub-template*
-- title [optional, replaces `title_content`]
-- content [optional] *sub-template*
+- `title_content` [optional] *sub-template*
+- `title` [optional, replaces `title_content`]
+- `content` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -684,12 +684,12 @@ templates: {
 
 ### Available Features
 
-- link [optional]
-- image
-- title
-- description [optional]
-- rating [optional]
-- ratingText [optional]
+- `link` [optional]
+- `image`
+- `title`
+- `description` [optional]
+- `rating` [optional]
+- `ratingText` [optional]
 
 ### Template Diagram
 
@@ -713,13 +713,13 @@ templates: {
 
 ### Available Features
 
-- url [optional]
-- img
-- title
-- price
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
+- `url` [optional]
+- `img`
+- `title`
+- `price`
+- `brand` [optional]
+- `rating` [optional]
+- `reviewCount` [optional]
 
 ### Template Diagram
 
@@ -742,16 +742,16 @@ templates: {
 
 ### Available Features
 
-- img [optional]
-- url
-- heading
-- price [optional]
-- priceAndBrand [optional]
-- brand [optional]
-- rating [optional]
-- reviewCount [optional]
-- abstract
-- action [optional] *sub-template*
+- `img` [optional]
+- `url`
+- `heading`
+- `price` [optional]
+- `priceAndBrand` [optional]
+- `brand` [optional]
+- `rating` [optional]
+- `reviewCount` [optional]
+- `abstract`
+- `action` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -776,14 +776,14 @@ templates: {
 
 ### Available Features
 
-- img_m [optional, replaces `img`]
-- img
-- url
-- price [optional]
-- brand [optional]
-- rating [optional]
-- abstract
-- action [optional] *sub-template*
+- `img_m` [optional, replaces `img`]
+- `img`
+- `url`
+- `price` [optional]
+- `brand` [optional]
+- `rating` [optional]
+- `abstract`
+- `action` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -808,11 +808,11 @@ templates: {
 
 ### Available Features
 
-- image [optional]
-- title [optional]
-- description
-- content [optional, replaces `description`] *sub-template*
-- aux [optional] *sub-template*
+- `image` [optional]
+- `title` [optional]
+- `description`
+- `content` [optional, replaces `description`] *sub-template*
+- `aux` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -843,22 +843,22 @@ The places item template is a slick way to display multiple location results. Or
 ### Available Features
 
 'Front' of each item:
-- image [optional]
-- num
-- name
-- title [required if using image]
-- neighborhoodOrCity [optional]
-- ratingImageURL [optional]
-- rating [optional, superseded by ratingImageURL]
-- reviews [optional]
+- `image` [optional]
+- `num`
+- `name`
+- `title` [required if using image]
+- `neighborhoodOrCity` [optional]
+- `ratingImageURL` [optional]
+- `rating` [optional, superseded by ratingImageURL]
+- `reviews` [optional]
 
 'Back' of each item: (displayed upon click)
-- name
-- url
-- price [optional]
-- address_lines [optional]
-- address [optional, superseded by address_lines]
-- phone [optional]
+- `name`
+- `url`
+- `price` [optional]
+- `address_lines` [optional]
+- `address` [optional, superseded by address_lines]
+- `phone` [optional]
 
 ### Template Diagram
 
@@ -921,18 +921,18 @@ The places detail template nicely displays information about a single location w
 
 ### Available Features
 
-- url
-- name
-- image [optional]
-- title [required if using image]
-- hours [optional]
-- ratingImageURL [optional]
-- rating [optional, superseded by ratingImageURL]
-- reviews [optional]
-- price [optional]
-- address_lines [optional]
-- address [optional, superseded by address_lines]
-- phone [optional]
+- `url`
+- `name`
+- `image` [optional]
+- `title` [required if using image]
+- `hours` [optional]
+- `ratingImageURL` [optional]
+- `rating` [optional, superseded by ratingImageURL]
+- `reviews` [optional]
+- `price` [optional]
+- `address_lines` [optional]
+- `address` [optional, superseded by address_lines]
+- `phone` [optional]
 
 ### Template Diagram
 
@@ -1013,8 +1013,8 @@ record_data *or* list
 
 ### Available Features
 
-- url [optional]
-- content *sub-template*
+- `url` [optional]
+- `content` *sub-template*
 
 ### Template Diagram
 
@@ -1041,7 +1041,7 @@ record_data *or* list
 
 ### Available Features
 
-- content *string* OR *sub-template*
+- `content` *string* OR *sub-template*
 
 ### Template Diagram
 
