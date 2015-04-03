@@ -22,30 +22,31 @@ The purpose of this page is to help you understand what each template group look
 
 - [**Template Groups**](#template-groups)
     - [Default Template Options](#default-template-options)
-    - [text](#text-template-group)
-    - [info](#info-template-group)
-    - [products](#products-template-group)
-    - [media](#media-template-group)
-    - [icon](#icon-template-group)
+    - [Text](#text-template-group)
+    - [Info](#info-template-group)
+    - [Products](#products-template-group)
+    - [Media](#media-template-group)
+    - [Icon](#icon-template-group)
+	- [Places](#places-template-group)
     - [base](#base-template-group)
 - [**Built-In Spice Templates**](#builtin-spice-templates)
-    - [record](#record-template)
-    - [icon_item](#iconitem-template)
-    - [text_item](#textitem-template)
-    - [text_detail](#textdetail-template)
-    - [basic_image_item](#basicimageitem-template)
-    - [products_item](#productsitem-template)
-    - [products_detail](#productsdetail-template)
-    - [products_item_detail](#productsitemdetail-template)
-    - [basic_info_detail](#basicinfodetail-template)
-    - [base_item](#baseitem-template)
-    - [base_detail](#basedetail-template)
+    - [`record`](#record-template)
+    - [`icon_item`](#iconitem-template)
+    - [`text_item`](#textitem-template)
+    - [`text_detail`](#textdetail-template)
+    - [`basic_image_item`](#basicimageitem-template)
+    - [`products_item`](#productsitem-template)
+    - [`products_detail`](#productsdetail-template)
+    - [`products_item_detail`](#productsitemdetail-template)
+    - [`basic_info_detail`](#basicinfodetail-template)
+    - [`base_item`](#baseitem-template)
+    - [`base_detail`](#basedetail-template)
 - [**Tile Variants**](#tile-variants)
-    - [poster](#poster-variant)
-    - [narrow](#narrow-variant)
-    - [wide](#wide-variant)
-    - [xwide](#xwide-variant)
-    - [video](#video-variant)
+    - [`poster`](#poster-variant)
+    - [`narrow`](#narrow-variant)
+    - [`wide`](#wide-variant)
+    - [`xwide`](#xwide-variant)
+    - [`video`](#video-variant)
 
 <!--
 [**Detail Variants**](#tile-variants)
@@ -57,12 +58,12 @@ The purpose of this page is to help you understand what each template group look
 
 There are several template groups to choose from:
 
-- [text](#text-template-group)
-- [info](#info-template-group)
-- [products](#products-template-group)
-- [media](#media-template-group)
-- [icon](#icon-template-group)
-- [base](#base-template-group)
+- [Text](#text-template-group)
+- [Info](#info-template-group)
+- [Products](#products-template-group)
+- [Media](#media-template-group)
+- [Icon](#icon-template-group)
+- [Base](#base-template-group)
 <!-- /summary -->
 
 ### Default Template Options
@@ -172,8 +173,8 @@ templates: {
 
 #### Default templates used in the 'info' group:
 
-- [basic_image_item](#basicimageitem-template)
-- [basic_info_detail](#basicinfodetail-template)
+- [`basic_image_item`](#basicimageitem-template)
+- [`basic_info_detail`](#basicinfodetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -231,10 +232,10 @@ templates: {
 
 #### Default templates used in the 'products' group:
 
-- [products_item](#productsitem-template)
-- [products_detail](#productsdetail-template)
-- [products_item_detail](#productsitemdetail-template)
-- [base_detail](#basedetail-template)
+- [`products_item`](#productsitem-template)
+- [`products_detail`](#productsdetail-template)
+- [`products_item_detail`](#productsitemdetail-template)
+- [`base_detail`](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -293,10 +294,10 @@ templates: {
 
 #### Default templates used in the 'media' group:
 
-- [basic_image_item](#basicimageitem-template)
-- [products_detail](#productsdetail-template)
-- [products_item_detail](#productsitemdetail-template)
-- [base_detail](#basedetail-template)
+- [`basic_image_item`](#basicimageitem-template)
+- [`products_detail`](#productsdetail-template)
+- [`products_item_detail`](#productsitemdetail-template)
+- [`base_detail`](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -348,9 +349,9 @@ templates: {
 
 #### Default templates used in the 'icon' group:
 
-- [icon_item](#iconitem-template)
-- [products_detail](#productsdetail-template)
-- [products_item_detail](#productsitemdetail-template)
+- [`icon_item`](#iconitem-template)
+- [`products_detail`](#productsdetail-template)
+- [`products_item_detail`](#productsitemdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's **features**, which you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -394,8 +395,8 @@ templates: {
 
 #### Default templates used in the 'places' group:
 
-- [places_item](#placesitem-template)
-- [places_detail](#placesdetail-template)
+- [`places_item`](#placesitem-template)
+- [`places_detail`](#placesdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -455,8 +456,8 @@ templates: {
 
 #### Default templates used in the 'base' group:
 
-- [base_item](#baseitem-template)
-- [base_detail](#basedetail-template)
+- [`base_item`](#baseitem-template)
+- [`base_detail`](#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
