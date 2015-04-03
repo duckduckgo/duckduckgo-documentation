@@ -478,25 +478,25 @@ In order for these templates to display correctly, you need to ensure that each 
 
 The list of built-in Spice templates includes:
 
-- [record](#record-template)
-- [icon_item](#iconitem-template)
-- [text_item](#textitem-template)
-- [text_detail](#textdetail-template)
-- [basic_image_item](#basicimageitem-template)
-- [products_item](#productsitem-template)
-- [products_detail](#productsdetail-template)
-- [products_item_detail](#productsitemdetail-template)
-- [basic_info_detail](#basicinfodetail-template)
-- [places_item](#placesitem-template)
-- [places_detail](#placesdetail-template)
-- [base_item](#baseitem-template)
-- [base_detail](#basedetail-template)
+- [`record`](#record-template)
+- [`icon_item`](#iconitem-template)
+- [`text_item`](#textitem-template)
+- [`text_detail`](#textdetail-template)
+- [`basic_image_item`](#basicimageitem-template)
+- [`products_item`](#productsitem-template)
+- [`products_detail`](#productsdetail-template)
+- [`products_item_detail`](#productsitemdetail-template)
+- [`basic_info_detail`](#basicinfodetail-template)
+- [`places_item`](#placesitem-template)
+- [`places_detail`](#placesdetail-template)
+- [`base_item`](#baseitem-template)
+- [`base_detail`](#basedetail-template)
 
 ------
 
 <!-- /summary -->
 
-## record template
+## `record` Template
 
 A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
 
@@ -549,7 +549,7 @@ templates: {
 
 ------
 
-## icon_item template
+## `icon_item` Template
 
 ### Available Features
 
@@ -575,7 +575,7 @@ templates: {
 
 ------
 
-## text_item template
+## `text_item` Template
 
 ### Available Features
 
@@ -603,7 +603,7 @@ templates: {
 
 ------
 
-## text_detail template
+## `text_detail` Template
 
 ### Available Features
 
@@ -628,7 +628,7 @@ templates: {
 
 ------
 
-## basic_image_item template
+## `basic_image_item` Template
 
 ### Available Features
 
@@ -657,7 +657,7 @@ templates: {
 
 ------
 
-## products_item template
+## `products_item` Template
 
 ### Available Features
 
@@ -686,7 +686,7 @@ templates: {
 
 ------
 
-## products_detail template
+## `products_detail` Template
 
 ### Available Features
 
@@ -720,7 +720,7 @@ templates: {
 
 ------
 
-## products_item_detail template
+## `products_item_detail` Template
 
 ### Available Features
 
@@ -752,7 +752,7 @@ templates: {
 
 ------
 
-## basic_info_detail template
+## `basic_info_detail` Template
 
 ### Available Features
 
@@ -784,7 +784,7 @@ templates: {
 
 ------
 
-## places_item template
+## `places_item` Template
 
 The places item template is a slick way to display multiple location results. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=cafes+in+new+york), it's available to instant answers as well. Clicking a places item both displays a map showing its location. Clicking simultaneously 'flips' the item to display more detailed information. Each item can be divided in a 'front' and a 'back'.
 
@@ -863,7 +863,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ------
 
-## places_detail template
+## `places_detail` Template
 
 The places detail template nicely displays information about a single location with a map backdrop. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=espresso+italiano+maui), it's now available to be used in instant answers.
 
@@ -913,7 +913,7 @@ The places detail template nicely displays information about a single location w
 
 ------
 
-## base_item template
+## `base_item` Template
 
 ### Available Features
 
@@ -941,7 +941,7 @@ The places detail template nicely displays information about a single location w
 
 ------
 
-## base_detail template
+## `base_detail` Template
 
 ### Available Features
 
@@ -981,7 +981,7 @@ If the default tile dimensions are not perfect for your Spice result, you can ch
 
 ------
 
-## poster variant
+## `poster` Tile Variant
 
 Tall and thin, like a movie poster.
 
@@ -1006,7 +1006,7 @@ templates: {
 
 ------
 
-## narrow variant
+## `narrow` Tile Variant
 
 Narrower tile width, normal height.
 
@@ -1031,7 +1031,7 @@ templates: {
 
 ------
 
-## wide variant
+## `wide` Tile Variant
 
 Increased width, normal height.
 
@@ -1055,7 +1055,7 @@ none...*yet!*
 
 ------
 
-## xwide variant
+## `xwide` Tile Variant
 
 Super wide, normal height.
 
@@ -1077,7 +1077,7 @@ templates: {
 
 ------
 
-## video variant
+## `video` Variant
 
 Shorter height, increased width.
 
@@ -1105,7 +1105,7 @@ TODO: Unhide this once live
 
 # Detail Variants
 
-## light
+## `light` Detail Variant
 
 Gives the detail area a lighter (white) background. This is ideally used when the detail pane is displaying images with white backgrounds, such as products or logos.
 
