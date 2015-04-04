@@ -121,8 +121,8 @@ templates: {
 
 #### Default templates used in the 'text' group:
 
-- [text_item](#textitem-template)
-- [text_detail](#textdetail-template)
+- [`text_item`](#textitem-template)
+- [`text_detail`](#textdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
