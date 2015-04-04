@@ -68,6 +68,7 @@ There are several template groups to choose from:
 - [Media](#media-template-group)
 - [Icon](#icon-template-group)
 - [Base](#base-template-group)
+
 <!-- /summary -->
 
 ### Default Template Options
