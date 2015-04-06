@@ -839,7 +839,9 @@ templates: {
 
 ## `places_item` Template
 
-The places item template is a slick way to display multiple location results. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=cafes+in+new+york), it's available to instant answers as well. Clicking a places item both displays a map showing its location. Clicking simultaneously 'flips' the item to display more detailed information. Each item can be divided in a 'front' and a 'back'.
+The places item template is a slick way to display multiple location results on one map. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=cafes+in+new+york), it's now available to instant answers as well.
+
+Clicking a places item both indicates its location on a map, as well as 'flips' the item to display more detailed information. The `places_item` template can conceptually be divided into its 'front' and 'back'.
 
 ### Available Features
 
