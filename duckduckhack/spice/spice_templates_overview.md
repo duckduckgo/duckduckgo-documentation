@@ -369,7 +369,7 @@ In order for these templates to display correctly, you need to ensure that each 
 ------
 ## Places Template Group
 
-This template group is ideal for displaying results where location is an important factor to the searcher. The places template group makes it easy for searchers to view a map showing all results, or highlighting a particular item without leaving the search page.
+This template group is ideal for displaying results where location is an important factor to the searcher. The Places template group makes it easy for searchers to view a map showing all results, or highlighting a particular item without leaving the search page.
 
 ### Usage
 
@@ -403,13 +403,13 @@ templates: {
 - [`places_item`](#placesitem-template)
 - [`places_detail`](#placesdetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+#### Places Model and View
 
-#### Places Model
+The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
 
-In addition to templates, the places group makes use of a places model and places view. These are built-in when you use the places template group. The places model and view enable special map functionality and behaviors that make the places template group valuable and delightful. 
+The model and view are specified alongside the template group property when you call `Spice.add()`. You can see how this is done under the [Model and View section](https://duck.co/duckduckhack/spice_displaying#views) of the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) page.
 
-The places model requires additional values passed to it to work correctly. Make sure that each item you return includes the [attributes required by the places model](https://duck.co/duckduckhack/spice_displaying#place-attributes) as well.
+To work correctly, the places model requires **additional values** passed that do not appear directly in the templates. Make sure that each item includes the [attributes required by the places model](https://duck.co/duckduckhack/spice_displaying#place-attributes). Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
 ### Example use of the 'places' template group
 
@@ -420,9 +420,9 @@ The places model requires additional values passed to it to work correctly. Make
 
 ## List Template Group
 
-This template group displays either a bulleted list of items *or* a table of key-value pairs when displaying one item. It is useful for instant answers that usually return a **single item with detailed properties**. 
+The List template group was designed for displaying a list of properties **of one item**. This can either come in the form of a bulleted list of properties, *or* a table of key-value pairs. 
 
-If an instant answer using the 'list' template group returns multiple items, they are displayed using the `text_item` template (just like the Text and Icon template groups).
+Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for instant answers designed to **return a single item** with detailed properties.
 
 ### Usage
 
@@ -443,7 +443,7 @@ templates: {
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
-// setting the template group to: 'lis'
+// setting the template group to: 'list'
 // does this for you!
 templates: {
     item: 'text_item',
@@ -685,7 +685,7 @@ templates: {
 
 ### Available Features
 
-- `link` [optional]
+- `url` [optional]
 - `image`
 - `title`
 - `description` [optional]
@@ -866,7 +866,7 @@ The places item template is a slick way to display multiple location results. Or
 #### 'Front'
 
 ![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_front.png&f=1)
-
+```
 +--------------------+
 num
 
@@ -879,6 +879,7 @@ neighborhoodOrCity
 ratingImageURL *or* rating
 reviews
 +--------------------+
+```
 
 #### 'Back'
 
@@ -886,6 +887,7 @@ This view is displayed when the 'front' is clicked, together with the map (below
 
 ![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_back.png&f=1)
 
+```
 +--------------------+
 
 name (url)
@@ -897,6 +899,7 @@ address_lines *or* address
 phone
 
 +--------------------+
+```
 
 #### Map View
 
@@ -939,6 +942,7 @@ The places detail template nicely displays information about a single location w
 
 ![DuckDuckGo search for "espresso italiano maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_detail.png&f=1)
 
+```
 +--------------------------------+------------+
 |   name (url)                   |            |
 |                                | image (url)|
@@ -954,6 +958,7 @@ The places detail template nicely displays information about a single location w
 |    hours                       |            |
 |                                |            |
 +--------------------------------+------------+
+```
 
 
 ### Template groups using the "places_detail" template:
@@ -991,6 +996,7 @@ The list detail template **wraps the [`record` template](#record-template)**. Th
 
 ![DuckDuckGo search for "whois mozilla.org"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhois_results.png&f=1)
 
+```
 +-------------------+
 
 title
@@ -998,6 +1004,7 @@ subtitle
 record_data *or* list
 
 +-------------------+
+```
 
 ### Template groups using the "places_detail" template:
 
