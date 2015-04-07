@@ -582,6 +582,7 @@ templates: {
     }
 }
 ```
+
 ### Available Features
 
 *none*
@@ -985,7 +986,7 @@ The list detail template **wraps the [`record` template](#record-template)**. Th
 #### If Displaying Table of Key-Value Pairs
 
 - `content` (set this value to 'record' to use the built-in record template)
-- `record_data` (an array of objects, each specifying a property named `key` and another property named `value`)
+- `record_data` (an object containing the key-value pairs to display)
 
 #### If Displaying Bulleted List of Values
 
