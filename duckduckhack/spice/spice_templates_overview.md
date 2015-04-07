@@ -633,9 +633,11 @@ templates: {
 
 ### Available Features
 
+- `icon` [optional] (url path to icon)
 - `url` [optional]
 - `title`
-- `subtitle`
+- `altSubtitle` [optional]
+- `subtitle` [optional]
 - `description`
 - `footer` [optional] *sub-template*
 
@@ -662,7 +664,9 @@ templates: {
 ### Available Features
 
 - `title_content` [optional] *sub-template*
-- `title` [optional, replaces `title_content`]
+- `title` [optional] (shown only if `title_content` is not specified)
+- `subtitle_content` [optional] *sub-template*
+- `subtitle` [optional] (shown only if `subtitle_content` is not specified]
 - `content` [optional] *sub-template*
 
 ### Template Diagram
@@ -687,7 +691,7 @@ templates: {
 ### Available Features
 
 - `url` [optional]
-- `image`
+- `image` (url path to image)
 - `title`
 - `description` [optional]
 - `rating` [optional]
@@ -716,12 +720,13 @@ templates: {
 ### Available Features
 
 - `url` [optional]
-- `img`
+- `img` (url path to image)
 - `title`
-- `price`
+- `price` [optional]
 - `brand` [optional]
 - `rating` [optional]
 - `reviewCount` [optional]
+- `url_review` [optional] (url path to reviews)
 
 ### Template Diagram
 
@@ -744,16 +749,16 @@ templates: {
 
 ### Available Features
 
-- `img` [optional]
-- `url`
+- `img` [optional] (url path to image)
+- `url` 
 - `heading`
-- `price` [optional]
-- `priceAndBrand` [optional]
-- `brand` [optional]
 - `rating` [optional]
 - `reviewCount` [optional]
+- `price` [optional]
+- `brand` [optional]
+- `subtitle_content` [optional] *sub-template*
 - `abstract`
-- `action` [optional] *sub-template*
+- `buy` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -778,14 +783,16 @@ templates: {
 
 ### Available Features
 
-- `img_m` [optional, replaces `img`]
-- `img`
+- `img_m` [optional]
 - `url`
 - `price` [optional]
 - `brand` [optional]
+- `subtitle_content` [optional] *sub-template*
 - `rating` [optional]
+- `reviewCount` [optional]
+- `url_review` [optional] (url path to reviews)
 - `abstract`
-- `action` [optional] *sub-template*
+- `buy` [optional] *sub-template*
 
 ### Template Diagram
 
@@ -810,11 +817,14 @@ templates: {
 
 ### Available Features
 
+- `url`
 - `image` [optional]
 - `title` [optional]
-- `description`
-- `content` [optional, replaces `description`] *sub-template*
+- `subtitle` [optional] (shown only if `title` specified)
+- `content` [optional] *sub-template*
+- `description` (required only if `content` sub-template not specified)
 - `aux` [optional] *sub-template*
+- `auxTitle` (required only if `aux` specified)
 
 ### Template Diagram
 
@@ -850,10 +860,10 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 - `image` [optional]
 - `num`
 - `name`
-- `title` [required if using image]
+- `title` (required if `image` specified)
 - `neighborhoodOrCity` [optional]
 - `ratingImageURL` [optional]
-- `rating` [optional, superseded by ratingImageURL]
+- `rating` [optional] (shown only if `ratingImageURL` not specified)
 - `reviews` [optional]
 
 'Back' of each item: (displayed upon click)
@@ -861,7 +871,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 - `url`
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional, superseded by address_lines]
+- `address` [optional] (shown only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
@@ -931,14 +941,14 @@ The places detail template nicely displays information about a single location w
 - `url`
 - `name`
 - `image` [optional]
-- `title` [required if using image]
+- `title` (required if using `image`)
 - `hours` [optional]
 - `ratingImageURL` [optional]
-- `rating` [optional, superseded by ratingImageURL]
+- `rating` [optional] (shown only if `ratingImageURL` not specified)
 - `reviews` [optional]
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional, superseded by address_lines]
+- `address` [optional] (shown only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
