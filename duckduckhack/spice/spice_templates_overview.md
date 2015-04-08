@@ -32,7 +32,6 @@ The purpose of this page is to help you understand what each template group look
     - [Base](#base-template-group)
 - [**Built-In Spice Templates**](#builtin-spice-templates)
     - [`record`](#record-template)
-    - [`icon_item`](#iconitem-template)
     - [`text_item`](#textitem-template)
     - [`text_detail`](#textdetail-template)
     - [`basic_image_item`](#basicimageitem-template)
@@ -199,7 +198,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Products Template Group
 
-Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `action` sub-template can be used to provide a compelling call-to-action (i.e. button).
+Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
 ### Usage
 
@@ -322,7 +321,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Icon Template Group
 
-This template is similar to the **text** group, however, it allows the use of a small icon image in the tile view.
+This template is similar to the **text** group, however, the detail view is better suited to displaying an icon image.
 
 ### Usage
 
@@ -354,7 +353,6 @@ templates: {
 
 #### Default templates used in the 'icon' group:
 
-- [`icon_item`](#iconitem-template)
 - [`products_detail`](#productsdetail-template)
 - [`products_item_detail`](#productsitemdetail-template)
 
@@ -585,7 +583,7 @@ templates: {
 
 ### Available Features
 
-*none*
+- `record_data` *object* (contains key-value pairs to display in table format)
 
 ### Template Diagram
 
@@ -593,19 +591,12 @@ templates: {
 
 ### Template groups using the "record" template:
 
-- *none by default*
 
 ### Example usage of the "record" template:
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
-
-------
-
-## `icon_item` Template
-
-### Available Features
 
 - `icon`
 - `title`
@@ -616,7 +607,6 @@ templates: {
 ### Template Diagram
 
 ![icon template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ficon.png&f=1)
-
 <!-- /summary -->
 
 ### Template groups using the "icon_item" template:
@@ -666,7 +656,7 @@ templates: {
 - `title_content` [optional] *sub-template*
 - `title` [optional] (shown only if `title_content` is not specified)
 - `subtitle_content` [optional] *sub-template*
-- `subtitle` [optional] (shown only if `subtitle_content` is not specified]
+- `subtitle` [optional] (available only if `subtitle_content` is not specified)
 - `content` [optional] *sub-template*
 
 ### Template Diagram
