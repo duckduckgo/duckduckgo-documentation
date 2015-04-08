@@ -353,6 +353,7 @@ templates: {
 
 #### Default templates used in the 'icon' group:
 
+- [`text_item`](#textitem-template)
 - [`products_detail`](#productsdetail-template)
 - [`products_item_detail`](#productsitemdetail-template)
 
@@ -529,7 +530,6 @@ In order for these templates to display correctly, you need to ensure that each 
 The list of built-in Spice templates includes:
 
 - [`record`](#record-template)
-- [`icon_item`](#iconitem-template)
 - [`text_item`](#textitem-template)
 - [`text_detail`](#textdetail-template)
 - [`basic_image_item`](#basicimageitem-template)
@@ -591,31 +591,14 @@ templates: {
 
 ### Template groups using the "record" template:
 
+- Can be used as a sub-template by the [List](#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
 
 ### Example usage of the "record" template:
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
-
-- `icon`
-- `title`
-- `sub-title` [optional]
-- `description`
-- `footer` [optional] *sub-template*
-
-### Template Diagram
-
-![icon template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ficon.png&f=1)
-<!-- /summary -->
-
-### Template groups using the "icon_item" template:
-
-- [icon](#icon-template-group)
-
-### Example usage of the "icon" template:
-
-- [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
+- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
 
 ------
 
@@ -623,7 +606,7 @@ templates: {
 
 ### Available Features
 
-- `icon` [optional] (url path to icon)
+- `icon` [optional] *url path to icon*
 - `url` [optional]
 - `title`
 - `altSubtitle` [optional]
@@ -639,13 +622,14 @@ templates: {
 
 ### Template groups using the "text_item" template:
 
-- [text](#text-template-group)
+- [Text](#text-template-group)
 
 ### Example usage of the "text_item" template:
 
 - [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
 - [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
 - [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
+- [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
 ------
 
@@ -654,7 +638,7 @@ templates: {
 ### Available Features
 
 - `title_content` [optional] *sub-template*
-- `title` [optional] (shown only if `title_content` is not specified)
+- `title` [optional] (available only if `title_content` is not specified)
 - `subtitle_content` [optional] *sub-template*
 - `subtitle` [optional] (available only if `subtitle_content` is not specified)
 - `content` [optional] *sub-template*
@@ -667,7 +651,7 @@ templates: {
 
 ### Template groups using the "text_detail" template:
 
-- [text](#text-template-group)
+- [Text](#text-template-group)
 
 ### Example usage of the "text_detail" template:
 
@@ -681,7 +665,7 @@ templates: {
 ### Available Features
 
 - `url` [optional]
-- `image` (url path to image)
+- `image` *url path to image*
 - `title`
 - `description` [optional]
 - `rating` [optional]
@@ -695,8 +679,8 @@ templates: {
 
 ### Template groups using the "basic_image_item" template:
 
-- [info](#info-template-group)
-- [media](#media-template-group)
+- [Info](#info-template-group)
+- [Media](#media-template-group)
 
 ### Example usage of the "basic_image_item" template:
 
@@ -710,13 +694,13 @@ templates: {
 ### Available Features
 
 - `url` [optional]
-- `img` (url path to image)
+- `img` *url path to image*
 - `title`
 - `price` [optional]
 - `brand` [optional]
 - `rating` [optional]
 - `reviewCount` [optional]
-- `url_review` [optional] (url path to reviews)
+- `url_review` [optional] *url path to reviews*
 
 ### Template Diagram
 
@@ -726,7 +710,7 @@ templates: {
 
 ### Template groups using the "products_item" template:
 
-- [products](#products-template-group)
+- [Products](#products-template-group)
 
 ### Example usage of the "products_item" template:
 
@@ -739,7 +723,7 @@ templates: {
 
 ### Available Features
 
-- `img` [optional] (url path to image)
+- `img` [optional] *url path to image*
 - `url` 
 - `heading`
 - `rating` [optional]
@@ -758,9 +742,9 @@ templates: {
 
 ### Template groups using the "products_detail" template:
 
-- [products](#products-template-group)
-- [media](#media-template-group)
-- [icon](#icon-template-group)
+- [Products](#products-template-group)
+- [Media](#media-template-group)
+- [Icon](#icon-template-group)
 
 ### Example usage of the "products_detail" template:
 
@@ -780,7 +764,7 @@ templates: {
 - `subtitle_content` [optional] *sub-template*
 - `rating` [optional]
 - `reviewCount` [optional]
-- `url_review` [optional] (url path to reviews)
+- `url_review` [optional] *url path to reviews*
 - `abstract`
 - `buy` [optional] *sub-template*
 
@@ -792,9 +776,9 @@ templates: {
 
 ### Template groups using the "products_item_detail" template:
 
-- [products](#products-template-group)
-- [media](#media-template-group)
-- [icon](#icon-template-group)
+- [Products](#products-template-group)
+- [Media](#media-template-group)
+- [Icon](#icon-template-group)
 
 ### Example usage of the "products_item_detail" template:
 
@@ -808,13 +792,13 @@ templates: {
 ### Available Features
 
 - `url`
-- `image` [optional]
+- `image` [optional] *url path to image*
 - `title` [optional]
-- `subtitle` [optional] (shown only if `title` specified)
+- `subtitle` [optional] (available only if `title` specified)
 - `content` [optional] *sub-template*
-- `description` (required only if `content` sub-template not specified)
+- `description` (available and required only if `content` sub-template not specified)
 - `aux` [optional] *sub-template*
-- `auxTitle` (required only if `aux` specified)
+- `auxTitle` (available and required only if `aux` specified)
 
 ### Template Diagram
 
@@ -828,7 +812,7 @@ templates: {
 
 ### Template groups using the "basic_info_detail" template:
 
-- [info](#info-template-group)
+- [Info](#info-template-group)
 
 ### Example usage of the "basic_info_detail" template:
 
@@ -847,13 +831,11 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 ### Available Features
 
 'Front' of each item:
-- `image` [optional]
-- `num`
+- `image` [optional] *url path to image*
 - `name`
-- `title` (required if `image` specified)
-- `neighborhoodOrCity` [optional]
+- `title` (available only if `image` specified)
 - `ratingImageURL` [optional]
-- `rating` [optional] (shown only if `ratingImageURL` not specified)
+- `rating` [optional] (available only if `ratingImageURL` not specified)
 - `reviews` [optional]
 
 'Back' of each item: (displayed upon click)
@@ -861,7 +843,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 - `url`
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional] (shown only if `address_lines` not specified)
+- `address` [optional] (available only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
@@ -871,14 +853,13 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 ![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_front.png&f=1)
 ```
 +--------------------+
-num
+
 
 		image
 
 
 +--------------------+
 name
-neighborhoodOrCity
 ratingImageURL *or* rating
 reviews
 +--------------------+
@@ -913,7 +894,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Template groups using the "places_item" template:
 
-- [places](#places-template-group)
+- [Places](#places-template-group)
 
 ### Example usage of the "places_item" template:
 
@@ -930,15 +911,15 @@ The places detail template nicely displays information about a single location w
 
 - `url`
 - `name`
-- `image` [optional]
+- `image` [optional] *url path to image*
 - `title` (required if using `image`)
-- `hours` [optional]
+- `hours` [optional] *array of objects* (each object specifies `day` and `hours` properties)
 - `ratingImageURL` [optional]
-- `rating` [optional] (shown only if `ratingImageURL` not specified)
+- `rating` [optional] (available only if `ratingImageURL` not specified)
 - `reviews` [optional]
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional] (shown only if `address_lines` not specified)
+- `address` [optional] (available only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
@@ -966,7 +947,7 @@ The places detail template nicely displays information about a single location w
 
 ### Template groups using the "places_detail" template:
 
-- [places](#places-template-group)
+- [Places](#places-template-group)
 
 ### Example usage of the "places_detail" template:
 
@@ -976,24 +957,26 @@ The places detail template nicely displays information about a single location w
 
 ## `list_detail` Template
 
-The list detail template **wraps the [`record` template](#record-template)**. This template allows display of a title and subtitle above a bulleted list *or* a table of key-value pairs.
+This template allows display of a title and subtitle above a bulleted list *or* a table of key-value pairs. 
+
+To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#record-template) template to the `content` property.
 
 ### Available Features
 
 - `title` [optional]
 - `subtitle` [optional]
 
-#### If Displaying Table of Key-Value Pairs
+#### If Displaying Table of Key-Value Pairs:
 
-- `content` (set this value to 'record' to use the built-in record template)
-- `record_data` (an object containing the key-value pairs to display)
+- `content` (set this value to 'record' to use the built-in [`record`](#record-template) template)
+- `record_data` *object containing the key-value pairs to display*
 
-#### If Displaying Bulleted List of Values
+#### If Displaying Bulleted List of Values:
 
-- `list_content` (refers to your sub-template which populates within each `li` element)
-- `list` (an array of objects, each specifying the values available to your sub-template)
+- `list_content` *sub-template* (populates within each `li` element)
+- `list` *array of objects* (each object contains the properties used by `list_content` sub-template)
 
-*Note: The simplest way to display a bulleted list of values would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`*
+**Note:** The simplest way to display a bulleted list of values would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`.
 
 ### Template Diagram
 
@@ -1009,11 +992,11 @@ record_data *or* list
 +-------------------+
 ```
 
-### Template groups using the "places_detail" template:
+### Template groups using the "list_detail" template:
 
-- [list](#list-template-group)
+- [List](#list-template-group)
 
-### Example usage of the "places_detail" template:
+### Example usage of the "list_detail" template:
 
 - [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js) (search for ['whois mozilla.org'](https://duckduckgo.com/?q=whois+mozilla.org))
 
@@ -1039,7 +1022,7 @@ record_data *or* list
 
 ### Template groups using the "base_item" template:
 
-- [base](#base-template-group)
+- [Base](#base-template-group)
 
 ### Example usage of the "base_item" template:
 
@@ -1052,7 +1035,7 @@ record_data *or* list
 
 ### Available Features
 
-- `content` *string* OR *sub-template*
+- `content` *string* or *sub-template*
 
 ### Template Diagram
 
@@ -1066,7 +1049,7 @@ record_data *or* list
 
 ### Template groups using the "base_detail" template:
 
-- [base](#base-template-group)
+- [Base](#base-template-group)
 
 ### Example usage of the "base_detail" template:
 
