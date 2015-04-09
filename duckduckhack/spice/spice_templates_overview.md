@@ -1,22 +1,61 @@
-# Spice Templates
+# Spice Templates Overview
 
-##Spice Template Summary
+When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the Spice templates you choose.
 
-There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
+![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
+## Why Templates Are Great
+
+Templates save a lot of work: they allow contributors to focus on great results. Additionally, Instant Answers that use templates are automatically compatible with future design improvements, with zero extra work.
+
+## How Templates Work
+
+Spice Instant Answers can return either a **single result** or **multiple results**. It makes sense to display them differently, and Spice Instant Answers help you do that. 
+
+On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
+
+- `item` template
+- `detail` template
+
+Additionally, when displaying multiple results, you can allow users to drill down without leaving the page. For that, you can optionally specify a third template:
+
+- `item_detail` template
+
+The Spice framework automatically chooses which template to use, based on how many results there are to show, or click behavior.
+
+Here is an example of multiple results being returned, hence using the template specified for `item`: 
+
+![DuckDuckGo search for "seafood maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fseafood_maui.png&f=1)
+
+And here is an example of the same Instant Answer returning a single result, using the template specified for `detail`:
+
+![DuckDuckGo search for "longhi's maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Flonghis_maui.png&f=1)
+
+Finally, here is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
+
+![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs.png&f=1)
+
+## Template Groups
+
+Template groups are **presets** that save even more work. They represent pairings of `item` and `detail` templates that work particularly well together. There are several template groups, and in most cases **at least one group will be a good fit for your Instant Answer**.
+
+When you specify a template group using the `group` property, you are automatically specifying a predefined set of properties under `templates` and `options` for your Spice frontend. Templates come with certain features enabled, and you can easily override these preset options in the `options` block.
+
+**We require that you use a template group in your Instant Answer.** 
+
+If you cannot use an available template for your Instant Answer, please e-mail us at open@duckduckgo.com so we can help you out. We may find that a custom template is necessary. If that's the case, we'll work with you to create an awesome one, and perhaps inspire the next template group.
+
+### Choosing a Template Group
+
+<!-- For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice Instant Answer. -->
+
+This page will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+
+<!--
 - [Template Groups](#template-groups)  Defines the main type of view for the Instant Answer
 - [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each template
 - [Tile Variants](#tile-variants)  Used to modify width of the tiles
-
-There are several built-in Spice templates (both `item` and `detail`) which can be used for any Spice. Most of these templates however have similar or related elements and work well together (i.e. pairings of `item` and `detail` templates). As a result, we have defined various **template groups** which **we require that you use** because using a particular group tells the Spice system which built-in templates will be used for your Spice. Template groups also have various features enabled by default which you can easily modify using the `options` block.
-
-If you cannot use an available template for your Instant Answer, please e-mail us at open@duckduckgo.com so we can help you out. We may find that a custom template is necessary and we'll work with you to create an awesome one!
-
-<!-- /summary -->
-
-For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice Instant Answer.
-
-The purpose of this page is to help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+-->
 
 ## Index of Spice Templates
 
