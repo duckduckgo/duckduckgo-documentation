@@ -384,7 +384,7 @@ primary: [
     // for DDG.isRelevant
 
     { key: 'short_desc' }
-    // this is an extra "key" which servers as a fallback. This means if
+    // this is an extra "key" which serves as a fallback. This means if
     // either the 'name' or 'short_desc' or relevant the item is considered
     // relevant
 ],
