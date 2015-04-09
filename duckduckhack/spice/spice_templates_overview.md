@@ -618,7 +618,15 @@ templates: {
 
 ![text_item template ](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_item.png&f=1)
 
-<!-- /summary -->
+```
++------------------+
+icon
+title, altSubtitle
+subtitle
+description
+footer
++------------------+
+```
 
 ### Template groups using the "text_item" template:
 
@@ -647,7 +655,13 @@ templates: {
 
 ![text_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_detail.png&f=1)
 
-<!-- /summary -->
+```
++------------------+
+title_content or title
+subtitle_content or subtitle
+content
++------------------+
+```
 
 ### Template groups using the "text_detail" template:
 
@@ -674,8 +688,6 @@ templates: {
 ### Template Diagram
 
 ![basic_image_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_image_item.png&f=1)
-
-<!-- /summary -->
 
 ### Template groups using the "basic_image_item" template:
 
@@ -706,7 +718,15 @@ templates: {
 
 ![products_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_item.png&f=1)
 
-<!-- /summary -->
+```
++------------------+
+img
+title
+price
+brand
+rating
++------------------+
+```
 
 ### Template groups using the "products_item" template:
 
@@ -738,7 +758,18 @@ templates: {
 
 ![products_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_detail.png&f=1)
 
-<!-- /summary -->
+```
++------------------+
+img
+heading
+rating
+price
+brand
+subtitle_content
+abstract
+buy
++------------------+
+```
 
 ### Template groups using the "products_detail" template:
 
@@ -772,8 +803,6 @@ templates: {
 
 ![products_item_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_item_detail.png&f=1)
 
-<!-- /summary -->
-
 ### Template groups using the "products_item_detail" template:
 
 - [Products](#products-template-group)
@@ -804,7 +833,14 @@ templates: {
 
 ![basic_info_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_info_detail.png&f=1)
 
-<!-- /summary -->
+```
++-----------------------------------------+
+image
+title
+subtitle						auxTitle
+content or description			aux
++-----------------------------------------+
+```
 
 ### Example with Auxiliary Information Box:
 
