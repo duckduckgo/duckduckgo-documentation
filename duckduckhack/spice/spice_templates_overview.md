@@ -12,18 +12,14 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 ## How Templates Work
 
+### Specifying `item` and `detail` Templates
+
 Fundamentally, Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display them differently, and Spice Instant Answers account for both.
 
 On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
 
 - `item` template
 - `detail` template
-
-The Spice framework automatically chooses which template to display, based on how many results there are to show.
-
-Additionally, when displaying multiple results, you can allow users to drill down without leaving the page. For that, you can optionally specify a third template:
-
-- `item_detail` template
 
 Here is an example of multiple results being returned, hence using the template specified for `item`: 
 
@@ -33,9 +29,46 @@ And here is an example of the same Instant Answer returning a single result, usi
 
 ![DuckDuckGo search for "longhi's maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Flonghis_maui.png&f=1)
 
-Finally, here is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
+### Specifying an `item_detail` Template
+
+Additionally, when displaying multiple results, you might sometimes allow users to drill down without leaving the page. For that, you might optionally specify a third template:
+
+- `item_detail` template
+
+Here is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
 
 ![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs.png&f=1)
+
+### When Each Template Is Shown
+
+The Spice framework dynamically chooses which template to display, based on how many results there are to show and user behavior. Of course, you can specify template options to modify this; for example, you may want to prevent a particular template from appearing.
+
+Here is the default logic for showing templates:
+
+```
+          Instant Answer result      
+                   +                     
+ multiple results  |  single result      
+         +---------+----------+          
+         |                    |          
++--------v--------+  +--------v---------+
+|                 |  |                  |
+|      item       |  |      detail      |
+|                 |  |                  |
++-------+---------+  +------------------+
+        |                                
+        |                                
+        | click an item                   
+        |                                
+        |                                
++-------v---------+                      
+|                 |                      
+|   item_detail   |                      
+|  (if specified) |
+|                 |                     
++-----------------+                      
+
+```
 
 ## Template Groups
 
