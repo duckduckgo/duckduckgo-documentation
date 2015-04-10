@@ -14,18 +14,18 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 ### Specifying `item` and `detail` Templates
 
-Fundamentally, Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display them differently, and Spice Instant Answers account for both.
+Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display single and multiple results differently, using different templates.
 
 On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
 
 - `item` template
 - `detail` template
 
-Here is an example of multiple results being returned, hence using the template specified for `item`: 
+Below is an example of multiple results being returned. Each result is displayed using the template specified for `item`: 
 
 ![DuckDuckGo search for "seafood maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fseafood_maui.png&f=1)
 
-And here is an example of the same Instant Answer returning a single result, using the template specified for `detail`:
+Below is an example of the same Instant Answer returning a single result. This uses the template specified for `detail`:
 
 ![DuckDuckGo search for "longhi's maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Flonghis_maui.png&f=1)
 
@@ -35,29 +35,31 @@ Additionally, when displaying multiple results, you might sometimes allow users 
 
 - `item_detail` template
 
-Here is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
+This feature is used by fewer Instant Answers, but it can be very useful. Below is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
 
 ![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs.png&f=1)
 
 ### When Each Template Is Shown
 
-The Spice framework dynamically chooses which template to display, based on how many results there are to show and user behavior. Here is the default logic for showing templates:
+The Spice framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
 
 ```
           Instant Answer result      
                    +                     
+                   |  
  multiple results  |  single result      
+                   |  
          +---------+----------+          
+         |                    |          
+         |                    |   
          |                    |          
 +--------v--------+  +--------v---------+
 |                 |  |                  |
 |      item       |  |      detail      |
 |                 |  |                  |
-+-------+---------+  +------------------+
-        |                                
++-------+---------+  +------------------+                              
         |                                
         | click an item                   
-        |                                
         |                                
 +-------v---------+                      
 |                 |                      
@@ -80,7 +82,7 @@ You can easily **customize the appearance** of the template group by overriding 
 
 **We require that you use a template group in your Instant Answer.** 
 
-Of course, if you cannot use an available template for your Instant Answer, definitely reach out to us. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
+Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
 ### Choosing a Template Group
 
