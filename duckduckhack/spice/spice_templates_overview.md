@@ -88,11 +88,34 @@ You can easily **customize the appearance** of the template group by overriding 
 
 Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
-### Choosing a Template Group
+### Picking a Template Group
 
-<!-- For example, the `media` **template group** works well when your Spice is related to "thing" (e.g., recipe, tv show, movie, game) which has an image to display, a name, and a rating. It's likely that this template group will work for other types of results and we're here to help you determine which template group and features work best for your Spice Instant Answer. -->
+The best template group for your instant answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
 
-This page will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
+
+#### My Spice returns "things" where visuals are important 
+
+The `media` template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Examples that make a great fit for `media` include:
+
+- TV shows/[Movies](https://duckduckgo.com/?q=currently+in+theaters)
+- Games
+- [Courses](https://duckduckgo.com/?q=computer+science+online+course)
+
+#### My Spice returns detailed "lookup" information
+
+The `info` template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format.
+
+- [Recipes](https://duckduckgo.com/?q=how+to+mix+a+tom+collins&ia=recipes)
+- [Cards](https://duckduckgo.com/?q=mtg+Boros+Reckoner&ia=magicthegathering)
+- [Books](https://duckduckgo.com/?q=book+reviews+moonwalking+with+einstein&ia=books)
+- [Bands](https://duckduckgo.com/?q=weezer+band)
+- [Addresses](https://duckduckgo.com/?q=1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)
+- [Characters](https://duckduckgo.com/?q=bulbasaur+pokemon)
+
+The `list` template group works well for lookups that don't need an image; this group is excellent for displaying attributes in just a list or table format.
+
+- [WhoIs](https://duckduckgo.com/?q=whois+google.com)
 
 <!--
 - [Template Groups](#template-groups)  Defines the main type of view for the Instant Answer
@@ -140,6 +163,8 @@ This page will help you understand what each template group looks like and what 
 
 ------
 ## Template Groups
+
+This page will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
 There are several template groups to choose from:
 
@@ -224,7 +249,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Info Template Group
 
-Best used for results with more detailed information including an image, title, and a description or arbitrary content. This template also allows you to provide an auxiliary information box (to the right) and a "More At" link.
+The `info` template group is designed for Instant Answers that feature in-depth information about one item. This includes an image, title, and a description or arbitrary content. It also provides an auxiliary section to display further detail in table or list format (to the right).
 
 ### Usage
 
@@ -341,7 +366,9 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Media Template Group
 
-Best used for simple results that have a picture (essentially a simplified version of the **products** group). This template group provides a basic `item` template, which includes an image, title, and description. It also uses the same `detail` template as the **products** group.
+The `media` template group works well when an image is a significant part of the display of an item. Items can also have a title and a rating. 
+
+The `item` template is essentially a simplified version of the Products template group. It also uses the same `detail` template as the Products template group.
 
 ### Usage
 
@@ -501,7 +528,7 @@ To work correctly, the places model requires **additional values** passed that d
 
 ## List Template Group
 
-The List template group was designed for displaying a list of properties **of one item**. This can either come in the form of a bulleted list of properties, *or* a table of key-value pairs. 
+The List template group was designed for displaying in-depth attributes of one item. These attributes can be displayed as either a bulleted list of properties, *or* a table of key-value pairs. 
 
 Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for instant answers designed to **return a single item** with detailed properties.
 
