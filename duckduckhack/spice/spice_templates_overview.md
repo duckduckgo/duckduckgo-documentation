@@ -41,9 +41,7 @@ Here is an example of what happens after clicking a particular product. This sho
 
 ### When Each Template Is Shown
 
-The Spice framework dynamically chooses which template to display, based on how many results there are to show and user behavior. Of course, you can specify template options to modify this; for example, you may want to prevent a particular template from appearing.
-
-Here is the default logic for showing templates:
+The Spice framework dynamically chooses which template to display, based on how many results there are to show and user behavior. Here is the default logic for showing templates:
 
 ```
           Instant Answer result      
@@ -70,11 +68,15 @@ Here is the default logic for showing templates:
 
 ```
 
-## Template Groups
+Of course, you can specify template options to modify this; for example, you may want to prevent a particular template from appearing. For example, you might set `detail: false` to make sure your Instant Answer always displays results with the `item` template.
+
+## Template Groups (required)
 
 Template groups are presets of templates and template `options` that work well together. There are several template groups, and in most cases **at least one group will be a good fit for your Instant Answer**.
 
-Setting a template group automatically sets the `item`, `detail`, and sometimes `item_detail` templates and default `options`. You can easily override the default options in the `options` block of your Spice frontend code.
+Setting a template group automatically sets the `item` and `detail` templates. Some template groups also set an `item_detail` template and default `options`. 
+
+You can easily **customize the appearance** of the template group by overriding the default `options` in your Spice frontend code, as well as controlling what data is returned with each item.
 
 **We require that you use a template group in your Instant Answer.** 
 
