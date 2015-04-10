@@ -6,22 +6,24 @@ When your Instant Answer returns its awesome and delightful result(s), the infor
 
 ## Why Templates Are Great
 
-Templates save a lot of work: they allow contributors to focus on great results. Additionally, Instant Answers that use templates are automatically compatible with future design improvements, with zero extra work.
+Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with no HTML.
+
+Additionally, Instant Answers that use templates are automatically compatible with future design improvements, with zero extra work.
 
 ## How Templates Work
 
-Spice Instant Answers can return either a **single result** or **multiple results**. It makes sense to display them differently, and Spice Instant Answers help you do that. 
+Fundamentally, Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display them differently, and Spice Instant Answers account for both.
 
 On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
 
 - `item` template
 - `detail` template
 
+The Spice framework automatically chooses which template to display, based on how many results there are to show.
+
 Additionally, when displaying multiple results, you can allow users to drill down without leaving the page. For that, you can optionally specify a third template:
 
 - `item_detail` template
-
-The Spice framework automatically chooses which template to use, based on how many results there are to show, or click behavior.
 
 Here is an example of multiple results being returned, hence using the template specified for `item`: 
 
@@ -37,13 +39,13 @@ Finally, here is an example of what happens after clicking a particular product.
 
 ## Template Groups
 
-Template groups are **presets** that save even more work. They represent pairings of `item` and `detail` templates that work particularly well together. There are several template groups, and in most cases **at least one group will be a good fit for your Instant Answer**.
+Template groups are presets of templates and template `options` that work well together. There are several template groups, and in most cases **at least one group will be a good fit for your Instant Answer**.
 
-When you specify a template group using the `group` property, you are automatically specifying a predefined set of properties under `templates` and `options` for your Spice frontend. Templates come with certain features enabled, and you can easily override these preset options in the `options` block.
+Setting a template group automatically sets the `item`, `detail`, and sometimes `item_detail` templates and default `options`. You can easily override the default options in the `options` block of your Spice frontend code.
 
 **We require that you use a template group in your Instant Answer.** 
 
-If you cannot use an available template for your Instant Answer, please e-mail us at open@duckduckgo.com so we can help you out. We may find that a custom template is necessary. If that's the case, we'll work with you to create an awesome one, and perhaps inspire the next template group.
+Of course, if you cannot use an available template for your Instant Answer, definitely reach out to us. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
 ### Choosing a Template Group
 
