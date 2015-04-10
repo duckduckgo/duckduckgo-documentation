@@ -12,6 +12,10 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 ## How Templates Work
 
+The Spice framework provides you with a wide choice of templates to use. These are handlebars files which render in the context of **one item** returned by the Instant Answer.
+
+The built-in templates' options and variables are [documented below](#builtin-spice-templates).
+
 ### Specifying `item` and `detail` Templates
 
 Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display single and multiple results differently, using different templates.
