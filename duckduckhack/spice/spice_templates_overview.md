@@ -1115,12 +1115,9 @@ Tall and thin, like a movie poster.
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        variant: 'poster'
-    }
-}
+	...
+	variant: 'poster'
+ }
 ```
 
 <!-- /summary -->
@@ -1140,12 +1137,9 @@ Narrower tile width, normal height.
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        variant: 'narrow'
-    }
-}
+	...
+	variant: 'narrow'
+ }
 ```
 
 <!-- /summary -->
@@ -1165,12 +1159,9 @@ Increased width, normal height.
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        variant: 'wide'
-    }
-}
+	...
+	variant: 'wide'
+ }
 ```
 
 <!-- /summary -->
@@ -1189,12 +1180,9 @@ Super wide, normal height.
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        variant: 'xwide'
-    }
-}
+	...
+	variant: 'xwide'
+ }
 ```
 
 ### Examples
@@ -1211,12 +1199,9 @@ Shorter height, increased width.
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        variant: 'video'
-    }
-}
+	...
+	variant: 'video'
+ }
 ```
 
 ### Examples
@@ -1239,12 +1224,9 @@ Gives the detail area a lighter (white) background. This is ideally used when th
 
 ```javascript
 templates: {
-    ...
-    options: {
-        ...
-        detailVariant: 'light'
-    }
-}
+	...
+	detailVariant: 'light'
+ }
 ```
 
 ### Examples
