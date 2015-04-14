@@ -6,19 +6,19 @@ When your Instant Answer returns its awesome and delightful result(s), the infor
 
 ## Why Templates Are Great
 
-Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with no HTML.
+Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with little or no HTML/CSS coding.
 
 Additionally, Instant Answers that use templates are automatically compatible with future design improvements, with zero extra work.
 
 ## How Templates Work
 
-The Spice framework provides you with a wide choice of templates to use. These are handlebars files which render in the context of **one item** returned by the Instant Answer.
+Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The built-in templates' options and variables are documented in the following [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
+The Spice framework provides you with a wide choice of templates to use. The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#tile-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
-Spice Instant Answers can return either a **single result** or **multiple results**. Of course, it makes sense to display single and multiple results differently, using different templates.
+Spice Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
 
 On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
 
@@ -78,15 +78,15 @@ Of course, you can specify template options to modify this; for example, you may
 
 ## Template Groups (required)
 
-Template groups are presets of templates and template `options` that work well together. There are several template groups, and in most cases **at least one group will be a good fit for your Instant Answer**.
+Template groups are presets of templates and `template` `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
 
-Setting a template group automatically sets the `item` and `detail` templates. Some template groups also set an `item_detail` template and default `options`. 
+**We strongly recommend using a template group in your Instant Answer.** Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
-You can easily **customize the appearance** of the template group by overriding the default `options` in your Spice frontend code, as well as controlling what data is returned with each item.
+### How Template Groups Work
 
-**We require that you use a template group in your Instant Answer.** 
+Setting a template group automatically sets the `item` and `detail` templates. Some template groups also set an `item_detail` template and a few default `options`. 
 
-Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
+You can easily customize the appearance of the template group by overriding the default `options` in your Spice frontend code. Of course, the appearance will also be affected by which data is returned with each item.
 
 ### Picking a Template Group
 
@@ -125,7 +125,7 @@ The [List](#list-template-group) template group works well for lookups that don'
 
 The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
 
-Here are some result types that are a good fit this format:
+These results fit this format well:
 
 - [Software](https://duckduckgo.com/?q=alternative+to+notepad&ia=software)
 - [Code blocks](https://duckduckgo.com/?q=Fizz+Buzz+in+C&ia=codesnippet)
@@ -147,9 +147,9 @@ Examples of results that work well with the Products template group include:
 - [Books](https://duckduckgo.com/?q=amazon+ray+bradbury&ia=products)
 - [Physical products](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products)
 
-#### My Spice returns Places
+#### My Spice returns location-based results
 
-The [Places](#places-template-group) template group is perfect for location-based results. This template group displays single and multiple items on a map.
+The [Places](#places-template-group) template group is perfect for results where location is an important aspect. This template group displays single and multiple items on a map.
 
 Results that would make a good fit for the Places template group include:
 
@@ -160,11 +160,13 @@ Results that would make a good fit for the Places template group include:
 - Surf spots
 - Shark GPS locations
 
-#### My Spice is so amazingly unique that customizing existing template groups won't meet my needs
+#### My Spice is amazingly unique and existing template groups won't meet my needs
 
-We encourage you to think hard about using an existing template group. Most template features can be turned off, while many `detail` templates accept custom handlebars sub-templates. We're happy to help you figure out how your vision could be accomplished using existing templates. 
+We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be turned off. 
 
-That said, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group should be a last resort. 
+If working within existing template groups feels too constraining, we're happy to help you figure out how your vision could be accomplished using existing templates. E-mail us at open@duckduckgo.com and we'll work with you to find the best way to express your idea.
+
+In this context, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group is at a disadvantage because of the amount of work up front, and more involved maintenance over time.
 
 Examples of Instant Answers that do not fit into any template groups:
 
@@ -174,26 +176,8 @@ Examples of Instant Answers that do not fit into any template groups:
 - [Nutrition facts](https://duck.co/ia/view/nutrition)
 - [Webcomics](https://duck.co/ia/view/xkcd_display)
 
-<!--
-- [Template Groups](#template-groups)  Defines the main type of view for the Instant Answer
-- [Built-In Spice Templates](#builtin-spice-templates)  Different views and options for each template
-- [Tile Variants](#tile-variants)  Used to modify width of the tiles
--->
-
-## Index of Spice Templates
-
-- [**Template Groups**](#template-groups)
-    - [Default Template Options](#default-template-options)
-    - [Text](#text-template-group)
-    - [Info](#info-template-group)
-    - [Products](#products-template-group)
-    - [Media](#media-template-group)
-    - [Icon](#icon-template-group)
-	- [Places](#places-template-group)
-	- [List](#list-template-group)
-    - [Base](#base-template-group)
-
 ------
+
 ## Template Groups
 
 This page will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
@@ -209,7 +193,7 @@ There are several template groups to choose from:
 
 <!-- /summary -->
 
-### Default Template Options
+### A Note on Default Template Options
 
 **When no `templates.options` are specified and no template `group` has been selected, the `options` are implicity set as follows:**
 
