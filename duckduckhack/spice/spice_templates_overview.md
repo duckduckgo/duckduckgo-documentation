@@ -96,7 +96,9 @@ A quick way to get a feel for the different template groups is to [browse the In
 
 #### My Spice returns "things" where visuals are important 
 
-The `media` template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Examples that make a great fit for `media` include:
+The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
+
+Examples that make a great fit for `media` include:
 
 - TV shows/[Movies](https://duckduckgo.com/?q=currently+in+theaters)
 - Games
@@ -104,7 +106,9 @@ The `media` template group works well when an image is a significant part of the
 
 #### My Spice returns detailed "lookup" information
 
-The `info` template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format.
+The [Info](#info-template-group) template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format. 
+
+Examples include:
 
 - [Recipes](https://duckduckgo.com/?q=how+to+mix+a+tom+collins&ia=recipes)
 - [Cards](https://duckduckgo.com/?q=mtg+Boros+Reckoner&ia=magicthegathering)
@@ -113,9 +117,62 @@ The `info` template group is designed for Instant Answers that feature in-depth 
 - [Addresses](https://duckduckgo.com/?q=1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)
 - [Characters](https://duckduckgo.com/?q=bulbasaur+pokemon)
 
-The `list` template group works well for lookups that don't need an image; this group is excellent for displaying attributes in just a list or table format.
+The [List](#list-template-group) template group works well for lookups that don't need an image; this group is excellent for displaying attributes in just a list or table format. Take a look at the following example:
 
 - [WhoIs](https://duckduckgo.com/?q=whois+google.com)
+
+#### My Spice results are mainly text, with a possible icon or logo
+
+The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
+
+Here are some result types that are a good fit this format:
+
+- [Software](https://duckduckgo.com/?q=alternative+to+notepad&ia=software)
+- [Code blocks](https://duckduckgo.com/?q=Fizz+Buzz+in+C&ia=codesnippet)
+- [Jobs](https://duckduckgo.com/?q=perl+jobs+in+san+francisco&ia=jobs)
+- [Records](https://duckduckgo.com/?q=bugid+234&ia=launchpad)
+- [Simple answers](https://duckduckgo.com/?q=namecheap+http%3A%2F%2Finstantanswerparty.com&ia=domain)
+- [Long blocks of text](https://duckduckgo.com/?q=baconipsum+4&ia=baconipsum)
+
+#### My Spice returns products with prices, ratings, and brands/authors/artists
+
+The [Products](#product-template-group) is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
+
+Examples of results that work well with the Products template group include:
+
+- [Magazines issues](https://duckduckgo.com/?q=newint&ia=magazines)
+- [Parts](https://duckduckgo.com/?q=ne555+specs&ia=parts)
+- [Apps](https://duckduckgo.com/?q=tiny+piano+for+iphone&ia=apps)
+- [Events](https://duckduckgo.com/?q=live+show+weezer&ia=concerts)
+- [Books](https://duckduckgo.com/?q=amazon+ray+bradbury&ia=products)
+- [Physical products](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products)
+
+#### My Spice returns Places
+
+The [Places](#places-template-group) template group is perfect for location-based results. This template group displays single and multiple items on a map.
+
+Results that would make a good fit for the Places template group include:
+
+- [Parking](https://duckduckgo.com/?q=parking+in+philadelphia&ia=parking)
+- [Local businesses](https://duckduckgo.com/?q=restaurant+in+laguna+beach)
+- Hiking trails
+- Historical sites
+- Surf spots
+- Shark GPS locations
+
+#### My Spice is so amazingly unique that customizing existing template groups won't meet my needs
+
+We encourage you to think hard about using an existing template group. Most template features can be turned off, while many `detail` templates accept custom handlebars sub-templates. We're happy to help you figure out how your vision could be accomplished using existing templates. 
+
+That said, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group should be a last resort. 
+
+Examples of Instant Answers that do not fit into any template groups:
+
+- [Ducksay](https://duckduckgo.com/?q=ducksay+quack!&ia=ducksay)
+- [Flight itineraries](https://duckduckgo.com/?q=Jetblue+Boston+to+Los+Angeles&ia=route)
+- [Site functionality](https://duckduckgo.com/?q=is+reddit.com+working%3F&ia=answer)
+- [Nutrition facts](https://duck.co/ia/view/nutrition)
+- [Webcomics](https://duck.co/ia/view/xkcd_display)
 
 <!--
 - [Template Groups](#template-groups)  Defines the main type of view for the Instant Answer
@@ -197,7 +254,7 @@ There are several template groups to choose from:
 
 ## Text Template Group
 
-Best used for simple, text-only results. This template offers a title, description and footer.
+This template group is best used for results which are mostly text, where any images are icons or small logos. This template offers a title, description and footer.
 
 ### Usage
 
@@ -305,7 +362,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Products Template Group
 
-Best used to showcase products with an image, rating, review, brand and/or price. To give you a better idea, this template was initially created for the Amazon Spice. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
+Best used to showcase products with an image, rating, review, brand and/or price. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
 ### Usage
 
@@ -430,7 +487,7 @@ In order for these templates to display correctly, you need to ensure that each 
 
 ## Icon Template Group
 
-This template is similar to the **text** group, however, the detail view is better suited to displaying an icon image.
+This template is similar to the **text** group, since it uses the same `item` template. However, the detail view is better suited to displaying an icon image.
 
 ### Usage
 
