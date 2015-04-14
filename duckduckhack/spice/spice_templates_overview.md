@@ -14,7 +14,7 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 The Spice framework provides you with a wide choice of templates to use. These are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The built-in templates' options and variables are [documented below](#builtin-spice-templates).
+The built-in templates' options and variables are documented in the following [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
@@ -192,31 +192,6 @@ Examples of Instant Answers that do not fit into any template groups:
 	- [Places](#places-template-group)
 	- [List](#list-template-group)
     - [Base](#base-template-group)
-- [**Built-In Spice Templates**](#builtin-spice-templates)
-    - [`record`](#record-template)
-    - [`text_item`](#textitem-template)
-    - [`text_detail`](#textdetail-template)
-    - [`basic_image_item`](#basicimageitem-template)
-    - [`products_item`](#productsitem-template)
-    - [`products_detail`](#productsdetail-template)
-    - [`products_item_detail`](#productsitemdetail-template)
-    - [`basic_info_detail`](#basicinfodetail-template)
-	- [`places_item`](#placesitem-template)
-	- [`places_detail`](#placesdetail-template)
-	- [`list_detail`](#listdetail-template)
-    - [`base_item`](#baseitem-template)
-    - [`base_detail`](#basedetail-template)
-- [**Tile Variants**](#tile-variants)
-    - [`poster`](#poster-variant)
-    - [`narrow`](#narrow-variant)
-    - [`wide`](#wide-variant)
-    - [`xwide`](#xwide-variant)
-    - [`video`](#video-variant)
-
-<!--
-[**Detail Variants**](#tile-variants)
-    - [`light`](#light-detail-variant)
--->
 
 ------
 ## Template Groups
@@ -285,8 +260,8 @@ templates: {
 
 #### Default templates used in the 'text' group:
 
-- [`text_item`](#textitem-template)
-- [`text_detail`](#textdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
+- [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#textdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -341,8 +316,8 @@ templates: {
 
 #### Default templates used in the 'info' group:
 
-- [`basic_image_item`](#basicimageitem-template)
-- [`basic_info_detail`](#basicinfodetail-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#basicinfodetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -400,10 +375,10 @@ templates: {
 
 #### Default templates used in the 'products' group:
 
-- [`products_item`](#productsitem-template)
-- [`products_detail`](#productsdetail-template)
-- [`products_item_detail`](#productsitemdetail-template)
-- [`base_detail`](#basedetail-template)
+- [`products_item`](https://duck.co/duckduckhack/spice_templates_reference#productsitem-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -464,10 +439,10 @@ templates: {
 
 #### Default templates used in the 'media' group:
 
-- [`basic_image_item`](#basicimageitem-template)
-- [`products_detail`](#productsdetail-template)
-- [`products_item_detail`](#productsitemdetail-template)
-- [`base_detail`](#basedetail-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -519,9 +494,9 @@ templates: {
 
 #### Default templates used in the 'icon' group:
 
-- [`text_item`](#textitem-template)
-- [`products_detail`](#productsdetail-template)
-- [`products_item_detail`](#productsitemdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's **features**, which you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -565,8 +540,8 @@ templates: {
 
 #### Default templates used in the 'places' group:
 
-- [`places_item`](#placesitem-template)
-- [`places_detail`](#placesdetail-template)
+- [`places_item`](https://duck.co/duckduckhack/spice_templates_reference#placesitem-template)
+- [`places_detail`](https://duck.co/duckduckhack/spice_templates_reference#placesdetail-template)
 
 #### Places Model and View
 
@@ -618,8 +593,8 @@ templates: {
 
 #### Default templates used in the 'list' group:
 
-- [`text_item`](#textitem-template)
-- [`list_detail`](#listdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
+- [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#listdetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -672,8 +647,8 @@ templates: {
 
 #### Default templates used in the 'base' group:
 
-- [`base_item`](#baseitem-template)
-- [`base_detail`](#basedetail-template)
+- [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#baseitem-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
 In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 

@@ -73,7 +73,7 @@ templates: {
 
 ### Template groups using the "record" template:
 
-- Can be used as a sub-template by the [List](#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
 
 ### Example usage of the "record" template:
 
@@ -112,7 +112,7 @@ footer
 
 ### Template groups using the "text_item" template:
 
-- [Text](#text-template-group)
+- [Text](https://duck.co/duckduckhack/spice_templates_overview#text-template-group)
 
 ### Example usage of the "text_item" template:
 
@@ -147,7 +147,7 @@ content
 
 ### Template groups using the "text_detail" template:
 
-- [Text](#text-template-group)
+- [Text](https://duck.co/duckduckhack/spice_templates_overview#text-template-group)
 
 ### Example usage of the "text_detail" template:
 
@@ -173,8 +173,8 @@ content
 
 ### Template groups using the "basic_image_item" template:
 
-- [Info](#info-template-group)
-- [Media](#media-template-group)
+- [Info](https://duck.co/duckduckhack/spice_templates_overview#info-template-group)
+- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
 
 ### Example usage of the "basic_image_item" template:
 
@@ -212,7 +212,7 @@ rating
 
 ### Template groups using the "products_item" template:
 
-- [Products](#products-template-group)
+- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
 
 ### Example usage of the "products_item" template:
 
@@ -255,9 +255,9 @@ buy
 
 ### Template groups using the "products_detail" template:
 
-- [Products](#products-template-group)
-- [Media](#media-template-group)
-- [Icon](#icon-template-group)
+- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/spice_templates_overview#icon-template-group)
 
 ### Example usage of the "products_detail" template:
 
@@ -287,9 +287,9 @@ buy
 
 ### Template groups using the "products_item_detail" template:
 
-- [Products](#products-template-group)
-- [Media](#media-template-group)
-- [Icon](#icon-template-group)
+- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/spice_templates_overview#icon-template-group)
 
 ### Example usage of the "products_item_detail" template:
 
@@ -330,7 +330,7 @@ content or description			aux
 
 ### Template groups using the "basic_info_detail" template:
 
-- [Info](#info-template-group)
+- [Info](https://duck.co/duckduckhack/spice_templates_overview#info-template-group)
 
 ### Example usage of the "basic_info_detail" template:
 
@@ -412,7 +412,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Template groups using the "places_item" template:
 
-- [Places](#places-template-group)
+- [Places](https://duck.co/duckduckhack/spice_templates_overview#places-template-group)
 
 ### Example usage of the "places_item" template:
 
@@ -465,7 +465,7 @@ The places detail template nicely displays information about a single location w
 
 ### Template groups using the "places_detail" template:
 
-- [Places](#places-template-group)
+- [Places](https://duck.co/duckduckhack/spice_templates_overview#places-template-group)
 
 ### Example usage of the "places_detail" template:
 
@@ -512,7 +512,7 @@ record_data *or* list
 
 ### Template groups using the "list_detail" template:
 
-- [List](#list-template-group)
+- [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group)
 
 ### Example usage of the "list_detail" template:
 
@@ -540,7 +540,7 @@ record_data *or* list
 
 ### Template groups using the "base_item" template:
 
-- [Base](#base-template-group)
+- [Base](https://duck.co/duckduckhack/spice_templates_overview#base-template-group)
 
 ### Example usage of the "base_item" template:
 
@@ -567,7 +567,7 @@ record_data *or* list
 
 ### Template groups using the "base_detail" template:
 
-- [Base](#base-template-group)
+- [Base](https://duck.co/duckduckhack/spice_templates_overview#base-template-group)
 
 ### Example usage of the "base_detail" template:
 
