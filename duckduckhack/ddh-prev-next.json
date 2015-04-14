@@ -66,6 +66,11 @@
 
 	"spice_templates_overview.md": {
 		"prev": ["spice_displaying.md"],
+		"next": ["spice_templates_reference.md"]
+	},
+
+	"spice_templates_reference.md": {
+		"prev": ["spice_templates_overview.md"],
 		"next": ["spice_frontend_walkthroughs.md"]
 	},
 
