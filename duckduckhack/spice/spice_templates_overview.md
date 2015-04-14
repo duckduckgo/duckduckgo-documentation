@@ -1170,7 +1170,7 @@ To display a bulleted list, pass a sub-template to the `list_content` property. 
 
 #### If Displaying Table of Key-Value Pairs:
 
-- `content` (set this value to 'record' to use the built-in [`record`](#record-template) template)
+- `content` *sub-template* (set this value to 'record' to use the built-in [`record`](#record-template) template)
 - `record_data` *object containing the key-value pairs to display*
 
 #### If Displaying Bulleted List of Values:
