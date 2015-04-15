@@ -31,7 +31,7 @@ The list of built-in Spice templates includes:
 
 ## `record` Template
 
-A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value.
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#list-template) template.
 
 ### Template Diagram
 
@@ -90,6 +90,8 @@ templates: {
 
 ## `text_item` Template
 
+Template for displaying textual information tiles, each with an optional icon.
+
 ### Template Diagram
 
 ![text_item template ](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_item.png&f=1)
@@ -129,6 +131,8 @@ footer
 
 ## `text_detail` Template
 
+A template for displaying textual information detail, with no image or icon.
+
 ### Template Diagram
 
 ![text_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_detail.png&f=1)
@@ -162,6 +166,8 @@ content
 
 ## `basic_image_item` Template
 
+A tile template where images are the main feature, accompanied by text.
+
 ### Template Diagram
 
 ![basic_image_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_image_item.png&f=1)
@@ -188,6 +194,8 @@ content
 ------
 
 ## `products_item` Template
+
+A tile item template where images are emphasized, with features suited for items that can be purchased.
 
 ### Template Diagram
 
@@ -226,6 +234,8 @@ rating
 ------
 
 ## `products_detail` Template
+
+A detail template where image is emphasized, suited to feature for an item that can be purchased.
 
 ### Template Diagram
 
@@ -271,6 +281,8 @@ buy
 
 ## `products_item_detail` Template
 
+A template for drilling-down into a particular item on the same page. Emphasizes an image, and suited to feature for an item that can be purchased. This template features an optional call-to-action.
+
 ### Template Diagram
 
 ![products_item_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_item_detail.png&f=1)
@@ -302,6 +314,8 @@ buy
 ------
 
 ## `basic_info_detail` Template
+
+A detail template which shows in-depth information. This template includes an auxiliary area for listing properties.
 
 ### Template Diagram
 
@@ -345,7 +359,7 @@ content or description			aux
 
 ## `places_item` Template
 
-The places item template is a slick way to display multiple location results on one map. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=cafes+in+new+york), it's now available to instant answers as well.
+An item template which displays multiple location results on one map.
 
 Clicking a places item both indicates its location on a map, as well as 'flips' the item to display more detailed information. The `places_item` template can conceptually be divided into its 'front' and 'back'.
 
@@ -425,7 +439,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ## `places_detail` Template
 
-The places detail template nicely displays information about a single location with a map backdrop. Originally created for DuckDuckGo's built-in [local results](https://duckduckgo.com/?q=espresso+italiano+maui), it's now available to be used in instant answers.
+A detail template for displaying information about a single location on a map backdrop.
 
 ### Template Diagram
 
@@ -476,9 +490,7 @@ The places detail template nicely displays information about a single location w
 
 ## `list_detail` Template
 
-This template allows display of a title and subtitle above a bulleted list *or* a table of key-value pairs. 
-
-To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#record-template) template to the `content` property.
+A detail template for displaying of a title and subtitle above a bulleted list, or a table of key-value pairs. 
 
 ### Template Diagram
 
@@ -511,6 +523,8 @@ record_data *or* list
 
 ### Usage 
 
+To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#record-template) template to the `content` property.
+
 When displaying a bulleted list, the simplest case would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`.
 
 ### Example usage of the "list_detail" template:
@@ -524,6 +538,8 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 ------
 
 ## `base_item` Template
+
+An item template for containing fully customized markup.
 
 ### Template Diagram
 
@@ -552,6 +568,8 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 ------
 
 ## `base_detail` Template
+
+A detail template for containing fully customized markup.
 
 ### Template Diagram
 
