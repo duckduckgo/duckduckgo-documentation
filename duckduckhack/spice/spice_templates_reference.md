@@ -277,6 +277,7 @@ buy
 - [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
 - [Icon](https://duck.co/duckduckhack/spice_templates_overview#icon-template-group)
+
 ------
 
 ## `products_item_detail` Template
