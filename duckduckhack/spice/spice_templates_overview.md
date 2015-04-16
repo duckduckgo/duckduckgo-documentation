@@ -4,14 +4,6 @@ When your Instant Answer returns its awesome and delightful result(s), the infor
 
 ![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
-## Important Notes
-
-1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the **proper usage of both the `templates` block and the `options` block**.
-
-2. Specifically, in order for each of the templates to display correctly, you need to ensure that each of the template's features, which you are using, **are defined in your `data` object**. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
-
-Understanding these is crucial to implementing Spice templates properly and effectively.
-
 ## Why Templates Are Great
 
 Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with little or no HTML/CSS coding.
@@ -86,7 +78,7 @@ Of course, you can specify template options to modify this; for example, you may
 
 ## Template Groups (required)
 
-Template groups are presets of templates and `template` `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
+[Template groups](#template-groups) are preset properties for `template` and its `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
 
 **We strongly recommend using a template group in your Instant Answer.** Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
@@ -216,6 +208,16 @@ There are several template groups to choose from:
         content: false
     }
 ```
+
+------
+
+## Important Notes
+
+1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the **proper usage of both the `templates` block and the `options` block**.
+
+2. Specifically, in order for each of the templates to display correctly, you need to ensure that each of the template's features, which you are using, **are defined in your `data` object**. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+
+Understanding these is crucial to implementing Spice templates properly and effectively.
 
 ------
 
