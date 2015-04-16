@@ -4,9 +4,11 @@ When your Instant Answer returns its awesome and delightful result(s), the infor
 
 ![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
-## Important Note
+## Important Notes
 
-Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of both the `templates` block and the `options` block.
+1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the **proper usage of both the `templates` block and the `options` block**.
+
+2. Specifically, in order for each of the templates to display correctly, you need to ensure that each of the template's features, which you are using, **are defined in your `data` object**. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
 Understanding these is crucial to implementing Spice templates properly and effectively.
 
@@ -249,7 +251,7 @@ templates: {
 - [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
 - [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#textdetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'text' template group
 
@@ -301,7 +303,7 @@ templates: {
 - [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
 - [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#basicinfodetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'info' template group
 
@@ -358,7 +360,7 @@ templates: {
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'products' template group
 
@@ -418,7 +420,7 @@ templates: {
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'media' template group
 
@@ -468,7 +470,7 @@ templates: {
 - [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's **features**, which you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'icon' template group
 
@@ -558,7 +560,7 @@ templates: {
 - [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
 - [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#listdetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example use of the 'list' template group
 
@@ -608,7 +610,7 @@ templates: {
 - [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#baseitem-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-In order for these templates to display correctly, you need to ensure that each of the template's features you are using, are defined in your `data` object. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+See the **[important notes](#important-notes)** before implementing this template group.
 
 ### Example uses of the 'base' template group
 
