@@ -4,6 +4,12 @@ When your Instant Answer returns its awesome and delightful result(s), the infor
 
 ![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
+## Important Note
+
+Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of both the `templates` block and the `options` block.
+
+Understanding these is crucial to implementing Spice templates properly and effectively.
+
 ## Why Templates Are Great
 
 Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with little or no HTML/CSS coding.
@@ -217,10 +223,6 @@ This template group is best used for results which are mostly text, where any im
 
 ### Usage
 
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
-
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
 ```javascript
@@ -268,10 +270,6 @@ In order for these templates to display correctly, you need to ensure that each 
 The `info` template group is designed for Instant Answers that feature in-depth information about one item. This includes an image, title, and a description or arbitrary content. It also provides an auxiliary section to display further detail in table or list format (to the right).
 
 ### Usage
-
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
 
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
@@ -324,10 +322,6 @@ In order for these templates to display correctly, you need to ensure that each 
 Best used to showcase products with an image, rating, review, brand and/or price. An optional `buy` sub-template can be used to provide a compelling call-to-action (i.e. button).
 
 ### Usage
-
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
 
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
@@ -388,10 +382,6 @@ The `item` template is essentially a simplified version of the Products template
 
 ### Usage
 
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
-
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
 ```javascript
@@ -450,10 +440,6 @@ This template is similar to the **text** group, since it uses the same `item` te
 
 ### Usage
 
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
-
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
 ```javascript
@@ -496,10 +482,6 @@ In order for these templates to display correctly, you need to ensure that each 
 This template group is ideal for displaying results where location is an important factor to the searcher. The Places template group makes it easy for searchers to view a map showing all results, or highlighting a particular item without leaving the search page.
 
 ### Usage
-
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
 
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
@@ -550,10 +532,6 @@ Multiple items are displayed using the same `text_item` template used by Text an
 
 ### Usage
 
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
-
 Using this template requires that that you set the `group` property of the `templates` block like so:
 
 ```javascript
@@ -594,10 +572,6 @@ In order for these templates to display correctly, you need to ensure that each 
 This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
 
 ### Usage
-
-**Note:** Before using this template please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of the `templates` block and the `options` block. Understanding these is crucial to using Spice templates properly and effectively.
-
-------
 
 Using this template requires that that you set the `group` property of the `templates` block like so:
 

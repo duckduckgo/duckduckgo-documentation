@@ -7,6 +7,12 @@ The reference is divided into two parts:
 - [Spice Templates](#spice-templates)
 - [Tile Variants](#tile-variants)
 
+## Important Note
+
+Before using these templates please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of both the `templates` block and the `options` block. 
+
+Understanding these is crucial to implementing Spice templates properly and effectively.
+
 ## Spice Templates
 
 The list of built-in Spice templates includes:
