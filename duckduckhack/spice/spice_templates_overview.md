@@ -1218,13 +1218,9 @@ templates: {
 
 none...*yet!*
 
-<!--
-
-TODO: Unhide this once live
-
 ------
 
-# Detail Variants
+## Detail Variants
 
 ## `light` Detail Variant
 
@@ -1244,5 +1240,3 @@ templates: {
 ### Examples
 
 - ["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons)
-
--->
