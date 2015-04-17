@@ -1097,7 +1097,9 @@ record_data *or* list
 
 ## Tile Variants
 
-If the default tile dimensions are not perfect for your Spice result, you can choose from one of the following tile variants, each of which offer different dimensions (some wider, some taller):
+If the default tile dimensions are not perfect for your Spice result, you can use tile variants to modify the containers of your `item` template.
+
+Each of these offer different dimensions (some wider, some taller):
 
 - [poster](#poster-variant)
 - [narrow](#narrow-variant)
@@ -1221,6 +1223,8 @@ none...*yet!*
 ------
 
 ## Detail Variants
+
+This variant allows you to modify the `detail` template of your Instant Answer. Currently there is only one detail variant.
 
 ## `light` Detail Variant
 
