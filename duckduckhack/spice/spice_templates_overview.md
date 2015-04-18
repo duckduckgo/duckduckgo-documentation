@@ -1,6 +1,6 @@
 # Spice Templates
 
-##Spice Template Summary
+## Spice Template Summary
 
 There are several built-in Spice templates (both item and detail) which can be used for any Spice.  For more information see the following pages:
 
@@ -1095,23 +1095,30 @@ record_data *or* list
 
 ------
 
-## Tile Variants
+# Spice Variants
+
+## `tile` Variants
 
 If the default tile dimensions are not perfect for your Spice result, you can use tile variants to modify the containers of your `item` template.
 
 Each of these offer different dimensions (some wider, some taller):
 
-- [poster](#poster-variant)
-- [narrow](#narrow-variant)
-- [wide](#wide-variant)
-- [xwide](#xwide-variant)
-- [video](#video-variant)
+### Options
 
-------
+- `narrow` - narrower tile width, normal height (["alarm clock apps"](https://duckduckgo.com/?q=alarm+clock+apps), ["pa representatives"](https://duckduckgo.com/?q=pa+representatives))
+- `wide` - increased width, normal height
+- `xwide` - super wide, normal height (["flight aa102"](https://duckduckgo.com/?q=flight+aa102))
+- `video` - shorter height, increased width
+- `poster` - tall and thin, like a movie poster (["the dark knight movie"](https://duckduckgo.com/?q=the+dark+knight+movie), ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters))
 
-## `poster` Tile Variant
+### `tile` Preset Options
 
-Tall and thin, like a movie poster.
+The following four values for `tile` variant act as presets for [`tileTitle`](#tiletitle-variants) and [`tileSnippet`](#tilesnippet-variants) variant. These are combinations that our design team has found to work particularly well together.
+
+- `basic1` - equivalent to setting `tileTitle: '2line'` and `tileSnippet: 'small'` (["rubygems cucumber"](https://duckduckgo.com/?q=rubygems+cucumber))
+- `basic2` - equivalent to setting `tileTitle: '3line-small'` and `tileSnippet: 'large'`
+- `basic3` - equivalent to setting `tileTitle: '3line-large'` and `tileSnippet: 'small'`
+- `basic4` - equivalent to setting `tileTitle: '1line-large'` and `tileSnippet: 'large'` (["github zeroclickinfo"](https://duckduckgo.com/?q=github+zeroclickinfo))
 
 ### Usage
 
@@ -1124,113 +1131,17 @@ templates: {
  }
 ```
 
-<!-- /summary -->
-
-### Examples
-
-- ["the dark knight movie"](https://duckduckgo.com/?q=the+dark+knight+movie)
-- ["currently in theaters"](https://duckduckgo.com/?q=currently+in+theaters)
-
 ------
 
-## `narrow` Tile Variant
+## `detail` Variants
 
-Narrower tile width, normal height.
+This variant allows you to modify the `detail` template of your Instant Answer. Currently there is only one detail variant outside the default styling.
 
-### Usage
+### Options
 
-```javascript
-templates: {
-	...
-	variants: {
-		tile: 'narrow'
-	}
- }
-```
+- `light` - gives the detail area a lighter (white) background, ideally when displaying images with white backgrounds (["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons))
 
-<!-- /summary -->
-
-### Examples
-
-- ["alarm clock apps"](https://duckduckgo.com/?q=alarm+clock+apps)
-- ["pa representatives"](https://duckduckgo.com/?q=pa+representatives)
-
-------
-
-## `wide` Tile Variant
-
-Increased width, normal height.
-
-### Usage
-
-```javascript
-templates: {
-	...
-	variants: {
-		tile: 'wide'
-	}
- }
-```
-
-<!-- /summary -->
-
-### Examples
-
-none...*yet!*
-
-------
-
-## `xwide` Tile Variant
-
-Super wide, normal height.
-
-### Usage
-
-```javascript
-templates: {
-	...
-	variants: {
-		tile: 'xwide'
-	}
- }
-```
-
-### Examples
-
-- ["flight aa102"](https://duckduckgo.com/?q=flight+aa102)
-
-------
-
-## `video` Variant
-
-Shorter height, increased width.
-
-### Usage
-
-```javascript
-templates: {
-	...
-	variants: {
-		tile: 'video'
-	}
- }
-```
-
-### Examples
-
-none...*yet!*
-
-------
-
-## Detail Variants
-
-This variant allows you to modify the `detail` template of your Instant Answer. Currently there is only one detail variant.
-
-## `light` Detail Variant
-
-Gives the detail area a lighter (white) background. This is ideally used when the detail pane is displaying images with white backgrounds, such as products or logos.
-
-### Usage
+#### Usage
 
 ```javascript
 templates: {
@@ -1241,6 +1152,191 @@ templates: {
  }
 ```
 
-### Examples
+------
 
-- ["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons)
+## `tileTitle` Variants
+
+This variant changes the size of the title element, if it exists in the chosen template.
+
+### Options
+
+- `1line`
+- `1line-large`
+- `2line` - (["perl jobs in san francisco"](https://duckduckgo.com/?q=perl+jobs+in+san+francisco&ia=jobs))
+- `3line`
+- `3line-small` - (["reddit baking"](https://duckduckgo.com/?q=reddit+baking&ia=social))
+- `3line-large`
+
+Another way to set a `tileTitle` variant is to use [`tile` preset options](#tile-preset-options). These are combinations of `tileTitle` and `tileSnippet` values that our design team has found to work particularly well together.
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		tileTitle: '1line'
+	}
+ }
+```
+
+------
+
+## `tileSubtitle` Variants
+
+This variant changes the amount of lines available in the subtitle element, if it exists in the chosen template.
+
+### Options
+
+- `2line`
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		tileSubtitle: '2line'
+	}
+ }
+```
+
+------
+
+## `tileSnippet` Variants
+
+This variant changes the amount of space used for the description or content sub-template, if it exists in the chosen template.
+
+### Options
+
+- `small`
+- `large` (["global mobile data usage"](https://duckduckgo.com/?q=global+mobile+data+usage&ia=answer), ["rubygems cucumber"](https://duckduckgo.com/?q=rubygems+cucumber&ia=software))
+
+Another way to set a `tileSnippet` variant is to use [`tile` preset options](#tile-preset-options). These are combinations of `tileTitle` and `tileSnippet` values that our design team has found to work particularly well together.
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		tileSnippet: 'small'
+	}
+ }
+```
+
+------
+
+## `tileFooter` Variants
+
+This variant changes the amount of space allowed for the footer sub-template, if it exists in the chosen template.
+
+### Options
+
+- `2line` (["reddit baking"](https://duckduckgo.com/?q=reddit+baking&ia=social))
+- `3line` (["people in space"](https://duckduckgo.com/?q=people+in+space&ia=answer))
+- `4line` (["live shows in london"](https://duckduckgo.com/?q=live+shows+in+london&ia=concerts))
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		tileFooter: '2line'
+	}
+ }
+```
+
+------
+
+## `tileRating` Variants
+
+This variant sets the css float direction of the star rating element, if it exists in the template. As you can see in the examples, it only affects the float behavior of the stars themselves - not any accompanying elements.
+
+### Options
+
+- `starsLeft` (["amazon ninja costume"](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products))
+- `starsRight` (["recipes quinoa"](https://duckduckgo.com/?q=recipes+quinoa&ia=recipes))
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		tileRating: 'starsLeft'
+	}
+ }
+```
+
+------
+
+## `iconImage` Variants
+
+For templates containing an icon element, this variant sets its size.
+
+### Options
+
+- `small` (["alternative to emacs"](https://duckduckgo.com/?q=alternative+to+emacs&ia=software))
+- `medium`
+- `large`
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		iconImage: 'small'
+	}
+ }
+```
+
+------
+
+## `iconBadge` Variants
+
+For templates containing an icon badge (an inline colored container with text), this variant sets its size. 
+
+<!-- 
+Use these images to illustrate https://github.com/duckduckgo/zeroclickinfo-spice/pull/1402#issuecomment-70932875
+
+https://s3.amazonaws.com/uploads.hipchat.com/12461/101675/JJKsEiuPjHGtfvS/2015-04-17_18h06_14.png
+-->
+
+### Options
+
+- `small`
+- `medium` (["UV Index"](https://duckduckgo.com/?q=UV+index), US searches only)
+- `large`
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		iconBadge: 'small'
+	}
+ }
+```
+
+------
+
+## `iconTitle` Variants
+
+### Options
+
+- `large`
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		iconTitle: 'large'
+	}
+ }
+```
