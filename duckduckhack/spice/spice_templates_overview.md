@@ -1101,7 +1101,13 @@ record_data *or* list
 
 If the default tile dimensions are not perfect for your Spice result, you can use tile variants to modify the containers of your `item` template.
 
-Each of these offer different dimensions (some wider, some taller):
+![tile variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftile_variant.png&f=1)
+
+### Applicable Templates
+
+- `base_item` template
+- `basic_image_item` template
+- `products_item` template
 
 ### Options
 
@@ -1158,6 +1164,12 @@ templates: {
 
 This variant changes the size of the title element, if it exists in the chosen template.
 
+![tileTitle variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftiletitle_variant.png&f=1)
+
+### Applicable Templates
+
+- `text_item` template
+
 ### Options
 
 - `1line`
@@ -1182,9 +1194,38 @@ templates: {
 
 ------
 
+## `iconTitle` Variants
+
+This variant changes the size of the title element, specifically for the `basic_icon_detail` template.
+
+### Applicable Templates
+
+- `basic_icon_detail` template
+
+### Options
+
+- `large`
+
+### Usage
+
+```javascript
+templates: {
+	...
+	variants: {
+		iconTitle: 'large'
+	}
+ }
+```
+
+------
+
 ## `tileSubtitle` Variants
 
-This variant changes the amount of lines available in the subtitle element, if it exists in the chosen template.
+This variant changes the amount of lines available in the subtitle element, for the `text_item` template.
+
+### Applicable Templates
+
+- `text_item` template
 
 ### Options
 
@@ -1206,6 +1247,12 @@ templates: {
 ## `tileSnippet` Variants
 
 This variant changes the amount of space used for the description or content sub-template, if it exists in the chosen template.
+
+![tileSnippet diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftilesnippet_variant.png&f=1)
+
+### Applicable Templates
+
+- `text_item` template
 
 ### Options
 
@@ -1231,6 +1278,8 @@ templates: {
 
 This variant changes the amount of space allowed for the footer sub-template, if it exists in the chosen template.
 
+![tileFooter variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftilefooter_variant.png&f=1)
+
 ### Options
 
 - `2line` (["reddit baking"](https://duckduckgo.com/?q=reddit+baking&ia=social))
@@ -1254,6 +1303,8 @@ templates: {
 
 This variant sets the css float direction of the star rating element, if it exists in the template. As you can see in the examples, it only affects the float behavior of the stars themselves - not any accompanying elements.
 
+![tileRating variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftilerating_variant.png&f=1)
+
 ### Options
 
 - `starsLeft` (["amazon ninja costume"](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products))
@@ -1275,6 +1326,12 @@ templates: {
 ## `iconImage` Variants
 
 For templates containing an icon element, this variant sets its size.
+
+![iconImage variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ficonimage_variant.png&f=1)
+
+### Applicable Templates
+
+- `basic_icon_detail` template
 
 ### Options
 
@@ -1299,11 +1356,11 @@ templates: {
 
 For templates containing an icon badge (an inline colored container with text), this variant sets its size. 
 
-<!-- 
-Use these images to illustrate https://github.com/duckduckgo/zeroclickinfo-spice/pull/1402#issuecomment-70932875
+![iconBadge variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ficonbadge_variant.png&f=1)
 
-https://s3.amazonaws.com/uploads.hipchat.com/12461/101675/JJKsEiuPjHGtfvS/2015-04-17_18h06_14.png
--->
+### Applicable Templates
+
+- `basic_icon_detail` template
 
 ### Options
 
@@ -1318,25 +1375,6 @@ templates: {
 	...
 	variants: {
 		iconBadge: 'small'
-	}
- }
-```
-
-------
-
-## `iconTitle` Variants
-
-### Options
-
-- `large`
-
-### Usage
-
-```javascript
-templates: {
-	...
-	variants: {
-		iconTitle: 'large'
 	}
  }
 ```
