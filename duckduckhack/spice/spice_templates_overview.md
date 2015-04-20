@@ -1143,6 +1143,10 @@ templates: {
 
 This variant allows you to modify the `detail` template of your Instant Answer. Currently there is only one detail variant outside the default styling.
 
+### Applicable Templates
+
+- All tile containers (which wrap `item` templates)
+
 ### Options
 
 - `light` - gives the detail area a lighter (white) background, ideally when displaying images with white backgrounds (["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons))
@@ -1280,6 +1284,10 @@ This variant changes the amount of space allowed for the footer sub-template, if
 
 ![tileFooter variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftilefooter_variant.png&f=1)
 
+### Applicable Templates
+
+- `text_item` template
+
 ### Options
 
 - `2line` (["reddit baking"](https://duckduckgo.com/?q=reddit+baking&ia=social))
@@ -1304,6 +1312,10 @@ templates: {
 This variant sets the css float direction of the star rating element, if it exists in the template. As you can see in the examples, it only affects the float behavior of the stars themselves - not any accompanying elements.
 
 ![tileRating variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftilerating_variant.png&f=1)
+
+### Applicable Templates
+
+- `basic_image_item`
 
 ### Options
 
