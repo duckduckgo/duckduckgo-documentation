@@ -49,6 +49,10 @@ Spice.add({
         item_detail: String|Function,
 
         options: Object
+
+		variants: Object
+		
+		elClass: Object
     },
 
     sort_fields: Object,
@@ -312,9 +316,15 @@ A `templates: {}` property should be used to specify the template group and all 
 
     Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
 
-    ### Tile Variants
+    ### Variants
 
-    Sometimes the default height or width of the tile might not be perfect for your Spice result. If you need a wider or perhaps taller tile, you can specify a tile `variant` to adjust their dimensions. A list of the tile variants available can be found in the [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md#tile-variants) document
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_overview#spice-variants). Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	
+	### Directly Specifying Classes
+
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_overview#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+
+	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
     **Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
 
