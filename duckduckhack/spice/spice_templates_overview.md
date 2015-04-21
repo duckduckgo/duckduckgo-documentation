@@ -1097,6 +1097,12 @@ record_data *or* list
 
 # Spice Variants
 
+If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. 
+
+Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+
+*We strongly recommend using variants since they make it easy to quickly customize the appearance in a standardized way. However, if variants do not meet your needs, you may consider [directly specifying classes](#directly-specifying-classes).*
+
 ## `tile` Variants
 
 If the default tile dimensions are not perfect for your Spice result, you can use tile variants to modify the containers of your `item` template.
@@ -1390,3 +1396,42 @@ templates: {
 	}
  }
 ```
+
+------
+
+# Directly Specifying Classes
+
+When [variants](#spice-variants) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+
+Classes can be directly specified to the same elements as [Variants](#spice-variants); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+
+### Applicable Templates
+
+Because `elClass` properties apply to the same properties as `variants`, its properties are applicable to the respective templates. For example, if you are directly specifying a class for [`tileFooter`](#tilefooter-variants), then the only applicable template is `text_item`.
+
+### Options
+
+The values that can be used in the elClass are found in the [Text and Colors](https://duckduckgo.com/styleguide#txt-n-color) section of the DuckDuckGo Style Guide. Currently, you can pass the following types of classes:
+
+- Precision font sizes (classes which begin with `.tx--`, such as `.tx--25`)
+- Text colors (classes which begin with `.tx-clr--`, such as `.tx-clr--dk`)
+
+### Usage
+
+`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants).
+
+```javascript
+templates: {
+	...
+	elClass: {
+		tileSubtitle: 'tx--25',
+		tileFooter: 'tx--11',
+		...
+	}
+ }
+```
+
+### Example
+
+- Tor Node: ["tor node 198.96.155.3"](https://duckduckgo.com/?q=tor+node+198.96.155.3&ia=tornode)  ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/zaahir/tor-node-refine/share/spice/tor_node/tor_node.js#L185))
+
