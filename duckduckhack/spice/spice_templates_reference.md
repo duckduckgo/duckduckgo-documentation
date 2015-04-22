@@ -600,7 +600,7 @@ A detail template for containing fully customized markup.
 
 ------
 
-# Spice Variants
+# Spice Variants Reference
 
 If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. 
 
@@ -906,9 +906,9 @@ templates: {
 
 # Directly Specifying Classes
 
-When [variants](#spice-variants) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+When [variants](#spice-variants-reference) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
 
-Classes can be directly specified to the same elements as [Variants](#spice-variants); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+Classes can be directly specified to the same elements as [Variants](#spice-variants-reference); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
 ### Applicable Templates
 
@@ -923,7 +923,7 @@ The values that can be used in the elClass are found in the [Text and Colors](ht
 
 ### Usage
 
-`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants).
+`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants-reference).
 
 ```javascript
 templates: {
