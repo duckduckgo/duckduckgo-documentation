@@ -1,8 +1,12 @@
-## Adding Your Spice to the AnswerBar
+## Adding Your Spice to the DuckDuckGo AnswerBar
 
-`Spice.add()` is the most important Spice function and it's used to add your Spice to the AnswerBar. However, this function is capable of much more than simply showing your Spice result. For example, it can also help you ensure the relevancy and order of results and it enables you to configure the templates your Spice will use. This document provides an in-depth overview of how you can use `Spice.add()` to make sure your Instant Answer is excellent.
+Once your Instant Answer has been triggered, and the API request has returned a response to the client, the final step is to display your results onscreen.
 
-## Spice.add Properties Overview
+This is done by the Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript). The most important part of this callback is calling `Spice.add()`. This function adds your Spice to the AnswerBar. 
+
+This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
+
+## `Spice.add()` Properties Overview
 
 ```javascript
 Spice.add({
@@ -55,6 +59,9 @@ Spice.add({
 		elClass: Object
     },
 
+	view: String,
+	model: String,
+
     sort_fields: Object,
     sort_default: String|Object,
 
@@ -66,15 +73,15 @@ Spice.add({
   });
 ```
 
-## Spice.add Properties
+## Summary of `Spice.add()` Properties
 
-Used to add your Spice to the AnswerBar and has the following required properties:
+The following properties are **required**:
 
 - [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
 - [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
 - [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
 
-Other properties and functions of `spice.add()` include:
+These properties are optional:
 
 - [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
@@ -85,11 +92,11 @@ Other properties and functions of `spice.add()` include:
 
 <!-- /summary -->
 
-### id `string` [required]
+## `id` *string* [required]
 
 A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
 
-### name `string` [required]
+## `name` *string* [required]
 
 The name that will be used for your Spice's AnswerBar tab. The Spice system will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Spice provides. Here are some examples:
 
@@ -125,12 +132,12 @@ The name that will be used for your Spice's AnswerBar tab. The Spice system will
 </table>
 
 
-### data `object` [required]
+## `data` *object* [required]
 
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
 
 
-## Instant Answer Metadata
+## `meta` *object*
 
 The following options are used to define elements of the **MetaBar**:
 
@@ -147,95 +154,89 @@ The following options are used to define elements of the **MetaBar**:
 
 The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
 
-- ### searchTerm `string`
+- ### `searchTerm` *string*
 
     The key term or subject in the search query. The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query. For example, searching "coupons for electronics", will display the phrase "Showing 15 **electronics** Coupons" in the MetaBar. In this case, the word "electronics" is the `searchTerm`.
 
-- ### itemType `string`
+- ### `itemType` *string*
 
     The type of item being shown (e.g., Videos, Images, Recipes). `itemType` is used by the MetaBar to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
 
 ------
 
-- ### primaryText `string`
+- ### `primaryText` *string*
 
     If defined, this text will replace the MetaBar's "Showing **n** Items" text. For example, the Forecast Spice uses this to display "Weather for New York, NY" in the MetaBar.
 
-- ### secondaryText `string`
+- ### `secondaryText` *string*
 
     This is an optional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
 
 ------
 
-- ### sourceName `string` [required]
+- ### `sourceName` *string* [required]
 
     The name of the source as it should be shown in the "More at" link. For example, in "More at Quixey", "Quixey" is the `sourceName`.
 
-- ### sourceLogo `string` (url)
+- ### `sourceLogo` *url string*
 
     If defined, the image provided will replace the `sourceName` with a logo. Generally this should not be necessary, but in rare cases, API providers require that a specific image be used to represent their brand and so this can be used.
 
-- ### sourceUrl `string` (url) [required]
+- ### `sourceUrl` *url string* [required]
 
     The URL to follow when the "More at" link is clicked. This value will become the `href` of the "More at" link. It is preferred that **https\:\/\/** be used when possible.
 
-- ### sourceIcon `boolean`
+- ### `sourceIcon` *boolean*
 
     A boolean flag that determines if a favicon should be shown for the "More at" link. When a `sourceUrl` is given, this will default to `true`. This should only be set to `false` when no favicon exists for the `sourceUrl` domain.
 
-- ### sourceIconUrl `string` (url)
+- ### `sourceIconUrl` *url string*
 
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
 
 
-## Data Normalization
+## `normalize` *function*
 
-- ### normalize `function` [required depending on template and data]
+This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
 
-    This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
+This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
 
-    This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
+If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g. `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
 
-    If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g. `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+For example, if you have a `data` object that looks like this:
 
-    <!-- /summary -->
+```javascript
+// original data object from API
+{
+    heading: "My awesome title",
+    image:   "http://website.com/image.png"
+}
+```
 
-    For example, if you have a `data` object that looks like this:
+You will likely want to use the `heading` property as the `title` for the **basic_image_item** template, so your `normalize` function would need to look like this:
 
-    ```javascript
-    // original data object from API
-    {
-        heading: "My awesome title",
-        image:   "http://website.com/image.png"
-    }
-    ```
+```javascript
+normalize: function(item){
+    return {
+        title: item.heading
+    };
+}
+```
 
-    You will likely want to use the `heading` property as the `title` for the **basic_image_item** template, so your `normalize` function would need to look like this:
+This would result in your `data` object looking like this once it gets passed along to the template:
 
-    ```javascript
-    normalize: function(item){
-        return {
-            title: item.heading
-        };
-    }
-    ```
+```javascript
+// normalized data object
+{
+    heading: "My awesome title",
+    image:   "http://website.com/image.png",
+    title:   "My awesome title"
+}
+```
 
-    This would result in your `data` object looking like this once it gets passed along to the template:
+Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
 
-    ```javascript
-    // normalized data object
-    {
-        heading: "My awesome title",
-        image:   "http://website.com/image.png",
-        title:   "My awesome title"
-    }
-    ```
-
-    Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
-
-    ---
-
-    #### exactMatch `boolean` & boost `boolean`
+    - ### `exactMatch` *boolean* and `boost` *boolean*
 
     Two special properties, `exactMatch` and `boost`, can also be set for the current item to add them to the list of exact matches or boosted items. When the tile view displays, the **exact match** items will come **first**, followed by the **boosted** items and then the rest of the items.
 
@@ -254,13 +255,13 @@ The following options are used to define elements of the **MetaBar** including t
     ```
 
 
-## Templates
+## `templates` *object*
 
 A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
 <!-- /summary -->
 
-- ### group `string` [required unless `item` or `detail` is specified]
+- ### `group` *string* [required, unless `item` and `detail` are specified]
 
     Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The various options for this will be explained later in the [template overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md).
 
@@ -274,23 +275,21 @@ A `templates: {}` property should be used to specify the template group and all 
     detail: 'basic_info_detail'
     ```
 
-- ### item `string|function` [required for **multiple item** results when no `group` is specified]
+- ### `item` *string|function* [required if no `group` is specified]
 
     The template to be used for the body of each tile in a tile view.
 
     **Note:** The `item` template is only used when your Spice Instant Answer returns multiple items (like the recipe or app Instant Answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
 
-    - Generally, a *`string`* is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
+    - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
 
-    - Alternatively, a **function** can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
+    - Alternatively, a function can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
 
-- ### item_mobile `string|function`
+- ### `item_mobile` *string|function*
 
     An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-------
-
-- ### detail `string|function` [required for **single item** results when no `group` is specified]
+- ### `detail` *string|function* [required if no `group` is specified]
 
     The template to be used for the detail area.
 
@@ -300,27 +299,23 @@ A `templates: {}` property should be used to specify the template group and all 
 
     **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
 
-- ### detail_mobile `string|function`
+- ### `detail_mobile` *string|function*
 
     An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-------
-
-- ### item_detail `string|function`
+- ### `item_detail` *string|function*
 
     An alternative `detail` template to be used when a tile view contains a **single** tile.
 
-------
-
-- ### options `object`
+- ### `options` *object*
 
     Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
 
-    ### Variants
+- ### `variants` *object*
 
 	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 	
-	### Directly Specifying Classes
+- ### `elClass` *object*
 
 	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
 
@@ -360,13 +355,13 @@ A `templates: {}` property should be used to specify the template group and all 
     }
     ```
 
-## Relevancy
+## `relevancy` *object*
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
 In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
 
-## Relevancy Blocks
+### Relevancy Blocks
 
 A relevancy block is comprised of an array of simple objects. For each object, the properties are used to indicate certain constraints. The concept of a relevancy block is best explained with an example:
 
@@ -415,36 +410,32 @@ category: [
 
 **Note:** The relevancy checking is done using the `DDG.isRelevant()` function.
 
-- ### type `string`
+- ### `type` *string*
 
     The name of the relevancy block to use. If no value is provided, the default `primary` block will be used.
 
     For example, the Quixey spice determines the `type` based on the query. If the query matches against our category regex (i.e. the query contains a category word), we set `type` to "category", otherwise we use "primary".
 
-- ### skip_words `array`
+- ### `skip_words` *array*
 
     A list of words to ***skip*** when comparing the specified text against the current query. Generally these words should include any trigger words for your Spice. The skip words list is **not** dependent on the chosen relevancy block.
 
-- ### primary `array` [required when using relevancy]
+- ### `primary` *array* [required if using `relevancy`]
 
     The list of relevancy terms for this particular relevancy block
 
-- ### <additional_relevancy_block> `array`
+- ### `<additional_relevancy_block>` *array*
 
     An additional list of relevancy terms, using the same format as `primary`. This object (and other relevancy blocks) can be named arbitrarily.
 
-- ### dup `string`
+- ### `dup` *string*
 
     This indicates which property should be used to check for de-duplication. The given string supports dot path formatting, e.g., "item.foo.bar"
 
 
-## Sorting
+## `sort_fields` *object*
 
-In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. As well, you can specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
-
-<!-- /summary -->
-
-### sort_fields `object`
+In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. You can also specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
 
 This object specifies sorting fields (e.g., name, price, rating, reviews) and their respective comparison functions, which will be passed along to JavaScript's `sort()` method.
 
@@ -462,7 +453,7 @@ sort_fields: {
 ```
 
 
-### sort_default `string|object`
+### `sort_default` *string|object*
 
 A string specifying the default `sort_field` to be used for initial sorting of the tiles.
 
@@ -482,7 +473,7 @@ sort_default: {
 }
 ```
 
-## Views
+## `view` *string*
 
 Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the SoundCloud IA, or the Maps used in our Places IA.
 
@@ -497,7 +488,7 @@ Available Views:
 - TilesWithTopics
 - Videos
 
-## Models
+## `model` *string*
 
 Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models that can help with formatting things like Lat/Lon for a Place or Dimensions for an Image. Also, to use some of our non-default views, like Audio or Places you need to use a compatible data model.
 
@@ -509,9 +500,13 @@ Available Models:
 - Product
 - Video
 
+<!-- 
+
 #### Audio attributes:
 
 #### Image attributes:
+
+-->
 
 #### Place attributes:
 
@@ -533,9 +528,13 @@ If you use the Place data model, you can normalize your data into objects with t
 - hours (object): hash where three char day is the key and the value is a string of hours for that day, i.e.: { 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }
 - phone (string)
 
+<!--
+
 #### Product attributes:
 
 #### Video attributes:
+
+-->
 
 #### Examples:
 
@@ -634,7 +633,7 @@ If you need to fire off an event handler when a tile is clicked or when your Spi
 
 <!-- /summary -->
 
-## onItemSelect `function`
+## `onItemSelect` *function*
 
 This event occurs each time a tile is selected.
 
@@ -648,16 +647,16 @@ onItemSelected: function(item) {
 
 **Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-## onItemUnselect `function`
+## `onItemUnselect` *function*
 
 This event occurs each time a tile is unselected.
 
 **Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-## onShow `function`
+## `onShow` *function*
 
 This event occurs when a Spice tab initially opens.
 
-## onHide `function`
+## `onHide` *function*
 
 This event occurs when a Spice tab is closed i.e. when another tab is selected.
