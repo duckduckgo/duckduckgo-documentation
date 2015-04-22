@@ -318,11 +318,11 @@ A `templates: {}` property should be used to specify the template group and all 
 
     ### Variants
 
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_overview#spice-variants). Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 	
 	### Directly Specifying Classes
 
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_overview#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
 
 	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
