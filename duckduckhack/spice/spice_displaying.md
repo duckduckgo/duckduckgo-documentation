@@ -8,7 +8,7 @@ Once your Instant Answer has been triggered, and the API request has returned a 
 
 The Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript), contains the code which displays your spice. 
 
-The most important part of this callback, and often the only part, is calling [`Spice.add()`](#codespice-addcode-overview). This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
+The most important part of this callback, and often the only part, is calling [`Spice.add()`](#spiceadd-overview). This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
 
 In some (rare) scenarios, you may also want to handle the AnswerBar's events (for example, to stop media playing when the user hides your Instant Answer). These [events](#events) are covered at the end of this page.
 
@@ -83,18 +83,18 @@ Spice.add({
 
 ### Required Properties
 
-- [id](http://duck.co/duckduckhack/spice_displaying#codeidcode-string-required) A unique identifier for your Spice. The `id` should match the name of your callback function
-- [name](http://duck.co/duckduckhack/spice_displaying#codenamecode-string-required) The name that will be used for your Spice's AnswerBar tab
-- [data](http://duck.co/duckduckhack/spice_displaying#codedatacode-object-required) The object containing the data to be used by your templates
-- [meta](http://duck.co/duckduckhack/spice_displaying#codemetacode-object-required) Used to define elements of the **MetaBar** including the "More at" link
+- [id](#id-string-required) A unique identifier for your Spice. The `id` should match the name of your callback function
+- [name](#name-string-required) The name that will be used for your Spice's AnswerBar tab
+- [data](#data-object-required) The object containing the data to be used by your templates
+- [meta](#meta-object-required) Used to define elements of the **MetaBar** including the "More at" link
 
 ### Optional Properties
 
-- [normalize](http://duck.co/duckduckhack/spice_displaying#codenormalizecode-function) This allows you to normalize the `data` before it is passed on to the template
-- [templates](http://duck.co/duckduckhack/spice_displaying#codetemplatescode-object) Used to specify the template group and all other templates that are being used
-- [relevancy](http://duck.co/duckduckhack/spice_displaying#coderelevancycode-object) Used to ensure the relevancy of your Spice's result
-- [view](http://duck.co/duckduckhack/spice_displaying#codeviewcode-string) This allows you to explicitly specify the view class used for displaying the Instant Answer
-- [model](http://duck.co/duckduckhack/spice_displaying#codemodelcode-string) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
+- [normalize](#normalize-function) This allows you to normalize the `data` before it is passed on to the template
+- [templates](#templates-object) Used to specify the template group and all other templates that are being used
+- [relevancy](#relevancy-object) Used to ensure the relevancy of your Spice's result
+- [view](#view-string) This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](#model-string) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
 ------
 
