@@ -1,16 +1,20 @@
-## Adding Your Spice to the DuckDuckGo AnswerBar
+# Adding Your Spice to the DuckDuckGo AnswerBar
 
 Once your Instant Answer has been triggered, and the API request has returned a response to the client, the final step is to display your results onscreen.
 
 ![answerbar](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fanswerbar.png&f=1)
 
-The Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript), contains the code which displays your spice. The most important part of this callback is calling `Spice.add()`. This function adds your Spice to the AnswerBar. 
+## Contents of the Spice Frontend Callback
 
-This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
+The Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript), contains the code which displays your spice. 
+
+The most important part of this callback, and often the only part, is calling [`Spice.add()`](#codespice-addcode-overview). This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
+
+In some (rare) scenarios, you may also want to handle the AnswerBar's events (for example, to stop media playing when the user hides your Instant Answer). These [events](#events) are covered at the end of this page.
 
 ------
 
-## `Spice.add()` Properties Overview
+## `Spice.add()` Overview
 
 ```javascript
 Spice.add({
