@@ -77,18 +77,18 @@ Spice.add({
 
 ### Required Properties
 
-- [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
-- [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
-- [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
-- [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
+- [id](http://duck.co/duckduckhack/spice_displaying#codeidcode-string-required) A unique identifier for your Spice. The `id` should match the name of your callback function
+- [name](http://duck.co/duckduckhack/spice_displaying#codenamecode-string-required) The name that will be used for your Spice's AnswerBar tab
+- [data](http://duck.co/duckduckhack/spice_displaying#codedatacode-object-required) The object containing the data to be used by your templates
+- [meta](http://duck.co/duckduckhack/spice_displaying#codemetacode-object-required) Used to define elements of the **MetaBar** including the "More at" link
 
 ### Optional Properties
 
-- [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
-- [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
-- [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
-- [view](http://duck.co/duckduckhack/spice_displaying#views) This allows you to explicitly specify the view class used for displaying the Instant Answer
-- [model](http://duck.co/duckduckhack/spice_displaying#model) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
+- [normalize](http://duck.co/duckduckhack/spice_displaying#codenormalizecode-function) This allows you to normalize the `data` before it is passed on to the template
+- [templates](http://duck.co/duckduckhack/spice_displaying#codetemplatescode-object) Used to specify the template group and all other templates that are being used
+- [relevancy](http://duck.co/duckduckhack/spice_displaying#coderelevancycode-object) Used to ensure the relevancy of your Spice's result
+- [view](http://duck.co/duckduckhack/spice_displaying#codeviewcode-string) This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](http://duck.co/duckduckhack/spice_displaying#codemodelcode-string) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
 ------
 
