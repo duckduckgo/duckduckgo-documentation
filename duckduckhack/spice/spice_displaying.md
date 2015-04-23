@@ -80,10 +80,10 @@ Spice.add({
 - [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
 - [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
 - [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
+- [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 
 ### Optional Properties
 
-- [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
 - [templates](http://duck.co/duckduckhack/spice_displaying#templates) Used to specify the template group and all other templates that are being used
 - [relevancy](http://duck.co/duckduckhack/spice_displaying#relevancy) Used to ensure the relevancy of your Spice's result
@@ -202,7 +202,7 @@ The following options are used to define elements of the MetaBar including the "
 
     If defined, the image provided will replace the `sourceName` with a logo. Generally this is not necessary; in rare cases, API providers require that a specific image be used to represent their brand.
 
-	### Example
+	#### Example
 	
 	From [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L79):
 	
@@ -236,6 +236,8 @@ The following options are used to define elements of the MetaBar including the "
 Specifying this optional function allows you to normalize each item (or single item) returned in the `data` object before it is passed on to the template. You can use this function to add or modify properties for use by your template. 
 
 When dealing with multiple items returned in the `data` object, the normalize function iterates over each `item` so they can be individually normalized.
+
+### Usage
 
 Use this function to return an object with properties to be incorporated in your item as it's passed to the template. These properties are incorporated using jQuery's `$.extend()` method, meaning it will *modify* your original `data` object instead of replacing it. Using `$.extend()` means that any properties that don't already exist will be added, and those that did originally exit will be overwritten. In other words, a shallow copy is made.
 
@@ -398,7 +400,7 @@ A `templates: {}` property should be used to specify the template group and all 
 
 ## `relevancy` *object*
 
-If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
+When dealing with multiple items, the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
 In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
 
