@@ -2,7 +2,9 @@
 
 Once your Instant Answer has been triggered, and the API request has returned a response to the client, the final step is to display your results onscreen.
 
-This is done by the Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript). The most important part of this callback is calling `Spice.add()`. This function adds your Spice to the AnswerBar. 
+![answerbar](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fanswerbar.png&f=1)
+
+The Spice frontend callback function, [covered in the basic tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript), contains the code which displays your spice. The most important part of this callback is calling `Spice.add()`. This function adds your Spice to the AnswerBar. 
 
 This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
 
