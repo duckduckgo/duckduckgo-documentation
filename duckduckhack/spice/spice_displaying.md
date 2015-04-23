@@ -6,6 +6,8 @@ This is done by the Spice frontend callback function, [covered in the basic tuto
 
 This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions. This document provides an in-depth overview of all that `Spice.add()` allows you to do.
 
+------
+
 ## `Spice.add()` Properties Overview
 
 ```javascript
@@ -73,15 +75,13 @@ Spice.add({
   });
 ```
 
-## Summary of `Spice.add()` Properties
-
-The following properties are **required**:
+### Required Properties
 
 - [id](http://duck.co/duckduckhack/spice_displaying#id-codestringcode-required) A unique identifier for your Spice. The `id` should match the name of your callback function
 - [name](http://duck.co/duckduckhack/spice_displaying#name-codestringcode-required) The name that will be used for your Spice's AnswerBar tab
 - [data](http://duck.co/duckduckhack/spice_displaying#data-codeobjectcode-required) The object containing the data to be used by your templates
 
-These properties are optional:
+### Optional Properties
 
 - [meta](http://duck.co/duckduckhack/spice_displaying#instant-answer-metadata) Used to define elements of the **MetaBar** including the "More at" link
 - [normalize](http://duck.co/duckduckhack/spice_displaying#data-normalization) This allows you to normalize the `data` before it is passed on to the template
@@ -90,11 +90,13 @@ These properties are optional:
 - [view](http://duck.co/duckduckhack/spice_displaying#views) This allows you to explicitly specify the view class used for displaying the Instant Answer
 - [model](http://duck.co/duckduckhack/spice_displaying#model) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
-<!-- /summary -->
+------
 
 ## `id` *string* [required]
 
 A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
+
+------
 
 ## `name` *string* [required]
 
@@ -131,77 +133,113 @@ The name that will be used for your Spice's AnswerBar tab. The Spice system will
     </tbody>
 </table>
 
+------
 
 ## `data` *object* [required]
 
 The object containing the data to be used by your templates. In most cases, it is best to pass along `api_result` to `data`, so that all of your API response is accessible to your templates.
 
-
-## `meta` *object*
-
-The following options are used to define elements of the **MetaBar**:
-
-- [searchTerm](http://duck.co/duckduckhack/spice_displaying#searchterm) Determines the item in the phrase "Showing 15 `term` "
-- [itemType](http://duck.co/duckduckhack/spice_displaying#itemtype) The type of item being shown (e.g., Videos, Images, Recipes)
-- [primaryText](http://duck.co/duckduckhack/spice_displaying#primarytext)  If defined, this text will replace the MetaBar's "Showing **n** Items" text
-- [secondaryText](http://duck.co/duckduckhack/spice_displaying#secondarytext) This is an optional text label that will be displayed to the left of the "More at" link
-- [sourceName](http://duck.co/duckduckhack/spice_displaying#sourcename)The name of the source as it should be shown in the "More at" link
-- [sourceLogo](http://duck.co/duckduckhack/spice_displaying#sourceLogo) If defined, the image provided will replace the `sourceName` with a logo
-- [sourceUrl](http://duck.co/duckduckhack/spice_displaying#sourceurl) The URL to follow when the "More at" link is clicked
-- [sourceIcon](http://duck.co/duckduckhack/spice_displaying#sourceicon) A boolean flag that determines if a favicon should be shown for the "More at" link
-
-<!-- /summary -->
-
-The following options are used to define elements of the **MetaBar** including the "More at" link. They are all properties of the `meta: {}` property.
-
-- ### `searchTerm` *string*
-
-    The key term or subject in the search query. The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query. For example, searching "coupons for electronics", will display the phrase "Showing 15 **electronics** Coupons" in the MetaBar. In this case, the word "electronics" is the `searchTerm`.
-
-- ### `itemType` *string*
-
-    The type of item being shown (e.g., Videos, Images, Recipes). `itemType` is used by the MetaBar to describe the current result. Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
-
 ------
 
-- ### `primaryText` *string*
+## `meta` *object* [required]
 
-    If defined, this text will replace the MetaBar's "Showing **n** Items" text. For example, the Forecast Spice uses this to display "Weather for New York, NY" in the MetaBar.
-
-- ### `secondaryText` *string*
-
-    This is an optional text label that will be displayed to the left of the "More at" link. For example, the Forecast Spice uses this to indicate the current temperature unit being used: "Temperatures in F&deg;".
-
-------
+The following options are used to define elements of the MetaBar including the "More at" link. They are all properties of the `meta: {}` property.
 
 - ### `sourceName` *string* [required]
 
-    The name of the source as it should be shown in the "More at" link. For example, in "More at Quixey", "Quixey" is the `sourceName`.
-
-- ### `sourceLogo` *url string*
-
-    If defined, the image provided will replace the `sourceName` with a logo. Generally this should not be necessary, but in rare cases, API providers require that a specific image be used to represent their brand and so this can be used.
+    The name of the source as it should be shown in the "More at" link. For example, in "More at Quixey", "Quixey" [is specified](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L77) as `sourceName`.
 
 - ### `sourceUrl` *url string* [required]
 
-    The URL to follow when the "More at" link is clicked. This value will become the `href` of the "More at" link. It is preferred that **https\:\/\/** be used when possible.
+	The URL to follow when the "More at" link is clicked. This value is the `href` attribute of the "More at" link. This can refer to the main page of the source, or better yet, the specific page relevant to the user's query. 
+	
+	Secure **https\:\/\/** should be used whenever possible.
+
+	#### Examples
+	
+	- In [rand_word.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rand_word/rand_word.js#L14), the `sourceUrl` is a hardcoded address.
+	- In [is_it_up.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/is_it_up/is_it_up.js#L15), the `sourceUrl` is dynamically generated to direct to a specific page relating to the search query.
+
+- ### `searchTerm` *string*
+
+	Determines the modifier in the MetaBar's description: "Showing 15 `searchTerm` `itemType`".
+	
+    The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query. 
+
+	For example, searching "coupons for electronics", will display the phrase "Showing 15 **electronics** Coupons" in the MetaBar. In this case, the word "electronics" is the `searchTerm`.
+	
+	#### Examples 
+
+	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L89), `searchTerm` is passed the search query with some string manipulation.
+	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), `searchTerm` is passed the query as-is.
+	- In [alternative_to.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js#L16), `searchTerm` is passed a name provided by the API.
+	- In [songkick_geteventid.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/songkick/geteventid/songkick_geteventid.js#L38), `searchTerm` is passed a city name.
+
+- ### `itemType` *string*
+
+    Determines the noun in the MetaBar's description: "Showing 15 `searchTerm` `itemType`". In other words, `itemType` is the type of item being shown (e.g., Videos, Images, Recipes).
+	
+	Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
+	
+	#### Examples
+	
+	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L90), the `itemType` is a string: `'News articles'`.
+	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), there is no `itemType`. You can see the [resulting description](https://duckduckgo.com/?q=duck+images&ia=images) in the AnswerBar.
+
+- ### `primaryText` *string*
+
+    If defined, this text will replace the MetaBar's "Showing **n** Items" text. 
+
+	#### Example
+
+	- In [parking.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js#L89), the `primaryText` is set to `'Parking near'` plus the location.
+
+- ### `secondaryText` *string*
+
+    This is an optional text label, displayed to the left of the "More at" link. For example, a weather forecast Spice might use this to indicate the temperature unit, such as "Temperature in F&deg;".
+
+- ### `sourceLogo` *url string*
+
+    If defined, the image provided will replace the `sourceName` with a logo. Generally this is not necessary; in rare cases, API providers require that a specific image be used to represent their brand.
+
+	### Example
+	
+	From [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L79):
+	
+	```javascript
+		meta:{
+			...
+			sourceLogo: {
+	            url: DDG.get_asset_path('quixey','quixey_logo.png'),
+	            width: '45',
+	            height: '12'
+	        }
+		}
+	```
+	
+	You can see it in action by [searching for apps](https://duckduckgo.com/?q=money+apps&ia=apps).
 
 - ### `sourceIcon` *boolean*
 
-    A boolean flag that determines if a favicon should be shown for the "More at" link. When a `sourceUrl` is given, this will default to `true`. This should only be set to `false` when no favicon exists for the `sourceUrl` domain.
+    A boolean flag that determines if a favicon should be shown to the left of the "More at" link. The favicon is pulled dynamically from the source domain by duckduckgo's server. 
+
+	When a `sourceUrl` is given, this will default to `true`. It should only be set to `false` when the `sourceUrl` domain does not have a favicon.
 
 - ### `sourceIconUrl` *url string*
 
-    If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), the link provided here will be used as the source for the "More at" link's favicon. This will replace any favicons from the `sourceUrl` domain.
+    If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the "More at" favicon source. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
 
+------
 
 ## `normalize` *function*
 
-This allows you to normalize the `data` object (or array of items) before it is passed on to the template, by adding or modifying properties that are used by your templates. When dealing with multiple items, the normalize function iterates over each `item` so they can be individually normalized.
+Specifying this optional function allows you to normalize each item (or single item) returned in the `data` object before it is passed on to the template. You can use this function to add or modify properties for use by your template. 
 
-This function uses jQuery's `$.extend()` method, so it will modify your `data` object by adding any returned properties that don't already exist, or simply overwrite the ones that do, i.e., a shallow copy is made
+When dealing with multiple items returned in the `data` object, the normalize function iterates over each `item` so they can be individually normalized.
 
-If you are using a built-in template (e.g., **basic_image_item**), it expects that certain properties will be present (e.g. `title`, `image`) and so the normalized function should be used to provide those or normalize their values if the already exist in your `api_result`.
+Use this function to return an object with properties to be incorporated in your item as it's passed to the template. These properties are incorporated using jQuery's `$.extend()` method, meaning it will *modify* your original `data` object instead of replacing it. Using `$.extend()` means that any properties that don't already exist will be added, and those that did originally exit will be overwritten. In other words, a shallow copy is made.
+
+Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (e.g., *basic_image_item*). Built-in templates expect that certain properties will be present (e.g. `title`, `image`) and so the normalized function allows you to provide those (or normalize their values if the already exist in your `api_result`).
 
 For example, if you have a `data` object that looks like this:
 
@@ -213,7 +251,7 @@ For example, if you have a `data` object that looks like this:
 }
 ```
 
-You will likely want to use the `heading` property as the `title` for the **basic_image_item** template, so your `normalize` function would need to look like this:
+You will likely want to pass the `heading` property as the `title` for the **basic_image_item** template, so your `normalize` function would need to look like this:
 
 ```javascript
 normalize: function(item){
@@ -236,24 +274,25 @@ This would result in your `data` object looking like this once it gets passed al
 
 Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
 
-    - ### `exactMatch` *boolean* and `boost` *boolean*
+### `exactMatch` *boolean* and `boost` *boolean*
 
-    Two special properties, `exactMatch` and `boost`, can also be set for the current item to add them to the list of exact matches or boosted items. When the tile view displays, the **exact match** items will come **first**, followed by the **boosted** items and then the rest of the items.
+Two special properties, `exactMatch` and `boost`, can also be set for the current item to add them to the list of exact matches or boosted items. When the tile view displays, the **exact match** items will come **first**, followed by the **boosted** items and then the rest of the items.
 
-    Example:
+Example:
 
-    ```javascript
-    normalize: function(item) {
-        if (item.name === DDG.get_query()){
-            item.exactMatch = true;
-        } else if (item.developer.name === DDG.get_query()) {
-            item.boost = true;
-        }
-
-        return { ... }
+```javascript
+normalize: function(item) {
+    if (item.name === DDG.get_query()){
+        item.exactMatch = true;
+    } else if (item.developer.name === DDG.get_query()) {
+        item.boost = true;
     }
-    ```
 
+    return { ... }
+}
+```
+
+------
 
 ## `templates` *object*
 
@@ -355,6 +394,8 @@ A `templates: {}` property should be used to specify the template group and all 
     }
     ```
 
+------
+
 ## `relevancy` *object*
 
 If you want to ensure the relevancy of your Spice's result (usually when dealing with multiple items), the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
@@ -432,6 +473,7 @@ category: [
 
     This indicates which property should be used to check for de-duplication. The given string supports dot path formatting, e.g., "item.foo.bar"
 
+------
 
 ## `sort_fields` *object*
 
@@ -473,6 +515,8 @@ sort_default: {
 }
 ```
 
+------
+
 ## `view` *string*
 
 Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the SoundCloud IA, or the Maps used in our Places IA.
@@ -487,6 +531,8 @@ Available Views:
 - Tiles (default view for IAs with multiple items)
 - TilesWithTopics
 - Videos
+
+------
 
 ## `model` *string*
 
@@ -621,42 +667,36 @@ Spice.add({
 });
 ```
 
+------
 
 ## Events
 
-If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, the following properties can be used to define a callback function:
+If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, you can handle these events with a callback function.
 
-- [onItemSelect](http://duck.co/duckduckhack/spice_displaying#onitemselect-codefunctioncode) This event occurs each time a tile is selected
-- [onItemUnselect](http://duck.co/duckduckhack/spice_displaying#onitemunselect-codefunctioncode) This event occurs each time a tile is unselected
-- [onShow](http://duck.co/duckduckhack/spice_displaying#onshow-codefunctioncode) This event occurs when a Spice tab initially opens
-- [onHide](http://duck.co/duckduckhack/spice_displaying#onhide-codefunctioncode) This event occurs when a Spice tab is closed i.e. when another tab is selected
+- ### `onItemSelect` *function*
 
-<!-- /summary -->
+	This event occurs each time a tile is selected.
 
-## `onItemSelect` *function*
+	Example:
 
-This event occurs each time a tile is selected.
+	```javascript
+	onItemSelected: function(item) {
+	   player.play(item);
+	}
+	```
 
-Example:
+	**Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-```javascript
-onItemSelected: function(item) {
-   player.play(item);
-}
-```
+- ### `onItemUnselect` *function*
 
-**Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
+	This event occurs each time a tile is unselected.
 
-## `onItemUnselect` *function*
+	**Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
-This event occurs each time a tile is unselected.
+- ### `onShow` *function*
 
-**Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
+	This event occurs when a Spice tab initially opens.
 
-## `onShow` *function*
+- ### `onHide` *function*
 
-This event occurs when a Spice tab initially opens.
-
-## `onHide` *function*
-
-This event occurs when a Spice tab is closed i.e. when another tab is selected.
+	This event occurs when a Spice tab is closed i.e. when another tab is selected.
