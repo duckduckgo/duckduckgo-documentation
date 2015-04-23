@@ -165,7 +165,7 @@ The following are all properties of the `meta: {}` object.
 
 	The URL to follow when the "More at" link is clicked. This value is the `href` attribute of the "More at" link. This can refer to the main page of the source, or better yet, the specific page relevant to the user's query. 
 	
-	Secure **https\:\/\/** should be used whenever possible.
+	A secure **https://** connection should be used whenever possible.
 
 	#### Examples
 	
@@ -182,7 +182,7 @@ The following are all properties of the `meta: {}` object.
 	
 	#### Examples 
 
-	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L89), `searchTerm` is passed the search query with some string manipulation.
+	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L89), `searchTerm` is passed the search query after some basic cleanup.
 	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), `searchTerm` is passed the query as-is.
 	- In [alternative_to.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js#L16), `searchTerm` is passed a name provided by the API.
 	- In [songkick_geteventid.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/songkick/geteventid/songkick_geteventid.js#L38), `searchTerm` is passed a city name.
@@ -219,17 +219,19 @@ The following are all properties of the `meta: {}` object.
 	From [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L79):
 	
 	```javascript
-		meta:{
-			...
-			sourceLogo: {
-	            url: DDG.get_asset_path('quixey','quixey_logo.png'),
-	            width: '45',
-	            height: '12'
-	        }
-		}
+	meta:{
+		...
+		sourceLogo: {
+            url: DDG.get_asset_path('quixey','quixey_logo.png'),
+            width: '45',
+            height: '12'
+        }
+	}
 	```
 	
-	You can see it in action by [searching for apps](https://duckduckgo.com/?q=money+apps&ia=apps).
+	This is the [result](https://duckduckgo.com/?q=money+apps&ia=apps):
+	
+	![sourcelogo](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fsourcelogo.png&f=1)
 
 - ### `sourceIcon` *boolean*
 
