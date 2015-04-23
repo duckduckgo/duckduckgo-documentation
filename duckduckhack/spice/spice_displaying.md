@@ -143,7 +143,13 @@ The object containing the data to be used by your templates. In most cases, it i
 
 ## `meta` *object* [required]
 
-The following options are used to define elements of the MetaBar including the "More at" link. They are all properties of the `meta: {}` property.
+The following options are used to define elements of the MetaBar including the "More at" link. 
+
+![metabar example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fmetabar.png&f=1)
+
+![metabar item example](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fmetabar_item.png&f=1)
+
+The following are all properties of the `meta: {}` object.
 
 - ### `sourceName` *string* [required]
 
