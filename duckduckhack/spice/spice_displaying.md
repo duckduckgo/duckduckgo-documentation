@@ -308,11 +308,13 @@ normalize: function(item) {
 
 A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
+More about how templates work, and how to use them, can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+
 <!-- /summary -->
 
 - ### `group` *string* [required, unless `item` and `detail` are specified]
 
-    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The various options for this will be explained later in the [template overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md).
+    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
 
     This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
 
