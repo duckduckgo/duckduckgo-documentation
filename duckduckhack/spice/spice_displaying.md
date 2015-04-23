@@ -235,27 +235,33 @@ The following are all properties of the `meta: {}` object.
 
 - ### `sourceIcon` *boolean*
 
-    A boolean flag that determines if a favicon should be shown to the left of the "More at" link. The favicon is pulled dynamically from the source domain by duckduckgo's server. 
+    A boolean flag that determines if a favicon should be shown to the left of the "More at" link. The favicon is determined automatically by DuckDuckGo based on the `sourceUrl`. 
 
 	When a `sourceUrl` is given, this will default to `true`. It should only be set to `false` when the `sourceUrl` domain does not have a favicon.
 
 - ### `sourceIconUrl` *url string*
 
-    If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the "More at" favicon source. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
+    If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the favicon shown to the left of the "More at" link. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
 
 ------
 
 ## `normalize` *function*
 
-Specifying this optional function allows you to normalize each item (or single item) returned in the `data` object before it is passed on to the template. You can use this function to add or modify properties for use by your template. 
+Specifying this optional function allows you to normalize each item in the `data` object before it is used by the template. You can use this function to rename properties, add new properties, or modify values.
 
-When dealing with multiple items returned in the `data` object, the normalize function iterates over each `item` so they can be individually normalized.
+This function is applied both for single results or multiple results. When dealing with multiple items returned in the `data` object, the normalize function iterates over each `item` so they can be individually normalized.
 
 ### Usage
 
-Use this function to return an object with properties to be incorporated in your item as it's passed to the template. These properties are incorporated using jQuery's `$.extend()` method, meaning it will *modify* your original `data` object instead of replacing it. Using `$.extend()` means that any properties that don't already exist will be added, and those that did originally exit will be overwritten. In other words, a shallow copy is made.
+The function set for `normalize` is expected to return an object with properties to be incorporated in each item. 
 
-Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (e.g., *basic_image_item*). Built-in templates expect that certain properties will be present (e.g. `title`, `image`) and so the normalized function allows you to provide those (or normalize their values if the already exist in your `api_result`).
+The properties returned by your function are combined with the original `data` item using jQuery's `$.extend()` method, using the shallow copy option. As a result, the `normalize` function will *modify* your original `data` object instead of replacing it. Any properties that don't already exist will be added, and those that did originally exit will be overwritten.
+
+#### Use with Built-In Templates
+
+Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (for example, *basic_image_item*). 
+
+Built-in templates expect that certain properties will be present (such as `title` and `image`). The `normalize` function allows you to provide those (or normalize their values if the already exist in your `api_result`).
 
 For example, if you have a `data` object that looks like this:
 
