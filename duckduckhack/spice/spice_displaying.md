@@ -376,11 +376,11 @@ More about how templates work, and how to use them, can be found in the [templat
 
 - ### `variants` *object*
 
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 	
 - ### `elClass` *object*
 
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
 
 	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
@@ -422,9 +422,35 @@ More about how templates work, and how to use them, can be found in the [templat
 
 ## `relevancy` *object*
 
-When dealing with multiple items, the `relevancy: {}` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
+When dealing with multiple items, the `relevancy` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
-In most cases you will only need to specify relevancy properties for the, **primary** relevancy block. If your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. For example, the Quixey (Apps) Spice handles two distinct types of app searches, being **categorical** searches, such as "social networking apps", or more specific, named searches such as "free angry birds apps". When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category does need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
+In most cases you will only need to specify relevancy properties for the **primary** relevancy block. However, if your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. 
+
+For example, the Quixey Spice (app search) handles two distinct types of app searches: 
+
+- **Categorical** searches, such as "social networking apps"
+- **Named** searches such as "free angry birds apps" 
+
+When dealing with **categorical** searches, the name of the app doesn't need to be checked against the query for relevancy. However, the app's category *does* need to be checked and so two separate relevancy blocks, `primary` and `category`, are used to define the different relevancy constraints.
+
+Sample code from [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L129):
+
+```javascript
+relevancy: {
+	...
+	category: [
+	    { required: 'icon_url' },
+	    { key: 'short_desc' },
+	    { key: 'name' },
+	    { key: 'custom.features.category', match: category_match_regexp, strict:false } // strict means this key has to contain a category phrase or we reject
+	],
+
+	primary: [
+	    { required: 'icon_url' }, // would like to add  alt: 'platforms.0.icon_url'
+	    { key: 'name', strict: false },
+	]
+}
+```
 
 ### Relevancy Blocks
 
