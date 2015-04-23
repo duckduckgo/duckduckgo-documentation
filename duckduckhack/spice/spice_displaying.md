@@ -338,7 +338,7 @@ More about how templates work, and how to use them, can be found in the [templat
     detail: 'basic_info_detail'
     ```
 
-- ### `item` *string|function* [required if no `group` is specified]
+- ### `item` *string or function* [required if no `group` is specified]
 
     The template to be used for the body of each tile in a tile view.
 
@@ -348,11 +348,11 @@ More about how templates work, and how to use them, can be found in the [templat
 
     - Alternatively, a function can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
 
-- ### `item_mobile` *string|function*
+- ### `item_mobile` *string or function*
 
     An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-- ### `detail` *string|function* [required if no `group` is specified]
+- ### `detail` *string or function* [required if no `group` is specified]
 
     The template to be used for the detail area.
 
@@ -362,11 +362,11 @@ More about how templates work, and how to use them, can be found in the [templat
 
     **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
 
-- ### `detail_mobile` *string|function*
+- ### `detail_mobile` *string or function*
 
     An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-- ### `item_detail` *string|function*
+- ### `item_detail` *string or function*
 
     An alternative `detail` template to be used when a tile view contains a **single** tile.
 
@@ -519,7 +519,7 @@ sort_fields: {
 ```
 
 
-### `sort_default` *string|object*
+### `sort_default` *string or object*
 
 A string specifying the default `sort_field` to be used for initial sorting of the tiles.
 
