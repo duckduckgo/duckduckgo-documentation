@@ -646,9 +646,9 @@ footer
 ### Available Features
 
 - `title_content` [optional] *sub-template*
-- `title` [optional] (available only if `title_content` is not specified)
+- `title` [optional]  (available only if `title_content` is not specified)
 - `subtitle_content` [optional] *sub-template*
-- `subtitle` [optional] (available only if `subtitle_content` is not specified)
+- `subtitle` [optional]  (available only if `subtitle_content` is not specified)
 - `content` [optional] *sub-template*
 
 ### Template Diagram
@@ -823,7 +823,7 @@ buy
 - `url`
 - `image` [optional] *url path to image*
 - `title` [optional]
-- `subtitle` [optional] (available only if `title` specified)
+- `subtitle` [optional]  (available only if `title` specified)
 - `content` [optional] *sub-template*
 - `description` (available and required only if `content` sub-template not specified)
 - `aux` [optional] *sub-template*
@@ -871,7 +871,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 - `name`
 - `title` (available only if `image` specified)
 - `ratingImageURL` [optional]
-- `rating` [optional] (available only if `ratingImageURL` not specified)
+- `rating` [optional]  (available only if `ratingImageURL` not specified)
 - `reviews` [optional]
 
 'Back' of each item: (displayed upon click)
@@ -879,7 +879,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 - `url`
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional] (available only if `address_lines` not specified)
+- `address` [optional]  (available only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
@@ -951,11 +951,11 @@ The places detail template nicely displays information about a single location w
 - `title` (required if using `image`)
 - `hours` [optional] *array of objects* (each object specifies `day` and `hours` properties)
 - `ratingImageURL` [optional]
-- `rating` [optional] (available only if `ratingImageURL` not specified)
+- `rating` [optional]  (available only if `ratingImageURL` not specified)
 - `reviews` [optional]
 - `price` [optional]
 - `address_lines` [optional]
-- `address` [optional] (available only if `address_lines` not specified)
+- `address` [optional]  (available only if `address_lines` not specified)
 - `phone` [optional]
 
 ### Template Diagram
