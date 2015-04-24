@@ -45,7 +45,9 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 ### Available Features
 
-- `record_data` *object* (contains key-value pairs to display in table format)
+- `record_data` [required] *object* 
+	Contains key-value pairs to display in table format
+	Values limited to 350 characters, truncated to whole words with an ellipsis
 
 ### Usage
 
@@ -114,12 +116,13 @@ footer
 
 ### Available Features
 
-- `icon` [optional] *url path to icon*
-- `url` [optional]
-- `title`
-- `altSubtitle` [optional]
-- `subtitle` [optional]
-- `description`
+- `icon` [optional] *string url*
+	URL path to icon image
+- `url` [optional] *string url*
+- `title` [required] *string url*
+- `altSubtitle` [optional] *string*
+- `subtitle` [optional] *string*
+- `description` [required] *string*
 - `footer` [optional] *sub-template*
 
 ### Example usage of the "text_item" template:
@@ -154,9 +157,11 @@ content
 ### Available Features
 
 - `title_content` [optional] *sub-template*
-- `title` [optional] (available only if `title_content` is not specified)
+- `title` [optional] *string*
+	Available only if `title_content` is not specified
 - `subtitle_content` [optional] *sub-template*
-- `subtitle` [optional] (available only if `subtitle_content` is not specified)
+- `subtitle` [optional] *string*
+	Available only if `subtitle_content` is not specified
 - `content` [optional] *sub-template*
 
 ### Example usage of the "text_detail" template:
@@ -180,12 +185,15 @@ A tile template where images are the main feature, accompanied by text.
 
 ### Available Features
 
-- `url` [optional]
-- `image` *url path to image*
-- `title`
-- `description` [optional]
-- `rating` [optional]
-- `ratingText` [optional]
+- `url` [optional] *string url*
+- `image` [required] *string url*
+	URL path to image
+- `title` [required] *string*
+- `description` [optional] *string*
+	Limited to 56 characters, truncated to whole words with an ellipsis
+- `rating` [optional] *float*
+	A positive float with one decimal point, up to 5.0
+- `ratingText` [optional] *string*
 
 ### Example usage of the "basic_image_item" template:
 
@@ -219,14 +227,19 @@ rating
 
 ### Available Features
 
-- `url` [optional]
-- `img` *url path to image*
-- `title`
-- `price` [optional]
-- `brand` [optional]
-- `rating` [optional]
-- `reviewCount` [optional]
-- `url_review` [optional] *url path to reviews*
+- `url` [optional] *string url*
+- `img` [required] *string url*
+	URL path to image
+- `title` [required] *string*
+- `price` [optional] *string*
+- `brand` [optional] *string*
+- `rating` [optional] *float*
+	A positive float with one decimal point, up to 5.0
+- `reviewCount` [optional] *integer*
+	The count of reviews
+	Automatically formatted to include comma thousands separators
+- `url_review` [optional] *string*
+	URL path to reviews
 
 ### Example usage of the "products_item" template:
 
@@ -262,15 +275,20 @@ buy
 
 ### Available Features
 
-- `img` [optional] *url path to image*
-- `url` 
-- `heading`
-- `rating` [optional]
-- `reviewCount` [optional]
-- `price` [optional]
-- `brand` [optional]
+- `img` [optional] *string url*
+ 	URL path to image
+- `url` [required] *string url*
+- `heading`[required] *string*
+- `rating` [optional] *float*
+	A positive float with one decimal point, up to 5.0
+- `reviewCount` [optional] *integer*
+	The count of reviews
+	Automatically formatted to include comma thousands separators
+- `price` [optional] *string*
+- `brand` [optional] *string*
 - `subtitle_content` [optional] *sub-template*
-- `abstract`
+- `abstract` [required] *string*
+	Limited to 400 characters, truncated to whole words with an ellipsis
 - `buy` [optional] *sub-template*
 
 ### Example usage of the "products_detail" template:
@@ -296,15 +314,19 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ### Available Features
 
-- `img_m` [optional]
-- `url`
-- `price` [optional]
-- `brand` [optional]
+- `img_m` [optional] *string url*
+	URL path to image
+- `url` [required] *string url*
+- `price` [optional] *string*
+- `brand` [optional] *string*
 - `subtitle_content` [optional] *sub-template*
-- `rating` [optional]
-- `reviewCount` [optional]
+- `rating` [optional] *float* 
+	A positive float with one decimal point, up to 5.0
+- `reviewCount` [optional] *integer*
+	The count of reviews
+	Automatically formatted to include comma thousands separators
 - `url_review` [optional] *url path to reviews*
-- `abstract`
+- `abstract` [required] *string*
 - `buy` [optional] *sub-template*
 
 ### Example usage of the "products_item_detail" template:
@@ -341,13 +363,17 @@ content or description			aux
 
 ### Available Features
 
-- `url`
-- `image` [optional] *url path to image*
-- `title` [optional]
-- `subtitle` [optional] (available only if `title` specified)
-- `content` [optional] *sub-template*
-- `description` (available and required only if `content` sub-template not specified)
-- `infoboxData` [optional] *array*
+- `url` [required] *string url*
+- `image` [optional] *string url*
+	URL path to image
+- `title` [optional] *string*
+- `subtitle` [optional] *string*
+	Available only if `title` specified
+- `content` [optional] *sub-template* 
+- `description` [conditional on `content`] *string*
+	Available and required if `content` not specified
+- [`infoboxData`](#infoboxdata-array) [optional] *array*
+	More information [below](#infoboxdata-array)
 
 ### Example usage of the "basic_info_detail" template:
 
@@ -365,15 +391,18 @@ In the `basic_info_detail` template, the **InfoBox** floats on the right side of
 
 ![infobox](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Finfobox.png&f=1)
 
-To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` array specified. `infoboxData` is an array of objects, each with the following properties: 
+To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` array specified. `infoboxData` is an array of objects, each with the following properties:
 
-- `label` *string* 
-- `url` *string* [optional] (Used to turn `label` element into a link)
-- `value` *string or array* [optional] (Use array to display [nested properties](#nested-properties))
+- `label` [required] *string* 
+- `url` [optional] *string url* 
+	Used to turn `label` element into a link
+- `value` [optional] *string or array* 
+	Use array to display [nested properties](#nested-properties))
 
 The first object in the array can also be used solely to specify a heading for the InfoBox. This object would contain only one property:
 
-- `heading` *string*
+- `heading` [optional] *string*
+	Specified in its own separate object, first in the array
 
 For example, when ["mtg nullify"](https://duckduckgo.com/?q=mtg+nullify&ia=magicthegathering) is searched, [mtg.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/mtg/mtg.js) dynamically generates the following array for `infoboxData`:
 
@@ -425,8 +454,8 @@ This appears as:
 
 The `value` property of `infoboxData` objects can *also* be passed an array of objects. These objects have the following properties:
 
-- `label` *string* 
-- `value` *string*
+- `label` [required] *string* 
+- `value` [required] *string*
 
 For example, the resulting array passed to `infoboxData` could be structured this way:
 
@@ -503,20 +532,30 @@ phone
 ### Available Features
 
 #### 'Front' of each item:
-- `image` [optional] *url path to image*
-- `name`
-- `title` (available only if `image` specified)
-- `ratingImageURL` [optional]
-- `rating` [optional] (available only if `ratingImageURL` not specified)
-- `reviews` [optional]
+- `image` [optional] *string url*
+	URL path to image
+- `name` [required] *string*
+- `title` [optional] *string*
+	Available only if `image` specified
+- `ratingImageURL` [optional] *string url*
+- `rating` [optional] *float* 
+	A positive float with one decimal point, up to 5.0
+	Available only if `ratingImageURL` is not specified
+- `reviews` [optional] *integer*
+	The count of reviews
+	Automatically formatted to include comma thousands separators
 
 #### 'Back' of each item: (displayed upon click)
-- `name`
-- `url`
-- `price` [optional]
-- `address_lines` [optional]
-- `address` [optional] (available only if `address_lines` not specified)
-- `phone` [optional]
+- `name` [required] *string*
+- `url` [required] *string url*
+- `price` [optional] *integer*
+	Integer between 1 and 4; converted to a dollar-sign rating (such as '$' or '$$$$')
+- `address_lines` [optional] *array*
+	An array of strings, one for each line
+- `address` [optional] *string* 
+	Available only if `address_lines` not specified
+	Limited to 65 characters, truncated to whole words with an ellipsis
+- `phone` [optional] *string*
 
 #### Map View
 
@@ -563,18 +602,28 @@ A detail template for displaying information about a single location on a map ba
 
 ### Available Features
 
-- `url`
-- `name`
-- `image` [optional] *url path to image*
-- `title` (required if using `image`)
-- `hours` [optional] *array of objects* (each object specifies `day` and `hours` properties)
+- `url` [required] *string url*
+- `name` [required] *string*
+- `image` [optional] *string url*
+	URL path to image
+- `title` [optional] 
+	Used at `alt` attribute of the `image` element
+- `hours` [optional] *array* 
+	Array of objects, each containing `day` and `hours` properties
 - `ratingImageURL` [optional]
-- `rating` [optional] (available only if `ratingImageURL` not specified)
-- `reviews` [optional]
-- `price` [optional]
-- `address_lines` [optional]
-- `address` [optional] (available only if `address_lines` not specified)
-- `phone` [optional]
+- `rating` [optional] *float* 
+	A positive float with one decimal point, up to 5.0
+	Available only if `ratingImageURL` not specified
+- `reviews` [optional] *integer*
+	The count of reviews
+	Automatically formatted to include comma thousands separators
+- `price` [optional] *integer*
+	Integer between 1 and 4; converted to a dollar-sign rating (such as '$' or '$$$$')- `address_lines` [optional] *array*
+	An array of strings, one for each line
+- `address` [optional] *string* 
+	Available only if `address_lines` not specified
+- `phone` [optional] *string*
+
 
 ### Example usage of the "places_detail" template:
 
@@ -606,18 +655,22 @@ record_data *or* list
 
 ### Available Features
 
-- `title` [optional]
-- `subtitle` [optional]
+- `title` [optional] *string*
+- `subtitle` [optional] *string* 
 
 #### If Displaying Table of Key-Value Pairs:
 
-- `content` *sub-template* (set this value to 'record' to use the built-in [`record`](#record-template) template)
-- `record_data` *object containing the key-value pairs to display*
+- `content` [required] *sub-template* 
+	Recommended to set this value to 'record' to use the built-in [`record`](#record-template) template
+- `record_data` [required] *object* 
+	Includes the key-value pairs to display
 
 #### If Displaying Bulleted List of Values:
 
-- `list_content` *sub-template* (populates within each `li` element)
-- `list` *array of objects* (each object contains the properties used by `list_content` sub-template)
+- `list_content` [required] *sub-template* 
+	The handlebars sub-template supplied here will populate within each `li` element
+- `list` *array* 
+	Array of objects, each contains the properties used by `list_content` sub-template
 
 ### Usage 
 
@@ -647,8 +700,8 @@ An item template for containing fully customized markup.
 
 ### Available Features
 
-- `url` [optional]
-- `content` *sub-template*
+- `url` [required] *string*
+- `content` [required] *sub-template*
 
 ### Example usage of the "base_item" template:
 
