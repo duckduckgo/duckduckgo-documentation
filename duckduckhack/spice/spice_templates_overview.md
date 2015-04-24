@@ -1155,7 +1155,7 @@ This variant allows you to modify the `detail` template of your Instant Answer. 
 
 ### Options
 
-- `light` - gives the detail area a lighter (white) background, ideally when displaying images with white backgrounds (["electronics coupons"](https://duckduckgo.com/?q=electronics+coupons))
+- `light` - gives the detail area a lighter (white) background, ideally when displaying images with white backgrounds.
 
 #### Usage
 
