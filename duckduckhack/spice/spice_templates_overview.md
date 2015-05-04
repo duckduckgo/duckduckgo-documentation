@@ -22,8 +22,8 @@ Spice Instant Answers can return either a **single result** or **multiple result
 
 On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
 
-- `item` template
-- `detail` template
+- `item` template (multiple results)
+- `detail` template (single results)
 
 Below is an example of multiple results being returned. Each result is displayed using the template specified for `item`: 
 
@@ -33,15 +33,49 @@ Below is an example of the same Instant Answer returning a single result. This u
 
 ![DuckDuckGo search for "longhi's maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Flonghis_maui.png&f=1)
 
-### Specifying an `item_detail` Template
+### Clicking on an Item
 
-Additionally, when displaying multiple results, you might sometimes allow users to drill down without leaving the page. For that, you might optionally specify a third template:
+In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior.
 
-- `item_detail` template
+To display a template other than the one used for `detail`, specify an `item_detail` template. To disable any detailed display when an item is clicked, set `item_detail: false`.
 
-This feature is used by fewer Instant Answers, but it can be very useful. Below is an example of what happens after clicking a particular product. This shows more detail by displaying the template specified in `item_detail`:
+This diagram shows what is displayed when an instant answer returns multiple items:
 
-![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs.png&f=1)
+```
+                                                INSTANT ANSWER RETURNS MULTIPLE ITEMS
+
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|              |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
+|   `item`     |              |              |              |              |              |              |              |
+|   template   |              |              |              |              |              |              |              |
+|   clicked    |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
+|              |              |              |              |              |              |              |              |
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                                                                                                                       |
+|                                                                                                                  |
+|                                                                                                                       |
+|                                                                                                                       |
+|                                              `detail` Template                                                          |
+|                                                                                                                       |
+|                                              OR                                                                       |
+|                                                                                                                       |
+|                                              `item_detail` (when specified)                                             |
+|                                                                                                                       |                                                                                                                       |
++-----------------------------------------------------------------------------------------------------------------------+
+```
+
+For example, the Amazon products search Instant Answer uses one template for single results (`detail`):
+
+![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_detail.png&f=1)
+
+The Instant Answer uses a different template when items are clicked (`item_detail`):
+
+![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_item_detail.png&f=1)
 
 ### When Each Template Is Shown
 
@@ -59,7 +93,7 @@ The Spice framework automatically chooses which template to display based on how
          |                    |          
 +--------v--------+  +--------v---------+
 |                 |  |                  |
-|      item       |  |      detail      |
+|      `item`     |  |      `detail`    |
 |                 |  |                  |
 +-------+---------+  +------------------+                              
         |                                
@@ -67,7 +101,9 @@ The Spice framework automatically chooses which template to display based on how
         |                                
 +-------v---------+                      
 |                 |                      
-|   item_detail   |                      
+|   `detail`      |                      
+|       or        |                      
+|   `item_detail` |                      
 |  (if specified) |
 |                 |                     
 +-----------------+                      
