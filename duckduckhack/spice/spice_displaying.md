@@ -87,11 +87,11 @@ Spice.add({
 - [name](#name-string-required) The name that will be used for your Spice's AnswerBar tab
 - [data](#data-object-required) The object containing the data to be used by your templates
 - [meta](#meta-object-required) Used to define elements of the **MetaBar** including the "More at" link
+- [templates](#templates-object-required) Used to specify the template group and all other templates that are being used
 
 ### Optional Properties
 
 - [normalize](#normalize-function) This allows you to normalize the `data` before it is passed on to the template
-- [templates](#templates-object) Used to specify the template group and all other templates that are being used
 - [relevancy](#relevancy-object) Used to ensure the relevancy of your Spice's result
 - [view](#view-string) This allows you to explicitly specify the view class used for displaying the Instant Answer
 - [model](#model-string) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
@@ -243,6 +243,111 @@ The following are all properties of the `meta: {}` object.
 
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the favicon shown to the left of the "More at" link. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
 
+
+------
+
+## `templates` *object* [required]
+
+A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
+
+More about how templates work, and how to use them, can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+
+<!-- /summary -->
+
+- ### `group` *string* [required, unless `item` and `detail` are specified]
+
+    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+
+    This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
+
+    For example, `group: 'info'` will implicitly set:
+
+    ```javascript
+    item: 'basic_item',
+    item_detail: 'basic_info_item_detail',
+    detail: 'basic_info_detail'
+    ```
+
+- ### `item` *string or function* [required if no `group` is specified]
+
+    The template to be used for the body of each tile in a tile view.
+
+    **Note:** The `item` template is only used when your Spice Instant Answer returns multiple items (like the recipe or app Instant Answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
+
+    - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
+
+    - Alternatively, a function can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
+
+- ### `item_mobile` *string or function*
+
+    An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
+
+- ### `detail` *string or function* [required if no `group` is specified]
+
+    The template to be used for the detail area.
+
+    *For multiple items*, the detail area will be located below the tiles, and will display when a tile is clicked. If your Spice returns multiple items, the `detail` template is **optional**.
+
+    *For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
+
+    **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
+
+- ### `detail_mobile` *string or function*
+
+    An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
+
+- ### `item_detail` *string or function*
+
+    An alternative `detail` template to be used when a tile view contains a **single** tile.
+
+- ### `options` *object*
+
+    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
+
+- ### `variants` *object*
+
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+
+- ### `elClass` *object*
+
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
+
+	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+
+    **Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
+
+    ```javascript
+    normalize: function(item){
+        return {
+            // these won't work!
+            rating: item.customerRating,
+            brand: item.brandname
+        };
+    },
+    templates: {
+        group: 'products_simple'
+    }
+    ```
+
+    Will ***not*** display the `rating` or `brand` as they are **disabled** by default in the `products_simple` group. Only once they are enabled in an `options` object will they work:
+
+    ```javascript
+    normalize: function(item){
+        return {
+            // now they'll show, because they're enabled
+            rating: item.customerRating,
+            brand: item.brandname
+        };
+    },
+    templates: {
+        group: 'products_simple',
+        options: {
+            rating: true,
+            brand: true
+        }
+    }
+    ```
+
 ------
 
 ## `normalize` *function*
@@ -315,110 +420,6 @@ normalize: function(item) {
     return { ... }
 }
 ```
-
-------
-
-## `templates` *object*
-
-A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
-
-More about how templates work, and how to use them, can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
-
-<!-- /summary -->
-
-- ### `group` *string* [required, unless `item` and `detail` are specified]
-
-    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
-
-    This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
-
-    For example, `group: 'info'` will implicitly set:
-
-    ```javascript
-    item: 'basic_item',
-    item_detail: 'basic_info_item_detail',
-    detail: 'basic_info_detail'
-    ```
-
-- ### `item` *string or function* [required if no `group` is specified]
-
-    The template to be used for the body of each tile in a tile view.
-
-    **Note:** The `item` template is only used when your Spice Instant Answer returns multiple items (like the recipe or app Instant Answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
-
-    - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
-
-    - Alternatively, a function can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
-
-- ### `item_mobile` *string or function*
-
-    An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
-
-- ### `detail` *string or function* [required if no `group` is specified]
-
-    The template to be used for the detail area.
-
-    *For multiple items*, the detail area will be located below the tiles, and will display when a tile is clicked. If your Spice returns multiple items, the `detail` template is **optional**.
-
-    *For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
-
-    **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
-
-- ### `detail_mobile` *string or function*
-
-    An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
-
-- ### `item_detail` *string or function*
-
-    An alternative `detail` template to be used when a tile view contains a **single** tile.
-
-- ### `options` *object*
-
-    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
-
-- ### `variants` *object*
-
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
-	
-- ### `elClass` *object*
-
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
-
-	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
-
-    **Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
-
-    ```javascript
-    normalize: function(item){
-        return {
-            // these won't work!
-            rating: item.customerRating,
-            brand: item.brandname
-        };
-    },
-    templates: {
-        group: 'products_simple'
-    }
-    ```
-
-    Will ***not*** display the `rating` or `brand` as they are **disabled** by default in the `products_simple` group. Only once they are enabled in an `options` object will they work:
-
-    ```javascript
-    normalize: function(item){
-        return {
-            // now they'll show, because they're enabled
-            rating: item.customerRating,
-            brand: item.brandname
-        };
-    },
-    templates: {
-        group: 'products_simple',
-        options: {
-            rating: true,
-            brand: true
-        }
-    }
-    ```
 
 ------
 
