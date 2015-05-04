@@ -1,5 +1,7 @@
 ## Goodie Instant Answers
 
+**If you have questions about Goodies, ask our [Goodie Chat room](https://gitter.im/duckduckgo/zeroclickinfo-goodies)**  
+
 Goodies are pure-code Instant Answers. They are essentially a Perl function that is evaluated on our servers, and do not make external HTTP requests to other services.
 
 Goodies can be extremely simple, such as the [Capitalize](https://duckduckgo.com/?q=capitalize+duckduckgo+instant+answers) Goodie, which simply uses the perl `uc` function to uppercase a string. 

@@ -43,50 +43,22 @@ A simpler example can be found with the dice Instant Answer. Want to virtually t
 
 In both of these examples, users will more easily find what they're looking for via the Instant Answers provided, instead of clicking through regular results. If you're still unsure of what to build, you can work on an idea from our community or get help with your idea here: https://duck.co/ideas 
 
-#### Ideas to avoid
+#### Improve Another Idea
 
-The DuckDuckGo audience is diverse in age and location. Because of our audience and some restrictions with licensing, there are a few types of Instant Answers we cannot accept at this time (though, it's always best to ask if you're not sure). Currently, the list of restricted Instant Answers includes: 
-
-
-**Content prohibited**  
-
-- Adult content  
-- Torrent search  
-
-**Licensing/partnership prohibited**  
-
-- App or app market search (*provided by Quixey*)  
-- Currency and currency conversions (*provided by XE*)  
-- Definitions (*provided by Wordnik*)  
-- Local/business information (*provided by Yelp*)  
-- Map data (*provided by Mapbox, Mapquest, and OpenStreetMaps*)  
-- Movie ratings (*provided by Rotten Tomatoes*)  
-- Nutrition information (*provided by Nutritionix*)  
-- Recipes (*provided by Yummly*)  
-- Sports data (*provided by SportsData*)  
-- Streaming services or search (*provided by GoWatchIt*)  
-- Time information (*provided by TimeandDate*)  
-- Quotes (*provided by BrainyQuote*)  
-- Weather (*provided by Forecast.io*)  
-- YouTube video search (*provided by YouTube*)  
-
-**Maintained by staff**  
-
-- Image search  
-- News  
-- Products  
-- Wikipedia  
-
-It's also best to check that your idea doesn't already exist. You can do that by looking through the Instant Answer index: https://duck.co/ia  Of course, feel free to fix or improve a current Instant Answer instead of building one from scratch! 
+You can check if your idea has already been suggested or implemented in the [Ideas forum](https://duck.co/ideas ) and [Instant Answers index](https://duck.co/ia). If it already exists (as an idea or a live Instant Answer), you can still contribute to it. Let us know how you'd like to improve the Instant Answer using the same steps below for, "Submitting Your Idea." 
 
 
 ### Submitting Your Idea
 
-The most important step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. Sometimes, we cannot accept a submitted Instant Answer because the implementation or source are not up to our standard. 
-**[Please email us](mailto:open@duckduckgo.com)** to let us know you plan on submitting a new Instant Answer. This will prevent you from wasting time in case your Instant Answer doesn't get approved.
+The most important step in creating Instant Answers is to let the DuckDuckGo staff and community know that you're getting started. Sometimes, we cannot accept a submitted Instant Answer because the implementation or source are not up to our standard. There are multiple ways to reach out:  
+
+- Ask in our [Ideas chat channel](https://gitter.im/duckduckgo/Ideas)
+- Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com)
+- Join and ask our [developer's email list](https://www.listbox.com/subscribe/?list_id=197814)
+- Submit to [Duck.co/ideas](https://duck.co/ideas)
 
 
-Here's an example email to help you out:
+If choosing email, this sample will help you craft your message:
 
 ```text
 To: open@duckduckgo.com
@@ -104,9 +76,7 @@ Thanks!
 PS: DuckDuckGo is awesome!
 ```
 
-We'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (e.g. a [duck.co idea](https://duck.co/ideas) that has been approved by DDG staff). 
-
-**One more thing:** Please consider joining our [The DuckDuckHack Developer Mailing List](https://www.listbox.com/subscribe/?list_id=197814) to stay in tune with the important updates happening among the community. 
+With every channel, we'll try and get back to you as soon as possible (ideally within 24hrs). We ask that you wait to hear back from us before moving ahead unless you're absolutely sure this Instant Answer is acceptable (e.g. a [duck.co idea](https://duck.co/ideas) that has been approved by DDG staff). 
 
 
 ## Creating Your Own Instant Answer
