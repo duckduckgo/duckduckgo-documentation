@@ -198,12 +198,15 @@ Results that would make a good fit for the Places template group include:
 
 #### My Spice is amazingly unique and existing template groups won't meet my needs
 
-We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be turned off. 
+We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be toggled. 
 
-If working within existing template groups feels too constraining, we're happy to help you figure out how your vision could be accomplished using existing templates. E-mail us at open@duckduckgo.com and we'll work with you to find the best way to express your idea.
+If working within existing template groups feels too constraining, we're happy to help you figure out how your vision could be accomplished using existing templates. **E-mail us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll work with you to find the best way to express your idea.**
 
-In this context, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group is at a disadvantage because of the amount of work up front, and more involved maintenance over time.
+In this context, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group is **a complete last-resort** because of the amount of work up front, and difficult maintenance over time. 
 
+**Please hold off from using the Base template group until you've contacted us.** We hope we'll be able to save you from ongoing, manual maintenance of your Instant Answer display. Additionally, knowing where our templates fall short helps us understand where we can improve our existing set of templates.
+
+<!--
 Examples of Instant Answers that do not fit into any template groups:
 
 - [Ducksay](https://duckduckgo.com/?q=ducksay+quack!&ia=ducksay)
@@ -211,6 +214,7 @@ Examples of Instant Answers that do not fit into any template groups:
 - [Site functionality](https://duckduckgo.com/?q=is+reddit.com+working%3F&ia=answer)
 - [Nutrition facts](https://duck.co/ia/view/nutrition)
 - [Webcomics](https://duck.co/ia/view/xkcd_display)
+-->
 
 ------
 
