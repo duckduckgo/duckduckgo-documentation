@@ -83,18 +83,18 @@ Spice.add({
 
 ### Required Properties
 
-- [id](#id-string-required) A unique identifier for your Spice. The `id` should match the name of your callback function
-- [name](#name-string-required) The name that will be used for your Spice's AnswerBar tab
-- [data](#data-object-required) The object containing the data to be used by your templates
-- [meta](#meta-object-required) Used to define elements of the **MetaBar** including the "More at" link
-- [templates](#templates-object-required) Used to specify the template group and all other templates that are being used
+- [id](#id-string-required) - A unique identifier for your Spice. The `id` should match the name of your callback function
+- [name](#name-string-required) - The name that will be used for your Spice's AnswerBar tab
+- [data](#data-object-required) - The object containing the data to be used by your templates
+- [meta](#meta-object-required) - Used to define elements of the **MetaBar** including the "More at" link
+- [templates](#templates-object-required) - Used to specify the template group and all other templates that are being used
 
 ### Optional Properties
 
-- [normalize](#normalize-function) This allows you to normalize the `data` before it is passed on to the template
-- [relevancy](#relevancy-object) Used to ensure the relevancy of your Spice's result
-- [view](#view-string) This allows you to explicitly specify the view class used for displaying the Instant Answer
-- [model](#model-string) This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
+- [normalize](#normalize-function) - This allows you to normalize the `data` before it is passed on to the template
+- [relevancy](#relevancy-object) - Used to ensure the relevancy of your Spice's result
+- [view](#view-string) - This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](#model-string) - This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 
 ------
 
@@ -172,33 +172,39 @@ The following are all properties of the `meta: {}` object.
 	- In [rand_word.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rand_word/rand_word.js#L14), the `sourceUrl` is a hardcoded address.
 	- In [is_it_up.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/is_it_up/is_it_up.js#L15), the `sourceUrl` is dynamically generated to direct to a specific page relating to the search query.
 
-- ### `searchTerm` *string*
+- ### `searchTerm` *string* [optional]
 
-	Determines the modifier in the MetaBar's description: "Showing 15 `searchTerm` `itemType`".
+	Determines the **modifier** in the MetaBar's description: "Showing 15 `itemType` for `searchTerm`".
 	
-    The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query. 
+    The `searchTerm` is used to describe the `itemType` and it can be determined by removing any skip words from the original query.
 
-	For example, searching "coupons for electronics", will display the phrase "Showing 15 **electronics** Coupons" in the MetaBar. In this case, the word "electronics" is the `searchTerm`.
+	For example, searching ["alternatives to emacs"](https://duckduckgo.com/?q=alternative+to+emacs&ia=software), will display the description "Showing 12 Alternatives for **GNU Emacs**" in the MetaBar. In this case, the phrase "GNU Emacs" is the `searchTerm`.
+	
+	![metabar description](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fmetabar_description.png&f=1)
+	
+	If no `searchTerm` is specified, the description will simply read "Showing 12 Movies" or, if no `itemType` specified, "Showing 12 Items".
 	
 	#### Examples 
 
 	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L89), `searchTerm` is passed the search query after some basic cleanup.
-	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), `searchTerm` is passed the query as-is.
+	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), `searchTerm` is passed the original query as-is.
 	- In [alternative_to.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js#L16), `searchTerm` is passed a name provided by the API.
 	- In [songkick_geteventid.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/songkick/geteventid/songkick_geteventid.js#L38), `searchTerm` is passed a city name.
 
-- ### `itemType` *string*
+- ### `itemType` *string* [optional]
 
-    Determines the noun in the MetaBar's description: "Showing 15 `searchTerm` `itemType`". In other words, `itemType` is the type of item being shown (e.g., Videos, Images, Recipes).
+    Determines the **noun** in the MetaBar's description: "Showing 15 `itemType` for `searchTerm`". In other words, `itemType` is the type of item being shown (e.g., Videos, Images, Recipes).
 	
-	Using the previous example, in the phrase, "Showing 15 **electronics** Coupons", the word "Coupons" is the `itemType`.
+	Searching for ["alternatives to emacs"](https://duckduckgo.com/?q=alternative+to+emacs&ia=software), "Showing 12 **Alternatives** for GNU Emacs", the word "Alternatives" is the `itemType`.
+	
+	If no `itemType` is specified, the default itemType is 'Items'. For example, the MetaBar description will read "Showing 12 Items", or "Showing 12 Items for Electronics" when a `searchTerm` is provided.
 	
 	#### Examples
 	
-	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L90), the `itemType` is a string: `'News articles'`.
-	- In [images.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/images/images.js#L19), there is no `itemType`. You can see the [resulting description](https://duckduckgo.com/?q=duck+images&ia=images) in the AnswerBar.
+	- In [news.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/news/news.js#L90), the `itemType` is `'News articles'`.
+	- In [alternative_to.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js#L17), the itemType is `'Alternatives'`.
 
-- ### `primaryText` *string*
+- ### `primaryText` *string* [optional]
 
     If defined, this text will replace the MetaBar's "Showing **n** Items" text. 
 
@@ -206,11 +212,11 @@ The following are all properties of the `meta: {}` object.
 
 	- In [parking.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js#L89), the `primaryText` is set to `'Parking near'` plus the location.
 
-- ### `secondaryText` *string*
+- ### `secondaryText` *string* [optional]
 
     This is an optional text label, displayed to the left of the "More at" link. For example, a weather forecast Spice might use this to indicate the temperature unit, such as "Temperature in F&deg;".
 
-- ### `sourceLogo` *url string*
+- ### `sourceLogo` *url string* [optional]
 
     If defined, the image provided will replace the `sourceName` with a logo. Generally this is not necessary; in rare cases, API providers require that a specific image be used to represent their brand.
 
@@ -233,13 +239,13 @@ The following are all properties of the `meta: {}` object.
 	
 	![sourcelogo](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fsourcelogo.png&f=1)
 
-- ### `sourceIcon` *boolean*
+- ### `sourceIcon` *boolean* [optional]
 
     A boolean flag that determines if a favicon should be shown to the left of the "More at" link. The favicon is determined automatically by DuckDuckGo based on the `sourceUrl`. 
 
 	When a `sourceUrl` is given, this will default to `true`. It should only be set to `false` when the `sourceUrl` domain does not have a favicon.
 
-- ### `sourceIconUrl` *url string*
+- ### `sourceIconUrl` *url string* [optional]
 
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the favicon shown to the left of the "More at" link. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
 
@@ -248,9 +254,9 @@ The following are all properties of the `meta: {}` object.
 
 ## `templates` *object* [required]
 
-A `templates: {}` property should be used to specify the template group and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
+A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/spice_templates_overview#template-groups-required) and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
-More about how templates work, and how to use them, can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+More about how templates work can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
 
 <!-- /summary -->
 
@@ -258,7 +264,7 @@ More about how templates work, and how to use them, can be found in the [templat
 
     Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
 
-    This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. **unless otherwise specified**.
+    This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. unless otherwise manually overridden.
 
     For example, `group: 'info'` will implicitly set:
 
@@ -276,9 +282,9 @@ More about how templates work, and how to use them, can be found in the [templat
 
     - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
 
-    - Alternatively, a function can be provided when a custom template is necessary, e.g., `Spice.quixey.item`, which references the file "**/share/spice/quixey/item.handlebars**".
+    - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/spice_templates_overview#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
 
-- ### `item_mobile` *string or function*
+- ### `item_mobile` *string or function* [optional]
 
     An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
@@ -292,81 +298,67 @@ More about how templates work, and how to use them, can be found in the [templat
 
     **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
 
-- ### `detail_mobile` *string or function*
+- ### `detail_mobile` *string or function* [optional]
 
     An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-- ### `item_detail` *string or function*
+- ### `item_detail` *string or function* [optional]
 
-    An alternative `detail` template to be used when a tile view contains a **single** tile.
+    An alternative `detail` template to be used when a tile is clicked. Learn more about when `item_detail` is used in the [templates overview](https://duck.co/duckduckhack/spice_templates_overview#clicking-on-an-item).
 
-- ### `options` *object*
+- ### `options` *object* [optional]
 
-    Allows you to explicitly disable or enable features of a template, as well as specify any sub-templates when applicable (e.g., the `content` feature of the `'info'` template). Depending on the templates being used, the features will vary. For example, the `'info'` template doesn't have a `brand` feature, so attempting to enable or disable that feature will have no effect.
+    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/spice_templates_reference) of your template using boolean values or references to sub-templates. 
 
-- ### `variants` *object*
+	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#basicinfodetail-template) template to a particular sub-template. 
+	
+	For example:
+	
+	```javascript
+	templates: {
+        group: 'info',
+        options: {
+            content: 'record',
+            rowHighlight: true
+        }
+    }
+	```
+
+	Available features will vary with each chosen template (see the [templates reference](https://duck.co/duckduckhack/spice_templates_reference) for details on each template). For example, the `basic_info_detail` template doesn't have a `brand` feature, so setting `brand: true` or `brand: false` will have no effect.
+	
+	These implicit [default options](https://duck.co/duckduckhack/spice_templates_overview#a-note-on-default-template-options) apply when neither an `options` object nor a templates `group` are set.
+
+- ### `variants` *object* [optional]
 
 	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
-- ### `elClass` *object*
+- ### `elClass` *object* [optional]
 
 	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
 
 	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
-    **Note:** If you intend to use a feature that is disabled by default, it **must** be enabled in the `options` for it to display. Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. For example:
-
-    ```javascript
-    normalize: function(item){
-        return {
-            // these won't work!
-            rating: item.customerRating,
-            brand: item.brandname
-        };
-    },
-    templates: {
-        group: 'products_simple'
-    }
-    ```
-
-    Will ***not*** display the `rating` or `brand` as they are **disabled** by default in the `products_simple` group. Only once they are enabled in an `options` object will they work:
-
-    ```javascript
-    normalize: function(item){
-        return {
-            // now they'll show, because they're enabled
-            rating: item.customerRating,
-            brand: item.brandname
-        };
-    },
-    templates: {
-        group: 'products_simple',
-        options: {
-            rating: true,
-            brand: true
-        }
-    }
-    ```
-
 ------
 
-## `normalize` *function*
+## `normalize` *function* [optional]
 
 Specifying this optional function allows you to normalize each item in the `data` object before it is used by the template. You can use this function to rename properties, add new properties, or modify values.
 
-This function is applied both for single results or multiple results. When dealing with multiple items returned in the `data` object, the normalize function iterates over each `item` so they can be individually normalized.
+This function is applied both for single results or multiple results. When dealing with multiple items returned in the `data` object, the normalize function iterates over each item. Each item is individually normalized and passed to its own instance of the `item` template.
 
 ### Usage
 
-The function set for `normalize` is expected to return an object with properties to be incorporated in each item. 
+The function set for `normalize` is expected to return an object with the properties to be rendered for each item. 
 
-The properties returned by your function are combined with the original `data` item using jQuery's `$.extend()` method, using the shallow copy option. As a result, the `normalize` function will *modify* your original `data` object instead of replacing it. Any properties that don't already exist will be added, and those that did originally exit will be overwritten.
+The object returned by the `normalize` function is *combined* with the original respective item from `data`.  
+
+The `normalize` function will **extend the original `data` item** instead of replacing it. (This uses jQuery's `$.extend()` method, shallow copy.) Each normalized item will contain its original properties unless they were explicitly overwritten in the `normalize` function.
 
 #### Use with Built-In Templates
 
-Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (for example, *basic_image_item*). 
+Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (for example, `basic_image_item`). 
 
-Built-in templates expect that certain properties will be present (such as `title` and `image`). The `normalize` function allows you to provide those (or normalize their values if the already exist in your `api_result`).
+Built-in templates expect that certain properties will be present (such as `title` and `image`). The `normalize` function allows you to provide those (or normalize their values if the property already existed in your `data`).
 
 For example, if you have a `data` object that looks like this:
 
@@ -401,6 +393,46 @@ This would result in your `data` object looking like this once it gets passed al
 
 Now, your object has all the required properties for the **basic_image_item** template and everything will be displayed as expected.
 
+#### Important Note on Enabling Features
+
+If you intend to use a [template feature](https://duck.co/duckduckhack/spice_templates_reference) that is [disabled by default](https://duck.co/duckduckhack/spice_templates_overview#a-note-on-default-template-options) or [disabled by a template group defaults](https://duck.co/duckduckhack/spice_templates_overview#template-groups-reference), that feature must be **enabled in the `options`** to display.
+
+Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. 
+
+In this example:
+
+```javascript
+normalize: function(item){
+    return {
+        // these won't work!
+        rating: item.customerRating,
+        brand: item.brandname
+    };
+},
+templates: {
+    group: 'products_simple'
+}
+```
+
+The template **will *not* display** the `rating` or `brand` as they are **disabled** by default in the `products_simple` group default options. Only once they are explicitly enabled in an `options` object will they work:
+
+```javascript
+normalize: function(item){
+    return {
+        // now they'll show, because they're enabled below
+        rating: item.customerRating,
+        brand: item.brandname
+    };
+},
+templates: {
+    group: 'products_simple',
+    options: {
+        rating: true,
+        brand: true
+    }
+}
+```
+
 ### `exactMatch` *boolean* and `boost` *boolean*
 
 Two special properties, `exactMatch` and `boost`, can also be set in the `normalize` function to add particular items to the list of exact matches or boosted items. 
@@ -423,7 +455,7 @@ normalize: function(item) {
 
 ------
 
-## `relevancy` *object*
+## `relevancy` *object* [optional]
 
 When dealing with multiple items, the `relevancy` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
@@ -528,7 +560,7 @@ category: [
 
 ------
 
-## `sort_fields` *object*
+## `sort_fields` *object* [optional]
 
 In some cases, the order of the tiles is important (e.g., price, rating, popularity) and you can use the sorting properties to specify the default ordering of the tiles. You can also specify additional sorting fields that will allow users to re-order the tiles using a different sort method.
 
@@ -570,7 +602,7 @@ sort_default: {
 
 ------
 
-## `view` *string*
+## `view` *string* [optional]
 
 Typically you don't need to specify a view for Instant Answers unless you're using special functionality like the playable Audio tiles for the SoundCloud IA, or the Maps used in our Places IA.
 
@@ -587,7 +619,7 @@ Available Views:
 
 ------
 
-## `model` *string*
+## `model` *string* [optional]
 
 Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models that can help with formatting things like Lat/Lon for a Place or Dimensions for an Image. Also, to use some of our non-default views, like Audio or Places you need to use a compatible data model.
 

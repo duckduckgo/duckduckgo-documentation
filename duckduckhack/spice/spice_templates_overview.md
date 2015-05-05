@@ -114,7 +114,7 @@ Of course, you can specify template options to modify this; for example, you may
 
 ## Template Groups (required)
 
-[Template groups](#template-groups) are preset properties for `template` and its `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
+Template groups are preset properties for `template` and its `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
 
 **We strongly recommend using a template group in your Instant Answer.** Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
@@ -204,7 +204,7 @@ If working within existing template groups feels too constraining, we're happy t
 
 In this context, the [Base](#base-template-group) template group is a minimal container template that accepts totally custom markup. Because of this, the Base template group is **a complete last-resort** because of the amount of work up front, and difficult maintenance over time. 
 
-**Please hold off from using the Base template group until you've contacted us.** We hope we'll be able to save you from ongoing, manual maintenance of your Instant Answer display. Additionally, knowing where our templates fall short helps us understand where we can improve our existing set of templates.
+**Please hold off from using the Base template group until you've contacted us.** We hope to save you from ongoing, manual maintenance of your Instant Answer display. Additionally, knowing where our templates fall short helps us understand where we can improve our existing set of templates.
 
 <!--
 Examples of Instant Answers that do not fit into any template groups:
@@ -218,9 +218,9 @@ Examples of Instant Answers that do not fit into any template groups:
 
 ------
 
-## Template Groups
+## Template Groups Reference
 
-This page will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+This reference will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
 
 There are several template groups to choose from:
 
@@ -235,7 +235,7 @@ There are several template groups to choose from:
 
 ### A Note on Default Template Options
 
-**When no `templates.options` are specified and no template `group` has been selected, the `options` are implicity set as follows:**
+**When no `templates.options` are specified and no template `group` has been selected, the `options` are implicitly set as follows:**
 
 ```javascript
     options: {
