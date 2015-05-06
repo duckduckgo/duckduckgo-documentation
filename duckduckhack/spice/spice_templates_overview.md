@@ -14,7 +14,9 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The Spice framework provides you with a wide choice of templates to use. The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#tile-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
+The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/spice_templates_reference).
+
+The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#tile-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 

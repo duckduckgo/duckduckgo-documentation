@@ -1,23 +1,25 @@
-# Spice Templates Reference
+# Spice Templates and Variants Reference
 
-The basic building blocks of displaying Spice Instant Answers are the templates and variants. Below is a detailed reference of each template and its workings.
+The basic building blocks of displaying Spice Instant Answers are templates and variants. Below is a detailed reference of the properties and usage of each.
+
+To understand the context of templates and how they fit into your Instant Answer, start with the [Templates Overview](https://duck.co/duckduckhack/spice_templates_overview).
 
 The reference is divided into two parts:
 
-- [Spice Templates](#spice-templates)
-- [Tile Variants](#tile-variants)
+- [Spice Templates](#spice-templates) - the built-in handlebars templates
+- [Variants](#spice-variants) - preset styles available to modify their appearnce
 
 ## Important Note
 
-Before using these templates please read the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the proper usage of both the `templates` block and the `options` block. 
+Before using these templates please read the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
-Understanding these is crucial to implementing Spice templates properly and effectively.
+Additionally, the [Templates Overview](https://duck.co/duckduckhack/spice_templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
 
 ## Spice Templates
 
 The list of built-in Spice templates includes:
 
-- [`record`](#record-template)
+
 - [`text_item`](#textitem-template)
 - [`text_detail`](#textdetail-template)
 - [`basic_image_item`](#basicimageitem-template)
@@ -28,71 +30,9 @@ The list of built-in Spice templates includes:
 - [`places_item`](#placesitem-template)
 - [`places_detail`](#placesdetail-template)
 - [`list_detail`](#listdetail-template)
+- [`record`](#record-template)
 - [`base_item`](#baseitem-template)
 - [`base_detail`](#basedetail-template)
-
-------
-
-<!-- /summary -->
-
-## `record` Template
-
-A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#list-template) template.
-
-### Template Diagram
-
-![record template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Frecord.png&f=1)
-
-### Available Features
-
-- `record_data` [required] *object* 
-	Contains key-value pairs to display in table format
-	Values limited to 350 characters, truncated to whole words with an ellipsis
-
-### Usage
-
-This template requires that a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. 
-
-However, if you want to specify exactly which properties of the `record_data` object should be displayed, you can define an optional `record_keys` property. This is an array of strings, specifying which key-value pairs of `record_data` will be included.
-
-An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting.
-
-### Sample Code
-
-```javascript
-data: {
-    record_data: {
-        name: 'Bob',
-        phone: '123-456-7890',
-        email: 'bob@bobstheman.com',
-        address: '123 First Street'
-    }
-},
-normalize: function(item){
-    return {
-        record_keys: ["name", "phone", "email"]
-    }
-},
-templates: {
-    group: 'base',
-    options: {
-        content: 'record',
-        /* optional - highlight alternate rows */
-        rowHighlight: true
-    }
-}
-```
-
-### Example usage of the `record` template:
-
-- [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
-- [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
-- [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
-- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
-
-### Template groups using the `record` template:
-
-- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
 
 ------
 
@@ -688,9 +628,72 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ------
 
+## `record` Template
+
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#list-template) template.
+
+### Template Diagram
+
+![record template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Frecord.png&f=1)
+
+### Available Features
+
+- `record_data` [required] *object* 
+	Contains key-value pairs to display in table format
+	Values limited to 350 characters, truncated to whole words with an ellipsis
+
+### Usage
+
+This template requires that a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. 
+
+However, if you want to specify exactly which properties of the `record_data` object should be displayed, you can define an optional `record_keys` property. This is an array of strings, specifying which key-value pairs of `record_data` will be included.
+
+An optional property called `rowHighlight` can be added to `options` to turn on alternating row highlighting.
+
+### Sample Code
+
+```javascript
+data: {
+    record_data: {
+        name: 'Bob',
+        phone: '123-456-7890',
+        email: 'bob@bobstheman.com',
+        address: '123 First Street'
+    }
+},
+normalize: function(item){
+    return {
+        record_keys: ["name", "phone", "email"]
+    }
+},
+templates: {
+    group: 'base',
+    options: {
+        content: 'record',
+        /* optional - highlight alternate rows */
+        rowHighlight: true
+    }
+}
+```
+
+### Example usage of the `record` template:
+
+- [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
+- [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
+- [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
+- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
+
+### Template groups using the `record` template:
+
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
+
+------
+
 ## `base_item` Template
 
-An item template for containing fully customized markup.
+An item template for containing fully customized markup. 
+
+**Use as a last resort** due to the large amount of upfront work and ongoing maintenance involved. Please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) *before* using this template.
 
 ### Template Diagram
 
@@ -722,6 +725,8 @@ An item template for containing fully customized markup.
 
 A detail template for containing fully customized markup.
 
+**Use as a last resort** due to the large amount of upfront work and ongoing maintenance involved. Please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) *before* using this template.
+
 ### Template Diagram
 
 ![base_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_detail.png&f=1)
@@ -746,7 +751,7 @@ A detail template for containing fully customized markup.
 
 ------
 
-# Spice Variants Reference
+# Spice Variants
 
 If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. 
 
@@ -1053,9 +1058,9 @@ templates: {
 
 # Directly Specifying Classes
 
-When [variants](#spice-variants-reference) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+When [variants](#spice-variants) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
 
-Classes can be directly specified to the same elements as [Variants](#spice-variants-reference); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+Classes can be directly specified to the same elements as [Variants](#spice-variants); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
 ### Applicable Templates
 
@@ -1070,7 +1075,7 @@ The values that can be used in the elClass are found in the [Text and Colors](ht
 
 ### Usage
 
-`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants-reference).
+`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants).
 
 ```javascript
 templates: {

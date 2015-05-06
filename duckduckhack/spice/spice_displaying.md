@@ -330,7 +330,7 @@ More about how templates work can be found in the [template overview](https://du
 
 - ### `variants` *object* [optional]
 
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants-reference). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
 - ### `elClass` *object* [optional]
 
