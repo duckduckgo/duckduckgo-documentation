@@ -37,7 +37,7 @@ Below is an example of the same Instant Answer returning a single result. This u
 
 In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior.
 
-To display a template other than the one used for `detail`, specify an `item_detail` template. To disable any detailed display when an item is clicked, set `item_detail: false`.
+To display a template other than the one used for `detail`, specify an `item_detail` template. To disable click behavior, set `item_detail: false`.
 
 This diagram shows what is displayed when an instant answer returns multiple items:
 
@@ -73,7 +73,7 @@ For example, the Amazon products search Instant Answer uses one template for sin
 
 ![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_detail.png&f=1)
 
-The Instant Answer uses a different template when items are clicked (`item_detail`):
+However, the Amazon Instant Answer displays a different template when multiple items are returned, and one is clicked (`item_detail`):
 
 ![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_item_detail.png&f=1)
 
@@ -120,9 +120,9 @@ Template groups are preset properties for `template` and its `options` that work
 
 ### How Template Groups Work
 
-Setting a template group automatically sets the `item` and `detail` templates. Some template groups also set an `item_detail` template and a few default `options`. 
+Setting a template group automatically sets the `item` and `detail` templates for you. Some template groups also set an `item_detail` template and a few default `options`. 
 
-You can easily customize the appearance of the template group by overriding the default `options` in your Spice frontend code. Of course, the appearance will also be affected by which data is returned with each item.
+You can easily customize the appearance of the template group by overriding the default `options` in your Spice frontend code. The appearance will also be affected by which data is returned with each item.
 
 ### Picking a Template Group
 
@@ -172,7 +172,7 @@ These results fit this format well:
 
 #### My Spice returns products with prices, ratings, and brands/authors/artists
 
-The [Products](#product-template-group) is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
+The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
 
 Examples of results that work well with the Products template group include:
 
@@ -220,9 +220,9 @@ Examples of Instant Answers that do not fit into any template groups:
 
 ## Template Groups Reference
 
-This reference will help you understand what each template group looks like and what content works best for it. Each group is accompanied by several examples of live Spice Instant Answers using that group. Each template is accompanied by similar examples, links to code and diagrams indicating what features exist for the template and what the template layout looks like.
+This reference explains what each template group looks like, how it works, and what content works fits it best. Each template group is accompanied by live examples, layout diagrams, code links, and available features.
 
-There are several template groups to choose from:
+These are the currently available template groups:
 
 - [Text](#text-template-group)
 - [Info](#info-template-group)
@@ -235,7 +235,7 @@ There are several template groups to choose from:
 
 ### A Note on Default Template Options
 
-**When no `templates.options` are specified and no template `group` has been selected, the `options` are implicitly set as follows:**
+When no `options` are specified and no template `group` has been selected, the `options` are implicitly set as follows:
 
 ```javascript
     options: {
@@ -253,9 +253,9 @@ There are several template groups to choose from:
 
 ## Important Notes
 
-1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md) document to understand the **proper usage of both the `templates` block and the `options` block**.
+1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. Specifically, in order for each of the templates to display correctly, you need to ensure that each of the template's features, which you are using, **are defined in your `data` object**. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#normalize-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#data-object-required).
 
 Understanding these is crucial to implementing Spice templates properly and effectively.
 
@@ -293,7 +293,7 @@ templates: {
 - [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
 - [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#textdetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'text' template group
 
@@ -345,7 +345,7 @@ templates: {
 - [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
 - [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#basicinfodetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'info' template group
 
@@ -402,7 +402,7 @@ templates: {
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'products' template group
 
@@ -462,7 +462,7 @@ templates: {
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'media' template group
 
@@ -512,7 +512,7 @@ templates: {
 - [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
 - [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'icon' template group
 
@@ -602,7 +602,7 @@ templates: {
 - [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
 - [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#listdetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example use of the 'list' template group
 
@@ -613,7 +613,11 @@ See the **[important notes](#important-notes)** before implementing this templat
 
 ## Base Template Group
 
-This is the most rudimentary template group. It provides a minimal container template which is intended to be used when your Spice requires highly customized mark-up. **Using this template should be a last resort if other templates don't suffice.**
+This is the most rudimentary template group. It provides a minimal container template that accepts totally custom markup.
+
+Using this template group requires a *large amount of work* up front, and *difficult maintenance* over time. As a result, **this template should be a last resort.**
+
+If you feel that other template groups do not meet your needs, please **contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) *before* using the Base Template Group**. We'll work with you to find the best way to express your idea and avoid ongoing, manual maintenance for your Instant Answer.
 
 ### Usage
 
@@ -652,7 +656,7 @@ templates: {
 - [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#baseitem-template)
 - [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
 
-See the **[important notes](#important-notes)** before implementing this template group.
+See the **[important notes](#important-notes)** for making this template display correctly.
 
 ### Example uses of the 'base' template group
 
