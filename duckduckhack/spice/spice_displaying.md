@@ -19,6 +19,8 @@ In some (rare) scenarios, you may also want to handle the AnswerBar's events (fo
 ```javascript
 Spice.add({
 
+	// Required properties:
+	
     id: String,
     name: String,
     data: Object,
@@ -39,15 +41,6 @@ Spice.add({
         sourceIconUrl: String (url),
     },
 
-    normalize: Function,
-
-    relevancy: {
-        type: String,
-        skip_words: [, String],
-        primary: [, Object],
-        dup: String,
-    },
-
     templates: {
         group: String,
 
@@ -65,6 +58,17 @@ Spice.add({
         variants: Object
         
         elClass: Object
+    },
+
+    // Optional properties:
+
+    normalize: Function,
+
+    relevancy: {
+        type: String,
+        skip_words: [, String],
+        primary: [, Object],
+        dup: String,
     },
 
     view: String,
