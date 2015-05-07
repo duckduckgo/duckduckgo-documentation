@@ -62,13 +62,13 @@ Spice.add({
 
         options: Object
 
-		variants: Object
-		
-		elClass: Object
+        variants: Object
+        
+        elClass: Object
     },
 
-	view: String,
-	model: String,
+    view: String,
+    model: String,
 
     sort_fields: Object,
     sort_default: String|Object,
@@ -78,7 +78,7 @@ Spice.add({
     onShow: Function,
     onHide: Function
 
-  });
+});
 ```
 
 ### Required Properties
@@ -224,16 +224,16 @@ The following are all properties of the `meta: {}` object.
 	
 	From [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L79):
 	
-	```javascript
-	meta:{
-		...
-		sourceLogo: {
+    ```javascript
+    meta:{
+        ...
+        sourceLogo: {
             url: DDG.get_asset_path('quixey','quixey_logo.png'),
             width: '45',
             height: '12'
         }
-	}
-	```
+    }
+    ```
 	
 	This is the [result](https://duckduckgo.com/?q=money+apps&ia=apps):
 	
@@ -269,9 +269,11 @@ More about how templates work can be found in the [template overview](https://du
     For example, `group: 'info'` will implicitly set:
 
     ```javascript
-    item: 'basic_item',
-    item_detail: 'basic_info_item_detail',
-    detail: 'basic_info_detail'
+    templates:{
+        item: 'basic_item',
+        item_detail: 'basic_info_item_detail',
+        detail: 'basic_info_detail'
+    }
     ```
 
 - ### `item` *string or function* [required if no `group` is specified]
@@ -315,7 +317,7 @@ More about how templates work can be found in the [template overview](https://du
 	For example:
 	
 	```javascript
-	templates: {
+    templates: {
         group: 'info',
         options: {
             content: 'record',
@@ -472,18 +474,18 @@ Sample code from [quixey.js](https://github.com/duckduckgo/zeroclickinfo-spice/b
 
 ```javascript
 relevancy: {
-	...
-	category: [
-	    { required: 'icon_url' },
-	    { key: 'short_desc' },
-	    { key: 'name' },
-	    { key: 'custom.features.category', match: category_match_regexp, strict:false } // strict means this key has to contain a category phrase or we reject
-	],
+    ...
+    category: [
+        { required: 'icon_url' },
+        { key: 'short_desc' },
+        { key: 'name' },
+        { key: 'custom.features.category', match: category_match_regexp, strict:false } // strict means this key has to contain a category phrase or we reject
+    ],
 
-	primary: [
-	    { required: 'icon_url' }, // would like to add  alt: 'platforms.0.icon_url'
-	    { key: 'name', strict: false },
-	]
+    primary: [
+        { required: 'icon_url' }, // would like to add  alt: 'platforms.0.icon_url'
+        { key: 'name', strict: false },
+    ]
 }
 ```
 
