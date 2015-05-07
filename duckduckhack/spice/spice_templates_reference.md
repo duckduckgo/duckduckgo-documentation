@@ -20,19 +20,19 @@ Additionally, the [Templates Overview](https://duck.co/duckduckhack/spice_templa
 The list of built-in Spice templates includes:
 
 
-- [`text_item`](#textitem-template)
-- [`text_detail`](#textdetail-template)
-- [`basic_image_item`](#basicimageitem-template)
-- [`products_item`](#productsitem-template)
-- [`products_detail`](#productsdetail-template)
-- [`products_item_detail`](#productsitemdetail-template)
-- [`basic_info_detail`](#basicinfodetail-template)
-- [`places_item`](#placesitem-template)
-- [`places_detail`](#placesdetail-template)
-- [`list_detail`](#listdetail-template)
-- [`record`](#record-template)
-- [`base_item`](#baseitem-template)
-- [`base_detail`](#basedetail-template)
+- [`text_item`](#codetextitemcode-template)
+- [`text_detail`](#codetextdetailcode-template)
+- [`basic_image_item`](#codebasicimageitemcode-template)
+- [`products_item`](#codeproductsitemcode-template)
+- [`products_detail`](#codeproductsdetailcode-template)
+- [`products_item_detail`](#codeproductsitemdetailcode-template)
+- [`basic_info_detail`](#codebasicinfodetailcode-template)
+- [`places_item`](#codeplacesitemcode-template)
+- [`places_detail`](#codeplacesdetailcode-template)
+- [`list_detail`](#codelistdetailcode-template)
+- [`record`](#coderecordcode-template)
+- [`base_item`](#codebaseitemcode-template)
+- [`base_detail`](#codebasedetailcode-template)
 
 ------
 
@@ -601,7 +601,7 @@ record_data *or* list
 #### If Displaying Table of Key-Value Pairs:
 
 - `content` [required] *sub-template* 
-	Recommended to set this value to 'record' to use the built-in [`record`](#record-template) template
+	Recommended to set this value to 'record' to use the built-in [`record`](#coderecordcode-template) template
 - `record_data` [required] *object* 
 	Includes the key-value pairs to display
 
@@ -614,7 +614,7 @@ record_data *or* list
 
 ### Usage 
 
-To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#record-template) template to the `content` property.
+To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#coderecordcode-template) template to the `content` property.
 
 When displaying a bulleted list, the simplest case would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`.
 
@@ -630,7 +630,7 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ## `record` Template
 
-A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#list-template) template.
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#codelistcode-template) template.
 
 ### Template Diagram
 
@@ -685,7 +685,7 @@ templates: {
 
 ### Template groups using the `record` template:
 
-- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#listdetail-template) template)
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
 
 ------
 

@@ -16,7 +16,7 @@ Templates are handlebars files which render in the context of **one item** retur
 
 The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/spice_templates_reference).
 
-The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#tile-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
+The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
@@ -257,7 +257,7 @@ When no `options` are specified and no template `group` has been selected, the `
 
 1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#normalize-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#data-object-required).
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#codedatacode-object-required).
 
 Understanding these is crucial to implementing Spice templates properly and effectively.
 
@@ -290,14 +290,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'text' group:
+#### Default templates used in the `text` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
-- [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#textdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
+- [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#codetextdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'text' template group
+### Example uses of the `text` template group
 
 - ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
     ![DuckDuckGo search for "github duckduckgo"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgithub_duckduckgo.png&f=1)
@@ -342,14 +342,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'info' group:
+#### Default templates used in the `info` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
-- [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#basicinfodetail-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasicinfodetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'info' template group
+### Example uses of the `info` template group
 
 - ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
     ![DuckDuckGo search for "green day band"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgreen_day_band.png&f=1)
@@ -397,16 +397,16 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'products' group:
+#### Default templates used in the `products` group:
 
-- [`products_item`](https://duck.co/duckduckhack/spice_templates_reference#productsitem-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
+- [`products_item`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'products' template group
+### Example uses of the `products` template group
 
 - ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
     ![DuckDuckGo search for "buy batman lego"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbuy_batman_lego.png&f=1)
@@ -457,16 +457,16 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'media' group:
+#### Default templates used in the `media` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#basicimageitem-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'media' template group
+### Example uses of the `media` template group
 
 - ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
     ![DuckDuckGo search for "lord of the rings movie"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flord_of_the_rings_movie.png&f=1)
@@ -508,15 +508,15 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'icon' group:
+#### Default templates used in the `icon` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsdetail-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#productsitemdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'icon' template group
+### Example uses of the `icon` template group
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
@@ -550,10 +550,10 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'places' group:
+#### Default templates used in the `places` group:
 
-- [`places_item`](https://duck.co/duckduckhack/spice_templates_reference#placesitem-template)
-- [`places_detail`](https://duck.co/duckduckhack/spice_templates_reference#placesdetail-template)
+- [`places_item`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesitemcode-template)
+- [`places_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesdetailcode-template)
 
 #### Places Model and View
 
@@ -599,14 +599,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'list' group:
+#### Default templates used in the `list` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#textitem-template)
-- [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#listdetail-template)
+- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
+- [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#codelistdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example use of the 'list' template group
+### Example use of the `list` template group
 
 - ["whois"](https://duckduckgo.com/?q=whois+mozilla.org) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js))
 	![DuckDuckGo search for "whois mozilla.org"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhois_results.png&f=1)
@@ -653,14 +653,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the 'base' group:
+#### Default templates used in the `base` group:
 
-- [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#baseitem-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#basedetail-template)
+- [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#codebaseitemcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the 'base' template group
+### Example uses of the `base` template group
 
 - ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
     ![DuckDuckGo search for "gandhi quote"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgandhi_quote.png&f=1)
