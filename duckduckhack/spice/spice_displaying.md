@@ -39,6 +39,8 @@ Spice.add({
         sourceUrl: String (url),
         sourceIcon: Boolean,
         sourceIconUrl: String (url),
+
+		snippetChars: Integer
     },
 
     templates: {
@@ -253,6 +255,11 @@ The following are all properties of the `meta: {}` object.
 
     If the `sourceUrl` domain has no favicon (or if a different favicon is preferred), you can explicitly set a url path for the favicon shown to the left of the "More at" link. This value, if set, will take precedence any favicons pulled from the `sourceUrl` domain.
 
+- ### `snippetChars` *integer* [optional]
+
+    For blocks of text that require truncation, `snippetChars` allows you to specify the maximum number of characters before truncation (to whole words with ellipses). This applies mainly to `description` elements in templates.
+
+	This property is expected to be used in rare cases. Each template comes with its own optimal, default `snippetChars` value.
 
 ------
 
