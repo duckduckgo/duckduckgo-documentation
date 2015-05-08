@@ -37,9 +37,7 @@ Below is an example of the same Instant Answer returning a single result. This u
 
 ### Clicking on an Item
 
-In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior.
-
-To display a template other than the one used for `detail`, specify an `item_detail` template. To disable click behavior, set `item_detail: false`.
+In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior. To display a template other than the one used for `detail`, specify an `item_detail` template.
 
 This diagram shows what is displayed when an instant answer returns multiple items:
 
@@ -78,6 +76,10 @@ For example, the Amazon products search Instant Answer uses one template for sin
 However, the Amazon Instant Answer displays a different template when multiple items are returned, and one is clicked (`item_detail`):
 
 ![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_item_detail.png&f=1)
+
+#### Disabling Detail Display on Click
+
+To disable the display of a detail template when an item is clicked, set `detail: false`. A side effect of this is that single results will be displayed as tiles.
 
 ### When Each Template Is Shown
 
