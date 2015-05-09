@@ -231,7 +231,9 @@ buy
 ### Available Features
 
 - `img` [optional] *string url*
- 	URL path to image
+
+	URL path to image
+
 - `url` [required] *string url*
 - `heading`[required] *string*
 - `rating` [optional] *float*
