@@ -57,6 +57,7 @@ footer
 ### Available Features
 
 - `icon` [optional] *string url*
+	
 	URL path to icon image
 - `url` [optional] *string url*
 - `title` [required] *string url*
@@ -98,9 +99,11 @@ content
 
 - `title_content` [optional] *sub-template*
 - `title` [optional] *string*
+	
 	Available only if `title_content` is not specified
 - `subtitle_content` [optional] *sub-template*
 - `subtitle` [optional] *string*
+	
 	Available only if `subtitle_content` is not specified
 - `content` [optional] *sub-template*
 
@@ -127,11 +130,14 @@ A tile template where images are the main feature, accompanied by text.
 
 - `url` [optional] *string url*
 - `image` [required] *string url*
+	
 	URL path to image
 - `title` [required] *string*
 - `description` [optional] *string*
+	
 	Limited to 56 characters, truncated to whole words with an ellipsis
 - `rating` [optional] *float*
+	
 	A positive float with one decimal point, up to 5.0
 - `ratingText` [optional] *string*
 
@@ -173,11 +179,14 @@ rating
 - `price` [optional] *string*
 - `brand` [optional] *string*
 - `rating` [optional] *float*
+	
 	A positive float with one decimal point, up to 5.0
 - `reviewCount` [optional] *integer*
+	
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 - `url_review` [optional] *string*
+	
 	URL path to reviews
 
 ### Example usage of the "products_item" template:
@@ -219,14 +228,17 @@ buy
 - `url` [required] *string url*
 - `heading`[required] *string*
 - `rating` [optional] *float*
+	
 	A positive float with one decimal point, up to 5.0
 - `reviewCount` [optional] *integer*
+	
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 - `price` [optional] *string*
 - `brand` [optional] *string*
 - `subtitle_content` [optional] *sub-template*
 - `abstract` [required] *string*
+	
 	Limited to 400 characters, truncated to whole words with an ellipsis
 - `buy` [optional] *sub-template*
 
@@ -254,14 +266,16 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 ### Available Features
 
 - `img_m` [optional] *string url*
+	
 	URL path to image
 - `url` [required] *string url*
 - `price` [optional] *string*
 - `brand` [optional] *string*
 - `subtitle_content` [optional] *sub-template*
-- `rating` [optional] *float* 
+- `rating` [optional] *float*
 	A positive float with one decimal point, up to 5.0
 - `reviewCount` [optional] *integer*
+	
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 - `url_review` [optional] *url path to reviews*
@@ -304,14 +318,18 @@ content or description			aux
 
 - `url` [required] *string url*
 - `image` [optional] *string url*
+	
 	URL path to image
 - `title` [optional] *string*
 - `subtitle` [optional] *string*
+	
 	Available only if `title` specified
-- `content` [optional] *sub-template* 
+- `content` [optional] *sub-template*
 - `description` [conditional on `content`] *string*
+	
 	Available and required if `content` not specified
 - [`infoboxData`](#infoboxdata-array) [optional] *array*
+	
 	More information [below](#infoboxdata-array)
 
 ### Example usage of the "basic_info_detail" template:
@@ -332,15 +350,16 @@ In the `basic_info_detail` template, the **InfoBox** floats on the right side of
 
 To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` array specified. `infoboxData` is an array of objects, each with the following properties:
 
-- `label` [required] *string* 
-- `url` [optional] *string url* 
+- `label` [required] *string*
+- `url` [optional] *string url*
 	Used to turn `label` element into a link
-- `value` [optional] *string or array* 
+- `value` [optional] *string or array*
 	Use array to display [nested properties](#nested-properties))
 
 The first object in the array can also be used solely to specify a heading for the InfoBox. This object would contain only one property:
 
 - `heading` [optional] *string*
+	
 	Specified in its own separate object, first in the array
 
 For example, when ["mtg nullify"](https://duckduckgo.com/?q=mtg+nullify&ia=magicthegathering) is searched, [mtg.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/mtg/mtg.js) dynamically generates the following array for `infoboxData`:
@@ -372,15 +391,15 @@ It is also possible to specify labels alone, with or without urls. This is the `
 [
 	{
 	    heading: "Related Terms:"
-	}, 
+	},
 	{
 	    label: "Awesome",
 	    url: "https://duckduckgo.com/?q=ud+awesome&ia=dictionary"
-	}, 
+	},
 	{
 	    label: "Amazing",
 	    url: "https://duckduckgo.com/?q=ud+amazing&ia=dictionary"
-	}, 
+	},
 	...
 ]
 ```
@@ -393,7 +412,7 @@ This appears as:
 
 The `value` property of `infoboxData` objects can *also* be passed an array of objects. These objects have the following properties:
 
-- `label` [required] *string* 
+- `label` [required] *string*
 - `value` [required] *string*
 
 For example, the resulting array passed to `infoboxData` could be structured this way:
@@ -402,7 +421,7 @@ For example, the resulting array passed to `infoboxData` could be structured thi
 [
 	{
 	    heading: "About Me"
-	}, 
+	},
 	{
 	    label: "My Favorites",
 	    value: [
@@ -416,7 +435,7 @@ For example, the resulting array passed to `infoboxData` could be structured thi
 			},
 			...
 		]
-	}, 
+	},
 	...
 ]
 ```
@@ -472,15 +491,18 @@ phone
 
 #### 'Front' of each item:
 - `image` [optional] *string url*
+	
 	URL path to image
 - `name` [required] *string*
 - `title` [optional] *string*
+	
 	Available only if `image` specified
 - `ratingImageURL` [optional] *string url*
-- `rating` [optional] *float* 
+- `rating` [optional] *float*
 	A positive float with one decimal point, up to 5.0
 	Available only if `ratingImageURL` is not specified
 - `reviews` [optional] *integer*
+	
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 
@@ -488,10 +510,12 @@ phone
 - `name` [required] *string*
 - `url` [required] *string url*
 - `price` [optional] *integer*
+	
 	Integer between 1 and 4; converted to a dollar-sign rating (such as '$' or '$$$$')
 - `address_lines` [optional] *array*
+	
 	An array of strings, one for each line
-- `address` [optional] *string* 
+- `address` [optional] *string*
 	Available only if `address_lines` not specified
 	Limited to 65 characters, truncated to whole words with an ellipsis
 - `phone` [optional] *string*
@@ -544,22 +568,26 @@ A detail template for displaying information about a single location on a map ba
 - `url` [required] *string url*
 - `name` [required] *string*
 - `image` [optional] *string url*
+	
 	URL path to image
-- `title` [optional] 
+- `title` [optional]
 	Used at `alt` attribute of the `image` element
-- `hours` [optional] *array* 
+- `hours` [optional] *array*
 	Array of objects, each containing `day` and `hours` properties
 - `ratingImageURL` [optional]
-- `rating` [optional] *float* 
+- `rating` [optional] *float*
 	A positive float with one decimal point, up to 5.0
 	Available only if `ratingImageURL` not specified
 - `reviews` [optional] *integer*
+	
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 - `price` [optional] *integer*
+	
 	Integer between 1 and 4; converted to a dollar-sign rating (such as '$' or '$$$$')- `address_lines` [optional] *array*
+	
 	An array of strings, one for each line
-- `address` [optional] *string* 
+- `address` [optional] *string*
 	Available only if `address_lines` not specified
 - `phone` [optional] *string*
 
@@ -576,7 +604,7 @@ A detail template for displaying information about a single location on a map ba
 
 ## `list_detail` Template
 
-A detail template for displaying of a title and subtitle above a bulleted list, or a table of key-value pairs. 
+A detail template for displaying of a title and subtitle above a bulleted list, or a table of key-value pairs.
 
 ### Template Diagram
 
@@ -595,23 +623,23 @@ record_data *or* list
 ### Available Features
 
 - `title` [optional] *string*
-- `subtitle` [optional] *string* 
+- `subtitle` [optional] *string*
 
 #### If Displaying Table of Key-Value Pairs:
 
-- `content` [required] *sub-template* 
+- `content` [required] *sub-template*
 	Recommended to set this value to 'record' to use the built-in [`record`](#coderecordcode-template) template
-- `record_data` [required] *object* 
+- `record_data` [required] *object*
 	Includes the key-value pairs to display
 
 #### If Displaying Bulleted List of Values:
 
-- `list_content` [required] *sub-template* 
+- `list_content` [required] *sub-template*
 	The handlebars sub-template supplied here will populate within each `li` element
-- `list` *array* 
+- `list` *array*
 	Array of objects, each contains the properties used by `list_content` sub-template
 
-### Usage 
+### Usage
 
 To display a bulleted list, pass a sub-template to the `list_content` property. To display a table of key-value pairs, pass the [`record`](#coderecordcode-template) template to the `content` property.
 
@@ -637,13 +665,13 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 ### Available Features
 
-- `record_data` [required] *object* 
+- `record_data` [required] *object*
 	Contains key-value pairs to display in table format
 	Values limited to 350 characters, truncated to whole words with an ellipsis
 
 ### Usage
 
-This template requires that a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table. 
+This template requires that a `record_data` property, which should contain the key-value data to be displayed. All the properties of the `record_data` object will be used as the keys for the table.
 
 However, if you want to specify exactly which properties of the `record_data` object should be displayed, you can define an optional `record_keys` property. This is an array of strings, specifying which key-value pairs of `record_data` will be included.
 
@@ -690,7 +718,7 @@ templates: {
 
 ## `base_item` Template
 
-An item template for containing fully customized markup. 
+An item template for containing fully customized markup.
 
 **Use as a last resort** due to the large amount of upfront work and ongoing maintenance involved. Please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) *before* using this template.
 
@@ -752,7 +780,7 @@ A detail template for containing fully customized markup.
 
 # Spice Variants
 
-If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`. 
+If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`.
 
 Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
@@ -1028,7 +1056,7 @@ templates: {
 
 ## `iconBadge` Variants
 
-For templates containing an icon badge (an inline colored container with text), this variant sets its size. 
+For templates containing an icon badge (an inline colored container with text), this variant sets its size.
 
 ![iconBadge variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ficonbadge_variant.png&f=1)
 
