@@ -169,7 +169,6 @@ rating
 
 - `url` [optional] *string url*
 - `img` [required] *string url*
-	URL path to image
 - `title` [required] *string*
 - `price` [optional] *string*
 - `brand` [optional] *string*
