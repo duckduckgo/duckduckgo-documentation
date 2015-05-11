@@ -19,8 +19,6 @@
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md)
   - [Triggers Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/spice_triggers.md)
   - [Spice Display](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_displaying.md)
-  - [Spice Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_overview.md)
-  - [Spice Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_templates_reference.md)
   - [More Spice Tutorials](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_frontend_walkthroughs.md)
   - [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_backend.md)
   - [Advanced Frontend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_frontend.md)
@@ -39,6 +37,10 @@
   - [Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_overview.md)
   - [Basic Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/longtail/longtail_basic_tutorial.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#longtail)
+
+- **Templates**
+- [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/templates_overview.md)
+- [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/templates_reference.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)

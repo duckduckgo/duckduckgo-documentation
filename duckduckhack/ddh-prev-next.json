@@ -61,21 +61,11 @@
 
 	"spice_displaying.md": {
 		"prev": ["spice_triggers.md"],
-		"next": ["spice_templates_overview.md"]
-	},
-
-	"spice_templates_overview.md": {
-		"prev": ["spice_displaying.md"],
-		"next": ["spice_templates_reference.md"]
-	},
-
-	"spice_templates_reference.md": {
-		"prev": ["spice_templates_overview.md"],
 		"next": ["spice_frontend_walkthroughs.md"]
 	},
 
 	"spice_frontend_walkthroughs.md": {
-		"prev": ["spice_templates_overview.md"],
+		"prev": ["spice_displaying.md"],
 		"next": ["spice_advanced_backend.md"]
 	},
 
@@ -126,9 +116,19 @@
 
 	"longtail_basic_tutorial.md": {
 		"prev": ["longtail_overview.md"],
-		"next": ["testing_triggers.md"]
+		"next": []
+	},
+	
+	"templates_overview.md": {
+		"prev": [],
+		"next": ["templates_reference.md"]
 	},
 
+	"templates_reference.md": {
+		"prev": ["templates_overview.md"],
+		"next": []
+	},
+	
 	"testing_triggers.md": {
 		"prev": ["determine_your_instant_answer_type.md"],
 		"next": ["testing_html.md"]
@@ -146,7 +146,7 @@
 
 	"testing_location_language_apis.md": {
 		"prev": ["test_files.md"],
-		"next": ["preparing_for_a_pull_request.md"]
+		"next": []
 	},
 
 	"preparing_for_a_pull_request.md" : {
