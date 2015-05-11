@@ -1,6 +1,6 @@
 # Templates Overview
 
-When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the Spice templates you choose.
+When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the templates you choose.
 
 ![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
@@ -14,15 +14,15 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
+The Instant Answer framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
 
 The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
-Spice Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
+Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
 
-On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
+In your Instant Answer display options (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying), you can specify two separate templates:
 
 - `item` template (multiple results)
 - `detail` template (single results)
@@ -83,7 +83,7 @@ To disable the display of a detail template when an item is clicked, set `detail
 
 ### When Each Template Is Shown
 
-The Spice framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
+The Instant Answer framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
 
 ```
           Instant Answer result      
@@ -126,7 +126,7 @@ Template groups are preset properties for `template` and its `options` that work
 
 Setting a template group automatically sets the `item` and `detail` templates for you. Some template groups also set an `item_detail` template and a few default `options`. 
 
-You can easily customize the appearance of the template group by overriding the default `options` in your Spice frontend code. The appearance will also be affected by which data is returned with each item.
+You can easily customize the appearance of the template group by overriding the default `options` in your Instant Answer frontend code. The appearance will also be affected by which data is returned with each item.
 
 ### Picking a Template Group
 
@@ -134,7 +134,7 @@ The best template group for your instant answer depends on what your Instant Ans
 
 A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
 
-#### My Spice returns "things" where visuals are important 
+#### My Instant Answer returns "things" where visuals are important 
 
 The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
 
@@ -144,7 +144,7 @@ Examples that make a great fit for `media` include:
 - Games
 - [Courses](https://duckduckgo.com/?q=computer+science+online+course)
 
-#### My Spice returns detailed "lookup" information
+#### My Instant Answer returns detailed "lookup" information
 
 The [Info](#info-template-group) template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format. 
 
@@ -161,7 +161,7 @@ The [List](#list-template-group) template group works well for lookups that don'
 
 - [WhoIs](https://duckduckgo.com/?q=whois+google.com)
 
-#### My Spice results are mainly text, with a possible icon or logo
+#### My results are mainly text, with a possible icon or logo
 
 The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
 
@@ -174,7 +174,7 @@ These results fit this format well:
 - [Simple answers](https://duckduckgo.com/?q=namecheap+http%3A%2F%2Finstantanswerparty.com&ia=domain)
 - [Long blocks of text](https://duckduckgo.com/?q=baconipsum+4&ia=baconipsum)
 
-#### My Spice returns products with prices, ratings, and brands/authors/artists
+#### My Instant Answer returns products with prices, ratings, and brands/authors/artists
 
 The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
 
@@ -187,7 +187,7 @@ Examples of results that work well with the Products template group include:
 - [Books](https://duckduckgo.com/?q=amazon+ray+bradbury&ia=products)
 - [Physical products](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products)
 
-#### My Spice returns location-based results
+#### My Instant Answer returns location-based results
 
 The [Places](#places-template-group) template group is perfect for results where location is an important aspect. This template group displays single and multiple items on a map.
 
@@ -200,7 +200,7 @@ Results that would make a good fit for the Places template group include:
 - Surf spots
 - Shark GPS locations
 
-#### My Spice is amazingly unique and existing template groups won't meet my needs
+#### My Instant Answer is amazingly unique and existing template groups won't meet my needs
 
 We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be toggled. 
 
@@ -257,11 +257,11 @@ When no `options` are specified and no template `group` has been selected, the `
 
 ## Important Notes
 
-1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the **proper usage of both the `templates` block and the `options` block**.
+1. Before using these templates in your code, please familiarize yourself with the display options for your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) to understand the **proper usage of both the `templates` block and the `options` block**.
 
 2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#codedatacode-object-required).
 
-Understanding these is crucial to implementing Spice templates properly and effectively.
+Understanding these is crucial to implementing templates properly and effectively.
 
 ------
 
@@ -561,7 +561,7 @@ templates: {
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
 
-The model and view are specified alongside the template group property in your Instant Answer display options. You can see how this is done under the [Model and View section](https://duck.co/duckduckhack/spice_displaying#views) of the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) page.
+The model and view are specified alongside the template group property in your Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying#views)).
 
 To work correctly, the places model requires **additional values** passed that do not appear directly in the templates. Make sure that each item includes the attributes required by the places model. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
