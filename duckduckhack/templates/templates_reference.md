@@ -1,24 +1,23 @@
-# Spice Templates and Variants Reference
+# Templates and Variants Reference
 
-The basic building blocks of displaying Spice Instant Answers are templates and variants. Below is a detailed reference of the properties and usage of each.
+The basic building blocks of displaying Instant Answers are templates and variants. Below is a detailed reference of the properties and usage of each.
 
 To understand the context of templates and how they fit into your Instant Answer, start with the [Templates Overview](https://duck.co/duckduckhack/templates_overview).
 
 The reference is divided into two parts:
 
-- [Spice Templates](#spice-templates) - the built-in handlebars templates
-- [Variants](#spice-variants) - preset styles available to modify their appearnce
+- [Templates](#templates) - the built-in handlebars templates
+- [Variants](#variants) - preset styles available to modify their appearance
 
 ## Important Note
 
-Before using these templates please read the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
+Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
 Additionally, the [Templates Overview](https://duck.co/duckduckhack/templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
 
-## Spice Templates
+## Templates
 
-The list of built-in Spice templates includes:
-
+The list of built-in templates includes:
 
 - [`text_item`](#codetextitemcode-template)
 - [`text_detail`](#codetextdetailcode-template)
@@ -57,7 +56,6 @@ footer
 ### Available Features
 
 - `icon` [optional] *string url*
-
 	URL path to icon image
 - `url` [optional] *string url*
 - `title` [required] *string url*
@@ -825,9 +823,9 @@ A detail template for containing fully customized markup.
 
 ------
 
-# Spice Variants
+# Variants
 
-If you'd like to modify a template to fit your needs, the Spice framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your call to `Spice.add()`.
+If you'd like to modify a template to fit your needs, the Instant Answer framework offers preset options called Variants. Variants are passed as the `variants` property of `templates`, in your Instant Answer display options.
 
 Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
@@ -835,7 +833,7 @@ Variants correspond to pre-determined css classes (or combinations of classes) f
 
 ## `tile` Variants
 
-If the default tile dimensions are not perfect for your Spice result, you can use tile variants to modify the containers of your `item` template.
+If the default tile dimensions are not perfect for your Instant Answer result, you can use tile variants to modify the containers of your `item` template.
 
 ![tile variant diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvariant_diagrams%2Ftile_variant.png&f=1)
 
@@ -1132,9 +1130,9 @@ templates: {
 
 # Directly Specifying Classes
 
-When [variants](#spice-variants) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your call to `Spice.add()`. This feature is mainly used for specifying text size and color.
+When [variants](#variants) don't suffice, you can directly choose classes based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`, in your Instant Answer display options. This feature is mainly used for specifying text size and color.
 
-Classes can be directly specified to the same elements as [Variants](#spice-variants); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+Classes can be directly specified to the same elements as [Variants](#variants); the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
 ### Applicable Templates
 
@@ -1149,7 +1147,7 @@ The values that can be used in the elClass are found in the [Text and Colors](ht
 
 ### Usage
 
-`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#spice-variants).
+`elClass` is parallel to `variants` in syntax, and both options can be specified under `templates` simultaneously. The properties are the same as those documented as [Variants](#variants).
 
 ```javascript
 templates: {

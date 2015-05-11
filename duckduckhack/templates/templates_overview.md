@@ -1,4 +1,4 @@
-# Spice Templates Overview
+# Templates Overview
 
 When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the Spice templates you choose.
 
@@ -16,7 +16,7 @@ Templates are handlebars files which render in the context of **one item** retur
 
 The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
 
-The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#spice-variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
+The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
@@ -561,7 +561,7 @@ templates: {
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
 
-The model and view are specified alongside the template group property when you call `Spice.add()`. You can see how this is done under the [Model and View section](https://duck.co/duckduckhack/spice_displaying#views) of the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) page.
+The model and view are specified alongside the template group property in your Instant Answer display options. You can see how this is done under the [Model and View section](https://duck.co/duckduckhack/spice_displaying#views) of the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) page.
 
 To work correctly, the places model requires **additional values** passed that do not appear directly in the templates. Make sure that each item includes the attributes required by the places model. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -596,7 +596,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in a call to [`Spice.add()`](https://duck.co/duckduckhack/templates_reference). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
 
 ```javascript
 Spice.add({
