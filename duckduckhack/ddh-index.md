@@ -39,8 +39,8 @@
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#longtail)
 
 - **Templates**
-- [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/templates_overview.md)
-- [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/templates_reference.md)
+- [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/templates/templates_overview.md)
+- [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/templates/templates_reference.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
