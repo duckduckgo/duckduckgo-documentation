@@ -265,15 +265,15 @@ The following are all properties of the `meta: {}` object.
 
 ## `templates` *object* [required]
 
-A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/spice_templates_overview#template-groups-reference) and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
+A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/templates_overview#template-groups-reference) and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
 
-More about how templates work can be found in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+More about how templates work can be found in the [template overview](https://duck.co/duckduckhack/templates_overview).
 
 <!-- /summary -->
 
 - ### `group` *string* [required, unless `item` and `detail` are specified]
 
-    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/spice_templates_overview).
+    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/templates_overview).
 
     This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. unless otherwise manually overridden.
 
@@ -295,7 +295,7 @@ More about how templates work can be found in the [template overview](https://du
 
     - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
 
-    - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/spice_templates_overview#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
+    - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/templates_overview#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
 
 - ### `item_mobile` *string or function* [optional]
 
@@ -317,13 +317,13 @@ More about how templates work can be found in the [template overview](https://du
 
 - ### `item_detail` *string or function* [optional]
 
-    An alternative `detail` template to be used when a tile is clicked. Learn more about when `item_detail` is used in the [templates overview](https://duck.co/duckduckhack/spice_templates_overview#clicking-on-an-item).
+    An alternative `detail` template to be used when a tile is clicked. Learn more about when `item_detail` is used in the [templates overview](https://duck.co/duckduckhack/templates_overview#clicking-on-an-item).
 
 - ### `options` *object* [optional]
 
-    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/spice_templates_reference) of your template using boolean values or references to sub-templates. 
+    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values or references to sub-templates. 
 
-	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasicinfodetailcode-template) template to a particular sub-template. 
+	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template) template to a particular sub-template. 
 	
 	For example:
 	
@@ -337,17 +337,17 @@ More about how templates work can be found in the [template overview](https://du
     }
 	```
 
-	Available features will vary with each chosen template (see the [templates reference](https://duck.co/duckduckhack/spice_templates_reference) for details on each template). For example, the `basic_info_detail` template doesn't have a `brand` feature, so setting `brand: true` or `brand: false` will have no effect.
+	Available features will vary with each chosen template (see the [templates reference](https://duck.co/duckduckhack/templates_reference) for details on each template). For example, the `basic_info_detail` template doesn't have a `brand` feature, so setting `brand: true` or `brand: false` will have no effect.
 	
-	These implicit [default options](https://duck.co/duckduckhack/spice_templates_overview#a-note-on-default-template-options) apply when neither an `options` object nor a templates `group` are set.
+	These implicit [default options](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options) apply when neither an `options` object nor a templates `group` are set.
 
 - ### `variants` *object* [optional]
 
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/templates_reference#spice-variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
 - ### `elClass` *object* [optional]
 
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/spice_templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
 
 	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
@@ -369,7 +369,7 @@ The `normalize` function will **extend the original `data` item** instead of rep
 
 #### Use with Built-In Templates
 
-Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/spice_templates_reference#spice-templates) (for example, `basic_image_item`). 
+Normalize can be particularly useful if you are using a [built-in template](https://duck.co/duckduckhack/templates_reference#templates) (for example, `basic_image_item`). 
 
 Built-in templates expect that certain properties will be present (such as `title` and `image`). The `normalize` function allows you to provide those (or normalize their values if the property already existed in your `data`).
 
@@ -408,7 +408,7 @@ Now, your object has all the required properties for the **basic_image_item** te
 
 #### Important Note on Enabling Features
 
-If you intend to use a [template feature](https://duck.co/duckduckhack/spice_templates_reference) that is [disabled by default](https://duck.co/duckduckhack/spice_templates_overview#a-note-on-default-template-options) or [disabled by a template group defaults](https://duck.co/duckduckhack/spice_templates_overview#template-groups-reference), that feature must be **enabled in the `options`** to display.
+If you intend to use a [template feature](https://duck.co/duckduckhack/templates_reference) that is [disabled by default](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options) or [disabled by a template group defaults](https://duck.co/duckduckhack/templates_overview#template-groups-reference), that feature must be **enabled in the `options`** to display.
 
 Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. 
 
@@ -646,7 +646,7 @@ Available models:
 - Product
 - Video
 
-More about using models and their properties can be found in their respective [template groups](https://duck.co/duckduckhack/spice_templates_overview#template-groups-reference).
+More about using models and their properties can be found in their respective [template groups](https://duck.co/duckduckhack/templates_overview#template-groups-reference).
 
 ------
 
