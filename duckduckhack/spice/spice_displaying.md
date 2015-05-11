@@ -347,7 +347,7 @@ More about how templates work can be found in the [template overview](https://du
 
 - ### `elClass` *object* [optional]
 
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/templates_variants#directly_specifying_classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
+	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/templates_reference#directly-specifying-classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
 
 	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
 
