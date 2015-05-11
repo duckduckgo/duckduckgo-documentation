@@ -2,7 +2,7 @@
 
 The basic building blocks of displaying Spice Instant Answers are templates and variants. Below is a detailed reference of the properties and usage of each.
 
-To understand the context of templates and how they fit into your Instant Answer, start with the [Templates Overview](https://duck.co/duckduckhack/spice_templates_overview).
+To understand the context of templates and how they fit into your Instant Answer, start with the [Templates Overview](https://duck.co/duckduckhack/templates_overview).
 
 The reference is divided into two parts:
 
@@ -13,7 +13,7 @@ The reference is divided into two parts:
 
 Before using these templates please read the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
-Additionally, the [Templates Overview](https://duck.co/duckduckhack/spice_templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
+Additionally, the [Templates Overview](https://duck.co/duckduckhack/templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
 
 ## Spice Templates
 
@@ -75,7 +75,7 @@ footer
 
 ### Template groups using the "text_item" template:
 
-- [Text](https://duck.co/duckduckhack/spice_templates_overview#text-template-group)
+- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
 ------
 
@@ -116,7 +116,7 @@ content
 
 ### Template groups using the "text_detail" template:
 
-- [Text](https://duck.co/duckduckhack/spice_templates_overview#text-template-group)
+- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
 ------
 
@@ -153,8 +153,8 @@ A tile template where images are the main feature, accompanied by text.
 
 ### Template groups using the "basic_image_item" template:
 
-- [Info](https://duck.co/duckduckhack/spice_templates_overview#info-template-group)
-- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
+- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 
 ------
 
@@ -203,7 +203,7 @@ rating
 
 ### Template groups using the "products_item" template:
 
-- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 
 ------
 
@@ -261,9 +261,9 @@ buy
 
 ### Template groups using the "products_detail" template:
 
-- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
-- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
-- [Icon](https://duck.co/duckduckhack/spice_templates_overview#icon-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
 
 ------
 
@@ -305,9 +305,9 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ### Template groups using the "products_item_detail" template:
 
-- [Products](https://duck.co/duckduckhack/spice_templates_overview#products-template-group)
-- [Media](https://duck.co/duckduckhack/spice_templates_overview#media-template-group)
-- [Icon](https://duck.co/duckduckhack/spice_templates_overview#icon-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
 
 ------
 
@@ -359,7 +359,7 @@ content or description			aux
 
 ### Template groups using the "basic_info_detail" template:
 
-- [Info](https://duck.co/duckduckhack/spice_templates_overview#info-template-group)
+- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
 ### `infoboxData` *array*
 
@@ -563,7 +563,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Template groups using the "places_item" template:
 
-- [Places](https://duck.co/duckduckhack/spice_templates_overview#places-template-group)
+- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
 ------
 
@@ -638,7 +638,7 @@ A detail template for displaying information about a single location on a map ba
 
 ### Template groups using the "places_detail" template:
 
-- [Places](https://duck.co/duckduckhack/spice_templates_overview#places-template-group)
+- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
 ------
 
@@ -697,7 +697,7 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ### Template groups using the "list_detail" template:
 
-- [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group)
+- [List](https://duck.co/duckduckhack/templates_overview#list-template-group)
 
 ------
 
@@ -759,7 +759,7 @@ templates: {
 
 ### Template groups using the `record` template:
 
-- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/spice_templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
 
 ------
 
@@ -791,7 +791,7 @@ An item template for containing fully customized markup.
 
 ### Template groups using the "base_item" template:
 
-- [Base](https://duck.co/duckduckhack/spice_templates_overview#base-template-group)
+- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
 ------
 
@@ -821,7 +821,7 @@ A detail template for containing fully customized markup.
 
 ### Template groups using the "base_detail" template:
 
-- [Base](https://duck.co/duckduckhack/spice_templates_overview#base-template-group)
+- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
 ------
 

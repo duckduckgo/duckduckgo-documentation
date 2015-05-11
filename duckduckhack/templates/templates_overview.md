@@ -14,9 +14,9 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/spice_templates_reference).
+The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
 
-The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
+The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#spice-variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
@@ -294,8 +294,8 @@ templates: {
 
 #### Default templates used in the `text` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#codetextdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`text_detail`](https://duck.co/duckduckhack/templates_reference#codetextdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -346,8 +346,8 @@ templates: {
 
 #### Default templates used in the `info` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
-- [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasicinfodetailcode-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -401,10 +401,10 @@ templates: {
 
 #### Default templates used in the `products` group:
 
-- [`products_item`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`products_item`](https://duck.co/duckduckhack/templates_reference#codeproductsitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -461,10 +461,10 @@ templates: {
 
 #### Default templates used in the `media` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -512,9 +512,9 @@ templates: {
 
 #### Default templates used in the `icon` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -554,8 +554,8 @@ templates: {
 
 #### Default templates used in the `places` group:
 
-- [`places_item`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesitemcode-template)
-- [`places_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesdetailcode-template)
+- [`places_item`](https://duck.co/duckduckhack/templates_reference#codeplacesitemcode-template)
+- [`places_detail`](https://duck.co/duckduckhack/templates_reference#codeplacesdetailcode-template)
 
 #### Places Model and View
 
@@ -596,7 +596,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in a call to [`Spice.add()`](https://duck.co/duckduckhack/spice_templates_reference). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in a call to [`Spice.add()`](https://duck.co/duckduckhack/templates_reference). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
 
 ```javascript
 Spice.add({
@@ -761,8 +761,8 @@ templates: {
 
 #### Default templates used in the `list` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#codelistdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`list_detail`](https://duck.co/duckduckhack/templates_reference#codelistdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -815,8 +815,8 @@ templates: {
 
 #### Default templates used in the `base` group:
 
-- [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#codebaseitemcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`base_item`](https://duck.co/duckduckhack/templates_reference#codebaseitemcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
