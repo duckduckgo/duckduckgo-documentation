@@ -8,7 +8,7 @@ Spice Instant Answers are triggered by a backend Perl component that then calls 
 
 - APIs called by Spice Instant Answers **must use the JSON or JSONP formats**. We do not support the use of XML (it's coming soon though!), HTML, or plain text responses.
 - APIs used should be **reliable**. Pick sources that will be most likely be around and accurate for the foreseeable future.
-- APIs used should represent the **most credible source** for the information. This means it should draw upon the preferred data source of the relevant community.
+- APIs used should represent the **most credible source** for the information. This means it should draw upon the preferred data source of the relevant community. Look for posts and sources like [these](https://duck.co/forum/thread/37/great-resources-for-instant-answer-ideas) which have been suggested by others. 
 - APIs should respond to requests in **less than one second** (< 1s).
 
 If you're not sure about whether the API you'd like to use fits these criteria, we're happy to help figure it out. Email us over at [open@duckduckgo.com](mailto:open@duckduckgo.com).
