@@ -112,7 +112,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     **Note:** Do ***not*** remove the `1;` from the end of the file. This is required because Perl modules must return a true value.
 
 7. Switch back to your Terminal by clicking on the "**Terminal**" tab.
-8. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
+8. In the `zeroclickinfo-goodies` directory type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
     ```
     Starting up webserver...
