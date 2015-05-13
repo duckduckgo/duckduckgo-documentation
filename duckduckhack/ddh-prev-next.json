@@ -33,6 +33,11 @@
 		"prev": ["goodie_basic_tutorial.md"],
 		"next": ["goodie_advanced_handle_functions.md"]
 	},
+	
+	"goodie_displaying.md": {
+		"prev": ["goodie_triggers.md"],
+		"next": ["goodie_advanced_handle_functions.md"]
+	},
 
 	"goodie_advanced_handle_functions.md": {
 		"prev": ["goodie_triggers.md"],
