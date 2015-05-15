@@ -200,9 +200,11 @@ The following are all properties of the `meta: {}` object.
 
 ## `templates` *object* [required]
 
-A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/templates_overview#template-groups-reference) and all other templates that are being used. Template options can also be provided to enable or disable features depending on the chosen template group.
+A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/templates_overview#template-groups-reference), and/or other templates that are being used. 
 
-More about how templates work can be found in the [template overview](https://duck.co/duckduckhack/templates_overview).
+Template `options` can also be provided to enable or disable features depending on the chosen template group. 
+
+More about how templates work can be found in the [Template Overview](https://duck.co/duckduckhack/templates_overview).
 
 ### Notes for Goodie Instant Answers
 
@@ -212,9 +214,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 - ### `group` *string* [required, unless `item` and `detail` are specified]
 
-    Used to specify the base template (layout) to be used. Each template `group` is composed of several features. The template groups available are described in the [template overview](https://duck.co/duckduckhack/templates_overview).
-
-    This will tell the template system that the templates belonging to the given group will be used for the `item`, `detail`, etc. unless otherwise manually overridden.
+    Setting the `group` property specifies a preset group of default templates and options (for example, `item`, `detail`, `options` etc.). These presets can be customized and manually overridden. The template groups available are described in the [Template Overview](https://duck.co/duckduckhack/templates_overview).
 
     For example, `group: 'info'` will implicitly set:
 
@@ -228,7 +228,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 - ### `item` *string or function* [required if no `group` is specified]
 
-    The template to be used for the body of each tile in a tile view.
+    The template to be used for each item in a tile view.
 
     **Note:** The `item` template is only used when your Instant Answer returns multiple items (like the [recipe](https://duckduckgo.com/?q=quinoa+recipes&ia=recipes) or [BPM to ms](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music) Instant Answers). This means the object passed to `data` is **an array with more than one element**.
 
@@ -256,7 +256,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 - ### `options` *object* [optional]
 
-    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values or references to sub-templates. 
+    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values, or references to sub-templates. 
 
 	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template) template to a particular sub-template. 
 	
@@ -274,17 +274,23 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 	Available features will vary with each chosen template (see the [templates reference](https://duck.co/duckduckhack/templates_reference) for details on each template). For example, the `basic_info_detail` template doesn't have a `brand` feature, so setting `brand: true` or `brand: false` will have no effect.
 	
-	These implicit [default options](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options) apply when neither an `options` object nor a templates `group` are set.
+	It's important to note that **there are implicit [default options](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options)** which apply in the absence of an `options` object or a templates `group`.
 
 - ### `variants` *object* [optional]
 
-	If you'd like to modify a template to fit your needs, the Instant Answer framework offers preset options called [Variants](https://duck.co/duckduckhack/templates_reference#variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template's visual appearance to fit your needs, the Instant Answer framework offers preset options called [Variants](https://duck.co/duckduckhack/templates_reference#variants). Variants are passed as the `variants` property of `templates`. 
+	
+	Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	
+	For more on the options and usage of `variants`, visit the [templates reference](https://duck.co/duckduckhack/templates_reference#variants).
 
 - ### `elClass` *object* [optional]
 
-	When variants don't suffice, you can [directly choose classes](https://duck.co/duckduckhack/templates_reference#directly-specifying-classes) based on the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. **This feature is mainly used for specifying text size and color.**
+	When variants don't suffice in customizing your templates' appearance, you may [directly specify classes](https://duck.co/duckduckhack/templates_reference#directly-specifying-classes) from the [DDG style guide](https://duckduckgo.com/styleguide) through the `elClass` property of `templates`. *This feature is mainly used for specifying text size and color.*
 
-	Classes can be directly specified to the same elements as Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+	These custom classes can be directly specified on the same template features available to Variants; the locations are identical. If you are specifying both `variants` and `elClass`, both will be applied together.
+	
+	For more on the options and usage of `elClass`, visit the [templates reference](https://duck.co/duckduckhack/templates_reference#directly-specifying-classes).
 
 ------
 
