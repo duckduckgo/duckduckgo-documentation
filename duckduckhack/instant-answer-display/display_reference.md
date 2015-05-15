@@ -33,19 +33,23 @@ The following properties are **optional**:
 
 ## `id` *string* [required]
 
-A unique identifier for your Spice. The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
+A unique identifier for your Instant Answer. 
+
+### Notes for Spice Instant Answers
+
+The `id` should match the name of your callback function. For example, if your callback function is named `ddg_spice_name`, your `id` should be `spice_name`.
 
 ------
 
 ## `name` *string* [required]
 
-The name that will be used for your Spice's AnswerBar tab. The Spice system will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Spice provides. Here are some examples:
+The name that will be used for your Instant Answer's AnswerBar tab. The Instant Answer Framework will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Instant Answer provides. Here are some examples:
 
 <table>
     <thead>
         <tr>
             <th>Spice IA</th>
-            <th><pre>name</pre></th>
+            <th>`name`</th>
         </tr>
     </thead>
     <tbody>
@@ -90,11 +94,15 @@ The following options are used to define elements of the MetaBar including the "
 
 The following are all properties of the `meta: {}` object.
 
-- ### `sourceName` *string* [required]
+- ### `sourceName` *string* [required for Spice, optional for Goodie]
 
     The name of the source as it should be shown in the "More at" link. For example, in "More at Quixey", "Quixey" [is specified](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js#L77) as `sourceName`.
 
-- ### `sourceUrl` *url string* [required]
+	#### Notes for Goodie Instant Answers
+	
+	While Goodies don't, by definition, have external data sources, you may still decide to specify `sourceName` and `sourceUrl` (below). For example, the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) instant answer ([search for "120 bpm to ms"](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music)) specifies Wikipedia as the source, and links to an article that explains the calculation performed by the Goodie.
+
+- ### `sourceUrl` *url string* [required for Spice, optional for Goodie]
 
 	The URL to follow when the "More at" link is clicked. This value is the `href` attribute of the "More at" link. This can refer to the main page of the source, or better yet, the specific page relevant to the user's query. 
 	
@@ -147,7 +155,7 @@ The following are all properties of the `meta: {}` object.
 
 - ### `secondaryText` *string* [optional]
 
-    This is an optional text label, displayed to the left of the "More at" link. For example, a weather forecast Spice might use this to indicate the temperature unit, such as "Temperature in F&deg;".
+    This is an optional text label, displayed to the left of the "More at" link. For example, a weather forecast Instant Answer might use this to indicate the temperature unit, such as "Temperature in F&deg;".
 
 - ### `sourceLogo` *url string* [optional]
 
@@ -196,6 +204,10 @@ A `templates: {}` property should be used to specify the [template group](https:
 
 More about how templates work can be found in the [template overview](https://duck.co/duckduckhack/templates_overview).
 
+### Notes for Goodie Instant Answers
+
+Several properties below allow you to specify a *function* datatype, in order to reference a custom handlebars template. If you intend to do this in a Goodie Perl file, you must pass the name **as a *string*** in order to work.
+
 <!-- /summary -->
 
 - ### `group` *string* [required, unless `item` and `detail` are specified]
@@ -218,9 +230,9 @@ More about how templates work can be found in the [template overview](https://du
 
     The template to be used for the body of each tile in a tile view.
 
-    **Note:** The `item` template is only used when your Spice Instant Answer returns multiple items (like the recipe or app Instant Answers), meaning the object given to `data` is an *`array`* with more than 1 elements.
+    **Note:** The `item` template is only used when your Instant Answer returns multiple items (like the [recipe](https://duckduckgo.com/?q=quinoa+recipes&ia=recipes) or [BPM to ms](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music) Instant Answers). This means the object passed to `data` is **an array with more than one element**.
 
-    - Generally, a string is provided to indicate the name of the built-in Spice template to be used, e.g., "products_item"
+    - Generally, a string is provided to indicate the name of the built-in template to be used, e.g., "products_item"
 
     - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/templates_overview#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
 
@@ -230,13 +242,9 @@ More about how templates work can be found in the [template overview](https://du
 
 - ### `detail` *string or function* [required if no `group` is specified]
 
-    The template to be used for the detail area.
+    The template to be used for the detail area. Find out more about when the `detail` template is displayed in the [templates overview](https://duck.co/duckduckhack/templates_overview#specifying-codeitemcode-and-codedetailcode-templates)
 
-    *For multiple items*, the detail area will be located below the tiles, and will display when a tile is clicked. If your Spice returns multiple items, the `detail` template is **optional**.
-
-    *For a single item*, the detail area will be right below the AnswerBar and will display instantly. If your Spice always returns a single item, only a `detail` template is **required**.
-
-    **Note:** The `detail` templates is **optional for a tile view** and should only be used to provide additional information for each tile.
+	    If your Instant Answer only returns a single item, a `detail` template is **required**. If your Instant Answer usually returns multiple items, the `detail` template is **optional**.
 
 - ### `detail_mobile` *string or function* [optional]
 
@@ -270,7 +278,7 @@ More about how templates work can be found in the [template overview](https://du
 
 - ### `variants` *object* [optional]
 
-	If you'd like to modify a template to fit your needs, the Spice framework offers preset options called [Variants](https://duck.co/duckduckhack/templates_reference#variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
+	If you'd like to modify a template to fit your needs, the Instant Answer framework offers preset options called [Variants](https://duck.co/duckduckhack/templates_reference#variants). Variants are passed as the `variants` property of `templates`. Variants correspond to pre-determined css classes (or combinations of classes) from the [DDG style guide](https://duckduckgo.com/styleguide) that work particularly well in each context.
 
 - ### `elClass` *object* [optional]
 
@@ -399,7 +407,7 @@ normalize: function(item) {
 
 When dealing with multiple items, the `relevancy` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
-In most cases you will only need to specify relevancy properties for the **primary** relevancy block. However, if your Spice is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. 
+In most cases you will only need to specify relevancy properties for the **primary** relevancy block. However, if your Instant Answer is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. 
 
 For example, the Quixey Spice (app search) handles two distinct types of app searches: 
 
@@ -484,7 +492,7 @@ category: [
 
 - ### `skip_words` *array*
 
-    A list of words to ***skip*** when comparing the specified text against the current query. Generally these words should include any trigger words for your Spice. The skip words list is **not** dependent on the chosen relevancy block.
+    A list of words to ***skip*** when comparing the specified text against the current query. Generally these words should include any trigger words for your Instant Answer. The skip words list is **not** dependent on the chosen relevancy block.
 
 - ### `primary` *array* [required if using `relevancy`]
 
@@ -579,7 +587,7 @@ More about using models and their properties can be found in their respective [t
 
 ## Events
 
-If you need to fire off an event handler when a tile is clicked or when your Spice's tab initially opens, you can handle these events with a callback function.
+If you need to fire off an event handler when a tile is clicked or when your Instant Answer's tab initially opens, you can handle these events with a callback function.
 
 - ### `onItemSelect` *function*
 
@@ -603,8 +611,8 @@ If you need to fire off an event handler when a tile is clicked or when your Spi
 
 - ### `onShow` *function*
 
-	This event occurs when a Spice tab initially opens.
+	This event occurs when an Instant Answer tab initially opens.
 
 - ### `onHide` *function*
 
-	This event occurs when a Spice tab is closed i.e. when another tab is selected.
+	This event occurs when a Instant Answer tab is closed i.e. when another tab is selected.
