@@ -294,6 +294,12 @@ Specifying this optional function allows you to normalize each item in the `data
 
 This function is applied both for single results or multiple results. When dealing with multiple items returned in the `data` object, the normalize function iterates over each item. Each item is individually normalized and passed to its own instance of the `item` template.
 
+#### Notes for Goodie Instant Answers
+
+Because Goodies have no external sources and run on the server, a `normalize` function is not completely necessary to normalize data for templates. However, it is possible (and conceivable) to use a `normalize` function in a Goodie Instant Answer.
+
+**Defining a `normalize` function in a Goodie, must be done in the frontend part of the code, as javascript.** For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
+
 ### Usage
 
 The function set for `normalize` is expected to return an object with the properties to be rendered for each item. 
