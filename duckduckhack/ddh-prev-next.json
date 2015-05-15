@@ -124,8 +124,13 @@
 		"next": []
 	},
 	
-	"templates_overview.md": {
+	"display_reference.md": {
 		"prev": [],
+		"next": ["templates_overview.md"]
+	},
+	
+	"templates_overview.md": {
+		"prev": ["display_reference.md"],
 		"next": ["templates_reference.md"]
 	},
 
