@@ -304,7 +304,7 @@ This function is applied both for single results or multiple results. When deali
 
 Because Goodies have no external sources and run on the server, a `normalize` function is not completely necessary to normalize data for templates. However, it is possible (and conceivable) to use a `normalize` function in a Goodie Instant Answer.
 
-**Defining a `normalize` function in a Goodie, must be done in the frontend part of the code, as javascript.** For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
+**Defining a `normalize` function in a Goodie, must be done in the frontend part of the code, as javascript.** For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 ### Usage
 
@@ -451,7 +451,7 @@ relevancy: {
 
 The `relevancy` property is unlikely to be used in a Goodie Instant Answer, although it is completely functional. Potential use in a Goodie might involve extremely large data sets to search through.
 
-If using `relevancy` in a Goodie, it must be specified in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
+If using `relevancy` in a Goodie, it must be specified in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 ### Relevancy Blocks
 
@@ -547,7 +547,7 @@ sort_fields: {
 
 #### Notes for Goodie Instant Answers
 
-When setting `sort_fields` properties in a Goodie, you must specify them in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
+When setting `sort_fields` properties in a Goodie, you must specify them in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 ### `sort_default` *string or object*
 
@@ -612,7 +612,7 @@ If you need to fire off an event handler when a tile is clicked or when your Ins
 
 #### Notes for Goodie Instant Answers
 
-When creating a Goodie, you must declare event handlers in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
+When creating a Goodie, you must declare event handlers in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 - ### `onItemSelect` *function*
 

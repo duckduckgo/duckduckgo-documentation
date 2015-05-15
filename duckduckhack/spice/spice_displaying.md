@@ -8,7 +8,7 @@ Once your Instant Answer has been triggered, and the API request has returned a 
 
 The Spice frontend callback function, [covered in the Spice Basic Tutorial](https://duck.co/duckduckhack/spice_basic_tutorial#npm-spice-frontend-javascript), contains the code which displays your Spice. 
 
-The most important part of this callback, and often the only part, is calling [`Spice.add()`](#codespiceaddcode-overview). This function is powerful and gives you a lot of control over how your results' appearance, context, and user interactions.
+The most important part of this callback, and often the only part, is calling [`Spice.add()`](#codespiceaddcode-overview). This function is powerful and gives you a lot of control over your results' appearance, context, and user interactions.
 
 ## Available Options
 
