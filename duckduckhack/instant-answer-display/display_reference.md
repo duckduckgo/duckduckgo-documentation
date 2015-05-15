@@ -407,7 +407,7 @@ normalize: function(item) {
 
 When dealing with multiple items, the `relevancy` property can be used to ensure the relevancy of each individual item. It can also be used to de-duplicate the returned items if desired.
 
-In most cases you will only need to specify relevancy properties for the **primary** relevancy block. However, if your Instant Answer is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. 
+In most cases you will only need to specify relevancy properties for the `primary` relevancy block. However, if your Instant Answer is capable of dealing with different types of queries though, where different relevancy checks are necessary, you can supply additional relevancy blocks. 
 
 For example, the Quixey Spice (app search) handles two distinct types of app searches: 
 
@@ -434,6 +434,12 @@ relevancy: {
     ]
 }
 ```
+
+#### Notes for Goodie Instant Answers
+
+The `relevancy` property is unlikely to be used in a Goodie Instant Answer, although it is completely functional. Potential use in a Goodie might involve extremely large data sets to search through.
+
+If using `relevancy` in a Goodie, it must be specified in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
 
 ### Relevancy Blocks
 
@@ -527,6 +533,9 @@ sort_fields: {
 }
 ```
 
+#### Notes for Goodie Instant Answers
+
+When setting `sort_fields` properties in a Goodie, you must specify them in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
 
 ### `sort_default` *string or object*
 
@@ -588,6 +597,10 @@ More about using models and their properties can be found in their respective [t
 ## Events
 
 If you need to fire off an event handler when a tile is clicked or when your Instant Answer's tab initially opens, you can handle these events with a callback function.
+
+#### Notes for Goodie Instant Answers
+
+When creating a Goodie, you must declare event handlers in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying) section.
 
 - ### `onItemSelect` *function*
 
