@@ -54,6 +54,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     # to Instant Answer development
 
     use DDG::Goodie;
+    use strict;
 
     zci answer_type => "is_awesome_git_hub_username";
     zci is_cached   => 1;
