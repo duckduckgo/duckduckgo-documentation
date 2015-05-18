@@ -51,9 +51,12 @@ return $plaintext,
 
             snippetChars => Integer
         },
-        templates => {
+        templates => {          
             group => String,
             options => Hash
+
+            # Note that while the following may reference Javascript variables, 
+            # they are still specified as strings in Perl
 
             item: String,
             item_custom: String,
