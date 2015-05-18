@@ -82,3 +82,67 @@ For more information on each property and its usage, visit the [Instant Answer D
 
 ## Setting Goodie Display Properties in the Frontend
 
+While most display properties can be set in a Goodie's Perl file, others by their nature must be specified in the frontend part of the code. These are:
+
+- [Normalize function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional)
+- [Events](https://duck.co/duckduckhack/display_reference#events)
+- [Relevancy](https://duck.co/duckduckhack/display_reference#coderelevancycode-object-optional)
+- [Sort fields](https://duck.co/duckduckhack/display_reference#codesortfieldscode-object-optional)
+
+To specify any of these, simply create a javascript file in `share/goodie/INSTANT_ANSWER_ID/INSTANT_ANSWER_ID.js`. For example, using the ["BP to ms" Instant Answer](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) as an example (where the `id` is set to `'bpmto_ms'`):
+
+Create a file at `share/goodie/bpmto_ms/bpmto_ms.js`, which creates a namespace and a build function.
+
+```javascript
+DDH.bpmto_ms = DDH.bpmto_ms || {}; // create the namespace in case it doesn't exist
+
+DDH.bpmto_ms.build = function(ops) {
+    
+    return {
+        // Specify any frontend display properties here
+    };
+    
+};
+```
+
+Your build function returns an object with any frontend display properties you want to set. For example, you could set an [event](https://duck.co/duckduckhack/display_reference#events):
+
+```javascript
+return {
+    onShow: function() {
+        console.log("onShow for bpmto_ms");
+    },
+}
+```
+
+Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) - and so on:
+
+```javascript
+return {
+	...
+    normalize: function(item){
+        return {
+            title: item.heading
+        };
+    }
+}
+```
+
+Additionally, it is worth noting that all of the display options specified in Perl could instead be specified in your Javascript - if you so desired. 
+
+For example:
+
+```javascript
+return {
+    ...
+    templates: {
+        group: 'base',
+        detail: false,
+        options: {
+            // Note that because this is Javascript, sub-templates are specified
+            // as function references rather than strings. 
+            content: DDH.bpmto_ms.content
+        }
+    }
+}
+```

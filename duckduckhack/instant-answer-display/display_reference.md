@@ -25,6 +25,7 @@ The following properties are **optional**:
 
 - [normalize](#codenormalizecode-function-optional) - This allows you to normalize the `data` before it is passed on to the template
 - [relevancy](#coderelevancycode-object-optional) - Used to ensure the relevancy of your Spice's result
+- [sort_fields](#codesortfieldscode-object-optional)
 - [view](#codeviewcode-string-optional) - This allows you to explicitly specify the view class used for displaying the Instant Answer
 - [model](#codemodelcode-string-optional) - This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 - You may also optionally handle several of the AnswerBar's frontend [events](#events).
