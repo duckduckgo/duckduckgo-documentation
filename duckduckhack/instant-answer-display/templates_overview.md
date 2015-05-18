@@ -22,7 +22,7 @@ The built-in templates' options, variables, and [variants](https://duck.co/duckd
 
 Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
 
-In your Instant Answer display options (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying), you can specify two separate templates:
+In your Instant Answer display options (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)), you can specify two separate templates:
 
 - `item` template (multiple results)
 - `detail` template (single results)
@@ -257,9 +257,9 @@ When no `options` are specified and no template `group` has been selected, the `
 
 ## Important Notes
 
-1. Before using these templates in your code, please familiarize yourself with the display options for your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) to understand the **proper usage of both the `templates` block and the `options` block**.
+1. Before using these templates in your code, please familiarize yourself with the method for displaying your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)). This will help understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#codedatacode-object-required).
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-object-required).
 
 Understanding these is crucial to implementing templates properly and effectively.
 
@@ -561,7 +561,7 @@ templates: {
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
 
-The model and view are specified alongside the template group property in your Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying#views)).
+The model and view are specified alongside the template group property in your Instant Answer [display options](https://duck.co/duckduckhack/display_reference#views).
 
 To work correctly, the places model requires **additional values** passed that do not appear directly in the templates. Make sure that each item includes the attributes required by the places model. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -596,7 +596,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) function.
 
 ```javascript
 Spice.add({

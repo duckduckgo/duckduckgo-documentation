@@ -11,7 +11,7 @@ The reference is divided into two parts:
 
 ## Important Note
 
-Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
+Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying) or [Goodie](https://duck.co/duckduckhack/goodie_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
 Additionally, the [Templates Overview](https://duck.co/duckduckhack/templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
 
