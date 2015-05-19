@@ -409,18 +409,18 @@ For example, when ["mtg nullify"](https://duckduckgo.com/?q=mtg+nullify&ia=magic
 
 ```javascript
 [
-	{
-		heading: "Card Details"
-	},
-	{
-		label: "Mana Cost",
-		value: "UU"
-	},
-	{
-		label: "Converted Mana Cost",
-		value: 2
-	},
-	...
+    {
+        heading: "Card Details"
+    },
+    {
+        label: "Mana Cost",
+        value: "UU"
+    },
+    {
+        label: "Converted Mana Cost",
+        value: 2
+    },
+    ...
 ]
 ```
 
@@ -432,18 +432,18 @@ It is also possible to specify labels alone, with or without urls. This is the `
 
 ```javascript
 [
-	{
-	    heading: "Related Terms:"
-	},
-	{
-	    label: "Awesome",
-	    url: "https://duckduckgo.com/?q=ud+awesome&ia=dictionary"
-	},
-	{
-	    label: "Amazing",
-	    url: "https://duckduckgo.com/?q=ud+amazing&ia=dictionary"
-	},
-	...
+    {
+        heading: "Related Terms:"
+    },
+    {
+        label: "Awesome",
+        url: "https://duckduckgo.com/?q=ud+awesome&ia=dictionary"
+    },
+    {
+        label: "Amazing",
+        url: "https://duckduckgo.com/?q=ud+amazing&ia=dictionary"
+    },
+    ...
 ]
 ```
 
@@ -462,24 +462,24 @@ For example, the resulting array passed to `infoboxData` could be structured thi
 
 ```javascript
 [
-	{
-	    heading: "About Me"
-	},
-	{
-	    label: "My Favorites",
-	    value: [
-			{
-				label: "Color",
-				value: "Red"
-			},
-			{
-				label: "Animal",
-				value: "Duck"
-			},
-			...
-		]
-	},
-	...
+    {
+        heading: "About Me"
+    },
+    {
+        label: "My Favorites",
+        value: [
+            {
+                label: "Color",
+                value: "Red"
+            },
+            {
+                label: "Animal",
+                value: "Duck"
+            },
+            ...
+        ]
+    },
+    ...
 ]
 ```
 
@@ -916,10 +916,10 @@ The following four values for `tile` variant act as presets for [`tileTitle`](#t
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tile: 'poster'
-	}
+    ...
+    variants: {
+        tile: 'poster'
+    }
  }
 ```
 
@@ -941,10 +941,10 @@ This variant allows you to modify the `detail` template of your Instant Answer. 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		detail: 'light'
-	}
+    ...
+    variants: {
+        detail: 'light'
+    }
  }
 ```
 
@@ -975,10 +975,10 @@ Another way to set a `tileTitle` variant is to use [`tile` preset options](#tile
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileTitle: '1line'
-	}
+    ...
+    variants: {
+        tileTitle: '1line'
+    }
  }
 ```
 
@@ -1000,10 +1000,10 @@ This variant changes the size of the title element, specifically for the `basic_
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconTitle: 'large'
-	}
+    ...
+    variants: {
+        iconTitle: 'large'
+    }
  }
 ```
 
@@ -1026,10 +1026,10 @@ This variant changes the amount of lines available in the subtitle element, for 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileSubtitle: '2line'
-	}
+    ...
+    variants: {
+        tileSubtitle: '2line'
+    }
  }
 ```
 
@@ -1056,10 +1056,10 @@ Another way to set a `tileSnippet` variant is to use [`tile` preset options](#ti
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileSnippet: 'small'
-	}
+    ...
+    variants: {
+        tileSnippet: 'small'
+    }
  }
 ```
 
@@ -1086,10 +1086,10 @@ This variant changes the amount of space allowed for the footer sub-template, if
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileFooter: '2line'
-	}
+    ...
+    variants: {
+        tileFooter: '2line'
+    }
  }
 ```
 
@@ -1114,10 +1114,10 @@ This variant sets the css float direction of the star rating element, if it exis
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileRating: 'starsLeft'
-	}
+    ...
+    variants: {
+        tileRating: 'starsLeft'
+    }
  }
 ```
 
@@ -1143,10 +1143,10 @@ For templates containing an icon element, this variant sets its size.
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconImage: 'small'
-	}
+    ...
+    variants: {
+        iconImage: 'small'
+    }
  }
 ```
 
@@ -1172,10 +1172,10 @@ For templates containing an icon badge (an inline colored container with text), 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconBadge: 'small'
-	}
+    ...
+    variants: {
+        iconBadge: 'small'
+    }
  }
 ```
 
