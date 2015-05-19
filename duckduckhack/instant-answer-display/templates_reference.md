@@ -126,6 +126,16 @@ A tile template where images are the main feature, accompanied by text.
 
 ![basic_image_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_image_item.png&f=1)
 
+```
++------------------+
+image
+title
+description
+rating
+ratingText
++------------------+
+```
+
 ### Available Features
 
 - `url` [optional] *string url*
@@ -273,12 +283,24 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ![products_item_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_item_detail.png&f=1)
 
+```
++------------------------------------+
+				heading
+				price, brand
+	img_m		subtitle_content
+				rating, reviewCount
+				abstract
+				buy
++------------------------------------+
+```
+
 ### Available Features
 
 - `img_m` [optional] *string url*
 
 	URL path to image
 
+- `heading` [required] *string*
 - `url` [required] *string url*
 - `price` [optional] *string*
 - `brand` [optional] *string*
@@ -317,15 +339,16 @@ A detail template which shows in-depth information. This template includes an au
 
 ![basic_info_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_info_detail.png&f=1)
 
+The same template, with the `aux` feature:
+
 ![basic_info_detail_w_aux template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_info_detail_w_aux.png&f=1)
 
 ```
-+-----------------------------------------+
-image
-title
-subtitle						auxTitle
-content or description			aux
-+-----------------------------------------+
++-------------------------------------------------------+
+				title
+	image		subtitle						auxTitle
+				content or description			aux
++-------------------------------------------------------+
 ```
 
 ### Available Features
@@ -512,7 +535,7 @@ phone
 #### 'Front' of each item:
 - `image` [optional] *string url*
 
-	URL path to image
+	Path to image
 
 - `name` [required] *string*
 - `title` [optional] *string*
@@ -707,6 +730,15 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 ![record template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Frecord.png&f=1)
 
+```
++---------------------------------------------+
+*key*			*value*
+*key*			*value*		(of record_data)
+*key*			*value*
+...
++---------------------------------------------+
+```
+
 ### Available Features
 
 - `record_data` [required] *object*
@@ -771,7 +803,15 @@ An item template for containing fully customized markup.
 
 ![base_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_item.png&f=1)
 
-<!-- /summary -->
+```
++---------------------------------+
+
+
+		content (template)
+
+
++---------------------------------+
+```
 
 ### Available Features
 
@@ -784,6 +824,8 @@ An item template for containing fully customized markup.
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
 
 ### Complex Example
+
+Here is an example of a more complex `content` sub-template passed to the `base_item` template.
 
 ![base_item template (complex example)](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_item_complex.png&f=1)
 
@@ -802,6 +844,16 @@ A detail template for containing fully customized markup.
 ### Template Diagram
 
 ![base_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_detail.png&f=1)
+
+```
++---------------------------------+
+
+
+		content (template)
+
+
++---------------------------------+
+```
 
 ### Available Features
 
