@@ -66,7 +66,7 @@ Subject: Awesome Instant Answer Idea
 
 I'd like to make an Instant Answer to help people searching for <topic/subject>!
 When someone searches for <your trigger idea>, it would be cool if they could see <your response idea>.
-I'm going to accomplish this with a <Goodie/Spice/Fathead/Longtail> type instant answer.
+I'm going to accomplish this with a <Goodie/Spice/Fathead/Longtail> type Instant Answer.
 This is the data source: <link, description, Perl module, etc.>.
 This is the related Duck.co idea: <url, if applicable>.
 This is my Github username: <username>.

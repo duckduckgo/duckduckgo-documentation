@@ -39,7 +39,7 @@ Below is an example of the same Instant Answer returning a single result. This u
 
 In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior. To display a template other than the one used for `detail`, specify an `item_detail` template.
 
-This diagram shows what is displayed when an instant answer returns multiple items:
+This diagram shows what is displayed when an Instant Answer returns multiple items:
 
 ```
                                     INSTANT ANSWER RETURNS MULTIPLE ITEMS
@@ -130,7 +130,7 @@ You can easily customize the appearance of the template group by overriding the 
 
 ### Picking a Template Group
 
-The best template group for your instant answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
+The best template group for your Instant Answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
 
 A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
 
@@ -549,7 +549,7 @@ When you specify this template group, it is equivalent to setting the properties
 templates: {
     item: 'places_item',
     detail: 'places_detail'
-}
+}	
 ```
 
 #### Default templates used in the `places` group:
@@ -559,7 +559,7 @@ templates: {
 
 #### Places Model and View
 
-The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
+The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make Instant Answers using Places valuable and delightful.
 
 The model and view are specified alongside the template group property in your Instant Answer [display options](https://duck.co/duckduckhack/display_reference#views).
 
@@ -734,7 +734,7 @@ Spice.add({
 
 The List template group was designed for displaying in-depth attributes of one item. These attributes can be displayed as either a bulleted list of properties, *or* a table of key-value pairs. 
 
-Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for instant answers designed to **return a single item** with detailed properties.
+Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for Instant Answers designed to **return a single item** with detailed properties.
 
 ### Usage
 

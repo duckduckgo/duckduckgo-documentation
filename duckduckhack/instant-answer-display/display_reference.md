@@ -101,7 +101,7 @@ The following are all properties of the `meta: {}` object.
 
 	#### Notes for Goodie Instant Answers
 	
-	While Goodies don't, by definition, have external data sources, you may still decide to specify `sourceName` and `sourceUrl` (below). For example, the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) instant answer ([search for "120 bpm to ms"](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music)) specifies Wikipedia as the source, and links to an article that explains the calculation performed by the Goodie.
+	While Goodies don't, by definition, have external data sources, you may still decide to specify `sourceName` and `sourceUrl` (below). For example, the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) Instant Answer ([search for "120 bpm to ms"](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music)) specifies Wikipedia as the source, and links to an article that explains the calculation performed by the Goodie.
 
 - ### `sourceUrl` *url string* [required for Spice, optional for Goodie]
 
