@@ -964,6 +964,7 @@ This variant changes the amount of lines available in the subtitle element, for 
 ### Applicable Templates
 
 - `text_item` template
+- `basic_icon_detail` template
 
 ### Options
 
