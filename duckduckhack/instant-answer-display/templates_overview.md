@@ -446,25 +446,21 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'media'
 // does this for you!
 templates: {
-    item: 'basic_image_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail',
-    wrap_detail: 'base_detail',
+    item: 'media_item',
+    detail: 'basic_info_detail',
+    item_detail: 'media_item_detail',
     options: {
-	    price: false,
-	    brand: false,
-	    rating: false,
-	    ratingText: true
+		moreAt: true,
+		aux: false
     }
 }
 ```
 
 #### Default templates used in the `media` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
+- [`media_item`](https://duck.co/duckduckhack/templates_reference#codemediaitemcode-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
+- [`media_item_detail`](https://duck.co/duckduckhack/templates_reference#codemediaitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
