@@ -285,12 +285,12 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ```
 +------------------------------------+
-				heading
-				price, brand
-	img_m		subtitle_content
-				rating, reviewCount
-				abstract
-				buy
+                heading
+                price, brand
+    img_m       subtitle_content
+                rating, reviewCount
+                abstract
+                buy
 +------------------------------------+
 ```
 
@@ -345,9 +345,9 @@ The same template, with the `aux` feature:
 
 ```
 +-------------------------------------------------------+
-				title
-	image		subtitle						auxTitle
-				content or description			aux
+                title
+    image       subtitle                        auxTitle
+                content or description          aux
 +-------------------------------------------------------+
 ```
 
@@ -500,7 +500,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 +--------------------+
 
 
-		image
+        image
 
 
 +--------------------+
@@ -732,9 +732,9 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 
 ```
 +---------------------------------------------+
-*key*			*value*
-*key*			*value*		(of record_data)
-*key*			*value*
+*key*           *value*
+*key*           *value*     (of record_data)
+*key*           *value*
 ...
 +---------------------------------------------+
 ```
@@ -807,7 +807,7 @@ An item template for containing fully customized markup.
 +---------------------------------+
 
 
-		content (template)
+        content (template)
 
 
 +---------------------------------+
@@ -849,7 +849,7 @@ A detail template for containing fully customized markup.
 +---------------------------------+
 
 
-		content (template)
+        content (template)
 
 
 +---------------------------------+
@@ -1204,12 +1204,12 @@ The values that can be used in the elClass are found in the [Text and Colors](ht
 
 ```javascript
 templates: {
-	...
-	elClass: {
-		tileSubtitle: 'tx--25',
-		tileFooter: 'tx--11',
-		...
-	}
+    ...
+    elClass: {
+        tileSubtitle: 'tx--25',
+        tileFooter: 'tx--11',
+        ...
+    }
  }
 ```
 
