@@ -12,7 +12,7 @@ By this point you should have already **set up your development environment** to
 
 In this tutorial we'll be making a super-simple Goodie by changing some template files.
 
-We'll be using the **DuckPAN tool** to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your instant answer contribution.
+We'll be using the **DuckPAN tool** to generate this boilerplate code for us. The DuckPAN tool is an application we built to help DuckDuckHack developers save time. Aside from generating boilerplate code, you'll also use it to run and test your Instant Answer contribution.
 
 1. Click the "**DuckPAN New Goodie**" button on the command bar. The Terminal should prompt you to enter a name for your Instant Answer.
 2. Type **`IsAwesome::GitHubUsername`** (replacing `GitHubUsername` with your actual GitHub username), then press "**Enter**". From this point on, whenever you see, ***GitHubUsername***, replace it with your actual GitHub username.
