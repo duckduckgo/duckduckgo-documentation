@@ -66,14 +66,14 @@ footer
 - `description` [required] *string*
 - `footer` [optional] *sub-template*
 
-### Example usage of the "text_item" template:
+### Example Usage
 
 - [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
 - [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
 - [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
 - [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
-### Template groups using the "text_item" template:
+### Template Groups
 
 - [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
@@ -109,12 +109,12 @@ content
 
 - `content` [optional] *sub-template*
 
-### Example usage of the "text_detail" template:
+### Example Usage
 
 - [Rhymes](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
 - [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
 
-### Template groups using the "text_detail" template:
+### Template Groups
 
 - [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
@@ -156,12 +156,12 @@ ratingText
 
 - `ratingText` [optional] *string*
 
-### Example usage of the "basic_image_item" template:
+### Example Usage
 
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 
-### Template groups using the "basic_image_item" template:
+### Template Groups
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
@@ -206,12 +206,12 @@ rating
 
 	URL path to reviews
 
-### Example usage of the "products_item" template:
+### Example Usage
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
-### Template groups using the "products_item" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 
@@ -264,12 +264,12 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 	Can be used to provide a call-to-action, such as a button.
 
-### Example usage of the "products_detail" template:
+### Example Usage
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
-### Template groups using the "products_detail" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
@@ -325,12 +325,12 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 	Can be used to provide a call-to-action, such as a button.
 
-### Example usage of the "products_item_detail" template:
+### Example Usage
 
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
 
-### Template groups using the "products_item_detail" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
@@ -379,13 +379,13 @@ The same template, with the `aux` feature:
 
 	More information [below](#infoboxdata-array)
 
-### Example usage of the "basic_info_detail" template:
+### Example Usage
 
 - [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
 - [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js)
 
-### Template groups using the "basic_info_detail" template:
+### Template Groups
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
@@ -584,12 +584,12 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_map.png&f=1)
 
-### Example usage of the "places_item" template:
+### Example Usage
 
 - [Parking Panda](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js): search for [parking in new york](https://duckduckgo.com/?q=parking+in+new+york).
 - Local results (built-in to DDG): search for [cafes near Ann Arbor](https://duckduckgo.com/?q=cafes+near+ann+arbor).
 
-### Template groups using the "places_item" template:
+### Template Groups
 
 - [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
@@ -660,11 +660,11 @@ A detail template for displaying information about a single location on a map ba
 
 - `phone` [optional] *string*
 
-### Example usage of the "places_detail" template:
+### Example Usage
 
 - Local results (built-in to DDG): search for [a particular business](https://duckduckgo.com/?q=espresso+italiano+maui).
 
-### Template groups using the "places_detail" template:
+### Template Groups
 
 - [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
@@ -719,11 +719,11 @@ To display a bulleted list, pass a sub-template to the `list_content` property. 
 
 When displaying a bulleted list, the simplest case would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`.
 
-### Example usage of the "list_detail" template:
+### Example Usage
 
 - [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js) (search for ['whois mozilla.org'](https://duckduckgo.com/?q=whois+mozilla.org))
 
-### Template groups using the "list_detail" template:
+### Template Groups
 
 - [List](https://duck.co/duckduckhack/templates_overview#list-template-group)
 
@@ -787,14 +787,14 @@ templates: {
 }
 ```
 
-### Example usage of the `record` template:
+### Example Usage
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
 - [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
 
-### Template groups using the `record` template:
+### Template Groups
 
 - Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
 
@@ -898,7 +898,7 @@ An item template for containing fully customized markup.
 - `url` [required] *string*
 - `content` [required] *sub-template*
 
-### Example usage of the "base_item" template:
+### Example Usage
 
 - [GithubJobs](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github_jobs/github_jobs.js)
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
@@ -909,7 +909,7 @@ Here is an example of a more complex `content` sub-template passed to the `base_
 
 ![base_item template (complex example)](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_item_complex.png&f=1)
 
-### Template groups using the "base_item" template:
+### Template Groups
 
 - [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
@@ -939,7 +939,7 @@ A detail template for containing fully customized markup.
 
 - `content` *string* or *sub-template*
 
-### Example usage of the "base_detail" template:
+### Example Usage
 
 - [FlashVersion](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js)
 - [NPM](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js)
@@ -949,7 +949,7 @@ A detail template for containing fully customized markup.
 
 ![base_detail template (complex example)](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_detail_complex.png&f=1)
 
-### Template groups using the "base_detail" template:
+### Template Groups
 
 - [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
