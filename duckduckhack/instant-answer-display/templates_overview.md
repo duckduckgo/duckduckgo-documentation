@@ -1,6 +1,6 @@
-# Spice Templates Overview
+# Templates Overview
 
-When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the Spice templates you choose.
+When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the templates you choose.
 
 ![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
 
@@ -14,15 +14,15 @@ Additionally, Instant Answers that use templates are automatically compatible wi
 
 Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
 
-The Spice framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/spice_templates_reference).
+The Instant Answer framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
 
-The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/spice_templates_reference#spice-variants) are documented in the [Spice Templates Reference](https://duck.co/duckduckhack/spice_templates_reference) section.
+The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
 
 ### Specifying `item` and `detail` Templates
 
-Spice Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
+Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
 
-On the [Spice frontend](https://duck.co/duckduckhack/spice_displaying) you can specify two separate templates:
+In your Instant Answer display options (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)), you can specify two separate templates:
 
 - `item` template (multiple results)
 - `detail` template (single results)
@@ -83,7 +83,7 @@ To disable the display of a detail template when an item is clicked, set `detail
 
 ### When Each Template Is Shown
 
-The Spice framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
+The Instant Answer framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
 
 ```
           Instant Answer result      
@@ -126,7 +126,7 @@ Template groups are preset properties for `template` and its `options` that work
 
 Setting a template group automatically sets the `item` and `detail` templates for you. Some template groups also set an `item_detail` template and a few default `options`. 
 
-You can easily customize the appearance of the template group by overriding the default `options` in your Spice frontend code. The appearance will also be affected by which data is returned with each item.
+You can easily customize the appearance of the template group by overriding the default `options` in your Instant Answer frontend code. The appearance will also be affected by which data is returned with each item.
 
 ### Picking a Template Group
 
@@ -134,7 +134,7 @@ The best template group for your instant answer depends on what your Instant Ans
 
 A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
 
-#### My Spice returns "things" where visuals are important 
+#### My Instant Answer returns "things" where visuals are important 
 
 The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
 
@@ -144,7 +144,7 @@ Examples that make a great fit for `media` include:
 - Games
 - [Courses](https://duckduckgo.com/?q=computer+science+online+course)
 
-#### My Spice returns detailed "lookup" information
+#### My Instant Answer returns detailed "lookup" information
 
 The [Info](#info-template-group) template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format. 
 
@@ -161,7 +161,7 @@ The [List](#list-template-group) template group works well for lookups that don'
 
 - [WhoIs](https://duckduckgo.com/?q=whois+google.com)
 
-#### My Spice results are mainly text, with a possible icon or logo
+#### My results are mainly text, with a possible icon or logo
 
 The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
 
@@ -174,7 +174,7 @@ These results fit this format well:
 - [Simple answers](https://duckduckgo.com/?q=namecheap+http%3A%2F%2Finstantanswerparty.com&ia=domain)
 - [Long blocks of text](https://duckduckgo.com/?q=baconipsum+4&ia=baconipsum)
 
-#### My Spice returns products with prices, ratings, and brands/authors/artists
+#### My Instant Answer returns products with prices, ratings, and brands/authors/artists
 
 The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
 
@@ -187,7 +187,7 @@ Examples of results that work well with the Products template group include:
 - [Books](https://duckduckgo.com/?q=amazon+ray+bradbury&ia=products)
 - [Physical products](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products)
 
-#### My Spice returns location-based results
+#### My Instant Answer returns location-based results
 
 The [Places](#places-template-group) template group is perfect for results where location is an important aspect. This template group displays single and multiple items on a map.
 
@@ -200,7 +200,7 @@ Results that would make a good fit for the Places template group include:
 - Surf spots
 - Shark GPS locations
 
-#### My Spice is amazingly unique and existing template groups won't meet my needs
+#### My Instant Answer is amazingly unique and existing template groups won't meet my needs
 
 We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be toggled. 
 
@@ -257,11 +257,11 @@ When no `options` are specified and no template `group` has been selected, the `
 
 ## Important Notes
 
-1. Before using these templates in your code, please familiarize yourself with the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) document to understand the **proper usage of both the `templates` block and the `options` block**.
+1. Before using these templates in your code, please familiarize yourself with the method for displaying your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)). This will help understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/spice_displaying#codedatacode-object-required).
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-object-required).
 
-Understanding these is crucial to implementing Spice templates properly and effectively.
+Understanding these is crucial to implementing templates properly and effectively.
 
 ------
 
@@ -294,8 +294,8 @@ templates: {
 
 #### Default templates used in the `text` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`text_detail`](https://duck.co/duckduckhack/spice_templates_reference#codetextdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`text_detail`](https://duck.co/duckduckhack/templates_reference#codetextdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -346,8 +346,8 @@ templates: {
 
 #### Default templates used in the `info` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
-- [`basic_info_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasicinfodetailcode-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -401,10 +401,10 @@ templates: {
 
 #### Default templates used in the `products` group:
 
-- [`products_item`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`products_item`](https://duck.co/duckduckhack/templates_reference#codeproductsitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -461,10 +461,10 @@ templates: {
 
 #### Default templates used in the `media` group:
 
-- [`basic_image_item`](https://duck.co/duckduckhack/spice_templates_reference#codebasicimageitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -512,9 +512,9 @@ templates: {
 
 #### Default templates used in the `icon` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeproductsitemdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -554,14 +554,14 @@ templates: {
 
 #### Default templates used in the `places` group:
 
-- [`places_item`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesitemcode-template)
-- [`places_detail`](https://duck.co/duckduckhack/spice_templates_reference#codeplacesdetailcode-template)
+- [`places_item`](https://duck.co/duckduckhack/templates_reference#codeplacesitemcode-template)
+- [`places_detail`](https://duck.co/duckduckhack/templates_reference#codeplacesdetailcode-template)
 
 #### Places Model and View
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
 
-The model and view are specified alongside the template group property when you call `Spice.add()`. You can see how this is done under the [Model and View section](https://duck.co/duckduckhack/spice_displaying#views) of the [Spice Displaying](https://duck.co/duckduckhack/spice_displaying) page.
+The model and view are specified alongside the template group property in your Instant Answer [display options](https://duck.co/duckduckhack/display_reference#views).
 
 To work correctly, the places model requires **additional values** passed that do not appear directly in the templates. Make sure that each item includes the attributes required by the places model. Generally these are set by your `normalize` function if they do not already exist in your `api_result`.
 
@@ -596,7 +596,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in a call to [`Spice.add()`](https://duck.co/duckduckhack/spice_templates_reference). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/spice_displaying#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) function.
 
 ```javascript
 Spice.add({
@@ -761,8 +761,8 @@ templates: {
 
 #### Default templates used in the `list` group:
 
-- [`text_item`](https://duck.co/duckduckhack/spice_templates_reference#codetextitemcode-template)
-- [`list_detail`](https://duck.co/duckduckhack/spice_templates_reference#codelistdetailcode-template)
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`list_detail`](https://duck.co/duckduckhack/templates_reference#codelistdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
@@ -815,8 +815,8 @@ templates: {
 
 #### Default templates used in the `base` group:
 
-- [`base_item`](https://duck.co/duckduckhack/spice_templates_reference#codebaseitemcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/spice_templates_reference#codebasedetailcode-template)
+- [`base_item`](https://duck.co/duckduckhack/templates_reference#codebaseitemcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
