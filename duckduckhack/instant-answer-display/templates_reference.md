@@ -30,6 +30,8 @@ The list of built-in templates includes:
 - [`places_detail`](#codeplacesdetailcode-template)
 - [`list_detail`](#codelistdetailcode-template)
 - [`record`](#coderecordcode-template)
+- [`media_item`](#codemediaitemcode-template)
+- [`media_item_detail`](#codemediaitemdetailcode-template)
 - [`base_item`](#codebaseitemcode-template)
 - [`base_detail`](#codebasedetailcode-template)
 
@@ -260,6 +262,8 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 - `buy` [optional] *sub-template*
 
+	Can be used to provide a call-to-action, such as a button.
+
 ### Example usage of the "products_detail" template:
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
@@ -312,9 +316,14 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 
-- `url_review` [optional] *url path to reviews*
+- `url_review` [optional] *string url* 
+	
+	Link to source reviews page
+	
 - `abstract` [required] *string*
 - `buy` [optional] *sub-template*
+
+	Can be used to provide a call-to-action, such as a button.
 
 ### Example usage of the "products_item_detail" template:
 
@@ -788,6 +797,79 @@ templates: {
 ### Template groups using the `record` template:
 
 - Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
+
+------
+
+## `media_item` Template
+
+### Template Diagram
+
+```
++----------------------+
+
+        image
+
+
+title
+altSubtitle
+subtitle
+description
+footer
+dateBadge   
+
++----------------------+
+```
+
+### Available Features
+
+- `title` [required] *string*
+- `altSubtitle` [optional] *string*
+- `subtitle` [optional] *string*
+- `description` [optional] *string*
+- `footer` [optional] *sub-template*
+- `dateBadge` [optional] *object*
+	An object with either a `text` *string* property **or** a `month` *string* and `day` *string* properties. 
+
+### Example Usage
+
+*None - yet!*
+
+### Template Groups
+
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+
+------
+
+## `media_item_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+						title, altSubtitle
+	image				subtitle
+						description
+						callout
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `image` [optional] *string url*
+- `title` [required] *string*
+- `altSubtitle` [optional] *string*
+- `description` [optional] *string*
+- `callout` [optional] *sub-template*
+
+	Can be used to provide a call-to-action, such as a button.
+
+### Example Usage
+
+*None - yet!*
+
+### Template Groups
+
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 
 ------
 
