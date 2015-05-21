@@ -233,6 +233,7 @@ These are the currently available template groups:
 - [Products](#products-template-group)
 - [Media](#media-template-group)
 - [Icon](#icon-template-group)
+- [Images](#images-template-group)
 - [Base](#base-template-group)
 
 <!-- /summary -->
@@ -516,6 +517,116 @@ See the **[important notes](#important-notes)** for making this template display
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
 
+------
+## Images Template Group
+
+A template group for displaying image results. This group is ideal when the Instant Answer result *is* an image, and the image's attributes are important (such as its dimensions, source, and original file).
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'images'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'images'
+// does this for you!
+templates: {
+    item: 'images_item',
+    detail: 'images_detail'
+}
+```
+
+#### Default templates used in the `images` group:
+
+- [`images_item`](https://duck.co/duckduckhack/templates_reference#codeimagesitemcode-template)
+- [`images_detail`](https://duck.co/duckduckhack/templates_reference#codeimagesdetailcode-template)
+
+### Example uses of the `images` template group
+
+- ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images)
+
+------
+## Movies Template Group
+
+
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'icon'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'movies'
+// does this for you!
+templates: {
+    item: 'text_item',
+    detail: 'basic_icon_detail',
+    item_detail: 'products_item_detail'
+}
+```
+
+#### Default templates used in the `movies` group:
+
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+
+### Example uses of the `movies` template group
+
+- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+
+------
+## Videos Template Group
+
+...
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'icon'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'videos'
+// does this for you!
+templates: {
+    item: 'text_item',
+    detail: 'basic_icon_detail',
+    item_detail: 'products_item_detail'
+}
+```
+
+#### Default templates used in the `videos` group:
+
+- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+
+### Example uses of the `videos` template group
+
+- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
 
 ------
 ## Places Template Group

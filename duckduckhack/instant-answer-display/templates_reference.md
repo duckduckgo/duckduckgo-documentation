@@ -32,6 +32,8 @@ The list of built-in templates includes:
 - [`record`](#coderecordcode-template)
 - [`media_item`](#codemediaitemcode-template)
 - [`media_item_detail`](#codemediaitemdetailcode-template)
+- [`images_item`](#codeimagesitemcode-template)
+- [`images_detail`](#codeimagesdetailcode-template)
 - [`base_item`](#codebaseitemcode-template)
 - [`base_detail`](#codebasedetailcode-template)
 
@@ -870,6 +872,107 @@ dateBadge
 ### Template Groups
 
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+
+------
+
+## `image_item` Template
+
+### Template Diagram
+
+#### Regular State
+
+```
++-------------------+
+
+    thumbnail
+
++-------------------+
+```
+
+#### Hover State
+
+```
++-------------------+
+
+   width × height
+
++-------------------+
+```
+
+
+### Available Features
+
+- `thumbnail` [required] *string url*
+- `tileWidth` [required] *integer*
+
+	The pixel width of the **thumbnail** image - may vary among tiles
+	
+- `title` [optional] *string*
+
+	The `alt` html attribute of the image element
+	
+- `width` [required] *integer*
+
+	The pixel width of the **original** image.
+
+- `height` [required] *integer*
+
+	The pixel height of the **original** image.
+
+### Example Usage
+
+- Search for ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images Instant Answer)
+
+### Template Groups
+
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+
+------
+
+## `image_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+
+
+    thumbnail                   title
+    or                          url
+    highResImage                width × height
+                                image
+
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `thumbnail` [required] *string url*
+- `highResImage` [optional] *string url*
+- `title` [required] *string*
+- `url` [required] *string url*
+	
+	Path to image source page (the page on which the image was originally embedded)
+	
+- `width` [required] *integer*
+
+	The pixel width of the **original** image.
+
+- `height` [required] *integer*
+
+	The pixel height of the **original** image.
+
+- `image` [required] *string url*
+
+	Path to image source file (the original image file path)
+
+### Example Usage
+
+- Search for ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) and click on any item (built-in images Instant Answer)
+
+### Template Groups
+
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
 
 ------
 
