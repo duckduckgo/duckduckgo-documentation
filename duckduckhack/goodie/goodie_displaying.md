@@ -15,7 +15,7 @@ return $plaintext,
 
 For an example of how this works, take a look at the final return statement of the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) Goodie Perl file.
 
-Specifying options in Perl is the most straightforward method, but there are several optional properties that cannot be specified on the server-side. These must be [specified in the Goodie's frontend](#setting-goodie-display-properties-in-the-frontend), in a Javascript file.
+Specifying options in Perl is the most straightforward method, but there are several optional properties that cannot be specified on the server-side. These must be [specified in the Goodie's frontend](#setting-goodie-display-properties-in-the-frontend), in a JavaScript file.
 
 ## Available Options
 
@@ -32,13 +32,10 @@ return $plaintext,
     structured_answer => {
         id => String,
         name => String,
-        data => Array,
+        data => Array or Hash (in the case of a single item),
         meta => {
-            sourceUrl => String,
-            sourceName => String
-	        hidden => Boolean,
-	        searchTerm => String,
-	        itemType => String,
+            searchTerm => String,
+            itemType => String,
 
             primaryText => String,
             secondaryText => String,
@@ -55,7 +52,7 @@ return $plaintext,
             group => String,
             options => Hash
 
-            # Note that while the following may reference Javascript variables, 
+            # Note that while the following may reference JavaScript variables, 
             # they are still specified as strings in Perl
 
             item: String,
@@ -91,7 +88,9 @@ While most display properties can be set in a Goodie's Perl file, others by thei
 
 To specify any of these, simply create a javascript file in `share/goodie/INSTANT_ANSWER_ID/INSTANT_ANSWER_ID.js`. For example, using the ["BP to ms" Instant Answer](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) as an example (where the `id` is set to `'bpmto_ms'`):
 
-Create a file at `share/goodie/bpmto_ms/bpmto_ms.js`, which creates a namespace and a build function.
+Create a file at `share/goodie/bpmto_ms/bpmto_ms.js`, which creates a namespace and a build function. 
+
+
 
 ```javascript
 DDH.bpmto_ms = DDH.bpmto_ms || {}; // create the namespace in case it doesn't exist
@@ -104,6 +103,8 @@ DDH.bpmto_ms.build = function(ops) {
     
 };
 ```
+
+The build function takes `ops` as an argument; this represents the `structured_answer` hash from the Perl as a JavaScript object.
 
 Your build function returns an object with any frontend display properties you want to set. For example, you could set an [event](https://duck.co/duckduckhack/display_reference#events):
 
@@ -128,7 +129,7 @@ return {
 }
 ```
 
-Additionally, it is worth noting that all of the display options specified in Perl could instead be specified in your Javascript - if you so desired. 
+Additionally, it is worth noting that all of the display options specified in Perl could instead be specified in your JavaScript - if you so desired. 
 
 For example:
 
@@ -139,7 +140,7 @@ return {
         group: 'base',
         detail: false,
         options: {
-            // Note that because this is Javascript, sub-templates are specified
+            // Note that because this is JavaScript, sub-templates are specified
             // as function references rather than strings. 
             content: DDH.bpmto_ms.content
         }

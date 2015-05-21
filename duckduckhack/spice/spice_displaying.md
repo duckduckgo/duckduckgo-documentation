@@ -27,11 +27,9 @@ Spice.add({
 	
     id: String,
     name: String,
-    data: Object,
+    data: Array or Object (in the case of a single item),
 
     meta: {
-
-        hidden: boolean,
         searchTerm: String,
         itemType: String,
 
