@@ -81,10 +81,10 @@ For more information on each property and its usage, visit the [Instant Answer D
 
 While most display properties can be set in a Goodie's Perl file, others by their nature must be specified in the frontend part of the code. These are:
 
-- [Normalize function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional)
+- [Normalize function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)
 - [Events](https://duck.co/duckduckhack/display_reference#events)
-- [Relevancy](https://duck.co/duckduckhack/display_reference#coderelevancycode-object-optional)
-- [Sort fields](https://duck.co/duckduckhack/display_reference#codesortfieldscode-object-optional)
+- [Relevancy](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)
+- [Sort fields](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)
 
 To specify any of these, simply create a javascript file in `share/goodie/INSTANT_ANSWER_ID/INSTANT_ANSWER_ID.js`. For example, using the ["BP to ms" Instant Answer](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) as an example (where the `id` is set to `'bpmto_ms'`):
 
@@ -116,7 +116,7 @@ return {
 }
 ```
 
-Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) - and so on:
+Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional) - and so on:
 
 ```javascript
 return {

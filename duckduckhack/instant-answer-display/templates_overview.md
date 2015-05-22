@@ -264,7 +264,7 @@ When no `options` are specified and no template `group` has been selected, the `
 
 1. Before using these templates in your code, please familiarize yourself with the method for displaying your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)). This will help understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-object-required).
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required).
 
 Understanding these is crucial to implementing templates properly and effectively.
 
@@ -402,7 +402,7 @@ templates: {
 }
 ```
 
-Using the Products template group also automatically makes the Product [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
+Using the Products template group also automatically makes the Product [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
 
 #### Default Templates Used
 
@@ -547,7 +547,7 @@ templates: {
 }
 ```
 
-Using the Images template group also automatically makes the Image [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
+Using the Images template group also automatically makes the Image [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
 
 #### Default Templates Used
 
@@ -641,7 +641,7 @@ templates: {
 }
 ```
 
-Setting the Videos template group also automatically makes the Video [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
+Setting the Videos template group also automatically makes the Video [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
 
 #### Default Templates Used
 
@@ -678,7 +678,7 @@ templates: {
 }	
 ```
 
-Using the Places template group also automatically makes the Place [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
+Using the Places template group also automatically makes the Place [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
 
 #### Default Templates Used
 
@@ -724,7 +724,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional) function.
 
 ```javascript
 Spice.add({
