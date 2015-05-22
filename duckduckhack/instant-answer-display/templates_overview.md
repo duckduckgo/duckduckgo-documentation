@@ -297,14 +297,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `text` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
 - [`text_detail`](https://duck.co/duckduckhack/templates_reference#codetextdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `text` template group
+### Example Uses
 
 - ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
     ![DuckDuckGo search for "github duckduckgo"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgithub_duckduckgo.png&f=1)
@@ -349,14 +349,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `info` group:
+#### Default Templates Used
 
 - [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
 - [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `info` template group
+### Example Uses
 
 - ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
     ![DuckDuckGo search for "green day band"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgreen_day_band.png&f=1)
@@ -404,7 +404,7 @@ templates: {
 
 Using the Products template group also automatically makes the Product [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
-#### Default templates used in the `products` group:
+#### Default Templates Used
 
 - [`products_item`](https://duck.co/duckduckhack/templates_reference#codeproductsitemcode-template)
 - [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
@@ -413,7 +413,7 @@ Using the Products template group also automatically makes the Product [model](h
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `products` template group
+### Example Uses
 
 - ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
     ![DuckDuckGo search for "buy batman lego"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbuy_batman_lego.png&f=1)
@@ -461,7 +461,7 @@ templates: {
 }
 ```
 
-#### Default templates used in the `media` group:
+#### Default Templates Used
 
 - [`media_item`](https://duck.co/duckduckhack/templates_reference#codemediaitemcode-template)
 - [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
@@ -469,7 +469,7 @@ templates: {
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `media` template group
+### Example Uses
 
 *None - yet!*
 
@@ -508,7 +508,7 @@ templates: {
 }
 ```
 
-#### Default templates used in the `icon` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
 - [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
@@ -516,7 +516,7 @@ templates: {
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `icon` template group
+### Example Uses
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
@@ -549,12 +549,12 @@ templates: {
 
 Using the Images template group also automatically makes the Image [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
-#### Default templates used in the `images` group:
+#### Default Templates Used
 
 - [`images_item`](https://duck.co/duckduckhack/templates_reference#codeimagesitemcode-template)
 - [`images_detail`](https://duck.co/duckduckhack/templates_reference#codeimagesdetailcode-template)
 
-### Example uses of the `images` template group
+### Example Uses
 
 - ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images search)
 
@@ -600,14 +600,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `movies` group:
+#### Default Templates Used
 
 - [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
 - [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
 - [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
 - [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
-### Example uses of the `movies` template group
+### Example Uses
 
 - ["dogobooks harry potter"](https://duckduckgo.com/?q=dogobooks+harry+potter&ia=kidsbooks) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_books/dogo_books.js))
 - ["movies with keira knightley"](https://duckduckgo.com/?q=movies%20with%20Keira%20Knightley&ia=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/kwixer/kwixer.js))
@@ -643,12 +643,12 @@ templates: {
 
 Setting the Videos template group also automatically makes the Video [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
-#### Default templates used in the `videos` group:
+#### Default Templates Used
 
 - [`videos_item`](https://duck.co/duckduckhack/templates_reference#codevideositemcode-template)
 - [`videos_detail`](https://duck.co/duckduckhack/templates_reference#codevideosdetailcode-template)
 
-### Example uses of the `videos` template group
+### Example Uses
 
 - ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) (built-in videos search)
 
@@ -680,7 +680,7 @@ templates: {
 
 Using the Places template group also automatically makes the Place [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
-#### Default templates used in the `places` group:
+#### Default Templates Used
 
 - [`places_item`](https://duck.co/duckduckhack/templates_reference#codeplacesitemcode-template)
 - [`places_detail`](https://duck.co/duckduckhack/templates_reference#codeplacesdetailcode-template)
@@ -887,7 +887,7 @@ templates: {
 }
 ```
 
-#### Default templates used in the `list` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
 - [`list_detail`](https://duck.co/duckduckhack/templates_reference#codelistdetailcode-template)
@@ -941,14 +941,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `base` group:
+#### Default Templates Used
 
 - [`base_item`](https://duck.co/duckduckhack/templates_reference#codebaseitemcode-template)
 - [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `base` template group
+### Example Uses
 
 - ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
     ![DuckDuckGo search for "gandhi quote"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgandhi_quote.png&f=1)
