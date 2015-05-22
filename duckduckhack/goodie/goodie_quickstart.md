@@ -54,6 +54,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     # to Instant Answer development
 
     use DDG::Goodie;
+    use strict;
 
     zci answer_type => "is_awesome_git_hub_username";
     zci is_cached   => 1;
@@ -88,7 +89,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     1;
     ```
 
-5. Change the **`trigger`** (line 25) to this:
+5. Change the **`trigger`** (line 26) to this:
 
     ```perl
     triggers start => "duckduckhack githubusername";
@@ -98,7 +99,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
 
     **Note:** Triggers must be entered in **lowercase**. If your username has uppercase letters, **don't worry**, a lowercased trigger will always work because we compare the *lowercased query* against the trigger.
 
-6. Change the **`handle`** statement (lines 28-36) to this:
+6. Change the **`handle`** statement (lines 29-37) to this:
 
     ```perl
     handle remainder => sub {
@@ -112,7 +113,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     **Note:** Do ***not*** remove the `1;` from the end of the file. This is required because Perl modules must return a true value.
 
 7. Switch back to your Terminal by clicking on the "**Terminal**" tab.
-8. Type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
+8. In the `zeroclickinfo-goodies` directory type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
 
     ```
     Starting up webserver...
@@ -261,7 +262,7 @@ Do you enjoy looking under the hood and learning by example? You'll enjoy casual
 
 This bonus section will walk you through submitting the IsAwesome Goodie you just created for review and acceptance into the *live DuckDuckGo.com codebase*. If you'd rather jump straight in and work on *your* idea, don't worry about this for now. You'll find this information in the rest of the docs as well.
 
-1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 11-20) to this:
+1. Open "**GitHubUsername.pm**" in the editor and change the **`Metadata`** (lines 12-21) to this:
 
     ```perl
     name "IsAwesome GitHubUsername";
@@ -310,7 +311,7 @@ This bonus section will walk you through submitting the IsAwesome Goodie you jus
     ```
     [04:35 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ git commit -m "Created my first Goodie"
     [master 6aeb841] Created my first Goodie
-     2 files changed, 55 insertions(+)
+     2 files changed, 56 insertions(+)
      create mode 100644 lib/DDG/Goodie/IsAwesome/GitHubUsername.pm
      create mode 100644 t/IsAwesome/GitHubUsername.t
     ```

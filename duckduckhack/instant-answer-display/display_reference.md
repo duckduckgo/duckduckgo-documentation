@@ -101,7 +101,9 @@ The following are all properties of the `meta: {}` object.
 
 	#### Notes for Goodie Instant Answers
 	
-	While Goodies don't, by definition, have external data sources, you may still decide to specify `sourceName` and `sourceUrl` (below). For example, the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) Instant Answer ([search for "120 bpm to ms"](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music)) specifies Wikipedia as the source, and links to an article that explains the calculation performed by the Goodie.
+	While Goodies don't, by definition, have external data sources, you may still decide to specify `sourceName` and `sourceUrl` (below). For example, the [BPM to ms](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) instant answer ([search for "120 bpm to ms"](https://duckduckgo.com/?q=120+bpm+to+ms&ia=music)) specifies Wikipedia as the source, and links to an article that explains the calculation performed by the Goodie.
+	
+	**For the best experience, if a relevant Wikipedia page, or authoritative explanation, exists for your Goodie, you should provide it as a `sourceName` and `sourceUrl`.**
 
 - ### `sourceUrl` *url string* [required for Spice, optional for Goodie]
 
@@ -305,7 +307,7 @@ This function is applied both for single results or multiple results. When deali
 
 Because Goodies have no external sources and run on the server, a `normalize` function is not completely necessary to normalize data for templates. However, it is possible (and conceivable) to use a `normalize` function in a Goodie Instant Answer.
 
-**Defining a `normalize` function in a Goodie, must be done in the frontend part of the code, as javascript.** For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
+**Defining a `normalize` function in a Goodie, must be done in the frontend part of the code, as JavaScript.** For more information about Goodie JavaScript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 ### Usage
 
@@ -450,9 +452,9 @@ relevancy: {
 
 #### Notes for Goodie Instant Answers
 
-The `relevancy` property is unlikely to be used in a Goodie Instant Answer, although it is completely functional. Potential use in a Goodie might involve extremely large data sets to search through.
+The `relevancy` property is unlikely to be used in a Goodie Instant Answer, although it is completely functional. Potential use in a Goodie might involve large data sets to search through.
 
-If using `relevancy` in a Goodie, it must be specified in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
+If using `relevancy` in a Goodie, it must be specified in the frontend part of the code, as JavaScript. For more information about Goodie JavaScript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 ### Relevancy Blocks
 
@@ -613,7 +615,7 @@ If you need to fire off an event handler when a tile is clicked or when your Ins
 
 #### Notes for Goodie Instant Answers
 
-When creating a Goodie, you must declare event handlers in the frontend part of the code, as javascript. For more information about Goodie javascript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
+When creating a Goodie, you must declare event handlers in the frontend part of the code, as JavaScript. For more information about Goodie JavaScript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
 
 - ### `onItemSelect` *function*
 
@@ -637,7 +639,7 @@ When creating a Goodie, you must declare event handlers in the frontend part of 
 
 - ### `onShow` *function*
 
-	This event occurs when an Instant Answer tab initially opens.
+	This event occurs each time an Instant Answer tab is displayed. This event fires when the Instant Answer is initially shown. It also fires when a user clicks another AnswerBar tab, then clicks to show it again.
 
 - ### `onHide` *function*
 

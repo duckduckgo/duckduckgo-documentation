@@ -61,6 +61,10 @@ If your Instant Answer is spice or longtail, sometimes we can't expose it throug
 
 Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we'd love to hear your ideas to influence that roadmap.
 
+### Can I create adult Instant Answers (i.e. NSFW)?  
+
+No.
+
 ### What's the roadmap?
 
 Here's what we're working on (in roughly in this order):
