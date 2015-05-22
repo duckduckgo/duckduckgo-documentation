@@ -380,8 +380,6 @@ templates: {
 }
 ```
 
-<!-- /summary -->
-
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -399,6 +397,8 @@ templates: {
 	}
 }
 ```
+
+Using the Products template group also automatically makes the Product [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
 #### Default templates used in the `products` group:
 
@@ -532,8 +532,6 @@ templates: {
 }
 ```
 
-<!-- /summary -->
-
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -544,6 +542,8 @@ templates: {
     detail: 'images_detail'
 }
 ```
+
+Using the Images template group also automatically makes the Image [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
 #### Default templates used in the `images` group:
 
@@ -643,8 +643,6 @@ templates: {
 }
 ```
 
-<!-- /summary -->
-
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -655,6 +653,8 @@ templates: {
     detail: 'places_detail'
 }	
 ```
+
+Using the Places template group also automatically makes the Place [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
 
 #### Default templates used in the `places` group:
 

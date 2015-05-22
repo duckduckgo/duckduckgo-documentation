@@ -593,9 +593,9 @@ Available Views:
 
 ## `model` *string* [optional]
 
-Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models which accept data to displaying things like Lat/Lon for a Place or Dimensions for an Image. 
+Some Instant Answers use data to display results which is not directly displayed in a template. For example, the latitude and longitude of a Place, or the dimensions of an Image. The Instant Answer framework comes with built-in models to manage these data. Some [views](#codeviewscode-string-optional) require a model - such as Audio or Places.
 
-Also, to use some of our non-default *views*, such as Audio or Places, you will need to use a compatible data model.
+**If you are specifying a template group, the `model` property is automatically set for you.**
 
 Available models:
 
