@@ -23,7 +23,80 @@ The properties you can return in your `structured_answer` hash are documented in
 
 In some scenarios, you may also want to handle the AnswerBar's events (for example, to stop media playing when the user hides your Instant Answer). These [events](https://duck.co/duckduckhack/display_reference#events) are covered at the end of the reference.
 
-## Returning Display Properties in a Goodie's Perl
+### Where Display Properties Can Be Set
+
+Most display properties can be set in either the Goodie's Perl (server code) or JavaScript (frontend). Some Display properties, by their nature, can only [be set in the frontend](#setting-goodie-display-properties-in-the-frontend). 
+
+Here is a quick summary:
+
+<table>
+    <thead>
+        <tr>
+            <th>[Display Property](https://duck.co/duckduckhack/display_reference)</th>
+            <th>[Can Set in Perl (Backend)](##setting-display-properties-in-a-goodies-perl)</th>
+            <th>[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>[`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`name`](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`data`](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`meta`](https://duck.co/duckduckhack/display_reference#codemetacode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`templates`](https://duck.co/duckduckhack/display_reference#codetemplatescode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`view`](https://duck.co/duckduckhack/display_reference#codeviewcode-emstringem-optional)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`model`](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`relevancy`](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`sort_fields`](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[Events](https://duck.co/duckduckhack/display_reference#events)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>      
+    </tbody>
+</table>
+
+## Setting Display Properties in a Goodie's Perl
 
 The following is a code summary of how the options covered in the [Instant Answer Display Reference](https://duck.co/duckduckhack/display_reference) are returned in your Goodie Perl file.
 
