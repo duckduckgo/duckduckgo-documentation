@@ -136,13 +136,15 @@ A quick way to get a feel for the different template groups is to [browse the In
 
 #### My Instant Answer returns "things" where visuals are important 
 
-The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
+The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Also consider the [Movies](#movies-template-group) template group.
 
-Examples that make a great fit for `media` include:
+Examples that make a great fit for the Media or Movies template groups include:
 
 - TV shows/[Movies](https://duckduckgo.com/?q=currently+in+theaters)
 - Games
 - [Courses](https://duckduckgo.com/?q=computer+science+online+course)
+
+If your Instant Answer results *are* themselves images or videos, consider the [Images](#images-template-group) or [Videos](#videos-template-group) template groups.
 
 #### My Instant Answer returns detailed "lookup" information
 
