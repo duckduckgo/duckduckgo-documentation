@@ -234,6 +234,8 @@ These are the currently available template groups:
 - [Media](#media-template-group)
 - [Icon](#icon-template-group)
 - [Images](#images-template-group)
+- [Movies](#movies-template-group)
+- [Videos](#videos-template-group)
 - [Base](#base-template-group)
 
 <!-- /summary -->
@@ -552,12 +554,12 @@ Using the Images template group also automatically makes the Image [model](https
 
 ### Example uses of the `images` template group
 
-- ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images)
+- ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images search)
 
 ------
 ## Movies Template Group
 
-
+An ideal template group for displaying movie results, but also great for other types of media such as books.
 
 ### Usage
 
@@ -565,7 +567,7 @@ Using this template requires that that you set the `group` property of the `temp
 
 ```javascript
 templates: {
-    group: 'icon'
+    group: 'movies'
 }
 ```
 
@@ -577,24 +579,42 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'movies'
 // does this for you!
 templates: {
-    item: 'text_item',
-    detail: 'basic_icon_detail',
-    item_detail: 'products_item_detail'
+    item: 'basic_image_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        rating: false,
+        ratingText: true
+    },
+    variants: {
+        tile: 'poster'
+    },
+    elClass: {
+        tileBody: 'is-hidden'
+    }
 }
 ```
 
 #### Default templates used in the `movies` group:
 
-- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 ### Example uses of the `movies` template group
 
-- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+- ["dogobooks harry potter"](https://duckduckgo.com/?q=dogobooks+harry+potter&ia=kidsbooks) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_books/dogo_books.js))
+- ["movies with keira knightley"](https://duckduckgo.com/?q=movies%20with%20Keira%20Knightley&ia=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/kwixer/kwixer.js))
+- ["jiro dreams of sushi rotten tomatoes"](https://duckduckgo.com/?q=jiro+dreams+of+sushi+rotten+tomatoes&ia=movies)([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/ea61d47ef8639cf4fb282b51e2185e3a807d1bd5/share/spice/movie/movie.js))
 
 ------
 ## Videos Template Group
 
-...
+A template group for displaying online video results. This group is ideal when the Instant Answer result *is* a video, and [can be viewed](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) on the search results page.
 
 ### Usage
 
@@ -602,7 +622,7 @@ Using this template requires that that you set the `group` property of the `temp
 
 ```javascript
 templates: {
-    group: 'icon'
+    group: 'videos'
 }
 ```
 
@@ -614,19 +634,21 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'videos'
 // does this for you!
 templates: {
-    item: 'text_item',
-    detail: 'basic_icon_detail',
-    item_detail: 'products_item_detail'
+    item: 'videos_item',
+    detail: 'videos_detail'
 }
 ```
 
+Setting the Videos template group also automatically makes the Video [model](https://duck.co/duckduckhack/display_reference#codemodelcode-string-optional) available.
+
 #### Default templates used in the `videos` group:
 
-- [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
+- [`videos_item`](https://duck.co/duckduckhack/templates_reference#codevideositemcode-template)
+- [`videos_detail`](https://duck.co/duckduckhack/templates_reference#codevideosdetailcode-template)
 
 ### Example uses of the `videos` template group
 
-- ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+- ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) (built-in videos search)
 
 ------
 ## Places Template Group

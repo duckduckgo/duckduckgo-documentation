@@ -34,6 +34,8 @@ The list of built-in templates includes:
 - [`media_item_detail`](#codemediaitemdetailcode-template)
 - [`images_item`](#codeimagesitemcode-template)
 - [`images_detail`](#codeimagesdetailcode-template)
+- [`videos_item`](#codevideositemcode-template)
+- [`videos_detail`](#codevideosdetailcode-template)
 - [`base_item`](#codebaseitemcode-template)
 - [`base_detail`](#codebasedetailcode-template)
 
@@ -875,7 +877,7 @@ dateBadge
 
 ------
 
-## `image_item` Template
+## `images_item` Template
 
 ### Template Diagram
 
@@ -929,7 +931,7 @@ dateBadge
 
 ------
 
-## `image_detail` Template
+## `images_detail` Template
 
 ### Template Diagram
 
@@ -973,6 +975,85 @@ dateBadge
 ### Template Groups
 
 - [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+
+------
+
+## `videos_item` Template
+
+### Template Diagram
+
+```
++----------------------+
+
+    images.medium
+
+    duration
+
+
+    title
+    viewCount
+
++----------------------+
+```
+
+### Available Features
+
+- `images` [required] *object*
+
+	Object with paths to various image sizes. This template requires a `medium` property.
+	
+- `duration` [required] *string url*
+
+	Duration of the video, in HH:MM:SS format (e.g. '5:32' or '2:01:59')
+	
+- `title` [required] *string* 
+- `viewCount` [required] *string* 
+
+	Number of video views, preferably with commas as the thousands separator (value not formatted automatically)
+
+### Example Usage
+
+- Search for ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) (built-in videos search)
+
+### Template Groups
+
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
+
+------
+
+## `videos_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+
+
+    [video content]             title
+                              	username
+                    			viewCount
+                                published
+
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `title` [required] *string*
+- `url` [required] *string url*
+- `username` [required] *string*
+- `viewCount` [required] *string*
+- `published` [required] *string*
+
+	A date string in any format recognized by the JavaScript [`Date.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) method
+
+### Example Usage
+
+- ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) and click on any item (built-in videos Instant Answer)
+
+### Template Groups
+
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
 
 ------
 
