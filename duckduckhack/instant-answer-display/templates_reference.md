@@ -62,7 +62,9 @@ footer
 ### Available Features
 
 - `icon` [optional] *string url*
+
 	URL path to icon image
+
 - `url` [optional] *string url*
 - `title` [required] *string url*
 - `altSubtitle` [optional] *string*
@@ -92,11 +94,13 @@ A template for displaying textual information detail, with no image or icon.
 ![text_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_detail.png&f=1)
 
 ```
-+------------------+
++-------------------------------------+
+
 title_content or title
 subtitle_content or subtitle
 content
-+------------------+
+
++-------------------------------------+
 ```
 
 ### Available Features
@@ -379,9 +383,13 @@ The same template, with the `aux` feature:
 
 	Available and required if `content` not specified
 
-- [`infoboxData`](#infoboxdata-array) [optional] *array*
+- `aux` [optional] *sub-template*
 
-	More information [below](#infoboxdata-array)
+	Set this value to `'infobox'` (a string) to use the built-in [`infobox`](#codeinfoboxcode-template) template
+
+- `infoboxData` [optional] *array*	
+
+	If using the [`infobox`](#codeinfoboxcode-template) template, you must set this property.
 
 ### Example Usage
 
@@ -393,13 +401,15 @@ The same template, with the `aux` feature:
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
-### `infoboxData` *array*
+------
+
+## `infobox` Template
 
 In the `basic_info_detail` template, the **InfoBox** floats on the right side of the AnswerBar. It presents detailed information in a table of key-value pairs:
 
 ![infobox](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Finfobox.png&f=1)
 
-To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` array specified. `infoboxData` is an array of objects, each with the following properties:
+To display the InfoBox in the `basic_info_detail` template, a `data` item must have an `infoboxData` property specified. `infoboxData` is an array of objects, each with the following properties:
 
 - `label` [required] *string*
 - `url` [optional] *string url*
@@ -701,7 +711,7 @@ record_data *or* list
 
 - `content` [required] *sub-template*
 
-	Recommended to set this value to 'record' to use the built-in [`record`](#coderecordcode-template) template
+	Recommended to set this value to `'record'` (a string) to use the built-in [`record`](#coderecordcode-template) template
 
 - `record_data` [required] *object*
 
@@ -832,6 +842,7 @@ dateBadge
 - `description` [optional] *string*
 - `footer` [optional] *sub-template*
 - `dateBadge` [optional] *object*
+
 	An object with either a `text` *string* property **or** a `month` *string* and `day` *string* properties. 
 
 ### Example Usage

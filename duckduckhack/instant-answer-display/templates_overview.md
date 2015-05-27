@@ -511,7 +511,7 @@ templates: {
 #### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`basic_icon_detail`](https://duck.co/duckduckhack/templates_reference#codebasicicondetailcode-template)
 - [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
@@ -520,6 +520,7 @@ See the **[important notes](#important-notes)** for making this template display
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
+- ["oil production in Saudi Arabia"](https://duckduckgo.com/?q=oil+production+in+saudi+arabia&ia=answer) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/zanran/zanran.js))
 
 ------
 ## Images Template Group
