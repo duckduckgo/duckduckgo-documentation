@@ -28,6 +28,7 @@ In some scenarios, you may also want to handle the AnswerBar's events (for examp
 Most display properties can be set in either the Goodie's Perl (server code) or JavaScript (frontend). Some Display properties, by their nature, can only [be set in the frontend](#setting-goodie-display-properties-in-the-frontend). 
 
 Here is a quick summary:
+
 [Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](##setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
 |--------------|:---:|:---:|
 [`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)|&#10003;|&#10003;
