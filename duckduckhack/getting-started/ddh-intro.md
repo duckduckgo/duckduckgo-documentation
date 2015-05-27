@@ -31,7 +31,9 @@ Instant Answers come in all varieties but we encourage everyone to work on an In
 
 ### Forming your Idea
 
-Think of the searches you do most often:
+If you've never created an Instant Answer before, please start by working on a [pre-approved Instant Answer idea.](https://duck.co/ideas/status/3?table_lnKRpLENwO2NUmZUyukQpw_sort=votes)    
+
+If you've already built an Instant Answer (the quick-start goodie doesn't count), think of the searches you do most often:
 
 - What has always frustrated you about the results? 
 - What do you wish "just worked?"
