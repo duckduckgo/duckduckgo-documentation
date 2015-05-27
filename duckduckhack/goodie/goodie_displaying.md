@@ -29,7 +29,7 @@ Most display properties can be set in either the Goodie's Perl (server code) or 
 
 Here is a quick summary:
 
-[Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](##setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
+[Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](#setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
 |--------------|:---:|:---:|
 [`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)|&#10003;|&#10003;
 [`name`](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required)|&#10003;|&#10003;
