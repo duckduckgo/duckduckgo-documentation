@@ -25,6 +25,7 @@ The list of built-in templates includes:
 - [`products_item`](#codeproductsitemcode-template)
 - [`products_detail`](#codeproductsdetailcode-template)
 - [`products_item_detail`](#codeproductsitemdetailcode-template)
+- [`basic_icon_detail`](#codebasicicondetailcode-template)
 - [`basic_info_detail`](#codebasicinfodetailcode-template)
 - [`places_item`](#codeplacesitemcode-template)
 - [`places_detail`](#codeplacesdetailcode-template)
@@ -343,6 +344,47 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 - [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
+
+------
+
+## `basic_icon_detail` Template
+
+A template for displaying textual information detail, with a small image, icon, or character badge.
+
+### Template Diagram
+
+```
++------------------------------------------------+
+image and/or badge      title
+                        subtitle/altSubtitle
+
+                        content *or* description                        
+
++------------------------------------------------+
+```
+
+### Available Features
+
+- `image` [optional] *string url*
+
+	URL path to image
+	
+- `badge` [optional] *string*
+- `title` [optional] *string*
+- `subtitle` [optional] *string*
+- `altSubtitle` [optional] *string*
+- `content` [optional] *sub-template*
+- `description` [conditional on `content`] *string*
+
+	Available and required if `content` not specified
+
+### Example Usage
+
+*None - yet*
+
+### Template Groups
+
+- [Icon](#icon-template-group)
 
 ------
 
