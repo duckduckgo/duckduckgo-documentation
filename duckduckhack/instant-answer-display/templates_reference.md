@@ -68,8 +68,8 @@ footer
 
 - `url` [optional] *string url*
 - `title` [required] *string url*
-- `altSubtitle` [optional] *string*
-- `subtitle` [optional] *string*
+- `altSubtitle` [optional] *string* or *string array*
+- `subtitle` [optional] *string* or *string array*
 - `description` [required] *string*
 - `footer` [optional] *sub-template*
 
@@ -112,7 +112,7 @@ content
 	Available only if `title_content` is not specified
 
 - `subtitle_content` [optional] *sub-template*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 	Available only if `subtitle_content` is not specified
 
@@ -371,8 +371,8 @@ image and/or badge      title
 	
 - `badge` [optional] *string*
 - `title` [optional] *string*
-- `subtitle` [optional] *string*
-- `altSubtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
+- `altSubtitle` [optional] *string* or *string array*
 - `content` [optional] *sub-template*
 - `description` [conditional on `content`] *string*
 
@@ -416,7 +416,7 @@ The same template, with the `aux` feature:
 	URL path to image
 
 - `title` [optional] *string*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 	Available only if `title` specified
 
@@ -747,7 +747,7 @@ record_data *or* list
 ### Available Features
 
 - `title` [optional] *string*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 #### If Displaying Table of Key-Value Pairs:
 
@@ -879,8 +879,8 @@ dateBadge
 ### Available Features
 
 - `title` [required] *string*
-- `altSubtitle` [optional] *string*
-- `subtitle` [optional] *string*
+- `altSubtitle` [optional] *string* or *string array*
+- `subtitle` [optional] *string* or *string array*
 - `description` [optional] *string*
 - `footer` [optional] *sub-template*
 - `dateBadge` [optional] *object*
@@ -914,7 +914,7 @@ dateBadge
 
 - `image` [optional] *string url*
 - `title` [required] *string*
-- `altSubtitle` [optional] *string*
+- `altSubtitle` [optional] *string* or *string array*
 - `description` [optional] *string*
 - `callout` [optional] *sub-template*
 
