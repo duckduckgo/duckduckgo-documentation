@@ -46,7 +46,12 @@
 
 	"goodie_helpers.md": {
 		"prev": ["goodie_advanced_handle_functions.md"],
-		"next": ["testing_triggers.md"]
+		"next": ["goodie_cheat_sheets.md"]
+	},
+
+	"goodie_cheat_sheets.md": {
+		"prev": ["goodie_helpers"],
+		"next": []
 	},
 
 	"spice_overview.md": {
