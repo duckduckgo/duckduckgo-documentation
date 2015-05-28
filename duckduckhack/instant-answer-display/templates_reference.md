@@ -403,8 +403,8 @@ The same template, with the `aux` feature:
 ```
 +-------------------------------------------------------+
                 title
-    image       subtitle                        auxTitle
-                content or description          aux
+    image       subtitle                        
+                content or description          infoboxData
 +-------------------------------------------------------+
 ```
 
@@ -425,13 +425,9 @@ The same template, with the `aux` feature:
 
 	Available and required if `content` not specified
 
-- `aux` [optional] *sub-template*
-
-	Set this value to `'infobox'` (a string) to use the built-in [`infobox`](#codeinfoboxcode-template) template
-
 - `infoboxData` [optional] *array*	
 
-	If using the [`infobox`](#codeinfoboxcode-template) template, you must set this property.
+	An array of objects used to render an [InfoBox](#the-infobox)
 
 ### Example Usage
 
@@ -443,15 +439,13 @@ The same template, with the `aux` feature:
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
-------
-
-## `infobox` Template
+### The Infobox
 
 In the `basic_info_detail` template, the **InfoBox** floats on the right side of the AnswerBar. It presents detailed information in a table of key-value pairs:
 
 ![infobox](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Finfobox.png&f=1)
 
-To display the InfoBox in the `basic_info_detail` template, a `data` item must have an `infoboxData` property specified. `infoboxData` is an array of objects, each with the following properties:
+To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` property specified. This is an array of objects, each with the following properties:
 
 - `label` [required] *string*
 - `url` [optional] *string url*
@@ -460,7 +454,7 @@ To display the InfoBox in the `basic_info_detail` template, a `data` item must h
 
 - `value` [optional] *string or array*
 
-	Use array to display [nested properties](#nested-properties))
+	Use array to display [nested properties](#infobox-nested-properties))
 
 The first object in the array can also be used solely to specify a heading for the InfoBox. This object would contain only one property:
 
