@@ -18,32 +18,43 @@ In the file menu above, click **"Create New File"**, and enter the name of your 
 
 Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax).
 
-With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, push the changes to your repository on github, and [submit a pull request](https://help.github.com/articles/creating-a-pull-request/).
+With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, push the changes to your repository on GitHub, and [submit a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 ### Cheat Sheet JSON Syntax
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
-All the top-level fields below are required. Syntax for the `key` property is explained below.
+Fields are annotated in the sample. Syntax for the `key` property is explained below.
 
 ```javascript
 {
+	// Required
     "name": "Vim",
-    "description": "Text Editor",
-    "metadata": {
+
+	// Optional, but strongly encouraged
+    "description": "Text Editor", 
+	
+	// Required if cheat sheet has a source,
+	// also possible to point users to further useful information
+    "metadata": { 
         "sourceName": "VimCheatSheet",
         "sourceUrl": "https://duckduckgo.com"
     },
-    "section_order": [      
+
+	// Required; controls which sections appear and in what order
+    "section_order": [  
         "Cursor movement",
         "Insert mode - inserting/appending text",
         ...
         "Tabs"
     ],
+
+	// Required; section names must match those in section_order
+	// in order to appear
     "sections": {
         "Tabs": [
             {
-                "key": "#gt",
+                "key": "#gt", // Syntax explained below
                 "val": "move to tab number #"
             }, 
             {
@@ -69,19 +80,42 @@ All the top-level fields below are required. Syntax for the `key` property is ex
 }
 ```
 
-### Syntax for Key Presses
+### Syntax for `key` Property
 
-Cheat sheet keys often have several combinations, which you can indicate in the syntax of each `key` property.
+Cheat sheet actions often have several key combinations, which you can indicate in the syntax of each `key` property.
+Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. If you include no brackets or braces, the entire string will be shown in a code block.
+
+To express literal brackets, braces, and backslash, simply escape with a backslash: e.g. `[Ctrl + \\]`, or `{Ctrl + \[}`.
+
+For convenience, if your string contains no brackets or braces, the entire string will be shown as a code block.
+
+### Formatting Key Presses
+
+Cheat sheet actions often have several key combinations, which you can express in any way you choose. The following are only suggestions; choose the most appropriate format for your cheat sheet.
+
+#### Single Keys or Commands
+
+There is no special syntax required for the string - for example, `"x"` or `":set color"`. The entire string will be shown in one code block.
 
 #### Simultaneous Keys (e.g., pressing A and B together)
 
-Simultaneous key presses are displayed in the same code block. There is no special syntax for the string - for example, `"x"` or `":set color"`. The entire string will be shown in the same code block.	
+You might express simultaneous key presses as follows: 
+
+- As separate code blocks, connected by a plus, e.g. `"[Ctrl]+[v]"`
+- As a single code block, connected by a plus, e.g. `"[Ctrl+v]"`
+- As a single code block, connected by a dash, e.g. `"[C-v]"`
 	
 #### Consecutive Keys (e.g., pressing A, then pressing B)
 
-Consecutive key presses are displayed in separate code blocks separated by a space. Wrap each key press in brackets and separate by a space - for example, `"[Ctrl-B] [x]"`.
+You might express consecutive key presses as follows:
+
+- As separate code blocks separated by a space, e.g. `"[Ctrl-B] [x]"`
+- As separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
 	
 #### Alternative Keys (e.g., pressing either A or B)
 
-Alternative key presses are displayed in separate code blocks separated by a forward slash. Wrap each key press in brackets and separate by a slash - for example, `"[?!=] / [?<!]"`.
+You can express alternatives as follows:
+
+- As separate code blocks separated by a forward slash, e.g. `"[?!=] / [?<!]"`
+- As separate code blocks separated by "or", e.g. `"[?!=] or [?<!]"`
 
