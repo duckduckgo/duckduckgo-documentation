@@ -258,6 +258,13 @@ Of course, this was just a taste of all the things you can create using a Goodie
 
 Do you enjoy looking under the hood and learning by example? You'll enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
 
+**Congrats!** You've now seen what creating an Instant Answer is like. 
+
+You're prepared to move on and create your first real Instant Answer. Your very first Instant Answer should be a pre-approved idea, [listed on the DuckDuckGo Community Portal](https://duck.co/ideas/status/3?table_lnKRpLENwO2NUmZUyukQpw_sort=votes). 
+
+As always, feel free to email us with any questions - any time - at [open@duckduckgo.com](mailto:open@duckduckgo.com). Happy hacking!
+
+<!-- Commenting out to stop IsAwesome PRs >
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
 This bonus section will walk you through submitting the IsAwesome Goodie you just created for review and acceptance into the *live DuckDuckGo.com codebase*. If you'd rather jump straight in and work on *your* idea, don't worry about this for now. You'll find this information in the rest of the docs as well.
@@ -350,3 +357,6 @@ This bonus section will walk you through submitting the IsAwesome Goodie you jus
 21. Now sit back and relax. When a Community Leader or DDG staff member has a chance, they'll review your Goodie, give you any feedback (if necessary) and merge it in. Once it's merged, it will be deployed to the site and should be live within a few days. **We'll be sure to let you know once it's live!**
 
 **Congrats!** You've now seen what creating an Instant Answer is like. Now, you're prepared to move on and create one of your own!
+
+
+-->
