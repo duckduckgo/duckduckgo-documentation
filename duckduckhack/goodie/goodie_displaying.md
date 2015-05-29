@@ -33,8 +33,8 @@ Here is a quick summary:
     <thead>
         <tr>
             <th>[Display Property](https://duck.co/duckduckhack/display_reference)</th>
-            <th>[Can Set in Perl (Backend)](##setting-display-properties-in-a-goodies-perl)</th>
-            <th>[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)</th>
+            <th>[Can Set in Perl](##setting-display-properties-in-a-goodies-perl)</th>
+            <th>[Can Set in JavaScript](#setting-goodie-display-properties-in-the-frontend)</th>
         </tr>
     </thead>
     <tbody>
