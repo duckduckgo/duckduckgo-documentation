@@ -140,7 +140,7 @@ return $plaintext,
         },
         templates => {          
             group => String,
-            options => Hash
+            options => Hash,
 
             # Note that while the following may reference JavaScript variables, 
             # they are still specified as strings in Perl
