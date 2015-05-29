@@ -29,6 +29,74 @@ Most display properties can be set in either the Goodie's Perl (server code) or 
 
 Here is a quick summary:
 
+<table>
+    <thead>
+        <tr>
+            <th>[Display Property](https://duck.co/duckduckhack/display_reference)</th>
+            <th>[Can Set in Perl (Backend)](##setting-display-properties-in-a-goodies-perl)</th>
+            <th>[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>[`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`name`](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`data`](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`meta`](https://duck.co/duckduckhack/display_reference#codemetacode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`templates`](https://duck.co/duckduckhack/display_reference#codetemplatescode-emobjectem-required)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`view`](https://duck.co/duckduckhack/display_reference#codeviewcode-emstringem-optional)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`model`](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional)</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`relevancy`](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[`sort_fields`](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>[Events](https://duck.co/duckduckhack/display_reference#events)</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>      
+    </tbody>
+</table>
+<!-- Markdown version
+
 [Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](#setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
 |--------------|:---:|:---:|
 [`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)|&#10003;|&#10003;
@@ -42,6 +110,7 @@ Here is a quick summary:
 [`relevancy`](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)| |&#10003;
 [`sort_fields`](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)| |&#10003;
 [Events](https://duck.co/duckduckhack/display_reference#events)| |&#10003;
+-->
 
 ## Setting Display Properties in a Goodie's Perl
 
