@@ -356,7 +356,8 @@ A template for displaying textual information detail, with a small image, icon, 
 ```
 +------------------------------------------------+
 image and/or badge      title
-                        subtitle/altSubtitle
+                        subtitle
+                        altSubtitle
 
                         content *or* description                        
 
