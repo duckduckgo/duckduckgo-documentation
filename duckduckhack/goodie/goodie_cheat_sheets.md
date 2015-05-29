@@ -12,9 +12,9 @@ If you have an idea for a cheat sheet, it's easy to add it to the DuckDuckGo Goo
 
 Instead of creating an entirely new Instant Answer, you simply need to add **one JSON file** to the existing [Cheat Sheets Goodie directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets).
 
-To do this in Codio, use the left-hand panel to enter the `zeroclickinfo-goodies` repository directory. Then click into the `share/goodie/cheat_sheets` directory. 
+To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodies` repository directory. Then use the file tree to click into the `/share/goodie/cheat_sheets` directory. 
 
-In the file menu above, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving in the `cheat_sheets` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
+Up in the **File menu**, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving to the `cheat_sheets` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
 
 Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax).
 
