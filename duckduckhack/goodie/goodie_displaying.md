@@ -29,7 +29,7 @@ Most display properties can be set in either the Goodie's Perl (server code) or 
 
 Here is a quick summary:
 
-<table>
+<table class="table table-condensed">
     <thead>
         <tr>
             <th>Display Property</th>
