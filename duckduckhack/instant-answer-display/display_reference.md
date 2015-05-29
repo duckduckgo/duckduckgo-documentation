@@ -15,19 +15,19 @@ Each Instant Answer is added to the AnswerBar by passing a set of properties to 
 
 The following properties are **required**:
 
-- [id](#codeidcode-string-required) - A unique identifier for your Spice. The `id` should match the name of your callback function
-- [name](#codenamecode-string-required) - The name that will be used for your Spice's AnswerBar tab
-- [data](#codedatacode-object-required) - The object containing the data to be used by your templates
-- [meta](#codemetacode-object-required) - Used to define elements of the **MetaBar** including the "More at" link
-- [templates](#codetemplatescode-object-required) - Used to specify the template group and all other templates that are being used
+- [id](#codeidcode-emstringem-required) - A unique identifier for your Spice. The `id` should match the name of your callback function
+- [name](#codenamecode-emstringem-required) - The name that will be used for your Spice's AnswerBar tab
+- [data](#codedatacode-emobjectem-required) - The object containing the data to be used by your templates
+- [meta](#codemetacode-emobjectem-required) - Used to define elements of the **MetaBar** including the "More at" link
+- [templates](#codetemplatescode-emobjectem-required) - Used to specify the template group and all other templates that are being used
 
 The following properties are **optional**:
 
-- [normalize](#codenormalizecode-function-optional) - This allows you to normalize the `data` before it is passed on to the template
-- [relevancy](#coderelevancycode-object-optional) - Used to ensure the relevancy of your Spice's result
-- [sort_fields](#codesortfieldscode-object-optional)
-- [view](#codeviewcode-string-optional) - This allows you to explicitly specify the view class used for displaying the Instant Answer
-- [model](#codemodelcode-string-optional) - This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
+- [normalize](#codenormalizecode-emfunctionem-optional) - This allows you to normalize the `data` before it is passed on to the template
+- [relevancy](#coderelevancycode-emobjectem-optional) - Used to ensure the relevancy of your Spice's result
+- [sort_fields](#codesortfieldscode-emobjectem-optional)
+- [view](#codeviewcode-emstringem-optional) - This allows you to explicitly specify the view class used for displaying the Instant Answer
+- [model](#codemodelcode-emstringem-optional) - This allows you to use one of our predefined data models that include domain specific helpers/normalization/formatting.
 - You may also optionally handle several of the AnswerBar's frontend [events](#events).
 
 ------
@@ -593,9 +593,9 @@ Available Views:
 
 ## `model` *string* [optional]
 
-Typically you don't need to specify a model for your Instant Answer. However, if your data is of a common type, we have pre-built models which accept data to displaying things like Lat/Lon for a Place or Dimensions for an Image. 
+Some Instant Answers use data to display results which is not directly displayed in a template. For example, the latitude and longitude of a Place, or the dimensions of an Image. The Instant Answer framework comes with built-in models to manage these data. Some [views](#codeviewscode-emstringem-optional) require a model - such as Audio or Places.
 
-Also, to use some of our non-default *views*, such as Audio or Places, you will need to use a compatible data model.
+**If you are specifying a template group, the `model` property is automatically set for you.**
 
 Available models:
 

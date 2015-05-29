@@ -4,7 +4,7 @@ Testing is crucial to ensuring a smooth integration process.  This section of th
 
 ## Interactive Testing
 
-Interactive command-line testing is available using DuckPAN for **Goodie** and **Spice** instant answer types.
+Interactive command-line testing is available using DuckPAN for **Goodie** and **Spice** Instant Answer types.
 
 This section assumes you've set up your development environment and worked through either the [Basic Goodie Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/goodie/goodie_basic_tutorial.md) or the [Basic Spice Tutorial](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_basic_tutorial.md).
 

@@ -25,11 +25,18 @@ The list of built-in templates includes:
 - [`products_item`](#codeproductsitemcode-template)
 - [`products_detail`](#codeproductsdetailcode-template)
 - [`products_item_detail`](#codeproductsitemdetailcode-template)
+- [`basic_icon_detail`](#codebasicicondetailcode-template)
 - [`basic_info_detail`](#codebasicinfodetailcode-template)
 - [`places_item`](#codeplacesitemcode-template)
 - [`places_detail`](#codeplacesdetailcode-template)
 - [`list_detail`](#codelistdetailcode-template)
 - [`record`](#coderecordcode-template)
+- [`media_item`](#codemediaitemcode-template)
+- [`media_item_detail`](#codemediaitemdetailcode-template)
+- [`images_item`](#codeimagesitemcode-template)
+- [`images_detail`](#codeimagesdetailcode-template)
+- [`videos_item`](#codevideositemcode-template)
+- [`videos_detail`](#codevideosdetailcode-template)
 - [`base_item`](#codebaseitemcode-template)
 - [`base_detail`](#codebasedetailcode-template)
 
@@ -56,22 +63,24 @@ footer
 ### Available Features
 
 - `icon` [optional] *string url*
+
 	URL path to icon image
+
 - `url` [optional] *string url*
 - `title` [required] *string url*
-- `altSubtitle` [optional] *string*
-- `subtitle` [optional] *string*
+- `altSubtitle` [optional] *string* or *string array*
+- `subtitle` [optional] *string* or *string array*
 - `description` [required] *string*
 - `footer` [optional] *sub-template*
 
-### Example usage of the "text_item" template:
+### Example Usage
 
 - [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
 - [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
 - [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
 - [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
 
-### Template groups using the "text_item" template:
+### Template Groups
 
 - [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
@@ -86,11 +95,13 @@ A template for displaying textual information detail, with no image or icon.
 ![text_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Ftext_detail.png&f=1)
 
 ```
-+------------------+
++-------------------------------------+
+
 title_content or title
 subtitle_content or subtitle
 content
-+------------------+
+
++-------------------------------------+
 ```
 
 ### Available Features
@@ -101,18 +112,18 @@ content
 	Available only if `title_content` is not specified
 
 - `subtitle_content` [optional] *sub-template*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 	Available only if `subtitle_content` is not specified
 
 - `content` [optional] *sub-template*
 
-### Example usage of the "text_detail" template:
+### Example Usage
 
 - [Rhymes](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
 - [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
 
-### Template groups using the "text_detail" template:
+### Template Groups
 
 - [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
@@ -125,6 +136,16 @@ A tile template where images are the main feature, accompanied by text.
 ### Template Diagram
 
 ![basic_image_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_image_item.png&f=1)
+
+```
++------------------+
+image
+title
+description
+rating
+ratingText
++------------------+
+```
 
 ### Available Features
 
@@ -144,12 +165,12 @@ A tile template where images are the main feature, accompanied by text.
 
 - `ratingText` [optional] *string*
 
-### Example usage of the "basic_image_item" template:
+### Example Usage
 
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 
-### Template groups using the "basic_image_item" template:
+### Template Groups
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
@@ -194,12 +215,12 @@ rating
 
 	URL path to reviews
 
-### Example usage of the "products_item" template:
+### Example Usage
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
-### Template groups using the "products_item" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 
@@ -214,16 +235,14 @@ A detail template where image is emphasized, suited to feature for an item that 
 ![products_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_detail.png&f=1)
 
 ```
-+------------------+
-img
-heading
-rating
-price
-brand
-subtitle_content
-abstract
-buy
-+------------------+
++------------------------------------+
+                heading
+                rating, reviewCount
+                price, brand
+    img         subtitle_content                
+                abstract
+                buy
++------------------------------------+
 ```
 
 ### Available Features
@@ -252,12 +271,14 @@ buy
 
 - `buy` [optional] *sub-template*
 
-### Example usage of the "products_detail" template:
+	Can be used to provide a call-to-action, such as a button.
+
+### Example Usage
 
 - [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
 - [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
 
-### Template groups using the "products_detail" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
@@ -273,12 +294,24 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ![products_item_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fproducts_item_detail.png&f=1)
 
+```
++------------------------------------+
+                heading
+                price, brand
+    img_m       subtitle_content
+                rating, reviewCount
+                abstract
+                buy
++------------------------------------+
+```
+
 ### Available Features
 
 - `img_m` [optional] *string url*
 
 	URL path to image
 
+- `heading` [required] *string*
 - `url` [required] *string url*
 - `price` [optional] *string*
 - `brand` [optional] *string*
@@ -292,20 +325,67 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 	The count of reviews
 	Automatically formatted to include comma thousands separators
 
-- `url_review` [optional] *url path to reviews*
+- `url_review` [optional] *string url* 
+	
+	Link to source reviews page
+	
 - `abstract` [required] *string*
 - `buy` [optional] *sub-template*
 
-### Example usage of the "products_item_detail" template:
+	Can be used to provide a call-to-action, such as a button.
+
+### Example Usage
 
 - [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 - [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
 
-### Template groups using the "products_item_detail" template:
+### Template Groups
 
 - [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 - [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 - [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
+
+------
+
+## `basic_icon_detail` Template
+
+A template for displaying textual information detail, with a small image, icon, or character badge.
+
+### Template Diagram
+
+```
++------------------------------------------------+
+image and/or badge      title
+                        subtitle
+                        altSubtitle
+
+                        content *or* description                        
+
++------------------------------------------------+
+```
+
+### Available Features
+
+- `image` [optional] *string url*
+
+	URL path to image
+	
+- `badge` [optional] *string*
+- `title` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
+- `altSubtitle` [optional] *string* or *string array*
+- `content` [optional] *sub-template*
+- `description` [conditional on `content`] *string*
+
+	Available and required if `content` not specified
+
+### Example Usage
+
+*None - yet*
+
+### Template Groups
+
+- [Icon](#icon-template-group)
 
 ------
 
@@ -317,15 +397,16 @@ A detail template which shows in-depth information. This template includes an au
 
 ![basic_info_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_info_detail.png&f=1)
 
+The same template, with the `aux` feature:
+
 ![basic_info_detail_w_aux template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbasic_info_detail_w_aux.png&f=1)
 
 ```
-+-----------------------------------------+
-image
-title
-subtitle						auxTitle
-content or description			aux
-+-----------------------------------------+
++-------------------------------------------------------+
+                title
+    image       subtitle                        
+                content or description          infoboxData
++-------------------------------------------------------+
 ```
 
 ### Available Features
@@ -336,7 +417,7 @@ content or description			aux
 	URL path to image
 
 - `title` [optional] *string*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 	Available only if `title` specified
 
@@ -345,27 +426,27 @@ content or description			aux
 
 	Available and required if `content` not specified
 
-- [`infoboxData`](#infoboxdata-array) [optional] *array*
+- `infoboxData` [optional] *array*	
 
-	More information [below](#infoboxdata-array)
+	An array of objects used to render an [InfoBox](#the-infobox)
 
-### Example usage of the "basic_info_detail" template:
+### Example Usage
 
 - [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
 - [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
 - [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js)
 
-### Template groups using the "basic_info_detail" template:
+### Template Groups
 
 - [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
-### `infoboxData` *array*
+### The Infobox
 
 In the `basic_info_detail` template, the **InfoBox** floats on the right side of the AnswerBar. It presents detailed information in a table of key-value pairs:
 
 ![infobox](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Finfobox.png&f=1)
 
-To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` array specified. `infoboxData` is an array of objects, each with the following properties:
+To display the InfoBox in the `basic_info_detail` template, an item must have an `infoboxData` property specified. This is an array of objects, each with the following properties:
 
 - `label` [required] *string*
 - `url` [optional] *string url*
@@ -374,7 +455,7 @@ To display the InfoBox in the `basic_info_detail` template, an item must have an
 
 - `value` [optional] *string or array*
 
-	Use array to display [nested properties](#nested-properties))
+	Use array to display [nested properties](#infobox-nested-properties))
 
 The first object in the array can also be used solely to specify a heading for the InfoBox. This object would contain only one property:
 
@@ -386,18 +467,18 @@ For example, when ["mtg nullify"](https://duckduckgo.com/?q=mtg+nullify&ia=magic
 
 ```javascript
 [
-	{
-		heading: "Card Details"
-	},
-	{
-		label: "Mana Cost",
-		value: "UU"
-	},
-	{
-		label: "Converted Mana Cost",
-		value: 2
-	},
-	...
+    {
+        heading: "Card Details"
+    },
+    {
+        label: "Mana Cost",
+        value: "UU"
+    },
+    {
+        label: "Converted Mana Cost",
+        value: 2
+    },
+    ...
 ]
 ```
 
@@ -409,18 +490,18 @@ It is also possible to specify labels alone, with or without urls. This is the `
 
 ```javascript
 [
-	{
-	    heading: "Related Terms:"
-	},
-	{
-	    label: "Awesome",
-	    url: "https://duckduckgo.com/?q=ud+awesome&ia=dictionary"
-	},
-	{
-	    label: "Amazing",
-	    url: "https://duckduckgo.com/?q=ud+amazing&ia=dictionary"
-	},
-	...
+    {
+        heading: "Related Terms:"
+    },
+    {
+        label: "Awesome",
+        url: "https://duckduckgo.com/?q=ud+awesome&ia=dictionary"
+    },
+    {
+        label: "Amazing",
+        url: "https://duckduckgo.com/?q=ud+amazing&ia=dictionary"
+    },
+    ...
 ]
 ```
 
@@ -439,24 +520,24 @@ For example, the resulting array passed to `infoboxData` could be structured thi
 
 ```javascript
 [
-	{
-	    heading: "About Me"
-	},
-	{
-	    label: "My Favorites",
-	    value: [
-			{
-				label: "Color",
-				value: "Red"
-			},
-			{
-				label: "Animal",
-				value: "Duck"
-			},
-			...
-		]
-	},
-	...
+    {
+        heading: "About Me"
+    },
+    {
+        label: "My Favorites",
+        value: [
+            {
+                label: "Color",
+                value: "Red"
+            },
+            {
+                label: "Animal",
+                value: "Duck"
+            },
+            ...
+        ]
+    },
+    ...
 ]
 ```
 
@@ -477,7 +558,7 @@ Clicking a places item both indicates its location on a map, as well as 'flips' 
 +--------------------+
 
 
-		image
+        image
 
 
 +--------------------+
@@ -512,7 +593,7 @@ phone
 #### 'Front' of each item:
 - `image` [optional] *string url*
 
-	URL path to image
+	Path to image
 
 - `name` [required] *string*
 - `title` [optional] *string*
@@ -554,12 +635,12 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ![DuckDuckGo search for "cafes near ann arbor"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flocal_results_map.png&f=1)
 
-### Example usage of the "places_item" template:
+### Example Usage
 
 - [Parking Panda](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js): search for [parking in new york](https://duckduckgo.com/?q=parking+in+new+york).
 - Local results (built-in to DDG): search for [cafes near Ann Arbor](https://duckduckgo.com/?q=cafes+near+ann+arbor).
 
-### Template groups using the "places_item" template:
+### Template Groups
 
 - [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
@@ -630,11 +711,11 @@ A detail template for displaying information about a single location on a map ba
 
 - `phone` [optional] *string*
 
-### Example usage of the "places_detail" template:
+### Example Usage
 
 - Local results (built-in to DDG): search for [a particular business](https://duckduckgo.com/?q=espresso+italiano+maui).
 
-### Template groups using the "places_detail" template:
+### Template Groups
 
 - [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
@@ -661,13 +742,13 @@ record_data *or* list
 ### Available Features
 
 - `title` [optional] *string*
-- `subtitle` [optional] *string*
+- `subtitle` [optional] *string* or *string array*
 
 #### If Displaying Table of Key-Value Pairs:
 
 - `content` [required] *sub-template*
 
-	Recommended to set this value to 'record' to use the built-in [`record`](#coderecordcode-template) template
+	Recommended to set this value to `'record'` (a string) to use the built-in [`record`](#coderecordcode-template) template
 
 - `record_data` [required] *object*
 
@@ -689,11 +770,11 @@ To display a bulleted list, pass a sub-template to the `list_content` property. 
 
 When displaying a bulleted list, the simplest case would be to pass `list` an array of objects like `{value: 'foo'}` and specify `list_content` to be a sub-template which only reads `{{value}}`.
 
-### Example usage of the "list_detail" template:
+### Example Usage
 
 - [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js) (search for ['whois mozilla.org'](https://duckduckgo.com/?q=whois+mozilla.org))
 
-### Template groups using the "list_detail" template:
+### Template Groups
 
 - [List](https://duck.co/duckduckhack/templates_overview#list-template-group)
 
@@ -706,6 +787,15 @@ A special template that is ideal for key-value data. It generates a `<table>` wh
 ### Template Diagram
 
 ![record template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Frecord.png&f=1)
+
+```
++---------------------------------------------+
+*key*           *value*
+*key*           *value*     (of record_data)
+*key*           *value*
+...
++---------------------------------------------+
+```
 
 ### Available Features
 
@@ -748,16 +838,270 @@ templates: {
 }
 ```
 
-### Example usage of the `record` template:
+### Example Usage
 
 - [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
 - [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
 - [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
 - [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
 
-### Template groups using the `record` template:
+### Template Groups
 
 - Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
+
+------
+
+## `media_item` Template
+
+### Template Diagram
+
+```
++----------------------+
+
+        image
+
+
+title
+altSubtitle
+subtitle
+description
+footer
+dateBadge   
+
++----------------------+
+```
+
+### Available Features
+
+- `title` [required] *string*
+- `altSubtitle` [optional] *string* or *string array*
+- `subtitle` [optional] *string* or *string array*
+- `description` [optional] *string*
+- `footer` [optional] *sub-template*
+- `dateBadge` [optional] *object*
+
+	An object with either a `text` *string* property **or** a `month` *string* and `day` *string* properties. 
+
+### Example Usage
+
+*None - yet!*
+
+### Template Groups
+
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+
+------
+
+## `media_item_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+						title, altSubtitle
+	image				subtitle
+						description
+						callout
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `image` [optional] *string url*
+- `title` [required] *string*
+- `altSubtitle` [optional] *string* or *string array*
+- `description` [optional] *string*
+- `callout` [optional] *sub-template*
+
+	Can be used to provide a call-to-action, such as a button.
+
+### Example Usage
+
+*None - yet!*
+
+### Template Groups
+
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+
+------
+
+## `images_item` Template
+
+### Template Diagram
+
+#### Regular State
+
+```
++-------------------+
+
+    thumbnail
+
++-------------------+
+```
+
+#### Hover State
+
+```
++-------------------+
+
+   width × height
+
++-------------------+
+```
+
+
+### Available Features
+
+- `thumbnail` [required] *string url*
+- `tileWidth` [required] *integer*
+
+	The pixel width of the **thumbnail** image - may vary among tiles
+	
+- `title` [optional] *string*
+
+	The `alt` html attribute of the image element
+	
+- `width` [required] *integer*
+
+	The pixel width of the **original** image.
+
+- `height` [required] *integer*
+
+	The pixel height of the **original** image.
+
+### Example Usage
+
+- Search for ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images Instant Answer)
+
+### Template Groups
+
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+
+------
+
+## `images_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+
+
+    thumbnail                   title
+    or                          url
+    highResImage                width × height
+                                image
+
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `thumbnail` [required] *string url*
+- `highResImage` [optional] *string url*
+- `title` [required] *string*
+- `url` [required] *string url*
+	
+	Path to image source page (the page on which the image was originally embedded)
+	
+- `width` [required] *integer*
+
+	The pixel width of the **original** image.
+
+- `height` [required] *integer*
+
+	The pixel height of the **original** image.
+
+- `image` [required] *string url*
+
+	Path to image source file (the original image file path)
+
+### Example Usage
+
+- Search for ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) and click on any item (built-in images Instant Answer)
+
+### Template Groups
+
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+
+------
+
+## `videos_item` Template
+
+### Template Diagram
+
+```
++----------------------+
+
+    images.medium
+
+    duration
+
+
+    title
+    viewCount
+
++----------------------+
+```
+
+### Available Features
+
+- `images` [required] *object*
+
+	Object with paths to various image sizes. This template requires a `medium` property.
+	
+- `duration` [required] *string url*
+
+	Duration of the video, in HH:MM:SS format (e.g. '5:32' or '2:01:59')
+	
+- `title` [required] *string* 
+- `viewCount` [required] *string* 
+
+	Number of video views, preferably with commas as the thousands separator (value not formatted automatically)
+
+### Example Usage
+
+- Search for ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) (built-in videos search)
+
+### Template Groups
+
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
+
+------
+
+## `videos_detail` Template
+
+### Template Diagram
+
+```
++------------------------------------------------------------------+
+
+
+    [video content]             title
+                                username
+                                viewCount
+                                published
+
++------------------------------------------------------------------+
+```
+
+### Available Features
+
+- `title` [required] *string*
+- `url` [required] *string url*
+- `username` [required] *string*
+- `viewCount` [required] *string*
+- `published` [required] *string*
+
+	A date string in any format recognized by the JavaScript [`Date.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) method
+
+### Example Usage
+
+- ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) and click on any item (built-in videos Instant Answer)
+
+### Template Groups
+
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
 
 ------
 
@@ -771,23 +1115,33 @@ An item template for containing fully customized markup.
 
 ![base_item template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_item.png&f=1)
 
-<!-- /summary -->
+```
++---------------------------------+
+
+
+        content (template)
+
+
++---------------------------------+
+```
 
 ### Available Features
 
 - `url` [required] *string*
 - `content` [required] *sub-template*
 
-### Example usage of the "base_item" template:
+### Example Usage
 
 - [GithubJobs](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github_jobs/github_jobs.js)
 - [Airlines](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/airlines/airlines.js)
 
 ### Complex Example
 
+Here is an example of a more complex `content` sub-template passed to the `base_item` template.
+
 ![base_item template (complex example)](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_item_complex.png&f=1)
 
-### Template groups using the "base_item" template:
+### Template Groups
 
 - [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
@@ -803,11 +1157,21 @@ A detail template for containing fully customized markup.
 
 ![base_detail template](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_detail.png&f=1)
 
+```
++---------------------------------+
+
+
+        content (template)
+
+
++---------------------------------+
+```
+
 ### Available Features
 
 - `content` *string* or *sub-template*
 
-### Example usage of the "base_detail" template:
+### Example Usage
 
 - [FlashVersion](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js)
 - [NPM](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js)
@@ -817,7 +1181,7 @@ A detail template for containing fully customized markup.
 
 ![base_detail template (complex example)](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fbase_detail_complex.png&f=1)
 
-### Template groups using the "base_detail" template:
+### Template Groups
 
 - [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
@@ -864,10 +1228,10 @@ The following four values for `tile` variant act as presets for [`tileTitle`](#t
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tile: 'poster'
-	}
+    ...
+    variants: {
+        tile: 'poster'
+    }
  }
 ```
 
@@ -889,10 +1253,10 @@ This variant allows you to modify the `detail` template of your Instant Answer. 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		detail: 'light'
-	}
+    ...
+    variants: {
+        detail: 'light'
+    }
  }
 ```
 
@@ -923,10 +1287,10 @@ Another way to set a `tileTitle` variant is to use [`tile` preset options](#tile
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileTitle: '1line'
-	}
+    ...
+    variants: {
+        tileTitle: '1line'
+    }
  }
 ```
 
@@ -948,10 +1312,10 @@ This variant changes the size of the title element, specifically for the `basic_
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconTitle: 'large'
-	}
+    ...
+    variants: {
+        iconTitle: 'large'
+    }
  }
 ```
 
@@ -964,6 +1328,7 @@ This variant changes the amount of lines available in the subtitle element, for 
 ### Applicable Templates
 
 - `text_item` template
+- `basic_icon_detail` template
 
 ### Options
 
@@ -973,10 +1338,10 @@ This variant changes the amount of lines available in the subtitle element, for 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileSubtitle: '2line'
-	}
+    ...
+    variants: {
+        tileSubtitle: '2line'
+    }
  }
 ```
 
@@ -1003,10 +1368,10 @@ Another way to set a `tileSnippet` variant is to use [`tile` preset options](#ti
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileSnippet: 'small'
-	}
+    ...
+    variants: {
+        tileSnippet: 'small'
+    }
  }
 ```
 
@@ -1033,10 +1398,10 @@ This variant changes the amount of space allowed for the footer sub-template, if
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileFooter: '2line'
-	}
+    ...
+    variants: {
+        tileFooter: '2line'
+    }
  }
 ```
 
@@ -1061,10 +1426,10 @@ This variant sets the css float direction of the star rating element, if it exis
 
 ```javascript
 templates: {
-	...
-	variants: {
-		tileRating: 'starsLeft'
-	}
+    ...
+    variants: {
+        tileRating: 'starsLeft'
+    }
  }
 ```
 
@@ -1090,10 +1455,10 @@ For templates containing an icon element, this variant sets its size.
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconImage: 'small'
-	}
+    ...
+    variants: {
+        iconImage: 'small'
+    }
  }
 ```
 
@@ -1119,10 +1484,10 @@ For templates containing an icon badge (an inline colored container with text), 
 
 ```javascript
 templates: {
-	...
-	variants: {
-		iconBadge: 'small'
-	}
+    ...
+    variants: {
+        iconBadge: 'small'
+    }
  }
 ```
 
@@ -1136,7 +1501,7 @@ Classes can be directly specified to the same elements as [Variants](#variants);
 
 ### Applicable Templates
 
-Because `elClass` properties apply to the same properties as `variants`, its properties are applicable to the respective templates. For example, if you are directly specifying a class for [`tileFooter`](#tilefooter-variants), the applicable templates are `text_item` and `media_item`.
+Because `elClass` properties apply to the same properties as `variants`, its properties are applicable to the respective templates. For example, if you are directly specifying a class for [`tileFooter`](#codetilefootercode-variants), the applicable templates are `text_item` and `media_item`.
 
 ### Options
 
@@ -1151,12 +1516,12 @@ The values that can be used in the elClass are found in the [Text and Colors](ht
 
 ```javascript
 templates: {
-	...
-	elClass: {
-		tileSubtitle: 'tx--25',
-		tileFooter: 'tx--11',
-		...
-	}
+    ...
+    elClass: {
+        tileSubtitle: 'tx--25',
+        tileFooter: 'tx--11',
+        ...
+    }
  }
 ```
 

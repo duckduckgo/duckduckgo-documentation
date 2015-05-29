@@ -23,7 +23,97 @@ The properties you can return in your `structured_answer` hash are documented in
 
 In some scenarios, you may also want to handle the AnswerBar's events (for example, to stop media playing when the user hides your Instant Answer). These [events](https://duck.co/duckduckhack/display_reference#events) are covered at the end of the reference.
 
-## Returning Display Properties in a Goodie's Perl
+### Where Display Properties Can Be Set
+
+Most display properties can be set in either the Goodie's Perl (server code) or JavaScript (frontend). Some Display properties, by their nature, can only [be set in the frontend](#setting-goodie-display-properties-in-the-frontend). 
+
+Here is a quick summary:
+
+<table>
+    <thead>
+        <tr>
+            <th>Display Property</th>
+            <th>Can Set in Perl (Backend)</th>
+            <th>Can Set in JavaScript (Frontend)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>id</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>meta</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>templates</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>view</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>model</td>
+            <td>&#10003;</td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>normalize</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>relevancy</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>sort_fields</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>
+        <tr>
+            <td>Events</td>
+            <td></td>
+            <td>&#10003;</td>
+        </tr>      
+    </tbody>
+</table>
+
+<!-- Markdown version
+
+[Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](#setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
+|--------------|:---:|:---:|
+[`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)|&#10003;|&#10003;
+[`name`](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required)|&#10003;|&#10003;
+[`data`](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required)|&#10003;|&#10003;
+[`meta`](https://duck.co/duckduckhack/display_reference#codemetacode-emobjectem-required)|&#10003;|&#10003;
+[`templates`](https://duck.co/duckduckhack/display_reference#codetemplatescode-emobjectem-required)|&#10003;|&#10003;
+[`view`](https://duck.co/duckduckhack/display_reference#codeviewcode-emstringem-optional)|&#10003;|&#10003;
+[`model`](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional)|&#10003;|&#10003;
+[`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)| |&#10003;
+[`relevancy`](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)| |&#10003;
+[`sort_fields`](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)| |&#10003;
+[Events](https://duck.co/duckduckhack/display_reference#events)| |&#10003;
+-->
+
+## Setting Display Properties in a Goodie's Perl
 
 The following is a code summary of how the options covered in the [Instant Answer Display Reference](https://duck.co/duckduckhack/display_reference) are returned in your Goodie Perl file.
 
@@ -81,16 +171,14 @@ For more information on each property and its usage, visit the [Instant Answer D
 
 While most display properties can be set in a Goodie's Perl file, others by their nature must be specified in the frontend part of the code. These are:
 
-- [Normalize function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional)
+- [Normalize function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)
 - [Events](https://duck.co/duckduckhack/display_reference#events)
-- [Relevancy](https://duck.co/duckduckhack/display_reference#coderelevancycode-object-optional)
-- [Sort fields](https://duck.co/duckduckhack/display_reference#codesortfieldscode-object-optional)
+- [Relevancy](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)
+- [Sort fields](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)
 
 To specify any of these, simply create a javascript file in `share/goodie/INSTANT_ANSWER_ID/INSTANT_ANSWER_ID.js`. For example, using the ["BP to ms" Instant Answer](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/BPMToMs.pm) as an example (where the `id` is set to `'bpmto_ms'`):
 
 Create a file at `share/goodie/bpmto_ms/bpmto_ms.js`, which creates a namespace and a build function. 
-
-
 
 ```javascript
 DDH.bpmto_ms = DDH.bpmto_ms || {}; // create the namespace in case it doesn't exist
@@ -116,7 +204,7 @@ return {
 }
 ```
 
-Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) - and so on:
+Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional) - and so on:
 
 ```javascript
 return {
@@ -147,3 +235,36 @@ return {
     }
 }
 ```
+
+## Fun with Goodie JavaScript
+
+Goodie's frontend components allow you to do much more than set display properties and events. You may also execute any JavaScript you'd like to do interesting and delightful things.
+
+Continuing from the example above from the *BP to ms* Instant Answer, we created a JavaScript file at `share/goodie/bpmto_ms/bpmto_ms.js`. Inside this file, we declare a `build` function.
+
+Everything *returned* by your `build` function is used to extend your `structured_answer` Perl hash (from your Goodie's .pm file). However, you can use the function to **run other JavaScript**, making use of JQuery.
+
+```javascript
+DDH.bpmto_ms.build = function(ops) {
+    
+    // Execute delightful JavaScript here
+    // with access to JQuery 
+
+    return {
+        // Specify any frontend display properties here
+		onShow: function(){
+			// Consider using an event, such as onShow, to run your code at the right time
+		}
+    };
+
+};
+```
+
+Consider using [events](https://duck.co/duckduckhack/display_reference#events) as the starting points for your code. You can also create a css file to reference, for example `share/goodie/bpmto_ms/bpmto_ms.css`.
+
+You might use Goodie JavaScript to create an in-browser game related to certain search results. Or an easter egg, for fun. The community is excited to review pull requests for fun and delightful additions to DuckDuckGo's Instant Answers.
+
+Feel free to reach out and ask us any questions, over at [open@duckduckgo.com](mailto:open@duckduckgo.com)
+
+
+

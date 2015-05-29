@@ -233,11 +233,11 @@ Once you have installed the virtual machine you should be able to start up the V
 
 #### Cloning the repository on the VM
 
-**The DuckPAN client has already been installed for you.** To use it, you must 1st clone your instant answer git repository.
+**The DuckPAN client has already been installed for you.** To use it, you must 1st clone your Instant Answer git repository.
 
-If you haven't already done so, [Determine your Instant Answer Type](https://duck.co/duckduckhack/determine_your_instant_answer_type) and follow GitHub's instructions to [fork](https://help.github.com/articles/fork-a-repo) the instant answer repository.
+If you haven't already done so, [Determine your Instant Answer Type](https://duck.co/duckduckhack/determine_your_instant_answer_type) and follow GitHub's instructions to [fork](https://help.github.com/articles/fork-a-repo) the Instant Answer repository.
 
-The instant answer repositories are:
+The Instant Answer repositories are:
 + [zeroclickinfo-goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
 + [zeroclickinfo-spice](https://github.com/duckduckgo/zeroclickinfo-spice)
 

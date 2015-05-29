@@ -39,7 +39,7 @@ Below is an example of the same Instant Answer returning a single result. This u
 
 In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior. To display a template other than the one used for `detail`, specify an `item_detail` template.
 
-This diagram shows what is displayed when an instant answer returns multiple items:
+This diagram shows what is displayed when an Instant Answer returns multiple items:
 
 ```
                                     INSTANT ANSWER RETURNS MULTIPLE ITEMS
@@ -130,19 +130,21 @@ You can easily customize the appearance of the template group by overriding the 
 
 ### Picking a Template Group
 
-The best template group for your instant answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
+The best template group for your Instant Answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
 
 A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
 
 #### My Instant Answer returns "things" where visuals are important 
 
-The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
+The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Also consider the [Movies](#movies-template-group) template group.
 
-Examples that make a great fit for `media` include:
+Examples that make a great fit for the Media or Movies template groups include:
 
 - TV shows/[Movies](https://duckduckgo.com/?q=currently+in+theaters)
 - Games
 - [Courses](https://duckduckgo.com/?q=computer+science+online+course)
+
+If your Instant Answer results *are* themselves images or videos, consider the [Images](#images-template-group) or [Videos](#videos-template-group) template groups.
 
 #### My Instant Answer returns detailed "lookup" information
 
@@ -233,6 +235,9 @@ These are the currently available template groups:
 - [Products](#products-template-group)
 - [Media](#media-template-group)
 - [Icon](#icon-template-group)
+- [Images](#images-template-group)
+- [Movies](#movies-template-group)
+- [Videos](#videos-template-group)
 - [Base](#base-template-group)
 
 <!-- /summary -->
@@ -259,7 +264,7 @@ When no `options` are specified and no template `group` has been selected, the `
 
 1. Before using these templates in your code, please familiarize yourself with the method for displaying your Instant Answer type (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)). This will help understand the **proper usage of both the `templates` block and the `options` block**.
 
-2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-object-required).
+2. For your desired template features to display correctly, each item's data must contain the corresponding properties. Generally these are set with the aid of a [`normalize` function](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional), if they do not already exist in your [`data` object](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required).
 
 Understanding these is crucial to implementing templates properly and effectively.
 
@@ -292,14 +297,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `text` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
 - [`text_detail`](https://duck.co/duckduckhack/templates_reference#codetextdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `text` template group
+### Example Uses
 
 - ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
     ![DuckDuckGo search for "github duckduckgo"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgithub_duckduckgo.png&f=1)
@@ -344,14 +349,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `info` group:
+#### Default Templates Used
 
 - [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
 - [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `info` template group
+### Example Uses
 
 - ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
     ![DuckDuckGo search for "green day band"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgreen_day_band.png&f=1)
@@ -379,8 +384,6 @@ templates: {
 }
 ```
 
-<!-- /summary -->
-
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -399,7 +402,9 @@ templates: {
 }
 ```
 
-#### Default templates used in the `products` group:
+Using the Products template group also automatically makes the Product [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
+
+#### Default Templates Used
 
 - [`products_item`](https://duck.co/duckduckhack/templates_reference#codeproductsitemcode-template)
 - [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
@@ -408,7 +413,7 @@ templates: {
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `products` template group
+### Example Uses
 
 - ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
     ![DuckDuckGo search for "buy batman lego"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbuy_batman_lego.png&f=1)
@@ -446,39 +451,32 @@ When you specify this template group, it is equivalent to setting the properties
 // setting the template group to: 'media'
 // does this for you!
 templates: {
-    item: 'basic_image_item',
-    detail: 'products_detail',
-    item_detail: 'products_item_detail',
-    wrap_detail: 'base_detail',
+    item: 'media_item',
+    detail: 'basic_info_detail',
+    item_detail: 'media_item_detail',
     options: {
-	    price: false,
-	    brand: false,
-	    rating: false,
-	    ratingText: true
+		moreAt: true,
+		aux: false
     }
 }
 ```
 
-#### Default templates used in the `media` group:
+#### Default Templates Used
 
-- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
-- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
-- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
+- [`media_item`](https://duck.co/duckduckhack/templates_reference#codemediaitemcode-template)
+- [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template)
+- [`media_item_detail`](https://duck.co/duckduckhack/templates_reference#codemediaitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `media` template group
+### Example Uses
 
-- ["lord of the rings movie"](https://duckduckgo.com/?q=lord+of+the+rings+movie) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js))
-    ![DuckDuckGo search for "lord of the rings movie"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Flord_of_the_rings_movie.png&f=1)
+*None - yet!*
 
-- ["movies"](https://duckduckgo.com/?q=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/in_theaters/in_theaters.js))
-    ![DuckDuckGo search for "movies"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fmovies.png&f=1)
-
+<!--
 - ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
     ![DuckDuckGo search for "BBC schedule"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbbc_schedule.png&f=1)
-
+-->
 
 ------
 
@@ -510,19 +508,150 @@ templates: {
 }
 ```
 
-#### Default templates used in the `icon` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
-- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`basic_icon_detail`](https://duck.co/duckduckhack/templates_reference#codebasicicondetailcode-template)
 - [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `icon` template group
+### Example Uses
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
+- ["oil production in Saudi Arabia"](https://duckduckgo.com/?q=oil+production+in+saudi+arabia&ia=answer) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/zanran/zanran.js))
 
+------
+## Images Template Group
+
+A template group for displaying image results. This group is ideal when the Instant Answer result *is* an image, and the image's attributes are important (such as its dimensions, source, and original file).
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'images'
+}
+```
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'images'
+// does this for you!
+templates: {
+    item: 'images_item',
+    detail: 'images_detail'
+}
+```
+
+Using the Images template group also automatically makes the Image [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
+
+#### Default Templates Used
+
+- [`images_item`](https://duck.co/duckduckhack/templates_reference#codeimagesitemcode-template)
+- [`images_detail`](https://duck.co/duckduckhack/templates_reference#codeimagesdetailcode-template)
+
+### Example Uses
+
+- ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images search)
+
+------
+## Movies Template Group
+
+An ideal template group for displaying movie results, but also great for other types of media such as books.
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'movies'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'movies'
+// does this for you!
+templates: {
+    item: 'basic_image_item',
+    detail: 'products_detail',
+    item_detail: 'products_item_detail',
+    wrap_detail: 'base_detail',
+    options: {
+        price: false,
+        brand: false,
+        rating: false,
+        ratingText: true
+    },
+    variants: {
+        tile: 'poster'
+    },
+    elClass: {
+        tileBody: 'is-hidden'
+    }
+}
+```
+
+#### Default Templates Used
+
+- [`basic_image_item`](https://duck.co/duckduckhack/templates_reference#codebasicimageitemcode-template)
+- [`products_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsdetailcode-template)
+- [`products_item_detail`](https://duck.co/duckduckhack/templates_reference#codeproductsitemdetailcode-template)
+- [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
+
+### Example Uses
+
+- ["dogobooks harry potter"](https://duckduckgo.com/?q=dogobooks+harry+potter&ia=kidsbooks) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_books/dogo_books.js))
+- ["movies with keira knightley"](https://duckduckgo.com/?q=movies%20with%20Keira%20Knightley&ia=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/kwixer/kwixer.js))
+- ["jiro dreams of sushi rotten tomatoes"](https://duckduckgo.com/?q=jiro+dreams+of+sushi+rotten+tomatoes&ia=movies)([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/ea61d47ef8639cf4fb282b51e2185e3a807d1bd5/share/spice/movie/movie.js))
+
+------
+## Videos Template Group
+
+A template group for displaying online video results. This group is ideal when the Instant Answer result *is* a video, and [can be viewed](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) on the search results page.
+
+### Usage
+
+Using this template requires that that you set the `group` property of the `templates` block like so:
+
+```javascript
+templates: {
+    group: 'videos'
+}
+```
+
+<!-- /summary -->
+
+When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
+
+```javascript
+// setting the template group to: 'videos'
+// does this for you!
+templates: {
+    item: 'videos_item',
+    detail: 'videos_detail'
+}
+```
+
+Setting the Videos template group also automatically makes the Video [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
+
+#### Default Templates Used
+
+- [`videos_item`](https://duck.co/duckduckhack/templates_reference#codevideositemcode-template)
+- [`videos_detail`](https://duck.co/duckduckhack/templates_reference#codevideosdetailcode-template)
+
+### Example Uses
+
+- ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) (built-in videos search)
 
 ------
 ## Places Template Group
@@ -539,8 +668,6 @@ templates: {
 }
 ```
 
-<!-- /summary -->
-
 When you specify this template group, it is equivalent to setting the properties of the `templates` block as follows:
 
 ```javascript
@@ -549,17 +676,19 @@ When you specify this template group, it is equivalent to setting the properties
 templates: {
     item: 'places_item',
     detail: 'places_detail'
-}
+}	
 ```
 
-#### Default templates used in the `places` group:
+Using the Places template group also automatically makes the Place [model](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional) available.
+
+#### Default Templates Used
 
 - [`places_item`](https://duck.co/duckduckhack/templates_reference#codeplacesitemcode-template)
 - [`places_detail`](https://duck.co/duckduckhack/templates_reference#codeplacesdetailcode-template)
 
 #### Places Model and View
 
-The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make instant answers using Places valuable and delightful.
+The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make Instant Answers using Places valuable and delightful.
 
 The model and view are specified alongside the template group property in your Instant Answer [display options](https://duck.co/duckduckhack/display_reference#views).
 
@@ -596,7 +725,7 @@ The available attributes for the Places Model are:
 	Hash where three-char days are the keys and the values are a string of hours for that day, i.e.: `{ 'Mon': '8am - 5pm', 'Thu': '1pm - 5pm' }`
 - `phone` *string*
 
-Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-function-optional) function.
+Below are examples of the objects passed to the `data` property in your Instant Answer display options (in this case, `Spice.add()`). These might be directly found in your `api_result` or created by defining a [`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional) function.
 
 ```javascript
 Spice.add({
@@ -734,7 +863,7 @@ Spice.add({
 
 The List template group was designed for displaying in-depth attributes of one item. These attributes can be displayed as either a bulleted list of properties, *or* a table of key-value pairs. 
 
-Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for instant answers designed to **return a single item** with detailed properties.
+Multiple items are displayed using the same `text_item` template used by Text and Icon template groups. As a result, this template group is mainly useful for Instant Answers designed to **return a single item** with detailed properties.
 
 ### Usage
 
@@ -759,7 +888,7 @@ templates: {
 }
 ```
 
-#### Default templates used in the `list` group:
+#### Default Templates Used
 
 - [`text_item`](https://duck.co/duckduckhack/templates_reference#codetextitemcode-template)
 - [`list_detail`](https://duck.co/duckduckhack/templates_reference#codelistdetailcode-template)
@@ -813,14 +942,14 @@ templates: {
 }
 ```
 
-#### Default templates used in the `base` group:
+#### Default Templates Used
 
 - [`base_item`](https://duck.co/duckduckhack/templates_reference#codebaseitemcode-template)
 - [`base_detail`](https://duck.co/duckduckhack/templates_reference#codebasedetailcode-template)
 
 See the **[important notes](#important-notes)** for making this template display correctly.
 
-### Example uses of the `base` template group
+### Example Uses
 
 - ["gandhi quote"](https://duckduckgo.com/?q=gandhi+quote) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/brainy_quote/brainy_quote.js))
     ![DuckDuckGo search for "gandhi quote"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgandhi_quote.png&f=1)
