@@ -1078,8 +1078,8 @@ dateBadge
 
 
     [video content]             title
-                              	username
-                    			viewCount
+                                username
+                                viewCount
                                 published
 
 +------------------------------------------------------------------+
