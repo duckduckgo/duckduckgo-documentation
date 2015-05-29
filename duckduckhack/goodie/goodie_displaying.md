@@ -32,64 +32,64 @@ Here is a quick summary:
 <table>
     <thead>
         <tr>
-            <th>[Display Property](https://duck.co/duckduckhack/display_reference)</th>
-            <th>[Can Set in Perl](##setting-display-properties-in-a-goodies-perl)</th>
-            <th>[Can Set in JavaScript](#setting-goodie-display-properties-in-the-frontend)</th>
+            <th>Display Property</th>
+            <th>Can Set in Perl (Backend)</th>
+            <th>Can Set in JavaScript (Frontend)</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>[`id`](https://duck.co/duckduckhack/display_reference#codeidcode-emstringem-required)</td>
+            <td>id</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`name`](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required)</td>
+            <td>name</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`data`](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required)</td>
+            <td>data</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`meta`](https://duck.co/duckduckhack/display_reference#codemetacode-emobjectem-required)</td>
+            <td>meta</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`templates`](https://duck.co/duckduckhack/display_reference#codetemplatescode-emobjectem-required)</td>
+            <td>templates</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`view`](https://duck.co/duckduckhack/display_reference#codeviewcode-emstringem-optional)</td>
+            <td>view</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`model`](https://duck.co/duckduckhack/display_reference#codemodelcode-emstringem-optional)</td>
+            <td>model</td>
             <td>&#10003;</td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`normalize`](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional)</td>
+            <td>normalize</td>
             <td></td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`relevancy`](https://duck.co/duckduckhack/display_reference#coderelevancycode-emobjectem-optional)</td>
+            <td>relevancy</td>
             <td></td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[`sort_fields`](https://duck.co/duckduckhack/display_reference#codesortfieldscode-emobjectem-optional)</td>
+            <td>sort_fields</td>
             <td></td>
             <td>&#10003;</td>
         </tr>
         <tr>
-            <td>[Events](https://duck.co/duckduckhack/display_reference#events)</td>
+            <td>Events</td>
             <td></td>
             <td>&#10003;</td>
         </tr>      
