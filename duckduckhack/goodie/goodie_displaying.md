@@ -145,22 +145,22 @@ return $plaintext,
             # Note that while the following may reference JavaScript variables, 
             # they are still specified as strings in Perl
 
-            item: String,
-            item_custom: String,
-            item_mobile: String,
+            item => String,
+            item_custom => String,
+            item_mobile => String,
 
-            detail: String,
-            detail_custom: String,
-            detail_mobile: String,
-            item_detail: String,
+            detail => String,
+            detail_custom => String,
+            detail_mobile => String,
+            item_detail => String,
 
-            variants: Hash
+            variants => Hash,
 
-            elClass: Hash
+            elClass => Hash,
         }
 
-        view: String,
-        model: String,
+        view => String,
+        model => String,
     };
 
 ```
@@ -198,7 +198,7 @@ Your build function returns an object with any frontend display properties you w
 
 ```javascript
 return {
-    onShow: function() {
+    onShow => function() {
         console.log("onShow for bpmto_ms");
     },
 }
@@ -209,9 +209,9 @@ Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_r
 ```javascript
 return {
 	...
-    normalize: function(item){
+    normalize => function(item){
         return {
-            title: item.heading
+            title => item.heading
         };
     }
 }
@@ -224,13 +224,13 @@ For example:
 ```javascript
 return {
     ...
-    templates: {
-        group: 'base',
-        detail: false,
-        options: {
+    templates => {
+        group => 'base',
+        detail => false,
+        options => {
             // Note that because this is JavaScript, sub-templates are specified
             // as function references rather than strings. 
-            content: DDH.bpmto_ms.content
+            content => DDH.bpmto_ms.content
         }
     }
 }
@@ -252,7 +252,7 @@ DDH.bpmto_ms.build = function(ops) {
 
     return {
         // Specify any frontend display properties here
-		onShow: function(){
+		onShow => function(){
 			// Consider using an event, such as onShow, to run your code at the right time
 		}
     };
