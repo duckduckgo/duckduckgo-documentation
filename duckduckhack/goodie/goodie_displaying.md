@@ -95,6 +95,7 @@ Here is a quick summary:
         </tr>      
     </tbody>
 </table>
+
 <!-- Markdown version
 
 [Display Property](https://duck.co/duckduckhack/display_reference)|[Can Set in Perl (Backend)](#setting-display-properties-in-a-goodies-perl)|[Can Set in JavaScript (Frontend)](#setting-goodie-display-properties-in-the-frontend)
