@@ -46,7 +46,7 @@ The `id` should match the name of your callback function. For example, if your c
 
 The name that will be used for your Instant Answer's AnswerBar tab. The Instant Answer Framework will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Instant Answer provides. Here are some examples:
 
-<table>
+ <table class="table table-condensed"> 
     <thead>
         <tr>
             <th>Spice IA</th>
