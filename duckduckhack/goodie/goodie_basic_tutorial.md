@@ -1,6 +1,6 @@
 ## Basic Goodie Tutorial
 
-**If you've already completed the [Quick Start](https://duck.co/duckduckhack/goodie_quickstart)**, you are well prepared for this section. Here you will learn more about all the things you can do with Goodie. While much of the steps will be familiar, we recommend starting from step one and creating a new Goodie from scratch.
+**If you've already completed the [Quick Start](https://duck.co/duckduckhack/goodie_quickstart)**, you are well prepared for this section. Here you will learn more about all the things you can do with Goodie. While many of the steps will be familiar, we recommend starting from step one and creating a new Goodie from scratch.
 
 This tutorial will show you how to build a Goodie Instant Answer from scratch. If you've already completed the [Quick Start](https://duck.co/duckduckhack/goodie_quickstart), this tutorial is a great next step for getting more comfortable with creating Goodies.
 
