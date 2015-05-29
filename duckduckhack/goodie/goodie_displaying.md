@@ -198,7 +198,7 @@ Your build function returns an object with any frontend display properties you w
 
 ```javascript
 return {
-    onShow => function() {
+    onShow: function() {
         console.log("onShow for bpmto_ms");
     },
 }
@@ -209,9 +209,9 @@ Or you could set a [`normalize` function](https://duck.co/duckduckhack/display_r
 ```javascript
 return {
 	...
-    normalize => function(item){
+    normalize: function(item){
         return {
-            title => item.heading
+            title: item.heading
         };
     }
 }
@@ -224,13 +224,13 @@ For example:
 ```javascript
 return {
     ...
-    templates => {
-        group => 'base',
-        detail => false,
-        options => {
+    templates: {
+        group: 'base',
+        detail: false,
+        options: {
             // Note that because this is JavaScript, sub-templates are specified
             // as function references rather than strings. 
-            content => DDH.bpmto_ms.content
+            content: DDH.bpmto_ms.content
         }
     }
 }
@@ -252,7 +252,7 @@ DDH.bpmto_ms.build = function(ops) {
 
     return {
         // Specify any frontend display properties here
-		onShow => function(){
+		onShow: function(){
 			// Consider using an event, such as onShow, to run your code at the right time
 		}
     };
