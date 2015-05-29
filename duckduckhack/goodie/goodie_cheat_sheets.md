@@ -2,7 +2,7 @@
 
 A popular (and perfect) use of Goodies is to create instant cheat sheets, available right from the DuckDuckGo search bar. To make adding a cheat sheet as quick as possible, we've brought all cheat sheets together under one Instant Answer, called the [Cheat Sheets Goodie](https://duck.co/ia/view/cheat_sheets).
 
-![vim cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvim_cheat_sheet.png&f=1)
+![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
 ## How to Add Your Cheat Sheet
 
@@ -24,24 +24,29 @@ With this method, there is no need to create a new Instant Answer. There is also
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
+![vim cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvim_cheat_sheet.png&f=1)
+
 Fields are annotated in the sample. Syntax for the `key` property is explained below.
 
 ```javascript
 {
-	// Required
+    // Required; use underscore formatting
+    "id": "vim_cheat_sheet", 
+
+    // Required; displayed as title of AnswerBar
     "name": "Vim",
 
-	// Optional, but strongly encouraged
+    // Optional; displayed as subtitle of AnswerBar
     "description": "Text Editor", 
-	
-	// Required if cheat sheet has a source,
-	// also possible to point users to further useful information
+    
+    // Required if cheat sheet has a source; useful to link users to further information.
+    // Displayed at bottom of AnswerBar, favicon shown automatically
     "metadata": { 
         "sourceName": "VimCheatSheet",
-        "sourceUrl": "https://duckduckgo.com"
+        "sourceUrl": "https://..." // Should be SSL if possible
     },
 
-	// Required; controls which sections appear and in what order
+    // Required; controls which sections appear and in what order
     "section_order": [  
         "Cursor movement",
         "Insert mode - inserting/appending text",
@@ -49,14 +54,13 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
         "Tabs"
     ],
 
-	// Required; section names must match those in section_order
-	// in order to appear
-    "sections": {
+    // Required; section names must match those in section_order in order to appear
+    "sections": { // Syntax explained below
         "Tabs": [
             {
-                "key": "#gt", // Syntax explained below
+                "key": "#gt", 
                 "val": "move to tab number #"
-            }, 
+            },
             {
                 "key": "[Ctrl] + [wt]",
                 "val": "move the current split window into its own tab"
@@ -83,15 +87,13 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
 ### Syntax for `key` Property
 
 Cheat sheet actions often have several key combinations, which you can indicate in the syntax of each `key` property.
-Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. If you include no brackets or braces, the entire string will be shown in a code block.
+Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. For convenience, if you include no brackets or braces, the entire string will be shown in a code block.
 
 To express literal brackets, braces, and backslash, simply escape with a backslash: e.g. `[Ctrl + \\]`, or `{Ctrl + \[}`.
 
-For convenience, if your string contains no brackets or braces, the entire string will be shown as a code block.
-
 ### Formatting Key Presses
 
-Cheat sheet actions often have several key combinations, which you can express in any way you choose. The following are only suggestions; choose the most appropriate format for your cheat sheet.
+Cheat sheet actions often have several key combinations, which you can express in any way you choose. The following are only suggestions; choose the most appropriate format for your subject.
 
 #### Single Keys or Commands
 
