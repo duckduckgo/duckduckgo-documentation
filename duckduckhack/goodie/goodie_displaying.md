@@ -110,8 +110,6 @@ To specify any of these, simply create a javascript file in `share/goodie/INSTAN
 
 Create a file at `share/goodie/bpmto_ms/bpmto_ms.js`, which creates a namespace and a build function. 
 
-
-
 ```javascript
 DDH.bpmto_ms = DDH.bpmto_ms || {}; // create the namespace in case it doesn't exist
 
@@ -167,3 +165,36 @@ return {
     }
 }
 ```
+
+## Fun with Goodie JavaScript
+
+Goodie's frontend components allow you to do much more than set display properties and events. You may also execute any JavaScript you'd like to do interesting and delightful things.
+
+Continuing from the example above from the *BP to ms* Instant Answer, we created a JavaScript file at `share/goodie/bpmto_ms/bpmto_ms.js`. Inside this file, we declare a `build` function.
+
+Everything *returned* by your `build` function is used to extend your `structured_answer` Perl hash (from your Goodie's .pm file). However, you can use the function to **run other JavaScript**, making use of JQuery.
+
+```javascript
+DDH.bpmto_ms.build = function(ops) {
+    
+    // Execute delightful JavaScript here
+    // with access to JQuery 
+
+    return {
+        // Specify any frontend display properties here
+		onShow: function(){
+			// Consider using an event, such as onShow, to run your code at the right time
+		}
+    };
+
+};
+```
+
+Consider using [events](https://duck.co/duckduckhack/display_reference#events) as the starting points for your code. You can also create a css file to reference, for example `share/goodie/bpmto_ms/bpmto_ms.css`.
+
+You might use Goodie JavaScript to create an in-browser game related to certain search results. Or an easter egg, for fun. The community is excited to review pull requests for fun and delightful additions to DuckDuckGo's Instant Answers.
+
+Feel free to reach out and ask us any questions, over at [open@duckduckgo.com](mailto:open@duckduckgo.com)
+
+
+
