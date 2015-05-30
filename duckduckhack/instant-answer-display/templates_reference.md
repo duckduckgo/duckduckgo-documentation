@@ -57,6 +57,7 @@ title, altSubtitle
 subtitle
 description
 footer
+            dateBadge
 +------------------+
 ```
 
@@ -72,6 +73,11 @@ footer
 - `subtitle` [optional] *string* or *string array*
 - `description` [required] *string*
 - `footer` [optional] *sub-template*
+- `dateBadge` [optional] *object*
+
+	An object with either a `text` *string* property **or** a `month` and `day` *string* properties.
+	For an example of this property in action, search for ["concert in toronto"](https://duckduckgo.com/?q=concerts+in+toronto&ia=concerts) and see the [SeatGeek Events by City](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/seat_geek/events_by_city/seat_geek_events_by_city.js) Spice.
+
 
 ### Example Usage
 
@@ -881,6 +887,7 @@ dateBadge
 - `dateBadge` [optional] *object*
 
 	An object with either a `text` *string* property **or** a `month` *string* and `day` *string* properties. 
+	For an example of a `dateBadge` in action, search for ["concert in toronto"](https://duckduckgo.com/?q=concerts+in+toronto&ia=concerts) and see the [SeatGeek Events by City](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/seat_geek/events_by_city/seat_geek_events_by_city.js) Spice. (The example uses the `text_item` template, but the dateBadge is the same.)
 
 ### Example Usage
 
