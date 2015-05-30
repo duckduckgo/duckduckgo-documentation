@@ -267,4 +267,43 @@ You might use Goodie JavaScript to create an in-browser game related to certain 
 Feel free to reach out and ask us any questions, over at [open@duckduckgo.com](mailto:open@duckduckgo.com)
 
 
+## Easy Structured Responses
 
+Many Goodies are simple operations that return a string response. For example, the [Calculator Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm):
+
+![goodie calculator](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_calculator.png&f=1)
+
+Displaying such Goodies is easy. Instead of setting display properties, simply return three properties:
+
+- Input (what the user typed in, perhaps highlighting how it was parsed)
+- Operation (the term for what happened)
+- Result (the final answer)
+
+For example, for the Calculator Goodie:
+
+```perl
+return +{
+        text       => spacing($query) . ' = ' . $result, # For the API
+        structured => {
+            input     => [spacing($query)], # Can be a list of items, but auto-templating will only work if less than three.
+            operation => 'Calculate',
+            result => $result
+        },
+    };
+```
+
+This displays:
+
+![goodie calculator diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fgoodie_calculator_diagram.png&f=1)
+
+Other examples include:
+
+ - [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L49-L55)
+
+	![goodie urldecode](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_url_decode.png&f=1)
+
+ - [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L46-L52)
+
+	![goodie guid](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_guid.png&f=1)
+	
+	You will notice there is no input field. In this Goodie, the property was simply set to an empty array: ` input => []`.
