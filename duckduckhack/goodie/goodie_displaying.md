@@ -281,26 +281,42 @@ Displaying such Goodies is easy. Instead of setting display properties, simply r
 
 For example, for the Flip Text Goodie:
 
+![flip text goodie diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fflip_text_goodie_diagram.png&f=1)
+
+### Passing Structured Responses
+
+Here is the return statement of the [Flip Text Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/FlipText.pm):
+
 ```perl
 my $result = upside_down($input);
 
-return $result, # text-only result, for the API
+return $result, # text-only Goodie result, for the API
     structured_answer => {
-        input     => [html_enc($input)], # Can be a list of items, but auto-templating will only work if less than three
+        input     => [html_enc($input)],
         operation => 'Flip text',
         result    => html_enc($result),
     };
 ```
 
-This displays:
+The following properties are returned in the `structured_answer` hash:
 
-![flip text goodie diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fflip_text_goodie_diagram.png&f=1)
+#### `input` [required, but can be empty] *array*
+
+	- Make sure to `html_enc()` input to prevent XSS 
+	- To avoid displaying an input, pass an empty array: `[]` (see the [GUID Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L49))
+
+#### `operation` [required] *string*
+
+	- Stated as a command, e.g. "Calculate", "Flip text", "URL decode", etc.
+
+#### `result` [required] *string*
+
+	- Make sure to `html_enc()` input to display characters properly
+	- **Do not pass custom HTML in this string**; instead [specify](#setting-goodie-display-properties-in-the-frontend) a [template](https://duck.co/duckduckhack/templates_overview).
+
+### Further Examples
 
 Here are some more Goodies that make use of simple, structured responses:
-
-- [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm)
-
-	![goodie calculator](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_calculator.png&f=1)
 
  - [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L49-L55)
 
@@ -310,4 +326,7 @@ Here are some more Goodies that make use of simple, structured responses:
 
 	![goodie guid](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_guid.png&f=1)
 	
-	In the [GUID Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L49) You will notice there is no input field. In this Goodie, the property was simply set to an empty array: ` input => []`.
+- [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm)
+
+	![goodie calculator](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_calculator.png&f=1)
+	
