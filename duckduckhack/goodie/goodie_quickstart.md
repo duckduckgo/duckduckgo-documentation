@@ -6,7 +6,7 @@ If you're already familiar with how Instant Answers are built, feel free to move
 
 ## Set Up Your Development Environment
 
-By this point you should have already **set up your development environment** to be ready to code. If you need help with that (or anything else), please shoot us an email at: [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll jump on the chance to help!
+By this point you should have already **[set up your development environment](https://duck.co/duckduckhack/setup_dev_environment)** to be ready to code. If you need help with that (or anything else), please shoot us an email at: [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll jump on the chance to help!
 
 ## Creating Your First Goodie
 
