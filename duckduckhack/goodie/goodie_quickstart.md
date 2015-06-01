@@ -237,7 +237,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     "duckduckhack GitHubUsername is awesome" - "duckduckhack GitHubUsername" = `is awesome`
     ```
 
-6. Switch back to your text editor by clicking the "**Terminal**" tab.
+6. Switch back to your Terminal by clicking the "**Terminal**" tab.
 7. Type **`prove -Ilib t/IsAwesome/GitHubUsername.t`** and press "**Enter**". The prompt should print the results of the test again.
 
     ```
