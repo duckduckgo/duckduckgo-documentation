@@ -91,7 +91,11 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
 Cheat sheet actions often have several key combinations, which you can indicate in the syntax of each `key` property.
 Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. For convenience, if you include no brackets or braces, the entire string will be shown in a code block.
 
-To express literal brackets, braces, and backslash, escape with a double backslash: e.g. `[Ctrl + \\\]`, or `{Ctrl + \\[}`.
+To express literal brackets, braces, and backslash, escape with a double backslash: e.g. `{Ctrl + \\[}`.
+
+In the case of trying to express a literal backslash you need to have a double backslash and each of them need to be escaped: e.g. `[Ctrl + \\\\]`
+
+An uneven number of sequential backslashes will throw a JSON parsing error
 
 ### Formatting Key Presses
 
