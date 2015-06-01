@@ -32,7 +32,8 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
 
 ```javascript
 {
-    // Required; use underscore formatting
+    // Required; must match the id of the cheat sheet's IA page
+    // For example, https://duck.co/ia/view/vim_cheat_sheet
     "id": "vim_cheat_sheet", 
 
     // Required; displayed as title of AnswerBar
