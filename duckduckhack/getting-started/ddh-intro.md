@@ -1,6 +1,11 @@
-# Thanks for joining DuckDuckHack!
+# Welcome to DuckDuckHack!
 
-We are a community of developers and non-developers with a passion for search and privacy. We're helping to make DuckDuckGo and its community a better place by improving the coolest part of our search engine - the Instant Answers!
+We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers" If you have any questions during your involvement, feel free to ask on one of our community channels: 
+
+- [DuckDuckHack mailing list](https://www.listbox.com/subscribe/?list_id=197814)
+- [Gitter chat](https://gitter.im/duckduckgo/Ideas)
+
+or email us directly at [open@duckduckgo.com](mailto:open@duckduckgo.com)
 
 ## What are Instant Answers?
 
