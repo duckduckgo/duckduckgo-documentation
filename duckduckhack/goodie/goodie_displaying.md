@@ -302,7 +302,7 @@ The following properties are returned in the `structured_answer` hash:
 
 #### `input` [required, but can be empty] *array*
 
-- Make sure to `html_enc()` input to prevent XSS 
+- Make sure to `html_enc()` any user input to prevent [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting)
 - To avoid displaying an input, pass an empty array: `[]` (see the [GUID Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L49))
 
 #### `operation` [required] *string*
