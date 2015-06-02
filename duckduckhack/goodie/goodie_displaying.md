@@ -267,4 +267,66 @@ You might use Goodie JavaScript to create an in-browser game related to certain 
 Feel free to reach out and ask us any questions, over at [open@duckduckgo.com](mailto:open@duckduckgo.com)
 
 
+## Easy Structured Responses
 
+Many Goodies are simple operations that return a string response. For example, the [Flip Text Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/FlipText.pm):
+
+![flip text goodie](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fflip_text_goodie.png&f=1)
+
+Displaying such Goodies is easy. Instead of setting display properties, simply return three properties:
+
+- Input (what the user typed in, perhaps highlighting how it was parsed)
+- Operation (the term for what happened)
+- Result (the final answer)
+
+For example, for the Flip Text Goodie:
+
+![flip text goodie diagram](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fflip_text_goodie_diagram.png&f=1)
+
+### Passing Structured Responses
+
+Here is the return statement of the [Flip Text Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/FlipText.pm):
+
+```perl
+my $result = upside_down($input);
+
+return $result, # text-only Goodie result, for the API
+    structured_answer => {
+        input     => [html_enc($input)],
+        operation => 'Flip text',
+        result    => html_enc($result),
+    };
+```
+
+The following properties are returned in the `structured_answer` hash:
+
+#### `input` [required, but can be empty] *array*
+
+- Make sure to `html_enc()` any user input to prevent [XSS](https://en.wikipedia.org/wiki/Cross-site_scripting)
+- To avoid displaying an input, pass an empty array: `[]` (see the [GUID Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L49))
+
+#### `operation` [required] *string*
+
+- Stated as a command, e.g. "Calculate", "Flip text", "URL decode", etc.
+
+#### `result` [required] *string*
+
+- Make sure to `html_enc()` input to display characters properly
+- **Do not pass custom HTML in this string**; instead [specify](#setting-goodie-display-properties-in-the-frontend) a [template](https://duck.co/duckduckhack/templates_overview).
+
+### Further Examples
+
+Here are some more Goodies that make use of simple, structured responses:
+
+- [URLDecode](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/URLDecode.pm#L49-L55)
+
+	![goodie urldecode](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_url_decode.png&f=1)
+
+- [GUID](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/GUID.pm#L46-L52)
+
+	![goodie guid](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_guid.png&f=1)
+	
+- [Calculator](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Calculator.pm)
+
+	![goodie calculator](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgoodie_calculator.png&f=1)
+	
