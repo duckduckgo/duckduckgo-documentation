@@ -97,7 +97,9 @@ Your cheat sheet might include characters which are themselves part of JSON synt
 
 - To express a double quote, use a double backslash: `\\"`
 - To express literal brackets, braces, and backslash, escape with a double backslash: `{Ctrl + \\[}`.
-- In the case of trying to express a single literal backslash you need to have a double backslash and each of them need to be escaped: `[Ctrl + \\\\]`. (Note: an uneven number of sequential backslashes will throw an error)
+- To express a single literal backslash, use a double backslash - and escape both: `[Ctrl + \\\\]`. 
+
+Note that an uneven number of sequential backslashes will throw an error.
 
 ### Formatting Key Presses
 
