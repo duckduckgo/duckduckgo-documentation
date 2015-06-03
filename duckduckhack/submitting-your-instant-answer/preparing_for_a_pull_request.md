@@ -4,7 +4,7 @@ By now you should have:
 
 - Determined your Instant Answer type
 - Forked the correct repository
-- Written the code for your Instant Answer
+- Written and committed the code for your Instant Answer
 - Written a comprehensive test for your Instant Answer
 - Verified that everything works and nothing is broken
 - Confirmed the Instant Answer adheres to the [design guidelines](https://duck.co/duckduckhack/styleguide_overview)
