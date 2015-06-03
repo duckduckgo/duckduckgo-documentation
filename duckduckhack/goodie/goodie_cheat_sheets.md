@@ -18,7 +18,7 @@ To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodie
 
 Up in the **File menu**, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving to the `cheat_sheets` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
 
-Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax).
+Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax). Feel free to copy the code in the following section into your new file as a convenient template.
 
 With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, push the changes to your repository on GitHub, and [submit a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
@@ -28,7 +28,7 @@ Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickin
 
 ![vim cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvim_cheat_sheet.png&f=1)
 
-Fields are annotated in the sample. Syntax for the `key` property is explained below.
+The above Instant Answer was created by simply adding `vim.json`, summarized below. **We encourage you to copy the following working code into your new file, as a starting point for your cheat sheet.**
 
 ```javascript
 {
@@ -53,12 +53,12 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
     "section_order": [  
         "Cursor movement",
         "Insert mode - inserting/appending text",
-        ...
+        // ...additional sections
         "Tabs"
     ],
 
     // Required; section names must match those in section_order in order to appear
-    "sections": { // Syntax explained below
+    "sections": {
         "Tabs": [
             {
                 "key": "#gt", 
@@ -68,9 +68,8 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
                 "key": "[Ctrl] + [wt]",
                 "val": "move the current split window into its own tab"
             }
-            ...
+            // ...additional entries
         ],        
-        ... 
         "Insert mode - inserting/appending text": [
             {
                 "key": "i",
@@ -80,9 +79,9 @@ Fields are annotated in the sample. Syntax for the `key` property is explained b
                 "key": "I",
                 "val": "insert at the beginning of the line"
             }
-            ...
+            // ...additional entries
         ],  
-        ...                  
+        // ...additional sections
     }
 }
 ```
