@@ -4,10 +4,10 @@ Now that you have completed the [developer checklist](https://dukgo.com/duckduck
 
 The root of each repository contains a `pull_request_template.md` file which includes the most common questions the team will have about your contribution:
 
-- [Goodie Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md)
-- [Spice Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/pull_request_template_spice.md)
-- [Fathead Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-fathead/blob/master/pull_request_template_fathead.md)
-- [Longtail Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-longtail/blob/master/pull_request_template_longtail.md)
+- [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
+- [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
+- [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
+- [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md)
 
 The contents of this file should be copied and pasted directly into the [description area](https://github-images.s3.amazonaws.com/help/pull_requests/pullrequest-description.png) of the GitHub pull request form. The completed template will help the community better understand your pull request and expedite the review process.
 
@@ -75,10 +75,10 @@ The first step in submitting your changes is to commit your changes to your loca
 
 11. Copy the "Pull Request Template" for your type of Instant Answer here: paste it into the text box that says "**Leave a comment**".
 
-    - [Goodie Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/pull_request_template_goodie.md)
-	- [Spice Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/pull_request_template_spice.md)
-	- [Fathead Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-fathead/blob/master/pull_request_template_fathead.md)
-	- [Longtail Pull Request Template](https://github.com/duckduckgo/zeroclickinfo-longtail/blob/master/pull_request_template_longtail.md)
+    - [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
+    - [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
+    - [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
+    - [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md)
     
 12. Answer the questions in the Pull Request Template
 
