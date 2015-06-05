@@ -93,13 +93,19 @@ Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blo
 
 #### Escaping Special Characters
 
-Your cheat sheet might include characters which are themselves part of JSON syntax. To express these literally, you can *escape* them as follows:
+Your cheat sheet might include characters which are themselves part of JSON syntax. To express these literally, escape them using backslashes, like [standard JSON](http://json.org):
 
-- To express a double quote, use a double backslash: `\\"`
-- To express literal brackets, braces, and backslash, escape with a double backslash: `{Ctrl + \\[}`.
-- To express a single literal backslash, use a double backslash - and escape both: `[Ctrl + \\\\]`. 
+- To express a double quote, use a single backslash: `\"`
+- To express a forward slash, `"\/"`
+- A newline character is `"\n"`, a tab is `"\t"` [and so on](http://json.org).
 
-Note that an uneven number of sequential backslashes will throw an error.
+Because cheat sheets display brackets `[ ]` and braces `{ }` as code blocks, expressing those literally using a **double backslash**:
+
+- If you want to express a literal bracket, use a double backslash `{Ctrl + \\[}`.
+- If you want to express a literal brace, use a double backslash `[Ctrl + \\{]`.
+- To express a **single literal backslash**, type four backslashes in a row: `[Ctrl + \\\\]`.
+
+*Note that an uneven number of sequential backslashes will throw an error.*
 
 ### Formatting Key Presses
 
