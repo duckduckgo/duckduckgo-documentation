@@ -640,6 +640,16 @@ When creating a Goodie, you must declare event handlers in the frontend part of 
 - ### `onShow` *function*
 
 	This event occurs each time an Instant Answer tab is displayed. This event fires when the Instant Answer is initially shown. It also fires when a user clicks another AnswerBar tab, then clicks to show it again.
+	
+- ### `onItemShown` *function*
+
+	Same behavior as `onShow`, but fired on a per-item basis. This is useful for separately requesting and updating information relevant to each tile - e.g. secondary API calls. For example, the [Amazon Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js) uses this event to render product ratings, and the [Movie Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js) sets each tile's image element using this event.
+	
+	```javascript
+	onItemShown: function(item) {
+		// Do something to the item, such as update latest info
+	}
+	```
 
 - ### `onHide` *function*
 
