@@ -115,7 +115,6 @@ In addition to the main [open@duckduckgo.com](mailto:open@duckduckgo.com) way to
 <!-- /summary -->
 
 - [@bradcater](https://github.com/bradcater)
-- [@kablamo](https://github.com/kablamo)
 - [@loganom](https://github.com/loganom)
 - [@mattr555](https://github.com/mattr555)
 - [@mintsoft](https://github.com/mintsoft)
