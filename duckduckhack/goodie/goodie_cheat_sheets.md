@@ -91,11 +91,21 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
 Cheat sheet actions often have several key combinations, which you can indicate in the syntax of each `key` property.
 Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. For convenience, if you include no brackets or braces, the entire string will be shown in a code block.
 
-To express literal brackets, braces, and backslash, escape with a double backslash: e.g. `{Ctrl + \\[}`.
+#### Escaping Special Characters
 
-In the case of trying to express a literal backslash you need to have a double backslash and each of them need to be escaped: e.g. `[Ctrl + \\\\]`
+Your cheat sheet might include characters which are themselves part of JSON syntax. To express these literally, escape them using backslashes, like [standard JSON](http://json.org):
 
-An uneven number of sequential backslashes will throw a JSON parsing error
+- To express a double quote, use a single backslash: `\"`
+- To express a forward slash, use a single backslash: `\/`
+- For full list of characters, see the diagram on the right on [the official JSON documentation](http://json.org).
+
+Because cheat sheets display brackets `[ ]` and braces `{ }` as code blocks, express those literally using a **double backslash**:
+
+- If you want to express a literal bracket, use a double backslash `{Ctrl + \\[}`.
+- If you want to express a literal brace, use a double backslash `[Ctrl + \\{]`.
+- To express a **single literal backslash**, type four backslashes in a row: `[Ctrl + \\\\]`.
+
+*Note that an uneven number of sequential backslashes will throw an error.*
 
 ### Formatting Key Presses
 
