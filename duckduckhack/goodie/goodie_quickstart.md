@@ -1,6 +1,10 @@
 # My First Goodie Instant Answer!
 
-**If you are new to DuckDuckHack, you're in the right place.** This Goodie Quick Start is meant to show you the basics of DuckDuckHack by building a simple Instant Answer that will look like [this](https://duckduckgo.com/?q=zekiel+duckduckhack&ia=answer). 
+**If you are new to DuckDuckHack, you're in the right place.** This Goodie Quick Start is meant to show you the basics of DuckDuckHack by building a simple Instant Answer that will look like [this](https://duckduckgo.com/?q=zekiel+duckduckhack&ia=answer):
+
+![IsAwesome Goodie](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fzekiel_isawesome.png&f=1)
+
+(Another easy way to contribute is by adding a [Cheat Sheet](https://duck.co/duckduckhack/goodie_cheat_sheets) to DuckDuckGo search results. This is a quick, direct way to contribute a live Instant Answer.)
 
 If you're already familiar with how Instant Answers are built, feel free to move along to the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial).
 
