@@ -654,3 +654,9 @@ When creating a Goodie, you must declare event handlers in the frontend part of 
 - ### `onHide` *function*
 
 	This event occurs when a Instant Answer tab is closed i.e. when another tab is selected.
+	
+### The `item` Argument
+
+Events relevant to specific items pass an `item` to their handler functions. This is a reference to the item's data object, rendered in the template.
+
+An added `item.$html` property references the respective item DOM element as a jQuery object.
