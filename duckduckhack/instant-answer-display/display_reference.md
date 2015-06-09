@@ -122,17 +122,18 @@ The following are all properties of the `meta: {}` object.
 	Note that `moreText` must be nested under an `options` property.
 	
 	For text alone:
-	
+    
     ```javascript
     meta: {
         ...
         options: {
             moreText: "Movie showtimes are shown in PST time zone"
         }
+    }
     ```
 
 	To display a link:
-	
+
     ```javascript
     meta: {
         ...
@@ -142,6 +143,7 @@ The following are all properties of the `meta: {}` object.
                 href: "https://..." // Use SSL when possible
             }
         }
+    }
     ```
 
 
