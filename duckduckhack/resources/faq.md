@@ -57,6 +57,10 @@ If you think you have a source that is better, let's talk about it on the [DuckD
 
 If your Instant Answer is spice or longtail, sometimes we can't expose it through the API for licensing reasons, but our over-arching goal is to make all of our Instant Answers available on their own.
 
+### Can I add triggers for my language?
+
+We have plans to make it possible to trigger Instant Answers in many different languages. Until an internationalization mechanism is place, to uphold maintainability and consistency, **we cannot accept pull requests that add languages directly in the code.**
+
 ### Can I do something more complicated?
 
 Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we'd love to hear your ideas to influence that roadmap.
@@ -86,9 +90,9 @@ Yes! Check out the other repositories in [our GitHub account](https://github.com
 Yes! Check out the [DuckDuckGo API](https://api.duckduckgo.com). Our goal is to make as many Instant Answers as possible
 available through this interface. Fathead and goodie Instant Answers are automatically syndicated through the API, and Spice and Longtail are selectively (due to licensing complications) mixed in.
 
-### Can I talk to you about a partnership idea?###
+### Can I talk to you about a partnership idea?
 
-Sure -- check out [our partnerships page](http://help.duckduckgo.com/customer/portal/articles/775109-partnerships).
+Sure - check out [our partnerships page](http://help.duckduckgo.com/customer/portal/articles/775109-partnerships).
 
 ## Goodie FAQ
 

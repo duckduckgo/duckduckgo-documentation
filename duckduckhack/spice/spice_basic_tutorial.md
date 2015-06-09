@@ -70,6 +70,10 @@ Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, s
 
 There are several other keywords like **startend** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
 
+### Triggers in Multiple Languages 
+
+We have plans to make it possible to trigger Instant Answers in many different languages. Until an internationalization mechanism is place, to uphold maintainability and consistency, **we cannot accept pull requests that add languages directly in the code.** 
+
 ## Define the API Call
 
 On the next line enter:
