@@ -1,6 +1,6 @@
 # Welcome to DuckDuckHack!
 
-We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers" To get started, join our developer email list and read the guide below: 
+We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers". To get started, join our developer email list and read the guide below: 
 
 - [DuckDuckHack developer mailing list](https://www.listbox.com/subscribe/?list_id=197814)
 
