@@ -16,10 +16,12 @@ First, the technical constraints:
 Next, API reliability:
 
 - APIs used should be **reliable**. Pick sources that will be most likely be around and accurate for the foreseeable future.
+- APIs created by contributors solely for the purpose of an Instant Answer cannot be accepted.
 
 Finally, credibility:
 
 - APIs used should represent the **most credible source** for the information. This means it should draw upon the preferred data source of the relevant community. Look for posts and sources like [these](https://duck.co/forum/thread/37/great-resources-for-instant-answer-ideas) which have been suggested by others. 
+- APIs must have the appropriate permissions or rights to serve their information.
 
 If you're not sure about whether the API you'd like to use fits these criteria, we're happy to help figure it out. Email us over at [open@duckduckgo.com](mailto:open@duckduckgo.com).
 
