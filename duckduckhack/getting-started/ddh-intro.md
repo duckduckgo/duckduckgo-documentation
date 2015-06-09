@@ -1,11 +1,13 @@
 # Welcome to DuckDuckHack!
 
-We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers" If you have any questions during your involvement, feel free to ask on one of our community channels: 
+We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers" To get started, join our developer email list and read the guide below: 
 
-- [DuckDuckHack mailing list](https://www.listbox.com/subscribe/?list_id=197814)
+- [DuckDuckHack developer mailing list](https://www.listbox.com/subscribe/?list_id=197814)
+
+If you have any questions while making your Instant Answer, feel free to email the list above or reach us at: 
+
 - [Gitter chat](https://gitter.im/duckduckgo/Ideas)
 
-or email us directly at [open@duckduckgo.com](mailto:open@duckduckgo.com)
 
 ## What are Instant Answers?
 
