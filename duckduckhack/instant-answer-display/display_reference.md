@@ -613,27 +613,33 @@ More about using models and their properties can be found in their respective [t
 
 If you need to fire off an event handler when a tile is clicked or when your Instant Answer's tab initially opens, you can handle these events with a callback function.
 
-#### Notes for Goodie Instant Answers
-
-When creating a Goodie, you must declare event handlers in the frontend part of the code, as JavaScript. For more information about Goodie JavaScript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
-
 - ### `onItemSelect` *function*
 
-	This event occurs each time a tile is selected.
+	This event occurs each time a tile is selected with a click.
 
 	Example:
 
 	```javascript
-	onItemSelected: function(item) {
+	onItemSelect: function(item) {
 	   player.play(item);
 	}
 	```
+
+	Learn more about the [`item` argument](#the-codeitemcode-argument) below.
 
 	**Note:** If a tile-view result returns a single result, this event will also fire when the tab is opened/clicked, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
 - ### `onItemUnselect` *function*
 
-	This event occurs each time a tile is unselected.
+	This event occurs each time a tile is unselected - i.e., the user clicks somewhere else on the page.
+	
+	```javascript
+	onItemUnselect: function(item) {
+		// Pause playing media, change appearance, etc.
+	}
+	```
+	
+	Learn more about the [`item` argument](#the-codeitemcode-argument) below.
 
 	**Note:** If a tile-view result returns a single result, this event will also fire when the tab is closed, so you don't need to use both `onItemSelected` and `onShow` to handle the case of a single-result tile view
 
@@ -650,6 +656,8 @@ When creating a Goodie, you must declare event handlers in the frontend part of 
 		// Do something to the item, such as update latest info
 	}
 	```
+	
+	Learn more about the [`item` argument](#the-codeitemcode-argument) below.
 
 - ### `onHide` *function*
 
@@ -660,3 +668,11 @@ When creating a Goodie, you must declare event handlers in the frontend part of 
 Events relevant to specific items pass an `item` to their handler functions. This is a reference to the item's data object, rendered in the template.
 
 An added `item.$html` property references the respective item DOM element as a jQuery object.
+
+### Notes for Goodie Instant Answers
+
+When creating a Goodie, you must declare event handlers in the frontend part of the code, as JavaScript. For more information about Goodie JavaScript visit the [Goodie Display](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend) section.
+
+
+
+
