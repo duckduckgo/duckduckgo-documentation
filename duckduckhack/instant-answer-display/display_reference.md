@@ -665,7 +665,7 @@ If you need to fire off an event handler when a tile is clicked or when your Ins
 	
 ### The `item` Argument
 
-Events relevant to specific items pass an `item` to their handler functions. This is a reference to the item's data object, rendered in the template.
+Events relevant to specific items pass an `item` to their handler functions. This is a reference to the item's data object, rendered to the template. Modifying the properties will not update the DOM.
 
 An added `item.$html` property references the respective item DOM element as a jQuery object.
 
