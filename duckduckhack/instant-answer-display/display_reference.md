@@ -116,6 +116,35 @@ The following are all properties of the `meta: {}` object.
 	- In [rand_word.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rand_word/rand_word.js#L14), the `sourceUrl` is a hardcoded address.
 	- In [is_it_up.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/is_it_up/is_it_up.js#L15), the `sourceUrl` is dynamically generated to direct to a specific page relating to the search query.
 
+- ### `moreText` *string* or *object* [optional]
+
+	Display additional text or link content next to the 'More at' link. 
+	Note that `moreText` must be nested under an `options` property.
+	
+	For text alone:
+	
+    ```javascript
+    meta: {
+        ...
+        options: {
+            moreText: "Movie showtimes are shown in PST time zone"
+        }
+    ```
+
+	To display a link:
+	
+    ```javascript
+    meta: {
+        ...
+        options: {
+            moreText: {
+                text: "See a 10-day surf forecast"
+                href: "https://..." // Use SSL when possible
+            }
+        }
+    ```
+
+
 - ### `searchTerm` *string* [optional]
 
 	Determines the **modifier** in the MetaBar's description: "Showing 15 `itemType` for `searchTerm`".
