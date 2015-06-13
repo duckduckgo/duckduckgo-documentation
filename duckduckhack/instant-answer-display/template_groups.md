@@ -1,140 +1,22 @@
-# Templates Overview
-
-When your Instant Answer returns its awesome and delightful result(s), the information is rendered at the top of the DuckDuckGo search results page. The way your results appear and behave is decided by the templates you choose.
-
-![DuckDuckGo search for "garlic steak recipes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fgarlic_steak_recipes.png&f=1)
-
-## Why Templates Are Great
-
-Templates save a lot of work: they allow contributors to focus on great results. Many Instant Answer frontends can be created entirely by setting various display options and item data, with little or no HTML/CSS coding.
-
-Additionally, Instant Answers that use templates are automatically compatible with future design improvements, with zero extra work.
-
-## How Templates Work
-
-Templates are handlebars files which render in the context of **one item** returned by the Instant Answer.
-
-The Instant Answer framework provides you with a wide choice of templates to use, as you will see below as well in the [reference](https://duck.co/duckduckhack/templates_reference).
-
-The built-in templates' options, variables, and [variants](https://duck.co/duckduckhack/templates_reference#variants) are documented in the [Templates Reference](https://duck.co/duckduckhack/templates_reference) section.
-
-### Specifying `item` and `detail` Templates
-
-Instant Answers can return either a **single result** or **multiple results**. To provide the best experience, these two cases can be displayed with different templates.
-
-In your Instant Answer display options (for example, [Spice Display](https://duck.co/duckduckhack/spice_displaying) or [Goodie Display](https://duck.co/duckduckhack/goodie_displaying)), you can specify two separate templates:
-
-- `item` template (multiple results)
-- `detail` template (single results)
-
-Below is an example of multiple results being returned. Each result is displayed using the template specified for `item`: 
-
-![DuckDuckGo search for "seafood maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fseafood_maui.png&f=1)
-
-Below is an example of the same Instant Answer returning a single result. This uses the template specified for `detail`:
-
-![DuckDuckGo search for "longhi's maui"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Flonghis_maui.png&f=1)
-
-### Clicking on an Item
-
-In the case of multiple items, clicking on a single item will show the `detail` template below the items. This is the default behavior. To display a template other than the one used for `detail`, specify an `item_detail` template.
-
-This diagram shows what is displayed when an Instant Answer returns multiple items:
-
-```
-                                    INSTANT ANSWER RETURNS MULTIPLE ITEMS
-
-+--------------+--------------+--------------+--------------+--------------+--------------+---------------+
-|              |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-|   `item`     |              |              |              |              |              |               |
-|   template   |              |              |              |              |              |               |
-|   clicked    |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-|              |              |              |              |              |              |               |
-+--------------+--------------+--------------+--------------+--------------+--------------+---------------+
-|                                                                                                         |
-|                                                                                                         |
-|                                                                                                         |
-|                                                                                                         |
-|                                              `detail` Template                                          |
-|                                                                                                         |
-|                                              OR                                                         |
-|                                                                                                         |
-|                                              `item_detail` (when specified)                             |
-|                                                                                                         |                                                                                                                       
-+---------------------------------------------------------------------------------------------------------+
-```
-
-For example, the Amazon products search Instant Answer uses one template for single results (`detail`):
-
-![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_detail.png&f=1)
-
-However, the Amazon Instant Answer displays a different template when multiple items are returned, and one is clicked (`item_detail`):
-
-![DuckDuckGo search for "amazon pogs"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Famazon_pogs_item_detail.png&f=1)
-
-#### Disabling Detail Display on Click
-
-To disable the display of a detail template when an item is clicked, set `detail: false`. A side effect of this is that single results will be displayed as tiles.
-
-### When Each Template Is Shown
-
-The Instant Answer framework automatically chooses which template to display based on how many results there are to show and user behavior. Here is the default logic for showing templates:
-
-```
-          Instant Answer result      
-                   +                     
-                   |  
- multiple results  |  single result      
-                   |  
-         +---------+----------+          
-         |                    |          
-         |                    |   
-         |                    |          
-+--------v--------+  +--------v---------+
-|                 |  |                  |
-|      `item`     |  |      `detail`    |
-|                 |  |                  |
-+-------+---------+  +------------------+                              
-        |                                
-        | click an item                   
-        |                                
-+-------v---------+                      
-|                 |                      
-|   `detail`      |                      
-|       or        |                      
-|   `item_detail` |                      
-|  (if specified) |
-|                 |                     
-+-----------------+                      
-
-```
-
-Of course, you can specify template options to modify this; for example, you may want to prevent a particular template from appearing. For example, you might set `detail: false` to make sure your Instant Answer always displays results with the `item` template.
-
-## Template Groups (required)
+# Template Groups
 
 Template groups are preset properties for `template` and its `options` that work well together. In most cases at least one group will be a good fit for your Instant Answer.
 
 **We strongly recommend using a template group in your Instant Answer.** Of course, if you cannot use an available template for your Instant Answer, definitely let us know. E-mail us at open@duckduckgo.com and we'll help you. We may find that a custom template is necessary, and we'll work with you to create an awesome one. (Who knows, your idea may inspire the next official template group!)
 
-### How Template Groups Work
+## How Template Groups Work
 
 Setting a template group automatically sets the `item` and `detail` templates for you. Some template groups also set an `item_detail` template and a few default `options`. 
 
 You can easily customize the appearance of the template group by overriding the default `options` in your Instant Answer frontend code. The appearance will also be affected by which data is returned with each item.
 
-### Picking a Template Group
+## Picking a Template Group
 
 The best template group for your Instant Answer depends on what your Instant Answer is returning. Below are a few suggestions to help you narrow down your options.
 
 A quick way to get a feel for the different template groups is to [browse the Instant Answer directory](https://duck.co/ia). You can filter by the template group used on the right of the page.
 
-#### My Instant Answer returns "things" where visuals are important 
+### My Instant Answer returns "things" where visuals are important 
 
 The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Also consider the [Movies](#movies-template-group) template group.
 
@@ -146,7 +28,7 @@ Examples that make a great fit for the Media or Movies template groups include:
 
 If your Instant Answer results *are* themselves images or videos, consider the [Images](#images-template-group) or [Videos](#videos-template-group) template groups.
 
-#### My Instant Answer returns detailed "lookup" information
+### My Instant Answer returns detailed "lookup" information
 
 The [Info](#info-template-group) template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format. 
 
@@ -163,7 +45,7 @@ The [List](#list-template-group) template group works well for lookups that don'
 
 - [WhoIs](https://duckduckgo.com/?q=whois+google.com)
 
-#### My results are mainly text, with a possible icon or logo
+### My results are mainly text, with a possible icon or logo
 
 The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
 
@@ -176,7 +58,7 @@ These results fit this format well:
 - [Simple answers](https://duckduckgo.com/?q=namecheap+http%3A%2F%2Finstantanswerparty.com&ia=domain)
 - [Long blocks of text](https://duckduckgo.com/?q=baconipsum+4&ia=baconipsum)
 
-#### My Instant Answer returns products with prices, ratings, and brands/authors/artists
+### My Instant Answer returns products with prices, ratings, and brands/authors/artists
 
 The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
 
@@ -189,7 +71,7 @@ Examples of results that work well with the Products template group include:
 - [Books](https://duckduckgo.com/?q=amazon+ray+bradbury&ia=products)
 - [Physical products](https://duckduckgo.com/?q=amazon+ninja+costume&ia=products)
 
-#### My Instant Answer returns location-based results
+### My Instant Answer returns location-based results
 
 The [Places](#places-template-group) template group is perfect for results where location is an important aspect. This template group displays single and multiple items on a map.
 
@@ -202,7 +84,7 @@ Results that would make a good fit for the Places template group include:
 - Surf spots
 - Shark GPS locations
 
-#### My Instant Answer is amazingly unique and existing template groups won't meet my needs
+### My Instant Answer is amazingly unique and existing template groups won't meet my needs
 
 We encourage you to think hard about using an existing template group. For example, many `detail` templates accept custom handlebars sub-templates. Additionally, many template features can be toggled. 
 
@@ -224,7 +106,7 @@ Examples of Instant Answers that do not fit into any template groups:
 
 ------
 
-## Template Groups Reference
+# Template Groups Reference
 
 This reference explains what each template group looks like, how it works, and what content works fits it best. Each template group is accompanied by live examples, layout diagrams, code links, and available features.
 
@@ -242,7 +124,7 @@ These are the currently available template groups:
 
 <!-- /summary -->
 
-### A Note on Default Template Options
+## A Note on Default Template Options
 
 When no `options` are specified and no template `group` has been selected, the `options` are implicitly set as follows:
 
