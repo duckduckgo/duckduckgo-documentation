@@ -124,7 +124,7 @@ Of course, you can specify template options to modify this; for example, you may
 
 ### Template Groups
 
-In practice, you will handle all this by specifying a template group. These are presets for `template` and its `options`; they abstract away all the settings described above. 
+In practice, you will specify a template group. Template groups are presets which abstract the settings described above.
 
-Template groups are the best - and strongly recommended - option for working with templates. Read more about [template groups](https://duck.co/duckduckhack/template_groups) and get help [choosing the best one](https://duck.co/duckduckhack/template_groups#picking-a-template-group) for your Instant Answer.
+**Template groups are the best - and strongly recommended - option for working with templates.** Read more about [template groups](https://duck.co/duckduckhack/template_groups) and get help [choosing the best one](https://duck.co/duckduckhack/template_groups#picking-a-template-group) for your Instant Answer.
 
