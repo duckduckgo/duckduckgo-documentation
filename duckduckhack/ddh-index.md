@@ -43,7 +43,6 @@
 - **Instant Answer Display**
   - [Display Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/display_reference.md)
   - [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_overview.md)
-  - [Template Groups](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/template_groups.md)
   - [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_reference.md)
 
 - **Testing**

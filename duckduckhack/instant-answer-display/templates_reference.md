@@ -13,7 +13,7 @@ The reference is divided into two parts:
 
 Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying) or [Goodie](https://duck.co/duckduckhack/goodie_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
-You will be specifying these templates indirectly - as part of a Template Group. the [Templates Groups Overview](https://duck.co/duckduckhack/template_groups) will help you think about the big picture of which template groups best fit your Instant Answer.
+You will be specifying these templates indirectly - as part of a Template Group. The [Templates Groups Overview](https://duck.co/duckduckhack/template_groups) will help you think about the big picture of which template groups best fit your Instant Answer.
 
 ## Templates
 
@@ -88,7 +88,7 @@ footer
 
 ### Template Groups
 
-- [Text](https://duck.co/duckduckhack/template_groups#text-template-group)
+- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
 ------
 
@@ -131,7 +131,7 @@ content
 
 ### Template Groups
 
-- [Text](https://duck.co/duckduckhack/template_groups#text-template-group)
+- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
 
 ------
 
@@ -178,8 +178,8 @@ ratingText
 
 ### Template Groups
 
-- [Info](https://duck.co/duckduckhack/template_groups#info-template-group)
-- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
+- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 
 ------
 
@@ -228,7 +228,7 @@ rating
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
 
 ------
 
@@ -286,9 +286,9 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
-- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
-- [Icon](https://duck.co/duckduckhack/template_groups#icon-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
 
 ------
 
@@ -347,9 +347,9 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
-- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
-- [Icon](https://duck.co/duckduckhack/template_groups#icon-template-group)
+- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
 
 ------
 
@@ -444,7 +444,7 @@ The same template, with the `aux` feature:
 
 ### Template Groups
 
-- [Info](https://duck.co/duckduckhack/template_groups#info-template-group)
+- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
 
 ### The Infobox
 
@@ -648,7 +648,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Template Groups
 
-- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
+- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
 ------
 
@@ -723,7 +723,7 @@ A detail template for displaying information about a single location on a map ba
 
 ### Template Groups
 
-- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
+- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
 
 ------
 
@@ -782,7 +782,7 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ### Template Groups
 
-- [List](https://duck.co/duckduckhack/template_groups#list-template-group)
+- [List](https://duck.co/duckduckhack/templates_overview#list-template-group)
 
 ------
 
@@ -853,7 +853,7 @@ templates: {
 
 ### Template Groups
 
-- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/template_groups#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
 
 ------
 
@@ -895,7 +895,7 @@ dateBadge
 
 ### Template Groups
 
-- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 
 ------
 
@@ -928,7 +928,7 @@ dateBadge
 
 ### Template Groups
 
-- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
+- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
 
 ------
 
@@ -982,7 +982,7 @@ dateBadge
 
 ### Template Groups
 
-- [Images](https://duck.co/duckduckhack/template_groups#images-template-group)
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
 
 ------
 
@@ -1029,7 +1029,7 @@ dateBadge
 
 ### Template Groups
 
-- [Images](https://duck.co/duckduckhack/template_groups#images-template-group)
+- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
 
 ------
 
@@ -1072,7 +1072,7 @@ dateBadge
 
 ### Template Groups
 
-- [Videos](https://duck.co/duckduckhack/template_groups#videos-template-group)
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
 
 ------
 
@@ -1108,7 +1108,7 @@ dateBadge
 
 ### Template Groups
 
-- [Videos](https://duck.co/duckduckhack/template_groups#videos-template-group)
+- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
 
 ------
 
@@ -1150,7 +1150,7 @@ Here is an example of a more complex `content` sub-template passed to the `base_
 
 ### Template Groups
 
-- [Base](https://duck.co/duckduckhack/template_groups#base-template-group)
+- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
 ------
 
@@ -1190,7 +1190,7 @@ A detail template for containing fully customized markup.
 
 ### Template Groups
 
-- [Base](https://duck.co/duckduckhack/template_groups#base-template-group)
+- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
 
 ------
 
