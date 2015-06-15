@@ -71,7 +71,7 @@ This diagram shows what is displayed when an Instant Answer returns multiple ite
 |                                              OR                                                         |
 |                                                                                                         |
 |                                              `item_detail` (when specified)                             |
-|                                                                                                         |                                                                                                                       
+|                                                                                                         |
 +---------------------------------------------------------------------------------------------------------+
 ```
 
