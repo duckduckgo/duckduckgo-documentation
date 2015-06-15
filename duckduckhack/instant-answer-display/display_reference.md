@@ -203,7 +203,7 @@ The following are all properties of the `meta: {}` object.
 
 ## `templates` *object* [required]
 
-A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/template_groups#template-groups-reference), and/or other templates that are being used. 
+A `templates: {}` property should be used to specify the [template group](https://duck.co/duckduckhack/templates_overview#template-groups-reference), and/or other templates that are being used. 
 
 Template `options` can also be provided to enable or disable features depending on the chosen template group. 
 
@@ -217,7 +217,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 - ### `group` *string* [required, unless `item` and `detail` are specified]
 
-    Setting the `group` property specifies a preset group of default templates and options (for example, `item`, `detail`, `options` etc.). These presets can be customized and manually overridden. The template groups available are described in the [Template Groups Overview](https://duck.co/duckduckhack/template_groups).
+    Setting the `group` property specifies a preset group of default templates and options (for example, `item`, `detail`, `options` etc.). These presets can be customized and manually overridden. The template groups available are described in the [Template Overview](https://duck.co/duckduckhack/templates_overview).
 
     For example, `group: 'info'` will implicitly set:
 
@@ -237,7 +237,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
     - Generally, a string is provided to indicate the name of the built-in template to be used, e.g., "products_item"
 
-    - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/template_groups#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
+    - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/templates_overview#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
 
 - ### `item_mobile` *string or function* [optional]
 
@@ -358,7 +358,7 @@ Now, your object has all the required properties for the **basic_image_item** te
 
 #### Important Note on Enabling Features
 
-If you intend to use a [template feature](https://duck.co/duckduckhack/templates_reference) that is [disabled by default](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options) or [disabled by a template group defaults](https://duck.co/duckduckhack/template_groups#template-groups-reference), that feature must be **enabled in the `options`** to display.
+If you intend to use a [template feature](https://duck.co/duckduckhack/templates_reference) that is [disabled by default](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options) or [disabled by a template group defaults](https://duck.co/duckduckhack/templates_overview#template-groups-reference), that feature must be **enabled in the `options`** to display.
 
 Even if the property exists in the `data` object, the template system will ignore it if the feature is disabled. 
 
@@ -605,7 +605,7 @@ Available models:
 - Product
 - Video
 
-More about using models and their properties can be found in their respective [template groups](https://duck.co/duckduckhack/template_groups#template-groups-reference).
+More about using models and their properties can be found in their respective [template groups](https://duck.co/duckduckhack/templates_overview#template-groups-reference).
 
 ------
 
