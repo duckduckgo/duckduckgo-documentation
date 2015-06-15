@@ -6,14 +6,14 @@ To understand the context of templates and how they fit into your Instant Answer
 
 The reference is divided into two parts:
 
-- [Templates](#templates) - the built-in handlebars templates
+- [Templates](#templates) - the built-in handlebars html templates
 - [Variants](#variants) - preset styles available to modify their appearance
 
 ## Important Note
 
 Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying) or [Goodie](https://duck.co/duckduckhack/goodie_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
-Additionally, the [Templates Overview](https://duck.co/duckduckhack/templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
+You will be specifying these templates indirectly - as part of a Template Group. The [Templates Groups Overview](https://duck.co/duckduckhack/template_groups) will help you think about the big picture of which template groups best fit your Instant Answer.
 
 ## Templates
 
