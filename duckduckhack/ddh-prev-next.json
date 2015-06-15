@@ -136,6 +136,11 @@
 	
 	"templates_overview.md": {
 		"prev": ["display_reference.md"],
+		"next": ["template_groups.md"]
+	},
+	
+	"template_groups.md": {
+		"prev": ["templates_overview.md"],
 		"next": ["templates_reference.md"]
 	},
 
