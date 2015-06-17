@@ -259,7 +259,7 @@ Several properties below allow you to specify a *function* datatype, in order to
 
 - ### `options` *object* [optional]
 
-    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values, or references to sub-templates. 
+    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values, or specify sub-templates to use. 
 
 	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template) template to a particular sub-template. 
 	

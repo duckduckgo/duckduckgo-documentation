@@ -754,7 +754,7 @@ record_data *or* list
 
 - `content` [required] *sub-template*
 
-	Recommended to set this value to `'record'` (a string) to use the built-in [`record`](#coderecordcode-template) template
+	Recommended to set this value to `'record'` (a string) to specify the built-in [`record`](#coderecordcode-template) template
 
 - `record_data` [required] *object*
 
@@ -788,7 +788,7 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ## `record` Template
 
-A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#codelistcode-template) template.
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list_detail`](#codelist_detailcode-template) template.
 
 ### Template Diagram
 
