@@ -61,7 +61,7 @@ templates: {
 }
 ```
 
-Wondering why this is a variable path - and no '.handlebars' extension? That's because *handlebars* files are compiled into JavaScript functions so they can be used with data. Instead of referencing the file itself, we reference the resulting function.
+Wondering why this is a variable path - and no '.handlebars' extension? That's because *handlebars* files are compiled into JavaScript functions so they can be used with data. Instead of referencing the file itself, we reference the resulting function. In this example, `share/spice/kwixer/buy.handlebars` is compiled and becomes available as `Spice.kwixer.buy`.
 
 ## Using Available Helpers
 
