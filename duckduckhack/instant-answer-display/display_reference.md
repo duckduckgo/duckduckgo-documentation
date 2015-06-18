@@ -229,7 +229,7 @@ Several properties below allow you to specify a *function* datatype, in order to
     }
     ```
 
-- ### `item` *string or function* [required if no `group` is specified]
+- ### `item` *string (template name)* or *function (template reference)* [required if no `group` is specified]
 
     The template to be used for each item in a tile view.
 
@@ -239,21 +239,21 @@ Several properties below allow you to specify a *function* datatype, in order to
 
     - In rare cases, where necessary, a function referencing a custom template can be passed. Passing a custom template is a measure of last resort due to maintenance difficulty. Learn more about [picking templates](https://duck.co/duckduckhack/template_groups#picking-a-template-group); if you feel that no current templates fit your idea, please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) and we'll happily help you find a solution.
 
-- ### `item_mobile` *string or function* [optional]
+- ### `item_mobile` *string (template name)* or *function (template reference)* [optional]
 
     An alternative `item` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-- ### `detail` *string or function* [required if no `group` is specified]
+- ### `detail` *string (template name)* or *function (template reference)* [required if no `group` is specified]
 
     The template to be used for the detail area. Find out more about when the `detail` template is displayed in the [templates overview](https://duck.co/duckduckhack/templates_overview#specifying-codeitemcode-and-codedetailcode-templates)
 
 	    If your Instant Answer only returns a single item, a `detail` template is **required**. If your Instant Answer usually returns multiple items, the `detail` template is **optional**.
 
-- ### `detail_mobile` *string or function* [optional]
+- ### `detail_mobile` *string (template name)* or *function (template reference)* [optional]
 
     An alternative `detail` template to be used when displaying on smaller screens, such as mobile and hand-held devices.
 
-- ### `item_detail` *string or function* [optional]
+- ### `item_detail` *string (template name)* or *function (template reference)* [optional]
 
     An alternative `detail` template to be used when a tile is clicked. Learn more about when `item_detail` is used in the [templates overview](https://duck.co/duckduckhack/templates_overview#clicking-on-an-item).
 
