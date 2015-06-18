@@ -63,7 +63,8 @@ templates: {
 
 Wondering why this is a variable path - and no '.handlebars' extension? That's because *handlebars* files are compiled into JavaScript functions so they can be used with data. Instead of referencing the file itself, we reference the resulting function. In this example, `share/spice/kwixer/buy.handlebars` is compiled and becomes available as `Spice.kwixer.buy`.
 
-## Using Available Helpers
-
 ## Using Style Guide Elements
 
+## Using Available Helpers
+
+There are a variety of helper functions available to you to make creating sub-templates easier. Learn more about [handlebars helpers](https://duck.co/duckduckhack/handlebars_helpers).

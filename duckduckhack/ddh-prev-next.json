@@ -91,16 +91,11 @@
 
 	"spice_js_api.md": {
 		"prev": ["spice_advanced_frontend.md"],
-		"next": ["spice_handlebars_helpers.md"]
-	},
-
-	"spice_handlebars_helpers.md": {
-		"prev": ["spice_js_api.md"],
 		"next": ["spice_perl_api.md"]
 	},
 
 	"spice_perl_api.md": {
-		"prev": ["spice_handlebars_helpers.md"],
+		"prev": ["spice_js_api.md"],
 		"next": ["spice_attributes.md"]
 	},
 
@@ -151,7 +146,12 @@
 	
 	"subtemplates.md": {
 		"prev": ["templates_reference.md"],
-		"next": []
+		"next": ["handlebars_helpers.md"]
+	},
+	
+	"handlebars_helpers.md": {
+		"prev": ["subtemplates.md"],
+		"next": [""]
 	},
 	
 	"testing_triggers.md": {
