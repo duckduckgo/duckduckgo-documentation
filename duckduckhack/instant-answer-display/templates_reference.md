@@ -740,7 +740,10 @@ A detail template for displaying of a title and subtitle above a bulleted list, 
 
 title
 subtitle
-record_data *or* list
+
+content, record_data
+*or*
+list_content, list
 
 +-------------------+
 ```
@@ -754,7 +757,7 @@ record_data *or* list
 
 - `content` [required] *sub-template*
 
-	Recommended to set this value to `'record'` (a string) to specify the built-in [`record`](#coderecordcode-template) template
+	Recommended to set this value to `'record'` (a string) to specify the built-in [`record`](#coderecordcode-template) sub-template. Learn more about [built-in sub-templates](https://duck.co/duckduckhack/subtemplates).
 
 - `record_data` [required] *object*
 
@@ -764,7 +767,7 @@ record_data *or* list
 
 - `list_content` [required] *sub-template*
 
-	The handlebars sub-template supplied here will populate within each `li` element
+	Supply a custom handlebars sub-template. The sub-template will be rendered, enclosed by a `li` element
 
 - `list` *array*
 
