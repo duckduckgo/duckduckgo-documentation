@@ -89,7 +89,10 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
 ### Syntax for `key` Property
 
 Cheat sheet actions often have several key combinations, which you can indicate in the syntax of each `key` property.
-Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks. For convenience, if you include no brackets or braces, the entire string will be shown in a code block.
+
+**Brackets, `[ ]`, or braces, `{ }`, are used to wrap key combinations in code blocks.** For convenience, if you include no brackets or braces, the entire string will be shown in a code block.
+
+*Note: It does not matter whether you use brackets or braces - they both wrap text in code blocks.*
 
 #### Escaping Special Characters
 
