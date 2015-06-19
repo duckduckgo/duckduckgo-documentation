@@ -122,8 +122,8 @@ There is no special syntax required for the string - for example, `"x"` or `":se
 
 You might express simultaneous key presses as follows: 
 
-- As separate code blocks, connected by a plus, e.g. `"[Ctrl]+[v]"`
-- As a single code block, connected by a plus, e.g. `"[Ctrl+v]"`
+- As separate code blocks, connected by a plus, e.g. `"[Ctrl] + [v]"`
+- As a single code block, connected by a plus, e.g. `"[Ctrl + v]"`
 - As a single code block, connected by a dash, e.g. `"[C-v]"`
 	
 #### Consecutive Keys (e.g., pressing A, then pressing B)
