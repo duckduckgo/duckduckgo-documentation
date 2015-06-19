@@ -1,36 +1,32 @@
-## Spice Helpers (Handlebars)
+# Handlebars Helpers
 
-Spice specific Handlebars helpers:
+When creating [custom handlebars sub-templates](https://duck.co/duckduckhack/subtemplates) for your Instant Answer, you have access to a variety of built-in helper functions. In addition to the standard [handlebars helpers](http://handlebarsjs.com/#helpers), the following helpers are provided as part of the Instant Answer framework:
 
-- [concat](#concat): Concatenates all the elements in a collection
+- [`#concat`](#concat): Concatenates all the elements in a collection
 
-- [condense](#condense): Shortens a string
+- [`#condense`](#condense): Shortens a string
 
-- [stripHTML](#striphtml): Strips HTML tags/elements from text
+- [`#stripHTML`](#striphtml): Strips HTML tags/elements from text
 
-- [loop](#loop): Counts from zero to the value of `context`
+- [`#loop`](#loop): Counts from zero to the value of `context`
 
-- [each](#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
+- [`#each`](#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
 
-- [keys](#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
+- [`#keys`](#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
 
-- [include](#include): Loads the specified Handlebars template and applies it with the current context
+- [`include`](#include): Loads the specified Handlebars template and applies it with the current context
 
-- [plural](#plural): Returns the value of `context` and appends the singular or plural form of the specified word
+- [`plural`](#plural): Returns the value of `context` and appends the singular or plural form of the specified word
 
-- [numFormat](#numformat): Delimits a number or string with multiple numbers, using commas or given delimiter
+- [`numFormat`](#numformat): Delimits a number or string with multiple numbers, using commas or given delimiter
 
-- [imageProxy](#imageproxy): Rewrite a URL as a DuckDuckGo image redirect
+- [`imageProxy`](#imageproxy): Rewrite a URL as a DuckDuckGo image redirect
 
-- [ellipsis](#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
+- [`ellipsis`](#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
 
-- [trim](#trim): Removes leading and trailing spaces from text 
+- [`trim`](#trim): Removes leading and trailing spaces from text 
 
-For the built-in helpers included with Handlebars see: [Handlebars Helpers](http://handlebarsjs.com/#helpers)
-
-<!-- /summary -->
-
-##{{#concat}}
+## `#concat`
 
 **Block Helper**
 
@@ -60,7 +56,7 @@ when `context` is:
 **conj**:  *string*,  **[optional]** Final separator, precedes last item. Default: `''`
 
 
-##{{#condense}}
+## `#condense`
 
 **Block Helper**
 
@@ -85,7 +81,7 @@ the truncation string to the output
 **{string**,  truncation **[optional]** The truncation string. Default: `'...'`
 
 
-##{{#stripHTML}}
+## `#stripHTML`
 
 **Block Helper**
 
@@ -96,7 +92,7 @@ Example:
 `{{#stripHTML stringWithHTML}}Here is my string: {{this}}{{/stripHTML}}`
 
 
-##{{#loop}}
+## `#loop`
 
 **Block Helper**
 
@@ -114,7 +110,7 @@ Example:
 ```
 
 
-##{{#each}}
+## `#each`
 
 **Block Helper**
 
@@ -147,7 +143,7 @@ will only do the first five items
 **to**:  *number*,  **[optional]** Index to end on. Default: array/object length
 
 
-##{{#keys}}
+## `#keys`
 
 **Block Helper**
 
@@ -163,7 +159,7 @@ Example:
 ```
 
 
-##{{include}}
+## `include`
 
 Loads the specified Handlebars template and applies it with
 the current context
@@ -188,7 +184,7 @@ Identical to:
 **with**:  *string*,  **[optional]** Context to use when including the template. Supports simple dot paths.
 
 
-##{{plural}}
+## `plural`
 
 Returns the value of `context` (assuming `context` is a **number**)
 and appends the singular or plural form of the specified word,
@@ -211,7 +207,7 @@ Will produce:
 **delimiter**:  *string*,  **[optional]** Format the number with the `numFormat` helper
 
 
-##{{numFormat}}
+## `numFormat`
 
 Delimits a number or string with multiple numbers,
 using commas or given delimiter
@@ -232,7 +228,7 @@ Example:
 
 **delimiter**:  *string*,  **[optional]** The delimiter string. Default: `','`
 
-##{{imageProxy}}
+## `imageProxy`
 
 Rewrite a URL as a DuckDuckGo image redirect
 
@@ -243,7 +239,7 @@ Example:
 produces: `/iu/?u={{imageURL}}`
 
 
-##{{trim}}
+## `trim`
 
 Removes leading and trailing spaces from text
 
@@ -252,7 +248,7 @@ Example:
 `{{trim stringWithSpaces}}`
 
 
-##{{ellipsis}}
+## `ellipsis`
 
 Shortens a string by removing words until string length is <= `limit` and
 appends an ellipsis ('...') to the output
