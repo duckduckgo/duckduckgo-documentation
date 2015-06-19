@@ -1,4 +1,6 @@
-# DuckDuckHack - Code Style Guide
+# Code Style Guide
+
+As a largely open-source project, we like to keep our code as consistent as our Instant Answers. This means all code should be formatted the same way and should look and feel as though it has all been written by the same person.
 
 This document outlines some language specific guidelines for formatting your code and also highlights best practices, and things to avoid. In any large open-source project, maintainability is of utmost importance, so a style guide is necessary to help our contributors write clean, readable and maintainable code.
 
