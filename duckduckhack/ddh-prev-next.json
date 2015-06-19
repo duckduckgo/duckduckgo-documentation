@@ -228,24 +228,4 @@
 		"prev": ["styleguide_overview.md"],
 		"next": ["goodie_styleguide.md", "spice_styleguide.md", "fathead_styleguide.md", "longtail_styleguide.md"]
 	},
-
-	"goodie_styleguide.md": {
-		"prev": ["design_styleguide.md"],
-		"next": ["spice_styleguide.md"]
-	},
-
-	"spice_styleguide.md": {
-		"prev": ["goodie_styleguide.md"],
-		"next": ["fathead_styleguide.md"]
-	},
-
-	"fathead_styleguide.md": {
-		"prev": ["spice_styleguide.md"],
-		"next": ["longtail_styleguide.md"]
-	},
-
-	"longtail_styleguide.md": {
-		"prev": ["fathead_styleguide.md"],
-		"next": []
-	},
 }
