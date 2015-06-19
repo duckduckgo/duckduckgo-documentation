@@ -67,8 +67,3 @@
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
   - [How to QA an Instant Answer](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/how_to_qa.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md)
-
-- **Styleguides**
-  - [Styleguide Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/styleguide_overview.md)
-  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
-

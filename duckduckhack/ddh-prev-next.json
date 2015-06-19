@@ -216,16 +216,7 @@
 
 	"faq.md": {
 		"prev": ["how_to_qa.md"],
-		"next": ["styleguide_overview.md"]
+		"next": []
 	},
 
-	"styleguide_overview.md": {
-		"prev": ["faq.md"],
-		"next": ["design_styleguide.md"]
-	},
-
-	"design_styleguide.md": {
-		"prev": ["styleguide_overview.md"],
-		"next": ["goodie_styleguide.md", "spice_styleguide.md", "fathead_styleguide.md", "longtail_styleguide.md"]
-	},
 }
