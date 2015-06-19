@@ -196,11 +196,16 @@
 
 	"other_development_environments.md": {
 		"prev": [],
+		"next": ["code_styleguide.md"]
+	},
+	
+	"code_styleguide.md": {
+		"prev": ["other_development_environments.md"],
 		"next": ["common_pitfalls.md"]
 	},
 
 	"common_pitfalls.md": {
-		"prev": ["other_development_environments.md"],
+		"prev": ["code_styleguide.md"],
 		"next": ["how_to_qa.md"]
 	},
 
@@ -241,11 +246,6 @@
 
 	"longtail_styleguide.md": {
 		"prev": ["fathead_styleguide.md"],
-		"next": ["code_styleguide.md"]
+		"next": []
 	},
-
-	"code_styleguide.md": {
-		"prev": ["longtail_styleguide.md"],
-		"next": ["preparing_for_a_pull_request.md"]
-	}
 }
