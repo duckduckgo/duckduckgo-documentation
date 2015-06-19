@@ -45,7 +45,7 @@
   - [Template Groups](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/template_groups.md)
   - [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_reference.md)
   - [Sub-templates](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/subtemplates.md)
-  - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_handlebars_helpers.md)
+  - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/handlebars_helpers.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
