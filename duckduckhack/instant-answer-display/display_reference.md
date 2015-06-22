@@ -116,12 +116,12 @@ The following are all properties of the `meta: {}` object.
 	- In [rand_word.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rand_word/rand_word.js#L14), the `sourceUrl` is a hardcoded address.
 	- In [is_it_up.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/is_it_up/is_it_up.js#L15), the `sourceUrl` is dynamically generated to direct to a specific page relating to the search query.
 
-- ### `moreText` *string* or *object* [optional]
+- ### `moreText` *string* or *object* or *array* [optional]
 
-	Display additional text or link content next to the 'More at' link. 
+	Display additional text or link content adjacent to the 'More at' link.
 	Note that `moreText` must be nested under an `options` property.
 	
-	For text alone:
+	For text alone, pass a string:
     
     ```javascript
     meta: {
@@ -132,7 +132,7 @@ The following are all properties of the `meta: {}` object.
     }
     ```
 
-	To display a link:
+    To display a link, pass an object:
 
     ```javascript
     meta: {
@@ -145,6 +145,31 @@ The following are all properties of the `meta: {}` object.
         }
     }
     ```
+
+    To display multiple values (either text or links), pass an array:
+
+    ```javascript
+    meta: {
+        ...
+        options: {
+            moreText: [
+                {
+                    text: "See a 10-day surf forecast"
+                    href: "https://..." // Use SSL when possible
+                },
+                {
+                    text: "Global Swell Chart"
+                    href: "https://..."
+                },
+                "Subject to local conditions"
+            ]
+        }
+    }
+    ```
+
+	Values will be separated by a '|' and display as follows:
+	
+	[More at Surfline](http://example.com) | [See a 10-day surf forecast](http://example.com) | [Global Swell Chart](http://example.com) | Subject to local conditions
 
 
 - ### `searchTerm` *string* [optional]
