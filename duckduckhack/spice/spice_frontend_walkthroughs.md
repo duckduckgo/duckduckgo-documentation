@@ -1,17 +1,15 @@
-## Spice Frontend Walkthoughs
+# Spice Frontend Walkthoughs
 
+<!--
 - [Walkthrough #1: Alternative.To (Simple)](#walkthrough-1-alternativeto-simple)
 - [Walkthrough #2: Movies (Medium)](#walkthrough-2-movies-medium)
 - [Walkthrough #3: Airlines (Medium)](#walkthrough-3-airlines-medium)
 - [Walkthrough #4: Quixey (Advanced)](#walkthrough-4-quixey-advanced)
+-->
 
-<!-- /summary -->
+## Alternative.To Walkthrough (Simple)
 
-------
-
-## Walkthrough #1 - Alternative.To (Simple)
-
-The Alternative.To Instant Answer is very similar to NPM in that it's also relatively simple. However, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
+The [Alternative.To Instant Answer](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js) is very similar to NPM in that it's also relatively simple. However, it returns multiple items, and so it produces a tile view, where each tile represents a single result item. Let's take a look at the code and see how this is done:
 <!-- /summary -->
 
 ###### alternative_to.js
@@ -48,9 +46,9 @@ The Alternative.To Instant Answer is very similar to NPM in that it's also relat
             },
             templates: {
                 group: 'icon',
-        options: {
-            footer: Spice.alternative_to.footer
-        }
+                options: {
+                    footer: Spice.alternative_to.footer
+                }
             }
         });
     };
@@ -62,7 +60,9 @@ The Alternative.To Instant Answer is very similar to NPM in that it's also relat
 }(this));
 ```
 
-Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties. However, it also uses a few new properties as well. The biggest difference between the two Spices though, is that the AlternativeTo API returns an array of items, which is given to `data`, rather than a single item like the NPM API. This means first and foremost, that we'll be dealing with a tile view, so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
+Just like the NPM Spice, Alternative.To uses `Spice.add()` with most of the same properties. However, it also uses a few new properties as well. The biggest difference between the two Spices though, is that **the AlternativeTo API returns an array of items, which is given to `data`,** rather than a single item like the NPM API. 
+
+This means first and foremost, that we'll be dealing with a tile view, so that each item can be separately displayed. In order to do that, we must specify an `item` template which determines the content of each tile. Let's begin by taking a look at the new `Spice.add()` properties used by Alternative.To:
 
 - `searchTerm` is used to indicate the term that was searched, stripped of unimportant words (e.g., "cat videos" would be "cat") or more formally, this is known as the *[noun adjunct](https://en.wikipedia.org/wiki/Noun_adjunct)*. The `searchTerm` will be used for the MetaBar wording where it reads, for example, "Showing 10 **iTunes** Alternatives", where "iTunes" is the `searchTerm` for the query "alternatives to iTunes".
 
@@ -131,7 +131,7 @@ As you can see, this Spice requires very little CSS. This layout is a bit unique
 The most important thing to note is that we have prefaced each of our CSS rules with the class `.tile--alternative_to`. Each Spice Instant Answer is wrapped in a `<div>` that has a class called `.zci--<spice_name>` where `<spice_name>` matches the Spice's package name. As well, when a tile view is used, *each tile* is wrapped in a `div` that has a class called `.tile--<spice_name>`. These allow us to **namespace** all the CSS rules for each individual Spice and their tiles. The is very important because DuckDuckGo simultaneously loads and triggers multiple Spice Instant Answers (depending on the query) and so namespaceing the CSS is necessary to ensure that none of our Spices' CSS rules affect other elements on the page. If your Spice requires any CSS, it **must** only target child elements of `.zci--<spice_name>` for the detail area and/or `.tile--<spice_name>` for the tiles.
 
 
-<More to Come...>
+<!-- <More to Come...> -->
 
 <!-- ## Walkthrough #2: InTheaters (Medium)
 
