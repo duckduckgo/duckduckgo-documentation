@@ -65,7 +65,7 @@ We have plans to make it possible to trigger Instant Answers in many different l
 
 Maybe. There are a bunch more internal interfaces we haven't exposed yet, and we'd love to hear your ideas to influence that roadmap.
 
-### Can I create adult Instant Answers (i.e. NSFW)?  
+### Can I create adult Instant Answers (i.e. NSFW)?
 
 No.
 
@@ -92,7 +92,7 @@ available through this interface. Fathead and goodie Instant Answers are automat
 
 ### Can I talk to you about a partnership idea?
 
-Sure - check out [our partnerships page](http://help.duckduckgo.com/customer/portal/articles/775109-partnerships).
+Sure -- check out [our partnerships page](https://duck.co/help/company/partnerships).
 
 ## Goodie FAQ
 

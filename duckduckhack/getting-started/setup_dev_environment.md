@@ -38,6 +38,10 @@ Next, you'll need to get an account for Codio:
 
 **Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
 
+## Join the DuckDuckGo Organization
+
+1. **After logging into Codio,** [click this link](https://codio.com/p/signup?orgToken=Ax-OB3tU4sdNAG8axJBYcjNqR04) and you'll be added to our organization, which gives you a professional Codio setup free of charge. You should see a confirmation message at the bottom of your Codio screen after clicking. 
+
 
 ## Fork the DuckDuckHack Project on Codio
 

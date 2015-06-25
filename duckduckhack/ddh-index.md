@@ -25,7 +25,6 @@
   - [Advanced Backend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_backend.md)
   - [Advanced Frontend](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_advanced_frontend.md)
   - [JavaScript API Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_js_api.md)
-  - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_handlebars_helpers.md)
   - [Perl API Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_perl_api.md)
   - [Spice Attributes](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/spice_attributes.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md#spice)
@@ -43,7 +42,10 @@
 - **Instant Answer Display**
   - [Display Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/display_reference.md)
   - [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_overview.md)
+  - [Template Groups](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/template_groups.md)
   - [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_reference.md)
+  - [Sub-templates](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/subtemplates.md)
+  - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/handlebars_helpers.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)

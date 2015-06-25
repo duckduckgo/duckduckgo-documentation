@@ -6,14 +6,14 @@ To understand the context of templates and how they fit into your Instant Answer
 
 The reference is divided into two parts:
 
-- [Templates](#templates) - the built-in handlebars templates
+- [Templates](#templates) - the built-in handlebars html templates
 - [Variants](#variants) - preset styles available to modify their appearance
 
 ## Important Note
 
 Before using these templates please familiarize yourself with the Instant Answer display options (for example, [Spice](https://duck.co/duckduckhack/spice_displaying) or [Goodie](https://duck.co/duckduckhack/goodie_displaying)) document to understand the proper usage of both the `templates` block and the `options` block. Understanding these is crucial to implementing templates properly and effectively.
 
-Additionally, the [Templates Overview](https://duck.co/duckduckhack/templates_overview) will help you think about the big picture of which template groups best fit your Instant Answer.
+You will be specifying these templates indirectly - as part of a Template Group. The [Templates Groups Overview](https://duck.co/duckduckhack/template_groups) will help you think about the big picture of which template groups best fit your Instant Answer.
 
 ## Templates
 
@@ -72,7 +72,7 @@ footer
 - `altSubtitle` [optional] *string* or *string array*
 - `subtitle` [optional] *string* or *string array*
 - `description` [required] *string*
-- `footer` [optional] *sub-template*
+- `footer` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `dateBadge` [optional] *object*
 
 	An object with either a `text` *string* property **or** a `month` and `day` *string* properties.
@@ -88,7 +88,7 @@ footer
 
 ### Template Groups
 
-- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
+- [Text](https://duck.co/duckduckhack/template_groups#text-template-group)
 
 ------
 
@@ -112,17 +112,17 @@ content
 
 ### Available Features
 
-- `title_content` [optional] *sub-template*
+- `title_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `title` [optional] *string*
 
 	Available only if `title_content` is not specified
 
-- `subtitle_content` [optional] *sub-template*
+- `subtitle_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `subtitle` [optional] *string* or *string array*
 
 	Available only if `subtitle_content` is not specified
 
-- `content` [optional] *sub-template*
+- `content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ content
 
 ### Template Groups
 
-- [Text](https://duck.co/duckduckhack/templates_overview#text-template-group)
+- [Text](https://duck.co/duckduckhack/template_groups#text-template-group)
 
 ------
 
@@ -178,8 +178,8 @@ ratingText
 
 ### Template Groups
 
-- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
-- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Info](https://duck.co/duckduckhack/template_groups#info-template-group)
+- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
 
 ------
 
@@ -228,7 +228,7 @@ rating
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
+- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
 
 ------
 
@@ -270,12 +270,12 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 - `price` [optional] *string*
 - `brand` [optional] *string*
-- `subtitle_content` [optional] *sub-template*
+- `subtitle_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `abstract` [required] *string*
 
 	Limited to 400 characters, truncated to whole words with an ellipsis
 
-- `buy` [optional] *sub-template*
+- `buy` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 	Can be used to provide a call-to-action, such as a button.
 
@@ -286,9 +286,9 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
-- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
-- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
+- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
+- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
+- [Icon](https://duck.co/duckduckhack/template_groups#icon-template-group)
 
 ------
 
@@ -321,7 +321,7 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 - `url` [required] *string url*
 - `price` [optional] *string*
 - `brand` [optional] *string*
-- `subtitle_content` [optional] *sub-template*
+- `subtitle_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `rating` [optional] *float*
 
 	A positive float with one decimal point, up to 5.0
@@ -336,7 +336,7 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 	Link to source reviews page
 	
 - `abstract` [required] *string*
-- `buy` [optional] *sub-template*
+- `buy` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 	Can be used to provide a call-to-action, such as a button.
 
@@ -347,9 +347,9 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ### Template Groups
 
-- [Products](https://duck.co/duckduckhack/templates_overview#products-template-group)
-- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
-- [Icon](https://duck.co/duckduckhack/templates_overview#icon-template-group)
+- [Products](https://duck.co/duckduckhack/template_groups#products-template-group)
+- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
+- [Icon](https://duck.co/duckduckhack/template_groups#icon-template-group)
 
 ------
 
@@ -380,7 +380,7 @@ image and/or badge      title
 - `title` [optional] *string*
 - `subtitle` [optional] *string* or *string array*
 - `altSubtitle` [optional] *string* or *string array*
-- `content` [optional] *sub-template*
+- `content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `description` [conditional on `content`] *string*
 
 	Available and required if `content` not specified
@@ -427,7 +427,7 @@ The same template, with the `aux` feature:
 
 	Available only if `title` specified
 
-- `content` [optional] *sub-template*
+- `content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `description` [conditional on `content`] *string*
 
 	Available and required if `content` not specified
@@ -444,7 +444,7 @@ The same template, with the `aux` feature:
 
 ### Template Groups
 
-- [Info](https://duck.co/duckduckhack/templates_overview#info-template-group)
+- [Info](https://duck.co/duckduckhack/template_groups#info-template-group)
 
 ### The Infobox
 
@@ -648,7 +648,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Template Groups
 
-- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
+- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
 
 ------
 
@@ -723,7 +723,7 @@ A detail template for displaying information about a single location on a map ba
 
 ### Template Groups
 
-- [Places](https://duck.co/duckduckhack/templates_overview#places-template-group)
+- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
 
 ------
 
@@ -740,7 +740,10 @@ A detail template for displaying of a title and subtitle above a bulleted list, 
 
 title
 subtitle
-record_data *or* list
+
+content, record_data
+*or*
+list_content, list
 
 +-------------------+
 ```
@@ -752,9 +755,9 @@ record_data *or* list
 
 #### If Displaying Table of Key-Value Pairs:
 
-- `content` [required] *sub-template*
+- `content` [required] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
-	Recommended to set this value to `'record'` (a string) to use the built-in [`record`](#coderecordcode-template) template
+	Recommended to set this value to `'record'` (a string) to specify the built-in [`record`](#coderecordcode-template) sub-template. Learn more about [built-in sub-templates](https://duck.co/duckduckhack/subtemplates).
 
 - `record_data` [required] *object*
 
@@ -762,9 +765,9 @@ record_data *or* list
 
 #### If Displaying Bulleted List of Values:
 
-- `list_content` [required] *sub-template*
+- `list_content` [required] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
-	The handlebars sub-template supplied here will populate within each `li` element
+	Supply a custom handlebars sub-template. The sub-template will be rendered, enclosed by a `li` element. Learn more about [sub-templates](https://duck.co/duckduckhack/subtemplates).
 
 - `list` *array*
 
@@ -782,13 +785,13 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ### Template Groups
 
-- [List](https://duck.co/duckduckhack/templates_overview#list-template-group)
+- [List](https://duck.co/duckduckhack/template_groups#list-template-group)
 
 ------
 
 ## `record` Template
 
-A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list`](#codelistcode-template) template.
+A special template that is ideal for key-value data. It generates a `<table>` where each row contains a key and value. Often used as a sub-template, for example by the [`list_detail`](#codelist_detailcode-template) template.
 
 ### Template Diagram
 
@@ -853,7 +856,7 @@ templates: {
 
 ### Template Groups
 
-- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/templates_overview#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
+- Can be used as a sub-template by the [List](https://duck.co/duckduckhack/template_groups#list-template-group) template group (under the [`list_detail`](#codelistdetailcode-template) template)
 
 ------
 
@@ -883,7 +886,7 @@ dateBadge
 - `altSubtitle` [optional] *string* or *string array*
 - `subtitle` [optional] *string* or *string array*
 - `description` [optional] *string*
-- `footer` [optional] *sub-template*
+- `footer` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 - `dateBadge` [optional] *object*
 
 	An object with either a `text` *string* property **or** a `month` *string* and `day` *string* properties. 
@@ -895,7 +898,7 @@ dateBadge
 
 ### Template Groups
 
-- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
 
 ------
 
@@ -918,7 +921,7 @@ dateBadge
 - `title` [required] *string*
 - `altSubtitle` [optional] *string* or *string array*
 - `description` [optional] *string*
-- `callout` [optional] *sub-template*
+- `callout` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 	Can be used to provide a call-to-action, such as a button.
 
@@ -928,7 +931,7 @@ dateBadge
 
 ### Template Groups
 
-- [Media](https://duck.co/duckduckhack/templates_overview#media-template-group)
+- [Media](https://duck.co/duckduckhack/template_groups#media-template-group)
 
 ------
 
@@ -982,7 +985,7 @@ dateBadge
 
 ### Template Groups
 
-- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+- [Images](https://duck.co/duckduckhack/template_groups#images-template-group)
 
 ------
 
@@ -1029,7 +1032,7 @@ dateBadge
 
 ### Template Groups
 
-- [Images](https://duck.co/duckduckhack/templates_overview#images-template-group)
+- [Images](https://duck.co/duckduckhack/template_groups#images-template-group)
 
 ------
 
@@ -1072,7 +1075,7 @@ dateBadge
 
 ### Template Groups
 
-- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
+- [Videos](https://duck.co/duckduckhack/template_groups#videos-template-group)
 
 ------
 
@@ -1108,7 +1111,7 @@ dateBadge
 
 ### Template Groups
 
-- [Videos](https://duck.co/duckduckhack/templates_overview#videos-template-group)
+- [Videos](https://duck.co/duckduckhack/template_groups#videos-template-group)
 
 ------
 
@@ -1135,7 +1138,7 @@ An item template for containing fully customized markup.
 ### Available Features
 
 - `url` [required] *string*
-- `content` [required] *sub-template*
+- `content` [required] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 ### Example Usage
 
@@ -1150,7 +1153,7 @@ Here is an example of a more complex `content` sub-template passed to the `base_
 
 ### Template Groups
 
-- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
+- [Base](https://duck.co/duckduckhack/template_groups#base-template-group)
 
 ------
 
@@ -1176,7 +1179,7 @@ A detail template for containing fully customized markup.
 
 ### Available Features
 
-- `content` *string* or *sub-template*
+- `content` *string* or [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 ### Example Usage
 
@@ -1190,7 +1193,7 @@ A detail template for containing fully customized markup.
 
 ### Template Groups
 
-- [Base](https://duck.co/duckduckhack/templates_overview#base-template-group)
+- [Base](https://duck.co/duckduckhack/template_groups#base-template-group)
 
 ------
 
