@@ -45,6 +45,7 @@
   - [Templates Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_overview.md)
   - [Template Groups](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/template_groups.md)
   - [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_reference.md)
+  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/design_styleguide.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
@@ -63,7 +64,7 @@
 
 - **Resources**
   - [Other Development Environments](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/other_development_environments.md)
-  - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/code_styleguide.md)
+  - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/code_styleguide.md)
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
   - [How to QA an Instant Answer](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/how_to_qa.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md)

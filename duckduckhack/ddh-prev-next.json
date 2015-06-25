@@ -146,6 +146,11 @@
 
 	"templates_reference.md": {
 		"prev": ["templates_overview.md"],
+		"next": ["design_styleguide.md"]
+	},
+	
+	"design_styleguide.md": {
+		"prev": ["templates_reference.md"],
 		"next": []
 	},
 	
