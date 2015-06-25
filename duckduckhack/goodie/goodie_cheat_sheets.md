@@ -8,7 +8,15 @@ When your cheat sheet name is searched with any of the trigger words, your Insta
 
 ## How to Add Your Cheat Sheet
 
-If you have an idea for a cheat sheet, it's easy to add it to the DuckDuckGo Goodie repository. The following instructions assume you've already [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).
+If you have an idea for a cheat sheet, it's easy to add it to the DuckDuckGo Goodie repository. 
+
+The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). Following the [setup instructions](https://duck.co/duckduckhack/setup_dev_environment) will get you ready to contribute to the repository.
+
+- You'll have your own GitHub account
+- You'll have your own Codio machine
+- You'll have your own fork of the Goodies repository
+
+Once you're all set up, you'll be one file away from submitting your cheat sheet to appear on DuckDuckGo.
 
 ### Create a JSON File
 
@@ -20,9 +28,33 @@ Up in the **File menu**, click **"Create New File"**, and enter the name of your
 
 Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax). Feel free to copy the code in the following section into your new file as a convenient template.
 
-With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, push the changes to your repository on GitHub, and [submit a pull request](https://help.github.com/articles/creating-a-pull-request/).
+With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, and proceed to test your work.
 
-### Cheat Sheet JSON Syntax
+### Test Your Cheat Sheet
+
+The next step is to test your code and make sure it works like you intended. To do this, we'll create a test server that will allow you to view your Instant Answer as it would appear above DuckDuckGo search results.
+
+1. In Codio, open your Terminal by clicking on **Tools > Terminal**.
+2. Change into the `zeroclickinfo-goodies` directory by typing `cd zeroclickinfo-goodies` at the command line.
+3. Next, type **`duckpan server`** and press "**Enter**". The Terminal should print some text and let you know that the server is listening on port 5000.
+
+    ```
+    Starting up webserver...
+    You can stop the webserver with Ctrl-C
+    HTTP::Server::PSGI: Accepting connections at http://0:5000/
+    ```
+
+4. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage. Type the name of your cheat sheet, plus **"cheat sheet"** and press "**Enter**".
+10. You should see your cheat sheet show up in the search results! **Make sure it displays correctly; check that all escaped characters and code blocks appear as you intended.**
+11. When you're done testing, go back to the Terminal, andpress "**Ctrl+C**" to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
+
+When your cheat sheet works like you want it to, you're ready to submit your contribution.
+
+### Submit Your Pull Request
+
+Submitting your cheat sheet is similar to submitting any Instant Answer contribution. New code is submitted using pull requests on GitHub. To make a pull request, follow the [submission and review instructions](https://duck.co/duckduckhack/submission_and_review).
+
+## Cheat Sheet JSON Syntax
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
