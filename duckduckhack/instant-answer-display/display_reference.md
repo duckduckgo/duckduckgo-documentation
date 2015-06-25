@@ -278,6 +278,62 @@ Several properties below allow you to specify a *function* datatype, in order to
 	Available features will vary with each chosen template (see the [templates reference](https://duck.co/duckduckhack/templates_reference) for details on each template). For example, the `basic_info_detail` template doesn't have a `brand` feature, so setting `brand: true` or `brand: false` will have no effect.
 	
 	It's important to note that **there are implicit [default options](https://duck.co/duckduckhack/templates_overview#a-note-on-default-template-options)** which apply in the absence of an `options` object or a templates `group`.
+	
+	- ### `moreText` *string* or *object* or *array* [optional]
+
+		Display additional text or link content adjacent to the ['More at' link](#codemetacode-emobjectem-required).
+		Note that `moreText` is nested under the `options` property.
+
+		For text alone, pass a string:
+
+	    ```javascript
+	    templates: {
+	        ...
+	        options: {
+	            moreText: "Movie showtimes are shown in PST time zone"
+	        }
+	    }
+	    ```
+
+	    To display a link, pass an object:
+
+	    ```javascript
+	    templates: {
+	        ...
+	        options: {
+	            moreText: {
+	                text: "See a 10-day surf forecast"
+	                href: "https://..." // Use SSL when possible
+	            }
+	        }
+	    }
+	    ```
+
+	    To display multiple values (either text or links), pass an array:
+
+	    ```javascript
+	    templates: {
+	        ...
+	        options: {
+	            moreText: [
+	                {
+	                    text: "See a 10-day surf forecast"
+	                    href: "https://..." // Use SSL when possible
+	                },
+	                {
+	                    text: "Global Swell Chart"
+	                    href: "https://..."
+	                },
+	                "Subject to local conditions"
+	            ]
+	        }
+	    }
+	    ```
+
+		Multiple values will be separated by a '|' and display as follows:
+
+		[More at Surfline](http://example.com) | [See a 10-day surf forecast](http://example.com) | [Global Swell Chart](http://example.com) | Subject to local conditions
+
 
 - ### `variants` *object* [optional]
 
