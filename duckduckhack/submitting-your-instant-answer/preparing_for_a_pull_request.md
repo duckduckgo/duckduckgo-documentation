@@ -7,7 +7,7 @@ By now you should have:
 - Written and committed the code for your Instant Answer
 - Written a comprehensive test for your Instant Answer
 - Verified that everything works and nothing is broken
-- Confirmed the Instant Answer adheres to the [design guidelines](https://duck.co/duckduckhack/styleguide_overview)
+- Confirmed the Instant Answer adheres to the [design guidelines](https://duck.co/duckduckhack/code_styleguide)
 
 At this point you are ready to add metadata to your Instant Answer which will help us to understand it a little better.
 
