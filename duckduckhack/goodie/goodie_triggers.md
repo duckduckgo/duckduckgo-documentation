@@ -86,3 +86,7 @@ triggers startend => "base64";
 handle remainder => sub {
     return unless $_ =~ /^(encode|decode|)\s*(.*)$/i;
 ```
+
+## Triggers in Multiple Languages 
+
+We have plans to make it possible to trigger Instant Answers in many different languages. Until an internationalization mechanism is place, to uphold maintainability and consistency, **we cannot accept pull requests that add languages directly in the code.**
