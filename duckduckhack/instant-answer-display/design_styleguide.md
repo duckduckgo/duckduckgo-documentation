@@ -44,8 +44,8 @@ To set built-in images such as flags, make a JavaScript call to obtain the image
 DDG.settings.region.getLargeIconURL("CA");
 ```
 
-## Spirit of Instant Answers
+## Giving Credit
 
-One guideline that is more abstract is to maintain the spirit of Instant Answers. Instant Answers are meant to first and foremost provide users with value in an accessible way.
+Instant Answers are meant to first and foremost provide users with value in an accessible way, while providing credit to the original source. Every Instant Answer template provides the display of a ["More at..."](https://duck.co/duckduckhack/display_reference#codemetacode-emobjectem-required) link, which serves as a consistent place for users to see the data source.
 
-Using Instant Answers for other goals, such as excessive self-promotion, or use as an advertisement, at the expense of usability, consistency, or usefulness - is not in line with the spirit of the community.
+Using Instant Answers for other goals, such as excessive self-promotion or inserting advertisements, particularly at the expense of usability, consistency, or usefulness - is not in line with the spirit of the community.
