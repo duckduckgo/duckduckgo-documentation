@@ -159,10 +159,7 @@ We recommend expressing simultaneous key presses as follows:
 	
 #### Consecutive Keys (e.g., pressing A, then pressing B)
 
-You might express consecutive key presses as follows:
-
-- As separate code blocks separated by a space, e.g. `"[Ctrl-B] [x]"`
-- As separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
+We recommend expressing consecutive key presses as separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
 	
 #### Alternative Keys (e.g., pressing either A or B)
 
