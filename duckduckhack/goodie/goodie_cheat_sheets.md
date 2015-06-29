@@ -97,7 +97,7 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
                 "val": "move to tab number #"
             },
             {
-                "key": "[Ctrl] + [wt]",
+                "key": "[Ctrl][wt]",
                 "val": "move the current split window into its own tab"
             }
             // ...additional entries
