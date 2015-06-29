@@ -25,12 +25,12 @@ This allows you to focus on what makes your Spice unique. To use this tool, foll
 4. You will see a list of the boilerplate files created for you, each with the proper naming conventions already done:
 
 	```
-	[09:22 PM ... zeroclickinfo-spice {master}]$ duckpan new                                                          
-	Please enter a name for your Instant Answer : ron swanson quotes                                                                 
-	Created file: lib/DDG/Spice/RonSwansonQuotes.pm                                                                                  
-	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.handlebars                                                       
-	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.js                                                               
-	Created file: t/RonSwansonQuotes.t                                                                                               
+	[09:22 PM ... zeroclickinfo-spice {master}]$ duckpan new
+	Please enter a name for your Instant Answer : ron swanson quotes
+	Created file: lib/DDG/Spice/RonSwansonQuotes.pm
+	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.handlebars
+	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.js
+	Created file: t/RonSwansonQuotes.t
 	Successfully created Spice: RonSwansonQuotes
 	```
 

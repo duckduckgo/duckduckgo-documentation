@@ -28,10 +28,10 @@ This allows you to focus on what makes your Goodie unique. To use this tool, fol
 4. You will see a list of the boilerplate files created for you, each with the proper naming conventions already done:
 
 	```
-	[10:08 PM ... zeroclickinfo-goodies {master}]$ duckpan new                                                        
-	Please enter a name for your Instant Answer : volume conversion                                                                  
-	Created file: lib/DDG/Goodie/VolumeConversion.pm                                                                                 
-	Created file: t/VolumeConversion.t                                                                                               
+	[10:08 PM ... zeroclickinfo-goodies {master}]$ duckpan new
+	Please enter a name for your Instant Answer : volume conversion
+	Created file: lib/DDG/Goodie/VolumeConversion.pm
+	Created file: t/VolumeConversion.t
 	Successfully created Goodie: VolumeConversion
 	```
 
