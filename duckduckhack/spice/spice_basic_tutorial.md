@@ -20,7 +20,7 @@ This allows you to focus on what makes your Spice unique. To use this tool, foll
 2. At the command line, type `duckpan new` and hit enter.
 3. When prompted, enter what you want to call your Spice Instant Answer.
 
-	For example, `ron swanson quotes`. White spaces and character casing are automatically formatted.
+	*For example, `ron swanson quotes`. White spaces and character casing are automatically formatted.*
 
 4. You will see a list of the boilerplate files created for you, each with the proper naming conventions already done:
 
