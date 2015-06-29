@@ -2,9 +2,11 @@
 
 In this tutorial, we'll be making a Spice Instant Answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server).
 
-## The Wonderful `duckpan new` Command
+First, however, you'll learn an easy tool that automates much of the details.
 
-This tutorial will walk through each file and line of code necessary to build and test the example Spice. However, for building your own Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
+## Automatically Generate Your Spice Files
+
+The following tutorial will walk through each file and line of code necessary to build and test the example Spice. However, for building your *own* Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
 
 The `duckpan new` tool will create the following Spice files for you automatically, with the correct paths and naming conventions inside each file:
 
@@ -12,9 +14,7 @@ The `duckpan new` tool will create the following Spice files for you automatical
 - The frontend handlebars and JavaScript files, in the `share/spice/` directory
 - The test file, in the `t/` testing directory
 
-This allows you to focus on what makes your Spice unique.
-
-To use this tool, follow these instructions:
+This allows you to focus on what makes your Spice unique. To use this tool, follow these instructions:
 
 1. After [setting up your environment](https://duck.co/duckduckhack/setup_dev_environment), open your Terminal and enter the root directory of your local repository, `zeroclick-spice\`.
 2. At the command line, type `duckpan new` and hit enter.
