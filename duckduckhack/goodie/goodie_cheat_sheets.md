@@ -168,8 +168,19 @@ You might express consecutive key presses as follows:
 
 We recommend displaying alternatives as follows: 
 
-- As separate code blocks, separated by a forward slash, e.g. `"[?!=]/[?<!]"`
-- For sub-alternatives, wrap in parentheses, e.g. `[Ctrl] ([L]/[P])`
+- For single-key alternatives, wrap in parentheses, e.g. `[Ctrl] ([L]/[P])`
+- For complete alternatives, we recommend replicating the key-value pair. Make an indication in the `val` that it's an alternative:
+	
+	```
+	{
+        "key": "[Ctrl][j]",
+        "val": "Jump"               
+    },
+	{
+        "key": "[Ctrl][J]",
+        "val": "Jump (alternative)"               
+    },
+	```
 
 #### Arrow Keys
 
