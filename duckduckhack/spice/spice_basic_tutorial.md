@@ -4,7 +4,15 @@ In this tutorial, we'll be making a Spice Instant Answer that lets you search fo
 
 ## The Wonderful `duckpan new` Command
 
-This tutorial will walk through each file and line of code necessary to build and test the example Spice. However, for building your own Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions. This allows you to focus on what makes your Spice unique.
+This tutorial will walk through each file and line of code necessary to build and test the example Spice. However, for building your own Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
+
+The `duckpan new` tool will create the following Spice files for you automatically, with the correct paths and naming conventions inside each file:
+
+- The backend Perl file with the right name, in the `DDG/Spice/` directory
+- The frontend handlebars and JavaScript files, in the `share/spice/` directory
+- The test file, in the `t/` testing directory
+
+This allows you to focus on what makes your Spice unique.
 
 To use this tool, follow these instructions:
 
