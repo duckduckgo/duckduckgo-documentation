@@ -6,12 +6,40 @@ This tutorial will show you how to build a Goodie Instant Answer from scratch. I
 
 _Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump at the chance to help._
 
-## Goal
-In this tutorial, we'll be making a Goodie Instant Answer that checks the number of characters in a given search query. The end result  works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will look like this:
+## Automatically Generate Your Goodie Files
 
-<!-- /summary -->
+The following tutorial will walk through each file and line of code necessary to build and test the example Goodie. However, for building your *own* Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
 
-###### chars.pm
+The `duckpan new` tool will create the following Goodie files for you automatically, with the correct paths and naming conventions inside each file:
+
+- The backend Perl file with the right name, in the `DDG/Goodie/` directory
+- The test file, in the `t/` testing directory
+
+*Currently the `duckpan new` command does not automatically generate any [Goodie frontend files](https://duck.co/duckduckhack/goodie_displaying#setting-goodie-display-properties-in-the-frontend)*.
+
+This allows you to focus on what makes your Goodie unique. To use this tool, follow these instructions:
+
+1. After [setting up your environment](https://duck.co/duckduckhack/setup_dev_environment), open your Terminal and enter the root directory of your local repository, `zeroclick-goodies\`.
+2. At the command line, type `duckpan new` and hit enter.
+3. When prompted, enter what you want to call your Goodie.
+
+	*For example, `volume conversion`. (White spaces and character casing are automatically formatted.)*
+
+4. You will see a list of the boilerplate files created for you, each with the proper naming conventions already done:
+
+	```
+	[10:08 PM ... zeroclickinfo-goodies {master}]$ duckpan new                                                        
+	Please enter a name for your Instant Answer : volume conversion                                                                  
+	Created file: lib/DDG/Goodie/VolumeConversion.pm                                                                                 
+	Created file: t/VolumeConversion.t                                                                                               
+	Successfully created Goodie: VolumeConversion
+	```
+
+Congratulations! You've breezed through a lot of typing, files, and naming conventions. In the following tutorial, we'll explain each line of code and how to customize it to your Instant Answer idea.
+
+## The Chars Goodie
+
+In this tutorial, we'll be making a Goodie Instant Answer that checks the number of characters in a given search query. The end result, [chars.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Chars.pm) works [like this](https://duckduckgo.com/?q=chars+How+many+characters+are+in+this+sentence%3F) and will contain the following:
 
 ```perl
 package DDG::Goodie::Chars;
@@ -26,8 +54,9 @@ handle remainder => sub {
     return;
 };
 1;
-
 ```
+
+Let's go through the Chars Goodie line by line.
 
 ## Naming our Goodie Package
 

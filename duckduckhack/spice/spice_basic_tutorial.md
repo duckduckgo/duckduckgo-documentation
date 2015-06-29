@@ -1,12 +1,46 @@
-## Basic Spice Tutorial
+# Basic Spice Tutorial
 
-In this tutorial, we'll be making a Spice Instant Answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server) and the first part, the "backend" component, will look like this:
+In this tutorial, we'll be making a Spice Instant Answer that lets you search for Node.js packages, using the [Node Packaged Modules API](http://registry.npmjs.org/uglify-js/latest). The end result works [like this](https://next.duckduckgo.com/?q=npm+http-server).
 
-<!-- /summary -->
+First, however, you'll learn an easy tool that automates much of the details.
 
-# NPM Spice - Backend (Perl)
+## Automatically Generate Your Spice Files
 
-###### Npm.pm
+The following tutorial will walk through each file and line of code necessary to build and test the example Spice. However, for building your *own* Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
+
+The `duckpan new` tool will create the following Spice files for you automatically, with the correct paths and naming conventions inside each file:
+
+- The backend Perl file with the right name, in the `DDG/Spice/` directory
+- The frontend handlebars and JavaScript files, in the `share/spice/` directory
+- The test file, in the `t/` testing directory
+
+This allows you to focus on what makes your Spice unique. To use this tool, follow these instructions:
+
+1. After [setting up your environment](https://duck.co/duckduckhack/setup_dev_environment), open your Terminal and enter the root directory of your local repository, `zeroclick-spice\`.
+2. At the command line, type `duckpan new` and hit enter.
+3. When prompted, enter what you want to call your Spice Instant Answer.
+
+	*For example, `ron swanson quotes`. White spaces and character casing are automatically formatted.*
+
+4. You will see a list of the boilerplate files created for you, each with the proper naming conventions already done:
+
+	```
+	[09:22 PM ... zeroclickinfo-spice {master}]$ duckpan new                                                          
+	Please enter a name for your Instant Answer : ron swanson quotes                                                                 
+	Created file: lib/DDG/Spice/RonSwansonQuotes.pm                                                                                  
+	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.handlebars                                                       
+	Created file: share/spice/ron_swanson_quotes/ron_swanson_quotes.js                                                               
+	Created file: t/RonSwansonQuotes.t                                                                                               
+	Successfully created Spice: RonSwansonQuotes
+	```
+
+Congratulations! You've breezed through a lot of typing, files, and naming conventions. In the following tutorial, we'll explain each line of code and how to customize it to your Instant Answer idea.
+
+## NPM Spice - Backend (Perl)
+
+We'll start building our Spice on the backend, by first creating a Perl file, [NPM.pm](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Npm.pm). 
+
+Our Perl file is located in [zeroclickinfo-spice/lib/DDG/Spice/](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/lib/DDG/Spice) and will end up containing the following:
 
 ```perl
 package DDG::Spice::Npm;
@@ -26,6 +60,8 @@ handle remainder => sub {
 
 1;
 ```
+
+Let's go through line by line.
 
 ## Naming our Spice Package
 
@@ -194,23 +230,25 @@ The Instant Answer system works like this at the highest level:
 
 # NPM Spice - Frontend (JavaScript)
 
-As mentioned, every Instant Answer requires a Spice callback function. For the *NPM* Instant Answer, the callback function will be named `ddg_spice_npm()` and will be defined in the **npm.js** file.
+As mentioned, every Instant Answer requires a Spice callback function. For the *NPM* Instant Answer, the callback function will be named `ddg_spice_npm()` and will be defined in the [npm.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js) file.
 
-The name of the callback function is determined by the **Npm.pm** Perl module we wrote, which specifies the name of the package, `DDG::Spice::Npm`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg_spice_camel_case`) in order to create the name of our callback function. This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
+The name of the callback function is determined by the **Npm.pm** Perl module we created above, which specifies the name of the package, `DDG::Spice::Npm`. The portion after `DDG::Spice::` is lower cased and converted from camel case to underscore separated (i.e. `DDG::Spice::CamelCase` -> `ddg_spice_camel_case`) in order to create the name of our callback function. 
 
-To clarify:
+This generated name is what the previous `{{callback}}` placeholder will be replaced with. Similarly, if we instead had to use `spice wrap_jsonp_callback`, that will also wrap the JSON returned by the API with a function call to this generated callback name.
+
+In practice:
 
 ```perl
 {{callback}} => ddg_spice_npm
+```
 
 or
 
+```
 { JSON_API_RESPONSE: 1, ... } => ddg_spice_npm( { JSON_API_RESPONSE: 1, ... } );
 ```
 
-The final **npm.js** will look like this:
-
-###### npm.js
+The final [npm.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js) will be located in [zeroclickinfo-spice/share/spice/npm/](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/npm) and end up as follows:
 
 ```javascript
 (function (env) {
@@ -241,7 +279,7 @@ The final **npm.js** will look like this:
 }(this));
 ```
 
-Let's go through it line-by-line:
+Let's go through each line.
 
 ## Invoke an Immediate Function
 
