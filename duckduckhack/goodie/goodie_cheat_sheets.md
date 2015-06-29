@@ -174,7 +174,7 @@ We recommend displaying alternatives as follows:
         "val": "Jump"               
     },
 	{
-        "key": "[Ctrl][J]",
+        "key": "[Ctrl][↑]",
         "val": "Jump (alternative)"               
     },
 	```
