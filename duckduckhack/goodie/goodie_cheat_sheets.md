@@ -6,6 +6,105 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm))
 
+## Cheat Sheet Ideas
+
+Grab one of these ideas from the categories below and then start coding using the instructions below. Let us know that you're working on one by emailing open@duckduckgo.com with your selection: 
+
+Apps  
+Audio  
+Computing  
+Cryptography  
+Currency  
+Dictionary  
+-	[Military Slang](https://en.wiktionary.org/wiki/Appendix:Glossary_of_U.S._Navy_slang)  
+-	[Jive talk](https://en.wikipedia.org/wiki/Glossary_of_jive_talk)  
+-	[How to talk to someone from the nineteen fifties](http://www.citrus.k12.fl.us/staffdev/social%20studies/pdf/slang%20of%20the%201950s.pdf)  
+-	[How to talk to someone from the nineteen twenties](http://thoughtcatalog.com/nico-lang/2013/09/59-quick-slang-phrases-from-the-1920s-we-should-start-using-again/)    
+
+Domain  
+Entertainment    
+-	[Blackjack strategy](http://johnlevandowski.com/wp-content/uploads/2011/04/blackjack6ds17.png)  
+-	[Poker hands](https://en.wikipedia.org/wiki/List_of_poker_hands)  
+
+Finance  
+Food & Drink  
+-	Names of espresso-based drinks   
+-	[Types of italian meats](http://www.igourmet.com/italian-meats.asp)  
+-	Wine/Food pairings  
+-	Wine/Cheese pairings  
+-	~~[Cocktails](https://en.wikipedia.org/wiki/List_of_cocktails)~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1208) by [jppope](https://github.com/jppope))    
+-	Kosher animals  
+-	[Types of scotch](http://www.dramming.com/2011/06/16/10-essential-things-about-scotch-whisky-everybody-should-know/)  
+-	Types of wine  
+-	[Types of liquor](http://classyboozer.com/different-types-of-liquor/)  
+	
+Games  
+-	~~Minecraft commands for PC~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1222) by [kbhat95](https://github.com/kbhat95))  
+	
+Geek  
+-	Superheroes and their superpowers  
+	
+Geography  
+-	Chinese dialects by region/province  
+	
+Health  
+-	Types of sugars and where found  
+-	Vitamins/Minerals and their benefits  
+-	Superfoods and their benefits  
+	
+Images  
+Jobs  
+Literature  
+-	~~Game of Thrones house names~~ ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/game-of-thrones-houses.json) by [zekiel](https://github.com/zekiel/))    
+-	Game of Thrones house slogans  
+-	Game of Thrones house sigils  
+	
+Local  
+Math  
+Movies  
+Music  
+News  
+Politics  
+Productivity  
+-	~~Firefox Awesome bar shortcuts~~  ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/awesome-bar.json) by [domjacko](https://github.com/domjacko)  
+-	~~Imgur shortcuts~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1220) by [RomainLG](https://github.com/RomainLG))  
+-	~~Emacs shortcuts~~ ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/emacs.json) by [punchagan](https://github.com/punchagan))  
+-	~~Photoshop shortcuts~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1203) by [kbhat95](https://github.com/kbhat95))  
+	
+Products  
+Programming  
+Reference  
+-	Car ownership (which companies own which companies)  
+-	[Anniversary themes (paper, cotton, leather, golden, etc.](https://en.wikipedia.org/wiki/Anniversary)     
+-	Greek god names and their dominion   
+-	Roman god names and their dominion   
+-	[Plant zones](http://www.lawn-and-gardening-tips.com/planting-zones.html)  
+-	[Police codes](http://www.radiolabs.com/police-codes.html) 
+	
+Science  
+-	Lightbulb color:temperature   
+-	[VHF Frequencies](https://en.wikipedia.org/wiki/Marine_VHF_radio)  
+	
+Social  
+Software  
+Sports  
+Statistics  
+Sysadmin  
+Tools  
+Travel  
+TV  
+Videos  
+Weather  
+Web Design  
+Words & Games  
+-	[SMS spellings](https://en.wikipedia.org/wiki/SMS_language)  
+-	Military alphabet (Alpha, Bravo, Charlie...)  
+-	[News/politics shorthand SCOTUS, FLOTUS, POTUS](http://www.nytimes.com/1997/10/12/magazine/on-language-potus-and-flotus.html)  
+-	[Secret Service code names over the years](https://en.wikipedia.org/wiki/Secret_Service_codename)  
+-	[Morse Code Alphabet](http://www.scoutscan.com/cubs/morsecode.html)  
+	
+
+
 ## How to Add Your Cheat Sheet
 
 If you have an idea for a cheat sheet, it's easy to add it to the DuckDuckGo Goodie repository. 
