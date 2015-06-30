@@ -2,6 +2,8 @@
 
 We ask that you please use this template when submitting an Instant Answer pull request so we can better understand your changes and help you along when necessary.
 
+## About Your Instant Answer
+
 **What does your Instant Answer do?**
 
 
@@ -37,8 +39,56 @@ We ask that you please use this template when submitting an Instant Answer pull 
 
 **What does the Instant Answer look like? (Provide a screenshot for new or updated Instant Answers)**
 
+## About You
 
-## Checklist
+**What topics are you (as an Instant Answer developer) interested in contributing to or learning about? 
+Please place an 'X' where appropriate.
+
+```
+[] Apps
+[] Audio
+[] Computing
+[] Cryptography
+[] Currency
+[] Dictionary
+[] Domain
+[] Entertainment
+[] Finance
+[] Food & Drink
+[] Games
+[] Geek
+[] Geography
+[] Health
+[] Images
+[] Jobs
+[] Literature
+[] Local
+[] Math
+[] Movies
+[] Music
+[] News
+[] Parking
+[] Politics
+[] Productivity
+[] Products
+[] Programming
+[] Reference
+[] Science
+[] Social
+[] Software
+[] Sports
+[] Statistics
+[] Sysadmin
+[] Tools
+[] Travel
+[] TV
+[] Videos
+[] Weather
+[] Web Design
+[] Words & Games
+```
+
+## Final Checklist
 Please place an 'X' where appropriate.
 
 ```
