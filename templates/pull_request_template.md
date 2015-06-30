@@ -34,59 +34,14 @@ We ask that you please use this template when submitting an Instant Answer pull 
 **Are you having any problems? Do you need our help with anything?**
 
 
-**Where did you hear about DuckDuckHack? (For first time contributors)**
-
-
 **What does the Instant Answer look like? (Provide a screenshot for new or updated Instant Answers)**
 
-## About You
+## For First Time Contributors
 
-**What topics are you (as an Instant Answer developer) interested in contributing to or learning about? 
-Please place an 'X' where appropriate.
+**What types of Instant Answers are you interested in contributing to in the future? (e.g. Cryptography, Video Game, Food, Sports, etc.)**  
 
-```
-[] Apps
-[] Audio
-[] Computing
-[] Cryptography
-[] Currency
-[] Dictionary
-[] Domain
-[] Entertainment
-[] Finance
-[] Food & Drink
-[] Games
-[] Geek
-[] Geography
-[] Health
-[] Images
-[] Jobs
-[] Literature
-[] Local
-[] Math
-[] Movies
-[] Music
-[] News
-[] Parking
-[] Politics
-[] Productivity
-[] Products
-[] Programming
-[] Reference
-[] Science
-[] Social
-[] Software
-[] Sports
-[] Statistics
-[] Sysadmin
-[] Tools
-[] Travel
-[] TV
-[] Videos
-[] Weather
-[] Web Design
-[] Words & Games
-```
+**Where did you find out about DuckDuckHack?**   
+
 
 ## Final Checklist
 Please place an 'X' where appropriate.
