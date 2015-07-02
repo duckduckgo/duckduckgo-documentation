@@ -46,6 +46,7 @@
   - [Templates Reference](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/templates_reference.md)
   - [Sub-templates](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/subtemplates.md)
   - [Handlebars Helpers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/spice/handlebars_helpers.md)
+  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/instant-answer-display/design_styleguide.md)
 
 - **Testing**
   - [Triggers](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/testing/testing_triggers.md)
@@ -64,15 +65,7 @@
 
 - **Resources**
   - [Other Development Environments](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/other_development_environments.md)
+  - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/code_styleguide.md)
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
   - [How to QA an Instant Answer](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/how_to_qa.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md)
-
-- **Styleguides**
-  - [Styleguide Overview](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/styleguide_overview.md)
-  - [Design Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/design_styleguide.md)
-  - [Goodie Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/goodie_styleguide.md)
-  - [Spice Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/spice_styleguide.md)
-  - [Fathead Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/fathead_styleguide.md)
-  - [Longtail Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/longtail_styleguide.md)
-  - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/styleguides/code_styleguide.md)

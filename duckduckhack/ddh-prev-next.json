@@ -151,6 +151,11 @@
 	
 	"handlebars_helpers.md": {
 		"prev": ["subtemplates.md"],
+		"next": ["design_styleguide.md"]
+	},
+	
+	"design_styleguide.md": {
+		"prev": ["handlebars_helpers.md"],
 		"next": [""]
 	},
 	
@@ -201,11 +206,16 @@
 
 	"other_development_environments.md": {
 		"prev": [],
+		"next": ["code_styleguide.md"]
+	},
+	
+	"code_styleguide.md": {
+		"prev": ["other_development_environments.md"],
 		"next": ["common_pitfalls.md"]
 	},
 
 	"common_pitfalls.md": {
-		"prev": ["other_development_environments.md"],
+		"prev": ["code_styleguide.md"],
 		"next": ["how_to_qa.md"]
 	},
 
@@ -216,41 +226,6 @@
 
 	"faq.md": {
 		"prev": ["how_to_qa.md"],
-		"next": ["styleguide_overview.md"]
-	},
-
-	"styleguide_overview.md": {
-		"prev": ["faq.md"],
-		"next": ["design_styleguide.md"]
-	},
-
-	"design_styleguide.md": {
-		"prev": ["styleguide_overview.md"],
-		"next": ["goodie_styleguide.md", "spice_styleguide.md", "fathead_styleguide.md", "longtail_styleguide.md"]
-	},
-
-	"goodie_styleguide.md": {
-		"prev": ["design_styleguide.md"],
-		"next": ["spice_styleguide.md"]
-	},
-
-	"spice_styleguide.md": {
-		"prev": ["goodie_styleguide.md"],
-		"next": ["fathead_styleguide.md"]
-	},
-
-	"fathead_styleguide.md": {
-		"prev": ["spice_styleguide.md"],
-		"next": ["longtail_styleguide.md"]
-	},
-
-	"longtail_styleguide.md": {
-		"prev": ["fathead_styleguide.md"],
-		"next": ["code_styleguide.md"]
-	},
-
-	"code_styleguide.md": {
-		"prev": ["longtail_styleguide.md"],
-		"next": ["preparing_for_a_pull_request.md"]
+		"next": []
 	}
 }
