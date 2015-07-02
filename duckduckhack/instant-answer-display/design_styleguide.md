@@ -20,7 +20,7 @@ To learn about the wide variety of built-in templates, start with the [Templates
 
 ## Built-In Style Elements
 
-Thanks to the use of templates, directly writing HTML is uncommon. However, some Instant Answers will use custom templates. This is usually in the form of [sub-templates](https://duck.co/duckduckhack/templates_overview), and in rare cases, the [`base` template group].
+Thanks to the use of templates, directly writing HTML is uncommon. However, some Instant Answers will use custom templates. This is usually in the form of [sub-templates](https://duck.co/duckduckhack/templates_overview), and in rare cases, the [`base` template group](https://duck.co/duckduckhack/template_groups#base-template-group).
 
 ## Built-In Style Elements
 
