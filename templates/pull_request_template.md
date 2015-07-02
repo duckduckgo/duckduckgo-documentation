@@ -2,6 +2,8 @@
 
 We ask that you please use this template when submitting an Instant Answer pull request so we can better understand your changes and help you along when necessary.
 
+## About Your Instant Answer
+
 **What does your Instant Answer do?**
 
 
@@ -32,13 +34,16 @@ We ask that you please use this template when submitting an Instant Answer pull 
 **Are you having any problems? Do you need our help with anything?**
 
 
-**Where did you hear about DuckDuckHack? (For first time contributors)**
-
-
 **What does the Instant Answer look like? (Provide a screenshot for new or updated Instant Answers)**
 
+## For First Time Contributors
 
-## Checklist
+**What types of Instant Answers are you interested in contributing to in the future? (e.g. Cryptography, Video Game, Food, Sports, etc.)**  
+
+**Where did you find out about DuckDuckHack?**   
+
+
+## Final Checklist
 Please place an 'X' where appropriate.
 
 ```
