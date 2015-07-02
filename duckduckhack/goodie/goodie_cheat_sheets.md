@@ -97,7 +97,7 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
                 "val": "move to tab number #"
             },
             {
-                "key": "[Ctrl] + [wt]",
+                "key": "[Ctrl] [wt]",
                 "val": "move the current split window into its own tab"
             }
             // ...additional entries
@@ -144,7 +144,7 @@ Because cheat sheets display brackets `[ ]` and braces `{ }` as code blocks, exp
 
 ### Formatting Key Presses
 
-Cheat sheet actions often have several key combinations, which you can express in any way you choose. The following are only suggestions; choose the most appropriate format for your subject.
+Cheat sheets often list key combinations, which you can express in any way you choose. The following are only suggestions; choose the appropriate convention for your subject.
 
 #### Single Keys or Commands
 
@@ -152,23 +152,37 @@ There is no special syntax required for the string - for example, `"x"` or `":se
 
 #### Simultaneous Keys (e.g., pressing A and B together)
 
-You might express simultaneous key presses as follows: 
+We recommend expressing simultaneous key presses as follows: 
 
-- As separate code blocks, connected by a plus, e.g. `"[Ctrl] + [v]"`
-- As a single code block, connected by a plus, e.g. `"[Ctrl + v]"`
-- As a single code block, connected by a dash, e.g. `"[C-v]"`
+- As adjacent code blocks, e.g. `"[Ctrl] [v]"`
+- For "*nix-style" cheatsheets (like Emacs), as a single code block with a dash, e.g. `"[C-v]"`
 	
 #### Consecutive Keys (e.g., pressing A, then pressing B)
 
-You might express consecutive key presses as follows:
-
-- As separate code blocks separated by a space, e.g. `"[Ctrl-B] [x]"`
-- As separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
+We recommend expressing consecutive key presses as separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
 	
 #### Alternative Keys (e.g., pressing either A or B)
 
-You can express alternatives as follows:
+We recommend displaying alternatives as follows: 
 
-- As separate code blocks separated by a forward slash, e.g. `"[?!=] / [?<!]"`
-- As separate code blocks separated by "or", e.g. `"[?!=] or [?<!]"`
+- For single-key alternatives, wrap in parentheses, e.g. `[Ctrl] ([L]/[P])`
+- For complete alternatives, we recommend replicating the key-value pair. Make an indication in the `val` that it's an alternative:
+	
+	```
+	{
+        "key": "[Ctrl] [j]",
+        "val": "Jump"               
+    },
+	{
+        "key": "[Ctrl] [↑]",
+        "val": "Jump (alternative)"               
+    },
+	```
+
+#### Arrow Keys
+
+We've found the best way to express arrow keys is directly using arrow ASCII characters (←, ↑, →, ↓). Feel free to copy and paste the characters from here.
+
+For example, instead of `[Shift] [Up]` we recommend `[Shift] [↑]`.
+
 
