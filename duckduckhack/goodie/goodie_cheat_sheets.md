@@ -97,7 +97,7 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
                 "val": "move to tab number #"
             },
             {
-                "key": "[Ctrl][wt]",
+                "key": "[Ctrl] [wt]",
                 "val": "move the current split window into its own tab"
             }
             // ...additional entries
@@ -154,7 +154,7 @@ There is no special syntax required for the string - for example, `"x"` or `":se
 
 We recommend expressing simultaneous key presses as follows: 
 
-- As adjacent code blocks, e.g. `"[Ctrl][v]"`
+- As adjacent code blocks, e.g. `"[Ctrl] [v]"`
 - For "*nix-style" cheatsheets (like Emacs), as a single code block with a dash, e.g. `"[C-v]"`
 	
 #### Consecutive Keys (e.g., pressing A, then pressing B)
@@ -170,11 +170,11 @@ We recommend displaying alternatives as follows:
 	
 	```
 	{
-        "key": "[Ctrl][j]",
+        "key": "[Ctrl] [j]",
         "val": "Jump"               
     },
 	{
-        "key": "[Ctrl][↑]",
+        "key": "[Ctrl] [↑]",
         "val": "Jump (alternative)"               
     },
 	```
@@ -183,6 +183,6 @@ We recommend displaying alternatives as follows:
 
 We've found the best way to express arrow keys is directly using arrow ASCII characters (←, ↑, →, ↓). Feel free to copy and paste the characters from here.
 
-For example, instead of `[Shift][Up]` we recommend `[Shift][↑]`.
+For example, instead of `[Shift] [Up]` we recommend `[Shift] [↑]`.
 
 
