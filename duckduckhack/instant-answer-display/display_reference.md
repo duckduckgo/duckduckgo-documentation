@@ -44,7 +44,9 @@ The `id` should match the name of your callback function. For example, if your c
 
 ## `name` *string* [required]
 
-The name that will be used for your Instant Answer's AnswerBar tab. The Instant Answer Framework will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Instant Answer provides. Here are some examples:
+The name that will be used for your Instant Answer's AnswerBar tab. The Instant Answer Framework will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Instant Answer provides. 
+
+Here are some examples:
 
  <table class="table table-condensed"> 
     <thead>
@@ -76,6 +78,54 @@ The name that will be used for your Instant Answer's AnswerBar tab. The Instant 
         </tr>
     </tbody>
 </table>
+
+Ideally your Instant Answer `name` should be one of the existing topics:
+
+- answer
+- apps
+- audio
+- computing
+- cryptography
+- currency
+- dictionary
+- domain
+- entertainment
+- finance
+- food & drink
+- games
+- geek 
+- geography
+- health 
+- images 
+- jobs
+- literature
+- local
+- math
+- movies
+- music
+- news
+- parking
+- politics
+- producthunt
+- productivity
+- products
+- programming
+- recipes
+- reference
+- science
+- social
+- software
+- special interest
+- sports
+- statistics
+- sysadmin
+- tools
+- travel
+- tv
+- videos
+- weather
+- web design
+- words & games
 
 ------
 
