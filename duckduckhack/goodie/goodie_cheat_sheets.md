@@ -174,15 +174,15 @@ We recommend displaying alternatives as follows:
         "val": "Jump"               
     },
 	{
-        "key": "[Ctrl] [↑]",
+        "key": "[Ctrl] [Spacebar]",
         "val": "Jump (alternative)"               
     },
 	```
 
 #### Arrow Keys
 
-We've found the best way to express arrow keys is directly using arrow ASCII characters (←, ↑, →, ↓). Feel free to copy and paste the characters from here.
+We've found the best way to express arrow keys is directly using arrow ASCII characters (&larr;, &uarr;, &rarr;, &darr;). Feel free to copy and paste the characters from here.
 
-For example, instead of `[Shift] [Up]` we recommend `[Shift] [↑]`.
+For example, instead of **[Shift] [Up]** we recommend **[Shift] [&uarr;]**.
 
 
