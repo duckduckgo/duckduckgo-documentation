@@ -6,10 +6,11 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm))
 
+Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
 
 ## How to Add Your Cheat Sheet
 
-If you have an idea for a cheat sheet, it's easy to add it to the DuckDuckGo Goodie repository. 
+Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie. 
 
 The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). Following the [setup instructions](https://duck.co/duckduckhack/setup_dev_environment) will get you ready to contribute to the repository.
 
