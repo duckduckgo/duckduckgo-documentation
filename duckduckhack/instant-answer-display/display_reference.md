@@ -209,9 +209,7 @@ Template `options` can also be provided to enable or disable features depending 
 
 More about how templates work can be found in the [Template Overview](https://duck.co/duckduckhack/templates_overview).
 
-### Notes for Goodie Instant Answers
-
-Several properties below allow you to specify a *function* datatype, in order to reference a custom handlebars template. If you intend to do this in a Goodie Perl file, you must pass the name **as a *string*** in order to work.
+***Note for Goodie Instant Answers:** Several properties below allow you to specify a function datatype, in order to reference a custom handlebars template. However, if you intend to do this in a Goodie Perl file, you must pass the name *as a string* in order to work.*
 
 <!-- /summary -->
 
