@@ -257,9 +257,9 @@ More about how templates work can be found in the [Template Overview](https://du
 
 - ### `options` *object* [optional]
 
-    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values, or specify sub-templates to use. 
+    Allows you to explicitly disable or enable the [available features](https://duck.co/duckduckhack/templates_reference) of your template using boolean values or by specifying sub-templates to include.
 
-	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template) template to a particular sub-template. 
+	For example, you might set the the `content` feature of the [`basic_info_detail`](https://duck.co/duckduckhack/templates_reference#codebasicinfodetailcode-template) template to a particular sub-template, and enable the `rowHighlight` feature.
 	
 	For example:
 	
