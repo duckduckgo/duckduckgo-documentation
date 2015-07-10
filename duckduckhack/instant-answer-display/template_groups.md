@@ -568,6 +568,12 @@ Using the Places template group also automatically makes the Place [model](https
 - [`places_item`](https://duck.co/duckduckhack/templates_reference#codeplacesitemcode-template)
 - [`places_detail`](https://duck.co/duckduckhack/templates_reference#codeplacesdetailcode-template)
 
+#### Alternative Templates
+
+- [`base_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template)
+	
+	Specify this item template to replace the default `places_item` template and fully customize the tile, while maintaining the unique 'flip' behavior of `places_item`. For detailed usage, see the [templates reference](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template).
+
 #### Places Model and View
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make Instant Answers using Places valuable and delightful.

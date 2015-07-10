@@ -29,6 +29,7 @@ The list of built-in templates includes:
 - [`basic_info_detail`](#codebasicinfodetailcode-template)
 - [`places_item`](#codeplacesitemcode-template)
 - [`places_detail`](#codeplacesdetailcode-template)
+- [`base_flipping_item`](#codebaseflippingitemcode-template)
 - [`list_detail`](#codelistdetailcode-template)
 - [`record`](#coderecordcode-template)
 - [`media_item`](#codemediaitemcode-template)
@@ -643,8 +644,82 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ### Example Usage
 
-- [Parking Panda](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js): search for [parking in new york](https://duckduckgo.com/?q=parking+in+new+york).
 - Local results (built-in to DDG): search for [cafes near Ann Arbor](https://duckduckgo.com/?q=cafes+near+ann+arbor).
+
+### Template Groups
+
+- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
+
+------
+
+## `base_flipping_item` Template
+
+This template is used to replace `places_item` with custom sub-templates for the front and back of the item tile. This template maintains the unique 'flip' behavior of `places_item`, while allowing full customization of both sides.
+
+### Template Diagram
+
+#### 'Front'
+
+```
++--------------------+
+
+
+
+    front_content
+
+
+
++--------------------+
+```
+
+#### 'Back'
+
+This view is displayed when the 'front' is clicked, together with the map (below).
+
+```
++--------------------+
+
+
+
+    back_content
+
+
+
++--------------------+
+```
+
+### Available Features
+
+#### 'Front' of each item:
+
+- `front_content` [required] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
+
+#### 'Back' of each item: (displayed upon click)
+
+- `back_content` [required] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
+
+#### Map View
+
+As with `places_item`, map view is displayed when the 'front' is clicked, as it displays the 'back'.
+
+### Example Usage
+
+- [Parking Panda](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js): search for [parking in new york](https://duckduckgo.com/?q=parking+in+new+york).
+	
+	In `parking.js`, the `places` template group is specified, and override the `item` template. Then the two [custom sub-templates](https://duck.co/duckduckhack/subtemplates) are specified under `options`.
+
+    ```javascript
+    templates: {
+        group: 'places',
+        item: 'base_flipping_item',
+        options: {
+            front_content: Spice.parking.item_front,
+            back_content: Spice.parking.item_back
+        }
+    }
+    ```
+
+- [GetEvents](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/get_events/get_events.js): search for [events in new york](https://duckduckgo.com/?q=events+in+new+york&ia=list)
 
 ### Template Groups
 
