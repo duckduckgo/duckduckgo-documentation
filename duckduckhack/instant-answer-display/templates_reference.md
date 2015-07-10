@@ -723,7 +723,7 @@ As with `places_item`, map view is displayed when the 'front' is clicked, as it 
 
 ### Template Groups
 
-- [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
+- Used with [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
 
 ------
 
