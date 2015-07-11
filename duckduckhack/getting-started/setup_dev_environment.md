@@ -30,10 +30,10 @@ Next, you'll need to get an account for Codio:
 
 *Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
 
-1. Go to https://codio.com and click "**Sign Up**", at the top right corner.
+1. Go to https://codio.com and click "**Get Started**", at the top right corner.
 2. Click "**Sign Up via GitHub**".
-3. Enter your GitHub login details and then click"**Sign In**".
-4. Click "**Authorize Application**" to continue.
+3. If you aren't already signed into GitHub, enter your GitHub login details and then click "**Sign In**".
+4. Click "**Authorize application**" to continue.
 5. In the new screen, enter the required details and click "**Create Account**".
 
 **Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
@@ -50,7 +50,7 @@ Next, you'll need to get an account for Codio:
 
     ![Codio Fork](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork.png&f=1)
 
-3. In the pop-up window, select "**Clone both the Project and its Box**".
+3. In the pop-up window, select the "**Box & Project**" option and click "**Continue**".
 
     ![Codio Fork Both](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckpan%2Fassets%2Fcodio_fork_both.png&f=1)
 
@@ -71,9 +71,10 @@ By now you should have [determined the Instant Answer type](https://duck.co/duck
     - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
     - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
     - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
-2. Do you see your username in the top right corner?
-    - **Yes**? Perfect. Move on to the next step.
-    - **No**? Click "**Sign In**", then enter your details and click "**Sign In**".
+2. Do you see your user portrait or "**Sign up**" and "**Sign in**" buttons in the top right corner?
+    - **User Portrait**? Perfect. Move on to the next step.
+    - **Sign up/in Buttons**? Click "**Sign In**", then enter your details and click "**Sign In**".
+    - **A portrait that's not mine**? Whoops! Click the portrait to see the username. If it's yours, you're good to go. If not, click Sign out, and then sign in with your username and password.
 3. Click "**Fork**", near the top-right corner.
 4. Wait while the repo forks...
 5. You should see a page that looks nearly identical to the repo home page you were just on. The URL should be different though, it should look like **`https://github.com/yourGitHubUsername/zeroclickinfo-xxxxx`**. This is the URL for your personal copy of the DuckDuckHack code.
