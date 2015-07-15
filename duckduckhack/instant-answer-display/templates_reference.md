@@ -29,6 +29,7 @@ The list of built-in templates includes:
 - [`basic_info_detail`](#codebasicinfodetailcode-template)
 - [`places_item`](#codeplacesitemcode-template)
 - [`places_detail`](#codeplacesdetailcode-template)
+- [`basic_flipping_item`](#codebaseflippingitemcode-template)
 - [`base_flipping_item`](#codebaseflippingitemcode-template)
 - [`list_detail`](#codelistdetailcode-template)
 - [`record`](#coderecordcode-template)
@@ -652,9 +653,129 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 
 ------
 
+## `basic_flipping_item` Template
+
+This template is used to replace `places_item` on the front and back of the item tile. This template maintains the unique 'flip' behavior of `places_item`.
+
+### Template Diagram
+
+#### 'Front'
+
+These properties are passed to the template inside a `data_front` object (e.g. `data_front.title`).
+
+```
++--------------------+
+
+
+    icon
+    title, altsubtitle
+    subtitle
+    footer_content
+
+
++--------------------+
+```
+
+#### 'Back'
+
+This view is displayed when the 'front' is clicked, together with the map (below). These properties are passed to the template inside a `data_back` object (e.g. `data_back.title`).
+
+```
++--------------------+
+
+
+    icon
+    title, altsubtitle
+    subtitle
+    footer_content
+
+
++--------------------+
+```
+
+### Available Features
+
+#### 'Front' of each item:
+
+These properties are passed to the template inside a `data_front` object (e.g. `data_front.title`).
+
+- `icon` [optional]
+- `title` [optional]
+- `altsubtitle` [optional]
+- `aubtitle` [optional]
+- `footer_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
+
+#### 'Back' of each item: (displayed upon click)
+
+These properties are passed to the template inside a `data_back` object (e.g. `data_back.title`).
+
+- `icon` [optional]
+- `title` [optional]
+- `altsubtitle` [optional]
+- `aubtitle` [optional]
+- `footer_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
+
+#### Map View
+
+As with `places_item`, map view is displayed when the 'front' is clicked, as it displays the 'back'.
+
+### Example Usage
+
+- [GetEvents](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/get_events/get_events.js): search for [events in new york](https://duckduckgo.com/?q=events+in+new+york&ia=list)
+
+	In [`get_events.js`](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/get_events/get_events.js), the `places` template group is specified, and overrides the `item` template. 
+
+    ```javascript
+    templates: {
+        group: 'places',
+        item: 'basic_flipping_item'
+    }
+    ```
+
+	The `normalize` function returns the data for each side, contained within the `data_front` and `data_back` properties:
+	
+	```javascript
+	return {
+		data_front: {
+		    showPin: true,
+		    title: item.name,
+		    venue: item.venue,
+		    image: item.image_large_url,
+		    altSubtitle: formatSubtitleString(item),
+
+		    footer_content: Spice.get_events.foot_front,
+
+		    footLines: '4',
+		    titleClass: 'tile__title--3 tx--16 tx--bold mg--none',
+		    altSubClass: 'tx--13 tx-clr--grey'
+		},
+		data_back: {
+		    title: item.name,
+		    url: buildUrl(item.id),
+		    description: item.description ? DDG.strip_html(item.description) : 'No description available.',
+
+		    footer_content: Spice.get_events.foot_back,
+
+		    titleClass: 'tile__title--1 tx--16 tx--bold'
+		},
+		city: item.venue.city,
+		place: item.venue.name,
+		lat: item.venue.lat,
+		lon: item.venue.lng
+	};
+	```
+
+### Template Groups
+
+- Used with [Places](https://duck.co/duckduckhack/template_groups#places-template-group)
+
+------
+
 ## `base_flipping_item` Template
 
 This template is used to replace `places_item` with custom sub-templates for the front and back of the item tile. This template maintains the unique 'flip' behavior of `places_item`, while allowing full customization of both sides.
+
+**Use as a last resort** due to the large amount of upfront work and ongoing maintenance involved. Please contact us at [open@duckduckgo.com](mailto:open@duckduckgo.com) *before* using this template.
 
 ### Template Diagram
 
@@ -718,8 +839,6 @@ As with `places_item`, map view is displayed when the 'front' is clicked, as it 
         }
     }
     ```
-
-- [GetEvents](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/get_events/get_events.js): search for [events in new york](https://duckduckgo.com/?q=events+in+new+york&ia=list)
 
 ### Template Groups
 

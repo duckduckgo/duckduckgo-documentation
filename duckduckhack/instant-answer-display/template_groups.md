@@ -570,9 +570,10 @@ Using the Places template group also automatically makes the Place [model](https
 
 #### Alternative Templates
 
+Specify these *item* templates to replace the default `places_item` template, while maintaining the unique 'flip' behavior of `places_item`. 
+
+- [`basic_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebasicflippingitemcode-template)
 - [`base_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template)
-	
-	Specify this item template to replace the default `places_item` template and fully customize the tile, while maintaining the unique 'flip' behavior of `places_item`. For detailed usage, see the [templates reference](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template).
 
 #### Places Model and View
 
