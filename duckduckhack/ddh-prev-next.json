@@ -1,11 +1,16 @@
 {
 	"ddh-intro.md": {
 		"prev": [],
+		"next": ["contributing.md"]
+	},
+	
+	"contributing.md": {
+		"prev": [ddh-intro.md],
 		"next": ["determine_your_instant_answer_type.md"]
 	},
 
 	"determine_your_instant_answer_type.md": {
-		"prev": ["ddh-intro.md"],
+		"prev": ["contributing.md"],
 		"next": ["setup_dev_environment.md"]
 	},
 
