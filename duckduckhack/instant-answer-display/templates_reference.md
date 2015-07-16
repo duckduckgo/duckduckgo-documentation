@@ -702,7 +702,7 @@ These properties are passed to the template inside a `data_front` object (e.g. `
 - `icon` [optional]
 - `title` [optional]
 - `altsubtitle` [optional]
-- `aubtitle` [optional]
+- `subtitle` [optional]
 - `footer_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 #### 'Back' of each item: (displayed upon click)
@@ -712,7 +712,7 @@ These properties are passed to the template inside a `data_back` object (e.g. `d
 - `icon` [optional]
 - `title` [optional]
 - `altsubtitle` [optional]
-- `aubtitle` [optional]
+- `subtitle` [optional]
 - `footer_content` [optional] [*sub-template*](https://duck.co/duckduckhack/subtemplates)
 
 #### Map View
