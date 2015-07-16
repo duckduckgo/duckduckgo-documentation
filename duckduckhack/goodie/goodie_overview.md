@@ -29,3 +29,9 @@ Goodie Cheat Sheets are the quickest way to make a live contribution, and a grea
 - Goodies should use **less than 1MB** in memory. Memory usage greater than 1MB will require review by the community.
 
 Most Goodies shouldn't have a problem, but if you think your idea might run into these constraints, we're happy to help you think through it. Feel free to email us at [open@duckduckgo.com](mailto:open@duckduckgo.com).
+
+## Let Us Know What You're Working On
+
+**Before you start coding your new Instant Answer, let us know your plans.** By involving us early we can provide guidance and potentially save you a lot of time and effort. 
+
+Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com) with what idea you're working on and how you're thinking of going about it.

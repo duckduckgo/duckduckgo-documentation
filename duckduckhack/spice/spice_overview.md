@@ -55,3 +55,9 @@ A typical Spice Instant Answer requires several files to function properly.
 - The frontend files (JS, Handlebars, CSS) discussed later go in the **share** directory: `share/spice/instant_answer_name/`
 
 **\*\*Note** : The file and folder names must adhere to our naming conventions (covered later) in order for everything to function properly.
+
+## Let Us Know What You're Working On
+
+**Before you start coding your new Instant Answer, let us know your plans.** By involving us early we can provide guidance and potentially save you a lot of time and effort. 
+
+Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com) with what idea you're working on and how you're thinking of going about it.
