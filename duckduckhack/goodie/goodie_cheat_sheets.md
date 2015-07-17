@@ -214,14 +214,14 @@ Food & Drink
 -	[Types of italian meats](http://www.igourmet.com/italian-meats.asp)  
 -	Wine/Food pairings  
 -	Wine/Cheese pairings  
--	~~[Cocktails](https://en.wikipedia.org/wiki/List_of_cocktails)~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1208) by [jppope](https://github.com/jppope))    
+-	<del>[Cocktails](https://en.wikipedia.org/wiki/List_of_cocktails)</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1208) by [jppope](https://github.com/jppope))    
 -	Kosher animals  
 -	[Types of scotch](http://www.dramming.com/2011/06/16/10-essential-things-about-scotch-whisky-everybody-should-know/)  
 -	Types of wine  
 -	[Types of liquor](http://classyboozer.com/different-types-of-liquor/)  
 	
 Games  
--	~~Minecraft commands for PC~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1222) by [kbhat95](https://github.com/kbhat95))  
+-	<del>Minecraft commands for PC</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1222) by [kbhat95](https://github.com/kbhat95))  
 	
 Geek  
 -	Superheroes and their superpowers  
@@ -237,7 +237,7 @@ Health
 Images  
 Jobs  
 Literature  
--	~~Game of Thrones house names~~ ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/game-of-thrones-houses.json) by [zekiel](https://github.com/zekiel/))    
+-	<del>Game of Thrones house names</del> ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/game-of-thrones-houses.json) by [zekiel](https://github.com/zekiel/))    
 -	Game of Thrones house slogans  
 -	Game of Thrones house sigils  
 	
@@ -248,10 +248,10 @@ Music
 News  
 Politics  
 Productivity  
--	~~Firefox Awesome bar shortcuts~~  ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/awesome-bar.json) by [domjacko](https://github.com/domjacko)  
--	~~Imgur shortcuts~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1220) by [RomainLG](https://github.com/RomainLG))  
--	~~Emacs shortcuts~~ ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/emacs.json) by [punchagan](https://github.com/punchagan))  
--	~~Photoshop shortcuts~~ ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1203) by [kbhat95](https://github.com/kbhat95))  
+-	<del>Firefox Awesome bar shortcuts</del>  ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/awesome-bar.json) by [domjacko](https://github.com/domjacko)  
+-	<del>Imgur shortcuts</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1220) by [RomainLG](https://github.com/RomainLG))  
+-	<del>Emacs shortcuts</del> ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/emacs.json) by [punchagan](https://github.com/punchagan))  
+-	<del>Photoshop shortcuts</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1203) by [kbhat95](https://github.com/kbhat95))  
 	
 Products  
 Programming  
@@ -284,5 +284,5 @@ Words & Games
 -	[News/politics shorthand SCOTUS, FLOTUS, POTUS](http://www.nytimes.com/1997/10/12/magazine/on-language-potus-and-flotus.html)  
 -	[Secret Service code names over the years](https://en.wikipedia.org/wiki/Secret_Service_codename)  
 -	[Morse Code Alphabet](http://www.scoutscan.com/cubs/morsecode.html)  
-	
+
 
