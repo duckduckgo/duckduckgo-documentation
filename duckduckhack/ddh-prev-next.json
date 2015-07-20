@@ -5,7 +5,7 @@
 	},
 	
 	"contributing.md": {
-		"prev": [ddh-intro.md],
+		"prev": ["ddh-intro.md"],
 		"next": ["determine_your_instant_answer_type.md"]
 	},
 
