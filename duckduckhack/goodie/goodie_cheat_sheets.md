@@ -22,7 +22,7 @@ Once you're all set up, you'll be one file away from submitting your cheat sheet
 
 ### Create a JSON File
 
-Instead of creating an entirely new Instant Answer, you simply need to add **one JSON file** to the existing json folder in the [Cheat Sheets JSON directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets/json).
+Instead of creating an entirely new Instant Answer, you simply need to add **one JSON file** to the existing `/json` folder in the [Cheat Sheets share directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets/json).
 
 To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodies` repository directory. Then use the file tree to click into the `/share/goodie/cheat_sheets` directory. Then click the **json** folder. 
 
