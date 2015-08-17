@@ -2,8 +2,8 @@
 
 There are several options for contributing to DuckDuckHack, explained below. If you have any questions at any point, feel free to ask on one of our community channels:
 
+- [Request invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe)
 - [DuckDuckHack mailing list](https://duck.co/redir/?u=https%3A%2F%2Fwww.listbox.com%2Fsubscribe%2F%3Flist_id%3D197814)
-- [Gitter chat](https://duck.co/redir/?u=https%3A%2F%2Fgitter.im%2Fduckduckgo%2FIdeas)
 - Do not hesitate to email us directly at [open@duckduckgo.com](mailto:open@duckduckgo.com).
 
 ## New? Make Your First Contribution Today
