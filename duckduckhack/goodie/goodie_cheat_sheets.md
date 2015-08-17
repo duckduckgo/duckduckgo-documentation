@@ -167,7 +167,7 @@ We recommend expressing consecutive key presses as separate code blocks separate
 
 We recommend displaying alternatives as follows: 
 
-- For single-key alternatives, wrap in parentheses, e.g. `[Ctrl] ([L]/[P])`
+- For single-key alternatives, wrap in parentheses, e.g. `[Ctrl] ( [L] / [P] )`
 - For complete alternatives, we recommend replicating the key-value pair. Make an indication in the `val` that it's an alternative:
 	
 	```
