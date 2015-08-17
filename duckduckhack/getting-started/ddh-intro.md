@@ -1,6 +1,6 @@
 # Welcome to DuckDuckHack!
 
-We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers". To get started, please request an invite to our Slack team. You may join multiple Slack channels to discuss your Instant Answer ideas with others who may have the same interests! 
+We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers". To get started, please [request an invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe). You may join multiple Slack channels to discuss your Instant Answer ideas with others who may have the same interests! 
 
 - [Request Slack invite](mailto:QuackSlack@duckduckgo.com?subject=AddMe)
 
