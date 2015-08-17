@@ -1,6 +1,6 @@
 # Fathead Instant Answers  
 
-**If you have questions about Fathead, ask our [Fathead Chat room](https://gitter.im/duckduckgo/zeroclickinfo-fathead)**  
+**If you have questions, [request an invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe) and we'll be happy to chat!**  
 
 Fatheads are key-value Instant Answers backed by a database. The keys of the database are typically words or phrases, and they are also used as the triggers for the Instant Answer. When a database key is queried, the corresponding row from the database is returned, which is typically a paragraph of text. Developing a Fathead Instant Answer entails writing a program that generates an **output.txt** file. This tab-delimited file indicates the keys and values for the database, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
 
