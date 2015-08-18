@@ -52,14 +52,26 @@ Our Perl file is located in [zeroclickinfo-spice/lib/DDG/Spice/](https://github.
 package DDG::Spice::Npm;
 # ABSTRACT: Returns package information from npm package manager's registry.
 
+use strict;
 use DDG::Spice;
 
-triggers startend => 'npm';
+primary_example_queries "npm underscore";
+description "Shows an NPM package";
+name "NPM";
+code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Npm.pm";
+icon_url "/i/npmjs.org.ico";
+topics "sysadmin", "programming";
+category "programming";
+attribution github  => ['https://github.com/remixz', 'zachbruggeman'],
+            twitter => ['https://twitter.com/zachbruggeman', 'zachbruggeman'];
+
+triggers startend => 'npm', 'nodejs';
+triggers start => 'npm install';
 
 spice to => 'http://registry.npmjs.org/$1/latest';
 spice wrap_jsonp_callback => 1;
 
-handle remainder => sub {
+handle remainder_lc => sub {
     return $_ if $_;
     return;
 };
@@ -94,23 +106,40 @@ use DDG::Spice;
 
 **Note:** Right after the above line, you should include any Perl modules that you'll be leveraging to help generate the answer. **Make sure** you add those modules to the `dist.ini` file in this repository. If you're not using any additional modules, carry on!
 
+## Define the Meta Properties
+
+The meta properties assist in the display, classification, and attribution of your Instant Answer. Some of these properties are self-explanatory; all are detailed in the [metadata section](https://duck.co/duckduckhack/metadata).
+
+```perl
+primary_example_queries "npm underscore";
+description "Shows an NPM package";
+name "NPM";
+code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Npm.pm";
+icon_url "/i/npmjs.org.ico";
+topics "sysadmin", "programming";
+category "programming";
+attribution github  => ['https://github.com/remixz', 'zachbruggeman'],
+            twitter => ['https://twitter.com/zachbruggeman', 'zachbruggeman'];
+```
+
+For now, feel free to copy, paste, and edit these values into your file.
+
 ## Define the Trigger Word(s)
 
 On the next line, type:
 
 ```perl
-triggers startend => 'npm';
+triggers startend => 'npm', 'nodejs';
+triggers start => 'npm install';
 ```
 
 **triggers** are keywords/phrases that tell us when to make the Instant Answer run. When a particular *trigger word* (or phrase) is part of a search query, it tells DuckDuckGo to *trigger* the Instant Answer(s) that have indicated they should trigger for the given word (or phrase).
 
 <!-- /summary -->
 
-In this case there is one trigger word: "**npm**".
+Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, so it would trigger our Spice because the **startend** keyword says, "Make sure these *trigger words* are at the *start*, or the *end*, of the query." 
 
-Let's say someone searched "**npm uglify-js**". "**npm**" is the *first* word, so it would trigger our Spice because the **startend** keyword says, "Make sure the *trigger word* is at the *start*, or the *end*, of the query."
-
-There are several other keywords like **startend** which will be covered shortly. The **=>** symbol is there to separate the trigger words from the keywords (for readability).
+For the second trigger line, `triggers start` defines phrases that can be found at the start of a query. The **=>** symbol is there to separate the trigger words from the keywords (for readability). More on triggers can be found in the [triggers overview](https://duck.co/duckduckhack/spice_triggers).
 
 ### Triggers in Multiple Languages 
 
@@ -261,21 +290,25 @@ The final [npm.js](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master
     "use strict";
     env.ddg_spice_npm = function(api_result){
 
-        if (api_result.error) {
+        if (!api_result || api_result.error) {
             return Spice.failed('npm');
         }
 
         Spice.add({
             id: "npm",
-            name: "NPM",
+            name: "Software",
             data: api_result,
             meta: {
-                sourceName: "npmjs.org",
+                sourceName: "npmjs",
                 sourceUrl: 'http://npmjs.org/package/' + api_result.name
             },
+            normalize: function(item) {
+                ...
+            },
+
             templates: {
-                group: 'base',
-                options:{
+                group: 'text',
+                options: {
                     content: Spice.npm.content,
                     moreAt: true
                 }
@@ -333,17 +366,22 @@ Moving on, the next part is very important, it defines how the Spice result shou
 ###### npm.js (continued)
 
 ```javascript
+        ...
         Spice.add({
             id: "npm",
-            name: "NPM",
+            name: "Software",
             data: api_result,
             meta: {
-                sourceName: "npmjs.org",
+                sourceName: "npmjs",
                 sourceUrl: 'http://npmjs.org/package/' + api_result.name
             },
+            normalize: function(item) {
+                ...
+            },
+
             templates: {
-                group: 'base',
-                options:{
+                group: 'text',
+                options: {
                     content: Spice.npm.content,
                     moreAt: true
                 }
@@ -351,31 +389,13 @@ Moving on, the next part is very important, it defines how the Spice result shou
         });
 ```
 
-Here we make a call to the `Spice.add()` function, which operates on an input object that we normally define inside the function call. Let's go over each of the parameters specified in the object we give to `Spice.add()`:
+Here we make a call to the `Spice.add()` function, which operates on an input object that we normally define inside the function call. 
 
-<!-- /summary -->
+Full documentation of these properties can be found at the [display reference](https://duck.co/duckduckhack/display_reference). A few notes in particular:
 
-- `id` is the unique identifier for your Spice Instant Answer, as convention, we use the name of the spice, just like we do for the callback function.
-
-- `name` is the text to be used for the Spice's AnswerBar tab.
-
-- `data` is the object (meaning it can be an array, because they're technically objects too) that is passed along to the Handlebars template. In this case, the *context* of the NPM template will be the `api_result` object. This is very important to understand because **only the data passed along to the template is accessible to the template**. In most cases the `data` parameter should be set to `api_result` so all the data returned from the API is accessible to the template.
-
-- `meta:{...}` is used to provide meta-data about the Instant Answer. This is used for the MetaBar (which appears above the tiles when multiple results are returned) and also for the "More at" link which appears in the detail area of a single result Instant Answer:
-
-    + `sourceName` is the name of the source for the "**More at <source>**" link that's displayed for attribution purposes.
-
-    + `sourceUrl` is the target of the "**More at**" link. It's the page that the user will click through to and is intended to provide the user with further information related to the Instant Answer.
-
-- `templates:{...}` is used to specify which template group, templates and sub-templates are to be used for displaying your Spice Instant Answer:
-
-    + `group` is used to specify the template group that we are using. Here, we're using the built-in, **'base'** template group. Doing this lets the templating system know which default, built-in templates should be used for the tile view and detail area, when they are present.
-
-    + `options:{...}` is used to specify certain things about our templates. Some templates have components which can be turned on and off and some have the ability to include a sub-template, called `content`. In our case, we're indicating the template to be used for `content` and that the `moreAt` component should be turned on.
-
-        * For `content` we pass along a reference to our handlebars template, `Spice.npm.content`. The templates contained in each Spice's share directory are pre-compiled and added to the global `Spice` object whenever a Spice Instant Answer is triggered. In order to namespace all the templates, we use a naming hierarchy, so `Spice.npm.content` references the **content.handlebars** template located in the **zeroclickinfo-spice/share/spice/npm/** directory.
-
-        * Seeing as we've provided a `sourceName` and `sourceURL`, we have the necessary information to create a "**More at**" link and so we tell the template system to enable the creation of it by setting the `moreAt` flag to `true`.
+- [**`data`**](https://duck.co/duckduckhack/display_reference#codedatacode-emobjectem-required) is the object or array that is passed along (item by item, if iterable) to the handlebars template. In most cases the `data` parameter should be set to `api_result` so all the data returned from the API is accessible to the template.
+- [**`normalize`**](https://duck.co/duckduckhack/display_reference#codenormalizecode-emfunctionem-optional) is an optional function that is useful for "pre-processing" each item in `data` before it is used by the template.
+- [**`templates`**](https://duck.co/duckduckhack/display_reference#codetemplatescode-emobjectem-required) specifies the template group, templates, and other display options to apply when rendering the results to the DuckDuckGo AnswerBar. Here, we use the [Text Template Group](https://duck.co/duckduckhack/template_groups#text-template-group).
 
 ## Global Import
 
@@ -386,45 +406,35 @@ Here we make a call to the `Spice.add()` function, which operates on an input ob
 
 Lastly, we close our callback function expression, as well as our module, and we "import" the global scope, via `this`, as the input to our module. This means within the module, we can access the global scope using the `env` variable defined at the very beginning.
 
-## Define our Handlebars Template
+## Defining Templates
 
-At this point, the rendering of the Spice Instant Answer changes context from JavaScript to Handlebars.js. As mentioned, our `Spice.add()` call specifies our template and the **context** for the template, so now `Spice.add()` executes the template function using `data` as the input. Let's look at the NPM Instant Answer's Handlebars template to see how it displays the Instant Answer result:
+At this point, the rendering of the Spice Instant Answer changes context from JavaScript to Handlebars.js. As mentioned, our `Spice.add()` call specifies our template group and the **context** for the template.
 
-<!-- /summary -->
+We specified the [Text Template Group](https://duck.co/duckduckhack/template_groups#text-template-group). This is a preset, which automatically picks the `text_item` and `text_detail` for multiple and single results, respectively. Practically speaking, the NPM Spice by its nature can only return one result at a time - hence just `text_detail`.
 
-###### content.handlebars
+### Creating a Custom Sub-Template
+
+The [`text_detail` template](https://duck.co/duckduckhack/templates_reference#codetextdetailcode-template) has an ability to pass a `content` sub-template. We pass it a custom handlebars template that we created for this Instant Answer. It is located at [`spice/npm/content.handlebars`](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/) and is thus compiled into a handlebars function titled `Spice.npm.content` ([explained here](https://duck.co/duckduckhack/subtemplates#custom-subtemplates)).
+
+Let's quickly look at the file  [`content.handlebars`](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/content.handlebars) to see how it displays the Instant Answer result. Detailed information can be found in the [sub-templates section](https://duck.co/duckduckhack/subtemplates).
 
 ```html
-<h5>
-    {{name}} ({{version}})
-</h5>
-<div>{{description}}</div>
 <pre>$ npm install {{name}}</pre>
 ```
 
-As you can see, this is a special type of HTML template where all of `api_result`'s properties (e.g., `version`, `description`) can be accessed by wrapping their respective names in double curly braces. This is possible, because we passed along the `api_result` object (containing all the JSON) to the `data` parameter, which becomes the **context** for our template.
-
-This is what our JSON response looks like, and our template refers by name to the properties of our JSON object:
-
-###### Sample API response from NPM
+As you can see, we access the `name` property of each item. This is possible because it was present in the `data` property, to which we directly passed this `api_result`. 
 
 ```json
 {
 
     "name": "http-server",
     "version": "0.6.1",
-    "author": {
-        "name": "Nodejitsu",
-        "email": "support@nodejitsu.com"
-    },
-    "description": "a simple zero-configuration command-line http server",
+    "author": ...
     ...
 }
 ```
 
-For the NPM Spice, we have created a basic HTML skeleton and filled it in with the some useful information, by indicating which variables should go where. `{{name}}`, `{{version}}` and `{{description}}` can also be thought of as placeholders, which will be replaced by their respective values in `api_result`.
-
-**Note:** When dealing with the detail area, an `<h5>` tag is the biggest heading tag you should use.
+With this sub-template added, our NPM Spice frontend is complete.
 
 ## All Done!
 
@@ -432,12 +442,16 @@ And that's it, you're done! You now have a working Spice Instant Answer! The bac
 
 ## What We've Accomplished
 
-We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`, named `Npm.pm`, which defines the API to use and the triggers for our Spice and we've created **two** files in the Spice share directory, `share/spice/npm/`:
+We've created **one** file in the Spice lib directory, `lib/DDG/Spice/`: 
 
-1. `npm.js` - which delegates the API's response and calls `Spice.add()`
-2. `content.handlebars` - which specifies the Instant Answer's HTML structure and determines which properties of the API response are placed into the HTML result
+- `Npm.pm` - defines the API to use and the triggers for our Spice 
 
-Again, the Spice Instant Answer system works like so:
+We've created **two** files in the Spice share directory, `share/spice/npm/`:
+
+- `npm.js` - delegates the API's response and calls `Spice.add()`
+- `content.handlebars` - specifies the Instant Answer's HTML structure and determines which properties of the API response are placed into the HTML result
+
+To recap, the Spice Instant Answer system works like so:
 
 - First, DuckDuckGo breaks down the query (search terms) into separate words.
 
