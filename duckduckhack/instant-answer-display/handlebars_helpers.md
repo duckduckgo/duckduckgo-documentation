@@ -264,3 +264,20 @@ Example:
 **text**:  *string*,  text to shorten
 
 **limit**:  *number*,  maximum length of shortened string
+
+## Creating Custom Helpers
+
+Of course, since we're using [Handlebars](http://handlebarsjs.com/), you can create your own helpers as well. Simply define your helper alongside your frontend callback. For example, see how the *Alternative To* Instant Answer defines the `AlternativeTo_getPlatform` helper in [`alternative_to.js`](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js):
+
+
+```javascript
+    env.ddg_spice_alternative_to = function(api_result) {
+        ...
+    };
+
+    Handlebars.registerHelper("AlternativeTo_getPlatform", function (platforms) {
+        return (platforms.length > 1) ? "Multiplatform" : platforms[0];
+    });
+```
+
+This handlebars helper is very simple: it takes an array as input and depending on the length, returns either the first element in the array, or if more than one element exists, returns the string "Multiplatforms". You can learn more about helpers on the [Handlebars documentation](http://handlebarsjs.com/).
