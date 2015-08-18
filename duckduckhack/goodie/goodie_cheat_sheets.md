@@ -14,13 +14,7 @@ Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add 
 
 The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). Following the [setup instructions](https://duck.co/duckduckhack/setup_dev_environment) will get you ready to contribute to the repository.
 
-After [setting up your environment](https://duck.co/duckduckhack/setup_dev_environment), you'll be ready with the following:
-
-- A GitHub account
-- A Codio machine
-- A fork of the Goodies repository
-
-Once you have those three, you'll be one file away from submitting your cheat sheet to appear on DuckDuckGo.
+After [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment, you'll be one file away from submitting your cheat sheet to appear on DuckDuckGo.
 
 ### Create a JSON File
 
