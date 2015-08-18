@@ -667,7 +667,7 @@ More about using models and their properties can be found in their respective [t
 
 If you need to fire off an event handler when a tile is clicked or when your Instant Answer's tab initially opens, you can handle these events with a callback function.
 
-- ### `onItemSelect` *function*
+- ### `onItemSelected` *function*
 
 	This event occurs each time a tile is selected with a click.
 
