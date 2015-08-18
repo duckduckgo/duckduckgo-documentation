@@ -2,29 +2,29 @@
 
 When creating [custom handlebars sub-templates](https://duck.co/duckduckhack/subtemplates) for your Instant Answer, you have access to a variety of built-in helper functions. In addition to the standard [handlebars helpers](http://handlebarsjs.com/#helpers), the following helpers are provided as part of the Instant Answer framework:
 
-- [`#concat`](#concat): Concatenates all the elements in a collection
+- [`#concat`](#codeconcatcode): Concatenates all the elements in a collection
 
-- [`#condense`](#condense): Shortens a string
+- [`#condense`](#codecondensecode): Shortens a string
 
-- [`#stripHTML`](#striphtml): Strips HTML tags/elements from text
+- [`#stripHTML`](#codestriphtmlcode): Strips HTML tags/elements from text
 
-- [`#loop`](#loop): Counts from zero to the value of `context`
+- [`#loop`](#codeloopcode): Counts from zero to the value of `context`
 
-- [`#each`](#each): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
+- [`#each`](#codeeachcode): Extends Handlebars' built-in `{{each}}` lets you specify optional first and last indices
 
-- [`#keys`](#keys): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
+- [`#keys`](#codekeyscode): Iterates over the properties of an object and provides a new object containing the "key" and "value" 
 
-- [`include`](#include): Loads the specified Handlebars template and applies it with the current context
+- [`include`](#codeincludecode): Loads the specified Handlebars template and applies it with the current context
 
-- [`plural`](#plural): Returns the value of `context` and appends the singular or plural form of the specified word
+- [`plural`](#codepluralcode): Returns the value of `context` and appends the singular or plural form of the specified word
 
-- [`numFormat`](#numformat): Delimits a number or string with multiple numbers, using commas or given delimiter
+- [`numFormat`](#codenumformatcode): Delimits a number or string with multiple numbers, using commas or given delimiter
 
-- [`imageProxy`](#imageproxy): Rewrite a URL as a DuckDuckGo image redirect
+- [`imageProxy`](#codeimageproxycode): Rewrite a URL as a DuckDuckGo image redirect
 
-- [`ellipsis`](#ellipsis): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
+- [`ellipsis`](#codeellipsiscode): Shortens a string by removing words until string length is <= `limit` and appends an ellipsis ('...') to the output 
 
-- [`trim`](#trim): Removes leading and trailing spaces from text 
+- [`trim`](#codetrimcode): Removes leading and trailing spaces from text 
 
 ## `#concat`
 
