@@ -93,7 +93,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
     ],
 
     // Optional; pick the cheat-sheet template (explained below)
-    "template_type": "keyboard-shortcuts",
+    "template_type": "keyboard",
 
     // Required; controls which sections appear and in what order
     "section_order": [  
@@ -138,10 +138,10 @@ We've seen a wonderfully wide variety of cheat sheets; we realized that one visu
 
 Here are the available `template_type` values:
 
-- `keyboard-shortcuts` - the default (see it live at ["vim cheatsheet"](https://duckduckgo.com/?q=vim+cheatsheet&ia=cheatsheet))
-- `terminal snippets` - (see it live at ["git cheatsheet"](https://duckduckgo.com/?q=git+cheatsheet&ia=cheatsheet))
-- `code-snippets` - (see it live at ["regex cheatsheet"](https://duckduckgo.com/?q=regex+cheat+sheet&ia=cheatsheet))
-- `reference-sheet` - (see it live at ["wu-tang cheatsheet"](https://duckduckgo.com/?q=wu-tang+cheat+sheet&ia=cheatsheet))
+- `keyboard` - the default (see it live at ["vim cheatsheet"](https://duckduckgo.com/?q=vim+cheatsheet&ia=cheatsheet))
+- `terminal` - (see it live at ["git cheatsheet"](https://duckduckgo.com/?q=git+cheatsheet&ia=cheatsheet))
+- `code` - (see it live at ["regex cheatsheet"](https://duckduckgo.com/?q=regex+cheat+sheet&ia=cheatsheet))
+- `reference` - (see it live at ["wu-tang cheatsheet"](https://duckduckgo.com/?q=wu-tang+cheat+sheet&ia=cheatsheet))
 
 ### Syntax for `key` Property
 
