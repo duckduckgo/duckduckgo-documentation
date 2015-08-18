@@ -81,7 +81,7 @@ Spice.add({
     sort_fields: Object,
     sort_default: String|Object,
 
-    onItemSelect: Function,
+    onItemSelected: Function,
     onItemUnselect: Function,
     onShow: Function,
     onHide: Function

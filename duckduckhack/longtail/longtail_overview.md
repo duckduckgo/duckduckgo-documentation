@@ -1,6 +1,6 @@
 # Longtail Instant Answers  
 
-**If you have questions about Longtail, ask our [Longtail Chat room](https://gitter.im/duckduckgo/zeroclickinfo-longtail)**   
+**If you have questions, [request an invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe) and we'll be happy to chat!**  
 
 Longtails are database-backed, full text search, Instant Answers. For every query DuckDuckGo receives, each Longtail's database of articles is searched and any matching articles are used to display a paragraph of text, highlighting the portion of the article which matches the query. Developing a Longtail Instant Answer entails writing a program that generates an XML data file. This XML file describes each article, as well as some other important information discussed below. The program may be written in Perl, Python, JavaScript, or Ruby, and if necessary, will be run periodically to keep the database current.
 

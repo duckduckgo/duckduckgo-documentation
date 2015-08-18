@@ -6,6 +6,12 @@ This tutorial will show you how to build a Goodie Instant Answer from scratch. I
 
 _Stuck on something? Got a question? Shoot us an email at **open@duckduckgo.com** and we'll jump at the chance to help._
 
+## Let Us Know What You're Working On
+
+**Before you start coding your new Instant Answer, let us know your plans.** By involving us early we can provide guidance and potentially save you a lot of time and effort. 
+
+Email us at [open@duckduckgo.com](mailto:open@duckduckgo.com) with what idea you're working on and how you're thinking of going about it.
+
 ## Automatically Generate Your Goodie Files
 
 The following tutorial will walk through each file and line of code necessary to build and test the example Goodie. However, for building your *own* Instant Answer, we've created a tool that **automatically creates the necessary boilerplate files**, with all of the correct naming conventions.
