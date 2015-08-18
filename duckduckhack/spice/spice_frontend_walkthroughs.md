@@ -88,7 +88,7 @@ Now, let's take a look at the Footer Handlebars template:
 </div>
 ```
 
-As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some Handlebars **helper** functions (i.e. `if` and `AlternativeTo_getPlatform`).
+As you can see, this is some fairly simple HTML, which contains a few Handlebars expressions referencing properties of `data` as well as some [Handlebars helpers](https://duck.co/duckduckhack/handlebars_helpers) functions (i.e. `if` and `AlternativeTo_getPlatform`).
 
 These helpers are really JavaScript functions, which operate on input and return their content to the template.
 
