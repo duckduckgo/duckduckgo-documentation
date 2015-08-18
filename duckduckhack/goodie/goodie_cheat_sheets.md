@@ -87,6 +87,9 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
         "sourceUrl": "https://..." // Should be SSL if possible
     },
 
+    // Optional; pick the cheat-sheet template (explained below)
+    "template_type": "keyboard-shortcuts",
+
     // Required; controls which sections appear and in what order
     "section_order": [  
         "Cursor movement",
@@ -123,6 +126,17 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
     }
 }
 ```
+
+### Cheat Sheet Templates
+
+We've seen a wonderfully wide variety of cheat sheets; we realized that one visual format doesn't fit all ideas. We've created an *optional* `template_type` property so you can pick the best look for your cheat sheet.
+
+Here are the available `template_type` values:
+
+- `keyboard-shortcuts` - the default (see it live at ["vim cheatsheet"](https://duckduckgo.com/?q=vim+cheatsheet&ia=cheatsheet))
+- `terminal snippets` - (see it live at ["git cheatsheet"](https://duckduckgo.com/?q=git+cheatsheet&ia=cheatsheet))
+- `code-snippets` - (see it live at ["regex cheatsheet"](https://duckduckgo.com/?q=regex+cheat+sheet&ia=cheatsheet))
+- `reference-sheet` - (see it live at ["wu-tang cheatsheet"](https://duckduckgo.com/?q=wu-tang+cheat+sheet&ia=cheatsheet))
 
 ### Syntax for `key` Property
 
