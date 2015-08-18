@@ -4,7 +4,7 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
-When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm))
+When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm)). You can also specify additional triggers, as you'll see in the example below.
 
 Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
 
@@ -58,7 +58,7 @@ When your cheat sheet works like you want it to, you're ready to submit your con
 
 Submitting your cheat sheet is similar to submitting any Instant Answer contribution. New code is submitted using pull requests on GitHub. To make a pull request, follow the [submission and review instructions](https://duck.co/duckduckhack/submission_and_review).
 
-## Cheat Sheet JSON Values
+## Cheat Sheet JSON
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
@@ -86,6 +86,11 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
         "sourceName": "VimCheatSheet",
         "sourceUrl": "https://..." // Should be SSL if possible
     },
+
+	// Optional; add additional search triggers for your cheat sheet
+	"aliases": [
+        "vim", "Vi IMproved", "vi text editor"
+    ],
 
     // Optional; pick the cheat-sheet template (explained below)
     "template_type": "keyboard-shortcuts",
