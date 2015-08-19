@@ -353,7 +353,7 @@ See the **[important notes](#important-notes)** for making this template display
 
 ### Example Uses
 
-*None - yet!*
+- ["dogo news"](https://duckduckgo.com/?q=dogo+news&ia=kidsnews&iai=2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js))
 
 <!--
 - ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
