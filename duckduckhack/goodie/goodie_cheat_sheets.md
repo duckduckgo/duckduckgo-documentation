@@ -4,7 +4,7 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
-When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm))
+When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm)). You can also specify additional triggers, as you'll see in the example below.
 
 Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
 
@@ -12,13 +12,7 @@ Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-shee
 
 Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie. 
 
-The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). Following the [setup instructions](https://duck.co/duckduckhack/setup_dev_environment) will get you ready to contribute to the repository.
-
-- You'll have your own GitHub account
-- You'll have your own Codio machine
-- You'll have your own fork of the Goodies repository
-
-Once you're all set up, you'll be one file away from submitting your cheat sheet to appear on DuckDuckGo.
+The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). After [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment, you'll be just one file away from submitting your cheat sheet to appear on DuckDuckGo.
 
 ### Create a JSON File
 
@@ -30,7 +24,7 @@ Up in the **File menu**, click **"Create New File"**, and enter the name of your
 
 Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax). Feel free to copy the code in the following section into your new file as a convenient template.
 
-With this method, there is no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, and proceed to test your work.
+Conveniently, with cheat sheets there's no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, and proceed to test your work.
 
 ### Test Your Cheat Sheet
 
@@ -56,13 +50,15 @@ When your cheat sheet works like you want it to, you're ready to submit your con
 
 Submitting your cheat sheet is similar to submitting any Instant Answer contribution. New code is submitted using pull requests on GitHub. To make a pull request, follow the [submission and review instructions](https://duck.co/duckduckhack/submission_and_review).
 
-## Cheat Sheet JSON Syntax
+## Cheat Sheet JSON
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
 ![vim cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvim_cheat_sheet.png&f=1)
 
-The above Instant Answer was created by simply adding `vim.json`, summarized below. **We encourage you to copy the following working code into your new file, as a starting point for your cheat sheet.**
+The above Instant Answer was created by simply adding [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json), explained below. 
+
+**We encourage you to copy the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) code into your new file, as a starting point for your cheat sheet.** (Copy the [actual file](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json), as the code block below won't work due to inline comments.)
 
 ```javascript
 {
@@ -82,6 +78,14 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
         "sourceName": "VimCheatSheet",
         "sourceUrl": "https://..." // Should be SSL if possible
     },
+
+	// Optional; add additional search triggers for your cheat sheet
+	"aliases": [
+        "vim", "Vi IMproved", "vi text editor"
+    ],
+
+    // Optional; pick the cheat-sheet template (explained below)
+    "template_type": "keyboard",
 
     // Required; controls which sections appear and in what order
     "section_order": [  
@@ -119,6 +123,17 @@ The above Instant Answer was created by simply adding `vim.json`, summarized bel
     }
 }
 ```
+
+### Cheat Sheet Templates
+
+We've seen a wonderfully wide variety of cheat sheets; we realized that one visual format doesn't fit all ideas. We've created an *optional* `template_type` property so you can pick the best look for your cheat sheet.
+
+Here are the available `template_type` values:
+
+- `keyboard` - the default (see it live at ["vim cheatsheet"](https://duckduckgo.com/?q=vim+cheatsheet&ia=cheatsheet))
+- `terminal` - (see it live at ["git cheatsheet"](https://duckduckgo.com/?q=git+cheatsheet&ia=cheatsheet))
+- `code` - (see it live at ["regex cheatsheet"](https://duckduckgo.com/?q=regex+cheat+sheet&ia=cheatsheet))
+- `reference` - (see it live at ["wu-tang cheatsheet"](https://duckduckgo.com/?q=wu-tang+cheat+sheet&ia=cheatsheet))
 
 ### Syntax for `key` Property
 
@@ -186,7 +201,6 @@ We recommend displaying alternatives as follows:
 We've found the best way to express arrow keys is directly using arrow ASCII characters (&larr;, &uarr;, &rarr;, &darr;). Feel free to copy and paste the characters from here.
 
 For example, instead of **[Shift] [Up]** we recommend **[Shift] [&uarr;]**.
-
 
 ## Cheat Sheet Ideas
 
