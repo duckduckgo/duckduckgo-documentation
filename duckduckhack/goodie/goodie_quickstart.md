@@ -145,7 +145,6 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
 
 **Congrats!** Your first Goodie is working! You specified its **`trigger`** and told it what to **`return`**. You're almost done! Now you should write a test to make sure your Goodie only triggers when we want it to.
 
-
 ## Writing Your First Goodie Test File
 
 1. Let's edit your corresponding test file. Press "**Ctrl+O**" (Cmd+O on a Mac), then type "**GitHubUsername.t**" and press "**Enter**". This will open the file for editing in Codio's text editor. 
@@ -222,7 +221,6 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
     Result: FAIL
     ```
 
-
     Uh oh! We failed a test! The output says a `DDG::ZeroClickInfo` object was returned, but the test was expecting `undef`. Let's update our code to make this test pass.
 
 4. Switch back to your text editor by clicking the tab if it's still open, or open the "**GitHubUsername.pm**" file with "**Ctrl+O**" (Cmd+O on a Mac).
@@ -256,19 +254,21 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
 
 	_Still not passing? Make sure you changed **all** instances of `GitHubUsername` in the file to your user name._
 
-**Congrats!** You've written and tested your first Goodie! Feels great, doesn't it?
+You've written and tested your first Goodie! Feels great, doesn't it?
 
-Of course, this was just a taste of all the things you can create using a Goodie. Fortunately, you're now super ready to tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
+**While we can no longer accept 'IsAwesome' submissions as pull requests, you're ready to contribute bigger things:**
 
-Do you enjoy looking under the hood and learning by example? You'll enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
+- Tackle the [Basic Tutorial](https://duck.co/duckduckhack/goodie_basic_tutorial). You will find many things familiar there and be well on your way to advanced Goodie functionality.
+- Work on an approved idea on [the DuckDuckGo Community Portal](https://duck.co/ideas/status/3?table_lnKRpLENwO2NUmZUyukQpw_sort=votes)
+- Create a [cheat sheet](https://duck.co/duckduckhack/goodie_cheat_sheets) (peruse the [cheat sheet ideas](https://duck.co/duckduckhack/goodie_cheat_sheets#cheat-sheet-ideas))
+- Own an issue from [Goodie Low Hanging Fruit](https://github.com/duckduckgo/zeroclickinfo-goodies/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
 
-**Congrats!** You've now seen what creating an Instant Answer is like. 
-
-You're prepared to move on and create your first real Instant Answer. Your very first Instant Answer should be a pre-approved idea, [listed on the DuckDuckGo Community Portal](https://duck.co/ideas/status/3?table_lnKRpLENwO2NUmZUyukQpw_sort=votes). 
-
-As always, feel free to email us with any questions - any time - at [open@duckduckgo.com](mailto:open@duckduckgo.com). Happy hacking!
+**As always, feel free to email us with any questions - any time - at [open@duckduckgo.com](mailto:open@duckduckgo.com). Happy hacking!**
 
 <!-- Commenting out to stop IsAwesome PRs >
+
+P.S. Do you enjoy looking under the hood and learning by example? You'll enjoy casually browsing other Goodies in the [`/lib/DDG/Goodie`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/lib/DDG/Goodie) directory of the repository. Take a look at their their **.pm** files and look at the `triggers`. You can even test them all using the `duckpan server` command you learned - or live up on [DuckDuckGo.com](http://www.duckduckgo.com).
+
 ## Bonus - See Your Instant Answer live on DuckDuckGo.com
 
 This bonus section will walk you through submitting the IsAwesome Goodie you just created for review and acceptance into the *live DuckDuckGo.com codebase*. If you'd rather jump straight in and work on *your* idea, don't worry about this for now. You'll find this information in the rest of the docs as well.
