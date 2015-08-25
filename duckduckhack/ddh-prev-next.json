@@ -226,11 +226,16 @@
 
 	"how_to_qa.md": {
 		"prev": ["common_pitfalls.md"],
+		"next": ["video-tutorials.md"]
+	},
+
+	"video-tutorials.md": {
+		"prev": ["how_to_qa.md"],
 		"next": ["faq.md"]
 	},
 
 	"faq.md": {
-		"prev": ["how_to_qa.md"],
+		"prev": ["video-tutorials.md"],
 		"next": []
 	}
 }
