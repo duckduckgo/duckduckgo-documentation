@@ -6,7 +6,7 @@ Before moving forward, you **must** know which Instant Answer type you will be u
 
 ## Before you start...
 
-We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers!
+We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers! You can also watch a [video screencast of this tutorial](https://vimeo.com/132712266).
 
 ### Alternative Development Environments 
 

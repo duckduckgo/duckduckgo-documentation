@@ -69,4 +69,5 @@
   - [Code Styleguide](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/code_styleguide.md)
   - [Common Pitfalls](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/common_pitfalls.md)
   - [How to QA an Instant Answer](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/how_to_qa.md)
+  - [Video Tutorials](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/video-tutorials.md)
   - [FAQ](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/resources/faq.md)
