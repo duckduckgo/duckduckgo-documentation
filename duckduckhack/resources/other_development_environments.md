@@ -2,7 +2,7 @@
 
 For the vast majority of contributors, the best, simplest, and quickest way to develop on DuckDuckHack is to use the **free, web-based Codio environment**. Instructions on setting up Codio can be found in the section on [setting up your development environment](https://duck.co/duckduckhack/setup_dev_environment). 
 
-However, some developers working on either a local environment or a virtual machine. This guide addresses setting up DuckPAN on environments other than Codio.
+However, some developers prefer working on either a local environment or a virtual machine. This guide addresses setting up DuckPAN on environments other than Codio.
 
 ## About DuckPAN
 
