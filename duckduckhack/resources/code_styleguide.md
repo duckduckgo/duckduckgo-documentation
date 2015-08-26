@@ -99,7 +99,7 @@ This document outlines some language specific guidelines for formatting your cod
 
 - Avoid trailing commas
 
-    We support all modern browsers, including IE 8, which breaks when it reaches a trailing comma in objects. It also treats trailing commas in arrays [differently than you might expect](http://www.akawebdesign.com/2011/06/23/the-curious-case-of-trailing-commas-in-ie/).
+    We support all modern browsers, including IE 9, which breaks when it reaches a trailing comma in objects. It also treats trailing commas in arrays [differently than you might expect](http://www.akawebdesign.com/2011/06/23/the-curious-case-of-trailing-commas-in-ie/).
 
     ```javascript
     // Bad
@@ -247,7 +247,7 @@ The easiest way to verify your code meets our style guide is to test it with [JS
 
 - Avoid the use of vendor prefixes and experimental features. We strive for a uniform experience on all current browsers and your IA *must* work across them.
 
-    When in doubt, [CanIUse](http://caniuse.com/) is a good resource for determining if prefixes are needed. Keep in mind that we support IE8+, and recent versions of Chrome, Firefox, Safari, and Opera.
+    When in doubt, [CanIUse](http://caniuse.com/) is a good resource for determining if prefixes are needed. We support IE 9+, and recent versions of Chrome, Firefox, Safari, and Opera.
 
     ```css
     /* Bad */
