@@ -46,7 +46,9 @@ The `id` should match the name of your callback function. For example, if your c
 
 The name that will be used **in the tab** above the Instant Answer, in the AnswerBar. 
 
-**Tab names should ideally be one word nouns** (Images, Videos, Products, Audio, Answer, News, etc.) that describe the type of content being shown. We recommend not having any brand names as the tabs. Instead, it's best to use the general topic name. For example, 'videos' for YouTube, 'gaming' for Twitch, 'products' for Amazon, and so on.
+**Tab names should ideally be one word nouns** (Images, Videos, Products, Audio, Answer, News, etc.) that describe the type of content being shown. 
+
+**We will not accept brand names for tabs.** Instead, it's best to use the general topic name. For example, 'videos' for YouTube, 'gaming' for Twitch, 'products' for Amazon, and so on.
 
 If none of the topics below apply to your results, or need help, we recommend choosing "Answer" for the time being, and [contacting us](mailto:open@duckduckgo.com) to brainstorm.
 
@@ -108,7 +110,6 @@ Ideally your Instant Answer `name` should be one of the existing topics:
 - Movies
 - Music
 - News
-- Parking
 - Politics
 - Productivity
 - Products
