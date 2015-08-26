@@ -20,7 +20,7 @@ This short tutorial will lead you through all the parts of building a full-loop 
 
 ## Create a New Instant Answer
 
-Once you're comfortable with the workflow and how Goodies work, we're excited to have you create your own original Instant Answer.
+Once you're comfortable with the workflow and how Goodies work, we're excited to have you create your own original Instant Answer:
 
 **1. Choose an idea**
 
