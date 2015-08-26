@@ -204,99 +204,12 @@ For example, instead of **[Shift] [Up]** we recommend **[Shift] [&uarr;]**.
 
 ## Cheat Sheet Ideas
 
-Grab one of these ideas from the categories below and then start coding using the instructions below. Let us know that you're working on one by emailing open@duckduckgo.com with your selection: 
+A cheat sheet is not always the best representation for your data. Sometimes, an Instant Answer is better built as a full Goodie or another type of Instant Answer. When thinking about your cheat sheet idea, think about what is useful to a searcher. Keyboard shortcuts, video game cheat codes, and similar data can be wonderfully useful as a cheat sheet. Here are some other cheat sheet Instant Answers we love: 
 
-Apps  
-Audio  
-Computing  
-Cryptography  
-Currency  
-Dictionary  
--	[Military Slang](https://en.wiktionary.org/wiki/Appendix:Glossary_of_U.S._Navy_slang)  
--	[Jive talk](https://en.wikipedia.org/wiki/Glossary_of_jive_talk)  
--	[How to talk to someone from the nineteen fifties](http://www.citrus.k12.fl.us/staffdev/social%20studies/pdf/slang%20of%20the%201950s.pdf)  
--	[How to talk to someone from the nineteen twenties](http://thoughtcatalog.com/nico-lang/2013/09/59-quick-slang-phrases-from-the-1920s-we-should-start-using-again/)    
+[Regex help](https://duckduckgo.com/?q=regex+help&ia=cheatsheet)    
+[Anniversary meanings](https://duckduckgo.com/?q=anniversary+help&ia=cheatsheet)  
+[Cryptography terms and help](https://duckduckgo.com/?q=cryptography+cheat+sheet&ia=cheatsheet)  
+[Harry Potter spells](https://duckduckgo.com/?q=harry+potter+spells+cheat+sheet&ia=cheatsheet)  
+[Tennis info](https://duckduckgo.com/?q=tennis+cheat+sheet&ia=cheatsheet)  
 
-Domain  
-Entertainment    
--	[Blackjack strategy](http://johnlevandowski.com/wp-content/uploads/2011/04/blackjack6ds17.png)  
--	[Poker hands](https://en.wikipedia.org/wiki/List_of_poker_hands)  
-
-Finance  
-Food & Drink  
--	Names of espresso-based drinks   
--	[Types of italian meats](http://www.igourmet.com/italian-meats.asp)  
--	Wine/Food pairings  
--	Wine/Cheese pairings  
--	<del>[Cocktails](https://en.wikipedia.org/wiki/List_of_cocktails)</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1208) by [jppope](https://github.com/jppope))    
--	Kosher animals  
--	[Types of scotch](http://www.dramming.com/2011/06/16/10-essential-things-about-scotch-whisky-everybody-should-know/)  
--	Types of wine  
--	[Types of liquor](http://classyboozer.com/different-types-of-liquor/)  
-	
-Games  
--	<del>Minecraft commands for PC</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1222) by [kbhat95](https://github.com/kbhat95))  
-	
-Geek  
--	Superheroes and their superpowers  
-	
-Geography  
--	Chinese dialects by region/province  
-	
-Health  
--	Types of sugars and where found  
--	Vitamins/Minerals and their benefits  
--	Superfoods and their benefits  
-	
-Images  
-Jobs  
-Literature  
--	<del>Game of Thrones house names</del> ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/game-of-thrones-houses.json) by [zekiel](https://github.com/zekiel/))    
--	Game of Thrones house slogans  
--	Game of Thrones house sigils  
-	
-Local  
-Math  
-Movies  
-Music  
-News  
-Politics  
-Productivity  
--	<del>Firefox Awesome bar shortcuts</del>  ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/awesome-bar.json) by [domjacko](https://github.com/domjacko)  
--	<del>Imgur shortcuts</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1220) by [RomainLG](https://github.com/RomainLG))  
--	<del>Emacs shortcuts</del> ([completed](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/emacs.json) by [punchagan](https://github.com/punchagan))  
--	<del>Photoshop shortcuts</del> ([submitted](https://github.com/duckduckgo/zeroclickinfo-goodies/pull/1203) by [kbhat95](https://github.com/kbhat95))  
-	
-Products  
-Programming  
-Reference  
--	Car ownership (which companies own which companies)  
--	[Anniversary themes (paper, cotton, leather, golden, etc.](https://en.wikipedia.org/wiki/Anniversary)     
--	Greek god names and their dominion   
--	Roman god names and their dominion   
--	[Plant zones](http://www.lawn-and-gardening-tips.com/planting-zones.html)  
--	[Police codes](http://www.radiolabs.com/police-codes.html) 
-	
-Science  
--	Lightbulb color:temperature   
--	[VHF Frequencies](https://en.wikipedia.org/wiki/Marine_VHF_radio)  
-	
-Social  
-Software  
-Sports  
-Statistics  
-Sysadmin  
-Tools  
-Travel  
-TV  
-Videos  
-Weather  
-Web Design  
-Words & Games  
--	[SMS spellings](https://en.wikipedia.org/wiki/SMS_language)  
--	Military alphabet (Alpha, Bravo, Charlie...)  
--	[News/politics shorthand SCOTUS, FLOTUS, POTUS](http://www.nytimes.com/1997/10/12/magazine/on-language-potus-and-flotus.html)  
--	[Secret Service code names over the years](https://en.wikipedia.org/wiki/Secret_Service_codename)  
--	[Morse Code Alphabet](http://www.scoutscan.com/cubs/morsecode.html)  
-
-
+You can also [search our ideas forum for cheat sheets](https://duck.co/ideas/search?q=cheat+sheet), or [submit one of your own](https://duck.co/ideas/newidea)! 
