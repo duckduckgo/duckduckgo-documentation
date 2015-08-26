@@ -111,11 +111,9 @@ Does it conflict with other Instant Answers? We wouldn't want to step on the que
 
 - Semicolons must be used; Point out any missing semicolons;
 
-- Cross-browser compatibility is very important! Use jQuery methods where applicable to ensure this. We're trying to support IE 8, and it's good to be aware of these. Search for the method on MDN if you're unsure.
+- Cross-browser compatibility is very important! Use jQuery methods where applicable to ensure this. We also support IE9+, and it's good to be aware of these. Search for the method on MDN if you're unsure.
 
 	- e.g., `Array.prototype.forEach()` should be replaced with `$.each()`.
-
-- Watch out for `console.log` &mdash; that won't work on IE 8.
 
 - JavaScript that runs before the rendering of the Spice (`Spice.render()`) should be used to error-check, massage, and organize the data that will be passed on to the template.
 

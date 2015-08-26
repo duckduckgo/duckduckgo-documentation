@@ -64,13 +64,8 @@ Please place an 'X' where appropriate.
         [] Google Chrome
         [] Firefox
         [] Opera
-        [] IE 8
         [] IE 9
         [] IE 10
-
-    - Windows XP
-        [] IE 7
-        [] IE 8
 
     - Mac OSX
         [] Google Chrome
