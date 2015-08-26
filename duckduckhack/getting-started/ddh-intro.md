@@ -17,6 +17,8 @@ Instant Answers help you find what you're looking for in few or zero clicks. The
 
 In the above example, [Quixey](http://quixey.com/) was a source that our own DuckDuckHack Community suggested for mobile app search. Now, any time someone searches for apps on DuckDuckGo, we request information directly from Quixey to help answer the search. 
 
+To see just how simple it is to contribute an Instant Answer, check out David Farrell's PerlTricks post: [Writing Instant Answers is Easy](http://perltricks.com/article/169/2015/4/20/Writing-DuckDuckGo-instant-answers-is-easy).
+
 In these docs, we'll show you how to build Instant Answers that can do this and more. Start by reading about [ways to contribute](https://duck.co/duckduckhack/contributing).
 
 
