@@ -17,6 +17,7 @@ Before proceeding, make sure you've done the following:
 - [Manually tested](https://duck.co/duckduckhack/testing_triggers) your Instant Answer
 - Written a comprehensive automatic [test file](https://duck.co/duckduckhack/test_files) for your Instant Answer
 - Verified that everything works and nothing is broken
+- Make sure your [tab name](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required) is well-chosen and consistent with the guidelines
 - Confirmed the Instant Answer adheres to the [design guidelines](https://duck.co/duckduckhack/code_styleguide)
 - Added yourself to the attribution (if updating an existing Instant Answer).
 

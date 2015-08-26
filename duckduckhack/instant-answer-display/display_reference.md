@@ -44,7 +44,15 @@ The `id` should match the name of your callback function. For example, if your c
 
 ## `name` *string* [required]
 
-The name that will be used for your Instant Answer's AnswerBar tab. The Instant Answer Framework will determine the final tab name, but it's best to provide a category or topic that describes the kind of information your Instant Answer provides. Here are some examples:
+The name that will be used **in the tab** above the Instant Answer, in the AnswerBar. 
+
+**Tab names should ideally be one word nouns** (Images, Videos, Products, Audio, Answer, News, etc.) that describe the type of content being shown. 
+
+**We will not accept brand names for tabs.** Instead, it's best to use the general topic name. For example, 'videos' for YouTube, 'gaming' for Twitch, 'products' for Amazon, and so on.
+
+If none of the topics below apply to your results, or need help, we recommend choosing "Answer" for the time being, and [contacting us](mailto:open@duckduckgo.com) to brainstorm.
+
+To get an idea for choosing a good name, here are some examples:
 
 <table class="table table-condensed"> 
     <thead>
@@ -76,6 +84,52 @@ The name that will be used for your Instant Answer's AnswerBar tab. The Instant 
         </tr>
     </tbody>
 </table>
+
+Ideally your Instant Answer `name` should be one of the existing topics:
+
+- Answer
+- Apps
+- Audio
+- Computing
+- Cryptography
+- Currency
+- Dictionary
+- Domain
+- Entertainment
+- Finance
+- Food & drink
+- Games
+- Geek 
+- Geography
+- Health 
+- Images 
+- Jobs
+- Literature
+- Local
+- Math
+- Movies
+- Music
+- News
+- Politics
+- Productivity
+- Products
+- Programming
+- Recipes
+- Reference
+- Science
+- Social
+- Software
+- Special interest
+- Sports
+- Statistics
+- Sysadmin
+- Tools
+- Travel
+- Tv
+- Videos
+- Weather
+- Web design
+- Words & games
 
 ------
 
