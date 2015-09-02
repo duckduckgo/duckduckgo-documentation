@@ -247,7 +247,7 @@ Then, run the git clone command to clone the repository. The URL is the **SSH cl
 git clone URL
 ```
 
-_**If your Github password doesn't work**, you may need to enter a [Personal Access Token](https://github.com/settings/applications) instead. Simply copy and paste your token from your Github [Application Settings](https://github.com/settings/applications). (This happens if you have set up [Github's Two-Factor Authentication](https://github.com/blog/1614-two-factor-authentication) feature.)_
+_**If your Github password doesn't work**, you may need to enter a [Personal Access Token](https://github.com/settings/tokens) instead. Simply copy and paste your token from your [Github Settings](https://github.com/settings/tokens). (This happens if you have set up [Github's Two-Factor Authentication](https://github.com/blog/1614-two-factor-authentication) feature.)_
 
 #### Happy Hacking!
 
