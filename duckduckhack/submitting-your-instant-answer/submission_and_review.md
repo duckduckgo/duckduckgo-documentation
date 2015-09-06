@@ -72,7 +72,11 @@ The first step in submitting your changes is to commit your changes to your loca
 
 3. Review the changes and click "**Create Pull Request**".
 
-4. Enter a title for your pull request, "**GitHubUsername's ________ Goodie**" or similar is perfect.
+4. Enter a title for your pull request using the format: "New {{IA NAME}} {{IA TYPE}}". For example:
+
+	- "New Instagram Spice"
+	- "New Firefox Cheat Sheet"
+	- "New Color Hex Goodie"
 
 11. Copy the "Pull Request Template" for your type of Instant Answer here: paste it into the text box that says "**Leave a comment**".
 
