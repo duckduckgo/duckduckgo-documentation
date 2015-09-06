@@ -74,22 +74,30 @@ The first step in submitting your changes is to commit your changes to your loca
 
 	Make sure there's only **one** Instant Answer per pull request.
 
-4. Enter a title for your pull request using the format: "New {{IA NAME}} {{IA TYPE}}". For example:
+4. Enter a title for your pull request: 
+
+	If your IA is new, use the format: "New {{IA NAME}} {{IA TYPE}}". For example:
 
 	- "New Instagram Spice"
 	- "New Firefox Cheat Sheet"
 	- "New Color Hex Goodie"
+	
+	If you're submitting a fix, use the format: "{{IA NAME}}: Fixes {{ISSUE}}". For example:
+	
+	- "Forecast: Fixes Issue #3434"
+	- "Time Zones: Updating to reflect new templates"
+	- "Calculator: Fixes Rounding Problem"
 
-11. Copy the "Pull Request Template" for your type of Instant Answer from the links below. Paste it into the "Leave a Comment" text box.
+5. Copy the "Pull Request Template" for your type of Instant Answer from the links below. Paste it into the "Leave a Comment" text box.
 
     - [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
     - [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
     - [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
     - [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md)
     
-12. Answer the questions in the Pull Request Template
+6. Answer the questions in the Pull Request Template
 
-13. Add a screenshot of your Instant Answer to your answers:
+7. Add a screenshot of your Instant Answer to your answers:
 	
 	Go back to your Codio.com browser tab, and open the "Terminal" tab 
 	
@@ -103,7 +111,7 @@ The first step in submitting your changes is to commit your changes to your loca
 
 	Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
 	
-14. Finally, click **"Create Pull Request"**!
+8. Finally, click **"Create Pull Request"**!
 
 Congratulations! You can now sit back and relax. A Community Leader or DDG staff member will review your Goodie in turn, give you any feedback (if necessary) and merge it in. 
 
