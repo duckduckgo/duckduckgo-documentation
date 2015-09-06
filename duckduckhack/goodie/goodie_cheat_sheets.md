@@ -14,12 +14,12 @@ For example, for the *vim* text editor, the Instant Answer will be triggered on:
 
 - "vim *cheatsheet*"
 - "vim *cheat sheet*"
-- "vim *commands*" 
+- "vim *commands*"
 - "vim *guide*"
 - "vim *shortcuts*"
-- ...and so on. See the full list in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm). 
+- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm). 
 
-You can also specify additional triggers, as you'll see in the example below.
+If you'd like to add more names for the subject of your cheat sheet (in addition to the file name), you can specify them in the `alias` property of your cheat sheet JSON file. For details see the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference).
 
 ## How to Add Your Cheat Sheet
 
