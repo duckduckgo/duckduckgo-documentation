@@ -1,4 +1,4 @@
-## Preparing for Pull Request
+# Preparing for Pull Request
 
 The culmination of your contribution comes in the form of a pull request to the Github repository for your Instant Answer type.
 
@@ -19,7 +19,7 @@ Before proceeding, make sure you've done the following:
 - Verified that everything works and nothing is broken
 - Make sure your [tab name](https://duck.co/duckduckhack/display_reference#codenamecode-emstringem-required) is well-chosen and consistent with the guidelines
 - Make sure you comment your code well so that it's easier for other people to maintain.
-- Confirmed the Instant Answer adheres to the [design guidelines](https://duck.co/duckduckhack/code_styleguide)
+- Confirmed the Instant Answer adheres to the [code style guide](https://duck.co/duckduckhack/code_styleguide)
 - Added yourself to the attribution (if updating an existing Instant Answer).
 
-If so, congratulations. You are now ready to [add metadata](https://duck.co/duckduckhack/metadata) to your Instant Answer which will help us to understand it a little better.
+Checked everything off the list? Congratulations - you are now ready to [add metadata](https://duck.co/duckduckhack/metadata) to your Instant Answer which will help us to understand it a little better.

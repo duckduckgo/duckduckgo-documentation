@@ -64,7 +64,7 @@ The first step in submitting your changes is to commit your changes to your loca
 
 ### Submitting a Pull Request
 
-1. Open a **new browser tab** and go to your remote repository. For example, for Goodies: **`https://github.com/githubusername/zeroclickinfo-goodies`**.
+1. Open a **new browser tab** and go to your remote repository. For example, for Goodies: **`https://github.com/YOUR_GITHUB_USERNAME/zeroclickinfo-goodies`**.
 
 2. Click the "**Pull Request**" button (grey text, middle of the screen).
 
@@ -72,13 +72,15 @@ The first step in submitting your changes is to commit your changes to your loca
 
 3. Review the changes and click "**Create Pull Request**".
 
+	Make sure there's only **one** Instant Answer per pull request.
+
 4. Enter a title for your pull request using the format: "New {{IA NAME}} {{IA TYPE}}". For example:
 
 	- "New Instagram Spice"
 	- "New Firefox Cheat Sheet"
 	- "New Color Hex Goodie"
 
-11. Copy the "Pull Request Template" for your type of Instant Answer here: paste it into the text box that says "**Leave a comment**".
+11. Copy the "Pull Request Template" for your type of Instant Answer from the links below. Paste it into the "Leave a Comment" text box.
 
     - [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
     - [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
@@ -87,7 +89,7 @@ The first step in submitting your changes is to commit your changes to your loca
     
 12. Answer the questions in the Pull Request Template
 
-13. Add a screenshot of your Instant Answer to your answers
+13. Add a screenshot of your Instant Answer to your answers:
 	
 	Go back to your Codio.com browser tab, and open the "Terminal" tab 
 	
