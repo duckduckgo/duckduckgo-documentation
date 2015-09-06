@@ -58,7 +58,6 @@
 - **Submitting Your Instant Answer**
   - [Preparing for a Pull Request](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/preparing_for_a_pull_request.md)   
   - [Metadata](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/metadata.md)
-  - [Developer Checklist](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/developer_checklist.md)
   - [Submission and Review](https://github.com/duckduckgo/duckduckgo-documentation/blob/master/duckduckhack/submitting-your-instant-answer/submission_and_review.md)
 
 - **Advanced**
