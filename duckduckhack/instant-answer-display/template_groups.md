@@ -120,6 +120,7 @@ These are the currently available template groups:
 - [Images](#images-template-group)
 - [Movies](#movies-template-group)
 - [Videos](#videos-template-group)
+- [Places](#places-template-group)
 - [Base](#base-template-group)
 
 <!-- /summary -->
