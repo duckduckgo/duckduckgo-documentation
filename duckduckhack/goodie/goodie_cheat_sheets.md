@@ -4,9 +4,22 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
-When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm)). You can also specify additional triggers, as you'll see in the example below.
-
 Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
+
+## How Are Cheat Sheets Triggered?
+
+Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm), your Instant Answer will be shown. 
+
+For example, for the *vim* text editor, the Instant Answer will be triggered on: 
+
+- "vim *cheatsheet*"
+- "vim *cheat sheet*"
+- "vim *commands*" 
+- "vim *guide*"
+- "vim *shortcuts*"
+- ...and so on. See the full list in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm). 
+
+You can also specify additional triggers, as you'll see in the example below.
 
 ## How to Add Your Cheat Sheet
 
