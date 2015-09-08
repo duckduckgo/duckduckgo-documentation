@@ -252,7 +252,25 @@ The following are all properties of the `meta: {}` object.
     For blocks of text that require truncation, `snippetChars` allows you to specify the maximum number of characters before truncation (to whole words with ellipses). This applies mainly to `description` elements in templates.
 
 	This property is expected to be used in rare cases. Each template comes with its own optimal, default `snippetChars` value.
+	
+- ### `pinIcon` *string* [optional]
 
+	Specifies the class of the [built-in icon](https://duckduckgo.com/styleguide#icons) to use as the map pin. If you are using the [Places Template Group](https://duck.co/duckduckhack/template_groups#places-template-group), which displays an interactive map, use this to specify which built-in icon you'd like used to mark locations.
+	
+	This takes a CSS class name of the built-in icon to use. You can find the icons listed in the [style guide](https://duckduckgo.com/styleguide#icons). For example: 
+	
+	```javascript
+	meta: {
+	    ...
+	    pinIcon: 'ddgsi-circle',
+	    pinIconSelected: 'ddgsi-star'
+	}
+	```
+
+- ### `pinIconSelected` *string* [optional]
+
+	Same as `pinIcon`, but for selected pins. When focusing on a particular location, use this icon to highlight the corresponding pin on the map.
+	
 ------
 
 ## `templates` *object* [required]
