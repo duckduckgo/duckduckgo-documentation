@@ -4,15 +4,13 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
-When your cheat sheet name is searched with any of the trigger words, your Instant Answer will be shown. For example, for the *vim* text editor, the Instant Answer will be triggered on: "vim cheatsheet", "vim commands", "vim guide", "vim shortcuts", and so on (full list of triggers available in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm)). You can also specify additional triggers, as you'll see in the example below.
-
 Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
 
 ## How to Add Your Cheat Sheet
 
 Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie. 
 
-The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment). After [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment, you'll be just one file away from submitting your cheat sheet to appear on DuckDuckGo.
+**The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).** After [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment, you'll be just one file away from submitting your cheat sheet to appear on DuckDuckGo.
 
 ### Create a JSON File
 
@@ -41,8 +39,8 @@ The next step is to test your code and make sure it works like you intended. To 
     ```
 
 4. Click the "**DuckPAN Server**" button at the top of the screen. A new browser tab should open and you should see the DuckDuckGo Homepage. Type the name of your cheat sheet, plus **"cheat sheet"** and press "**Enter**".
-10. You should see your cheat sheet show up in the search results! **Make sure it displays correctly; check that all escaped characters and code blocks appear as you intended.**
-11. When you're done testing, go back to the Terminal, andpress "**Ctrl+C**" to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
+5. You should see your cheat sheet show up in the search results! **Make sure it displays correctly; check that all escaped characters and code blocks appear as you intended.**
+6. When you're done testing, go back to the Terminal, andpress "**Ctrl+C**" to shut down the DuckPAN Server. The Terminal should return to a regular command prompt.
 
 When your cheat sheet works like you want it to, you're ready to submit your contribution.
 
@@ -50,7 +48,22 @@ When your cheat sheet works like you want it to, you're ready to submit your con
 
 Submitting your cheat sheet is similar to submitting any Instant Answer contribution. New code is submitted using pull requests on GitHub. To make a pull request, follow the [submission and review instructions](https://duck.co/duckduckhack/submission_and_review).
 
-## Cheat Sheet JSON
+## How Are Cheat Sheets Triggered?
+
+Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm), your Instant Answer will be shown. 
+
+For example, for the *vim* text editor, the Instant Answer will be triggered on: 
+
+- "vim *cheatsheet*"
+- "vim *cheat sheet*"
+- "vim *commands*"
+- "vim *guide*"
+- "vim *shortcuts*"
+- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm). 
+
+If you'd like to add more names for the subject of your cheat sheet (in addition to the file name), you can specify them in the `aliases` property of your cheat sheet JSON file. For example, if your cheat sheet file is `lord-of-the-rings.json`, a natural alias is 'LOTR'. For details check out the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference).
+
+## Cheat Sheet JSON Reference
 
 Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) file, which displays a cheat sheet when searching for ["vim cheat sheet"](https://duckduckgo.com/?q=vim+cheat+sheet&ia=answer).
 
@@ -58,7 +71,7 @@ Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickin
 
 The above Instant Answer was created by simply adding [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json), explained below. 
 
-**We encourage you to copy the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) code into your new file, as a starting point for your cheat sheet.** (Copy the [actual file](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json), as the code block below won't work due to inline comments.)
+**For convenience, we encourage you to copy the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json) code into your new file, as a starting point.** Copy the [raw file](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/vim.json), as the JSON below won't work due to inline comments.
 
 ```javascript
 {
@@ -81,7 +94,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
 
 	// Optional; add additional search triggers for your cheat sheet
 	"aliases": [
-        "vim", "Vi IMproved", "vi text editor"
+        "vim", "vi improved", "vi text editor"
     ],
 
     // Optional; pick the cheat-sheet template (explained below)
