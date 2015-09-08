@@ -96,6 +96,8 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
     [04:30 PM codio@buffalo-pixel workspace {master}]$ git clone https://github.com/githubusername/zeroclickinfo-goodies.git
     ```
 
+    _**If your Github password doesn't work**, you may need to enter a [Personal Access Token](https://github.com/settings/tokens) instead. Simply copy and paste your token from your [Github Settings](https://github.com/settings/tokens). (This happens if you have set up [Github's Two-Factor Authentication](https://github.com/blog/1614-two-factor-authentication) feature.)_
+
 6. Press "**Enter**". You should see the Terminal print out some text that looks like this:
 
     ```
