@@ -94,7 +94,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
 
 	// Optional; add additional search triggers for your cheat sheet
 	"aliases": [
-        "vim", "Vi IMproved", "vi text editor"
+        "vim", "vi improved", "vi text editor"
     ],
 
     // Optional; pick the cheat-sheet template (explained below)
