@@ -1088,7 +1088,7 @@ dateBadge
 
 ### Example Usage
 
-*None - yet!*
+- [Dogo News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js)
 
 ### Template Groups
 
@@ -1121,7 +1121,7 @@ dateBadge
 
 ### Example Usage
 
-*None - yet!*
+- [Dogo News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js)
 
 ### Template Groups
 
