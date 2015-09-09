@@ -20,6 +20,8 @@ A quick way to get a feel for the different template groups is to [browse the In
 
 The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Also consider the [Movies](#movies-template-group) template group.
 
+![DuckDuckGo search for "dogo news"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogo_news.png&f=1)
+
 Examples that make a great fit for the Media or Movies template groups include:
 
 - TV shows/[Movies](https://duckduckgo.com/?q=currently+in+theaters)
@@ -356,10 +358,7 @@ See the **[important notes](#important-notes)** for making this template display
 
 - ["dogo news"](https://duckduckgo.com/?q=dogo+news&ia=kidsnews&iai=2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js))
 
-<!--
-- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
-    ![DuckDuckGo search for "BBC schedule"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbbc_schedule.png&f=1)
--->
+![DuckDuckGo search for "dogo news"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogo_news.png&f=1)
 
 ------
 
@@ -402,8 +401,12 @@ See the **[important notes](#important-notes)** for making this template display
 ### Example Uses
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
+
 - ["oil production in Saudi Arabia"](https://duckduckgo.com/?q=oil+production+in+saudi+arabia&ia=answer) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/zanran/zanran.js))
+
+![DuckDuckGo search for "oil production in Saudi Arabia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fsaudi_oil.png&f=1)
 
 ------
 ## Images Template Group
@@ -441,6 +444,8 @@ Using the Images template group also automatically makes the Image [model](https
 ### Example Uses
 
 - ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images search)
+
+![DuckDuckGo search for "duck images"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fduck_images.png&f=1)
 
 ------
 ## Movies Template Group
@@ -494,8 +499,17 @@ templates: {
 ### Example Uses
 
 - ["dogobooks harry potter"](https://duckduckgo.com/?q=dogobooks+harry+potter&ia=kidsbooks) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_books/dogo_books.js))
+
+![DuckDuckGo search for "dogobooks harry potter"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogobooks.png&f=1)
+
 - ["movies with keira knightley"](https://duckduckgo.com/?q=movies%20with%20Keira%20Knightley&ia=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/kwixer/kwixer.js))
+
+![DuckDuckGo search for "movies with keira knightley"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fkeira_movies.png&f=1)
+
 - ["jiro dreams of sushi rotten tomatoes"](https://duckduckgo.com/?q=jiro+dreams+of+sushi+rotten+tomatoes&ia=movies)([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/ea61d47ef8639cf4fb282b51e2185e3a807d1bd5/share/spice/movie/movie.js))
+
+![DuckDuckGo search for "jiro dreams of sushi rotten tomatoes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fjiro_dreams.png&f=1)
+
 
 ------
 ## Videos Template Group
@@ -535,6 +549,8 @@ Setting the Videos template group also automatically makes the Video [model](htt
 ### Example Uses
 
 - ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) (built-in videos search)
+
+![DuckDuckGo search for "gopro videos"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgopro_videos.png&f=1)
 
 ------
 ## Places Template Group
@@ -576,7 +592,17 @@ Specify these *item* templates to replace the default `places_item` template, wh
 - [`basic_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebasicflippingitemcode-template)
 - [`base_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template)
 
-#### Places Model and View
+### Example use of the 'places' template group
+
+- ["events in new york"](https://duckduckgo.com/?q=events+in+new+york&ia=events)
+
+    ![DuckDuckGo search for "events in new york"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fevents_ny.png&f=1)
+
+- ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
+
+    ![DuckDuckGo search for "parking in philadelphia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
+
+### Places Model and View
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make Instant Answers using Places valuable and delightful.
 
@@ -712,11 +738,6 @@ Spice.add({
 });
 ```
 
-### Example use of the 'places' template group
-
-- ["events in new york"](https://duckduckgo.com/?q=events+in+new+york&ia=events)
-- ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
-    ![DuckDuckGo search for "parking in philadelphia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
 
 
 ------
