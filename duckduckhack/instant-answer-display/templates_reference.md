@@ -83,10 +83,10 @@ footer
 
 ### Example Usage
 
-- [GitHub](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js)
-- [RubyGems](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js)
-- [RedditSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js)
-- [AlternativeTo](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js)
+- [GitHub](https://duckduckgo.com/?q=github+todo&ia=about) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
+- [RubyGems](https://duckduckgo.com/?q=ruby+gems+http&ia=software) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/ruby_gems/ruby_gems.js))
+- [RedditSearch](https://duckduckgo.com/?q=reddit+cats&ia=social) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js))
+- [AlternativeTo](https://duckduckgo.com/?q=alternative+to+photoshop&ia=software) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
 
 ### Template Groups
 
@@ -128,8 +128,8 @@ content
 
 ### Example Usage
 
-- [Rhymes](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
-- [Thesaurus](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
+- [Rhymes](https://duckduckgo.com/?q=what+rhymes+with+day&ia=rhymes) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js)
+- [Thesaurus](https://duckduckgo.com/?q=synonym+for+warm&ia=thesaurus) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/thesaurus/thesaurus.js)
 
 ### Template Groups
 
@@ -175,8 +175,7 @@ ratingText
 
 ### Example Usage
 
-- [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
-- [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
+- [BBC](https://duckduckgo.com/?q=bbc+two+schedule+yesterday&ia=tv&iai=1) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 
 ### Template Groups
 
@@ -225,8 +224,8 @@ rating
 
 ### Example Usage
 
-- [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
-- [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
+- [Amazon](https://duckduckgo.com/?q=batman+products&ia=products) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+- [Octopart](https://duckduckgo.com/?q=octopart+stm32f205zgt6&ia=parts) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
 
 ### Template Groups
 
@@ -283,8 +282,8 @@ A detail template where image is emphasized, suited to feature for an item that 
 
 ### Example Usage
 
-- [Amazon](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js)
-- [Octopart](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js)
+- [Amazon](https://duckduckgo.com/?q=batman+products&ia=products) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+- [Octopart](https://duckduckgo.com/?q=octopart+stm32f205zgt6&ia=parts) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
 
 ### Template Groups
 
@@ -344,8 +343,7 @@ A template for drilling-down into a particular item on the same page. Emphasizes
 
 ### Example Usage
 
-- [BBC](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
-- [Movie](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/movie/movie.js)
+- [BBC](https://duckduckgo.com/?q=bbc+two+schedule+yesterday&ia=tv&iai=1) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js)
 
 ### Template Groups
 
@@ -440,9 +438,8 @@ The same template, with the `aux` feature:
 
 ### Example Usage
 
-- [Bitcoin](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js)
-- [Gravatar](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js)
-- [Drinks](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/drinks/drinks.js)
+- [Gravatar](https://duckduckgo.com/?q=gravatar+matt&ia=avatar) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
+- [Urban Dictionary](https://duckduckgo.com/?q=urban%20dictionary%20ROTFL&ia=dictionary) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/tree/master/share/spice/urban_dictionary/urban_dictionary.js))
 
 ### Template Groups
 
@@ -646,6 +643,7 @@ This view is displayed when the 'front' is clicked, together with the 'back' (ab
 ### Example Usage
 
 - Local results (built-in to DDG): search for [cafes near Ann Arbor](https://duckduckgo.com/?q=cafes+near+ann+arbor).
+- [Parking](https://duckduckgo.com/?q=parking+philadelphia&ia=parking) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
 
 ### Template Groups
 
@@ -914,6 +912,7 @@ A detail template for displaying information about a single location on a map ba
 ### Example Usage
 
 - Local results (built-in to DDG): search for [a particular business](https://duckduckgo.com/?q=espresso+italiano+maui).
+- [Parking](https://duckduckgo.com/?q=parking+philadelphia&ia=parking) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
 
 ### Template Groups
 
@@ -975,7 +974,7 @@ When displaying a bulleted list, the simplest case would be to pass `list` an ar
 
 ### Example Usage
 
-- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js) (search for ['whois mozilla.org'](https://duckduckgo.com/?q=whois+mozilla.org))
+- [Whois](https://duckduckgo.com/?q=whois+mozilla.org) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js))
 
 ### Template Groups
 
@@ -1043,10 +1042,9 @@ templates: {
 
 ### Example Usage
 
-- [UrbanDictionary](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js)
-- [MetaCpan](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js)
-- [CodeSearch](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/code_search/code_search.js)
-- [Whois](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js)
+- [UrbanDictionary](https://duckduckgo.com/?q=urban%20dictionary%20ROTFL&ia=dictionary) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/urban_dictionary/urban_dictionary.js))
+- [MetaCpan](https://duckduckgo.com/?q=metacpan+WWW%3A%3ADuckDuckGo&ia=software) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/meta_cpan/meta_cpan.js))
+- [Whois](https://duckduckgo.com/?q=whois+mozilla.org) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/whois/whois.js))
 
 ### Template Groups
 
@@ -1088,7 +1086,7 @@ dateBadge
 
 ### Example Usage
 
-- [Dogo News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js)
+- [Dogo News](https://duckduckgo.com/?q=dogo+news&ia=kidsnews&iai=2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js))
 
 ### Template Groups
 
@@ -1121,7 +1119,7 @@ dateBadge
 
 ### Example Usage
 
-- [Dogo News](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js)
+- [Dogo News](https://duckduckgo.com/?q=dogo+news&ia=kidsnews&iai=2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js))
 
 ### Template Groups
 
@@ -1301,7 +1299,7 @@ dateBadge
 
 ### Example Usage
 
-- ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) and click on any item (built-in videos Instant Answer)
+- Search for ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=vutn7IUCKck) and click on any item (built-in videos Instant Answer)
 
 ### Template Groups
 
@@ -1377,9 +1375,7 @@ A detail template for containing fully customized markup.
 
 ### Example Usage
 
-- [FlashVersion](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js)
-- [NPM](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/npm/npm.js)
-- [XKCD](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/xkcd/xkcd.js)
+- [XKCD](https://duckduckgo.com/?q=xkcd+120&ia=comics) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/xkcd/display/xkcd_display.js))	
 
 ### Complex Example
 
