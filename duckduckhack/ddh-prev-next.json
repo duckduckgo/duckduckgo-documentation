@@ -191,16 +191,11 @@
 
 	"metadata.md": {
 		"prev": ["preparing_for_a_pull_request.md"],
-		"next": ["developer_checklist.md"]
-	},
-
-	"developer_checklist.md" : {
-		"prev" : ["metadata.md"],
-		"next" : ["submission_and_review.md"]
+		"next": ["submission_and_review.md"]
 	},
 
 	"submission_and_review.md": {
-    		"prev": ["developer_checklist.md"],
+    		"prev": ["metadata.md"],
     		"next": []
 	},
 

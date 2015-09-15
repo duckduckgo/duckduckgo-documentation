@@ -1,6 +1,25 @@
-## Instant Answer Metadata
+# Instant Answer Metadata
 
 Including metadata helps us to categorize and describe your Instant Answer. This document explains the different types of metadata that you may add to the source code of your Instant Answer.
+
+Metadata is added to your Instant Answer Perl file, above the triggers. For example, the ["Alternative To" Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/AlternativeTo.pm) has the following metadata:
+
+```perl
+
+name "AlternativeTo";
+primary_example_queries "alternative to notepad";
+secondary_example_queries "alternative to photoshop for mac", "free alternative to spotify for windows";
+description "Find software alternatives";
+icon_url "/i/alternativeto.net.ico";
+source "AlternativeTo";
+code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/AlternativeTo.pm";
+topics  "everyday", "programming";
+category  "computing_tools";
+attribution github => ['https://github.com/Getty','Torsten Raudssus'],
+           twitter => ['https://twitter.com/raudssus','Torsten Raudssus'];
+```
+
+Metadata will be used in several places relating to your Instant Answer, including its [IA Page](https://duck.co/ia/view/alternative_to). Below is an explanation of each available property.
 
 ------
 
@@ -28,7 +47,7 @@ The favicon URL for the data source used.
 
 **Note:** The favicon is not always located at `http://domain/favicon.ico`. It is often given as an explicit URL in the HTML header as `x-icon`, `apple-touch-icon` or similar.
 
-Favicons can sometimes be found by searching for the data source on DuckDuckGo. If a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there :)
+Favicons can sometimes be found by searching for the data source on DuckDuckGo. If a favicon exists, we will display it beside any results from that domain. Feel free to use our link from there.
 
 ```perl
 icon_url "http://www.reddit.com/favicon.ico";
@@ -42,7 +61,7 @@ icon_url "/i/reddit.com.ico";
 
 ## description
 
-A succinct explanation of what the Instant Answer does. Please **exclude** the source name if possible.
+A succinct explanation of what the Instant Answer does. For clarity, *exclude* the source name if possible.
 
 ```perl
 description "Search for Subreddits";

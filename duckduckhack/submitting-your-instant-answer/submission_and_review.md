@@ -1,20 +1,13 @@
-## Making a Pull Request
+# Making a Pull Request
 
 Now that you have completed the [developer checklist](https://dukgo.com/duckduckhack/developer_checklist) and added [Metadata](https://dukgo.com/duckduckhack/metadata) to your Instant Answer, you are ready to submit a pull request.
 
-The root of each repository contains a `pull_request_template.md` file which includes the most common questions the team will have about your contribution:
 
-- [Cheat Sheet Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_cheat_sheet.md)
-- [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
-- [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
-- [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
-- [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md)
+## Committing Your Changes
 
-The contents of this file should be copied and pasted directly into the [description area](https://github-images.s3.amazonaws.com/help/pull_requests/pullrequest-description.png) of the GitHub pull request form. The completed template will help the community better understand your pull request and expedite the review process.
+The first step in submitting your changes is to commit your changes to your local repository. If you've already done this, you can skip to [submitting a pull request](#submitting-a-pull-request), below. 
 
-### Committing Your Changes
-
-The first step in submitting your changes is to commit your changes to your local repository. Here is how to commit your code in the Codio environment:
+Here is how to commit your code in the Codio environment:
 
 1. Log in to [Codio](https://codio.com) and visit your [dashboard](https://codio.com/home/projects). (In the menu, click Codio > Dashboard)
 
@@ -61,10 +54,13 @@ The first step in submitting your changes is to commit your changes to your loca
        138f5bc..c69c517  master -> master
     ```
 
+## Submitting a Pull Request
 
-### Submitting a Pull Request
+Clarity is super important in any open source project - especially one with lots of contributors. A pull request is a great, transparent way to review new changes. 
 
-1. Open a **new browser tab** and go to your remote repository. For example, for Goodies: **`https://github.com/githubusername/zeroclickinfo-goodies`**.
+Here's how to submit a pull request to DuckDuckHack:
+
+1. Open a **new browser tab** and go to your remote repository. For example, for Goodies: **`https://github.com/YOUR_GITHUB_USERNAME/zeroclickinfo-goodies`**.
 
 2. Click the "**Pull Request**" button (grey text, middle of the screen).
 
@@ -72,18 +68,31 @@ The first step in submitting your changes is to commit your changes to your loca
 
 3. Review the changes and click "**Create Pull Request**".
 
-4. Enter a title for your pull request, "**GitHubUsername's ________ Goodie**" or similar is perfect.
+	Make sure there's only **one** Instant Answer per pull request.
 
-11. Copy the "Pull Request Template" for your type of Instant Answer here: paste it into the text box that says "**Leave a comment**".
+4. Enter a title for your pull request: 
+
+	If your IA is new, use the format: "New {{IA NAME}} {{IA TYPE}}". For example:
+
+	- "New Instagram Spice"
+	- "New Firefox Cheat Sheet"
+	- "New Color Hex Goodie"
+	
+	If you're submitting a fix, use the format: "{{IA NAME}}: Fixes {{ISSUE}}". For example:
+	
+	- "Forecast: Fixes #3434"
+	- "Cheat Sheet: Fixes #4102"
+	
+	(Conveniently, this syntax will auto-close the Github issue when your pull request is merged.)
+
+5. For new Instant Answers, copy the "Pull Request Template" for your type of Instant Answer from the links below. Paste it into the "Leave a Comment" text box, and answer the questions.
 
     - [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
     - [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
     - [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
-    - [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md)
-    
-12. Answer the questions in the Pull Request Template
+    - [Longtail Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-longtail/master/pull_request_template_longtail.md) 
 
-13. Add a screenshot of your Instant Answer to your answers
+6. Add a screenshot of your Instant Answer to your answers:
 	
 	Go back to your Codio.com browser tab, and open the "Terminal" tab 
 	
@@ -97,7 +106,7 @@ The first step in submitting your changes is to commit your changes to your loca
 
 	Drag-and-Drop your screen shot into the textbox. The picture will be uploaded and a link will be generated.
 	
-14. Finally, click **"Create Pull Request"**!
+7. Finally, click **"Create Pull Request"**!
 
 Congratulations! You can now sit back and relax. A Community Leader or DDG staff member will review your Goodie in turn, give you any feedback (if necessary) and merge it in. 
 
