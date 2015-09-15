@@ -20,7 +20,7 @@ This short tutorial will lead you through all the parts of building a full-loop 
 
 ## Create a New Instant Answer
 
-Once you're comfortable with the workflow and how Goodies work, we're excited to have you create your own original Instant Answer:
+Once you're comfortable with the workflow and how Goodies work, we're excited to have you create your own original Instant Answer. 
 
 **1. Choose an idea**
 
@@ -61,6 +61,8 @@ Thanks!
 
 PS: DuckDuckGo is awesome!
 ```
+
+P.S. To see just how simple it is to contribute an Instant Answer, check out David Farrell's PerlTricks post: [Writing Instant Answers is Easy](http://perltricks.com/article/169/2015/4/20/Writing-DuckDuckGo-instant-answers-is-easy).
 
 ## Improve an Existing Instant Answer
 
