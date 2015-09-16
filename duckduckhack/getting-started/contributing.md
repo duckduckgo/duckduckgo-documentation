@@ -6,7 +6,7 @@ There are several options for contributing to DuckDuckHack, explained below. If 
 - [DuckDuckHack mailing list](https://duck.co/redir/?u=https%3A%2F%2Fwww.listbox.com%2Fsubscribe%2F%3Flist_id%3D197814)
 - Do not hesitate to email us directly at [open@duckduckgo.com](mailto:open@duckduckgo.com).
 
-## New? Make Your First Contribution Today
+## New? Get Your First Taste Today
 
 If this is your first time contributing to [DuckDuckHack](http://www.duckduckhack.com), you have two great ways to quickly make your first commit:
 
@@ -18,7 +18,7 @@ Cheat sheets are a super-easy way to contribute to the live DuckDuckGo AnswerBar
 
 This short tutorial will lead you through all the parts of building a full-loop Goodie. This is a perfect place to start if you have an idea for an original Instant Answer.
 
-## Create a New Instant Answer
+## Feeling Good? Create a New Instant Answer
 
 Once you're comfortable with the workflow and how Goodies work, we're excited to have you create your own original Instant Answer. 
 
@@ -64,7 +64,7 @@ PS: DuckDuckGo is awesome!
 
 P.S. To see just how simple it is to contribute an Instant Answer, check out David Farrell's PerlTricks post: [Writing Instant Answers is Easy](http://perltricks.com/article/169/2015/4/20/Writing-DuckDuckGo-instant-answers-is-easy).
 
-## Improve an Existing Instant Answer
+## Share Your Wisdom: Improve an Existing Instant Answer
 
 Another great way to contribute is to improve an existing, live Instant Answer. It's a great way to get further acquainted with Instant Answers, as well as get implementation ideas. (Many contributors report completing their first fix within two hours of forking the repository!)
 
