@@ -1,16 +1,18 @@
-# Welcome to DuckDuckHack!
+# Welcome to DuckDuckHack
 
-We are a community of DuckDuckGo users who invent and maintain "Instant Answers". [Join our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe) to get started.  
+We are a community of DuckDuckGo users who invent and maintain "Instant Answers".
 
-You may also wish to join our [DuckDuckHack Dev's email list](https://www.listbox.com/subscribe/?list_id=197814) (low traffic).
+*Find out how to contribute [how to contribute](https://duck.co/duckduckhack/contributing), how to [contact us](https://duck.co/duckduckhack/contributing#reach-out) and get involved.*
 
 ## What are Instant Answers?
 
-**Instant Answers present what you were seeking in zero clicks.**
+**Instant Answers present what you were seeking in zero clicks:**
 
 ![](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Falternative_spotify.png)
 
-Instant Answers go right at the top of DuckDuckGo's search results - above ads and even search results. They have the potential to show up on 10 million searches every day. You can browse the [full list of Instant Answers](https://duck.co/ia) and see what contributors have made.
+Instant Answers go right at the top of DuckDuckGo's search results - above ads and even search results. They have the potential to show up on millions of searches every day. 
+
+Our mission as a community is to cover every topic with an Instant Answer. We're well on our way: you can browse the [full list of Instant Answers](https://duck.co/ia) and see what's been contributed.
 
 They can be really complicated and dynamic...
 

@@ -1,6 +1,10 @@
 # How Can I Contribute?
 
-There are several options for contributing to DuckDuckHack, explained below. If you have any questions at any point, feel free to ask on one of our community channels:
+Contributing to DuckDuckHack - at any level - by nature makes a huge impact. 
+
+## Reach Out
+
+If you have any questions at any point, feel free to ask on one of our community channels:
 
 - [Request invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe)
 - [DuckDuckHack mailing list](https://duck.co/redir/?u=https%3A%2F%2Fwww.listbox.com%2Fsubscribe%2F%3Flist_id%3D197814)
