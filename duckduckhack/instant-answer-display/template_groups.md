@@ -18,7 +18,13 @@ A quick way to get a feel for the different template groups is to [browse the In
 
 ### My Instant Answer returns "things" where visuals are important 
 
-The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. Also consider the [Movies](#movies-template-group) template group.
+The [Media](#media-template-group) template group works well when an image is a significant part of the display of an item, as might be a title and a rating. 
+
+![DuckDuckGo search for "dogo news"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogo_news.png&f=1)
+
+Also consider the [Movies](#movies-template-group) template group:
+
+![DuckDuckGo search for "movies with keira knightley"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fkeira_movies.png&f=1)
 
 Examples that make a great fit for the Media or Movies template groups include:
 
@@ -26,11 +32,15 @@ Examples that make a great fit for the Media or Movies template groups include:
 - Games
 - [Courses](https://duckduckgo.com/?q=computer+science+online+course)
 
-If your Instant Answer results *are* themselves images or videos, consider the [Images](#images-template-group) or [Videos](#videos-template-group) template groups.
+**If your Instant Answer results *are* themselves images or videos, consider the [Images](#images-template-group) or [Videos](#videos-template-group) template groups.** These provide extra media-specific functionality.
 
 ### My Instant Answer returns detailed "lookup" information
 
 The [Info](#info-template-group) template group is designed for Instant Answers that feature in-depth information about one item. It also provides an auxiliary section to display further detail in table or list format. 
+
+![DuckDuckGo search for "green day band"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgreen_day_band.png&f=1)
+
+![DuckDuckGo search for "bulbasaur pokemon"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbulbasaur_pokemon.png&f=1)
 
 Examples include:
 
@@ -49,6 +59,10 @@ The [List](#list-template-group) template group works well for lookups that don'
 
 The [Text](#text-template-group) and [Icon](#icon-template-group) template groups are simple templates for presenting text results. They both share the same `item` template, while the Icon group's `detail` template is better suited to displaying an icon image. 
 
+![DuckDuckGo search for "what rhymes with awesome"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhat_rhymes_with_awesome.png&f=1)
+
+![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
+
 These results fit this format well:
 
 - [Software](https://duckduckgo.com/?q=alternative+to+notepad&ia=software)
@@ -60,7 +74,11 @@ These results fit this format well:
 
 ### My Instant Answer returns products with prices, ratings, and brands/authors/artists
 
-The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is a good template group where images are important. 
+The [Products](#product-template-group) template group is great for items characterized by a price, brand, and rating. This is also a good template group where images are important. 
+
+![DuckDuckGo search for "buy batman lego"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbuy_batman_lego.png&f=1)
+
+![DuckDuckGo search for "flight tracking apps"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fflight_tracking_apps.png&f=1)
 
 Examples of results that work well with the Products template group include:
 
@@ -74,6 +92,8 @@ Examples of results that work well with the Products template group include:
 ### My Instant Answer returns location-based results
 
 The [Places](#places-template-group) template group is perfect for results where location is an important aspect. This template group displays single and multiple items on a map.
+
+![DuckDuckGo search for "events in new york"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fevents_ny.png&f=1)
 
 Results that would make a good fit for the Places template group include:
 
@@ -190,12 +210,15 @@ See the **[important notes](#important-notes)** for making this template display
 ### Example Uses
 
 - ["github duckduckgo"](https://duckduckgo.com/?q=github+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/github/github.js))
+
     ![DuckDuckGo search for "github duckduckgo"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgithub_duckduckgo.png&f=1)
 
 - ["what rhymes with awesome"](https://duckduckgo.com/?q=what+rhymes+with+awesome) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/rhymes/rhymes.js))
+
     ![DuckDuckGo search for "what rhymes with awesome"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fwhat_rhymes_with_awesome.png&f=1)
 
 - ["reddit duckduckgo"](https://duckduckgo.com/?q=reddit+duckduckgo) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/reddit_search/reddit_search.js))
+
     ![DuckDuckGo search for "reddit duckduckgo"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Freddit_duckduckgo.png&f=1)
 
 
@@ -242,12 +265,19 @@ See the **[important notes](#important-notes)** for making this template display
 ### Example Uses
 
 - ["green day band"](https://duckduckgo.com/?q=green+day+band) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/lastfm/artist/lastfm_artist.js))
+
     ![DuckDuckGo search for "green day band"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgreen_day_band.png&f=1)
 
+- ["bulbasaur pokemon"](https://duckduckgo.com/?q=bulbasaur+pokemon&ia=about) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/pokemon/data/pokemon_data.js))
+
+![DuckDuckGo search for "bulbasaur pokemon"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbulbasaur_pokemon.png&f=1)
+
 - ["bitcoin price"](https://duckduckgo.com/?q=bitcoin+price) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bitcoin/bitcoin.js))
+
     ![DuckDuckGo search for "bitcoin price"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbitcoin_price.png&f=1)
 
 - ["gravatar matt"](https://duckduckgo.com/?q=gravatar+matt) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/gravatar/gravatar.js))
+
     ![DuckDuckGo search for "gravatar matt"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgravatar_matt.png&f=1)
 
 
@@ -299,12 +329,15 @@ See the **[important notes](#important-notes)** for making this template display
 ### Example Uses
 
 - ["buy batman lego"](https://duckduckgo.com/?q=buy+batman+lego) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/amazon/amazon.js))
+
     ![DuckDuckGo search for "buy batman lego"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbuy_batman_lego.png&f=1)
 
 - ["flight tracking apps"](https://duckduckgo.com/?q=flight+tracking+apps) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/quixey/quixey.js))
+
     ![DuckDuckGo search for "flight tracking apps"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fflight_tracking_apps.png&f=1)
 
 - ["octopart 1770019-2"](https://duckduckgo.com/?q=octopart%201770019-2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/octopart/octopart.js))
+
     ![DuckDuckGo search for "octopart 1770019-2"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Foctopart_1770019-2.png&f=1)
 
 
@@ -356,10 +389,7 @@ See the **[important notes](#important-notes)** for making this template display
 
 - ["dogo news"](https://duckduckgo.com/?q=dogo+news&ia=kidsnews&iai=2) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_news/dogo_news.js))
 
-<!--
-- ["BBC schedule"](https://duckduckgo.com/?q=BBC+schedule) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/bbc/bbc.js))
-    ![DuckDuckGo search for "BBC schedule"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fbbc_schedule.png&f=1)
--->
+![DuckDuckGo search for "dogo news"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogo_news.png&f=1)
 
 ------
 
@@ -402,8 +432,12 @@ See the **[important notes](#important-notes)** for making this template display
 ### Example Uses
 
 - ["alternative to photoshop"](https://duckduckgo.com/?q=alternative+to+photoshop) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/alternative_to/alternative_to.js))
+
     ![DuckDuckGo search for "alternative to photoshop"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Falternative_to_photoshop.png&f=1)
+
 - ["oil production in Saudi Arabia"](https://duckduckgo.com/?q=oil+production+in+saudi+arabia&ia=answer) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/zanran/zanran.js))
+
+![DuckDuckGo search for "oil production in Saudi Arabia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fsaudi_oil.png&f=1)
 
 ------
 ## Images Template Group
@@ -441,6 +475,8 @@ Using the Images template group also automatically makes the Image [model](https
 ### Example Uses
 
 - ["duck images"](https://duckduckgo.com/?q=duck+images&ia=images) (built-in images search)
+
+![DuckDuckGo search for "duck images"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fduck_images.png&f=1)
 
 ------
 ## Movies Template Group
@@ -494,8 +530,17 @@ templates: {
 ### Example Uses
 
 - ["dogobooks harry potter"](https://duckduckgo.com/?q=dogobooks+harry+potter&ia=kidsbooks) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/dogo_books/dogo_books.js))
+
+![DuckDuckGo search for "dogobooks harry potter"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fdogobooks.png&f=1)
+
 - ["movies with keira knightley"](https://duckduckgo.com/?q=movies%20with%20Keira%20Knightley&ia=movies) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/kwixer/kwixer.js))
+
+![DuckDuckGo search for "movies with keira knightley"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fkeira_movies.png&f=1)
+
 - ["jiro dreams of sushi rotten tomatoes"](https://duckduckgo.com/?q=jiro+dreams+of+sushi+rotten+tomatoes&ia=movies)([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/ea61d47ef8639cf4fb282b51e2185e3a807d1bd5/share/spice/movie/movie.js))
+
+![DuckDuckGo search for "jiro dreams of sushi rotten tomatoes"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fjiro_dreams.png&f=1)
+
 
 ------
 ## Videos Template Group
@@ -535,6 +580,8 @@ Setting the Videos template group also automatically makes the Video [model](htt
 ### Example Uses
 
 - ["gopro videos"](https://duckduckgo.com/?q=gopro+videos&ia=videos&iai=hCsigWVqA-M) (built-in videos search)
+
+![DuckDuckGo search for "gopro videos"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fgopro_videos.png&f=1)
 
 ------
 ## Places Template Group
@@ -576,7 +623,17 @@ Specify these *item* templates to replace the default `places_item` template, wh
 - [`basic_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebasicflippingitemcode-template)
 - [`base_flipping_item`](https://duck.co/duckduckhack/templates_reference#codebaseflippingitemcode-template)
 
-#### Places Model and View
+### Example use of the 'places' template group
+
+- ["events in new york"](https://duckduckgo.com/?q=events+in+new+york&ia=events)
+
+    ![DuckDuckGo search for "events in new york"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fevents_ny.png&f=1)
+
+- ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
+
+    ![DuckDuckGo search for "parking in philadelphia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
+
+### Places Model and View
 
 The Places template group works together with the Places **model** and Places **view**. The Places model and view enable special map functionality and behaviors that make Instant Answers using Places valuable and delightful.
 
@@ -712,11 +769,6 @@ Spice.add({
 });
 ```
 
-### Example use of the 'places' template group
-
-- ["events in new york"](https://duckduckgo.com/?q=events+in+new+york&ia=events)
-- ["parking panda"](https://duckduckgo.com/?q=parking+in+philadelphia) ([code](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/parking/parking.js))
-    ![DuckDuckGo search for "parking in philadelphia"](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftemplate_groups%2Fparking_panda.png&f=1)
 
 
 ------

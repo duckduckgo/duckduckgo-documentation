@@ -2,6 +2,8 @@
 
 The final step of providing your Goodie results is displaying them in the DuckDuckGo AnswerBar.
 
+![goodieanswerbar](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fdiagrams%2Fgoodie_answerbar.png&f=1)
+
 ## Setting Display Properties in a Goodie
 
 Goodies are displayed according to a set of properties which can (mostly) be defined in each Goodie's Perl file. These options are returned as a hash called `structured_answer` when the Perl file finishes running. This hash is returned alongside the `$plaintext` string version of your Goodie result, used for the API):

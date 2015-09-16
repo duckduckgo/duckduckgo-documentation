@@ -6,29 +6,28 @@ Before moving forward, you **must** know which Instant Answer type you will be u
 
 ## Before you start...
 
-We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. If you prefer using a local text editor, that's alright, but using Codio is still beneficial because we already have the required software installed and ready to go. This page will show you how to set up Codio and then it's on to creating Instant Answers! You can also watch a [video screencast of this tutorial](https://vimeo.com/132712266).
+We highly recommend that everyone uses Codio, a web-based IDE that simplifies the setup and development process greatly. Codio is beneficial because we already have the required software installed and ready to go. 
 
-### Alternative Development Environments 
+This page will show you how to set up Codio and then it's on to creating Instant Answers! You can also watch a [video screencast of this tutorial](https://vimeo.com/132712266).
 
-Codio is the preferred choice of most DuckDuckHack contributors for its ease and speed. However, you may also [develop and test locally](https://duck.co/duckduckhack/other_development_environments), or install a [pre-configured virtual machine](https://duck.co/duckduckhack/other_development_environments). These options do require more time and effort than using Codio.
+For those who prefer local development, there are more involved options to [develop and test locally](https://duck.co/duckduckhack/other_development_environments), or install a [pre-configured virtual machine](https://duck.co/duckduckhack/other_development_environments). These options require significantly more time and effort than using Codio.
 
 ## Sign up for a GitHub Account
 
 *Already have a GitHub Account? Perfect, move on to [the next step](#sign-up-for-a-codio-account)!*
 
-If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub and anyone with an account can contribute. GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
+If you're new to programming, GitHub is a well known, popular tool that many individuals and companies use to save their code. Many open-source projects (such as DuckDuckHack) are hosted on GitHub. The only requirement to contribute is an account - which is free! GitHub is a great tool that you will likely be using long after this tutorial. To get started, let's sign up!
 
 1. Go to https://github.com/join and enter the required information, then click "**Create an Account**"
 2. Click "**Finish Signup**" to continue with a **Free** GitHub account.
 
 **Congrats!** You now have a GitHub account.
 
-
 ## Sign up for a Codio Account
 
-Next, you'll need to get an account for Codio:
-
 *Already have a Codio Account? Perfect, move on to [the next step](#fork-the-duckduckhack-project-on-codio)!*
+
+Next, you'll need to get an account for Codio. Codio allows contributors to spawn identical development environments, allowing us to focus on the fun parts, rather than installing tools.
 
 1. Go to https://codio.com and click "**Get Started**", at the top right corner.
 2. Click "**Sign Up via GitHub**".
@@ -38,7 +37,7 @@ Next, you'll need to get an account for Codio:
 
 **Congrats!** You now have a Codio account. You'll notice that you didn't need to provide a password, that's because you've logged in to Codio using your GitHub account. As long as you can login to your GitHub account, you can also login to Codio. Now let's get started with setting up your Codio environment!
 
-## Join the DuckDuckGo Organization
+## Join the DuckDuckGo Codio Organization
 
 1. **After logging into Codio,** [click this link](https://codio.com/p/signup?orgToken=Ax-OB3tU4sdNAG8axJBYcjNqR04) and you'll be added to our organization, which gives you a professional Codio setup free of charge. You should see a confirmation message at the bottom of your Codio screen after clicking. 
 
