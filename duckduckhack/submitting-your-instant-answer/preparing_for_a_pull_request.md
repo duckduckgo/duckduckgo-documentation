@@ -1,4 +1,14 @@
-# Preparing for Pull Request
+# Preparing to Submit
+
+Any contribution to DuckDuckHack is a significant and impressive undertaking. Your contribution has the potential to appear on hundreds of devices, across millions of searches.
+
+Our mission as a community is to cover every topic with an Instant Answer. *Every topic.* That involves an enormous number of people, contributors, and submissions. 
+
+To support as many contributors as possible, we've evolved a review process that is stringent and efficient. To undergo review, contributions must first satisfy a non-negotiable set of prerequisites. **The fastest way to get your contribution approved is to follow these requirements carefully.**
+
+Don't worry if that sounds daunting - we're always going to be as transparent as possible about any requirements. Also, the community is chock-full of leaders and contributors happy to pair up and help you prepare for review. Overall, this leads to a productive, interconnected DuckDuckHack community.
+
+## Pull Request Checklist
 
 The culmination of your contribution comes in the form of a pull request to the Github repository for your Instant Answer type.
 
