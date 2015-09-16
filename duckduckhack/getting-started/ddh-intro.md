@@ -2,7 +2,7 @@
 
 We are a community of DuckDuckGo users who invent and maintain "Instant Answers".
 
-*Find out how to contribute [how to contribute](https://duck.co/duckduckhack/contributing), how to [contact us](https://duck.co/duckduckhack/contributing#reach-out) and get involved.*
+*Find out [how to contribute](https://duck.co/duckduckhack/contributing), how to [contact us](https://duck.co/duckduckhack/contributing#reach-out) and get involved.*
 
 ## What are Instant Answers?
 
