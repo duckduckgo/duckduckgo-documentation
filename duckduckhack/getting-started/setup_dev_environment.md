@@ -67,10 +67,10 @@ In order to test out and create your own Instant Answer, you'll need the open-so
 By now you should have [determined the Instant Answer type](https://duck.co/duckduckhack/determine_your_instant_answer_type) you're going to build.
 
 1. Go to the Instant Answer repository homepage:
-    - [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies)
-    - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice)
-    - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead)
-    - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail)
+    - [Goodies](https://github.com/duckduckgo/zeroclickinfo-goodies) (for Cheat Sheets and Instant Answers that are pure code functions)
+    - [Spice](https://github.com/duckduckgo/zeroclickinfo-spice) (for Instant Answers that will make API calls) 
+    - [Fathead](https://github.com/duckduckgo/zeroclickinfo-fathead) (for Instant Answers that use key->value based data)
+    - [Longtail](https://github.com/duckduckgo/zeroclickinfo-longtail) (for Instant Answers that do full text search)
 2. Do you see your user portrait or "**Sign up**" and "**Sign in**" buttons in the top right corner?
     - **User Portrait**? Perfect. Move on to the next step.
     - **Sign up/in Buttons**? Click "**Sign In**", then enter your details and click "**Sign In**".
