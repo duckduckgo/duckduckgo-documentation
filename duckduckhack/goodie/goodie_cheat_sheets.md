@@ -4,17 +4,27 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ![tmux cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Ftmux_cheat_sheet.png&f=1)
 
-Looking for ideas for your cheat sheet? Check our [inspiration list](#cheat-sheet-ideas) below.
+## Cheat Sheet Ideas
+
+A cheat sheet is not always the best representation for your data. Sometimes, an Instant Answer is better built as a full Goodie or another type of Instant Answer. When thinking about your cheat sheet idea, think about what is useful to a searcher. Keyboard shortcuts, video game cheat codes, and similar data can be wonderfully useful as a cheat sheet. Here are some other cheat sheet Instant Answers we love: 
+
+[Regex help](https://duckduckgo.com/?q=regex+help&ia=cheatsheet&iax=1)    
+[Anniversary meanings](https://duckduckgo.com/?q=anniversary+help&ia=cheatsheet)  
+[Cryptography terms and help](https://duckduckgo.com/?q=cryptography+cheat+sheet&ia=cheatsheet&iax=1)  
+[Harry Potter spells](https://duckduckgo.com/?q=harry+potter+spells+cheat+sheet&ia=cheatsheet)  
+[Tennis info](https://duckduckgo.com/?q=tennis+cheat+sheet&ia=cheatsheet)  
+
+You can also [check out all the Cheat Sheets that others have made](https://duck.co/ia?q=cheat+sheet) to inspire you for another topic! 
 
 ## How to Add Your Cheat Sheet
 
 Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie. 
 
-**The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).** After [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment, you'll be just one file away from submitting your cheat sheet to appear on DuckDuckGo.
+**The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).** During setup [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment and choose the option to fork/clone the Goodies repository (where Cheat Sheets live). 
 
 ### Create a JSON File
 
-Instead of creating an entirely new Instant Answer, you simply need to add **one JSON file** to the existing `/json` folder in the [Cheat Sheets share directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets/json).
+After cloning the Goodies repository, you simply need to add **one JSON file** to the existing `/json` folder in the [Cheat Sheets share directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets/json).
 
 To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodies` repository directory. Then use the file tree to click into the `/share/goodie/cheat_sheets` directory. Then click the **json** folder. 
 
@@ -216,15 +226,3 @@ We recommend displaying alternatives as follows:
 We've found the best way to express arrow keys is directly using arrow ASCII characters (&larr;, &uarr;, &rarr;, &darr;). Feel free to copy and paste the characters from here.
 
 For example, instead of **[Shift] [Up]** we recommend **[Shift] [&uarr;]**.
-
-## Cheat Sheet Ideas
-
-A cheat sheet is not always the best representation for your data. Sometimes, an Instant Answer is better built as a full Goodie or another type of Instant Answer. When thinking about your cheat sheet idea, think about what is useful to a searcher. Keyboard shortcuts, video game cheat codes, and similar data can be wonderfully useful as a cheat sheet. Here are some other cheat sheet Instant Answers we love: 
-
-[Regex help](https://duckduckgo.com/?q=regex+help&ia=cheatsheet)    
-[Anniversary meanings](https://duckduckgo.com/?q=anniversary+help&ia=cheatsheet)  
-[Cryptography terms and help](https://duckduckgo.com/?q=cryptography+cheat+sheet&ia=cheatsheet)  
-[Harry Potter spells](https://duckduckgo.com/?q=harry+potter+spells+cheat+sheet&ia=cheatsheet)  
-[Tennis info](https://duckduckgo.com/?q=tennis+cheat+sheet&ia=cheatsheet)  
-
-You can also [search our ideas forum for cheat sheets](https://duck.co/ideas/search?q=cheat+sheet), or [submit one of your own](https://duck.co/ideas/newidea)! 
