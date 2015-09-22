@@ -178,9 +178,9 @@ Your cheat sheet might include characters which are themselves part of JSON synt
 
 Because cheat sheets display brackets `[ ]` and braces `{ }` as code blocks, express those literally using a **double backslash**:
 
-- If you want to express a literal bracket, use a double backslash `{Ctrl + \\[}`.
-- If you want to express a literal brace, use a double backslash `[Ctrl + \\{]`.
-- To express a **single literal backslash**, type four backslashes in a row: `[Ctrl + \\\\]`.
+- If you want to express a literal bracket, use a double backslash `[Ctrl]  {\\[}`.
+- If you want to express a literal brace, use a double backslash `[Ctrl] [\\{]`.
+- To express a **single literal backslash**, type four backslashes in a row: `[Ctrl] [\\\\]`.
 
 *Note that an uneven number of sequential backslashes will throw an error.*
 
