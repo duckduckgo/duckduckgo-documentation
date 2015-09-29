@@ -53,6 +53,8 @@ Here is how to commit your code in the Codio environment:
     To https://github.com/GitHubUsername/zeroclickinfo-goodies.git
        138f5bc..c69c517  master -> master
     ```
+If you had created a bramch for your current contribution then you need to Type **`git push origin branch_name`** and press **`Enter`**. Then you need to type your username and password.
+
 
 ## Submitting a Pull Request
 
