@@ -116,7 +116,7 @@ Now we need to "clone" the code from GitHub to your Codio box so you can see it,
 
 8. Change the current directory of the terminal by typing **`cd zeroclickinfo-xxxxx`**, where "**xxxxx**" is whichever Instant Answer type you chose: Goodie, Spice, Fathead, or Longtail.
 
-9. Create a new branch by typing  **`git checkout -b branch_name`**. You can use any brach name you like. You must creare a new branch for each of your contributions. You can switch between branches by usng **`git checkout branch_name`**.
+9. [Optional, best practice] Create a new branch in your repository for this particular project. This lets you work on several ideas at one time and keep them separate. Create a new branch by typing  **`git checkout -b branch_name`**. You can use any brach name you like. You must creare a new branch for each of your contributions. You can switch between branches by usng **`git checkout branch_name`**.
 
 **Congrats!** You've now cloned the DuckDuckHack code onto your Codio machine. You're now prepared to code your first Instant Answer!
 
