@@ -37,9 +37,9 @@ Here is how to commit your code in the Codio environment:
      create mode 100644 ...
     ```
 
-6. Now we'll upload the changes to *our* remote repository on GitHub. Once this step is done, we'll be ready to create a pull request back to the main, original DuckDuckGo repository. 
+6. Now we'll upload the changes to *our* remote repository on GitHub. Once this step is done, we'll be ready to create a pull request back to the main, original DuckDuckGo repository.
 
-    Type **`git push`** and press **`Enter`**. Enter your GitHub Username and password, press **`Enter`** after each. Git will print some text to the Terminal letting you know that your code has been pushed to GitHub.
+If you had created a branch for your current contribution then type **`git push origin branch_name`** and press **`Enter`**. If not type **`git push`** and press **`Enter`**. Enter your GitHub Username and password, press **`Enter`** after each. Git will print some text to the Terminal letting you know that your code has been pushed to GitHub.
 
     ```
     [04:35 PM codio@buffalo-pixel zeroclickinfo-goodies {master}]$ git push
@@ -53,6 +53,8 @@ Here is how to commit your code in the Codio environment:
     To https://github.com/GitHubUsername/zeroclickinfo-goodies.git
        138f5bc..c69c517  master -> master
     ```
+
+
 
 ## Submitting a Pull Request
 
