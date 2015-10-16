@@ -41,7 +41,7 @@ Aside from HTML and CSS, the Spice frontend also utilizes the following third-pa
 - [jQuery](https://jquery.org) v1.10.2
 - and [Handlebars](http://handlebarsjs.com) v1.3.0
 
-If you're not already familiar with Handlebars, *please* read the [Handlebars documentationn](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
+If you're not already familiar with Handlebars, *please* read the [Handlebars documentation](http://handlebarsjs.com) before continuing on. Don't worry if you don't fully understand how to use Handlebars, the examples will explain everything. You should, at the very least, familiarize yourself with Handlebars concepts and terminology before moving on. It should only take a few minutes to read!
 
 <!-- /summary -->
 
