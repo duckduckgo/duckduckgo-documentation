@@ -21,14 +21,14 @@ The full code performs some additional parsing on each line of the `slurp`-ed ar
 my %oui_db = map { chomp; my (@f) = split(/\\n/, $_, 2); ($f[0] => $f[1]); } share("oui_database.txt")->slurp;
 ```
 
-You may decide to take advantage of particular formats. For example, you might decode a JSON file, like the [Independence Day Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IndependenceDay.pm):
+You may decide to take advantage of particular data formats, such as JSON, as does the [Independence Day Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IndependenceDay.pm):
 
 ```perl
 my $data = share('independence_days.json')->slurp;
 $data = decode_json($data);
 ```
 
-Or parse a YAML file, like the [Paper Size Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Paper.pm):
+Another example involves parsing a YAML file, as does the [Paper Size Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Paper.pm):
 
 ```perl
 use YAML::XS 'LoadFile';
