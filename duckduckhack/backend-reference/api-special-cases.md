@@ -81,24 +81,6 @@ Some APIs don't do JSONP by default, i.e. don't have the ability to return the J
 spice wrap_jsonp_callback => 1;
 ```
 
-## Pure JS functions
-
-Sometimes no external API is necessary to deliver the Instant Answer like how the [Flash Version Spice](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/FlashVersion.pm) just prints out your [Flash Player version](https://duckduckgo.com/?q=flash+version) using an [internal call](https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/flash_version/flash_version.js).
-
-In cases like these you can define a **spice\_call\_type** as 'self' like this:
-
-```perl
-spice call_type => 'self';
-```
-
-Then in the handle function you can return call, e.g.:
-
-```perl
-return $_ eq 'flash version' ? call : ();
-```
-
-The return of **call** will run whatever is in the **call\_type** setting. **self** is a special keyword to just run the callback function directly, in this case **ddg\_spice\_flash_version()**.
-
 ## Caching
 
 Spice Instant Answers have two forms of caching: API Response caching (remembers the JSON returned from the API) and API Call caching (remembers the API call URL created for a given query). Both of these will be explained with examples.
