@@ -4,7 +4,7 @@
 
 With millions of search queries triggering Instant Answers every day, it's important to choose APIs wisely. There are several criteria for APIs used in Spice Instant Answers.
 
-### Technical constraints:
+### Technical constraints
 
 - APIs called by Spice Instant Answers **must use the JSON or JSONP formats**. We do not support the use of XML (it's coming soon though!), HTML, or plain text responses.
 - APIs should respond to requests in **less than one second** (< 1s).

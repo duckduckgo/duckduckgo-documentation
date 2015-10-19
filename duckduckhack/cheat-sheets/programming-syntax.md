@@ -24,9 +24,9 @@ File | Purpose | Location
 
 Before we begin coding, we'll need to set up our development environment. There are three main steps:
 
-1. Fork the [Spice Repository](#) on Github.com. ([Find out how](#))
-2. Fork the [DuckDuckGo environment](#) on Codio.com (our tools). ([Find out how](#))
-3. Clone your Github fork onto the Codio environment. ([Find out how](#))
+1. Fork the [Spice Repository](#) on Github.com. ([How?](#))
+2. Fork the [DuckDuckGo environment](#) on Codio.com (our tools). ([How?](#))
+3. Clone your Github fork onto the Codio environment. ([How?](#))
 
 If this is your first time setting up, fear not! Check out our [detailed, step-by-step guide](#) to setting up.
 
