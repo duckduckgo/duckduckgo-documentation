@@ -6,19 +6,35 @@ The `share` function gives each Instant Answer access to a subdirectory of the r
 
 ## Usage
 
-The [Passphrase Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Passphrase.pm) uses the `share` directory to hold data for processing purposes:
+
+The [MAC Address Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/andrey/js-keycodes-cheatsheet/lib/DDG/Goodie/MacAddress.pm) uses the `share` directory to hold data for processing purposes:
 
 ```perl
-my @words = share('words.txt')->slurp;
+my %oui_db = share("oui_database.txt")->slurp;
 ```
 
-Here the `share` function grabs the `words.txt` file, found in `zeroclickinfo-goodies/share/goodie/passphrase/`. The returned object's `slurp` method is called which pushes each line of the file into the `@words` array.
+Here the `share` function grabs the `oui_database.txt` file. The returned object's `slurp` method is called which pushes each line of the file into an array.
 
+The full code performs some additional parsing on each line of the `slurp`-ed array:
 
 ```perl
-
+my %oui_db = map { chomp; my (@f) = split(/\\n/, $_, 2); ($f[0] => $f[1]); } share("oui_database.txt")->slurp;
 ```
 
+You may decide to take advantage of particular formats. For example, you might decode a JSON file, like the [Independence Day Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/IndependenceDay.pm):
+
+```perl
+my $data = share('independence_days.json')->slurp;
+$data = decode_json($data);
+```
+
+Or parse a YAML file, like the [Paper Size Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/Paper.pm):
+
+```perl
+use YAML::XS 'LoadFile';
+
+my $sizes = LoadFile(share('sizes.yml'));
+```
 
 ## UTF-8 Encoding
 
