@@ -18,7 +18,7 @@ Simple enough. So how do we make that work in code?
 
 ## Anatomy of an Instant Answer
 
-The Hacker News Instant Answer is a combination of several backend and fronted code files, each covering a specific function. Because it calls an external API, it is a "Spice" Instant Answer, and all files will be located in the [Spice repository](#).
+The Hacker News Instant Answer is a combination of several backend and frontend code files, each covering a specific function. Because it calls an external API, it is a "Spice" Instant Answer, and all files will be located in the [Spice repository](#).
 
 Backend files:
 
@@ -163,7 +163,7 @@ How will DuckDuckGo know to trigger our Instant Answer on a user's search? That'
 triggers startend => "hn", "hackernews", "hacker news", "news.yc", "news.ycombinator.com", "hn search", "hnsearch", "hacker news search", "hackernews search";
 ```
 
-This tells DuckDuckGo that if any of these strings occurs at the *start* or *end* of any user's search query, it should activate our Instant Answer and give the API a shot. Of
+This tells DuckDuckGo that if any of these strings occurs at the *start* or *end* of any user's search query, it should activate our Instant Answer and attempt calling the API. Triggers don't guarantee the API will return anything useful - just that they're worth trying.
 
 Aside from `startend`, there are more types of triggers - and you can even define several together. You can [learn more about triggers here](#).
 
@@ -332,7 +332,7 @@ templates: {
 
 You'll notice the inclusion of the `Spice.hacker_news.footer` sub-template. This refers to the [footer.handlebars](#) file also in the `share/spice/hacker_news/` directory. You can learn more about the [inclusion of sub-templates here](#).
 
-Finally, we'll give instructions on how to sort our results - by what properties. [Learn more about sorting here](#).
+Finally, we'll define the properties on which we'll sort results. [Learn more about sorting here](#).
 
 ```javascript
 sort_fields: {
@@ -402,7 +402,7 @@ ddg_spice_test(
 done_testing;
 ```
 
-A test file is required for submitting your Instant Answer. However, we don't need to it proceed with interactively testing our code, which we'll do next.
+A test file is required for submitting your Instant Answer. However, we don't need it to proceed with interactively testing our code, which we'll do next.
 
 ### Interactively Test Our Instant Answer
 

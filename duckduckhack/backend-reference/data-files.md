@@ -1,9 +1,8 @@
 # Data Files
 
-Instant Answers - particularly Goodies - can use simple text or html input files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
+Instant Answers - particularly Goodies - can use simple text files for display or processing. These files can be read once and reused to answer many queries without cluttering up your source code.
 
 The `share` function gives each Instant Answer access to a subdirectory of the repository's [`share`](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie) directory. The subdirectory for your Instant Answer is based on its Perl package name which is transformed from CamelCase to underscore_separated_words. 
-
 
 ## Usage
 
@@ -15,18 +14,11 @@ my @words = share('words.txt')->slurp;
 
 Here the `share` function grabs the `words.txt` file, found in `zeroclickinfo-goodies/share/goodie/passphrase/`. The returned object's `slurp` method is called which pushes each line of the file into the `@words` array.
 
-In another case, the [PrivateNetwork Goodie](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/PrivateNetwork.pm) uses its `share` directory to hold files for display purposes:
 
 ```perl
-my $text = scalar share('private_network.txt')->slurp,
-my $html = scalar share('private_network.html')->slurp;
 
-handle sub {
-    $text, html => $html;
-};
 ```
 
-Here each file is grabbed from `share/goodie/private_network/` and `slurp`ed in a `scalar` context. This returns the entire file as a string and assigns it to the appropriate variable. In the `handle` function, `$text` and `$html` are returned to display as plain text or HTML Instant Answer.
 
 ## UTF-8 Encoding
 
