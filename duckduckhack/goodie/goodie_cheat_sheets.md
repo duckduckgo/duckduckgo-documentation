@@ -6,29 +6,29 @@ A popular (and perfect) use of Goodies is to create cheat sheets which are avail
 
 ## Cheat Sheet Ideas
 
-A cheat sheet is not always the best representation for your data. Sometimes, an Instant Answer is better built as a full Goodie or another type of Instant Answer. When thinking about your cheat sheet idea, think about what is useful to a searcher. Keyboard shortcuts, video game cheat codes, and similar data can be wonderfully useful as a cheat sheet. Here are some other cheat sheet Instant Answers we love: 
+A cheat sheet is not always the best representation for your data. Sometimes, an Instant Answer is better built as a full Goodie or another type of Instant Answer. When thinking about your cheat sheet idea, think about what is useful to a searcher. Keyboard shortcuts, video game cheat codes, and similar data can be wonderfully useful as a cheat sheet. Here are some other cheat sheet Instant Answers we love:
 
-[Regex help](https://duckduckgo.com/?q=regex+help&ia=cheatsheet&iax=1)    
-[Anniversary meanings](https://duckduckgo.com/?q=anniversary+help&ia=cheatsheet)  
-[Cryptography terms and help](https://duckduckgo.com/?q=cryptography+cheat+sheet&ia=cheatsheet&iax=1)  
-[Harry Potter spells](https://duckduckgo.com/?q=harry+potter+spells+cheat+sheet&ia=cheatsheet)  
-[Tennis info](https://duckduckgo.com/?q=tennis+cheat+sheet&ia=cheatsheet)  
+[Regex help](https://duckduckgo.com/?q=regex+help&ia=cheatsheet&iax=1)
+[Anniversary meanings](https://duckduckgo.com/?q=anniversary+help&ia=cheatsheet)
+[Cryptography terms and help](https://duckduckgo.com/?q=cryptography+cheat+sheet&ia=cheatsheet&iax=1)
+[Harry Potter spells](https://duckduckgo.com/?q=harry+potter+spells+cheat+sheet&ia=cheatsheet)
+[Tennis info](https://duckduckgo.com/?q=tennis+cheat+sheet&ia=cheatsheet)
 
-You can also [check out all the Cheat Sheets that others have made](https://duck.co/ia?q=cheat+sheet) to inspire you for another topic! 
+You can also [check out all the Cheat Sheets that others have made](https://duck.co/ia?q=cheat+sheet) to inspire you for another topic!
 
 ## How to Add Your Cheat Sheet
 
-Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie. 
+Once you have an [idea for a cheat sheet](#cheat-sheet-ideas), it's easy to add it to the DuckDuckGo Cheat Sheet Goodie.
 
-**The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).** During setup [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment and choose the option to fork/clone the Goodies repository (where Cheat Sheets live). 
+**The first step is to [set up your development environment](https://duck.co/duckduckhack/setup_dev_environment).** During setup [following the steps](https://duck.co/duckduckhack/setup_dev_environment) to set up your environment and choose the option to fork/clone the Goodies repository (where Cheat Sheets live).
 
 ### Create a JSON File
 
 After cloning the Goodies repository, you simply need to add **one JSON file** to the existing `/json` folder in the [Cheat Sheets share directory](https://github.com/duckduckgo/zeroclickinfo-goodies/tree/master/share/goodie/cheat_sheets/json).
 
-To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodies` repository directory. Then use the file tree to click into the `/share/goodie/cheat_sheets` directory. Then click the **json** folder. 
+To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodies` repository directory. Then use the file tree to click into the `/share/goodie/cheat_sheets` directory. Then click the **json** folder.
 
-Up in the **File menu**, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving to the `cheat_sheets` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
+Up in the **File menu**, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving to the `cheat_sheets/json` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
 
 Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax). Feel free to copy the code in the following section into your new file as a convenient template.
 
@@ -60,16 +60,16 @@ Submitting your cheat sheet is similar to submitting any Instant Answer contribu
 
 ## How Are Cheat Sheets Triggered?
 
-Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm), your Instant Answer will be shown. 
+Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm), your Instant Answer will be shown.
 
-For example, for the *vim* text editor, the Instant Answer will be triggered on: 
+For example, for the *vim* text editor, the Instant Answer will be triggered on:
 
 - "vim *cheatsheet*"
 - "vim *cheat sheet*"
 - "vim *commands*"
 - "vim *guide*"
 - "vim *shortcuts*"
-- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm). 
+- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm).
 
 If you'd like to add more names for the subject of your cheat sheet (in addition to the file name), you can specify them in the `aliases` property of your cheat sheet JSON file. For example, if your cheat sheet file is `lord-of-the-rings.json`, a natural alias is 'LOTR'. For details check out the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference).
 
@@ -79,7 +79,7 @@ Below is a summary of the [`vim.json`](https://github.com/duckduckgo/zeroclickin
 
 ![vim cheat sheet](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fraw.githubusercontent.com%2Fduckduckgo%2Fduckduckgo-documentation%2Fmaster%2Fduckduckhack%2Fassets%2Fvim_cheat_sheet.png&f=1)
 
-The above Instant Answer was created by simply adding [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/json/vim.json), explained below. 
+The above Instant Answer was created by simply adding [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/json/vim.json), explained below.
 
 **For convenience, we encourage you to copy the [`vim.json`](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/share/goodie/cheat_sheets/json/vim.json) code into your new file, as a starting point.** Copy the [raw file](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/share/goodie/cheat_sheets/json/vim.json), as the JSON below won't work due to inline comments.
 
@@ -87,23 +87,23 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
 {
     // Required; must match the id of the cheat sheet's IA page
     // For example, https://duck.co/ia/view/vim_cheat_sheet
-    "id": "vim_cheat_sheet", 
+    "id": "vim_cheat_sheet",
 
     // Required; displayed as title of AnswerBar
     "name": "Vim",
 
     // Optional; displayed as subtitle of AnswerBar
-    "description": "Text Editor", 
-    
+    "description": "Text Editor",
+
     // Required if cheat sheet has a source; useful to link users to further information.
     // Displayed at bottom of AnswerBar, favicon shown automatically
-    "metadata": { 
+    "metadata": {
         "sourceName": "VimCheatSheet",
         "sourceUrl": "https://..." // Should be SSL if possible
     },
 
-	// Optional; add additional search triggers for your cheat sheet
-	"aliases": [
+    // Optional; add additional search triggers for your cheat sheet
+    "aliases": [
         "vim", "vi improved", "vi text editor"
     ],
 
@@ -111,7 +111,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
     "template_type": "keyboard",
 
     // Required; controls which sections appear and in what order
-    "section_order": [  
+    "section_order": [
         "Cursor movement",
         "Insert mode - inserting/appending text",
         // ...additional sections
@@ -122,7 +122,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
     "sections": {
         "Tabs": [
             {
-                "key": "#gt", 
+                "key": "#gt",
                 "val": "move to tab number #"
             },
             {
@@ -130,18 +130,18 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
                 "val": "move the current split window into its own tab"
             }
             // ...additional entries
-        ],        
+        ],
         "Insert mode - inserting/appending text": [
             {
                 "key": "i",
-                "val": "insert before the cursor"               
-            }, 
+                "val": "insert before the cursor"
+            },
             {
                 "key": "I",
                 "val": "insert at the beginning of the line"
             }
             // ...additional entries
-        ],  
+        ],
         // ...additional sections
     }
 }
@@ -194,32 +194,32 @@ There is no special syntax required for the string - for example, `"x"` or `":se
 
 #### Simultaneous Keys (e.g., pressing A and B together)
 
-We recommend expressing simultaneous key presses as follows: 
+We recommend expressing simultaneous key presses as follows:
 
 - As adjacent code blocks, e.g. `"[Ctrl] [v]"`
 - For "*nix-style" cheatsheets (like Emacs), as a single code block with a dash, e.g. `"[C-v]"`
-	
+
 #### Consecutive Keys (e.g., pressing A, then pressing B)
 
 We recommend expressing consecutive key presses as separate code blocks separated by a comma, e.g. `"[Ctrl-B], [x]"`
-	
+
 #### Alternative Keys (e.g., pressing either A or B)
 
-We recommend displaying alternatives as follows: 
+We recommend displaying alternatives as follows:
 
 - For single-key alternatives, wrap in parentheses, e.g. `[Ctrl] ( [L] / [P] )`
 - For complete alternatives, we recommend replicating the key-value pair. Make an indication in the `val` that it's an alternative:
-	
-	```
-	{
+
+    ```
+    {
         "key": "[Ctrl] [j]",
-        "val": "Jump"               
+        "val": "Jump"
     },
-	{
+    {
         "key": "[Ctrl] [Spacebar]",
-        "val": "Jump (alternative)"               
+        "val": "Jump (alternative)"
     },
-	```
+    ```
 
 #### Arrow Keys
 
