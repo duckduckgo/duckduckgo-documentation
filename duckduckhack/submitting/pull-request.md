@@ -2,9 +2,11 @@
 
 The culmination of your contribution comes in the form of a pull request to the Github repository for your Instant Answer type. A pull request is a great, transparent way to review and discuss potential changes to a repository.
 
+The following are step-by-step instructions for submitting your changes as a pull request.
+
 ## Committing Your Changes
 
-The first step is to commit your changes to your local repository. If you've already done this, you can skip to [submitting a pull request](#submitting-a-pull-request), below. 
+The first step is to commit your changes to your local repository. *If you've already done this, you can skip to [submitting a pull request](#submitting-a-pull-request), below.* 
 
 Here is how to commit your code in the Codio environment:
 
