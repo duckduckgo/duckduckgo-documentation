@@ -16,7 +16,7 @@ When the Instant Answer is triggered, DuckDuckGo executes its front-end code on 
 
 Simple enough. So how do we make that work in code?
 
-## Anatomy of an Instant Answer
+## Anatomy of this Instant Answer
 
 Because this Instant Answer calls an external API, it's called a "Spice" Instant Answer. All Spice Instant Answers are kept together in the [Spice repository](#) on Github.
 
@@ -51,15 +51,14 @@ If this is your first time developing an Instant Answer, check out our [detailed
 
 ## Create a New Instant Answer
 
-In Codio, load the terminal, and change into your repository home directory:
-
-(Screenshot of clicking terminal)
+In Codio, load the terminal, and change into the Spice repository's home directory, `zeroclickinfo-spice`:
+[Screenshot of clicking terminal]
 
 ```
 [08:17 PM codio@border-carlo workspace ]$ cd zeroclickinfo-spice
 ```
 
-The `duckpan` tool helps make and test Instant Answers. To create a new Instant Answer template, run **`duckpan new`**:
+The `duckpan` tool helps make and test Instant Answers. To create new Spice boilerplate, run **`duckpan new`**:
 
 ```
 [08:18 PM codio@border-carlo zeroclickinfo-spice {master}]$ duckpan new                                                                                    
@@ -69,6 +68,7 @@ Please enter a name for your Instant Answer :
 Type `Hacker Newz` (since *Hacker News* already exists in the repository, we'll change one letter for this tutorial). The tool will do the rest:
 
 ```
+Please enter a name for your Instant Answer : Hacker Newz
 Created file: lib/DDG/Spice/HackerNewz.pm                                                                                                                  
 Created file: share/spice/hacker_newz/hacker_newz.handlebars                                                                                               
 Created file: share/spice/hacker_newz/hacker_newz.js                                                                                                       
@@ -111,9 +111,9 @@ On the next line, we'll leave caching on. By default, caching saves the results 
 spice is_cached => 1;
 ```
 
-Now for the Metadata. Because there's so many Instant Answers, metadata helps us organize, describe, and attribute your contribution. They are also used to automatically generate Instant Answer Pages - plus give you credit right on DuckDuckGo.com.
+Now for the Metadata. Because there's so many Instant Answers, metadata helps us organize, describe, and attribute your contribution. They are also used to automatically generate [Instant Answer Pages](https://duck.co/ia) - plus give you credit right on DuckDuckGo.com.
 
-For example, these are the Metadata values used in the live HackerNews answer. You can learn more in the [metadata reference](#).
+For example, these are the Metadata values used in the live *HackerNews* answer. You can learn more in the [metadata reference](#).
 
 ```perl
 primary_example_queries "hn postgresql";
@@ -183,6 +183,8 @@ handle remainder => sub {
     return;
 };
 ```
+
+Within our `handle` function, `$_` is a special variable that takes on the value of `remainder`. The `remainder` refers to the rest of the query after removing our matched triggers.
 
 This function is a simple case: it returns the *remainder* of the query, unless it's blank. The *remainder* is just the query minus the trigger. If a user searches 'hacker news meteor', the remainder would be 'meteor'.
 
@@ -418,7 +420,7 @@ done_testing;
 
 A test file is required for submitting your Instant Answer. However, we don't need it to proceed with interactively testing our code, which we'll do next.
 
-### Interactively Test Our Instant Answer
+## Interactively Test Our Instant Answer
 
 Inside Codio, we can preview the behavior of all Instant Answers on a local test server. 
 
