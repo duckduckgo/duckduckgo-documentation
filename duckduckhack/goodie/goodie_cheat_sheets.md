@@ -60,7 +60,7 @@ Submitting your cheat sheet is similar to submitting any Instant Answer contribu
 
 ## How Are Cheat Sheets Triggered?
 
-Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm), your Instant Answer will be shown.
+Triggering is built in to the main Cheat Sheets Goodie. When the name of your cheat sheet file is searched with any of the [built-in trigger words](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm#L14), your Instant Answer will be shown.
 
 For example, for the *vim* text editor, the Instant Answer will be triggered on:
 
@@ -69,9 +69,9 @@ For example, for the *vim* text editor, the Instant Answer will be triggered on:
 - "vim *commands*"
 - "vim *guide*"
 - "vim *shortcuts*"
-- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm).
+- ...and so on. View all terms in [CheatSheets.pm](https://github.com/duckduckgo/zeroclickinfo-goodies/blob/master/lib/DDG/Goodie/CheatSheets.pm#L14).
 
-If you'd like to add more names for the subject of your cheat sheet (in addition to the file name), you can specify them in the `aliases` property of your cheat sheet JSON file. For example, if your cheat sheet file is `lord-of-the-rings.json`, a natural alias is 'LOTR'. For details check out the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference).
+If you'd like to add more names for the subject of your cheat sheet (in addition to the file name), you can specify them in the `aliases` property of your cheat sheet JSON file. For example, if your cheat sheet file is `lord-of-the-rings.json`, a natural alias is 'lotr'. Be sure to use only lowercase letters for aliases. For details check out the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference).
 
 ## Cheat Sheet JSON Reference
 
@@ -102,7 +102,7 @@ The above Instant Answer was created by simply adding [`vim.json`](https://githu
         "sourceUrl": "https://..." // Should be SSL if possible
     },
 
-    // Optional; add additional search triggers for your cheat sheet
+    // Optional; add additional search triggers for your cheat sheet (use lowercase letters)
     "aliases": [
         "vim", "vi improved", "vi text editor"
     ],
