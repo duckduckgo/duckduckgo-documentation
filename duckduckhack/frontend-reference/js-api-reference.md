@@ -250,11 +250,11 @@ Example:
 
 ## commifyNumber(value)
 
-Returns the comma seperated string representation of a number
+Returns the comma separated string representation of a number
 
 **Parameters**
 
-**value**: *number*, the number to comma seperate
+**value**: *number*, the number to comma separate
 
 Example:
 
