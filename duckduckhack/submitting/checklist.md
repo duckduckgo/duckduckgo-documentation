@@ -1,12 +1,10 @@
 # Instant Answer Checklist
 
-To be accepted by the community to appear on DuckDuckGo.com, Instant Answers must naturally meet certain standards. It's important that Instant Answers are:
-
-- Maintainable
-- Scalable
-- ...
+All Instant Answers currently live on DDG adhere to x... we've tried to outline what we believe make for the best experience. These are below... 
 
 In order to be as transparent and simple as possible, we've collected these requirements into a checklist you can review when planning - and before submitting - your Instant Answer. We do our best to keep this list as quick and relevant as we can.
+
+We'd love your help in evolving these standards! Have an opinion or suggestion on how to make these better? Definitely let us know.
 
 If you're not sure, or want help satisfying this checklist, we'd love to help! We have a great community [on Slack](mailto:QuackSlack@duckduckgo.com?subject=AddMe) where you can find someone to give detailed feedback. You can also [send an email](mailto:open@duckduckgo.com).
 
