@@ -1,6 +1,6 @@
 ## Spice JavaScript API Reference
 
-For a list of avaliable Spice JS functions see:
+For a list of available Spice JS functions see:
 
 - [DDG Namespace Functions](http://duck.co/duckduckhack/spice_js_api#ddg-namespace)
 - [Spice Namespace Functions](http://duck.co/duckduckhack/spice_js_api#spice-namespace)
@@ -255,7 +255,7 @@ Example:
 
 ## commifyNumber(value)
 
-Returns the comma seperated string representation of a number
+Returns the comma separated string representation of a number
 
 **Parameters**
 
