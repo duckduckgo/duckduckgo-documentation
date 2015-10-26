@@ -255,7 +255,7 @@ Example:
 
 ## commifyNumber(value)
 
-Returns the comma seperated string representation of a number
+Returns the comma separated string representation of a number
 
 **Parameters**
 
