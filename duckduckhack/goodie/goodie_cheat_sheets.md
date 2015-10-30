@@ -30,7 +30,7 @@ To do this in Codio, use the left-hand panel to enter the `/zeroclickinfo-goodie
 
 Up in the **File menu**, click **"Create New File"**, and enter the name of your cheat sheet as a JSON file (make sure it's saving to the `cheat_sheets/json` directory). For example, if the trigger for your cheat sheet is "gopro cheat sheet" create a new file called `gopro.json`.
 
-Erase any pre-filled contents, and enter the values for your cheat sheet using the [cheat sheet JSON syntax](#cheat-sheet-json-syntax). Feel free to copy the code in the following section into your new file as a convenient template.
+Erase any pre-filled contents, and enter the values for your cheat sheet using the [Cheat Sheet JSON Reference](#cheat-sheet-json-reference). Feel free to copy the code in the following section into your new file as a convenient template.
 
 Conveniently, with cheat sheets there's no need to create a new Instant Answer. There is also no need to edit the `CheatSheets.pm` file, `cheat_sheets.js`, or `cheat_sheets.css`. Simply save your new file, and proceed to test your work.
 
