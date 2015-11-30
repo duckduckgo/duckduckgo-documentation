@@ -89,6 +89,7 @@ Here's how to submit a pull request to DuckDuckHack:
 
 5. For new Instant Answers, copy the "Pull Request Template" for your type of Instant Answer from the links below. Paste it into the "Leave a Comment" text box, and answer the questions.
 
+    - [Cheat Sheet Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_cheat_sheet.md)
     - [Goodie Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-goodies/master/pull_request_template_goodie.md)
     - [Spice Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-spice/master/pull_request_template_spice.md)
     - [Fathead Pull Request Template](https://raw.githubusercontent.com/duckduckgo/zeroclickinfo-fathead/master/pull_request_template_fathead.md)
