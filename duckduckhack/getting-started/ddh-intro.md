@@ -1,4 +1,12 @@
-# Welcome to DuckDuckHack!
+# We Have Moved!
+
+These are the **old docs**, and are outdated.
+
+The new documentation can be read [here](http://docs.duckduckhack.com) and the repository is hosted [here](https://github.com/duckduckgo/duckduckhack-docs).
+
+Any feedback, thoughts, or pull requests about the new docs are welcome, **please** let us know at open@duckduckgo.com
+
+# Welcome to DuckDuckHack
 
 We are a community of DuckDuckGo users who help improve the search engine with, "Instant Answers". To get started, please [request an invite to our Slack team](mailto:QuackSlack@duckduckgo.com?subject=AddMe). You may join multiple Slack channels to discuss your Instant Answer ideas with others who may have the same interests!
 

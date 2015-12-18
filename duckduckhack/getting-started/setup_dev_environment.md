@@ -1,3 +1,11 @@
+# We Have Moved!
+
+These are the **old docs**, and are outdated.
+
+The new documentation can be read [here](http://docs.duckduckhack.com) and the repository is hosted [here](https://github.com/duckduckgo/duckduckhack-docs).
+
+Any feedback, thoughts, or pull requests about the new docs are welcome, **please** let us know at open@duckduckgo.com
+
 # Setting Up Your Development Environment
 
 In order to get moving with Instant Answer development, you'll need to setup your environment. At the very minimum, you will need a GitHub account and the DuckDuckHack developer tool, DuckPAN, to make and submit an Instant Answer. This guide will help you determine the best setup for you.
