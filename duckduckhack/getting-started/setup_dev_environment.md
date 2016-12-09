@@ -48,7 +48,7 @@ Next, you'll need to get an account for Codio:
 
 ## Join the DuckDuckGo Organization
 
-1. **After logging into Codio,** [click this link](https://codio.com/p/signup?orgToken=Ax-OB3tU4sdNAG8axJBYcjNqR04) and you'll be added to our organization, which gives you a professional Codio setup free of charge. You should see a confirmation message at the bottom of your Codio screen after clicking. 
+1. **After logging into Codio,** <a href="https://codio.com/p/signup?orgToken=Ax-OB3tU4sdNAG8axJBYcjNqR04" target="_blank">click this link</a> and you'll be added to our organization, which gives you a professional Codio setup free of charge. You should see a confirmation message at the bottom of your Codio screen after clicking. 
 
 
 ## Fork the DuckDuckHack Project on Codio
