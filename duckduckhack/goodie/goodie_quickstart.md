@@ -228,7 +228,7 @@ We'll be using the **DuckPAN tool** to generate this boilerplate code for us. Th
 
     ```perl
     handle remainder => sub {
-        return if $_;
+        return if $_; # if we have a remainder (i.e. query != trigger), bail out
         return "GitHubUsername is awesome and has successfully completed the DuckDuckHack Goodie tutorial!";
     };
     ```
